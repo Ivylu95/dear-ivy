@@ -58,9 +58,10 @@ recommended:
   # Vent, think, advice, a record, or a mix.
   wants_from_this:
     value: |
-    status: asked
+      a mix of everything
+    status: answered
     status_reason:
-    last_updated: 2026-09-26T17:11:44+08:00
+    last_updated: 2026-09-26T17:15:36+08:00
 
   # Gentle or direct; mostly questions or real advice.
   how_to_speak_to_me:
@@ -73,9 +74,9 @@ recommended:
   # Therapist, doctor, anyone professional, or "no one". Whose word comes first.
   professional_involved:
     value: |
-    status: not_asked
+    status: asked
     status_reason:
-    last_updated:
+    last_updated: 2026-09-26T17:15:36+08:00
 
   # One person she would reach on a bad night.
   bad_night_person:
