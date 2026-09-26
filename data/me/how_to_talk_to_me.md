@@ -36,5 +36,5 @@ _Topics she has asked to leave. Not closed forever — but not mine to reopen._
 
 | Date | What |
 |---|---|
-|  |  |
+| 2026-09-26 | Short sentences, and summarise. Her words: *"Can you summarize and talk shorter sentences to me in future"*. She asked after I sent long replies about a saving problem. |
 
