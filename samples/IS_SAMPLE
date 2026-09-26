@@ -1,0 +1,3 @@
+This folder is a sample record: invented content, for checking how the dashboard
+looks with a record in it. lib/data-dir.js reads this marker and the app shows a
+banner on every page so it can never be mistaken for a real one.

@@ -1,0 +1,128 @@
+{
+  "_note": [
+    "FOUR HOOKS RUN. The crisis floor, on UserPromptSubmit: every prompt is",
+    "pattern-matched for crisis signals, and a hit puts the protocol in front of the",
+    "model before it answers - SAF-001, \"Safety outranks everything else the system",
+    "is doing.\" It only adds context: it cannot block, write or commit. It",
+    "over-triggers by design; a false positive costs one line.",
+    "",
+    "The save, on Stop: data/ is committed and pushed to the branch the session is on",
+    "at the end of every turn - DEP-005. A phone session's branch is carried into main",
+    "by .github/workflows/merge-sessions.yml. The brief, on SessionStart: brings main",
+    "in, and says out loud when a save failed or a session branch never reached main",
+    "- DEP-006. The sandbox reminder, also on UserPromptSubmit: in a chat switched on",
+    "with /sandbox, every prompt is told to read data/ as data-sandbox/. Every other",
+    "hook is off.",
+    "",
+    "The hooks that are written but switched off live in .claude/hooks/parked.json,",
+    "each in the shape it takes here and with the reason it exists. Claude Code never",
+    "reads that file. Turning one on is a move from it into `hooks` below, under its",
+    "own event name.",
+    "",
+    "JSON has no comment syntax, and Claude Code will NOT accept one here: a // or",
+    "/* */ comment makes it discard this entire file - permissions and all - exactly",
+    "as a missing brace would. Nor is an unknown key inside `hooks` a hiding place:",
+    "event names are validated, and a key that is not an event takes the file down",
+    "with it. That is what the old hooks[\"//\"] parking bay did.",
+    "",
+    "The code is in .claude/hooks/, and `node .claude/hooks/selftest.mjs` proves each",
+    "one still runs and decides, switched on or not."
+  ],
+  "permissions": {
+    "allow": [
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep",
+      "WebSearch",
+      "WebFetch",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git mv:*)",
+      "Bash(mkdir:*)",
+      "Bash(ls:*)"
+    ],
+    "deny": [
+      "Bash(rm:*)",
+      "Bash(git rm:*)",
+      "Bash(git reset:*)",
+      "Bash(git checkout:*)",
+      "Bash(git restore:*)",
+      "Bash(git push --force:*)"
+    ]
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/safety/crisis-floor.mjs\""
+          },
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/session/sandbox-reminder.mjs\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/record/save-record.mjs\""
+          },
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/record/check-profile.mjs\""
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/session/session-brief.mjs\""
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/session/session-context.mjs\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit|NotebookEdit|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/record/check-profile.mjs\""
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/session/session-context.mjs\""
+          }
+        ]
+      }
+    ]
+  }
+}

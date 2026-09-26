@@ -1,0 +1,33 @@
+# Data [DAT]
+
+The binding specification for how the record changes: what may restructure it, and what every change to its shape must leave behind.
+
+> 🔒 **An agent may not edit this file.** The prohibition extends to any alteration of it, rewording, reformatting, renaming and moving included, and admits no exception for a change the agent judges harmless. Where an agent finds anything wrong, inconsistent or improvable, it records the finding in [`REVIEW.md`](../REVIEW.md) with its reasoning and leaves the entry for a person to clear, never treating its own entry as settled. Until a person applies a change, this file is complied with as written; where it and the repository diverge, the repository is wrong.
+
+---
+
+## Purpose and Scope
+
+The provisions below fix this specification's purpose and the reach of its authority — how this file is to be read, obeyed, and bounded. The register further down governs the record instead.
+
+| #   | Provision | What it means |
+| --- | --- | --- |
+| 1   | **This specification is the single source of truth for how the record changes.** | A tree on disk shows only what the record holds today, and commit history only what moved; neither states what may move it or why. This file states it, and an agent treats it as the source of truth whenever it restructures the record. The reading rules, the binding rule and the approval gate in [`README.md`](../README.md) apply to this file unchanged. |
+| 2   | **It governs how the record changes, never where it lives, who reads it, or what is written in it.** | Where the record lives is architectural — **ARC-003** and **ARC-006** in [`ARCHITECTURE.md`](../system/ARCHITECTURE.md). Who can open it is [`access.md`](access.md). What is recorded, and in whose words, is [`../interaction/memory.md`](../interaction/memory.md). DAT-001 carries the one idea of a proposed architecture row deleted on 2026-09-21, redrafted for this file. |
+| 3   | **This specification binds where it speaks and defers where it is silent.** | Compliance is mandatory: an agent chooses how to satisfy a row, never whether to. Silence confers no authority to invent a requirement and attribute it here; where something ought to hold and nothing here provides for it, the omission is a gap and is raised. |
+
+---
+
+## Specifications Register
+
+The normative part of this file. Each row is one thing that must be true of the record; how a row is read is in [`README.md`](../README.md).
+
+> ⚠️ **When referencing:** always cite a row by **both** its ID and its spec statement — IDs shift, specs get removed, and ordering isn't guaranteed.
+
+| ID | SPEC STATEMENT | SPEC RATIONALE | DESIGN RECOMMENDATION |
+| --- | --- | --- | --- |
+| **DAT-001** | The record's structure changes only to serve retrieval, never to suit the machinery. | The record outlives any harness that keeps it. Rearranged to fit a rewrite, it takes that harness's shape and breaks the next one: paths that past sessions pointed at go stale, though nothing was lost. Reorganised to be found faster, it serves every harness. The test: every move in the record's history names the retrieval it served. | A rearrangement of `data/` lands in a commit of its own, never inside a harness change, with a message saying in non-personal terms what it makes easier to find; `data/INDEX.md` and every pointer update in the same commit. The limit: whether a move served retrieval or convenience is a judgement, and only the commit message records which was claimed. |
+| **DAT-002** | Anything in the record stays retrievable as the record grows. | Being remembered is the service: she never re-explains who someone is or what happened, and that holds only if a session can find the right detail without reading everything. A record that is complete but cannot be searched in time behaves as if it had forgotten. An index kept by hand drifts from the files it describes [[FAIR F4]](https://book.the-turing-way.org/reproducible-research/rdm/rdm-fair/ "Written for published research data in a registry shared between institutions. The principles transfer as an account of what findability costs; their machinery - resolvable identifiers, schema-validated metadata, an external registry - does not, and here each is upheld by discipline instead."). The test: pick anything written a year ago, and a session finds it in a few reads, starting from the index. | Two tiers — a short orienting layer read every session, and detail read only for the range in question: the timeline’s Eras over its entries, and `data/INDEX.md` over the standing files. Dated filenames, a controlled tag list, and an index rebuilt from disk rather than by hand. The limit: `data/INDEX.md` is hand-kept today, and nothing yet rebuilds it or checks it against the folder. |
+| **DAT-003** | Nothing in the record is lost or changed without a trace. | A memory that quietly changes cannot be trusted, even when the change is correct: she can no longer tell what she said from what was written over it, and a later session cannot tell a correction from a mistake [[NIST-800-92]](https://csrc.nist.gov/pubs/sp/800/92/final "Security logs read by auditors, not a personal record read by its subject. The integrity argument transfers; retention and correlation guidance does not."). Overwriting is deletion by another name, so a control that blocks removing a file but allows rewriting one has not closed the hole. The test: for anything ever written, its current form and every earlier one can be found, with the date each changed. | Append, never rewrite: a correction is a new dated entry saying what changed, and the superseded version moves to `data/archive/` with a note saying where it came from (ARC-006) [[APPEND-ONLY]](https://nhimg.org/glossary/append-only-storage/ "A storage-layer pattern. Says nothing about which superseded thing is worth keeping, or where it goes."). Every change is committed, so history holds what the archive misses. The limit: whole-file writes are still allowed at the tool boundary, and nothing tells a correction from a quiet edit except the discipline of writing one. |
+
+> 📚 **Most rows above carry no source tag, and that is a value rather than an omission.** These registers govern one person's private record; where no published work genuinely addresses a row it stays bare, and reaching for a large name to decorate one is the failure mode — see **Source tags** in [`README.md`](../README.md). DAT-002 and DAT-003 are the exceptions — tagged because FAIR’s findability principle states what an index costs to keep true, and the audit-log literature what a silent change costs. The works cited elsewhere in these specs, and the boundary past which each stops applying, are in [`REFERENCES.md`](../REFERENCES.md).

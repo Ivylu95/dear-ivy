@@ -1,0 +1,33 @@
+{
+  "name": "dear-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A read surface over the record. Reads the markdown in data/ at request time; no database. Runs on localhost under next dev, behind a login gate. Never hosted: it runs on her machine only.",
+  "scripts": {
+    "predev": "node scripts/dashboard.mjs ensure-accounts",
+    "dev": "next dev -p 3220 -H 127.0.0.1",
+    "dev:sample": "node scripts/dashboard.mjs sample",
+    "build": "node scripts/dashboard.mjs ensure-accounts && npm run check && npm run gen:theme && next build",
+    "dashboard": "node scripts/dashboard.mjs",
+    "gen:theme": "node scripts/generate-theme.mjs",
+    "lint": "eslint app components lib",
+    "check": "node scripts/check-safety.mjs && node scripts/check-config.mjs && node scripts/check-privacy.mjs && node scripts/check-links.mjs && node scripts/check-perimeter.mjs && node scripts/check-record-paths.mjs && node scripts/sandbox.mjs check",
+    "spec:move": "node scripts/spec-move.mjs",
+    "spec:banner": "node scripts/check-spec-banner.mjs"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.3.2",
+    "marked": "^14.1.2",
+    "next": "^16.3.4",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.3.4"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}

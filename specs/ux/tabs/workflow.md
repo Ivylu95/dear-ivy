@@ -1,0 +1,39 @@
+# Workflow [WKF]
+
+The binding specification for the view that draws the mechanism: how a conversation becomes a record, shown rather than described.
+
+> 🔒 **An agent may not edit this file.** The prohibition extends to any alteration of it, rewording, reformatting, renaming and moving included, and admits no exception for a change the agent judges harmless. Where an agent finds anything wrong, inconsistent or improvable, it records the finding in [`REVIEW.md`](../../REVIEW.md) with its reasoning and leaves the entry for a person to clear, never treating its own entry as settled. Until a person applies a change, this file is complied with as written; where it and the repository diverge, the repository is wrong.
+
+---
+
+## Purpose and Scope
+
+| #   | Provision                                                  | What it means                                                                                                                                                                                                                                                                                        |
+| --- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | **This specification is the single source of truth for what this view must convey and in what form.** | Every other view in the surface is the *output* of a process, and the process itself appeared nowhere — leaving the most consequential fact about the system unwritten on the surface. This file fixes what the view owes and why prose was the wrong form for it. The reading rules, the binding rule and the approval gate in [`README.md`](../../README.md) apply unchanged. |
+| 2   | **It governs a description, never a control.** | Nothing on this view switches anything on. What is promised is the about view's, in [`about.md`](about.md) (`ABT`); what the instructions actually say is the harness view's, in [`harness.md`](harness.md) (`HRN`). This page is the mechanism between them.                                            |
+| 3   | **It binds where it speaks and defers where it is silent.** | Compliance is mandatory: an agent chooses how to satisfy a row, never whether to. Silence confers no authority to invent a requirement and attribute it here.                                                                                                                                            |
+
+---
+
+## Specifications Register
+
+> ⚠️ **When referencing:** always cite a row by **both** its ID and its spec statement — IDs shift, specs get removed, and ordering isn't guaranteed.
+
+| ID | SPEC STATEMENT | SPEC RATIONALE | DESIGN RECOMMENDATION |
+| --- | --- | --- | --- |
+| **WKF-001** | The mechanism is presented as a shape, not as an argument to be read. | "What happens to what I say" is a shape — a sequence, a return, and a fan-out into files — and a shape read as prose has to be held in the head a sentence at a time and reassembled there. The reader who most needs this page is the one who wants to know in a glance whether her words are safe; six hundred words answers a different question from the one she asked. The test: the sequence and the fan-out are legible before any sentence on the page is read. | Draw the stages and the destinations, and hold every caption to a line. It works because the line limit is a check on the diagram: anything that wants a paragraph is a sign the drawing is wrong, not that the caption is too short. Its limit: some facts are genuinely prose — a limit, a refusal — and those are specified separately by **WKF-005**. |
+| **WKF-002** | Every word in the drawing is real text. | A diagram shipped as an image is a diagram that cannot be searched, selected, read aloud, or resized with the rest of the page — and this is the view most likely to be opened by someone trying to satisfy themselves about how the system treats what they say. A picture is the one form in which that answer cannot be verified by the tools a reader already has. The test: every label on the page is selectable and is found by an in-page search. | Build the figures from layout, borders and the surface's own tokens rather than from an image, an embedded drawing or a charting library. It works because the diagram then inherits the theme and the reading size like everything else, instead of being a fixed picture beside a resizable page. Its limit: it constrains what can be drawn to what layout can express, which is the correct trade here. |
+| **WKF-003** | No part of the drawing depends on a character the reader's font may not carry. | An arrow drawn as a character is silently substituted from another font when the page's font lacks it, arriving in a second stroke weight and a second set of metrics. It cannot be styled away and it cannot be caught in review, because the author's machine has the font that works. On a page made of arrows the cost is a diagram that reads as broken everywhere but one desk. The test: the page renders identically with the surface's fonts unavailable. | Draw every arrow and mark from the surface's own icon set rather than from the character repertoire. It works because coverage stops being a variable. This is the surface-wide glyph rule applied where it bites hardest, not a rule of this view's own. |
+| **WKF-004** | Any distinction the drawing makes is carried by more than colour. | The one distinction this page exists to make — which layer of instruction always fires and which may miss — is the whole point of the figure, and encoding it in colour alone is encoding it for some readers. It is also lost in print and in a screenshot passed through anything. The test: every distinction in the drawing survives the page being rendered without colour. | State the distinction in words on the element and let weight or a rule repeat it. It works because the word is the primary carrier and the visual treatment is reinforcement, which is the order that degrades safely. Its limit: it applies to distinctions the drawing *makes*, not to every use of colour on the page. |
+| **WKF-005** | A limit is stated as prose, never as a tile. | The two things this page must say about failure — that it gets things wrong and is corrected in the open, and that it is not a clinician — are limits. Set as tiles beside the capabilities they read as features, and a reader skimming a row of tiles takes the whole row as a list of what the system offers. The cost is that the two most important sentences on the page are read as boasts. The test: no limit on this page appears in the same treatment as a capability. | Set limits as sentences below the tiles, in the surface's note treatment. It works because the form itself signals the register, so nothing has to be labelled a caveat. Its limit: it is a rule about presentation and does not decide which limits belong on this page. |
+
+> 📚 **No row above carries a source tag, and that is a value rather than an omission.** These registers govern one person's private record; where no published work genuinely addresses a row it stays bare, and reaching for a large name to decorate one is the failure mode — see **Source tags** in [`README.md`](../../README.md). The works cited elsewhere in these specs, and the boundary past which each stops applying, are in [`REFERENCES.md`](../../REFERENCES.md).
+
+---
+
+## Unwritten
+
+- How the drawing is kept true as the mechanism changes, given that it reads nothing and can therefore go stale silently.
+- Whether the view may show what a session actually did, rather than what a session does in general.
+- Where the boundary sits between this view and the harness view, given both describe the instructions.

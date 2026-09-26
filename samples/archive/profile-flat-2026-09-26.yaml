@@ -1,0 +1,29 @@
+# Who this is for, and what must be known before any conversation goes further.
+#
+# Every key is required. A blank one is a question still owed: the next session
+# asks for it, one at a time, before anything else. "declined" is an answer and
+# is never asked again. Validated by `npm run check` (ux/config/record.mjs).
+#
+# The four essentials are written as `key: |` blocks, her words indented under
+# them, so a colon or a quote in what she said cannot break the file.
+
+# What to call her. Shown in the dashboard.
+name: Juno
+
+# The pronouns the record is written in: she, he or they.
+pronouns:
+
+# Where she is, as an IANA zone, so "today" means her today.
+timezone: Asia/Singapore
+
+# What she wants from this space: vent, think, advice, a record, or a mix.
+wants_from_this: |
+
+# Gentle or direct; mostly questions or real advice.
+how_to_speak_to_me: |
+
+# Any therapist, doctor or professional involved, or "no one".
+professional_involved: |
+
+# One person she'd reach on a bad night, or "declined".
+bad_night_person: |

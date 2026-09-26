@@ -1,0 +1,26 @@
+.DS_Store
+Thumbs.db
+*.tmp
+
+# data/ is DELIBERATELY tracked. Sessions run on a disposable cloud VM, so git
+# is the only persistence her record has. Privacy comes from the repository
+# being private and single-member — not from holding files out of it.
+
+/temp
+# ── The dashboard, in ux/ ───────────────────────────────────────────────────
+# Build output and dependencies. Unanchored, so they match at any depth and keep
+# working if the app moves again.
+node_modules/
+.next/
+out/
+
+# Credentials. NEVER commit.
+#
+# ux/.env.local holds the gate's account list and signing secret, written by
+# ux/scripts/dashboard.mjs on first run — so a clone without it is not broken,
+# just fresh. ux/config/accounts.mjs IS committed and holds no credentials: it
+# only reads these. The broad .env* also catches what `vercel link` writes.
+.env*
+
+# Vercel CLI state: which project this clone is linked to. Local, not shared.
+.vercel

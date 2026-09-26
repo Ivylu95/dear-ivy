@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "jsx": "preserve",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "target": "esnext"
+  },
+  "include": ["app/**/*", "components/**/*", "config/**/*", "lib/**/*", "theme/**/*"],
+  "exclude": ["node_modules", ".next"]
+}

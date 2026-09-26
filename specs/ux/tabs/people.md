@@ -1,0 +1,39 @@
+# People [PPL]
+
+The binding specification for the view over the people in her life: the list, the file behind each name, and the promise this view exists to keep.
+
+> 🔒 **An agent may not edit this file.** The prohibition extends to any alteration of it, rewording, reformatting, renaming and moving included, and admits no exception for a change the agent judges harmless. Where an agent finds anything wrong, inconsistent or improvable, it records the finding in [`REVIEW.md`](../../REVIEW.md) with its reasoning and leaves the entry for a person to clear, never treating its own entry as settled. Until a person applies a change, this file is complied with as written; where it and the repository diverge, the repository is wrong.
+
+---
+
+## Purpose and Scope
+
+| #   | Provision                                                       | What it means                                                                                                                                                                                                                                                    |
+| --- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1   | **This specification is the single source of truth for what this view promises.** | The promise — she never explains who someone is twice — is made in the record's rules and kept mostly in conversation. This file states the half of it the surface owes. The reading rules, the binding rule and the approval gate in [`README.md`](../../README.md) apply unchanged. |
+| 2   | **It governs the list and the person's own page together.** | A person's own route is not a spec of its own; it is this question answered at a different depth. What may be written into a person's file is [`../../interaction/memory.md`](../../interaction/memory.md) (`MEM`).                                                          |
+| 3   | **It binds where it speaks and defers where it is silent.** | Compliance is mandatory: an agent chooses how to satisfy a row, never whether to. Silence confers no authority to invent a requirement and attribute it here.                                                                                                        |
+
+---
+
+## Specifications Register
+
+> ⚠️ **When referencing:** always cite a row by **both** its ID and its spec statement — IDs shift, specs get removed, and ordering isn't guaranteed.
+
+| ID | SPEC STATEMENT | SPEC RATIONALE | DESIGN RECOMMENDATION |
+| --- | --- | --- | --- |
+| **PPL-001** | Everyone with a file appears in the list, including anyone whose file is still empty. | A file opened and not yet filled is the record saying *this person exists and I have nothing yet* — which is true, useful, and exactly what gets lost by listing only the ones with content. Hiding them also breaks the mechanism: the file was opened because a name came up, and a name that comes up again should find the file rather than start a second one. The test: a file with nothing but a name in it still appears, and is visibly distinguished from one with something in it. | List every file and mark the empty ones in words rather than by omission. It works because the marking states the actual condition — a file started, nothing in it yet — instead of leaving the reader to infer it from a short card. The mark is neutral: an empty file is neither a good outcome nor a bad one, so it must not be rendered in a treatment that says it is either. |
+| **PPL-002** | A name is shown with what that person is to her, wherever the record holds it. | A list of bare names is a list she has to decode, which is the precise labour this view exists to remove. The relation is the single field that turns a name into a person, and it is the one thing a reader arriving at this page after two months away actually needs. The test: every card that can carry a relation shows one, and a card that cannot shows the name alone without a placeholder standing in for it. | Read the relation as a named field and render it beneath the name, omitting the line entirely when absent. It works because an absent relation is then silent rather than apologetic. Its limit: the relation is whatever the record holds, so it is her vocabulary and not a controlled list — the view must not normalise it. |
+| **PPL-003** | The list is a way in and never a summary of anyone. | The temptation is to put the useful bit on the card — how it stands, what is hard, when they last came up — and every one of those is a one-line characterisation of a person in her life, rendered by a machine, on a grid. It is also where the view would start making comparisons she never asked for. The cost is a page that has opinions. The test: no card carries an assessment, a status, a recency or anything that ranks one person against another. | Restrict the card to identity — name, relation, and whether there is anything on file. It works because the constraint is enumerable, so an addition has to justify itself against this row rather than slip in as a helpful detail. The detail belongs one click deeper, in that person's own file, where it is in the record's words and in context. |
+| **PPL-004** | A person's own page renders their file and adds nothing to it. | This is the file a session opens before she says anything about someone, and the surface's job is to show her the same thing. Anything the view synthesises — a summary, a set of derived themes, a list of every event they appear in — is the surface forming a view of a person, which is not its role and is not reviewable by her in the way the file itself is. The test: everything on a person's page appears in that person's file, and the page states where the file is. | Render the file's own sections, in the file's order, with its provenance shown. It works because the page then cannot drift from the file, and a correction to the file is a correction to the page. Its limit: cross-references into a person's page from elsewhere are navigation rather than synthesis and are not restricted by this row. |
+| **PPL-005** | A person reached from anywhere in the surface arrives at the same page. | People are named in the spine, in the plan for a bad night, and in the record's standing files, and each of those is a place someone might be reached from. If any of them opens a different rendering — a panel, an excerpt, a dialog — there are two accounts of one person in one surface, and the shorter one will be the one read. The test: every route into a person lands on that person's own page. | Address a person by one stable identifier derived from their file, and link to that single route everywhere. It works because a single destination cannot disagree with itself. Its limit: the identifier is derived from the filename, so a person renamed in the record breaks saved links — acceptable here, where nothing outside this surface stores one. |
+
+> 📚 **No row above carries a source tag, and that is a value rather than an omission.** These registers govern one person's private record; where no published work genuinely addresses a row it stays bare, and reaching for a large name to decorate one is the failure mode — see **Source tags** in [`README.md`](../../README.md). The works cited elsewhere in these specs, and the boundary past which each stops applying, are in [`REFERENCES.md`](../../REFERENCES.md).
+
+---
+
+## Unwritten
+
+- Whether the list has an order other than the record's own, and what it would be if so.
+- Whether someone no longer in her life is shown, hidden, or marked — and who decides which.
+- Whether a person's page may show the events on the spine that point at them, given **PPL-004**.

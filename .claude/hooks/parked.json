@@ -1,0 +1,136 @@
+{
+  "_note": [
+    "SWITCHED-OFF HOOKS. Nothing here runs. Claude Code never reads this file; it",
+    "reads ../settings.json only. This is the parking bay, and every entry below is",
+    "in the exact shape it takes inside that file's `hooks` object, so turning one on",
+    "is a move, not a rewrite.",
+    "",
+    "They used to be parked inside settings.json under a \"//\" key. That stopped",
+    "working: Claude Code validates hook event names now, and a \"//\" holding",
+    "PreToolUse entries makes it discard the entire settings file - permissions and",
+    "all - with only a toast to say so. JSON still has no comment syntax, and an",
+    "unknown key inside `hooks` is no longer a safe place to hide one, so the",
+    "catalogue lives out here instead.",
+    "",
+    "To turn one on: copy its object into `hooks` in ../settings.json under the same",
+    "event name, and drop its _why - the reason belongs beside the wiring. If that",
+    "event already has entries, append to the array; every hook on an event runs, in",
+    "parallel. The code is in this folder, and `node .claude/hooks/selftest.mjs`",
+    "proves each one still runs and decides."
+  ],
+  "hooks": {
+    "PreToolUse": [
+      {
+        "_why": [
+          "NEVER DELETED. 'nothing is ever deleted - superseded material moves to",
+          "data/archive/.' The deny-list in settings.json already turns away `rm` and",
+          "`git reset`, but it matches command names, and deletion does not always arrive",
+          "under one: a single `>` redirect truncates, `sed -i` rewrites in place, `git",
+          "clean` takes untracked files with it, `mv` can carry a file out of data/",
+          "entirely. This reads the whole command line and refuses those, naming the",
+          "archive move that is allowed instead - so the refusal costs the turn nothing."
+        ],
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/record/guard-record-deletion.mjs\""
+          }
+        ]
+      },
+      {
+        "_why": [
+          "TWO FILES THAT ARE NOT MINE. CLAUDE.md: 'Never edit this file yourself' - an",
+          "agent that can rewrite its own constitution mid-session does not have one; the",
+          "hook redirects to data/state/proposals.md. And data/archive/** is what the",
+          "record used to say: editing it rewrites the past instead of superseding it,",
+          "which is the exact failure the never-delete rule exists to prevent. Both are",
+          "absolute rules with no judgement in them, which is what makes them a hook's",
+          "job rather than a paragraph's."
+        ],
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/record/guard-protected-files.mjs\""
+          }
+        ]
+      },
+      {
+        "_why": [
+          "PRIVACY, BEFORE THE WRITE. 'no names, no quotes, no details of her life can be",
+          "found outside this folder.' ux/scripts/check-privacy.mjs already proves this -",
+          "but at build time, which is after the leak is committed and pushed. This is the",
+          "same two mechanical checks (a name with a file in data/people/, a long line that",
+          "already appears verbatim in data/) applied to one pending write to one harness",
+          "file. Catching it here costs a retry; catching it at build costs a history",
+          "rewrite. It never looks at writes inside data/, where all of that belongs."
+        ],
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/privacy/guard-harness-privacy.mjs\""
+          }
+        ]
+      }
+    ],
+    "SessionStart": [],
+    "Stop": [
+      {
+        "_why": [
+          "THE TIMELINE, BEFORE THE TURN ENDS. 'Every session, ask whether anything",
+          "belongs on it, and add it before you close.' An event that never reaches the",
+          "timeline has no route back: the spine is what makes a detail findable in one",
+          "read a year later. If anything under data/ moved today and timeline.md did not,",
+          "this refuses the end of the turn once, listing what was written. Once per",
+          "session, never twice - a second refusal is an argument, and she is waiting on",
+          "the other side of it."
+        ],
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/record/timeline-before-close.mjs\""
+          }
+        ]
+      },
+      {
+        "_why": [
+          "THE RECORD'S OWN CHECKS, EARLY. ux/ already owns three: the crisis numbers",
+          "still parse (SAF-02), nothing personal reached a harness file (HAR-02), nothing",
+          "in the record points at a file that no longer exists. They run at build - days",
+          "later, on a different machine, for whoever is deploying. Their whole value is",
+          "being early, so this runs them at the end of any turn that touched data/ or ux/",
+          "and blocks on failure with the real output. Ordinary conversation pays nothing.",
+          "Order note: hooks on one event run in parallel, so this and save-record both",
+          "start - deliberate. Saving must never wait on a lint."
+        ],
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/record/record-gate.mjs\""
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "_why": [
+          "THE SESSION COUNT THE TRIGGERS RUN ON. data/state/log.md is 'One line per",
+          "session, and maintenance triggers' - upkeep at 8 sessions, review at 25,",
+          "research at 30. Every one of those thresholds is counted in session lines, so a",
+          "session that ends without one makes all three quietly wrong, and the thresholds",
+          "are what stop the record rotting. This writes only the shape - date, session,",
+          "files touched - for the sessions that end without a goodbye; the playbook and",
+          "the one clause stay the model's to write while it still knows what happened."
+        ],
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/session/session-log.mjs\""
+          }
+        ]
+      }
+    ]
+  }
+}

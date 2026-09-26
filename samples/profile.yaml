@@ -1,0 +1,100 @@
+# Profile: who this is for, and what must be known before a conversation goes
+# further. Checked after every edit and by `npm run check`; the rules are
+# enforced in .claude/hooks/lib/profile-schema.mjs, which writes this header.
+#
+# ── SECTIONS ─────────────────────────────────────────────────────────────────
+#   mandatory    Asked first, before anything else. The app needs them.
+#   recommended  Asked in the opening, after mandatory, each with its reason
+#                and her permission. Can wait for a pause if she arrives with
+#                something on her mind.
+#   optional     Never asked up front. Only when the conversation makes it
+#                matter.
+#
+# ── EVERY QUESTION HAS ───────────────────────────────────────────────────────
+#   value          Her answer, in her words. Empty unless status is answered.
+#   status         Required. One of:
+#                    not_asked  never raised
+#                    asked      raised, no answer yet
+#                    answered   value holds her answer
+#                    declined   she said no; revisit_when says when to ask again
+#                    removed    answered, then taken out; the old answer is in archive/
+#   status_reason  Free text: why it is in this status. May be empty.
+#   revisit_when   Only when declined, and required then: what would make it
+#                  worth asking again.
+#   last_updated   Required unless not_asked. Date and time with an offset:
+#                  2026-09-25T21:14:00+08:00
+#
+# ── HOW TO WRITE IT ──────────────────────────────────────────────────────────
+#   Sections at column 0, questions at 2 spaces, keys at 4. No tabs.
+#   A value with a colon, a quote or more than one line goes in a | block,
+#   its text indented 6 spaces beneath. Nothing is deleted: a removed answer
+#   moves to archive/ first.
+
+mandatory:
+
+  # What to call her. Shown in the app.
+  name:
+    value: Juno
+    status: answered
+    status_reason:
+    last_updated: 2026-09-26T01:18:13+08:00
+
+  # she, he or they. Never guessed from the name.
+  pronouns:
+    value:
+    status: not_asked
+    status_reason:
+    last_updated:
+
+  # An IANA zone, so "today" means hers.
+  timezone:
+    value: Asia/Singapore
+    status: answered
+    status_reason:
+    last_updated: 2026-09-26T01:18:13+08:00
+
+recommended:
+
+  # Vent, think, advice, a record, or a mix.
+  wants_from_this:
+    value: |
+    status: not_asked
+    status_reason:
+    last_updated:
+
+  # Gentle or direct; mostly questions or real advice.
+  how_to_speak_to_me:
+    value: |
+    status: not_asked
+    status_reason:
+    last_updated:
+
+  # Therapist, doctor, anyone professional, or "no one". Whose word comes first.
+  professional_involved:
+    value: |
+    status: not_asked
+    status_reason:
+    last_updated:
+
+  # One person she would reach on a bad night.
+  bad_night_person:
+    value: |
+    status: not_asked
+    status_reason:
+    last_updated:
+
+optional:
+
+  # What she does for work or study, in her words.
+  work_or_study:
+    value: |
+    status: not_asked
+    status_reason:
+    last_updated:
+
+  # Who she lives with.
+  lives_with:
+    value: |
+    status: not_asked
+    status_reason:
+    last_updated:

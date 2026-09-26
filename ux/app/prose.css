@@ -1,0 +1,726 @@
+/* ── Rendered markdown ────────────────────────────────────────────────────── */
+
+/* Every markdown file this app shows is rendered by one function and set by one
+   stylesheet. lib/markdown.js is the first half — parse, heading anchors, source
+   tags, callouts — and <Prose> in components/ui hands its output to a single
+   `.prose` element. This file is the second half: what that element looks like.
+   Nothing else in the app styles rendered markdown, and a rule that wants to
+   belongs here rather than beside the view that noticed it first.
+
+   The reference case is specs/system/ARCHITECTURE.md read in the harness. It is
+   the document that exercises the whole contract at once — a callout, four-column
+   registers, source tags, code spans, anchored headings and anchored rows — so it
+   is what these rules are tuned against, and what every other markdown file in
+   the app is set to match. Her journal and a spec register are the same typeface
+   at the same size with the same headings; only the container differs.
+
+   Imported first by globals.css, so a view that genuinely has to differ can still
+   out-specify it — and the ones that do are gathered at the foot of this file
+   rather than left where they were written. */
+
+/* Her record is prose first. The reading face, the size, the leading and the
+   measure below are what make a page of it readable at length; everything else
+   in this file is chrome around them. All four come from the character, because
+   they are the only four things a reading-style choice could honestly mean. */
+.prose {
+  max-width: var(--measure);
+  font-family: var(--f-prose);
+  font-size: var(--prose-size);
+  line-height: var(--prose-leading);
+  color: var(--fg);
+  /* Set to both margins, with hyphenation doing the work that would otherwise be
+     done by stretching the spaces.
+     Justification without it is the version everyone recognises as bad: the
+     browser can only widen word gaps, so a narrow column opens rivers of white
+     running down the page. `hyphens: auto` lets it break words instead, which is
+     what a typesetter does and what makes the two edges affordable. It needs the
+     lang attribute to know the dictionary — <html lang="en"> in app/layout.jsx. */
+  text-align: justify;
+  hyphens: auto;
+  /* Last-line orphans are the other cost of a justified setting. This asks the
+     browser to balance the final lines rather than leave one word alone. */
+  text-wrap: pretty;
+}
+
+/* Everything that is not running prose keeps its ragged edge. A heading, a
+   caption or a one-line cell has too few words to justify: the browser stretches
+   the two or three it has across the whole measure and the result reads as
+   broken rather than as set.
+
+   A body cell is deliberately NOT in that list. It carries running prose — a
+   spec rationale is three or four sentences — so it is the case the rule above
+   is for, not an exception to it, and a column of cells that each stop
+   somewhere different is the ragged edge this setting exists to remove. The
+   narrow measure makes it harder to set, not wrong to set: `hyphens: auto` is
+   inherited with it and is what keeps the word gaps from opening. */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose pre,
+.prose code,
+.prose th {
+  text-align: left;
+  hyphens: manual;
+}
+
+.prose > * + * {
+  margin-top: 0.85em;
+}
+
+.prose h1,
+.prose h2,
+.prose h3 {
+  font-family: var(--f-display);
+  font-weight: var(--w-medium);
+  line-height: 1.25;
+}
+
+.prose h2 {
+  margin-top: 1.6em;
+  font-size: 1.16em;
+}
+
+.prose h3 {
+  margin-top: 1.4em;
+  font-size: 1.02em;
+  color: var(--fg-dim);
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.3em;
+}
+
+.prose li + li {
+  margin-top: 0.3em;
+}
+
+.prose strong {
+  font-weight: var(--w-strong);
+}
+
+/* Italic paragraphs in these files are almost always the template's own guidance
+   to whoever fills it in, not her words. Dimmed so the two never read alike. */
+.prose em {
+  color: var(--fg-dim);
+}
+
+.prose blockquote {
+  padding-left: 1em;
+  border-left: 2px solid var(--accent-border);
+  color: var(--fg-dim);
+}
+
+/* A blockquote that opens with an emoji is a NOTICE, not a quotation — see
+   callouts() in lib/markdown.js for why the emoji is the whole syntax.
+
+   The rule above is the right treatment for something being quoted and exactly
+   the wrong one for the prohibition at the top of ARCHITECTURE.md: a hairline
+   and dimmed ink made the most binding line in the repository the faintest
+   thing on the page. A notice has to survive being skimmed past, so this one is
+   a filled panel — the fill is what carries it, because the fill is the one
+   thing every character keeps.
+
+   Built on the ACCENT ramp, and that is the whole of the decision. It was
+   briefly warn, on the reasoning that a prohibition is a warning. Two things
+   wrong with that. theme/palette.mjs pins the semantic hues deliberately — warn
+   is 70 whatever hue she has chosen — so the panel sat there in a colour the
+   theme could not reach, and an app that re-tints entirely from one custom
+   property had one box in it that would not move. And a notice is not a
+   warning: warn means "coming up, or left open", where this is a standing rule
+   about the file, true on every reading. It is part of the document, so it
+   takes the document's colour. */
+.prose blockquote.callout {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 0.7em;
+  align-items: start;
+  margin: 1.8em 0;
+  /* Room enough to read as a held-apart passage rather than a boxed-in one,
+     and no more. 22/26 held a paragraph off the edges so generously that the
+     panel read as a page of its own rather than as a note inside one — the
+     fill and the rule are what carry the notice, not the air around it. The
+     left is larger than the right because the thick accent rule eats into it —
+     the text has to clear the rule, not the box. */
+  padding: 14px 18px 14px 16px;
+  border: var(--line-w) solid var(--accent-border);
+  /* The one strong edge, and what makes the box read as a notice rather than as
+     a panel that happens to be tinted. Three times the hairline so it holds
+     against the soft ground — and zero in the Open character, which sets
+     --line-w to 0 for a hard day and is entitled to the fill without the edges.
+     Triple nothing is nothing. */
+  border-left-width: calc(var(--line-w) * 3);
+  border-left-color: var(--accent);
+  border-radius: var(--r3);
+  background: var(--accent-soft);
+  color: var(--fg-dim);
+  /* A notch under the prose. The panel is already doing the work of saying this
+     matters, so the type does not have to as well — and an aside set at the
+     same size as the body it interrupts reads as the document changing its mind
+     rather than as a note about it. Everything inside scales with this: the mark
+     below is sized in em, and so is the code span. */
+  font-size: 0.92em;
+}
+
+/* Everything the quote actually says sits in the second column, so a wrapped
+   line starts under the sentence it began rather than under the mark. */
+.prose blockquote.callout > :not(.callout-mark) {
+  grid-column: 2;
+}
+
+.prose blockquote.callout > p + p {
+  margin-top: 0.7em;
+}
+
+/* Column one, first row. Sized against the text rather than in pixels so it
+   grows with the Open character, and given the prose leading so it sits on the
+   first line of the sentence instead of above it. */
+.prose .callout-mark {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 1.15em;
+  line-height: calc(var(--prose-leading) / 1.15);
+}
+
+/* The lead clause of a notice is the notice; the rest is the reasoning. It is
+   already bold in the markdown, and on this ground it takes the full ink while
+   the sentences after it keep the panel's softer colour.
+
+   Ink and weight rather than accent: the links inside this panel are already
+   accent-coloured, and a bold accent clause above them would be the one thing
+   here that looks clickable and isn't. */
+.prose blockquote.callout strong {
+  color: var(--fg);
+}
+
+/* A path or filename inside a notice needed its own rule while the chip in
+   running prose was neutral: a grey box on a tinted panel read as a hole punched
+   in it. The chip now takes its colour from the same accent ramp the panel is
+   made of — see --literal-bg on .prose — so the exception has nothing left to
+   correct, and one declaration covers both grounds. Recorded rather than quietly
+   dropped, because the reason it existed is the reason the base rule changed. */
+
+
+/* ── Inline marks ────────────────────────────────────────────────────────── */
+
+/* Three things in these documents set a short string apart inside a sentence: a
+   literal in backticks, a source tag, and a key in a reference table. They are
+   one family and are declared together here, because written separately they
+   drifted — the same identifier read as two different objects depending on
+   which file you opened, which is the bug this block exists to close.
+
+   SHARED: the refusal to break mid-string. An identifier that wraps is an
+   identifier you have to reassemble before you can match it against the one you
+   were looking for. It used to be the monospace face as well — that is gone
+   from the whole app, and the floor in globals.css now holds these to the one
+   family rather than letting the UA default reintroduce a second one here.
+
+   NOT SHARED, and deliberately: where the colour lands, and the tag's smaller
+   pill shape. The two roles mean different things and the reader needs to tell
+   them apart without stopping —
+
+     tinted GROUND, --fg ink     a literal. Quoted exactly, and it stays here.
+     accent INK in a bordered    a citation. It leaves the page.
+     pill, raised off the line
+
+   Both now carry the hue, because the alternative was one of them being the
+   only grey object in a tinted app. What separates them is which part of the
+   chip the hue is in, and the shape around it: a literal is a flush box the
+   size of the words it holds, a citation is a smaller bordered pill lifted off
+   the baseline. Collapse THOSE and a register loses the only cue saying which
+   of the two a bracketed word is. So this is consistency of FAMILY, not of
+   paint. Anything new that marks a string inline joins this block; it does not
+   get a rule of its own further down.
+
+   :where() rather than :is(), so the two exceptions below can actually take
+   effect. :is() carries the specificity of its most specific argument — here
+   `a.src-tag` — which made this selector weigh more than `.prose pre code` and
+   `.prose :is(p, li) > code` and quietly beat both of them. :where() weighs
+   nothing, so this is the floor for anything mono in prose and the exceptions
+   are read as exceptions. */
+.prose :where(code, a.src-tag) {
+  white-space: nowrap;
+}
+
+/* A literal: a path, a command, a value.
+   --fg is set EXPLICITLY rather than inherited. A literal is quoted exactly and
+   has to be read exactly, so it is the one thing on the page that must not go
+   pale because of the block it happens to sit in — inside a dimmed note, a
+   provenance line or a caption, an inherited colour takes the chip down with
+   the prose around it, and a half-legible path is worse than no path.
+   The ground was --panel-2, then --line, and is now --literal-bg, which the
+   theme emits per mode — see surfacesFor in theme/palette.mjs for how each is
+   built and why the two recipes differ.
+
+   Each step answered the same complaint. --panel-2 sits 0.04 of lightness off
+   the page in light mode, not enough to say "this is one object"; it read as a
+   faint smudge, and a hairline around it only drew the outline of something that
+   still was not there. --line closed the shape without a border. What --line did
+   not do was look like anything: a grey box in a page set on warm paper, in an
+   app that re-tints entirely from one hue, was the one element on the screen the
+   palette could not reach — and a document with a path in every other sentence
+   was a column of grey boxes.
+
+   It is a theme token and not a color-mix() written here, because the two modes
+   do not take the same recipe and a mix in a stylesheet can only say one thing
+   without restating the theme's own light/dark selectors. Light is an opaque
+   colour below every ground it can land on; dark is a translucent WASH, so the
+   chip lifts whatever is behind it rather than trying to be one value that
+   clears the page, a card and a table cell at once. See surfacesFor in
+   theme/palette.mjs for the arithmetic.
+
+   The dark half being a wash is worth knowing before painting anything new
+   behind a literal: the chip will take its colour from it. That is why the
+   callout needs no exception of its own.
+
+   Only the GROUND takes the hue. The text stays --fg, because a literal is the
+   thing on the page that must be read exactly, and because accent INK is what a
+   source tag uses — see the family note below. Ground and ink say different
+   things here: the tint says "this is quoted", the ink says "and it stays on
+   this page". Contrast against --fg stays wide at both ends — the mix holds
+   --line's lightness, so it is 0.248 on ~0.873 in light and 0.933 on ~0.33 in
+   dark. */
+.prose code {
+  padding: 1px 5px;
+  border-radius: var(--r1);
+  background: var(--literal-bg);
+  color: var(--fg);
+  font-size: 0.86em;
+  /* 500, not 600 and not inherited. A monospace face set at 0.86 of a serif
+     prose size lands thinner than the sentence around it — the same ink spread
+     over taller, narrower letterforms — so a nudge keeps the stroke near the
+     weight of the prose it interrupts. It was briefly 600, which was the wrong
+     fix for the right complaint: the chip was hard to see because its GROUND
+     was a shade off the page, and bolding the letters to compensate made the
+     least important words in the sentence the heaviest. The ground carries it
+     now, so the type only has to match, not shout. */
+  font-weight: var(--w-medium);
+}
+
+/* A literal that is also a link takes the LINK's colour, not the literal's.
+   Without this, `.prose code` sets --fg on the text and the anchor around it
+   has no visible effect: a backticked link and a backticked path render
+   identically, and the only thing saying one of them goes somewhere is the
+   underline. `inherit` rather than naming --accent-fg, so it follows whatever
+   the anchor is at the time — the accent hue of the chosen palette, and the
+   inverted colour a source tag takes on hover — instead of pinning a second
+   copy of that decision here where it would quietly fall out of step. */
+.prose a > code {
+  color: inherit;
+}
+
+/* The exception to nowrap above. A long path or URL in running prose has to be
+   allowed to break, or one word pushes the whole paragraph sideways — and in a
+   paragraph there is surrounding text to reassemble it from, which is what a
+   bare table cell does not have. */
+.prose :is(p, li) > code {
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* A fenced block gets ONE ground, around the whole of it.
+   The tint belongs to `.prose code`, which is an inline element — so inside a
+   <pre> it paints a separate box per line box, and a listing came out striped,
+   every row a tinted band with the gutter between rows left as paper. The block
+   takes the ground; the code inside it gives it up. Type, leading and tracking
+   are left exactly as they were. */
+.prose pre {
+  margin: 1.4em 0;
+  padding: 20px 22px;
+  overflow-x: auto;
+  border-radius: var(--r3);
+  /* --line, at the lightness `.prose code` is mixed from and for the same
+     reason: at 0.957 against a page at ~1.0, --panel-2 was not enough separation
+     to read as an object, so a directory tree rendered as text that happened to
+     sit on a faint smudge and the rounded corners had no edge to show themselves
+     on. --line is 0.893 in light and 0.33 against a --panel-2 of 0.215 in dark,
+     so the block closes its own shape in both modes and needs no border to do
+     it.
+
+     Left neutral where the inline chip is now tinted, which is a deliberate
+     parting and not an oversight. The tint is there to make a chip FINDABLE
+     inside a sentence; a block twenty lines tall has already been found, and at
+     that size the same tint stops being a mark and becomes a coloured panel. It
+     would also be painting a hue under the syntax colours — --syn-string is
+     green, --syn-number amber — which are the only thing in this app that
+     genuinely needs a neutral ground to sit on. */
+  background: var(--line);
+  /* Sized here rather than left to `.prose code`, which is written for a span
+     sitting INSIDE a sentence and has to hold its own against the words either
+     side of it. A block has no sentence around it to match, and a mono face
+     gives every glyph the widest advance, so at equal pixels it takes more of
+     the line than the serif around it — the listing read a size larger than the
+     prose it sits in even while measuring smaller.
+
+     A listing is also not read the way a paragraph is: it is scanned for one
+     path, and the shape of the tree is what it has to convey. Smaller type shows
+     more of that shape at once and gives the box-drawing characters room to
+     reach their comments without a scrollbar.
+
+     Leading is deliberately NOT touched. Tightening it was tried alongside this
+     once and made the block read as cramped; the vertical rules of the tree want
+     the line height they inherit. */
+  font-size: 0.78em;
+}
+
+.prose pre code {
+  /* The block above has already sized itself. Without this, `.prose code`'s own
+     size multiplies into it and the listing lands at two thirds of the prose —
+     a different bug wearing the same clothes. */
+  font-size: 1em;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  /* The other half of giving the ground up: `.prose code` is nowrap, which
+     inside a <pre> collapses every newline in the listing into a space — a
+     directory tree came out as one line with a scrollbar under it. Inherit from
+     the <pre>, so the fence decides how its own lines break and this rule keeps
+     working if that ever becomes pre-wrap. */
+  white-space: inherit;
+}
+
+/* A source tag in a spec register: [NIST-800-92] against the claim it
+   corroborates, linking to the work itself. Classed by sourceTags() in
+   lib/markdown.js, which matches the bracketed link text — the href is an
+   arbitrary external URL, so it cannot be the signal, and CSS has no selector
+   for "a link whose text is bracketed".
+
+   Built as a bordered chip, after two rounds of it being too quiet to find. The
+   earlier versions leaned on --accent alone for visibility, and that fails on a
+   palette whose accent is soft: --accent is one value across four palettes and
+   only guaranteed to pass AA against the PAGE, never to stand out from the
+   prose around it, which is the different thing being asked for here.
+
+   So three cues rather than one — a tinted ground, an outline, and weight. Any
+   one of them survives a washed-out accent.
+
+   ── The three it uses ──────────────────────────────────────────────────────
+
+   --accent-fg, --accent-border and --accent-bg: the role trio, generated for
+   `accent` exactly as it is for ok, warn, alert and quiet, and designed to be
+   used together on precisely this — a small tinted chip. An earlier note here
+   said they were defined nowhere and reached for --accent and currentColor
+   instead; that was true of palette.mjs's own map and false of what the theme
+   emits, and the cost of the workaround was the chip wearing a full-strength
+   accent stroke around a pale ground. A 1px rule at text weight is the loudest
+   thing in a paragraph and it was outlining the least important word in it.
+
+   ── Why it no longer swells the line ───────────────────────────────────────
+
+   It sat on `vertical-align: 0.1em`, which lifted the box above the line's
+   ascent and made the whole line grow to hold it — so a paragraph carrying one
+   tag was set at a different leading from the paragraph under it, and the chip
+   looked wedged between two lines rather than sitting on one. On the baseline
+   with padding expressed in em, the chip's own text now sits on the same line as
+   the prose around it, and its height comes from that text rather than from a
+   line-height inflated to make room.
+
+   The brackets are in the markdown now, not drawn here: [[KEY]](url) puts them
+   in the link text so the raw file and the rendered page agree. */
+.prose a.src-tag {
+  display: inline-block;
+  /* Lifted off the baseline, because sitting ON it is not the same as sitting on
+     the line. Aligning baselines puts the chip's TEXT where the prose's text is,
+     and then hangs everything under that text — the descender space, the
+     padding, the border — below the line, so the chip reads as having dropped
+     off the sentence it belongs to. Set at a size small enough that its own
+     letters are shorter than the prose's, the effect is to look like a footnote
+     that slipped.
+
+     `position: relative` rather than `vertical-align`, which is how this went
+     wrong before: vertical-align moves the box the line has to make room for, so
+     a lifted chip grew the line around it and a paragraph carrying one tag was
+     set at a different leading from the paragraph beneath it. A relative offset
+     is painted, not laid out — the line box never knows, the leading never
+     moves, and the nudge can be tuned by eye without a cost somewhere else. */
+  position: relative;
+  top: -0.16em;
+  /* Air on the left, none on the right. The word before it is a word and wants
+     a word's worth of separation; the full stop after it is punctuation
+     belonging to the sentence and has to stay tight to the thing it closes, or
+     it reads as floating loose in the line. */
+  margin-inline: 0.22em 0.04em;
+  /* Enough that the chip is not hugging its own letters, and no more. It went
+     from 0.08em to 0.24em to fix the hugging and overshot: padding is what makes
+     a chip LOOK big, far more than its type size does, and at 0.24em it had
+     stopped being an aside in the line and become an object sitting in it.
+     Landed at 0.15em, which is about 2px at this size — visible as air, not as
+     bulk. The whole chip is then ~20px against a 29px line box, so it clears
+     the lines either side with room to spare. */
+  padding: 0.15em 0.5em;
+  border: 1px solid var(--accent-border);
+  /* The same corner every other tag in this app is cut with, for the same reason
+     given at .tag: it follows the character's radius rather than a flat value,
+     so it cannot be the one element on the page announcing it was drawn
+     somewhere else. It was --r1, which made a citation look like a code span —
+     and a code span is what sits two lines above it in most of these files. */
+  border-radius: var(--r4);
+  background: var(--accent-bg);
+  color: var(--accent-fg);
+  /* A citation is an aside, and should be the quietest thing on the line it sits
+     in. Mono runs large for its nominal size — its letters are wider and its
+     x-height taller than the serif beside it — so a tag set at 0.72em was
+     reading at close to the weight of the prose carrying it. 0.66em is where it
+     stops competing and starts annotating. */
+  font-size: 0.66em;
+  font-weight: var(--w-strong);
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  transition:
+    background var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease);
+}
+
+/* Inverted on the way in, so the affordance reads even where --accent is pale
+   and so the chip answers the pointer the way every other link in this app
+   does. The border moves with the ground, or the outline stays pale around a
+   filled chip and reads as a seam. */
+.prose a.src-tag:hover,
+.prose a.src-tag:focus-visible {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* An anchored heading must not land under the sample banner, which is the only
+   thing above the prose — 0px normally, 30px with a sample record loaded. The
+   extra line gives the heading air rather than sitting flush to the top edge,
+   which reads as a clipped page rather than as a target. */
+.prose :is(h1, h2, h3, h4, h5, h6) {
+  scroll-margin-top: calc(var(--sample-bar) + 1.25rem);
+}
+
+/* --accent-fg, not --accent. They are different jobs and the theme already
+   separates them: --accent is the graphic accent, tuned to read against the
+   page as a mark; --accent-fg is the same hue tuned to be READ as text, and it
+   is the darker of the two in light mode and the lighter in dark. Body text
+   here is --fg at L 0.248 while --accent sits at L 0.480, so a link set in it
+   was running at roughly half the weight of the sentence carrying it. */
+.prose a {
+  color: var(--accent-fg);
+}
+
+.prose hr {
+  border: 0;
+  border-top: 1px solid var(--line-soft);
+}
+
+/* Tables in these documents are registers — four or five columns, most of them
+   full sentences — and they are read inside the harness panel, which can be
+   narrower than a phone. Left to itself the browser gives every column a share
+   of 100% and starves the narrow one: an identifier like APPEND-ONLY or ARC-011
+   is the shortest text in the row, so it is what gets crushed, and it then
+   breaks at its own hyphen into APP / END- / ONL / Y.
+
+   Three rules, each fixing one part of that. */
+.prose table {
+  /* A block box, so that when five columns genuinely will not fit the table
+     scrolls sideways instead of compressing until nothing is legible. Only the
+     table scrolls; the page does not. */
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  /* Set in the surface's own face like everything else. The 0.82em is what
+     makes a five-column table fit; the family was doing nothing the size was
+     not already doing better. */
+  font-size: 0.82em;
+}
+
+.prose table :is(th, td) {
+  /* A floor under every prose column, which is also what makes the overflow
+     above trigger rather than the columns collapsing to one word per line.
+
+     The padding is added back because the cells are border-box like everything
+     else here: a bare 14ch floor spent 28px of itself on its own padding and
+     left about ten characters of text. That is narrow enough for the justified
+     setting's `hyphens: auto` to break ordinary words, and a spec statement
+     came out reading "per-sonal". The padding makes the number mean what it
+     says, and 16ch clears the longest word the registers actually use. The
+     28px is the 10px 14px on the base cell further down; the two move
+     together. */
+  min-width: calc(16ch + 28px);
+  /* Rows here run to several lines and vary wildly in height; centred cells
+     would leave each row's first line at a different height across the table. */
+  vertical-align: top;
+}
+
+.prose table :is(th, td):first-child {
+  /* The identifier column: shrink to exactly its content and never wrap. width
+     1% is the standard way to say "take only what you need" in an auto-layout
+     table — it cannot go below its content, so it settles at the widest key. */
+  width: 1%;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+/* The gap above a register, restated in the prose face. The flow rule further
+   up sets 0.85em between siblings, but an em inside the table is the table's
+   own 0.82em face, so the gap lands at ~0.7em of the prose around it: tighter
+   before a table than between two paragraphs, when a register needs more air
+   before it, not less. A paragraph introducing a table should read as its
+   lead-in, not as its first row. */
+.prose > * + table {
+  margin-top: 1.6em;
+}
+
+/* ── Anchors ─────────────────────────────────────────────────────────────── */
+
+/* Anchored table rows land clear of the top edge, as headings do. */
+.prose tbody tr[id] {
+  scroll-margin-top: 26px;
+}
+
+@media (max-width: 900px) {
+  .prose tbody tr[id] {
+    scroll-margin-top: 80px;
+  }
+}
+
+/* ── Narrow ──────────────────────────────────────────────────────────────── */
+
+/* A step up in size on a phone, where the column is the screen and there is no
+   surrounding chrome to read it against. The base size is tuned for a 740px
+   column on a desk; at arm's length on glass it reads small. */
+@media (max-width: 900px) {
+  .prose {
+    font-size: 17px;
+  }
+}
+
+/* ── Paper ───────────────────────────────────────────────────────────────── */
+
+/* The measure is a screen-reading decision — it caps a line so the eye finds the
+   left margin again. Print has its own margins doing that work, and a 68ch column
+   on an A4 page is a narrow strip with two inches of white beside it. */
+@media print {
+  .prose {
+    max-width: none;
+  }
+}
+
+/* ── Where a view differs, and why ───────────────────────────────────────── */
+
+/* Three views override the contract above. They are collected here rather than
+   left beside the layout that prompted each one, so the whole answer to "how does
+   markdown look in this app" is one file — and so a fourth exception has to be
+   written next to the three that already exist and justify itself against them.
+
+   Every one of them is about the MEASURE. None of them touches the face, the
+   size, the leading or any of the marks: a spec register, a finding and her
+   safety plan are set in the same type as her journal, and that is the point. */
+
+/* The harness. .prose caps every line at 68ch, and that cap is right for her
+   record: it is one voice, read at length, and a line longer than about seventy
+   characters loses the eye on the way back to the left margin.
+
+   The harness is not that. It is reference material — specs whose substance is
+   four-column tables, skills that are procedures, settings that are literal
+   source. A table given 68ch wraps every cell to three words and becomes
+   something you decode rather than read, and the measure was leaving a third of
+   each card empty to do it. Reference is scanned, not read start to finish, so
+   it takes the card it is in.
+
+   Scoped to the panel, so her record keeps its measure untouched — the same
+   :has() boundary as everything else in that view.
+
+   The review panel answers the same question the same way. A finding is read in
+   a panel that was widened on purpose, and the two used to disagree: this one
+   dropped to ragged right on the reasoning that justification opens holes across
+   a wide line, while ARCHITECTURE.md beside it stayed justified at the same
+   width. One question, one answer — the reference case wins, `hyphens: auto` is
+   what makes it affordable, and the two are now one rule. */
+.harness-panel .prose,
+.review-said {
+  max-width: none;
+}
+
+/* A body cell in a harness table sets ragged, and does not hyphenate.
+
+   This is the one place the justified setting above is overruled, and it is
+   overruled because the thing that makes justification affordable is the thing
+   that fails here. `hyphens: auto` buys the flush right edge by breaking words,
+   and in a table that is three or four columns wide the breaks stop being
+   occasional: ARCHITECTURE.md's register puts sixty characters in a column, so
+   the dictionary is reached for on most lines and a paragraph comes out as
+   `in-structions`, `ori-entation`, `re-pository` — a hyphen every second line,
+   in prose that is being read for its precision. A reader checking what a rule
+   says should not first have to reassemble the word it says it in.
+
+   Both properties, not just the hyphens. Turning off hyphenation and leaving the
+   text justified produces exactly the failure the note above this file's .prose
+   rule describes — the browser can only widen word gaps, and at this measure it
+   opens rivers immediately. The flush edge was never free; it was paid for with
+   the hyphens, and giving up the one means giving up the other.
+
+   Scoped to `td`, so the register's own headers and the rest of the panel's
+   running prose — a skill's paragraphs, a spec's lead — keep the justified
+   setting they were written for. The exception is the narrow cell, not the
+   harness. */
+.harness-panel .prose td {
+  text-align: left;
+  hyphens: manual;
+}
+
+.review-said > :first-child {
+  margin-top: 0;
+}
+
+/* The safety plan, whose sheet is wider than the reading column on purpose —
+   see .main-inner:has(.plan-view) in globals.css for why.
+
+   Lists and registers fill the sheet they are on. A bullet here is a phrase, not
+   a sentence, and a phrase does not have a measure to exceed. */
+.plan-view .card .prose {
+  max-width: none;
+}
+
+/* Paragraphs do, though. Nothing in the sample plan is a paragraph, but hers may
+   be — a note under a heading, a sentence about a person — and a paragraph run
+   to the full width of a 1180px sheet is the thing the cap existed to prevent.
+   So the cap comes off the sheet and stays on the prose that needs it. */
+.plan-view .card .prose > p {
+  max-width: var(--measure);
+}
+
+/* Where the width actually goes. Her warning signs are four short lines; set one
+   under another they are four lines tall and 300px wide on a 1100px sheet, and
+   the page is twice as long as it needs to be for no gain at all.
+
+   A column WIDTH rather than a count, so the split is decided by the room there
+   is: two columns on a laptop, one on a phone, and nothing to undo at a
+   breakpoint. Each item is kept whole, because a bullet broken across a column
+   boundary is worse than the empty line that avoiding it costs.
+
+   Top-level lists only. A list nested inside an item is a sub-point of the line
+   above it, and splitting one into columns of its own inside a column would put
+   a sub-point beside the thing it belongs under. */
+.plan-view .card .prose > :is(ul, ol) {
+  columns: 20em auto;
+  column-gap: 44px;
+}
+
+.plan-view .card .prose > :is(ul, ol) > li {
+  break-inside: avoid;
+}
+
+
+/* ── Two rules that stay in globals.css, and why ─────────────────────────── */
+
+/* Not every declaration touching `.prose` could be moved here without making
+   something else worse, so the two that stayed are named rather than left to be
+   found:
+
+   `.note, .plan-lead .prose` — the safety plan's opening line is rendered
+   markdown set in the quiet aside voice, and it is declared WITH .note so the
+   two cannot drift. Splitting it to bring half of it here would produce the
+   second definition that rule exists to avoid.
+
+   `.harness-panel .prose tbody tr[id]` and its heading twin — a scroll offset
+   clearing the harness's pinned band, declared beside `.harness-panel [id]`,
+   which it exists to out-specify. It is about that band's height, not about how
+   markdown is set. */
