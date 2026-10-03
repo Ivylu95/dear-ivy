@@ -17,7 +17,7 @@ changed; the superseded version moves to `archive/`.
 _Controlled list. Reuse what's here. Add a new tag only when nothing fits, and add
 it to this list — two tags meaning the same thing makes the timeline useless._
 
-`work` · `sleep` · `family` · `health` · `money` · `loneliness` · `hope` · `therapy`
+`work` · `sleep` · `family` · `health` · `money` · `loneliness` · `hope` · `therapy` · `dating`
 
 ---
 
@@ -39,3 +39,4 @@ _Anything marked `[inferred]` is my reading, not her words._
 | Date | Type | Tags | What happened | File |
 |---|---|---|---|---|
 | 2026-10-03 (told 2026-10-03) | therapy | `therapy` | Said she sees a therapist / psychologist and doesn't find them very helpful; start date unknown | → data/therapy/what_im_working_on.md |
+| 2026-10-03 | feeling | `dating` | Felt a little anxious: the person she's dating replied less than usual today | → data/journal/2026-10-03.md |
