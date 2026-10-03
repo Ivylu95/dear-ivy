@@ -38,4 +38,5 @@ _Topics she has asked to leave. Not closed forever — but not mine to reopen._
 |---|---|
 | 2026-09-26 | Short sentences, and summarise. Her words: *"Can you summarize and talk shorter sentences to me in future"*. She asked after I sent long replies about a saving problem. |
 | 2026-10-03 | Simpler English. Her words: *"Simpler English"*. Said after I asked *"What's the anxious part of you telling you it means?"*. Use plain, everyday words. No metaphors like "the anxious part of you". |
+| 2026-10-03 | Tables for lists and plans, to cut scrolling. Her words: *"Put it in an easy to view format? Like a table? So I can minimize scrolling"* |
 
