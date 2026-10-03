@@ -74,9 +74,10 @@ recommended:
   # Therapist, doctor, anyone professional, or "no one". Whose word comes first.
   professional_involved:
     value: |
-    status: asked
+      I'm seeing a therapist / psychologist but I don't think they are very helpful
+    status: answered
     status_reason:
-    last_updated: 2026-09-26T17:15:36+08:00
+    last_updated: 2026-10-03T13:33:19+08:00
 
   # One person she would reach on a bad night.
   bad_night_person:
