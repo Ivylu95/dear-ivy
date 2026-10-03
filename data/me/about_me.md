@@ -6,6 +6,8 @@ The basics, so I never have to explain them twice.
 
 _Age, work, where I live, who I live with, how the days actually go._
 
+- Height 157 cm. Weight about 48 kg (told 2026-10-03).
+
 ## History that matters
 
 _Health, mental health, big events. Only what's useful to have on the record._
