@@ -91,9 +91,10 @@ optional:
   # What she does for work or study, in her words.
   work_or_study:
     value: |
-    status: not_asked
-    status_reason:
-    last_updated:
+      I'm a preschool teacher.
+    status: answered
+    status_reason: Said in passing, 2026-10-03. Teaches children aged 1.5 to 3.
+    last_updated: 2026-10-03T13:49:45+08:00
 
   # Who she lives with.
   lives_with:
