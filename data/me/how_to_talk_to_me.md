@@ -22,7 +22,7 @@ happens._
 
 | Date | What I did or said | What to do instead |
 |---|---|---|
-|  |  |  |
+| 2026-10-03 | Asked *"What's the anxious part of you telling you it means?"* She replied *"Simpler English"*. | Plain words, short questions. E.g. "What are you worried it means?" |
 
 ## Don't push on
 
@@ -37,4 +37,5 @@ _Topics she has asked to leave. Not closed forever — but not mine to reopen._
 | Date | What |
 |---|---|
 | 2026-09-26 | Short sentences, and summarise. Her words: *"Can you summarize and talk shorter sentences to me in future"*. She asked after I sent long replies about a saving problem. |
+| 2026-10-03 | Simpler English. Her words: *"Simpler English"*. Said after I asked *"What's the anxious part of you telling you it means?"*. Use plain, everyday words. No metaphors like "the anxious part of you". |
 
