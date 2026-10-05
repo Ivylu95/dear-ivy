@@ -41,3 +41,4 @@ _Anything marked `[inferred]` is my reading, not her words._
 | 2026-10-03 (told 2026-10-03) | therapy | `therapy` | Said she sees a therapist / psychologist and doesn't find them very helpful; start date unknown | → data/therapy/what_im_working_on.md |
 | 2026-10-03 | feeling | `dating` | Felt a little anxious: the person she's dating replied less than usual today | → data/journal/2026-10-03.md |
 | 2026-10-04 | question | `adhd` | Asked whether she has ADHD; what prompted it not yet known | → data/journal/2026-10-04.md |
+| 2026-10-05 | feeling | `dating` | Unsure about the guy she's dating: kind, but they talk on different levels; wondering whether to continue | → data/journal/2026-10-05.md |
