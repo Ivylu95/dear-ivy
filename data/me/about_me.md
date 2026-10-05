@@ -19,6 +19,8 @@ _Health, mental health, big events. Only what's useful to have on the record._
 
 - Feeling like she's *"mothering"* a partner by teaching him things: *"it comes off annoying and kind of like a turn off"* (2026-10-05).
 
+## How I get close to people
+
 - How she gets close to people: *"I need to be deep to get to know a person first before my fun side comes out"* (2026-10-05). She says she is a fun person.
 
 ## What steadies me
