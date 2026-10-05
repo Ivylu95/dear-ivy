@@ -12,7 +12,7 @@ _Appointments, deadlines, trips, birthdays. Soonest first. Remove once past
 
 | Date | What | Notes |
 |---|---|---|
-|  |  |  |
+| ~2026-11-02 | Check in on whether to keep dating him | Her own 3–4 week try, agreed 2026-10-05. Ask how it went; she decides → data/journal/2026-10-05.md |
 
 ## Recurring — the hard ones
 
