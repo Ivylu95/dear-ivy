@@ -41,4 +41,5 @@ _Topics she has asked to leave. Not closed forever — but not mine to reopen._
 | 2026-10-03 | Tables for lists and plans, to cut scrolling. Her words: *"Put it in an easy to view format? Like a table? So I can minimize scrolling"* |
 | 2026-10-03 | Recommendations (cafés, places, products) as a comparison table with price range, location, opening hours, and what they sell. Her words: *"Provide the info for me like this next time so I can compare and make better decisions"* |
 | 2026-10-03 | Under any table of names, add a code box with the names so she can copy them. Text in tables can't be copied in her app. Her words: *"Why can't I copy the names in the table"* |
+| 2026-10-07 | A daily morning check-in at about 8am: ask about her day and wellbeing, remind her of what we talked about last time, and give a short daily news summary. Her words: *"Could you check in with me everyday and ask me stuffs about my day and wellbeing? And also remind me of stuffs from yesterday or our previous chat? Could you also give me some daily news summary?"* Set up 2026-10-07, every day at 7:58am. |
 
