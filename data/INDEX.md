@@ -22,3 +22,4 @@ Rebuilt from disk during upkeep.
 | `me/how_to_talk_to_me.md` | Her words, what lands badly, what not to push. Read before writing. | 2026-08-30 |
 | `calendar/calendar.md` | What's coming, and hard anniversaries. | 2026-08-30 |
 | `therapy/what_im_working_on.md` | Current clinical focus. | — |
+| `health/daily_log.md` | Daily workouts and calories she reports, and weekly summaries. | 2026-10-07 |
