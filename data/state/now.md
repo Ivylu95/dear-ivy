@@ -12,7 +12,7 @@ Thinking hard about the guy she's dating. Calm, practical, wants a plan.
 
 ## What's live right now
 
-- **Dating:** unsure about him. Kind, but she says they talk on different levels. *"having my brain stimulated it's very important to me."* Trying 3–4 weeks before deciding → `journal/2026-10-05.md`. His name: not yet known.
+- **Dating:** unsure about him. Kind, but she says they talk on different levels. *"having my brain stimulated it's very important to me."* Trying 3–4 weeks before deciding → `journal/2026-10-05.md`. His name: Eugene → `people/eugene.md`.
 - **Weight:** wants 42 kg. I said that's underweight at 157 cm and gave a plan to 46 kg instead → `me/what_i_want.md`.
 - **ADHD:** wondering if she has it. What prompted it: not yet known → `journal/2026-10-04.md`.
 - **Therapy:** sees a therapist/psychologist, doesn't find them very helpful. Why: not yet asked.

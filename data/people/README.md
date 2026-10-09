@@ -25,4 +25,4 @@ one. Nothing else in the dashboard reads it.
 
 ## Index
 
-_(add as files are created)_
+- `eugene.md`: the guy she's dating (from 2026-10)

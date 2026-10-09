@@ -1,0 +1,23 @@
+# Eugene
+
+**Who they are to me:** the guy I'm dating (name given 2026-10-09: *"The date who is stupid"*). How long we've been dating: not yet known.
+
+## What's good
+- *"he is a very nice person"* (2026-10-05).
+- Usually texts good morning and shares bits of his day (2026-10-03).
+- They were close (2026-10-02).
+
+## What's hard
+- She feels they're on different levels: *"I talk about deep stuff and he talks about very surface level things"*. He didn't know the word "vicariously"; *"he can't read between lines"* (2026-10-05).
+- She feels she's *"mothering him by teaching him things and it comes off annoying and kind of like a turn off"* (2026-10-05).
+- His side, as she reports it: he said she always talks about deep stuff and he can't see her fun side (2026-10-05).
+- Money: lost over 30k from stock trading, twice. The second time was less than two years ago, after a breakup, even though he'd said he'd stop. Her words: *"he let his emotions get in the way"* (2026-10-05). Whether he still trades: not yet known.
+
+## What I want from this
+- *"having my brain stimulated it's very important to me"* (2026-10-05).
+
+## Where it stands (newest first)
+- 2026-10-05: Unsure whether to continue. Giving it 3 to 4 weeks, then deciding. Check-in around 2026-11-02 (`calendar/calendar.md`). HHN together planned.
+- 2026-10-03: Anxious when he replied less than usual. Turned out to be a busy, tired day.
+
+Detail: `journal/2026-10-03.md`, `journal/2026-10-05.md`.
