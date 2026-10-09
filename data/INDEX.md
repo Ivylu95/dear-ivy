@@ -23,3 +23,4 @@ Rebuilt from disk during upkeep.
 | `calendar/calendar.md` | What's coming, and hard anniversaries. | 2026-08-30 |
 | `therapy/what_im_working_on.md` | Current clinical focus. | — |
 | `health/daily_log.md` | Daily workouts and calories she reports, and weekly summaries. | 2026-10-07 |
+| `my_topics.md` | Her own readable page: a summary of every topic we've covered. Update when a topic changes. Asked for 2026-10-09. | 2026-10-09 |
