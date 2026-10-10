@@ -45,3 +45,4 @@ _Anything marked `[inferred]` is my reading, not her words._
 | 2026-10-07 | health | `sleep` | Said she doesn't sleep through the night | → data/journal/2026-10-07.md |
 | 2026-10-09 (told 2026-10-10) | health | `health` | Rolled her left ankle again; it has been sprained a few times and rolls easily | → data/journal/2026-10-10.md |
 | 2026-10-10 | feeling | `weight` | Said again she wants to be 42 kg | → data/journal/2026-10-10.md |
+| 2026-10-10 | update | `dating` | Still thinking about Eugene; said she is also seeing a few other people and will update as she goes | → data/people/eugene.md |

@@ -17,6 +17,7 @@
 - *"having my brain stimulated it's very important to me"* (2026-10-05).
 
 ## Where it stands (newest first)
+- 2026-10-10: Still on her mind. She's also seeing a few other people. Her words: *"I'm also seeing a few other ppl who I will update you as I go along"*.
 - 2026-10-05: Unsure whether to continue. Giving it 3 to 4 weeks, then deciding. Check-in around 2026-11-02 (`calendar/calendar.md`). HHN together planned.
 - 2026-10-03: Anxious when he replied less than usual. Turned out to be a busy, tired day.
 
