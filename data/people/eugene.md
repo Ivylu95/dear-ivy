@@ -14,7 +14,7 @@
 - Money: lost over 30k from stock trading, twice. The second time was less than two years ago, after a breakup, even though he'd said he'd stop. Her words: *"he let his emotions get in the way"* (2026-10-05). Whether he still trades: not yet known.
 
 - HHN (2026-10-09): wanted to leave by 10pm after 2 houses; complained all night (hot, sticky, tired); asked her not to be competitive, which annoyed her. Said the day before he'd cab her home, then said the cab was too expensive — she booked her own.
-- Money with her: looks for promotions, cheapest food, sharing; accepts when she offers to pay. *"I feel that he was not very willing to spend money or spend on me."* Compared to her ex: *"My ex was very giving."* *"Feel like I'm lowering my standards and settling for less."* (2026-10-10)
+- Money with her: looks for promotions, cheapest food, sharing; accepts when she offers to pay. *"I feel that he was not very willing to spend money or spend on me."* Compared to her ex: *"My ex was very giving."* *"Feel like I'm lowering my standards and settling for less."* Asked if that's about money or how he makes her feel: *"How he makes me feel"* (2026-10-10)
 
 ## What I want from this
 - *"having my brain stimulated it's very important to me"* (2026-10-05).
