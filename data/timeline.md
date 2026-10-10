@@ -43,3 +43,4 @@ _Anything marked `[inferred]` is my reading, not her words._
 | 2026-10-04 | question | `adhd` | Asked whether she has ADHD; what prompted it not yet known | → data/journal/2026-10-04.md |
 | 2026-10-05 | feeling | `dating` | Unsure about the guy she's dating: kind, but they talk on different levels; wondering whether to continue | → data/journal/2026-10-05.md |
 | 2026-10-07 | health | `sleep` | Said she doesn't sleep through the night | → data/journal/2026-10-07.md |
+| 2026-10-10 | feeling | `weight` | Said again she wants to be 42 kg | → data/journal/2026-10-10.md |
