@@ -8,6 +8,7 @@ _Age, work, where I live, who I live with, how the days actually go._
 
 - Work: preschool teacher. Her class is 1.5 to 3 years old (told 2026-10-03).
 - Height 157 cm. Weight about 48 kg (told 2026-10-03).
+- Left ankle: sprained a few times, rolls easily. Rolled again 2026-10-09 (told 2026-10-10).
 
 ## History that matters
 
