@@ -16,3 +16,4 @@ She asked for this on 2026-10-07: each evening, ask what workout she did, her ca
 
 | Week (Mon–Sun) | Days worked out | Total kcal | Avg kcal/day | Mood overall | Grateful-for highlights | vs last week |
 |---|---|---|---|---|---|---|
+| 2026-10-05 – 2026-10-11 | – | – | – | – | – | First week. No entries logged. Known from chat: rolled her left ankle 2026-10-09 |
