@@ -44,6 +44,8 @@ She asked for this on 2026-10-07: each evening, ask what workout she did, her ca
 
 Rest 60 sec between sets. Stop any move that hurts the ankle. When 3 × 12 feels easy, add a little weight or a few reps.
 
+**Short forms (2026-10-12, her request: *"Let's do short forms as I tell you next time ... And so on by initial"*):** W = Workout · E = Exercises · C = Calories · M = Mood · G = Grateful for. Use these when asking, and read them in her answers.
+
 ## Log
 
 | Date | Workout | Exercises (sets × reps) | Calories (kcal) | Mood | Grateful for | Her notes |
