@@ -22,6 +22,7 @@
 
 ## What I want from this
 - Asked what would need to change for her to come home happy: *"He is willing to spend more on me and his Less calculative"* (2026-10-12).
+- Asked if it's the money itself or what it says about how much he values her: *"Latter"* (2026-10-12).
 - *"having my brain stimulated it's very important to me"* (2026-10-05).
 
 ## Where it stands (newest first)
