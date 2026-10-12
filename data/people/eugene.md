@@ -21,6 +21,7 @@
 - Money with her: looks for promotions, cheapest food, sharing; accepts when she offers to pay. *"I feel that he was not very willing to spend money or spend on me."* Compared to her ex: *"My ex was very giving."* *"Feel like I'm lowering my standards and settling for less."* Asked if that's about money or how he makes her feel: *"How he makes me feel"* (2026-10-10). How she feels with him, one word: *"Cheap"* (2026-10-12)
 
 ## What I want from this
+- Asked what would need to change for her to come home happy: *"He is willing to spend more on me and his Less calculative"* (2026-10-12).
 - *"having my brain stimulated it's very important to me"* (2026-10-05).
 
 ## Where it stands (newest first)
