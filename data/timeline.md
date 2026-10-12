@@ -49,3 +49,4 @@ _Anything marked `[inferred]` is my reading, not her words._
 | 2026-10-10 | update | `dating` | Still thinking about Eugene; said she is also seeing a few other people and will update as she goes | → data/people/eugene.md |
 | ? (told 2026-10-12) | event | `dating` | A 5-year relationship and an engagement ended; date not yet known | → data/me/about_me.md |
 | 2026-10-12 | feeling | `dating` | Happy in the day; gloomy in the evening thinking about the ended engagement. Relief teacher helped her class; 3 people from dating apps want to meet next week | → data/journal/2026-10-12.md |
+| 2026-10-12 | update | `dating` | Told me about Del (met once; smart, banter, but short) and WJ (Hinge, not met; tall, 34, "feels old"); compared both with Eugene | → data/journal/2026-10-12.md |

@@ -24,3 +24,6 @@ Rebuilt from disk during upkeep.
 | `therapy/what_im_working_on.md` | Current clinical focus. | — |
 | `health/daily_log.md` | Daily workouts and calories she reports, and weekly summaries. | 2026-10-07 |
 | `my_topics.md` | Her own readable page: a summary of every topic we've covered. Update when a topic changes. Asked for 2026-10-09. | 2026-10-09 |
+| `people/eugene.md` | Eugene — dating since before Oct 2026; kind, good looking, conversation feels shallow to her. | 2026-10-12 |
+| `people/del.md` | Del — dating, met once; smart, banters, but short (160 cm). | 2026-10-12 |
+| `people/wj.md` | WJ — Hinge match, not met yet; tall, 34, never been in a relationship. | 2026-10-12 |

@@ -1,9 +1,25 @@
 # 📒 My Topics
 
 Everything we've talked about, in one place. I update this as we go.
-_Last updated: 9 Oct 2026_
+_Last updated: 12 Oct 2026_
 
-**Jump to:** 💕 Eugene · ⚖️ Weight plan · 🧠 ADHD · 😴 Sleep · 🛋️ Therapy · 🧒 Preschool lessons · ☕ Cafés · 🎈 Things to do · 📅 Daily check-ins
+**Jump to:** 💘 Who I'm dating · 💕 Eugene · ⚖️ Weight plan · 🧠 ADHD · 😴 Sleep · 🛋️ Therapy · 🧒 Preschool lessons · ☕ Cafés · 🎈 Things to do · 📅 Daily check-ins
+
+---
+
+## 💘 Who I'm dating
+
+| | 🧠 Talk | 👀 Looks | 📝 Notes |
+|---|---|---|---|
+| Eugene | A bit boring. You explain a lot | Very good looking | Kind |
+| Del | Smart, banter, *"stimulates my brain"* | 160 cm — *"makes me feel like a giant"* | Very nice. Met once. Both want to meet again |
+| WJ | Seems smart | Tall, dimples | Not met yet. 34, never in a relationship. *"Feels old"* |
+
+```
+Eugene
+Del
+WJ
+```
 
 ---
 
