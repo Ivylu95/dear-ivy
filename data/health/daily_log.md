@@ -46,13 +46,13 @@ Rest 60 sec between sets. Stop any move that hurts the ankle. When 3 × 12 feels
 
 **Short forms (2026-10-12, her request: *"Let's do short forms as I tell you next time ... And so on by initial"*):** W = Workout · E = Exercises · C = Calories · M = Mood · G = Grateful for. Use these when asking, and read them in her answers.
 
-**2026-10-12, later:** Workout column taken out. Her words: *"Also remove workout bc it's essentially the same as E"*. Workouts now go in E. Short forms are E · C · M · G. (No data lost: the column held no answers yet.)
+**2026-10-12, later:** Workout column taken out. Her words: *"Also remove workout bc it's essentially the same as E"*. Workouts now go in E. Short forms are E · C · M · G. Also *TM walk* = treadmill walk (her short form, 2026-10-12). (No data lost: the column held no answers yet.)
 
 ## Log
 
 | Date | Exercises (sets × reps) | Calories (kcal) | Mood | Grateful for | Her notes |
 |---|---|---|---|---|---|
-| 2026-10-12 | not yet known | Meal box so far: about 400–450 (my estimate from her photo; chicken about 100 by her count) | not yet known | not yet known | Box: 2 eggs, chicken, red and yellow peppers, ham, corn, lettuce, tomato. Dressing or oil: not yet known |
+| 2026-10-12 | TM walk (treadmill walk; how long: not yet known) | 1,500 (her count) | *"happy in the day, a bit gloomy in the evening as I started thinking about my losses from my failed romatic engagement and starting again after a 5 years Rs"* | *"a relief tr came to help my class. 2 boys said I'm cute on dating apps. 3 guys wanted to meet me next week on dating apps"* | Lunch box earlier: about 400–450 (my estimate). Dressing or oil: not yet known |
 
 ## Weekly summaries
 

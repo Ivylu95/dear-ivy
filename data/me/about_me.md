@@ -15,6 +15,7 @@ _Age, work, where I live, who I live with, how the days actually go._
 _Health, mental health, big events. Only what's useful to have on the record._
 
 - **Therapy (told 2026-10-03):** sees a therapist / psychologist. Name, how often, and how long: not yet known. Her view: *"I don't think they are very helpful"*. Detail → `data/therapy/what_im_working_on.md`.
+- **A 5-year relationship and an engagement that ended (told 2026-10-12):** her words: *"my failed romatic engagement and starting again after a 5 years Rs"*. When it ended, and who: not yet known. Thinking about it made her evening gloomy on 2026-10-12.
 
 ## What drains me
 

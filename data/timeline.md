@@ -47,3 +47,5 @@ _Anything marked `[inferred]` is my reading, not her words._
 | 2026-10-09 (told 2026-10-10) | event | `dating` | HHN with Eugene: he wanted to leave early, complained, backed out of cabbing her home; she felt he won't spend on her and that she's "settling for less" | → data/journal/2026-10-10.md |
 | 2026-10-10 | feeling | `weight` | Said again she wants to be 42 kg | → data/journal/2026-10-10.md |
 | 2026-10-10 | update | `dating` | Still thinking about Eugene; said she is also seeing a few other people and will update as she goes | → data/people/eugene.md |
+| ? (told 2026-10-12) | event | `dating` | A 5-year relationship and an engagement ended; date not yet known | → data/me/about_me.md |
+| 2026-10-12 | feeling | `dating` | Happy in the day; gloomy in the evening thinking about the ended engagement. Relief teacher helped her class; 3 people from dating apps want to meet next week | → data/journal/2026-10-12.md |
