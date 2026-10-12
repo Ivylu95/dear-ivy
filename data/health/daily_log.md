@@ -46,11 +46,13 @@ Rest 60 sec between sets. Stop any move that hurts the ankle. When 3 × 12 feels
 
 **Short forms (2026-10-12, her request: *"Let's do short forms as I tell you next time ... And so on by initial"*):** W = Workout · E = Exercises · C = Calories · M = Mood · G = Grateful for. Use these when asking, and read them in her answers.
 
+**2026-10-12, later:** Workout column taken out. Her words: *"Also remove workout bc it's essentially the same as E"*. Workouts now go in E. Short forms are E · C · M · G. (No data lost: the column held no answers yet.)
+
 ## Log
 
-| Date | Workout | Exercises (sets × reps) | Calories (kcal) | Mood | Grateful for | Her notes |
-|---|---|---|---|---|---|---|
-| 2026-10-12 | not yet known | not yet known | Meal box so far: about 400–450 (my estimate from her photo; chicken about 100 by her count) | not yet known | not yet known | Box: 2 eggs, chicken, red and yellow peppers, ham, corn, lettuce, tomato. Dressing or oil: not yet known |
+| Date | Exercises (sets × reps) | Calories (kcal) | Mood | Grateful for | Her notes |
+|---|---|---|---|---|---|
+| 2026-10-12 | not yet known | Meal box so far: about 400–450 (my estimate from her photo; chicken about 100 by her count) | not yet known | not yet known | Box: 2 eggs, chicken, red and yellow peppers, ham, corn, lettuce, tomato. Dressing or oil: not yet known |
 
 ## Weekly summaries
 
