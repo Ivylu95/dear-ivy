@@ -11,6 +11,7 @@ She asked for this on 2026-10-07: each evening, ask what workout she did, her ca
 
 | Date | Workout | Calories (kcal) | Mood | Grateful for | Her notes |
 |---|---|---|---|---|---|
+| 2026-10-12 | not yet known | Meal box so far: about 400–450 (my estimate from her photo; chicken about 100 by her count) | not yet known | not yet known | Box: 2 eggs, chicken, red and yellow peppers, ham, corn, lettuce, tomato. Dressing or oil: not yet known |
 
 ## Weekly summaries
 
