@@ -7,6 +7,7 @@
 - *"He feels smart too"* (2026-10-12).
 
 ## What's hard
+- *"he is a bad texter"* (2026-10-12).
 - *"he kind of feel outdated because he doesn't use Telegram and he doesn't have Instagram and he just feels old"* (2026-10-12).
 - *"he has never really been in a relationship despite being 34 years old"* (2026-10-12).
 

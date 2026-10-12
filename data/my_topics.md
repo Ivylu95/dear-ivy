@@ -13,7 +13,7 @@ _Last updated: 12 Oct 2026_
 |---|---|---|---|
 | Eugene | A bit boring. You explain a lot | Very good looking | Kind. Met 5+ times. You enjoy being around him |
 | Del | Smart, banter, *"stimulates my brain"* | 160 cm — *"makes me feel like a giant"* | Very nice. Met once. Both want to meet again |
-| WJ | Seems smart | Tall, dimples | Not met yet. 34, never in a relationship. *"Feels old"* |
+| WJ | Seems smart | Tall, dimples | Not met yet. 34, never in a relationship. *"Feels old"*. Bad texter |
 
 ```
 Eugene
