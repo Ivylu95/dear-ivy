@@ -10,6 +10,7 @@
 - They were close (2026-10-02).
 
 ## What's hard
+- Asked how she feels getting home after seeing him, happy or let down: *"A little let down w E"* (2026-10-12).
 - *"he annoys me sometimes w his lack of understanding of simple things"* (2026-10-12).
 - She feels they're on different levels: *"I talk about deep stuff and he talks about very surface level things"*. He didn't know the word "vicariously"; *"he can't read between lines"* (2026-10-05).
 - She feels she's *"mothering him by teaching him things and it comes off annoying and kind of like a turn off"* (2026-10-05).
