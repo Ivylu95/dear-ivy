@@ -4,7 +4,7 @@
 ~30 lines — it's a snapshot, not an archive. Anything that stops being current
 moves into the proper file, it doesn't accumulate here.
 
-_Last updated: 2026-10-10_
+_Last updated: 2026-10-12_
 
 ## How she's doing
 
@@ -12,8 +12,10 @@ Thinking hard about the guy she's dating. Calm, practical, wants a plan.
 
 ## What's live right now
 
-- **Dating:** unsure about him. Kind, but she says they talk on different levels. *"having my brain stimulated it's very important to me."* Trying 3–4 weeks before deciding → `journal/2026-10-05.md`. His name: Eugene → `people/eugene.md`. Also seeing a few other people (told 2026-10-10); names not yet known.
+- **Dating:** unsure about him. Kind, but she says they talk on different levels. *"having my brain stimulated it's very important to me."* Trying 3–4 weeks before deciding → `journal/2026-10-05.md`. His name: Eugene → `people/eugene.md`. Also seeing a few other people (told 2026-10-10); 3 from dating apps want to meet next week (told 2026-10-12).
 - **Weight:** wants 42 kg. I said that's underweight at 157 cm and gave a plan to 46 kg instead → `me/what_i_want.md`.
+- **Health:** left ankle rolled 2026-10-09; gave ankle exercises, said see a physio. Daily log now uses short forms E · C · M · G, with a workout plan in it → `health/daily_log.md`.
+- **Ended engagement / 5-year relationship:** first mentioned 2026-10-12. She said *"Leave it for now"*. Don't raise it; let her → `me/about_me.md`.
 - **ADHD:** wondering if she has it. What prompted it: not yet known → `journal/2026-10-04.md`.
 - **Therapy:** sees a therapist/psychologist, doesn't find them very helpful. Why: not yet asked.
 

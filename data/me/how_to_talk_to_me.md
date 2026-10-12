@@ -30,6 +30,7 @@ _Topics she has asked to leave. Not closed forever — but not mine to reopen._
 
 | Date | Topic | Her words |
 |---|---|---|
+| 2026-10-12 | The ended engagement and 5-year relationship. Wait for her to bring it up. | *"Leave it for now"* |
 | 2026-09-26 | How this works — the repository, saving, anything technical — when she opens with "hi" or anything about her life | *"When I say hi, at the start of the convo, or just anything, without talking about development work. Then don't talk about dev."* |
 
 ## What she's asked for more of
