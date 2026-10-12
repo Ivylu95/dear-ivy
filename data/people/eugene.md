@@ -1,13 +1,16 @@
 # Eugene
 
-**Who they are to me:** the guy I'm dating (name given 2026-10-09: *"The date who is stupid"*). How long we've been dating: not yet known.
+**Who they are to me:** the guy I'm dating (name given 2026-10-09: *"The date who is stupid"*). How long we've been dating: not yet known. Met more than 5 times (told 2026-10-12).
 
 ## What's good
+- *"I enjoy being around him"*. He still wants to keep meeting (2026-10-12).
+- Physically close: they have made out a couple of times (told 2026-10-12).
 - *"he is a very nice person"* (2026-10-05).
 - Usually texts good morning and shares bits of his day (2026-10-03).
 - They were close (2026-10-02).
 
 ## What's hard
+- *"he annoys me sometimes w his lack of understanding of simple things"* (2026-10-12).
 - She feels they're on different levels: *"I talk about deep stuff and he talks about very surface level things"*. He didn't know the word "vicariously"; *"he can't read between lines"* (2026-10-05).
 - She feels she's *"mothering him by teaching him things and it comes off annoying and kind of like a turn off"* (2026-10-05).
 - His side, as she reports it: he said she always talks about deep stuff and he can't see her fun side (2026-10-05).
