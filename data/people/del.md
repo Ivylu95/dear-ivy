@@ -10,6 +10,7 @@
 
 ## What's hard
 - Height: he is 160 cm, she is 157 cm. *"I like to feel small with my partner but he makes me feel like a giant."* (2026-10-12)
+- Height again: *"I notice the height w Del and I think a lot abt it too"* (2026-10-12).
 - Looks: *"objectively looking, face wise, he is also not that good looking"* (2026-10-12).
 - Her summary: *"I have mixed feelings"* (2026-10-12).
 
