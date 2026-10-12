@@ -16,6 +16,34 @@ She asked for this on 2026-10-07: each evening, ask what workout she did, her ca
 | Calf raises | 3 × 15 |
 | Heel and toe walks | 2 × 20 steps |
 
+**Workout plan (added 2026-10-12 at her request: *"Add workout into the table"*).** Goes with the 46 kg plan in `me/what_i_want.md`: strength 3 times a week, walking daily. Picked to be gentle on her left ankle while it heals: no jumping, no running.
+
+| Day | Workout |
+|---|---|
+| Mon | Strength A + ankle routine |
+| Tue | Walk 30 min + ankle routine |
+| Wed | Strength B + ankle routine |
+| Thu | Walk 30 min + ankle routine |
+| Fri | Strength A + ankle routine |
+| Sat | Walk or rest |
+| Sun | Rest |
+
+| Strength A | Sets × reps |
+|---|---|
+| Squat to a chair | 3 × 10 |
+| Knee or wall push-ups | 3 × 10 |
+| Glute bridge | 3 × 12 |
+| Plank | 3 × 20 sec |
+
+| Strength B | Sets × reps |
+|---|---|
+| Band rows (or water bottles) | 3 × 12 |
+| Side-lying leg raise | 3 × 12 each side |
+| Dead bug | 3 × 10 |
+| Bird dog | 3 × 10 each side |
+
+Rest 60 sec between sets. Stop any move that hurts the ankle. When 3 × 12 feels easy, add a little weight or a few reps.
+
 ## Log
 
 | Date | Workout | Exercises (sets × reps) | Calories (kcal) | Mood | Grateful for | Her notes |
