@@ -82,9 +82,9 @@ recommended:
   # One person she would reach on a bad night.
   bad_night_person:
     value: |
-    status: not_asked
-    status_reason:
-    last_updated:
+    status: asked
+    status_reason: asked at the start of the 2026-10-14 chat
+    last_updated: 2026-10-14T12:58:27+08:00
 
 optional:
 
