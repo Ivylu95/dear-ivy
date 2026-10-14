@@ -29,6 +29,7 @@ _Small and specific. Not "self-care" — actual things that have worked._
 | Who | How | When to call them |
 |---|---|---|
 | Joel (ex-fiancé) → `people/joel.md` | not yet known | A bad night. Her words (2026-10-14): *"Joel, my ex fiance. But I also think I need to stop relying so much on him"* |
+| (no one else yet) | — | Asked 2026-10-14 for a friend or family member as a second person. Her words: *"No I don't"*. Until there is one: SOS 1767, mindline 1771, and her therapist. |
 
 ## My care team
 
