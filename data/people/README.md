@@ -26,3 +26,4 @@ one. Nothing else in the dashboard reads it.
 ## Index
 
 - `eugene.md`: the guy she's dating (from 2026-10)
+- `joel.md`: her ex-fiancé, 5 years together; still the person she'd reach on a bad night (2026-10-14)

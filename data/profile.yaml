@@ -82,9 +82,10 @@ recommended:
   # One person she would reach on a bad night.
   bad_night_person:
     value: |
-    status: asked
-    status_reason: asked at the start of the 2026-10-14 chat
-    last_updated: 2026-10-14T12:58:27+08:00
+      Joel, my ex fiance. But I also think I need to stop relying so much on him
+    status: answered
+    status_reason: answered 2026-10-14; she wants to rely on him less, so a second person is worth finding
+    last_updated: 2026-10-14T13:29:13+08:00
 
 optional:
 

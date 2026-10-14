@@ -27,3 +27,4 @@ Rebuilt from disk during upkeep.
 | `people/eugene.md` | Eugene — dating since before Oct 2026; kind, good looking, conversation feels shallow to her. | 2026-10-12 |
 | `people/del.md` | Del — dating, met once; smart, banters, but short (160 cm). | 2026-10-12 |
 | `people/wj.md` | WJ — Hinge match, not met yet; tall, 34, never been in a relationship. | 2026-10-12 |
+| `people/joel.md` | Joel — her ex-fiancé, about 5 years together; the person she'd reach on a bad night, but wants to rely on him less. | 2026-10-14 |

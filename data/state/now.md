@@ -4,7 +4,7 @@
 ~30 lines — it's a snapshot, not an archive. Anything that stops being current
 moves into the proper file, it doesn't accumulate here.
 
-_Last updated: 2026-10-12_
+_Last updated: 2026-10-14_
 
 ## How she's doing
 
@@ -27,4 +27,4 @@ Thinking hard about the guy she's dating. Calm, practical, wants a plan.
 
 - Short sentences, simple English, tables, a copy box under lists of names → `me/how_to_talk_to_me.md`.
 - Weight: I've said once that 42 kg is too low. Don't lecture again unless she asks for help getting there.
-- Not yet asked: one person she'd reach on a bad night.
+- Bad-night person: Joel, her ex-fiancé. She wants to rely on him less (2026-10-14) → `people/joel.md`.
