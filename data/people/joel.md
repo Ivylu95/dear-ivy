@@ -17,4 +17,5 @@
 
 ## Where it stands  (dated, newest first)
 
+- 2026-10-13 (told 2026-10-14): *"Cried last night reminiscing abt Joel and my loss life"*.
 - 2026-10-14: still in touch; she relies on him and wants to rely on him less. How often they talk: not yet known. No friend or family member she'd reach instead (her words: *"No I don't"*).
