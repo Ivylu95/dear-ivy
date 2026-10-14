@@ -22,7 +22,7 @@ Rebuilt from disk during upkeep.
 | `me/how_to_talk_to_me.md` | Her words, what lands badly, what not to push. Read before writing. | 2026-08-30 |
 | `calendar/calendar.md` | What's coming, and hard anniversaries. | 2026-08-30 |
 | `therapy/what_im_working_on.md` | Current clinical focus. | — |
-| `health/daily_log.md` | Daily workouts and calories she reports, and weekly summaries. | 2026-10-07 |
+| `health/daily_log.md` | HCI (her name: Health Check In). Daily E · C · M · G she reports, and weekly summaries. | 2026-10-14 |
 | `my_topics.md` | Her own readable page: a summary of every topic we've covered. Update when a topic changes. Asked for 2026-10-09. | 2026-10-09 |
 | `people/eugene.md` | Eugene — dating since before Oct 2026; kind, good looking, conversation feels shallow to her. | 2026-10-12 |
 | `people/del.md` | Del — dating, met once; smart, banters, but short (160 cm). | 2026-10-12 |

@@ -13,6 +13,7 @@ _Use her language, not clinical language. If she says "flat", don't write
 
 | Her word | What it refers to |
 |---|---|
+| HCI | Her Health Check In: the daily table of exercises, calories, mood, grateful-for → `health/daily_log.md` (named 2026-10-14) |
 |  |  |
 
 ## What lands badly

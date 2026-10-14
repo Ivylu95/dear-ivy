@@ -1,4 +1,6 @@
-# Daily log: workouts and food
+# HCI — my Health Check In (daily log: workouts, food, mood)
+
+**Her name for it (2026-10-14):** *"Let's call the table my health check in HCI for short"*. When she says HCI, she means this table.
 
 She asked for this on 2026-10-07: each evening, ask what workout she did, her calories for the day, her mood, and one thing she's grateful for (mood and gratitude added the same day at her request: *"Maybe can also add mood into the table and one grateful thing"*). Every Sunday, a weekly table comparing this week with last week (days worked out, total calories).
 
