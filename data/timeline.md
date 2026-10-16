@@ -52,3 +52,4 @@ _Anything marked `[inferred]` is my reading, not her words._
 | 2026-10-12 | update | `dating` | Told me about Del (met once; smart, banter, but short) and WJ (Hinge, not met; tall, 34, "feels old"); compared both with Eugene | → data/journal/2026-10-12.md |
 | 2026-10-14 | update | `dating` | Named her ex-fiancé, Joel, as the person she'd reach on a bad night; said she needs to stop relying on him so much | → data/people/joel.md |
 | 2026-10-13 (told 2026-10-14) | feeling | `dating` | Cried at night thinking about Joel and "my loss life" | → data/journal/2026-10-14.md |
+| 2026-10-16 | work | `work` | Making a poster for her class at the preschool concert: song "I Can't Wait To Be King", Playgroup & Toddler; asked for a simple design with the children's photo cut-outs | → data/calendar/calendar.md |

@@ -13,6 +13,7 @@ _Appointments, deadlines, trips, birthdays. Soonest first. Remove once past
 | Date | What | Notes |
 |---|---|---|
 | ~2026-11-02 | Check in on whether to keep dating him | Her own 3–4 week try, agreed 2026-10-05. Ask how it went; she decides → data/journal/2026-10-05.md |
+| Date not yet known | Preschool concert — her class (Playgroup & Toddler) sings "I Can't Wait To Be King" | She was making the class poster on 2026-10-16 |
 
 ## Recurring — the hard ones
 
