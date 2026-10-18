@@ -62,3 +62,4 @@ Rest 60 sec between sets. Stop any move that hurts the ankle. When 3 × 12 feels
 | Week (Mon–Sun) | Days worked out | Days of ankle exercises | Total kcal | Avg kcal/day | Mood overall | Grateful-for highlights | vs last week |
 |---|---|---|---|---|---|---|---|
 | 2026-10-05 – 2026-10-11 | – | – | – | – | – | – | First week. No entries logged. Known from chat: rolled her left ankle 2026-10-09 |
+| 2026-10-12 – 2026-10-18 | 1 logged (treadmill walk, Mon) | not logged | 1,500 (1 day logged) | – (1 day only) | Happy by day Mon, gloomy that evening; cried Tue night | Relief teacher helped her class; compliments and 3 dates lined up | Up from 0 days logged. Only Mon fully logged |
