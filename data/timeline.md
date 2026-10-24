@@ -54,3 +54,4 @@ _Anything marked `[inferred]` is my reading, not her words._
 | 2026-10-13 (told 2026-10-14) | feeling | `dating` | Cried at night thinking about Joel and "my loss life" | → data/journal/2026-10-14.md |
 | 2026-10-16 | work | `work` | Making a poster for her class at the preschool concert: song "I Can't Wait To Be King", Playgroup & Toddler; asked for a simple design with the children's photo cut-outs | → data/calendar/calendar.md |
 | 2026-10-23 | question | `dating` | Seeing two guys from Hinge (3+ dates each, physical, not exclusive); asked whether to tell them she's seeing others | → data/journal/2026-10-23.md |
+| 2026-10-24 (told 2026-10-24) | event | `dating` | Had sex with someone from Hinge; asked whether to tell Eugene and Del | → data/journal/2026-10-24.md |
