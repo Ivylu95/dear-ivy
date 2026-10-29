@@ -56,3 +56,4 @@ _Anything marked `[inferred]` is my reading, not her words._
 | 2026-10-23 | question | `dating` | Seeing two guys from Hinge (3+ dates each, physical, not exclusive); asked whether to tell them she's seeing others | → data/journal/2026-10-23.md |
 | 2026-10-24 (told 2026-10-24) | event | `dating` | Had sex with someone from Hinge; asked whether to tell Eugene and Del | → data/journal/2026-10-24.md |
 | 2026-10-29 | question | `adhd` | Asked why she freezes when told to do something: knows the answer but thoughts jumble and she can't put the plan into words | → data/journal/2026-10-29.md |
+| 2026-10-29 | question | `adhd` | Sidetracked many times on the way to making her morning matcha; asked what this is | → data/journal/2026-10-29.md |

@@ -92,6 +92,8 @@ Only a professional can diagnose it. This is just a list to think about, or to s
 
 **Freezing when given a task (29 Oct):** you know what to do, but your thoughts jumble and you can't say the steps out loud. Worth telling your therapist, in your own words.
 
+**Getting sidetracked (29 Oct):** going to make morning matcha, but doing lots of other things first.
+
 **Who can check:** your therapist or psychologist → a polyclinic doctor (they can refer you) → a private psychiatrist.
 
 ---
