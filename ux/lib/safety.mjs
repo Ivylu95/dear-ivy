@@ -2,7 +2,7 @@
 //
 // ── Why this is its own file, and why it is .mjs ────────────────────────────
 //
-// SAF-002 in specs/interaction/safety.md: "One source of truth for the helpline
+// SAF-002 in dev/specs/interaction/safety.md: "One source of truth for the helpline
 // numbers, referenced everywhere they appear. A startup check asserts their
 // presence before the session begins." Its key consideration: "Duplicated
 // numbers drift, and the copy that drifts is the one nobody reads until it
@@ -117,7 +117,7 @@ export const MINIMUM_CONTACTS = 4;
 // places for two genuinely different reasons:
 //
 //   data/safety/safety_plan.md   hers, rendered by /safety. Parsed above.
-//   .claude/CLAUDE.md            the crisis script — what gets said out loud
+//   CLAUDE.md                    the crisis script — what gets said out loud
 //                                when she is not safe.
 //
 // The second one cannot be a pointer to the first. SAF-001 puts crisis handling

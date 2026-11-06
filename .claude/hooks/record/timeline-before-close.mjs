@@ -5,9 +5,9 @@
 // writes a journal entry or a person's file but leaves the timeline alone has
 // written something that the next session has no route to.
 //
-// So: if anything under data/ was touched today and data/timeline.md was not,
+// So: if anything under data/ was touched today and data/core/timeline.md was not,
 // the turn does not end quietly — the model is asked once, and told what it
-// wrote. It blocks a single time per session (a marker in temp/hooks/), because
+// wrote. It blocks a single time per session (a marker in .claude/hooks/state/), because
 // the second refusal to end a turn is an argument, not a reminder, and she is
 // the one waiting on the other side of it.
 
@@ -29,15 +29,19 @@ for (const path of git(['log', '--since=midnight', '--name-only', '--pretty=form
   if (path.trim()) touched.add(path.trim());
 }
 
-const substantive = [...touched].filter((p) => !/^data\/state\//.test(p));
+// The timeline is data/core/timeline.md, and once split by year data/core/timeline/;
+// data/timeline/ is read too, where a split was made at the old path (lib/modules.mjs).
+// The state folder is session bookkeeping, not an event: data/core/state/, or data/state/
+// in a record not yet moved into its module.
+const substantive = [...touched].filter((p) => !/^data\/(?:core\/)?state\//.test(p));
 if (!substantive.length) pass();
-if ([...touched].some((p) => p.startsWith('data/timeline'))) pass();
+if ([...touched].some((p) => /^data\/(?:core\/)?timeline(?:\.md$|\/)/.test(p))) pass();
 
 markerWrite(marker);
 
 block(
   [
-    'The record moved today and data/timeline.md did not:',
+    'The record moved today and data/core/timeline.md did not:',
     '',
     ...substantive.map((p) => `  · ${p}`),
     '',

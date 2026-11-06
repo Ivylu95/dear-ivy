@@ -1,0 +1,34 @@
+# The record of what the developer typed is only ever appended to, by more than
+# one chat at once: a merge keeps every line from both sides.
+dev/dialogue/*.jsonl merge=union
+
+# Every eval run is appended to its history, by more than one chat at once: a merge keeps
+# every run from both sides, so a pass is never lost and a card never reads as unproven
+# for want of its record (2026-10-29: a merge that took one side dropped four passes).
+dev/evals/history/*.jsonl merge=union
+
+# Two chats appending to one month of the Transcript at once take the same T-
+# and A- numbers. This driver merges it by entry, keeping main's side whole and
+# moving only this chat's clashing numbers, and rebuilds agreements.md (which
+# is generated) from the merged months, so a pull never stops on them
+# (dialogue.mjs merge-driver; the session brief configures it). Where it is not
+# configured, git's own merge runs and `dialogue.mjs resolve` settles it.
+dev/dialogue/transcript/*.md merge=dialogue
+dev/dialogue/agreements.md merge=dialogue
+# The Agreements' pages, one per group and the archive (T-768), are generated the same way.
+dev/dialogue/agreements/*.md merge=dialogue
+
+# Appended to from more than one computer at once: a merge keeps every line from
+# both sides, so a save never stops on two appends at the end of the same file
+# (round 3, B5 and B22: phone saves stayed on side branches, an update logged on
+# two computers conflicted). The timeline is not among them: its lines are kept in
+# date order and corrected by new lines, and a union of two sides would leave
+# lines out of order and an Eras section rewritten on both sides doubled; it is
+# settled by merging, as CLAUDE.md says.
+.claude/release/update-log.jsonl merge=union
+data/core/state/log.md merge=union
+data/core/state/open_loops.md merge=union
+
+# The pages by way and by topic (A-070) are generated from the Transcript too, and rebuilt by the
+# same driver.
+dev/dialogue/index/*.md merge=dialogue

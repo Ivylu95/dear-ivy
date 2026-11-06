@@ -1,0 +1,23 @@
+{
+  "_what": "The last questions the sweep asked for each check-in, so the next differs, how many Telegram accepted, and any held (HBT-014).",
+  "counts": {
+    "morning": {
+      "sent": 1,
+      "first": "2026-10-02 08:06",
+      "last": "2026-10-02 08:06"
+    }
+  },
+  "sent": [
+    {
+      "id": "morning",
+      "at": "2026-10-02 08:06",
+      "text": "Did the new pillow help, and what's the first thing on today?"
+    },
+    {
+      "id": "morning",
+      "at": "2026-10-03 08:06",
+      "held": true,
+      "why": "nothing worth asking"
+    }
+  ]
+}

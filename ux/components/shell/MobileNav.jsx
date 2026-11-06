@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { useEffect, useSyncExternalStore } from 'react';
+import { useEffect, useRef, useSyncExternalStore } from 'react';
 import { getDrawerOpen, setDrawerOpen, subscribeDrawer } from '@/lib/sidebar';
 import { VIEW_ICON, VIEW_LABEL, viewForPath } from '@/lib/views';
 import { Icon } from '@/components/ui/icons';
@@ -18,6 +18,33 @@ export function MobileNav() {
   const open = useSyncExternalStore(subscribeDrawer, getDrawerOpen, () => false);
   const pathname = usePathname();
   const view = viewForPath(pathname);
+  const burgerRef = useRef(null);
+  const wasOpen = useRef(false);
+
+  // Open, the drawer is the only thing a keyboard should reach: focus moves
+  // into it, and the page and rail behind the scrim go inert, so Tab cannot
+  // wander off into content the scrim is covering. Shut, they come back, and
+  // focus returns to the button if it was inside the drawer (Escape, or a link
+  // that closed it), rather than being stranded on a hidden element.
+  useEffect(() => {
+    // The page, the rail, and the two resize seams between them: each seam is
+    // a focusable separator, and left out it was where Tab escaped to.
+    const behind = [
+      document.getElementById('main'),
+      ...document.querySelectorAll('.rail, .nav-seam, .rail-seam'),
+    ].filter(Boolean);
+    const drawer = document.getElementById('sidebar');
+    if (open) {
+      behind.forEach((el) => (el.inert = true));
+      drawer?.querySelector('a[href], button:not([disabled])')?.focus();
+    } else {
+      behind.forEach((el) => (el.inert = false));
+      if (wasOpen.current && drawer?.contains(document.activeElement)) burgerRef.current?.focus();
+    }
+    wasOpen.current = open;
+    // Never leave the page inert behind an unmounted drawer.
+    return () => behind.forEach((el) => (el.inert = false));
+  }, [open]);
 
   // Shut the drawer on Escape, and again whenever the viewport grows past the
   // breakpoint: the class would otherwise sit on <html> unnoticed and re-open the
@@ -42,6 +69,7 @@ export function MobileNav() {
     <>
       <header className="mobile-header">
         <button
+          ref={burgerRef}
           type="button"
           className="nav-burger"
           aria-label={open ? 'Close menu' : 'Open menu'}

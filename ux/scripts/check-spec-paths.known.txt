@@ -1,0 +1,4 @@
+# Spec rows whose design column names a path that is not a tracked file, and
+# why each is allowed. One "<ID> <path>" per line. Remove a line once it resolves.
+# Written only at the moment of failure, never tracked:
+DEP-006 PUSH_FAILED.md

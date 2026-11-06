@@ -7,9 +7,9 @@ export default defineConfig([
   ...nextVitals,
   {
     rules: {
-      // Every view renders markdown from data/ as server-side HTML on purpose. The
-      // only writer of those files is the agent she talks to, inside a private
-      // single-member repository, so it is not untrusted input.
+      // Every view renders markdown from data/ as server-side HTML on purpose,
+      // through lib/markdown.js, which escapes any markup written into a file
+      // (DPV-004 design 3); the rest are the nonce-carrying bootstrap scripts.
       'react/no-danger': 'off',
 
       // core-web-vitals does not turn this on, so an import left behind by the

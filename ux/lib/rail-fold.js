@@ -36,7 +36,7 @@ const FOLDED = 'folded';
 // line, and the stack pins them to the bottom edge as the open one fills the
 // screen, so what is closed is always in sight. That is the whole argument for
 // defaulting this way: nothing is being kept from anyone.
-const SHUT = new Set(['facts', 'referenced-by', 'references']);
+const SHUT = new Set(['facts', 'referenced-by', 'references', 'tags']);
 
 // Folded if it was left folded, or if it starts that way and has not been
 // opened. Absence of a stored value is not "open" for every block any more, so

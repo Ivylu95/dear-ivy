@@ -1,5 +1,6 @@
 import { readdirSync, statSync, watch } from 'node:fs';
-import { join } from 'node:path';
+import { join, relative } from 'node:path';
+import { skipped } from '@/lib/walk-skip.mjs';
 import { HARNESS, SPECS } from '@/lib/harness-dir';
 import { currentRecord } from '@/lib/data-dir';
 
@@ -10,9 +11,10 @@ export const dynamic = 'force-dynamic';
 //
 // ── Why this has to exist at all ────────────────────────────────────────────
 //
-// Every route in this app is force-dynamic and the mtime cache in
-// lib/file-cache.js switches itself off outside production, so the server never
-// serves a stale file — it re-reads from disk on every request. What is missing
+// Every route in this app is force-dynamic and the cache in lib/file-cache.js
+// is keyed on each file's mtime (and, under `next dev`, on the code that renders
+// it), so the server never serves a stale file — a changed one is re-read on the
+// next request. What is missing
 // is the request. Fast Refresh is driven by the bundler's watcher over the
 // MODULE GRAPH, and none of the markdown this app renders is in it: it is read
 // at request time from ../data and ../.claude, both outside ux/ entirely. The
@@ -40,7 +42,7 @@ export const dynamic = 'force-dynamic';
 // This repository lives inside a OneDrive folder, and OneDrive reacts to a write
 // by touching files near it. That is not a guess: watching the two roots through
 // one save of one spec produced four events — the real change, the same file
-// twice more, and REVIEW.md, which nothing had edited. A wider trace caught
+// twice more, and a file beside it that nothing had edited. A wider trace caught
 // a burst of eleven untouched files 641ms after a write, and more from the
 // record root two seconds after that. One save, four refreshes.
 //
@@ -81,7 +83,7 @@ function reallyChanged(root, file) {
 // which sounds negligible until the first save of a session, when OneDrive
 // touches a dozen files it has never been asked about and every one of them is
 // new. A few hundred stats, once, when the first tab connects.
-function prime(root) {
+function prime(root, top = root) {
   let entries;
   try {
     entries = readdirSync(root, { withFileTypes: true });
@@ -91,7 +93,9 @@ function prime(root) {
   for (const entry of entries) {
     const path = join(root, entry.name);
     if (entry.isDirectory()) {
-      prime(path);
+      // Not agent worktrees, packages, build output or hook state: an audit found
+      // 130,000 files under them, primed in 37-49 s with the server blocked (lib/walk-skip.mjs).
+      if (!skipped(relative(top, path))) prime(path, top);
       continue;
     }
     try {
@@ -131,6 +135,9 @@ function subscribe(root, listener) {
       // this existed — current on refresh.
       prime(root);
       room.watcher = watch(root, { recursive: true }, (event, file) => {
+        // Hook state is rewritten by every tool call of every session, and agent
+        // worktrees by every build: neither is anything a page shows.
+        if (file && skipped(String(file))) return;
         if (!reallyChanged(root, file)) return;
         for (const fn of room.listeners) fn();
       });
@@ -230,7 +237,7 @@ export async function GET(request) {
 
       // A bare tick, carrying NO path — and that is a privacy decision, not a
       // minimalism one. The obvious payload is the file that changed, and the
-      // files that change most here are data/people/<firstname>.md. A first name
+      // files that change most here are data/core/people/<firstname>.md. A first name
       // is the most personal thing in the whole record and it is not supposed to
       // exist outside data/ in any form. scripts/check-privacy.mjs greps harness
       // FILES for names and would never see this, because a stream is not a file

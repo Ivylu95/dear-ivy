@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { useRef, useState } from 'react';
 import { Avatar } from './Avatar';
 import { Icon } from '@/components/ui/icons';
+import { Button } from '@/components/ui';
 
 // Changing the picture. The only control in this app that writes anything.
 //
@@ -72,20 +73,15 @@ export function AvatarEditor({ name, stamp }) {
 
       <div className="avatar-editor-side">
         <div className="avatar-editor-actions">
-          <button
-            type="button"
-            className="btn"
-            disabled={busy}
-            onClick={() => input.current?.click()}
-          >
+          <Button disabled={busy} onClick={() => input.current?.click()}>
             <Icon name="quill" size={14} />
             {stamp ? 'Change photo' : 'Add a photo'}
-          </button>
+          </Button>
 
           {stamp && (
-            <button type="button" className="btn btn-quiet" disabled={busy} onClick={() => send({ method: 'DELETE' })}>
+            <Button variant="quiet" disabled={busy} onClick={() => send({ method: 'DELETE' })}>
               Remove
-            </button>
+            </Button>
           )}
         </div>
 

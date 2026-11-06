@@ -6,17 +6,32 @@
 :root {
   --hue: 336;
   --f-serif: var(--f-serif-var), ui-serif, Georgia, "Times New Roman", serif;
+  --f-code: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
   --w-body: 400;
   --w-ui: 450;
   --w-medium: 500;
   --w-semi: 550;
   --w-strong: 600;
+  --track-label: 0.12em;
   --dur-fast: 120ms;
   --dur: 220ms;
   --dur-slow: 380ms;
-  --dur-swap: 650ms;
+  --dur-swap: 300ms;
   --ease-swap: cubic-bezier(0.45, 0, 0.55, 1);
   --ease: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-spring: cubic-bezier(0.34, 1.2, 0.64, 1);
+  --swatch-lc: 0.48 0.105;
+  --size-wordmark: 23px;
+  --size-wordmark-tag: 12px;
+  --size-login-title: 25px;
+  --size-login-tag: 12.5px;
+  --size-identity: 22px;
+  --size-pill: 11px;
+  --size-control: 11.5px;
+  --size-mobile-head: 18px;
+  --size-mobile-title: 30px;
+  --size-notice-title: 20px;
+  --size-notice-sub: 14px;
 }
 
 /* Light is the base: a document with no class still renders correctly. */
@@ -60,6 +75,11 @@
   --syn-literal: oklch(0.42 0.095 28);
   --syn-key: oklch(0.42 0.095 255);
   --syn-regex: oklch(0.42 0.095 195);
+  --mark-ok: oklch(0.48 0.105 150);
+  --mark-accent: oklch(0.48 0.105 var(--hue));
+  --mark-warn: oklch(0.48 0.105 70);
+  --mark-quiet: oklch(0.545 0.016 var(--hue));
+  --mark-faint: oklch(0.82 0.014 var(--hue));
 }
 
 /* The OS preference, in CSS. `system` mode is the default, so it cannot
@@ -106,6 +126,11 @@
     --syn-literal: oklch(0.865 0.055 28);
     --syn-key: oklch(0.865 0.055 255);
     --syn-regex: oklch(0.865 0.055 195);
+    --mark-ok: oklch(0.48 0.105 150);
+    --mark-accent: oklch(0.63 0.1 var(--hue));
+    --mark-warn: oklch(0.48 0.105 70);
+    --mark-quiet: oklch(0.62 0.016 var(--hue));
+    --mark-faint: oklch(0.435 0.014 var(--hue));
   }
 
 }
@@ -151,6 +176,11 @@
   --syn-literal: oklch(0.865 0.055 28);
   --syn-key: oklch(0.865 0.055 255);
   --syn-regex: oklch(0.865 0.055 195);
+  --mark-ok: oklch(0.48 0.105 150);
+  --mark-accent: oklch(0.63 0.1 var(--hue));
+  --mark-warn: oklch(0.48 0.105 70);
+  --mark-quiet: oklch(0.62 0.016 var(--hue));
+  --mark-faint: oklch(0.435 0.014 var(--hue));
 }
 
 /* The default character, unqualified. An unknown data-character lands here. */

@@ -19,23 +19,24 @@
 // any character, and a separator that can appear inside a value is a parser that
 // silently truncates a credential.
 //
-// Two things follow from this being read at module scope:
+// Read on every call, never at module scope (PRV-005, "Revoking access actually
+// revokes it."):
 //
-// 1. process.env.DEAR_* is read when this module loads. lib/auth.js is imported by
-//    proxy.js, which runs on Node at request time, so a build made without these
-//    values contains neither of them.
-// 2. Changing an account needs the dev server restarted, not just the .env
-//    edited: the old values stay loaded until the module is.
+// 1. lib/auth.js is imported by proxy.js, which runs on Node at request time, so
+//    a build made without these values contains neither of them.
+// 2. Editing the .env takes effect on the next request, without a restart:
+//    config/env.mjs reads the file again whenever it changes, so an account
+//    removed is refused at once and a changed secret ends every session at once.
+//    A value exported in the shell still wins over the file, and stays until
+//    the server is restarted from a shell without it.
 //
 // FAIL CLOSED. Anything missing, malformed or incomplete yields an empty list,
 // and authConfigured() in lib/auth.js then refuses every sign-in rather than
 // letting in anyone who can reach the port.
 
-// First, and for its side effect only: it fills process.env from the .env at the
-// repository root, which is where the credentials live. Everything below reads
-// process.env at module scope, so this import has to be evaluated before them —
-// which is what its position here guarantees.
-import './env.mjs';
+// It fills process.env from the .env at the repository root, where the
+// credentials live, and envValue() reads them as the file is now.
+import { envValue } from './env.mjs';
 
 function parseAccounts(raw) {
   if (!raw) return [];
@@ -57,9 +58,18 @@ function parseAccounts(raw) {
 }
 
 // Usernames are trimmed and compared case-insensitively by lib/auth.js. Passwords
-// are compared exactly.
-export const ACCOUNTS = parseAccounts(process.env.DEAR_ACCOUNTS);
+// are compared exactly. Parsed again only when the raw value changes.
+let parsedFrom;
+let parsed = [];
+export function accounts() {
+  const raw = envValue('DEAR_ACCOUNTS');
+  if (raw !== parsedFrom) {
+    parsedFrom = raw;
+    parsed = parseAccounts(raw);
+  }
+  return parsed;
+}
 
-export const SESSION_SECRET = process.env.DEAR_SESSION_SECRET || '';
+export const sessionSecret = () => envValue('DEAR_SESSION_SECRET') || '';
 
-export const SESSION_DAYS = Number(process.env.DEAR_SESSION_DAYS) || 30;
+export const sessionDays = () => Number(envValue('DEAR_SESSION_DAYS')) || 30;

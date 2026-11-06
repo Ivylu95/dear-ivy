@@ -1,5 +1,6 @@
 import { existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
+import { SPECS_DIR } from '../../.claude/hooks/lib/paths.mjs';
 
 // Where the harness is, resolved once for the whole app.
 //
@@ -23,19 +24,21 @@ import { dirname, join } from 'node:path';
 //   env         DEAR_HARNESS, for anything neither of those describes.
 //
 // Resolved at module load and then fixed. If none exists, HARNESS still points
-// at the most likely path; every read then returns null and the harness views
-// render their empty states, which is wrong but safe.
+// at the most likely path; every read then returns null, and the harness views
+// say the folder could not be read rather than show it empty (HRN-006). The most likely path is
+// `../.claude`, read by index before the unset env is filtered out, as in
+// lib/data-dir.js.
 function resolveHarnessDir() {
   const candidates = [
     process.env.DEAR_HARNESS,
     join(process.cwd(), '..', '.claude'),
     join(process.cwd(), '.claude'),
-  ].filter(Boolean);
-  return candidates.find((path) => existsSync(join(path, 'settings.json'))) ?? candidates[1];
+  ];
+  return candidates.filter(Boolean).find((path) => existsSync(join(path, 'settings.json'))) ?? candidates[1];
 }
 
 export const HARNESS = resolveHarnessDir();
 
-// The specs sit beside `.claude/` at the repository root (ARC-008), so they are
+// The specs sit beside `.claude/` at the repository root (ARC-005), so they are
 // found from it rather than resolved a second time.
-export const SPECS = join(dirname(HARNESS), 'specs');
+export const SPECS = join(dirname(HARNESS), SPECS_DIR);

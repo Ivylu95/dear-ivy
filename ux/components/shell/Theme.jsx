@@ -3,7 +3,6 @@
 import {
   useCallback,
   useEffect,
-  useLayoutEffect,
   useRef,
   useState,
   useSyncExternalStore,
@@ -14,6 +13,7 @@ import {
   getCharacter,
   getHue,
   getThemeMode,
+  previewHue,
   setCharacter,
   setHue,
   setThemeMode,
@@ -23,6 +23,9 @@ import {
 } from '@/lib/theme';
 import { DEFAULT_CHARACTER, DEFAULT_HUE, characters, huePresets } from '@/theme/palette.mjs';
 import { Icon } from '@/components/ui/icons';
+import { Count } from '@/components/ui';
+import { Segmented } from '@/components/ui/Segmented';
+import { useDismiss, useFocusFirst, usePlaced } from '@/components/ui/popover';
 
 const MODES = [
   { key: 'light', label: 'Light', icon: 'sun' },
@@ -54,6 +57,7 @@ function change(apply, opts) {
 // which makes it the containing block for a fixed descendant, so even
 // `position: fixed` would be trapped inside a 272px drawer. A portal is the only
 // placement that is correct at both widths.
+// Placement, focus and closing are the shared popover hooks (ui/popover.js).
 function Panel({ anchorRef, label, onClose, children }) {
   const panelRef = useRef(null);
   const [pos, setPos] = useState(null);
@@ -61,72 +65,26 @@ function Panel({ anchorRef, label, onClose, children }) {
   // Measured, not guessed. The rail changes width on hover, on pin, and at the
   // breakpoint, so any hard-coded offset here would be wrong in two of those
   // three states.
-  useLayoutEffect(() => {
-    const place = () => {
-      const anchor = anchorRef.current;
-      const panel = panelRef.current;
-      if (!anchor || !panel) return;
-      const a = anchor.getBoundingClientRect();
-      const { offsetWidth: w, offsetHeight: h } = panel;
-      // Above the trigger, since the trigger sits at the bottom of the rail.
-      // Clamped into the viewport so a short window cannot push it off-screen.
-      setPos({
-        left: Math.max(8, Math.min(a.left, window.innerWidth - w - 8)),
-        top: Math.max(8, a.top - h - 8),
-      });
-    };
-    place();
-    window.addEventListener('resize', place);
-    return () => window.removeEventListener('resize', place);
-  }, [anchorRef]);
-
-  useEffect(() => {
-    const onKey = (e) => {
-      if (e.key === 'Escape') onClose({ restoreFocus: true });
-    };
-    // pointerdown rather than click: a click listener fires after the trigger's
-    // own handler has already re-opened the panel, which reads as a dead toggle.
-    //
-    // Measured against the two boxes, NOT against the event's target.
-    //
-    // A target is a claim about which node was under the pointer, and it is only
-    // as good as what else is on the page at the time. A view transition puts a
-    // picture of the old surface in the top layer over everything, and a press
-    // on a pseudo-element is reported against the element it belongs to — the
-    // document root. So pressing Light, then Dark, inside the length of one
-    // sweep sent a pointerdown whose target was <html>: not in the panel, not in
-    // the trigger, so the panel closed itself while the pointer was sitting
-    // squarely on one of its own buttons.
-    //
-    // Coordinates cannot be retargeted. Whatever is drawn over the panel, the
-    // question "was this press inside that rectangle" has the same answer, so
-    // this is not a patch for one overlay — it is the check the panel wanted in
-    // the first place. Both boxes are read fresh on each press because the rail
-    // changes width and the panel is placed from it.
-    const within = (el, e) => {
-      const r = el?.getBoundingClientRect();
-      if (!r) return false;
-      return (
-        e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom
-      );
-    };
-
-    const onDown = (e) => {
-      if (within(panelRef.current, e) || within(anchorRef.current, e)) return;
-      onClose({ restoreFocus: false });
-    };
-    document.addEventListener('keydown', onKey);
-    document.addEventListener('pointerdown', onDown);
-    return () => {
-      document.removeEventListener('keydown', onKey);
-      document.removeEventListener('pointerdown', onDown);
-    };
-  }, [anchorRef, onClose]);
+  usePlaced(() => {
+    const anchor = anchorRef.current;
+    const panel = panelRef.current;
+    if (!anchor || !panel) return;
+    const a = anchor.getBoundingClientRect();
+    const { offsetWidth: w, offsetHeight: h } = panel;
+    // Above the trigger, since the trigger sits at the bottom of the rail.
+    // Clamped into the viewport so a short window cannot push it off-screen.
+    setPos({
+      left: Math.max(8, Math.min(a.left, window.innerWidth - w - 8)),
+      top: Math.max(8, a.top - h - 8),
+    });
+  });
+  useDismiss(panelRef, anchorRef, onClose);
+  useFocusFirst(panelRef, pos != null);
 
   return createPortal(
     <div
       ref={panelRef}
-      className="menu"
+      className="menu popover"
       role="dialog"
       aria-label={label}
       // Hidden until measured. One frame at the wrong coordinates is a visible
@@ -176,7 +134,7 @@ function Colour({ hue }) {
           // Through the same scale as the accent, so a recommended colour cannot
           // be a nicer colour than the slider can reach. A shortcut, never a
           // separate quality of paint.
-          style={{ '--chip': `oklch(0.48 0.105 ${p.hue})` }}
+          style={{ '--chip': `oklch(var(--swatch-lc) ${p.hue})` }}
           // A preset is a discrete choice, so it gets the crossfade. The slider
           // deliberately does not — see its own note below.
           onClick={() => change(() => setHue(p.hue === DEFAULT_HUE ? null : p.hue))}
@@ -190,23 +148,74 @@ function Colour({ hue }) {
   );
 }
 
+// No view transition. The input fires on every step of a drag, and a composited
+// crossfade per step would both look wrong and cost more than the repaint it
+// replaces. Writing one custom property is the cheapest possible repaint — the
+// whole point of holding the palette in oklch(L C var(--hue)) — but it is still
+// a restyle of the page, so a drag shows the latest hue at most once a frame
+// (previewHue), and stores and announces it only on release: the native
+// `change` event, which a range input fires when the pointer lets go or a key
+// moves it. Until then the slider holds its own value, so it follows the hand
+// without the theme controls re-rendering behind it.
+//
+// `change` does not fire when a drag ends on the value it started from, so
+// pointerup and blur release too; otherwise the held value would outlive the
+// drag and hide a preset pressed later. Whichever comes first releases, the
+// rest find nothing held. A value back where it started is not stored (a
+// default hue stays unstored), only shown again. A held value also belongs to
+// the hue it was taken from: once a preset or another tab changes the hue, it
+// is the new hue that shows (derived in render; an effect clearing it would
+// cost a second render each change).
 function HueSlider({ hue }) {
+  const [held, setHeld] = useState(null);
+  const input = useRef(null);
+  const frame = useRef(0);
+  const wanted = useRef(hue);
+  const holding = useRef(false);
+
+  useEffect(() => {
+    const el = input.current;
+    if (!el) return undefined;
+    const release = () => {
+      if (!holding.current) return;
+      holding.current = false;
+      cancelAnimationFrame(frame.current);
+      frame.current = 0;
+      const next = Number(el.value);
+      if (next === (getHue() ?? DEFAULT_HUE)) previewHue(next);
+      else setHue(next);
+      setHeld(null);
+    };
+    for (const type of ['change', 'pointerup', 'blur']) el.addEventListener(type, release);
+    return () => {
+      for (const type of ['change', 'pointerup', 'blur']) el.removeEventListener(type, release);
+      cancelAnimationFrame(frame.current);
+    };
+  }, []);
+
+  const value = held?.from === hue ? held.value : hue;
   return (
     <input
+      ref={input}
       className="hue-slider"
       type="range"
       min="0"
       max="359"
       step="1"
-      value={hue}
-      // No view transition. This fires on every frame of a drag, and a composited
-      // crossfade per frame would both look wrong and cost more than the repaint
-      // it replaces. Writing one custom property is already the cheapest possible
-      // repaint — the whole point of holding the palette in
-      // oklch(L C var(--hue)) — so the live drag just writes it.
-      onChange={(e) => setHue(Number(e.target.value))}
+      value={value}
+      onChange={(e) => {
+        const next = Number(e.target.value);
+        setHeld({ value: next, from: hue });
+        holding.current = true;
+        wanted.current = next;
+        if (!frame.current)
+          frame.current = requestAnimationFrame(() => {
+            frame.current = 0;
+            previewHue(wanted.current);
+          });
+      }}
       aria-label="Any colour"
-      aria-valuetext={`Hue ${hue} degrees`}
+      aria-valuetext={`Hue ${value} degrees`}
     />
   );
 }
@@ -218,55 +227,44 @@ function Reading({ stored }) {
   const active = characters.find((c) => c.id === stored)?.id ?? DEFAULT_CHARACTER;
 
   return (
-    <div className="segmented" role="group" aria-label="Reading style">
-      {characters.map((c) => (
-        <button
-          key={c.id}
-          type="button"
-          // The default stores nothing rather than storing its own id, so "she
-          // never chose" stays one state and the default can move later without
-          // stranding every browser on the old one.
-          onClick={() => change(() => setCharacter(c.id === DEFAULT_CHARACTER ? null : c.id))}
-          aria-pressed={active === c.id}
-          title={c.note}
-        >
-          {c.label}
-        </button>
-      ))}
-    </div>
+    <Segmented
+      block
+      label="Reading style"
+      options={characters.map((c) => ({ key: c.id, label: c.label, title: c.note }))}
+      current={active}
+      // The default stores nothing rather than storing its own id, so "she
+      // never chose" stays one state and the default can move later without
+      // stranding every browser on the old one.
+      onSelect={(id) => change(() => setCharacter(id === DEFAULT_CHARACTER ? null : id))}
+    />
   );
 }
 
 function Appearance({ mode }) {
   return (
-    <div className="segmented" role="group" aria-label="Light or dark">
-      {MODES.map((m) => (
-        <button
-          key={m.key}
-          type="button"
-          // The pointer, not the button's centre. The circle should open from
-          // where she actually pressed — the corner of the control she hit, if
-          // that is where she hit it — because a reveal that starts a few pixels
-          // from the finger is a reveal that started somewhere else.
-          //
-          // `detail` is 0 for a press that came from the keyboard, where
-          // clientX/clientY are both 0: not a point on screen, the top-left
-          // corner. Passing no origin at all is the honest answer, and
-          // withThemeTransition cross-fades instead.
-          onClick={(e) =>
-            change(() => setThemeMode(m.key), {
-              kind: 'mode',
-              origin: e.detail ? { x: e.clientX, y: e.clientY } : undefined,
-            })
-          }
-          aria-pressed={mode === m.key}
-          title={m.label}
-        >
-          <Icon name={m.icon} size={13} />
-          <span>{m.label}</span>
-        </button>
-      ))}
-    </div>
+    <Segmented
+      block
+      label="Light or dark"
+      // Glyphs alone, at the developer's ask (2026-10-11); each keeps its name as
+      // the tooltip and for a screen reader (Segmented's icon-only option).
+      options={MODES.map((m) => ({ key: m.key, icon: m.icon, title: m.label }))}
+      current={mode}
+      // The pointer, not the button's centre. The circle should open from
+      // where she actually pressed — the corner of the control she hit, if
+      // that is where she hit it — because a reveal that starts a few pixels
+      // from the finger is a reveal that started somewhere else.
+      //
+      // `detail` is 0 for a press that came from the keyboard, where
+      // clientX/clientY are both 0: not a point on screen, the top-left
+      // corner. Passing no origin at all is the honest answer, and
+      // withThemeTransition cross-fades instead.
+      onSelect={(key, e) =>
+        change(() => setThemeMode(key), {
+          kind: 'mode',
+          origin: e.detail ? { x: e.clientX, y: e.clientY } : undefined,
+        })
+      }
+    />
   );
 }
 
@@ -282,20 +280,13 @@ function Appearance({ mode }) {
 // confirming is a switch nobody flips.
 function Record({ active }) {
   return (
-    <form action="/api/record" method="post" className="segmented" aria-label="Which record">
-      {RECORDS.map((r) => (
-        <button
-          key={r.key}
-          type="submit"
-          name="record"
-          value={r.key}
-          aria-pressed={active === r.key}
-          title={r.note}
-        >
-          {r.label}
-        </button>
-      ))}
-    </form>
+    <Segmented
+      block
+      label="Which record"
+      form={{ action: '/api/record', name: 'record' }}
+      options={RECORDS.map((r) => ({ key: r.key, label: r.label, title: r.note }))}
+      current={active}
+    />
   );
 }
 
@@ -392,7 +383,11 @@ export function SettingsMenu({ record = 'real', sampleAvailable = false }) {
             label says what is on screen, and the row under it is how to change
             it. Two states, one marker — the word when the rail is open, and the
             accent on the glyph, which is all a 64px column has room for. */}
-        {onSample && <span className="settings-flag">Sample</span>}
+        {onSample && (
+          <Count tone="accent" className="settings-flag">
+            Sample
+          </Count>
+        )}
       </button>
 
       {open && (

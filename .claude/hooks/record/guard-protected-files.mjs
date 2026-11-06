@@ -1,12 +1,19 @@
 // PreToolUse(Write|Edit|MultiEdit) — what this agent does not get to change.
 //
-// .claude/CLAUDE.md — CLAUDE.md: "Never edit this file yourself - when a session
-//   shows a rule is missing, wrong, or landed badly, write the proposed change
-//   and what prompted it to data/state/proposals.md for a developer to apply by
-//   hand." An agent that can rewrite its own constitution mid-session has none.
+// PARKED, NOT WIRED. This hook is not in .claude/settings.json; its entry sits
+// in .claude/hooks/parked.json, which Claude Code never reads. Parked 2026-09-27
+// on the developer's instruction: the agent may edit the whole harness, and git
+// history is what makes any edit recoverable. So today nothing refuses an edit
+// to CLAUDE.md, dev/specs/ or data/archive/; those rules are held by instruction
+// (dev/skills/spec-shared/shared.md says the same). Everything below describes
+// what the hook does when it is wired again, by moving its entry back into
+// settings.json (.claude/hooks/README.md says how).
 //
-// specs/** — every file in that folder opens with the same prohibition,
-//   and specs/README.md states it twice more. All three are instruction: text a
+// CLAUDE.md — an agent that can rewrite its own constitution mid-session
+//   has none. A proposed change is put to the developer to apply.
+//
+// dev/specs/** — every file in that folder opens with the same prohibition,
+//   and dev/specs/README.md states it twice more. All three are instruction: text a
 //   model reads and may decide this edit is the harmless exception to. SFG-002
 //   is the row that objects — "a rule enforced by machinery is distinguishable
 //   from one enforced by instruction" — and until this branch existed, the
@@ -20,10 +27,9 @@
 //
 // ── The cost, stated rather than discovered ─────────────────────────────────
 //
-// There is no escape hatch, deliberately, and that is not free: REVIEW.md keeps
-// an "Authorised edits" section because the owner does grant spec edits in
-// session, and with this branch on, each one has to be made by them or with the
-// hook off. The CLAUDE.md branch above has carried exactly that cost since it
+// There is no escape hatch, deliberately, and that is not free: the owner does
+// grant spec edits in session, and with this branch on, each one has to be made
+// by them or with the hook off. The CLAUDE.md branch above has carried exactly that cost since it
 // was written, and one mechanism behaving two ways is worse than one that is
 // occasionally inconvenient.
 //
@@ -33,50 +39,41 @@
 // parked.json reads command lines for that reason, and nothing does the same
 // for the specs. A gate on one door of two.
 
-import { readHookInput, deny, pass, isInside, repoRoot } from '../lib/hook.mjs';
-import { join } from 'node:path';
+import { readHookInput, refuse, pass, isInside, repoRoot } from '../lib/hook.mjs';
+import { join, relative, resolve } from 'node:path';
+import { SPECS_DIR } from '../lib/paths.mjs';
 
 const input = await readHookInput();
 const path = input?.tool_input?.file_path ?? '';
 if (!path) pass();
 
-if (isInside(path, join(repoRoot, '.claude')) && /CLAUDE\.md$/i.test(path)) {
-  deny(
+// The instruction file and its stub sit at the root (FND-010).
+const fromRoot = relative(repoRoot, resolve(repoRoot, path)).replace(/\\/g, '/');
+if (/^(CLAUDE|AGENTS)\.md$/i.test(fromRoot) || (isInside(path, join(repoRoot, '.claude')) && /CLAUDE\.md$/i.test(path))) {
+  refuse(
     'PreToolUse',
     'Blocked: CLAUDE.md is not yours to edit.\n\n' +
-      'Write the proposed change — and what in this session prompted it — to ' +
-      'data/state/proposals.md instead, for a developer to apply by hand. Say in the ' +
-      'conversation that you have done so.',
+      'Put the proposed change — and what in this session prompted it — to the ' +
+      'developer in the conversation instead, for them to apply.',
   );
 }
 
-// The findings queue is the one file inside the folder that must stay open. It
-// is written by the agent — that is what it is for — and a guard that refuses
-// the edit while the refusal tells the agent to file a finding there would
-// close the only route it names. The queue was split on 2026-09-21: findings
-// whose fix lands inside specs/ go to the REVIEW.md in that folder,
-// everything else to .claude/REVIEW.md. Either name is a destination, never a
-// spec, so both are matched by name rather than by path.
-const isFindingsQueue = /(^|[\\/])REVIEW\.md$/i.test(path);
-
-if (!isFindingsQueue && isInside(path, join(repoRoot, 'specs'))) {
-  deny(
+if (isInside(path, join(repoRoot, SPECS_DIR))) {
+  refuse(
     'PreToolUse',
-    'Blocked: specs/ is the specification, and it is not yours to edit.\n\n' +
+    'Blocked: dev/specs/ is the specification, and it is not yours to edit.\n\n' +
       'That covers every file in it and every kind of change — a reword, a reformat, ' +
       'a rename, a move, and the typo you are certain is harmless.\n\n' +
-      'Write the finding with your reasoning and leave it for a person to clear, in the ' +
-      'queue its fix lands beside: specs/REVIEW.md where the spec file is wrong ' +
-      'or a better row has presented itself, .claude/REVIEW.md where the repository ' +
-      'departs from a row. Draft the replacement row in the conversation, paste-ready, ' +
-      'and say which file it belongs in and where. Do not apply it.\n\n' +
+      'Raise the finding with your reasoning in the conversation, and leave it for a ' +
+      'person to clear. Draft the replacement row ' +
+      'paste-ready, and say which file it belongs in and where. Do not apply it.\n\n' +
       'A divergence between a spec and the repository is never resolved by amending the ' +
       'spec — the repository is what is wrong.',
   );
 }
 
 if (isInside(path, join(repoRoot, 'data', 'archive'))) {
-  deny(
+  refuse(
     'PreToolUse',
     'Blocked: data/archive/ is a record of what the record used to say, and it is ' +
       'read-only.\n\nTo supersede something, write the new version in its live file and ' +

@@ -22,15 +22,19 @@
 // Imported for its side effect, first, by config/accounts.mjs — which reads
 // process.env at module scope, so this has to have run by then.
 
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, statSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-// config/ -> ux/ -> the repository.
-export const ENV_PATH = join(
-  dirname(dirname(dirname(fileURLToPath(import.meta.url)))),
-  '.env',
-);
+// config/ -> ux/ -> the repository. DEAR_ENV_FILE points elsewhere, for the
+// test that edits a file of its own while a process runs (test/auth.test.mjs).
+export const ENV_PATH =
+  process.env.DEAR_ENV_FILE ||
+  join(dirname(dirname(dirname(fileURLToPath(import.meta.url)))), '.env');
+
+// The keys set before the file was read: the environment's own, which the file
+// never overrides, now or on a reload.
+const FROM_ENVIRONMENT = new Set(Object.keys(process.env));
 
 // KEY=value, one per line.
 //
@@ -83,3 +87,37 @@ function load() {
 }
 
 load();
+
+// ── Read again when the file changes (PRV-005) ──────────────────────────────
+//
+// "Revoking access actually revokes it": an account removed from the file, or a
+// secret changed in it, takes effect on the next request, not after a restart
+// nobody was told to make. So a credential is read through envValue(), which
+// takes the environment's own value where there is one (the precedence above),
+// and otherwise the file as it is now, re-read whenever its modification time
+// or size has changed. A file that has gone, or cannot be read, yields nothing,
+// so its credentials fail closed in config/accounts.mjs.
+let seen = null;
+let values = {};
+function current() {
+  let stamp = null;
+  try {
+    const s = statSync(ENV_PATH);
+    stamp = `${s.mtimeMs}:${s.size}`;
+  } catch {
+    stamp = null;
+  }
+  if (stamp === seen) return values;
+  seen = stamp;
+  try {
+    values = stamp ? parse(readFileSync(ENV_PATH, 'utf8')) : {};
+  } catch {
+    values = {};
+  }
+  return values;
+}
+
+export function envValue(key) {
+  if (FROM_ENVIRONMENT.has(key)) return process.env[key];
+  return current()[key];
+}

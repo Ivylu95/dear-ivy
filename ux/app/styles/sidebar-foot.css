@@ -1,0 +1,582 @@
+/* ── Sidebar foot ────────────────────────────────────────────────────────── */
+
+/* A quiet button: full-width, no border, no ground until it is pointed at. The
+   family lives in chrome rather than in a document — the sidebar toggle, the
+   settings trigger, the footer links, the rows of a menu — and every one is
+   pressed rather than read. Declared once per DES-001; each keeps its own gap,
+   padding and voice, which is what tells a footer link from a menu row. */
+.sidebar-toggle,
+.settings-trigger,
+.foot-link,
+.menu-out button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 0;
+  border-radius: var(--r2);
+  background: transparent;
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+
+.sidebar-toggle {
+  gap: 12px;
+  margin-top: 8px;
+  padding: 9px 10px;
+  color: var(--fg-dimmer);
+  /* --text-ui rather than the 13px literal this carried. The same number today,
+     but a literal is a value the theme cannot follow, which DES-004 forbids. */
+  font-size: var(--text-ui);
+  white-space: nowrap;
+}
+
+.sidebar-toggle:hover {
+  background: var(--rail-hover);
+  color: var(--fg);
+}
+
+/* One chevron, rotated off the collapsed class, so the button cannot point in a
+   direction that disagrees with the rail's actual state. */
+.sidebar-toggle-icon {
+  flex: 0 0 auto;
+  transform: rotate(180deg);
+  transition: transform var(--dur) var(--ease);
+}
+
+html.nav-collapsed .sidebar-toggle-icon {
+  transform: rotate(0deg);
+}
+
+.sidebar-foot {
+  padding-top: 10px;
+  border-top: 1px solid var(--line-soft);
+}
+
+/* An outline control. Used as a <button> and as a <Link>, which is why the two
+   corrections below matter:
+
+   text-decoration, because an anchor carries an underline by default and every
+   .btn in this app that was a link had one running under the label inside its
+   own border. It read as a mistake, and it was one.
+
+   A transparent ground rather than --panel, because half of these sit ON a
+   --panel card -- the 404, the error page -- where a panel-coloured fill is
+   invisible and the control collapsed to a bare rectangle. Transparent reads
+   the same on both grounds, and the hover is what fills it. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r2);
+  background: transparent;
+  color: var(--fg-dim);
+  font-size: var(--text-ui);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease);
+}
+
+.btn:hover {
+  border-color: var(--fg-dimmer);
+  background: var(--panel-2);
+  color: var(--fg);
+}
+
+/* A second action beside a first one, weighted below it. No border and no
+   ground until it is hovered: "Remove" should be findable and never the thing
+   the eye lands on first. */
+.btn-quiet {
+  border-color: transparent;
+  background: transparent;
+  color: var(--fg-dimmer);
+}
+
+/* The one thing a screen is for — signing in, the spec map's next gap — on the
+   accent. Was two rules (.btn-primary on the sign-in, .spec-graph-next as a
+   pill); now this variant of the one Button (DES-001 design 3). */
+.btn-primary {
+  border-color: transparent;
+  background: var(--accent);
+  color: var(--panel);
+  font-weight: var(--w-semi);
+}
+
+.btn-primary:hover {
+  border-color: transparent;
+  background: var(--accent);
+  color: var(--panel);
+  opacity: 0.9;
+}
+
+/* A glyph alone — a panel's close. Square padding, and no border until it is
+   pointed at, like the quiet one. */
+.btn-icon {
+  padding: 6px;
+  border-color: transparent;
+}
+
+.btn-icon:hover {
+  border-color: transparent;
+}
+
+/* Waiting on something (a sign-in being checked, a photo uploading) or with
+   nothing to do (no gap left): still there, plainly not pressable. */
+/* A disabled button does not answer the pointer, so no variant's hover look
+   reaches it and it never seems pressable. */
+.btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* -- Avatar editor -------------------------------------------------------- */
+
+/* The picture and the two controls that change it, at the top of About me.
+
+   Ruled off from the page head rather than floating under it. Without the rule
+   the disc, a button and a line of grey type read as three things that happened
+   to land near the subtitle; with it they are one row, and the head above keeps
+   its own shape. */
+.avatar-editor {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: var(--line-w) solid var(--line-soft);
+}
+
+/* A hairline round the disc, so a photograph with a pale edge still ends
+   somewhere and the initial's tinted circle does not look like the only one of
+   the two with a shape. */
+.avatar-editor .avatar {
+  box-shadow: 0 0 0 1px var(--line-soft);
+}
+
+.avatar-editor-side {
+  align-items: flex-start;
+  gap: 8px;
+}
+
+/* A row of actions. Wrapping rather than overflowing is the whole point: these
+   sit at the bottom of panels that narrow, and a button pushed off the edge is a
+   button that cannot be pressed. Declared once per DES-001; members keep only
+   the space they set between their buttons and above themselves. */
+.avatar-editor-actions,
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.avatar-editor-actions {
+  gap: 8px;
+}
+
+/* What just happened, or what will happen. One line -- it is a footnote to a
+   button, and a two-line caption under a control reads as an instruction she is
+   expected to follow. */
+.avatar-editor-note {
+  margin: 0;
+  max-width: 52ch;
+  font-size: var(--size-control);
+  line-height: 1.45;
+  color: var(--fg-dimmer);
+}
+
+.avatar-editor-note[role='alert'] {
+  color: var(--fg-dim);
+}
+
+/* Who is signed in, and the door to her standing files -- see
+   components/shell/Profile.jsx. Signing out still lives in the menu below, not here.
+
+   Styled as an identity rather than as a nav row even though it is now a link:
+   it is the only thing under the nav's own rules, and giving it the same
+   treatment as the rows above would read as an eleventh view. The hover and the
+   active state are what say it goes somewhere. */
+/* Her name, and beside it on the right the dashboard switch where the admin
+   app is here (WKB-002): a sibling of the link, never inside it. */
+.profile-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.profile-row .profile {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* Room around the switch, and columns wide enough that each glyph has air:
+   the width is the row's to set, the look stays Segmented's. */
+.profile-switch {
+  flex: 0 0 auto;
+  display: flex;
+  min-width: 88px;
+  margin-inline: 8px 6px;
+  transition: opacity var(--dur-fast) var(--ease);
+}
+
+.profile-switch > .seg {
+  flex: 1 1 auto;
+}
+
+.profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 10px 9px;
+  border-radius: var(--r2);
+  color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background var(--dur-fast) var(--ease);
+}
+
+.profile:hover {
+  background: var(--rail-hover);
+}
+
+.profile:hover .profile-name,
+.profile[data-active='true'] .profile-name {
+  color: var(--fg);
+}
+
+.profile[data-active='true'] {
+  background: var(--rail-current);
+}
+
+.profile[data-active='true'] .profile-name {
+  font-weight: var(--w-semi);
+}
+
+/* Her face, or her initial. One look at both sizes it is used at -- the rail
+   chip and the About me header -- because they are one component; see
+   components/me/Avatar.jsx. The box is set inline, by the size prop, so the two
+   cannot drift apart in a stylesheet. */
+.avatar {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: var(--w-strong);
+  user-select: none;
+}
+
+/* Photographs are not square and are not going to be cropped by hand, so the
+   disc crops them: cover, centred, which is the one rule that flatters a face in
+   a circle whichever way the picture was taken. */
+.avatar-photo {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* The rail's copy sits in the same fixed gutter the nav icons and the settings
+   glyph sit in, so the whole left edge lines up and nothing moves when the rail
+   opens. 26px rather than the icons' 16 because a filled disc reads smaller than
+   a stroked glyph of the same box. */
+.profile-mark {
+  margin: -5px 0 -5px -5px;
+}
+
+/* Set like a view's label in the rows above — same size, weight and tracking —
+   so the rail reads as one column of one kind of row. */
+.profile-name {
+  flex: 1 1 auto;
+  overflow: hidden;
+  font-size: var(--text-nav);
+  font-weight: var(--w-ui);
+  letter-spacing: 0.005em;
+  color: var(--fg-dim);
+  text-overflow: ellipsis;
+  transition: color var(--dur-fast) var(--ease);
+}
+
+/* The name, on the profile screen. Set in the wordmark's own face, because it is
+   the same string the wordmark is made of and showing it in body text would read
+   as a value in a form rather than as what the app calls her. */
+.identity-name {
+  font-family: var(--f-display);
+  font-size: var(--size-identity);
+  font-weight: var(--w-medium);
+  font-variation-settings: 'opsz' 44;
+  letter-spacing: 0.003em;
+  color: var(--fg);
+}
+
+/* -- Settings menu -------------------------------------------------------- */
+
+/* One trigger under the nav. Styled as a nav row rather than a button, because
+   that is what it is sitting in: a fourth control bar under a list of links
+   would read as a second navigation. */
+/* The two rows under her name -- Settings, and About -- are one treatment. They
+   are the only things in this rail that are about the machine rather than about
+   her, so they read alike and both read quieter than the views above. */
+.settings-trigger,
+.foot-link {
+  gap: 12px;
+  padding: 9px 10px;
+  color: var(--fg-dim);
+  /* The size, weight and tracking of a view's label above, so every row in the
+     rail is set alike. They were --text-ui, a size smaller, which read as a
+     second list rather than the foot of the same one. */
+  font-size: var(--text-nav);
+  font-weight: var(--w-ui);
+  letter-spacing: 0.005em;
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* Collapse, the name, Settings and About are rows in the same column as the nav
+   above them, so they take the same face. Left in the sans they would have been
+   the only rows in the rail set in a different one, which is the two-faces fault
+   again in miniature.
+
+   Its own rule rather than a name added to the block above: that block is the
+   shape of the two foot rows — their gutter, their padding, their size — and a
+   selector list holding four rows that share only a face had already lost
+   .settings-trigger out of the shape once. */
+.sidebar-toggle,
+.settings-trigger,
+.foot-link,
+.profile-name {
+  font-family: var(--f-display);
+}
+
+.settings-trigger:hover,
+.foot-link:hover,
+.settings-trigger[aria-expanded="true"] {
+  background: var(--rail-hover);
+  color: var(--fg);
+}
+
+/* The focus ring the quiet buttons share, drawn inside their own edge. One rule
+   per DES-001, so a menu row and a footer link cannot drift apart when tabbed to. */
+.settings-trigger:focus-visible,
+.foot-link:focus-visible,
+.menu-out button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+/* Marked the same way a nav row is, because it is one: the wash says "you are
+   reading this page", and it has to mean that here too or the row you are on
+   goes dark the moment you reach it. */
+.foot-link[data-active='true'] {
+  background: var(--rail-current);
+  color: var(--fg);
+  font-weight: var(--w-semi);
+}
+
+.foot-link {
+  position: relative;
+  text-decoration: none;
+}
+
+/* The same fixed gutter the nav icons sit in, so the trigger's glyph lines up
+   with them and does not move when the rail opens. */
+.settings-icon {
+  flex: 0 0 auto;
+  opacity: 0.72;
+  /* Onto the words, as .nav-icon is: see the note there for the 0.08em. */
+  position: relative;
+  top: -0.08em;
+}
+
+.settings-label,
+.foot-link-label {
+  flex: 1 1 auto;
+}
+
+/* The collapsed state's whole marker. At 64px the word is clipped away with
+   every other label, so the glyph itself carries it: a settings icon in accent
+   rather than the dimmed grey of every other row in the foot. */
+.settings-trigger[data-record='sample'] .settings-icon {
+  color: var(--accent);
+  opacity: 1;
+}
+
+/* The panel. Portalled into <body> and positioned from JS -- see Panel in
+   components/shell/Theme.jsx for why neither `position: fixed` nor the rail's own
+   stacking context is enough. Its z-index clears the rail and the sticky year
+   index; the order is named in the :root block near the top of this file. */
+/* Its chrome is the shared .popover, the next rule; here only where it
+   sits, how wide it is and its padding. */
+.menu {
+  position: fixed;
+  z-index: var(--z-menu);
+  width: 232px;
+  padding: 14px;
+}
+
+/* The chrome of a panel that floats over the page (DES-001 design 3): the
+   settings menu and the spec map's detail panel. They were drawn twice, at two
+   border widths, and the spec panel's shadow on a phone was a bare colour, so
+   no shadow at all. One rule now: the frame, the corner, the ground and the
+   lift. Each keeps its own place, size, padding and behaviour. */
+.popover {
+  border: var(--line-w) solid var(--line);
+  border-radius: var(--r3);
+  background: var(--panel);
+  box-shadow: 0 14px 38px -12px var(--shadow-lift);
+}
+
+.menu-section + .menu-section {
+  margin-top: 16px;
+}
+
+.menu-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: var(--text-label);
+  font-weight: var(--w-strong);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--fg-dimmer);
+}
+
+/* The current value, named beside its heading. A row of swatches says a colour
+   is set, not which one -- and "Custom" is the honest label for a hue she
+   dragged to rather than picked. */
+.menu-aside {
+  font-weight: var(--w-medium);
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--fg-dim);
+}
+
+/* Six across, two rows. Wide enough that every chip is one glance apart and
+   narrow enough that the panel does not become a second sidebar. */
+.colours-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  margin-bottom: 9px;
+}
+
+.chip {
+  aspect-ratio: 1;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  /* Set per chip from theme/palette.mjs, through the same scale as the accent. */
+  background: var(--chip);
+  cursor: pointer;
+  transition: transform var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease);
+}
+
+.chip:hover {
+  transform: scale(1.15);
+}
+
+/* The ring is drawn in the page's own accent rather than the chip's, so which
+   one is selected reads as a property of the page rather than of the circle. */
+.chip[aria-pressed="true"] {
+  box-shadow:
+    0 0 0 2px var(--panel),
+    0 0 0 3.5px var(--accent);
+}
+
+.chip:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* The slider track is the actual spectrum at the accent's own lightness and
+   chroma, built from the same oklch() values the palette emits -- so the strip
+   shows the colours the app can actually be, not a full-saturation rainbow
+   promising a vividness the brief does not allow.
+
+   These and the chips above are the only oklch() calls outside
+   theme.generated.css that name a hue. They are the control's own subject
+   matter: a picker for a value has to render that value's range, and
+   referencing the accent here would paint the whole strip in one colour. The
+   lightness and chroma are the theme's, --swatch-lc (DES-004). */
+.hue-slider {
+  display: block;
+  width: 100%;
+  height: 14px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--r1);
+  background: linear-gradient(
+    to right,
+    oklch(var(--swatch-lc) 0),
+    oklch(var(--swatch-lc) 40),
+    oklch(var(--swatch-lc) 80),
+    oklch(var(--swatch-lc) 120),
+    oklch(var(--swatch-lc) 160),
+    oklch(var(--swatch-lc) 200),
+    oklch(var(--swatch-lc) 240),
+    oklch(var(--swatch-lc) 280),
+    oklch(var(--swatch-lc) 320),
+    oklch(var(--swatch-lc) 359)
+  );
+  cursor: ew-resize;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* The thumb is painted in the resolved accent, so it always shows the colour the
+   page is actually using rather than the colour under the pointer. */
+.hue-slider::-webkit-slider-thumb {
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--panel);
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 1px var(--fg-dim);
+  cursor: grab;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.hue-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--panel);
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 1px var(--fg-dim);
+  cursor: grab;
+}
+
+.hue-slider:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Sign out. Separated by a rule rather than given a heading, so it never reads
+   as a fourth preference. */
+.menu-out {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.menu-out button {
+  gap: 8px;
+  padding: 7px 8px;
+  color: var(--fg-dim);
+  font-size: var(--text-ui);
+}
+
+.menu-out button:hover {
+  background: var(--panel-2);
+  color: var(--fg);
+}

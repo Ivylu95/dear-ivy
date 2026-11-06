@@ -1,0 +1,5 @@
+{
+  "_note": "Not a package. Git requires its hooks to be named exactly `pre-commit` and `commit-msg`, with no extension, and node treats an extensionless file as CommonJS — so the `import` statements in both throw SyntaxError before either hook can run, which blocks every commit in the repository including the record's own saves. This file marks the folder as ESM so those two files load as written. FND-003: a JSON file states its job in a named key, as `settings.json` does.",
+  "type": "module",
+  "private": true
+}

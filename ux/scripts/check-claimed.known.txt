@@ -1,0 +1,13 @@
+# Machinery no row named when FND-008 landed (2026-10-03). Each line is a file
+# owed a claim: name it in the design column of the row it carries out, then
+# delete its line here. New files never go on this list.
+.claude/commands/manage-harness.md
+.claude/hooks/record/guard-protected-files.mjs
+.claude/hooks/record/record-gate.mjs
+.claude/hooks/session/install-deps.mjs
+.claude/hooks/session/session-log.mjs
+dev/skills/manage-harness.md
+ux/scripts/check-config.mjs
+ux/scripts/check-record-paths.mjs
+ux/scripts/spec-lint.mjs
+ux/scripts/spec-stress.mjs

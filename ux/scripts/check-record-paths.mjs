@@ -26,9 +26,11 @@ const ROOTS = ['.claude/hooks', 'ux/lib', 'ux/app', 'ux/components', 'ux/config'
 const EXTENSIONS = /\.(mjs|js|jsx|cjs|yml|yaml)$/;
 
 // Each: a bare "data" prefix, not followed by a slash (escaped or not).
-const RISKY = [
-  [/startsWith\(\s*['"`]data(?!\\?\/)/, 'startsWith("data") also matches data-sandbox/'],
-  [/includes\(\s*['"`]\/?data(?!\\?\/)/, 'includes("data") also matches data-sandbox/'],
+// A data-* folder named in full, with its slash (`data-sandbox/`), is as exact
+// as `data/` and passes (a false alarm, 2026-10-02).
+export const RISKY = [
+  [/startsWith\(\s*['"`]data(?!\\?\/|-[\w-]+\\?\/)/, 'startsWith("data") also matches data-sandbox/'],
+  [/includes\(\s*['"`]\/?data(?!\\?\/|-[\w-]+\\?\/)/, 'includes("data") also matches data-sandbox/'],
   // In a regex literal an unescaped slash ends the pattern — /^data/ — so only an
   // escaped one, or a slash running on into a path or a closing quote, counts.
   [/\^data(?!\\\/|\/[\w'"`-])/, 'a regex anchored at ^data also matches data-sandbox/'],
@@ -50,28 +52,34 @@ function* walk(dir) {
   }
 }
 
-const findings = [];
-let scanned = 0;
-for (const root of ROOTS) {
-  for (const file of walk(join(repoRoot, root))) {
-    scanned += 1;
-    readFileSync(file, 'utf8')
-      .split('\n')
-      .forEach((line, i) => {
-        for (const [pattern, why] of RISKY) {
-          if (pattern.test(line)) findings.push(`${relative(repoRoot, file)}:${i + 1} — ${why}`);
-        }
-      });
+/** The reasons a line is risky, or [] when it names its folder exactly. */
+export const risks = (line) => RISKY.filter(([pattern]) => pattern.test(line)).map(([, why]) => why);
+
+// Run as a script, scan; imported (by its test), only the rules.
+if (process.argv[1] === self) {
+  const findings = [];
+  let scanned = 0;
+  for (const root of ROOTS) {
+    for (const file of walk(join(repoRoot, root))) {
+      scanned += 1;
+      readFileSync(file, 'utf8')
+        .split('\n')
+        .forEach((line, i) => {
+          for (const [pattern, why] of RISKY) {
+            if (pattern.test(line)) findings.push(`${relative(repoRoot, file)}:${i + 1} — ${why}`);
+          }
+        });
+    }
   }
-}
 
-if (findings.length) {
-  console.error(
-    `\n  RECORD PATH CHECK FAILED\n\n${findings.map((f) => `  - ${f}`).join('\n')}\n\n` +
-      '  Name the folder with its slash (\'data/\', /^data\\//) so data-sandbox/ and\n' +
-      '  any other data-* folder can never be mistaken for the record.\n',
-  );
-  process.exit(1);
-}
+  if (findings.length) {
+    console.error(
+      `\n  RECORD PATH CHECK FAILED\n\n${findings.map((f) => `  - ${f}`).join('\n')}\n\n` +
+        '  Name the folder with its slash (\'data/\', /^data\\//) so data-sandbox/ and\n' +
+        '  any other data-* folder can never be mistaken for the record.\n',
+    );
+    process.exit(1);
+  }
 
-console.log(`record path check: ${scanned} code files clean, no bare "data" prefix`);
+  console.log(`record path check: ${scanned} code files clean, no bare "data" prefix`);
+}

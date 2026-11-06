@@ -7,10 +7,7 @@
 // A browser edit mode was built on this and then taken out again: the register
 // is not changed often enough to be worth a write route into `specs`,
 // and a surface that can rewrite a binding document is a cost that has to be
-// paid for by use. What is left is the part that was actually hard. `editCell`
-// stays for the same reason the move does — it is the safe way to replace a
-// cell, pipes and line breaks refused rather than escaped, and the next caller
-// that needs one should not write a second.
+// paid for by use. What is left is the part that was actually hard.
 //
 // `.mjs` rather than `.js`: a `.js` here would be CommonJS to the script, which
 // is a module, and break on the first named import.
@@ -19,25 +16,33 @@
 //
 // Reordering a register renumbers every row between the old position and the
 // new one, and every citation of those rows — in the other specs, the skills,
-// the review queue, this app's own source — then names a different rule than
-// the one it was written about.
+// this app's own source — then names a different rule than the one it was
+// written about.
 //
 // Nothing catches that. `check-links.mjs` verifies a cited id EXISTS; after a
 // renumber every id still exists, so the check passes green while half the
 // citations point one row off. That is the failure worth automating away: the
 // one that cannot be seen.
 
-import { existsSync, readFileSync, writeFileSync, appendFileSync, readdirSync, statSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync, readdirSync, statSync } from 'node:fs';
 import { dirname, extname, join, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { SPECS_DIR } from '../../.claude/hooks/lib/paths.mjs';
+import { parseGroups, parseRows } from '../../.claude/hooks/lib/spec-rows.mjs';
+import { RECORD_DIRS, SKIP_DIRS } from './walk-skip.mjs';
 
 const REPO = resolve(dirname(dirname(fileURLToPath(import.meta.url))), '..');
-const SPECS = join(REPO, 'specs');
-const RECORD_LOG = join(REPO, 'data', 'state', 'proposals.md');
+const SPECS = join(REPO, SPECS_DIR);
 
 // Skipped wholesale when remapping: not authored here, or not text, or the
-// record — whose citations are never rewritten, only mapped in an appended row.
-const SKIP_DIRS = new Set(['node_modules', '.next', '.git', 'out', 'temp', '.vercel', 'data', 'samples']);
+// record — whose citations are never rewritten. The mapping lives in the commit
+// that makes the move, so nothing about the harness is written into data/ (ARC-004).
+// `worktrees` holds other sessions' working copies (.claude/worktrees/agent-…); a
+// renumber here must never rewrite their files (seen 2026-10-04).
+// The folders no walker enters are in lib/walk-skip.mjs, the one list every
+// walker reads; the record is skipped at the root only, so the spec group
+// dev/specs/data/ is remapped like any other (it was skipped by name until
+// 2026-10-06, and its DAT citations were never rewritten).
 const TEXT = new Set(['.js', '.jsx', '.mjs', '.cjs', '.css', '.json', '.md', '.txt', '.yml', '.yaml']);
 
 /**
@@ -49,12 +54,12 @@ const TEXT = new Set(['.js', '.jsx', '.mjs', '.cjs', '.css', '.json', '.md', '.t
  * and the encoded forms of both — a string check is a list of tricks somebody
  * remembered.
  */
-export function resolveSpec(relPath) {
-  // Two spellings reach this: `specs/X`, rooted at the repository, and a bare
+function resolveSpec(relPath) {
+  // Two spellings reach this: `dev/specs/X`, rooted at the repository, and a bare
   // `X`. Stripped so both name the same file, and the resolved comparison below
   // still decides.
   const parts = String(relPath ?? '')
-    .replace(/^specs\/?/, '')
+    .replace(new RegExp(`^(${SPECS_DIR}|specs)/?`), '')
     .split('/')
     .filter((part) => part && part !== '.');
   if (!parts.length) return null;
@@ -64,63 +69,28 @@ export function resolveSpec(relPath) {
   return existsSync(full) ? full : null;
 }
 
-const rowPattern = (prefix) => new RegExp(`^\\|\\s*\\*\\*(${prefix ?? '[A-Z]{3}'}-\\d{2,3})\\*\\*\\s*\\|`);
-
 /**
- * The register in one spec file: its rows, in file order, with their cells.
+ * The register in one spec file: its rows, in file order, with their parts.
  *
- * A row is `| **PRE-NNN** | statement | rationale | design |`. The cells come
- * back without the id, because the id is the row's name and not one of the
+ * A row is read by lib/spec-rows.mjs. Its cells (statement, rationale, design)
+ * come back without the id, because the id is the row's name and not one of the
  * things an editor may change — renumbering is what moveRow is for.
  */
 export function readRegister(relPath) {
   const full = resolveSpec(relPath);
   if (!full) return { ok: false, error: 'no such spec' };
 
-  const lines = readFileSync(full, 'utf8').split(/\r?\n/);
-  const any = rowPattern();
-  const rows = [];
-  for (const [line, text] of lines.entries()) {
-    const hit = any.exec(text);
-    if (!hit) continue;
-    const cells = text.split('|');
-    const [prefix, num] = hit[1].split('-');
-    rows.push({ id: hit[1], prefix, num, line, cells: cells.slice(2, -1).map((c) => c.trim()) });
-  }
+  const rows = parseRows(readFileSync(full, 'utf8')).map((r) => ({
+    id: r.id,
+    prefix: r.prefix,
+    num: r.num,
+    line: r.line,
+    cells: [r.statement, r.rationale, r.design],
+  }));
   if (!rows.length) return { ok: false, error: 'no register rows in that file' };
 
   const prefixes = [...new Set(rows.map((r) => r.prefix))];
-  return { ok: true, path: relPath, rows, prefixes, columns: rows[0].cells.length };
-}
-
-/**
- * Replace one cell of one row.
- *
- * A pipe or a newline in the text would end the cell early and silently eat the
- * columns after it, so both are refused rather than escaped: a register row that
- * has to be escaped to survive is a row nobody can diff.
- */
-export function editCell({ path, id, column, text }) {
-  const full = resolveSpec(path);
-  if (!full) return { ok: false, error: 'no such spec' };
-  if (typeof text !== 'string') return { ok: false, error: 'no text' };
-  if (text.includes('|')) return { ok: false, error: 'a cell cannot contain a pipe' };
-  if (/[\r\n]/.test(text)) return { ok: false, error: 'a cell cannot contain a line break' };
-  if (!text.trim()) return { ok: false, error: 'a cell cannot be empty' };
-
-  const lines = readFileSync(full, 'utf8').split(/\r?\n/);
-  const pattern = rowPattern();
-  const index = lines.findIndex((l) => pattern.exec(l)?.[1] === id);
-  if (index === -1) return { ok: false, error: `${id} is not in that file` };
-
-  const cells = lines[index].split('|');
-  const at = 2 + Number(column);
-  if (!(at >= 2 && at < cells.length - 1)) return { ok: false, error: 'no such column' };
-  cells[at] = ` ${text.trim()} `;
-  lines[index] = cells.join('|');
-
-  writeFileSync(full, lines.join('\n'));
-  return { ok: true, id, column: Number(column) };
+  return { ok: true, path: relPath, rows, prefixes, columns: 3 };
 }
 
 /**
@@ -153,7 +123,7 @@ export function planMove({ rows, prefix, id, to }) {
 
 function walk(dir, out = []) {
   for (const name of readdirSync(dir)) {
-    if (SKIP_DIRS.has(name) || name.startsWith('.env')) continue;
+    if (SKIP_DIRS.has(name) || (dir === REPO && RECORD_DIRS.has(name)) || name.startsWith('.env')) continue;
     const full = join(dir, name);
     let stats;
     try {
@@ -179,32 +149,34 @@ function walk(dir, out = []) {
  * rather than a pointer at a rule, and rewriting it falsifies the record of what
  * happened. That has to be looked at by a person; it cannot be detected.
  */
-export function remapCitations({ prefix, map, dryRun = false, skip = [] }) {
-  const cite = new RegExp(`\\b${prefix}-(\\d{2,3})\\b(?!··)`, 'g');
+// Dated history keeps the numbers it was written with: a file named for its
+// date, and a backlog line already marked done. On 2026-10-07 a renumber
+// rewrote both, and they had to be put back by hand. A citation there names the
+// row as it stood that day, which is the record of what happened.
+const DATED_FILE = /\d{4}-\d{2}-\d{2}\.md$/;
+const DONE_LINE = /^- done \d{4}-\d{2}-\d{2} · /;
+// So is a dated row of the hazard log in policies/SAFETY_POLICY.md: on 2026-10-17
+// a renumber rewrote four of them and they were put back by hand, as the
+// spec-writer's renumber note asks. Only rows inside "## The hazard log".
+const HAZARD_ROW = /^\| \d{4}-\d{2}-\d{2} \|/;
+
+function remapCitations({ prefix, map, dryRun = false, skip = [] }) {
   const touched = [];
   const historical = new Set();
 
   for (const full of walk(REPO)) {
     if (skip.some((s) => full.endsWith(s.split('/').join(sep)))) continue;
+    if (DATED_FILE.test(full)) continue;
     let text;
     try {
       text = readFileSync(full, 'utf8');
     } catch {
       continue;
     }
-    cite.lastIndex = 0;
-    if (!cite.test(text)) continue;
-
-    let hits = 0;
-    const next = text.split('\n').map((line) => {
-      cite.lastIndex = 0;
-      const after = line.replace(cite, (m, n) => (map[n] ? (hits++, `${prefix}-${map[n]}`) : m));
-      if (after !== line && /^>\s*\*\*\d{4}-\d{2}-\d{2}/.test(line)) historical.add(full);
-      return after;
-    });
-
+    const { next, hits, inHistory } = remapText(text, prefix, map);
+    if (inHistory) historical.add(full);
     if (!hits) continue;
-    if (!dryRun) writeFileSync(full, next.join('\n'));
+    if (!dryRun) writeFileSync(full, next);
     touched.push({ path: full.slice(REPO.length + 1).split(sep).join('/'), hits });
   }
 
@@ -214,13 +186,57 @@ export function remapCitations({ prefix, map, dryRun = false, skip = [] }) {
   };
 }
 
+// One text's citations rewritten by the map: the new text, how many changed,
+// and whether one changed inside a dated blockquote.
+function remapText(text, prefix, map) {
+  // The ID as cited, and its lowercase form as a heading anchor (`#abc-006` for ABC-006),
+  // which a parent spec's link carries: a renumber that left one would break it.
+  const cite = new RegExp(`\\b(${prefix}|${prefix.toLowerCase()})-(\\d{2,3})\\b(?!··)`, 'g');
+  if (!cite.test(text)) return { next: text, hits: 0, inHistory: false };
+  let hits = 0;
+  let inHistory = false;
+  let inHazardLog = false;
+  const next = text.split('\n').map((line) => {
+    if (/^## /.test(line)) inHazardLog = /^## The hazard log\s*$/.test(line);
+    if (DONE_LINE.test(line) || (inHazardLog && HAZARD_ROW.test(line))) return line;
+    cite.lastIndex = 0;
+    const after = line.replace(cite, (m, p, n) => (map[n] ? (hits++, `${p}-${map[n]}`) : m));
+    if (after !== line && /^>\s*\*\*\d{4}-\d{2}-\d{2}/.test(line)) inHistory = true;
+    return after;
+  });
+  return { next: next.join('\n'), hits, inHistory };
+}
+
 /**
  * Move a row, and take everything that cites it along.
  *
  * Does not commit. A move is a decision and committing it is another one — and
  * the record write below is not saved until someone does.
  */
-export function moveRow({ path, id, to, dryRun = false, record = true, skip = [] }) {
+// Row groups are read by lib/spec-rows.mjs.
+
+// After a move, each row keeps its group except the moved one, which joins the
+// group of the position it lands in; each range is then rebuilt from its rows.
+function regroup(text, from, to) {
+  const groups = parseGroups(text);
+  if (!groups.length) return { ok: true, text };
+  const owner = (pos) => groups.findIndex((g) => pos >= g.from && pos <= g.to);
+  const total = groups[groups.length - 1].to;
+  const order = Array.from({ length: total }, (_, i) => i + 1);
+  const target = owner(to);
+  order.splice(to - 1, 0, order.splice(from - 1, 1)[0]);
+  const members = groups.map(() => []);
+  order.forEach((old, n) => members[old === from ? target : owner(old)].push(n + 1));
+  if (members.some((m) => !m.length)) return { ok: false, error: 'the move would leave a row group empty; regroup by hand' };
+  const lines = text.split(/\r?\n/);
+  groups.forEach((g, k) => {
+    const pad = (n) => String(n).padStart(3, '0');
+    lines[g.line] = `- \`${pad(Math.min(...members[k]))}–${pad(Math.max(...members[k]))}\` · ${g.name}`;
+  });
+  return { ok: true, text: lines.join('\n') };
+}
+
+export function moveRow({ path, id, to, dryRun = false, skip = [] }) {
   const full = resolveSpec(path);
   if (!full) return { ok: false, error: 'no such spec' };
 
@@ -231,49 +247,29 @@ export function moveRow({ path, id, to, dryRun = false, record = true, skip = []
   const plan = planMove({ rows: register.rows, prefix, id, to });
   if (!plan.ok) return plan;
 
+  // The register is renumbered, reordered and regrouped in memory before any
+  // file is written, so a move regroup refuses leaves every file as it was. It
+  // once rewrote every citation first and refused after, and the refused move
+  // stayed renumbered everywhere but its own register.
+  const lines = remapText(readFileSync(full, 'utf8'), prefix, plan.map).next.split(/\r?\n/);
+  const mine = parseRows(lines.join('\n')).filter((r) => r.prefix === prefix);
+
+  // Each row is a block of lines, and the renumbered
+  // blocks go back into the same slots in ID order; what lies between rows stays.
+  const blocks = mine.map((r) => ({ id: r.id, lines: lines.slice(r.line, r.end + 1) }));
+  const sorted = [...blocks].sort((a, b) => a.id.localeCompare(b.id));
+  const out = [];
+  let at = 0;
+  mine.forEach((r, n) => {
+    out.push(...lines.slice(at, r.line), ...sorted[n].lines);
+    at = r.end + 1;
+  });
+  out.push(...lines.slice(at));
+  const grouped = regroup(out.join('\n'), Number(id.split('-')[1]), Number(plan.target));
+  if (!grouped.ok) return grouped;
+
   const { touched, historical } = remapCitations({ prefix, map: plan.map, dryRun, skip });
+  if (!dryRun) writeFileSync(full, grouped.text);
 
-  if (!dryRun) {
-    const lines = readFileSync(full, 'utf8').split(/\r?\n/);
-    const pattern = rowPattern(prefix);
-    const at = lines.map((l, i) => (pattern.test(l) ? i : -1)).filter((i) => i >= 0);
-    const pipes = new Set(at.map((i) => (lines[i].match(/\|/g) || []).length));
-    if (pipes.size > 1) return { ok: false, error: `rows have differing column counts (${[...pipes].join(', ')})` };
-
-    const sorted = at.map((i) => lines[i]).sort((a, b) => pattern.exec(a)[1].localeCompare(pattern.exec(b)[1]));
-    at.forEach((i, n) => (lines[i] = sorted[n]));
-    writeFileSync(full, lines.join('\n'));
-  }
-
-  let recorded = false;
-  if (!dryRun && record && existsSync(RECORD_LOG)) {
-    appendRecordRow({ path, prefix, plan });
-    recorded = true;
-  }
-
-  return { ok: true, ...plan, touched, historical, recorded };
-}
-
-// The record cannot have its citations rewritten — it is append-only — so the
-// mapping is appended instead, dated, in the shape the file already uses.
-function appendRecordRow({ path, prefix, plan }) {
-  const full = resolveSpec(path);
-  const moved = readFileSync(full, 'utf8')
-    .split('\n')
-    .find((l) => rowPattern(prefix).exec(l)?.[1] === `${prefix}-${plan.target}`);
-  const statement = moved ? moved.split('|')[2].trim() : '';
-
-  const pairs = Object.entries(plan.map)
-    .map(([from, to]) => `\`${prefix}-${from}\` is now \`${prefix}-${to}\``)
-    .join(', ');
-
-  const row =
-    `| ${new Date().toISOString().slice(0, 10)} | spec reorder | ` +
-    `**Some \`${prefix}-NNN\` cited in the rows above have moved.** ` +
-    `*${statement}* was moved to \`${prefix}-${plan.target}\`, and the rows it displaced shifted by one: ${pairs}. ` +
-    `Nothing else moved. Citations in the rows above were left as written, because this file is append-only; ` +
-    `this row is the mapping. |`;
-
-  const existing = readFileSync(RECORD_LOG, 'utf8');
-  appendFileSync(RECORD_LOG, (existing.endsWith('\n') ? '' : '\n') + row + '\n');
+  return { ok: true, ...plan, touched, historical };
 }

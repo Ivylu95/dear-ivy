@@ -1,0 +1,262 @@
+<title>Diagram title</title>
+<!--
+  The see-it skill's page (draw.md). Published as an artifact: no <html>, <head>
+  or <body>; one <title> of two to four words. Copy it to the session scratchpad,
+  replace the SAMPLE parts, then run scripts/build.mjs to inline the logos named as
+  each logo token (two percent signs, LOGO_ and a file name in logos/, two percent signs). Coordinates follow draw.md § Layout.
+  Tapping: tap.md (A-168).
+-->
+<style>
+:root {
+  color-scheme: light;
+  --paper: #f8f9fb; --paper-2: #eef1f5; --rule: #e3e7ee; --rule-2: #c9d0db;
+  --ink: #1d2330; --ink-2: #3b4456; --muted: #6b7486; --neutral: #5a6375;
+  --accent: #2f6fe0; --accent-tint: rgba(47, 111, 224, .07); --accent-soft: rgba(47, 111, 224, .45);
+  --warn: #c2410c; --warn-tint: rgba(194, 65, 12, .07); --warn-soft: rgba(194, 65, 12, .5);
+  --tile: #ffffff; --tile-edge: #d5dbe5; --veil: rgba(248, 249, 251, .85);
+  --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #14171d; --paper-2: #1b1f27; --rule: #222731; --rule-2: #3a4252;
+    --ink: #eef1f6; --ink-2: #cdd3de; --muted: #9aa3b4; --neutral: #b3bbc9;
+    --accent: #7aa7ff; --accent-tint: rgba(122, 167, 255, .08); --accent-soft: rgba(122, 167, 255, .5);
+    --warn: #fb923c; --warn-tint: rgba(251, 146, 60, .08); --warn-soft: rgba(251, 146, 60, .5);
+    --tile: #ffffff; --tile-edge: #3a4252; --veil: rgba(20, 23, 29, .85);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #14171d; --paper-2: #1b1f27; --rule: #222731; --rule-2: #3a4252;
+  --ink: #eef1f6; --ink-2: #cdd3de; --muted: #9aa3b4; --neutral: #b3bbc9;
+  --accent: #7aa7ff; --accent-tint: rgba(122, 167, 255, .08); --accent-soft: rgba(122, 167, 255, .5);
+  --warn: #fb923c; --warn-tint: rgba(251, 146, 60, .08); --warn-soft: rgba(251, 146, 60, .5);
+  --tile: #ffffff; --tile-edge: #3a4252; --veil: rgba(20, 23, 29, .85);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--paper); color: var(--ink); font-family: var(--font); padding: 24px 16px 40px; }
+.page { max-width: 980px; margin: 0 auto; }
+h1 { font-size: clamp(20px, 5vw, 28px); line-height: 1.2; margin-bottom: 6px; }
+.lede { color: var(--neutral); font-size: 14px; line-height: 1.6; max-width: 60ch; margin-bottom: 20px; }
+/* The drawing keeps its coordinates; on a narrow screen it scrolls inside this box, never the page. */
+.scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--rule-2); border-radius: 12px; background-color: var(--paper);
+  background-image: linear-gradient(var(--rule) 1px, transparent 1px), linear-gradient(90deg, var(--rule) 1px, transparent 1px); background-size: 20px 20px; }
+.canvas { position: relative; margin: 0 auto; }
+.group { position: absolute; border: 1.5px solid var(--accent-soft); background: var(--accent-tint); border-radius: 10px; }
+.group.warn { border-color: var(--warn-soft); background: var(--warn-tint); border-style: dashed; }
+.group > .label { position: absolute; top: 10px; left: 12px; font: 600 12px var(--font); color: var(--ink-2); display: flex; gap: 6px; align-items: center; }
+.group > .label img { width: 14px; height: 14px; }
+.node { position: absolute; width: 132px; text-align: center; background: none; border: 0; padding: 0; font: inherit; color: inherit; cursor: pointer; border-radius: 12px; }
+.node:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.node.on .tile { box-shadow: 0 0 0 3px var(--accent); }
+.dim { opacity: .18; transition: opacity .15s; }
+.hidden { display: none; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.chip { min-height: 44px; padding: 0 14px; border-radius: 22px; border: 1px solid var(--rule-2); background: var(--paper-2); color: var(--ink); font: 13px var(--font); cursor: pointer; }
+.chip[aria-pressed="false"] { color: var(--muted); text-decoration: line-through; background: transparent; }
+.chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.detail { position: fixed; z-index: 20; left: max(12px, env(safe-area-inset-left, 0px)); right: max(12px, env(safe-area-inset-right, 0px));
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px)); max-width: 640px; margin: 0 auto; max-height: 45vh; overflow-y: auto;
+  padding: 12px 64px 12px 14px; border: 1px solid var(--accent-soft); border-radius: 10px; background: var(--paper);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .12); font-size: 14px; line-height: 1.55; }
+.detail b { display: block; margin-bottom: 4px; }
+.detail .route { display: block; margin-top: 6px; font: 12px var(--mono); color: var(--muted); }
+.detail .close { position: absolute; top: 6px; right: 6px; min-height: 44px; min-width: 44px; padding: 0 10px; border: 1px solid var(--rule-2); border-radius: 22px;
+  background: var(--paper-2); color: var(--ink); font: 12px var(--font); cursor: pointer; }
+.detail .close:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.page.sheet-open { padding-bottom: 50vh; }
+/* The lit route flows the way the message travels; still where motion is turned down. */
+.e.on, .n.on { stroke: var(--accent); stroke-width: 2.5; stroke-dasharray: 7 5; animation: flow .9s linear infinite; }
+.el.on { fill: var(--accent); font-weight: 600; }
+@keyframes flow { to { stroke-dashoffset: -24; } }
+@media (prefers-reduced-motion: reduce) { .e.on, .n.on { animation: none; stroke-dasharray: none; } }
+.hint { color: var(--muted); font-size: 12px; margin-top: 8px; }
+.tile { width: 60px; height: 60px; margin: 0 auto; border-radius: 12px; background: var(--tile); border: 1px solid var(--tile-edge);
+  display: grid; place-items: center; box-shadow: 0 1px 2px rgba(0, 0, 0, .08); }
+.tile img { width: 36px; height: 36px; object-fit: contain; }
+.tile svg { width: 30px; height: 30px; color: #3b4456; }
+.node .name, .node .role { display: inline-block; background: var(--veil); padding: 0 3px; border-radius: 3px; }
+.node .name { margin-top: 8px; font-size: 13px; font-weight: 600; line-height: 1.25; }
+.node .role { font: 10.5px var(--mono); color: var(--muted); letter-spacing: .03em; }
+svg.edges { position: absolute; inset: 0; overflow: visible; pointer-events: none; }
+.e { stroke: var(--accent); stroke-width: 1.75; fill: none; }
+.n { stroke: var(--neutral); stroke-width: 1.5; fill: none; }
+.dash { stroke-dasharray: 5 4; }
+.el { font: 10.5px var(--mono); fill: var(--neutral); paint-order: stroke; stroke: var(--paper); stroke-width: 4px; stroke-linejoin: round; }
+.el.a { fill: var(--accent); }
+figcaption { color: var(--muted); font-size: 13px; line-height: 1.5; margin-top: 10px; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 14px; font: 12px var(--mono); color: var(--neutral); }
+.legend span::before { content: ""; display: inline-block; width: 22px; vertical-align: middle; margin-right: 6px; border-top: 2px solid var(--neutral); }
+.legend .a::before { border-top-color: var(--accent); }
+.legend .d::before { border-top-style: dashed; }
+.foot { margin-top: 18px; font-size: 11px; color: var(--muted); }
+</style>
+
+<div class="page">
+  <h1>SAMPLE: How a save reaches GitHub</h1>
+  <p class="lede">SAMPLE: one sentence on what the reader should see in the picture.</p>
+
+  <!-- One chip per group that can be hidden; leave the row out when there is none. -->
+  <div class="chips" role="group" aria-label="Show or hide a part">
+    <button class="chip" type="button" aria-pressed="true" data-toggle="github">GitHub</button>
+  </div>
+
+  <figure>
+    <div class="scroll">
+      <!-- Narrow (phone) layout: one column, 340 wide. Wide: up to 960, left to right. -->
+      <div class="canvas" style="width:340px; height:470px">
+        <!-- GROUPS -->
+        <div class="group" data-group="github" style="left:80px; top:200px; width:180px; height:230px">
+          <div class="label"><img alt="" src="%%LOGO_github%%">GitHub</div>
+        </div>
+
+        <!-- EDGES: one SVG overlay, same size as the canvas. -->
+        <svg class="edges" viewBox="0 0 340 470" width="340" height="470" role="img" aria-label="SAMPLE: Claude commits, the commit is pushed to GitHub, and a workflow runs the checks.">
+          <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="context-stroke"/></marker></defs>
+          <path class="e" data-from="claude" data-to="actions" d="M170 136 V254" marker-end="url(#ar)"/>
+          <text class="el a" data-from="claude" data-to="actions" x="180" y="200">git push</text>
+        </svg>
+
+        <!-- NODES: left = centerX - 66; tile top = the row's top. -->
+        <button class="node" type="button" data-id="claude" data-detail="SAMPLE: what Claude does here, in a sentence or two." style="left:104px; top:30px">
+          <div class="tile"><img alt="" src="%%LOGO_claude%%"></div>
+          <span class="name">Claude</span><br><span class="role">writes the commit</span>
+        </button>
+        <button class="node" type="button" data-id="actions" data-in="github" data-detail="SAMPLE: what the workflow checks, and what happens when one fails." style="left:104px; top:260px">
+          <div class="tile"><img alt="" src="%%LOGO_github-actions%%"></div>
+          <span class="name">GitHub Actions</span><br><span class="role">runs the checks</span>
+        </button>
+      </div>
+    </div>
+    <figcaption>SAMPLE: the claim the picture makes, in one line.</figcaption>
+  </figure>
+  <div class="detail" id="detail" role="dialog" aria-live="polite" hidden>
+    <b></b><span class="what"></span><span class="route"></span>
+    <button class="close" type="button">Close</button>
+  </div>
+  <p class="hint">Tap a box: its whole route lights up, and what it does opens at the foot of the screen. Tap it again, or Close, to go back.</p>
+
+  <div class="legend"><span class="a">main flow</span><span>internal</span><span class="d">deploy or dev-time</span></div>
+  <p class="foot">Logos: their owners' official marks, unmodified; trademarks of their owners.</p>
+</div>
+
+<script>
+// Tapping (tap.md): a node lights the whole route through it, every step before and after,
+// and opens the floating card near the foot of the screen with what it does and that route;
+// a chip hides or shows its group. Nothing is stored and nothing is fetched.
+(() => {
+  const nodes = [...document.querySelectorAll('.node[data-id]')];
+  const marks = [...document.querySelectorAll('[data-from][data-to]')];
+  const byId = new Map(nodes.map((n) => [n.dataset.id, n]));
+  const name = (id) => byId.get(id)?.querySelector('.name')?.textContent || id;
+  // An edge from a shared box may carry data-for="<ids>": it is on a route only when one of those
+  // boxes is too (Telegram's arrow to one bot carries only that bot's senders).
+  const edges = [...new Map(marks.map((m) => [m.dataset.from + '>' + m.dataset.to,
+    { from: m.dataset.from, to: m.dataset.to, for: (m.dataset.for || '').split(/\s+/).filter(Boolean) }])).values()];
+  const live = (id) => !byId.get(id)?.classList.contains('hidden');
+  const above = (id, seen = new Set()) => { // every box before id, ignoring data-for
+    for (const e of edges) if (e.to === id && !seen.has(e.from)) { seen.add(e.from); above(e.from, seen); }
+    return seen;
+  };
+  const below = (id, seen = new Set()) => { // every box after id, ignoring data-for
+    for (const e of edges) if (e.from === id && !seen.has(e.to)) { seen.add(e.to); below(e.to, seen); }
+    return seen;
+  };
+  const before = (start) => { // every box before start; past a data-for edge, only its senders and theirs
+    const seen = new Set([start]), todo = [[start, null]];
+    while (todo.length) {
+      const [at, allowed] = todo.pop();
+      for (const e of edges) {
+        if (e.to !== at || !live(e.from) || seen.has(e.from)) continue;
+        let allow = allowed;
+        if (e.for.length) {
+          // its senders, what feeds them, and the boxes between them and this edge
+          const between = new Set([e.from, ...above(e.from)]);
+          const mine = new Set(e.for.flatMap((f) => [f, ...above(f), ...[...below(f)].filter((x) => between.has(x))]));
+          allow = allowed ? new Set([...allowed].filter((x) => mine.has(x))) : mine;
+        }
+        if (allow && !allow.has(e.from)) continue;
+        seen.add(e.from); todo.push([e.from, allow]);
+      }
+    }
+    return seen;
+  };
+  const after = (start, back) => { // every box after start; a data-for edge only for its own senders
+    const seen = new Set([start]), todo = [start];
+    while (todo.length) {
+      const at = todo.pop();
+      for (const e of edges) {
+        if (e.from !== at || !live(e.to) || seen.has(e.to)) continue;
+        if (e.for.length && !e.for.some((f) => back.has(f) || seen.has(f))) continue;
+        seen.add(e.to); todo.push(e.to);
+      }
+    }
+    return seen;
+  };
+  const sheet = document.getElementById('detail');
+  const page = document.querySelector('.page');
+  let open = null;
+  const clear = () => {
+    open = null;
+    nodes.forEach((n) => { n.classList.remove('on', 'dim'); n.setAttribute('aria-pressed', 'false'); });
+    marks.forEach((m) => m.classList.remove('on', 'dim'));
+    if (sheet) sheet.hidden = true;
+    page?.classList.remove('sheet-open');
+  };
+  const show = (node) => {
+    const id = node.dataset.id;
+    const up = before(id), down = after(id, up), route = new Set([...up, ...down]);
+    marks.forEach((m) => {
+      const on = (up.has(m.dataset.from) && up.has(m.dataset.to)) || (down.has(m.dataset.from) && down.has(m.dataset.to));
+      m.classList.toggle('on', on);
+      m.classList.toggle('dim', !on);
+    });
+    nodes.forEach((n) => {
+      n.classList.toggle('on', n === node);
+      n.classList.toggle('dim', !route.has(n.dataset.id));
+      n.setAttribute('aria-pressed', String(n === node));
+    });
+    if (sheet) {
+      const ups = [...up].filter((x) => x !== id), downs = [...down].filter((x) => x !== id);
+      const order = (set) => nodes.map((n) => n.dataset.id).filter((x) => set.includes(x)); // in drawing order, top to bottom
+      sheet.querySelector('b').textContent = name(id);
+      sheet.querySelector('.what').textContent = node.dataset.detail || '';
+      // boxes with no line between them are alternatives: "A or B", never a chain
+      const rows = [];
+      for (const x of [...order(ups), id, ...order(downs)]) {
+        const label = x === id ? '[' + name(x) + ']' : name(x), last = rows[rows.length - 1];
+        if (last && !last.ids.some((y) => below(y).has(x) || above(y).has(x))) { last.ids.push(x); last.names.push(label); }
+        else rows.push({ ids: [x], names: [label] });
+      }
+      const words = rows.map((r) => r.names.join(' or '));
+      sheet.querySelector('.route').textContent = rows.length > 1 || rows[0]?.names.length > 1 ? 'Route: ' + words.join(' → ') : '';
+      sheet.hidden = false;
+      page?.classList.add('sheet-open');
+    }
+    open = id;
+  };
+  nodes.forEach((n) => {
+    n.setAttribute('aria-pressed', 'false');
+    n.addEventListener('click', (ev) => { ev.stopPropagation(); open === n.dataset.id ? clear() : show(n); });
+  });
+  sheet?.querySelector('.close')?.addEventListener('click', clear);
+  document.addEventListener('keydown', (ev) => { if (ev.key === 'Escape') clear(); });
+  document.querySelector('.canvas')?.addEventListener('click', clear);
+  document.querySelectorAll('.chip[data-toggle]').forEach((chip) => chip.addEventListener('click', () => {
+    const g = chip.dataset.toggle;
+    const shown = chip.getAttribute('aria-pressed') !== 'true';
+    chip.setAttribute('aria-pressed', String(shown));
+    document.querySelectorAll(`[data-group="${g}"]`).forEach((el) => el.classList.toggle('hidden', !shown));
+    const gone = new Set();
+    nodes.forEach((n) => {
+      if (n.dataset.in === g) n.classList.toggle('hidden', !shown);
+      if (n.classList.contains('hidden')) gone.add(n.dataset.id);
+    });
+    marks.forEach((m) => m.classList.toggle('hidden', gone.has(m.dataset.from) || gone.has(m.dataset.to)));
+    clear();
+  }));
+})();
+</script>

@@ -1,0 +1,15 @@
+{
+  "_what": "Each record format a migration can be written for: its files (relative to the record folder, data/), the harness files that read that shape, and its version. Changing a reader means raising the version and adding NNN-<format>-v<N>.mjs beside this file, or a release declaring the shape unchanged (--same-format <format>); release.mjs prepare refuses anything else. See README.md here.",
+  "formats": {
+    "profile": {
+      "files": ["PROFILE.yaml"],
+      "readers": [".claude/hooks/lib/profile-schema.mjs"],
+      "version": 1
+    },
+    "reminders": {
+      "files": ["core/calendar/reminders.json", "core/calendar/check-ins.json"],
+      "readers": [".claude/hooks/lib/reminder-schedule.mjs"],
+      "version": 1
+    }
+  }
+}

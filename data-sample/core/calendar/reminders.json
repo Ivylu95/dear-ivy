@@ -1,0 +1,11 @@
+{
+  "timezone": "Asia/Singapore",
+  "reminders": [
+    { "id": "evening-tablet", "text": "Take your evening tablet", "cron": "0 21 * * *", "set": "2026-09-28" },
+    { "id": "bin-night", "text": "Bin night", "cron": "30 19 * * thu", "set": "2026-10-01" },
+    { "id": "water-plants", "text": "Water the balcony plants", "every": "2 weeks", "start": "2026-10-04 09:00", "set": "2026-10-03" },
+    { "id": "rent", "text": "Rent goes out today", "cron": "0 10 L * *", "set": "2026-10-03", "paused": true },
+    { "id": "call-clinic", "text": "Call the clinic about the referral", "at": "2026-10-06 15:00", "set": "2026-10-05" },
+    { "id": "stretch", "text": "Stand up and stretch", "cron": "0 10-17 * * 1-5", "set": "2026-09-20", "ended": "2026-10-02" }
+  ]
+}

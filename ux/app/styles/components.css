@@ -1,0 +1,991 @@
+/* ── Quiet metadata ──────────────────────────────────────────────────────── */
+
+/* The text that says WHEN, HOW MANY or WHERE FROM beside something else — a
+   timestamp, a count, a scope, a path. Never the thing being read, so it is the
+   dimmest and smallest voice that still has to be legible. Declared here once
+   per DES-001, after thirteen selectors each arrived at the same answer alone.
+
+   Two pieces rather than one, because they do not all apply together: the
+   voice, and the numeral alignment. A timestamp takes both; a line count takes
+   only the figures, at its own ink. One rule would force every member to take
+   treatments it does not want. */
+.rail-when,
+.source,
+.notice-code,
+.change-time,
+.change-scope,
+.change-areas,
+.change-hash {
+  font-size: var(--text-fine);
+  color: var(--fg-dimmer);
+}
+
+/* Numerals that sit in a column and must line up down it, and metadata that is
+   a literal — a path, a scope, a status number.
+
+   It was set in the mono, which the app no longer has: the surface is one face
+   now, and what marks these out is their size, their dimmer ink and their
+   tabular figures rather than a second family.
+
+   The change rows below took this from the `.mono` utility instead, and that
+   carries `font-size: 0.9em` with it. Declared later in the file at the same
+   specificity, it beat the --text-fine above and sized a timestamp off whatever
+   its row happened to inherit — 14.85px against the 11.5px every other piece of
+   metadata in the app uses. Asking for a face should not change a size. */
+.rail-when,
+.source,
+.notice-code,
+.change-scope,
+.change-time,
+.change-stat,
+.change-lines,
+.change-path,
+.change-hash,
+.tl-date {
+  /* Kept from the mono it replaced: the figures still have to sit at a
+     stable width, or a count ticking from 9 to 10 moves the column. */
+  font-variant-numeric: tabular-nums;
+}
+
+.rail-when {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+/* ── Page head ───────────────────────────────────────────────────────────── */
+
+/* A grid rather than the glyph sitting inside the h1: inside the heading it
+   pushes the title right by its own width while the subtitle underneath still
+   starts at the column edge, so the two never line up. As a sibling, the title
+   and the subtitle share one left edge and the glyph is the only thing outside
+   it. */
+.page-head {
+  margin-bottom: 30px;
+}
+
+/* A tag in a page header — a skill's dispatch name, where it differs from the
+   file it lives in — sits under the subtitle, in the second column with the
+   title it belongs to. The header is a grid of glyph and text; without the
+   column it slides back under the glyph and reads as a caption for the mark
+   rather than for the page.
+
+   There were folder and file tags here too, briefly. The glyph beside the title
+   already says which, and a chip repeating it was the third time one page said
+   the same thing. */
+.page-head > .tag {
+  grid-column: 2;
+  justify-self: start;
+  margin-top: 12px;
+}
+
+.page-head.has-icon {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 14px;
+  align-items: start;
+}
+
+/* The mark beside a page's name, at the size of the name.
+
+   It was 30px against a 38px title with 5px of margin nudging it into place —
+   a smaller glyph, optically high, and a hand-set offset that was right for one
+   character and one title size and wrong the moment either moved.
+
+   Sized off the type instead: one em of the title's own token, so the mark and
+   the words are the same size in both characters and stay that way if the token
+   changes. Centred on the first line by the grid rather than by a margin — it
+   occupies the title's row, and `center` in that row is the title's own middle
+   whatever the line box comes out at. */
+.page-icon {
+  grid-row: 1 / span 1;
+  align-self: center;
+  font-size: var(--title-size);
+  width: 1em;
+  height: 1em;
+  /* The stroke lives in the glyph's own 24-unit space, so it has to come DOWN as
+     the box goes up or the mark ends up heavier than the type it sits beside:
+     1.1 / 24 × 38 ≈ 1.75, which is the weight every other icon in the app is
+     drawn at. Declared here rather than passed as `weight`, because the size it
+     has to answer to is a token only CSS can read. */
+  stroke-width: 1.1;
+  color: var(--accent);
+}
+
+.page-title {
+  grid-column: 2;
+  font-family: var(--f-display);
+  font-size: var(--title-size);
+  font-weight: var(--w-body);
+  line-height: 1.12;
+  letter-spacing: -0.012em;
+}
+
+/* No measure of its own. Every subtitle here is one short line, so a 58ch cap
+   never improved its readability — it only stopped it short of the cards under
+   it, leaving a ragged edge where the head should line up with the page. */
+.page-sub {
+  grid-column: 2;
+  margin-top: 7px;
+  font-size: var(--text-sub);
+  color: var(--fg-dim);
+}
+
+.page-head > *:nth-child(n + 4) {
+  grid-column: 2;
+}
+
+/* ── Switches (DES-001 design 3) ─────────────────────────────────────────────
+   Every switch on the surface: Segmented (pick one of a few) and Toggle (on or
+   off), components/ui/. The shape and motion are an earlier admin app's .seg and
+   .swix, at the developer's ask; every value is this theme's (DES-004).
+
+   .seg is equal columns, so the pill, sized to one column and moved by the
+   chosen index, always lands on its option. Set by the component as --seg-n
+   (how many) and --seg-i (which). */
+.seg {
+  --seg-n: 2;
+  --seg-i: 0;
+  /* The track's inset: the pill is placed from it, so the two cannot drift. */
+  --seg-pad: 3px;
+  position: relative;
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  padding: var(--seg-pad);
+  border: var(--line-w) solid var(--line);
+  border-radius: 999px;
+  background: var(--panel);
+}
+
+.seg-block {
+  display: grid;
+  width: 100%;
+}
+
+/* Full width in a narrow panel (the settings menu, 232px): three options with
+   icons have about 65px each, so the label keeps its column with a small inset
+   and the control's own size, rather than spilling into its neighbour. */
+.seg-block > a,
+.seg-block > button {
+  padding-inline: 4px;
+  font-size: var(--size-control);
+}
+
+.seg-pill {
+  position: absolute;
+  z-index: 0;
+  inset-block: var(--seg-pad);
+  left: var(--seg-pad);
+  width: calc((100% - 2 * var(--seg-pad)) / var(--seg-n));
+  border-radius: 999px;
+  background: var(--accent);
+  transform: translateX(calc(var(--seg-i) * 100%));
+  transition: transform var(--dur-slow) var(--ease-spring);
+}
+
+.seg > a,
+.seg > button {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 0;
+  /* The 0.1em is an optical correction: centring the line box leaves the cap
+     band 0.1em high in this face (ascent 0.735em, descent 0.265em, caps
+     0.670em), so labels without descenders rode high beside ones with them.
+     The top gains it and the bottom loses it; the height does not change. */
+  padding: calc(5px + 0.1em) 14px calc(5px - 0.1em);
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--fg-dim);
+  font: inherit;
+  font-size: var(--text-meta);
+  font-weight: var(--w-semi);
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  /* The pill's own duration, so the word changes colour as the pill arrives
+     under it rather than ahead of it. */
+  transition: color var(--dur-slow) var(--ease);
+}
+
+.seg > a:hover,
+.seg > button:hover {
+  color: var(--fg);
+}
+
+/* A hover on an option the pill is not under answers at the row pace. The one
+   being chosen keeps the pill's, since the click lands while it is hovered. */
+.seg > a:not([aria-current='page']):hover,
+.seg > button:not([aria-pressed='true']):hover {
+  transition-duration: var(--hover-in);
+}
+
+/* The icon rides with the word: the same 0.1em, from the other side. */
+.seg svg {
+  transform: translateY(-0.1em);
+}
+
+.seg > a[aria-current='page'],
+.seg > button[aria-pressed='true'] {
+  color: var(--bg);
+}
+
+/* The ring is the ink colour, not the accent: on the chosen option it sits
+   over the accent pill and would vanish into it. */
+.seg > a:focus-visible,
+.seg > button:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 1px;
+}
+
+/* In a page header it sits on the title's line, right of it: the header takes
+   a third column for it, and the subtitle beneath runs under both. Without a
+   glyph the header is no grid, and it falls under the subtitle instead. */
+.page-head > .seg {
+  justify-self: start;
+  margin-top: 14px;
+}
+
+.page-head.has-icon:has(> .seg) {
+  grid-template-columns: auto auto 1fr;
+}
+
+.page-head.has-icon > .seg {
+  grid-column: 3;
+  grid-row: 1;
+  align-self: center;
+  margin: 0 0 0 20px;
+}
+
+.page-head.has-icon:has(> .seg) > .page-sub {
+  grid-column: 2 / -1;
+}
+
+/* On a phone the title's line has no room beside it: a 400px screen pushed the
+   switch and the subtitle off its edge (seen 2026-10-07). It drops under the
+   subtitle instead, in the title's column. */
+@media (max-width: 560px) {
+  .page-head.has-icon:has(> .seg) {
+    grid-template-columns: auto 1fr;
+  }
+
+  .page-head.has-icon > .seg {
+    grid-column: 2;
+    grid-row: auto;
+    margin: 14px 0 0;
+  }
+
+  .page-head.has-icon:has(> .seg) > .page-sub {
+    grid-column: 2;
+  }
+}
+
+/* Toggle: a track and a knob, on the pill's spring. */
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px 5px 7px;
+  border: var(--line-w) solid var(--line);
+  border-radius: var(--r2);
+  background: var(--panel);
+  color: var(--fg-dim);
+  font: inherit;
+  font-size: var(--text-meta);
+  font-weight: var(--w-semi);
+  cursor: pointer;
+}
+
+.toggle:hover,
+.toggle[aria-checked='true'] {
+  color: var(--fg);
+}
+
+.toggle-track {
+  position: relative;
+  flex: 0 0 auto;
+  width: 38px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--line);
+  /* The knob's duration, so the track fills as the knob travels. */
+  transition: background var(--dur-slow) var(--ease);
+}
+
+.toggle-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--panel);
+  box-shadow: 0 1px 2px var(--shadow);
+  transition: transform var(--dur-slow) var(--ease-spring);
+}
+
+.toggle[aria-checked='true'] .toggle-track {
+  background: var(--accent);
+}
+
+.toggle[aria-checked='true'] .toggle-knob {
+  transform: translateX(16px);
+}
+
+.toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .seg-pill,
+  .toggle-knob {
+    transition: none;
+  }
+}
+
+/* ── Count ───────────────────────────────────────────────────────────────── */
+
+/* Every small number, drawn by Count in components/ui (DES-001 design 3). It
+   was four looks: the nav's count, the settings row's Sample flag, the switch's
+   badge (a full round on --panel-2) and a dozen margin figures. Now the pill is
+   one look — the nav count's quiet ground at the 7px the other two shared — and
+   the margin figure is the other.
+
+   The figures are tabular: a count ticking from 9 to 10 must not move the
+   column. */
+.count {
+  flex: 0 0 auto;
+  min-width: 20px;
+  padding: 1px 7px;
+  border-radius: var(--r4);
+  background: var(--quiet-bg);
+  color: var(--quiet-fg);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--size-pill);
+  text-align: center;
+}
+
+/* Warm, not red: reading the sample is a legitimate thing to be doing, so its
+   flag is a label, never a warning. The accent, quietly — the one colour in the
+   rail that says "notice me" without saying anything is wrong. */
+.count.accent {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: var(--w-strong);
+  letter-spacing: 0.02em;
+}
+
+/* The bare figure in a margin column — a folder's "14 files", a branch's
+   total, the spec map's tally. Never the thing being read, so the dimmest
+   voice that is still legible. */
+.count-n {
+  font-size: var(--text-fine);
+  color: var(--fg-dimmer);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Chevron ─────────────────────────────────────────────────────────────── */
+
+/* The mark on anything that opens, drawn by Chevron in components/ui (DES-001
+   design 3). It was six rules: the rail fold, the harness tree, a commit row
+   and the workflow's two cards each turned their own, at two timings and in
+   two directions (the workflow's pointed down and turned up). Now one: at the
+   row when shut, a quarter-turn down when open — the turn three of the five
+   already made — on one timing. The sidebar's collapse arrow is not one of
+   these: it points the way the rail will move, not at something to open.
+
+   Open is said by the control's own state: `data-open` from a button that holds
+   it, or a <details>' [open], which needs no script. */
+.chevron {
+  flex: 0 0 auto;
+  color: var(--fg-dimmer);
+  /* On the row's pace, not its own: the chevron lights and turns with the row
+     it belongs to. */
+  transition:
+    transform var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease);
+}
+
+.chevron[data-open='true'] {
+  transform: rotate(90deg);
+}
+
+details[open] > summary .chevron {
+  transform: rotate(90deg);
+}
+
+/* ── Arrow ───────────────────────────────────────────────────────────────── */
+
+/* The way a link points, drawn by Arrow in components/ui/icons.jsx (DES-001
+   design 3, DES-003): the arrow characters it replaces were set in whatever
+   font carried them. It takes its link's ink, sits on the line of the words
+   beside it, and a way back is the same glyph mirrored. */
+.arrow {
+  flex: 0 0 auto;
+  vertical-align: middle;
+}
+
+.arrow[data-back='true'] {
+  transform: scaleX(-1);
+}
+
+/* ── Meter ───────────────────────────────────────────────────────────────── */
+
+/* A share of a whole, drawn by Meter in components/ui (DES-001 design 3). The
+   spec map's progress (an 8px pill on a mixed ground, a gradient fill) and
+   Changes' branch bar (10px on --line-soft at --r1) were two looks; both are
+   the branch bar's now, whose values were all theme tokens already. A fill
+   is the accent; a segment takes its colour from --mark, which the view sets
+   per kind. */
+.meter {
+  display: flex;
+  gap: 2px;
+  height: 10px;
+  border-radius: var(--r1);
+  background: var(--line-soft);
+  overflow: hidden;
+}
+
+/* Full width, scaled down to its share from the left: the same bar as a width
+   of share x 100%, but a change of value moves it on the compositor instead of
+   re-laying the track out every frame. */
+.meter-fill {
+  display: block;
+  flex: 0 0 auto;
+  width: 100%;
+  height: 100%;
+  background: var(--mark, var(--accent));
+  transform: scaleX(var(--share));
+  transform-origin: left;
+  transition: transform var(--dur) var(--ease);
+}
+
+.meter-seg {
+  flex: 0 0 auto;
+  /* Less the 2px gaps between the segments, so the longest one ends at the
+     track's end rather than under its clipped corner. */
+  width: calc(var(--share) * (100% - (var(--segs) - 1) * 2px));
+  min-width: 3px;
+  background: var(--mark, var(--accent));
+}
+
+.meter-seg:last-child {
+  border-radius: 0 var(--r1) var(--r1) 0;
+}
+
+/* ── Sections and cards ──────────────────────────────────────────────────── */
+
+h2 {
+  font-family: var(--f-display);
+  font-size: var(--h2-size);
+  font-weight: var(--w-medium);
+  line-height: 1.25;
+}
+
+/* A section heading one level down (a journal entry under its year) looks like
+   every other section heading; only the outline knows it is nested (DES-001). */
+.section-head h3 {
+  font-family: var(--f-display);
+  font-size: var(--h2-size);
+  font-weight: var(--w-medium);
+  line-height: 1.25;
+}
+
+.section-head {
+  /* For the anchor hung in the margin below. */
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 38px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.section-note {
+  font-size: var(--text-meta);
+  color: var(--fg-dimmer);
+}
+
+/* The anchor beside a section heading.
+   Hidden by opacity rather than by display, so it keeps its place in the tab
+   order and screen readers still announce it — and so revealing it on hover
+   cannot shift the heading beside it. On touch there is no hover to reveal it
+   with, so it sits permanently at half strength instead. */
+/* Hung in the margin, not set in the line.
+   In flow it held a column's width at the head of every section, so each heading
+   started a character and a half right of the paragraph beneath it — and a
+   heading indented past its own body text reads as an error rather than as a
+   control. Out here it costs the line nothing and the two left edges agree. */
+.section-anchor {
+  position: absolute;
+  right: 100%;
+  margin-right: 10px;
+  font-family: var(--f-display);
+  font-size: var(--h2-size);
+  line-height: 1.25;
+  color: var(--fg-dimmer);
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity var(--dur-fast) var(--ease);
+}
+
+/* Full strength on the heading the reader is currently under — the one pinned at
+   the top of the column — and it stays there for as long as that section does.
+   
+   It was half strength, to offer rather than insist. That made it a control whose
+   presence changed as you scrolled, which is worse than either state: a mark that
+   fades in and out reads as a rendering artefact, not as a thing you can press.
+   Constant while pinned, absent otherwise. */
+.section-head[data-current] .section-anchor {
+  opacity: 1;
+}
+
+/* Hovering anywhere in the section reveals its anchor, not only the heading
+   itself. The heading is one line at the top of a screenful of prose; a reader
+   who has just read a rule and wants to link to it should not have to travel
+   back up to a 12px target to find out the control exists. */
+.view-section:hover .section-anchor,
+.section-head:hover .section-anchor,
+.section-anchor:focus-visible {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .section-anchor {
+    opacity: 0.45;
+  }
+}
+
+/* ── The sheet ─────────────────────────────────────────────── */
+
+/* Everything in this app that reads as paper, declared once.
+
+   An edge OR a lift, never a decision made twice. Letter gives a sheet a
+   hairline and no shadow; Open sets --line-w to 0 and pays for the separation
+   with a soft lift instead, so a page of them reads as paper rather than as a
+   form to be filled in.
+
+   These four declarations were written out five times — a card, the crisis
+   block, the hooks panel, the harness listing, a day of changes — and the only
+   record that they were meant to be the same object was the word "card" in
+   three of the comments. They could not drift visibly on the day they were
+   copied, which is exactly why they would have: a sixth surface added next
+   month copies whichever one it is sitting near, and the character it is set in
+   stops being the thing that decides how paper looks.
+
+   A surface that needs to differ overrides below, and says why there. */
+.card,
+.crisis,
+.harness-list,
+.change-card {
+  border: var(--line-w) solid var(--line-soft);
+  border-radius: var(--r3);
+  background: var(--panel);
+  box-shadow: var(--lift);
+}
+
+.card {
+  padding: var(--pad-card);
+}
+
+.card + .card {
+  margin-top: var(--flow);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--flow);
+}
+
+/* ── Rows ────────────────────────────────────────────────────────────────── */
+
+.row {
+  display: block;
+  padding: var(--pad-row);
+  border: var(--line-w) solid var(--line-soft);
+  border-radius: var(--r2);
+  background: var(--panel);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease);
+}
+
+.row + .row {
+  margin-top: 8px;
+}
+
+a.row:hover {
+  border-color: var(--line);
+  background: var(--panel-2);
+}
+
+.row-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.row-title {
+  font-weight: var(--w-medium);
+}
+
+.row-meta {
+  flex: 0 0 auto;
+  font-size: var(--text-meta);
+  color: var(--fg-dimmer);
+  white-space: nowrap;
+}
+
+/* A heading inside a card. Carries the spacing the pages used to set inline, so
+   the level can change for accessibility without touching the look: on the home
+   view these are h2 (the page's top-level structure, directly under the h1), and
+   inside /me and /therapy they are h3 under a section's own h2. Same appearance,
+   correct outline in both places. */
+.card-heading {
+  margin-bottom: 7px;
+  font-family: var(--f-display);
+  font-size: var(--card-heading-size);
+  font-weight: var(--w-medium);
+  color: var(--fg-dim);
+}
+
+.card-section + .card-section {
+  margin-top: 18px;
+}
+
+/* ── Journal year index ──────────────────────────────────────────────────── */
+
+/* Sticky, so it is still reachable four hundred entries down. The journal is not
+   paginated on purpose — see the note at the top of the journal view — and this
+   is what makes that affordable. */
+.year-jump {
+  position: sticky;
+  top: var(--sample-bar);
+  z-index: var(--z-sticky);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 24px;
+  padding: 10px 0;
+  background-color: var(--bg);
+  background-image: var(--grain);
+}
+
+.year-jump a {
+  padding: 3px 11px;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r4);
+  background: var(--panel);
+  color: var(--fg-dim);
+  /* Kept from the mono it replaced: the figures still have to sit at a
+     stable width, or a count ticking from 9 to 10 moves the column. */
+  font-variant-numeric: tabular-nums;
+  font-size: var(--text-meta);
+  text-decoration: none;
+  transition: border-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+
+.year-jump a:hover {
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
+
+.journal-entry {
+  margin-bottom: 30px;
+}
+
+/* The one year divider, drawn by YearRule in components/ui (DES-001 design 3):
+   the Journal's and the Timeline's. They were two looks — this rule under an
+   h2, and a bare line of text with a tick in the timeline's gutter — and it
+   is the Journal's that both wear now, face included, so a year reads the same
+   whether it is a heading or not. The Timeline keeps only its spacing and its
+   gutter tick, under .tl below.
+
+   scroll-margin, so an anchored year is not jammed under the sticky index. */
+.year-rule {
+  margin: 36px 0 18px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line);
+  /* Kept from the mono it replaced: the figures still have to sit at a
+     stable width, or a count ticking from 9 to 10 moves the column. */
+  font-variant-numeric: tabular-nums;
+  font-family: var(--f-display);
+  font-size: var(--text-meta);
+  font-weight: var(--w-medium);
+  line-height: 1.25;
+  letter-spacing: 0.12em;
+  color: var(--fg-dimmer);
+  scroll-margin-top: 64px;
+}
+
+/* A calendar row that has already happened. Dimmed, not hidden: the record does
+   not delete, and "did I actually go?" is a real question. */
+.is-past {
+  opacity: 0.68;
+}
+
+/* ── Tags ────────────────────────────────────────────────────────────────── */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+/* --r4, not a flat 20px, so a tag follows the character's corner radius like
+   everything else. At both characters' radii it is still a pill; a flat value
+   would be the one element on the page announcing it was drawn somewhere else. */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border: 1px solid var(--quiet-border);
+  border-radius: var(--r4);
+  background: var(--quiet-bg);
+  color: var(--quiet-fg);
+  font-size: var(--text-fine);
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+/* The "ok" face. The better end state is a single token trio in
+   theme/palette.mjs so a consumer can say "ok" without naming three variables. */
+.tag.ok {
+  border-color: var(--ok-border);
+  background: var(--ok-bg);
+  color: var(--ok-fg);
+}
+
+.tag.warn {
+  border-color: var(--warn-border);
+  background: var(--warn-bg);
+  color: var(--warn-fg);
+}
+
+.tag.accent {
+  border-color: var(--accent-border);
+  background: var(--accent-bg);
+  color: var(--accent-fg);
+}
+
+/* Marks a timeline line as a reading rather than her words. The record draws
+   that distinction with [inferred] and the surface has to keep it: a future
+   session reads this file as fact. */
+.tag.inferred {
+  border-style: dashed;
+  font-style: italic;
+}
+
+/* ── Empty ───────────────────────────────────────────────────────────────── */
+
+/* An outline of a space not yet filled — never a status.
+
+   This was a sage panel: --ok-bg, --ok-border, --ok-fg, all pinned to hue 150.
+   Two things were wrong with that. It was the one element on the surface that
+   did not follow --hue, so on a red-hued record it was a green box; and on a new
+   record it is the most repeated element in the whole app, which made green the
+   colour of the app before anything had been written.
+
+   The shape was the deeper mistake. A tinted fill with a coloured border and
+   coloured text is the form of an alert, and components/ui/index.jsx spends a
+   paragraph arguing that an empty file is not a gap, a to-do, or a failure —
+   then drew one as a notice. So: no fill, a dashed hairline, her text in the
+   ordinary dimmed voice, and the leaf as the only colour in it. */
+.empty {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px 20px;
+  border: 1px dashed var(--line);
+  border-radius: var(--r3);
+  color: var(--fg-dim);
+}
+
+.empty-mark {
+  flex: 0 0 auto;
+  margin-top: 3px;
+  color: var(--accent);
+  opacity: 0.7;
+}
+
+/* The one line in here that is a statement rather than an explanation, so it is
+   the one line at full strength. */
+.empty strong {
+  display: block;
+  color: var(--fg);
+  font-weight: var(--w-semi);
+}
+
+.empty p {
+  margin-top: 4px;
+  font-size: var(--text-sub);
+}
+
+/* A standing note by default; `.warn` when something is wrong (Banner in
+   components/ui). Untoned banners wore the warn colours until 2026-10-07,
+   because only this one rule existed, so a page's description read as an
+   alarm. */
+.banner {
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  border: 1px solid var(--quiet-border);
+  border-radius: var(--r3);
+  background: var(--quiet-bg);
+  color: var(--quiet-fg);
+  font-size: var(--text-sub);
+}
+
+.banner.warn {
+  border-color: var(--warn-border);
+  background: var(--warn-bg);
+  color: var(--warn-fg);
+}
+
+/* ── Prose ───────────────────────────────────────────────────────────────── */
+
+/* Rendered markdown is set in app/prose.css, imported at the top of this file.
+   It is one contract for every markdown file the app shows — her journal, a
+   person's page, a spec register — and it is kept apart from this file so that
+   the answer to "how does markdown look here" is one place rather than six.
+
+   .verbatim below is NOT that. It is a component this app happens not to build
+   any more; see the note beside <Prose> in components/ui/index.jsx. */
+
+/* ── Verbatim ────────────────────────────────────────────────────────────── */
+
+/* Her own words, set apart. The typographic half of the promise in CLAUDE.md
+   that anything carrying feeling is quoted as she said it rather than improved. */
+.verbatim {
+  margin: 18px 0;
+  padding: 16px 20px;
+  border-left: 3px solid var(--accent-border);
+  border-radius: 0 var(--r2) var(--r2) 0;
+  background: var(--accent-bg);
+}
+
+.verbatim blockquote {
+  font-family: var(--f-display);
+  font-size: var(--quote-size);
+  line-height: 1.5;
+  color: var(--accent-fg);
+}
+
+.verbatim figcaption {
+  margin-top: 8px;
+  font-size: var(--text-meta);
+  color: var(--fg-dimmer);
+}
+
+/* ── Provenance ──────────────────────────────────────────────────────────── */
+
+/* Where this came from. Kept, because a record that cannot be traced back to a
+   file is a record you have to take on trust — but kept quiet.
+
+   On a page of six cards it was six file paths in monospace, which is build
+   exhaust in a document about her life. So the ink comes off until the block
+   above it is pointed at. The space it occupies never changes, so nothing moves
+   when it appears, and the text is always in the DOM for a screen reader and
+   for Ctrl+F.
+
+   Only where there is a pointer to reveal it with. On touch there is no hover
+   state to discover, so hiding it there would not be quiet — it would be gone. */
+.source {
+  margin-top: 12px;
+}
+
+@media (hover: hover) {
+  .source {
+    opacity: 0;
+    transition: opacity var(--dur) var(--ease);
+  }
+
+  /* The element immediately above it — a card, a row, a section — whichever the
+     view put there. Hovering anything inside that element counts, so this holds
+     without every page having to agree on a wrapper. */
+  :hover + .source,
+  .source:hover {
+    opacity: 1;
+  }
+}
+
+/* The quiet aside: a line that explains the panel above it rather than adding to
+   it. Also the voice the safety plan's provenance line borrows — see .plan-lead,
+   which sets the gap and leaves the character here so there is one definition of
+   it rather than two that drift. */
+.note,
+.plan-lead .prose {
+  margin-top: 12px;
+  max-width: var(--measure);
+  font-size: var(--text-sub);
+  color: var(--fg-dim);
+}
+
+/* Under the name on About me the note sits close, as a line of details does
+   under a title: the gap .meta-line keeps, rather than the panel's 12px. It was
+   an inline `marginTop: 6`. */
+.identity-note {
+  margin-top: calc(var(--flow) * 0.45);
+}
+
+/* What is left of the mono utility now that the app has one face: the step down
+   in size, which is what kept an inline literal from out-measuring the sentence
+   holding it. Kept under its old name so nothing that reaches for it breaks. */
+.mono {
+  font-size: 0.9em;
+}
+
+.dim {
+  color: var(--fg-dimmer);
+}
+
+/* Always sits under something -- a row title, a page head, a person's name --
+   and every one of its seven call sites was setting that gap by hand, at 5px,
+   6px or 10px depending on which file it was written in. The gap belongs to the
+   component, and scaling with --flow means it grows with the reading style
+   instead of staying put while the type around it moves. */
+.meta-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: calc(var(--flow) * 0.45);
+  font-size: var(--text-meta);
+  color: var(--fg-dimmer);
+}
+
+/* ── Tables ──────────────────────────────────────────────────────────────── */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sub);
+}
+
+th,
+td {
+  padding: 10px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  font-size: var(--text-fine);
+  font-weight: var(--w-strong);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--fg-dimmer);
+  border-bottom: 1px solid var(--line);
+}
+
+tbody tr + tr td {
+  border-top: 1px solid var(--line-soft);
+}

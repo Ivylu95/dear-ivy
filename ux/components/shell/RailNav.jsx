@@ -1,8 +1,11 @@
 'use client';
 
 import { useEffect, useId, useRef, useState } from 'react';
-import { RailHead, useRailFold } from '@/components/shell/RailFold';
+import { RailCard } from '@/components/shell/RailFold';
+import { NoMatch } from '@/components/ui';
 import { Icon } from '@/components/ui/icons';
+import { SearchField } from '@/components/ui/SearchField';
+import { scrollParent, travel } from '@/lib/anchor-travel';
 
 // The right rail's contents list: where you are inside the view you are already
 // on.
@@ -19,7 +22,7 @@ import { Icon } from '@/components/ui/icons';
 // rather than sections.
 //
 // `search` is extra text a row can be found by without showing it: a register
-// row is labelled `ARC-003` and nobody searches for a number they are looking up
+// row is labelled `ARC-004` and nobody searches for a number they are looking up
 // the meaning of, so the row's own statement rides along and the filter below
 // reads both.
 //
@@ -37,11 +40,7 @@ import { Icon } from '@/components/ui/icons';
 // away on the timeline has not asked for it back on the journal.
 export function RailNav({ title, items, name = 'contents' }) {
   if (!items?.length) return null;
-  return (
-    <section className="rail-card">
-      <Spy items={items} title={title} name={name} />
-    </section>
-  );
+  return <Spy items={items} title={title} name={name} />;
 }
 
 // How many rows it takes before a list is worth searching rather than reading.
@@ -66,10 +65,10 @@ function Spy({ items, title, name }) {
   const [away, setAway] = useState(false);
   const frame = useRef(0);
   const scrollerRef = useRef(null);
-  // The list is not rendered while folded, so the spy below has nothing to mark
-  // — but it keeps running, and that is deliberate: it also drives `away`, which
-  // is what enables "Top", and that control stays on the row.
-  const folded = useRailFold(name);
+  // The list is not rendered while folded (RailCard leaves it out), so the spy
+  // below has nothing to mark — but it keeps running, and that is deliberate:
+  // it also drives `away`, which is what enables "Top", and that control stays
+  // on the row.
   const listId = useId();
   // What the reader is looking for, if anything. Local to the component and not
   // in the URL, unlike the Changes tab's search: that one filters a list the
@@ -379,107 +378,62 @@ function Spy({ items, title, name }) {
     else window.scrollTo(how);
   };
 
-  return (
-    <>
-      {/* The title and the way back share one line, with the control flush to the
-          column's right edge. It is the row a reader's eye already rests on, and
-          putting the control there costs no vertical space in a list that can run
-          to twenty rows.
-          
-          A button rather than a link to `#`: there is no target at the top of the
-          document, and an empty fragment would put one in the address bar and
-          leave it there. Disabled rather than hidden at the top of a document,
-          so the control keeps its place and the column does not reflow the
-          moment a reader starts scrolling — `disabled` also takes it out of the
-          tab order and says why to a screen reader, which `hidden` cannot. */}
-      {/* The heading folds the list; "Top" keeps the slot beside it, because a
-          folded contents list has not stopped the page from being scrollable
-          and the way back is the one thing you might still want from a column
-          you have just closed. */}
-      <RailHead name={name} title={title} bodyId={listId}>
-        {/* Only for a list that navigates THIS page.
-            
-            A block of links to OTHER files borrows this component for its rows
-            and its fold, and "Top" means nothing in it — worse, it would put a
-            second one in the column, so two identical controls would sit eight
-            rows apart and only one of them would be about the document. */}
-        {anchored && (
-          <button type="button" className="rail-top" onClick={toTop} disabled={!away}>
-            <Icon name="chevron" size={11} className="rail-top-mark" />
-            Top
-          </button>
-        )}
-      </RailHead>
+  // The title and the way back share one line, with the control flush to the
+  // column's right edge. It is the row a reader's eye already rests on, and
+  // putting the control there costs no vertical space in a list that can run
+  // to twenty rows.
+  //
+  // A button rather than a link to `#`: there is no target at the top of the
+  // document, and an empty fragment would put one in the address bar and
+  // leave it there. Disabled rather than hidden at the top of a document,
+  // so the control keeps its place and the column does not reflow the
+  // moment a reader starts scrolling — `disabled` also takes it out of the
+  // tab order and says why to a screen reader, which `hidden` cannot.
+  //
+  // The heading folds the list; "Top" keeps the slot beside it, because a
+  // folded contents list has not stopped the page from being scrollable
+  // and the way back is the one thing you might still want from a column
+  // you have just closed.
+  //
+  // Only for a list that navigates THIS page. A block of links to OTHER
+  // files borrows this component for its rows and its fold, and "Top" means
+  // nothing in it — worse, it would put a second one in the column, so two
+  // identical controls would sit eight rows apart and only one of them would
+  // be about the document.
+  const top = anchored && (
+    <button type="button" className="rail-top" onClick={toTop} disabled={!away}>
+      <Icon name="chevron" size={11} className="rail-top-mark" />
+      Top
+    </button>
+  );
 
-      {folded ? null : (
-      <>
+  return (
+    <RailCard name={name} title={title} bodyId={listId} head={top}>
       {/* Under the heading rather than on its line: the row above is a label,
           a fold and a way back already, and a fourth thing on it in a 206px
           column is how a margin becomes a control panel. It scrolls with the
           list rather than pinning under the head, because it is the list's own
           first row, not a second header. */}
       {filterable && (
-        <div className="rail-filter">
-          {/* The same glyph, gap and rule as the harness index's filter two
-              columns to the left — see `.harness-index-search`. One gesture in
-              this app should look like one thing wherever it is offered, and a
-              reader who has just used that field to find the document should not
-              have to work out that this is the same control at a different
-              scale.
-
-              type="search" for the browser's own affordances — the escape key,
-              the right keyboard on a touch device — with a clear button of our
-              own, because the native one is absent on Firefox and unstyleable on
-              WebKit. */}
-          <Icon name="search" size={12} className="rail-filter-mark" aria-hidden="true" />
-          <input
-            type="search"
-            className="rail-filter-field"
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            onKeyDown={(event) => {
-              // Escape empties the box rather than leaving the reader to select
-              // and delete. `type=search` gives some browsers a clear button and
-              // no browser all of them, so the key is the one that is always
-              // there.
-              if (event.key === 'Escape') {
-                setQuery('');
-                return;
-              }
-              // Enter takes the first result, which is what typing three letters
-              // into a list of sixty was for. The anchor's own handler does the
-              // work, so the jump and the mark go through exactly the path a
-              // click does — context rows are skipped, because they are where a
-              // match SITS rather than a match.
-              if (event.key === 'Enter') {
-                event.preventDefault();
-                navRef.current?.querySelector('a:not([data-context])')?.click();
-              }
-            }}
-            // Named the way the index's field is named: what it filters, not
-            // what it is. The rail is only ever offered this on a list that
-            // points into the page being read, so "this page" is exact.
-            placeholder="Filter this page"
-            aria-label="Filter this page"
-            aria-controls={listId}
-            spellCheck="false"
-            autoComplete="off"
-          />
-          {/* On a query, not on focus. A control that appears the moment the
-              field is touched is one more thing moving in a 206px column; one
-              that appears when there is something to clear is a way out. */}
-          {query && (
-            <button
-              type="button"
-              className="rail-filter-clear"
-              onClick={() => setQuery('')}
-              aria-label="Clear the filter"
-              title="Clear the filter"
-            >
-              <Icon name="close" size={11} />
-            </button>
-          )}
-        </div>
+        // The one SearchField, as the harness index's filter two columns to the
+        // left is: one gesture should look like one thing wherever it is offered.
+        // Enter takes the first result, which is what typing three letters into
+        // a list of sixty was for. The anchor's own handler does the work, so the
+        // jump and the mark go through exactly the path a click does — context
+        // rows are skipped, because they are where a match SITS rather than a
+        // match. Named the way the index's field is named: what it filters, not
+        // what it is; the rail is only offered this on a list that points into
+        // the page being read, so "this page" is exact.
+        <SearchField
+          className="rail-filter"
+          value={query}
+          onChange={setQuery}
+          onEnter={() => navRef.current?.querySelector('a:not([data-context])')?.click()}
+          placeholder="Filter this page"
+          aria-label="Filter this page"
+          aria-controls={listId}
+          clearLabel="Clear the filter"
+        />
       )}
 
       <nav className="rail-list" id={listId} aria-label="On this page" ref={navRef}>
@@ -502,6 +456,7 @@ function Spy({ items, title, name }) {
               const id = item.href.slice(1);
               asked.current = id;
               apply.current?.(id);
+              travel(scrollerRef.current);
             }}
           >
             {item.label}
@@ -530,12 +485,12 @@ function Spy({ items, title, name }) {
           have and takes the block's own air — a sibling would have added the
           empty list's 24px of padding above itself. */}
       {needle && shown.length === 0 && (
-        <p className="rail-empty">No section matches “{query.trim()}”.</p>
+        <NoMatch>
+          No section matches <strong>{query.trim()}</strong>.
+        </NoMatch>
       )}
       </nav>
-      </>
-      )}
-    </>
+    </RailCard>
   );
 }
 
@@ -600,7 +555,7 @@ function narrow(items, needle) {
 // rationale and recommendation, six hundred characters and more. Printing that
 // under a rail row would bury the list it is meant to explain, and printing the
 // statement instead would be worse than printing nothing: search `data/`, which
-// is in ARC-003's rationale and not in its statement, and the row would offer a
+// is in ARC-004's rationale and not in its statement, and the row would offer a
 // sentence without the word in it as its reason for being there.
 //
 // So the window follows the match. More after than before, because the match is
@@ -633,20 +588,4 @@ function excerpt(text, needle) {
     word: text.slice(at, at + needle.length),
     tail: text.slice(at + needle.length, to) + (to < text.length ? '…' : ''),
   };
-}
-
-// The nearest ancestor that scrolls, or the window if none does.
-//
-// `overflow: auto` alone is not enough to answer with: a column that can scroll
-// but has nothing to scroll yet still reports auto, and picking it would mean
-// listening to an element whose scrollTop never moves. So the box has to both
-// allow scrolling and actually overflow.
-function scrollParent(el) {
-  for (let node = el?.parentElement; node; node = node.parentElement) {
-    const { overflowY } = getComputedStyle(node);
-    if ((overflowY === 'auto' || overflowY === 'scroll') && node.scrollHeight > node.clientHeight) {
-      return node;
-    }
-  }
-  return window;
 }

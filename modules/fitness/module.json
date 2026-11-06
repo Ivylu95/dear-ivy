@@ -1,0 +1,38 @@
+{
+  "standing": {
+    "templates/nutrition-readme.md": "README.md",
+    "templates/supplements.md": "supplements.md",
+    "templates/usual_meals.md": "usual_meals.md",
+    "templates/training.md": "training.md"
+  },
+  "growing": [
+    "days"
+  ],
+  "router": [
+    {
+      "she": "says what she ate, drank or took, asks how her day's nutrition looks, or asks when she will be checked in with about food",
+      "skill": "fitness:log",
+      "must": "Every number marked label, looked up or estimate; nothing unreadable guessed. A record, never a verdict: no comment on her body. Her changes go in her record; unsound ones are questioned once; no budget under 1,500 kcal (men) or 1,200 (women), nothing past an upper limit, no prescription change, without a clinician"
+    },
+    {
+      "she": "asks to see or change her supplements",
+      "skill": "fitness:supplements",
+      "must": "Brand and label kept for each; never a dose, a timing, a new supplement, or mixing with prescriptions: name the prescribing doctor or a pharmacist. Saying today's food already covers a nutrient supplement is allowed"
+    },
+    {
+      "she": "tells you about a set, a lift or a training session, gives her bodyweight, or asks how her lifts are going",
+      "skill": "fitness:training",
+      "must": "Each set as weight × reps × reps left, as she said it; nothing she did not say is filled in. An estimated max is called estimated; whether to attempt a weight is hers. Bodyweight never commented on, asked at most weekly, never on a hard day. Pain sharp, down a leg or with numbness goes to a doctor or physio"
+    },
+    {
+      "she": "says how she slept, how sore she is or how much energy she has, or asks how her recovery has been this week",
+      "skill": "fitness:recovery",
+      "must": "Sleep, soreness and energy as she said them, a day a line; nothing she did not say filled in, never worked out from message times. Asked at most once a day, never on a hard day. No comment on her body, sleep or drinking; no sleep aid or medicine: a pharmacist or her doctor"
+    }
+  ],
+  "chat": {
+    "emoji": "🏋️",
+    "title": "Food and training",
+    "for": "food, supplements, training and recovery"
+  }
+}

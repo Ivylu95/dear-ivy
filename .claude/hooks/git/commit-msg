@@ -1,0 +1,395 @@
+#!/usr/bin/env node
+// git commit-msg — no name from the record in a commit message; a feat cites
+// its row; a commit changing a spec row names it and quotes its approval, as
+// the developer typed it, as does one changing a skill's Goal line; a check's
+// cases never drop
+// (each rule below says why).
+//
+// PRD-010 and CLAUDE.md: commit messages "must still carry nothing personal:
+// name the file touched, never the content". Every other file outside data/ is
+// swept for names by the privacy check; a commit message is not a file, so it
+// was the one place a name could leave unchecked, and history keeps it forever.
+//
+// Names: her own, from PROFILE.yaml, and each first name on file in people/,
+// page or folder — of her record and of the sandbox. Case-insensitive, whole words.
+// Always refuses: a name in a commit message is in history for good, and the fix
+// is only a reworded message. Pointed at by core.hooksPath, which the session brief sets.
+//
+// A file under people/ is named after a person, so "name the file touched" stops
+// at the folder there: `record: update people/`, never the file.
+
+import { existsSync, readFileSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
+import { join } from 'node:path';
+import { pathToFileURL } from 'node:url';
+
+// git runs this inside the repository; the commit gate's selftest runs it in a
+// copy with no .git, which names itself in CLAUDE_PROJECT_DIR.
+let root;
+try {
+  root = execFileSync('git', ['rev-parse', '--show-toplevel'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
+} catch {
+  root = process.env.CLAUDE_PROJECT_DIR || process.cwd();
+}
+// A refusal remembers what it left staged, so the next commit carries those
+// files only on purpose (lib/refused-staged.mjs). Best effort: the selftest's
+// copy has no .git, and nothing there is staged.
+async function refuse(text) {
+  process.stderr.write(text);
+  try {
+    const { rememberRefused } = await import(pathToFileURL(join(root, '.claude', 'hooks', 'lib', 'refused-staged.mjs')).href);
+    rememberRefused(root);
+  } catch {
+    // No repository here: nothing staged to remember.
+  }
+  process.exit(1);
+}
+
+/** git in the repository, reading the index named (a commit's own, in a replay) or git's. */
+function gitWith(index, ...args) {
+  try {
+    return execFileSync('git', args, {
+      cwd: root,
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+      env: index ? { ...process.env, GIT_INDEX_FILE: index } : process.env,
+    });
+  } catch {
+    return null;
+  }
+}
+
+// The approval rules below (MNT-008 design 2, PMM-007 design 4), as one judge
+// of a commit: its message, the commit it sits on (`base`), and git reading its
+// index. Returns the refusal, or null. Git runs it for each commit, on HEAD and
+// the index being committed; CI runs it again over every commit a push brought
+// (`--replay`, below), since a commit made with --no-verify, in GitHub's editor
+// or from a clone without the gate never met it (t5, 2026-11-02).
+async function approvalRefusal(message, base, git, typedRoots = [root]) {
+  const { DEV_DIR, SPECS_DIR } = await import(pathToFileURL(join(root, '.claude', 'hooks', 'lib', 'paths.mjs')).href);
+  const { parseRows } = await import(pathToFileURL(join(root, '.claude', 'hooks', 'lib', 'spec-rows.mjs')).href);
+  const wholesale = new Set([...message.matchAll(/^Rows: all in (\S+\.md)\s*$/gm)].map((m) => m[1]));
+  const changed = new Map();
+  const staged = (git('diff', '--cached', '--name-only', base, '--', SPECS_DIR) ?? '').split('\n').filter((f) => f.endsWith('.md'));
+  for (const file of staged.filter((f) => !wholesale.has(f))) {
+    const before = parseRows(git('show', `${base}:${file}`) ?? '');
+    const after = parseRows(git('show', `:${file}`) ?? '');
+    // Each hunk's lines, 1-based, on either side; a side of length 0 touches no line there.
+    for (const [, a, b = '1', c, d = '1'] of (git('diff', '--cached', '-U0', base, '--', file) ?? '').matchAll(/^@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@/gm)) {
+      for (const [rows, start, count] of [[before, +a, +b], [after, +c, +d]]) {
+        for (const r of rows) if (count && r.line + 1 <= start + count - 1 && r.end + 1 >= start) changed.set(r.id, file);
+      }
+    }
+  }
+  const unnamed = [...changed.keys()].filter((id) => !new RegExp(`\\b${id}\\b`).test(message)).sort();
+  if (unnamed.length) {
+    return (
+      `\ncommit-msg: commit refused — this commit changes spec row(s) its message does not name: ${unnamed.join(', ')}.\n` +
+      '  Name each in the message (why it changed, and the approval it carries). If it was not meant to change, the staged register is a stale copy: unstage it and take the current one.\n' +
+      '  A register reshaped as a whole: a line "Rows: all in <path>" in the body.\n\n'
+    );
+  }
+  // MNT-008 design 2, "a commit that changes a row carries the owner's approval
+  // on a line of its own, `Approved: "…"`": naming a row proved which rows
+  // moved, not that anyone agreed they should, so an agent could reword a row,
+  // name it, and pass. This asks for a quote; the rule after it, whose words it is.
+  const reshaped = staged.some((f) => wholesale.has(f));
+  // An Approved: line not in the one form reads as no approval at all, and the
+  // refusal said only that: on 2026-11-04 `Approved: "Yes" (T-783), …` was refused
+  // as "no approval" with his yes in hand, and he was asked again. Name the line.
+  const misshapen = message.split('\n').filter((l) => /^Approved:/.test(l) && !/^Approved: ["“].+["”]\s*$/.test(l));
+  const shapeHint = misshapen.length
+    ? `  Not read as an approval: ${misshapen.map((l) => JSON.stringify(l)).join(', ')}. The line ends at the closing quote, nothing after it; put a T-number or a note on a line of its own.\n`
+    : '';
+  if ((changed.size || reshaped) && !/^Approved: ["“].+["”]\s*$/m.test(message)) {
+    return (
+      '\ncommit-msg: commit refused — this commit changes spec rows but carries no approval (MNT-008).\n' +
+      '  Quote the owner\'s yes to these words on a line of its own: Approved: "<their words>".\n' +
+      shapeHint +
+      '  No yes yet: unstage the register, show the wording, and wait for one.\n\n'
+    );
+  }
+  // The quote is checked against what he typed (lib/typed.mjs): it must be
+  // part of a Transcript entry that the record of his own messages stands
+  // behind, so an agent's own words in quotes no longer pass. Where there is
+  // no Transcript (a copy without dev/, ARC-008) there is no one to ask; one
+  // the last commit had and the disk lacks fails closed, so moving it aside
+  // for a commit asks the same question.
+  const { quoteIsTyped, transcriptDir } = await import(pathToFileURL(join(root, '.claude', 'hooks', 'lib', 'typed.mjs')).href);
+  const asked = existsSync(transcriptDir(root)) || git('cat-file', '-e', `${base}:${DEV_DIR}/dialogue/transcript`) !== null;
+  const approvals = [...message.matchAll(/^Approved: ["“](.+)["”]\s*$/gm)].map((m) => m[1]);
+  const approvedByHim = approvals.some((q) => typedRoots.some((r) => quoteIsTyped(q, r)));
+  const notTyped = (what) =>
+    `\ncommit-msg: commit refused — this commit changes ${what}, and carries no Approved: quote of the developer's own words as typed.\n` +
+    '  Quote words from his own message, as he typed them, kept in the Transcript: Approved: "<his words>".\n' +
+    shapeHint +
+    '  He has not said yes: unstage the change, show it to him, and wait for one.\n\n';
+  if ((changed.size || reshaped) && asked && !approvedByHim) return notTyped('spec rows (MNT-008)');
+
+  // The set-up skill's gate (PMM-007, dev/skills/set-up/README.md): a skill's
+  // **Goal:** line, and set-up's Must hold block, change only on the
+  // developer's yes, quoted as he typed it. A skill added or removed whole
+  // changes its Goal line from none or to none, and only approval creates a
+  // procedure (PMM-003), so it asks the same yes: a skill moved out of the
+  // skills folders (to the archive) is removed, one moved in is added, one
+  // renamed within them is judged by its lines before and after (t5, 2026-11-02).
+  if (asked) {
+    const goal = (text) => text?.match(/^\*\*Goal:\*\*.*$/m)?.[0] ?? '';
+    const mustHold = (text) => {
+      const rest = text.slice(Math.max(0, text.search(/^\*\*Must hold\*\*/m)));
+      if (!/^\*\*Must hold\*\*/.test(rest)) return '';
+      const end = rest.search(/\n[ \t]*\n/);
+      return end < 0 ? rest : rest.slice(0, end);
+    };
+    const isSkill = (f) => /^(?:\.claude|dev)\/skills\/[^/]+\/SKILL\.md$/.test(f ?? '');
+    const SET_UP = '.claude/skills/set-up/SKILL.md';
+    const moves = (git('-c', 'core.quotePath=false', 'diff', '--cached', '-M', '--name-status', '--diff-filter=ADMR', base) ?? '')
+      .split('\n')
+      .filter(Boolean)
+      .map((l) => l.split('\t'));
+    const gated = [];
+    for (const [status, from, to = from] of moves) {
+      if (!isSkill(from) && !isSkill(to)) continue;
+      if (status === 'A' || (status.startsWith('R') && !isSkill(from))) {
+        gated.push(`${to}, added whole`);
+        continue;
+      }
+      if (status === 'D' || (status.startsWith('R') && !isSkill(to))) {
+        gated.push(`${from}, removed whole`);
+        continue;
+      }
+      const before = git('show', `${base}:${from}`);
+      const after = git('show', `:${to}`);
+      if (before === null || after === null) {
+        gated.push(`${to}, which could not be read to compare`);
+        continue;
+      }
+      if (goal(before) !== goal(after)) gated.push(`the Goal line of ${to}`);
+      if ((from === SET_UP || to === SET_UP) && mustHold(before) !== mustHold(after)) gated.push(`the Must hold block of ${to}`);
+    }
+    if (gated.length && !approvedByHim) return notTyped(gated.join(' and '));
+  }
+  return null;
+}
+
+// `commit-msg --replay <before> <after>`: the approval rules above, run again
+// over each commit from <before> to <after> that is not a merge, by the CI job
+// in .github/workflows/checks.yml on every push to main. The gate judges a
+// commit only where it runs: --no-verify, GitHub's editor, or a clone without
+// core.hooksPath set skip it, and CI ran the dialogue check but never these
+// rules (t5, 2026-11-02). Each commit is judged against its parent, its own
+// tree read into a scratch index (no file is written out, so the record never
+// lands on a runner's disk), its message as committed, and the typed record
+// and Transcript as that commit carried them or as pushed: an entry tidied
+// after its commit (a line moved to his record) no longer hashes as typed. A <before> that is missing or not in this history (a new branch, a
+// forced push) replays <after> alone; a root commit has no parent to compare,
+// and is the gate's to judge (a new copy's first). A merge is let through, as
+// the gate lets it.
+if (process.argv[2] === '--replay') {
+  const [before = '', after = 'HEAD'] = process.argv.slice(3);
+  const known = /^[0-9a-f]{7,40}$/i.test(before) && !/^0+$/.test(before) && gitWith(null, 'cat-file', '-e', `${before}^{commit}`) !== null;
+  const list = gitWith(null, 'rev-list', '--no-merges', '--reverse', ...(known ? [`${before}..${after}`] : ['-n', '1', after]));
+  if (list === null) {
+    process.stderr.write(`\ncommit-msg --replay: could not list the commits ${known ? `${before}..` : ''}${after}.\n\n`);
+    process.exit(1);
+  }
+  const { mkdirSync, mkdtempSync, rmSync } = await import('node:fs');
+  const { tmpdir } = await import('node:os');
+  const { DEV_DIR } = await import(pathToFileURL(join(root, '.claude', 'hooks', 'lib', 'paths.mjs')).href);
+  const scratch = mkdtempSync(join(tmpdir(), 'dear-replay-'));
+  const refused = [];
+  let judgedCount = 0;
+  try {
+    for (const sha of list.split('\n').filter(Boolean)) {
+      const parents = (gitWith(null, 'rev-list', '--parents', '-n', '1', sha) ?? '').trim().split(' ').slice(1);
+      if (parents.length !== 1) continue;
+      const index = join(scratch, `index-${sha}`);
+      if (gitWith(index, 'read-tree', sha) === null) {
+        refused.push(`${sha.slice(0, 9)}: its tree could not be read`);
+        continue;
+      }
+      const msg = (gitWith(null, 'log', '-1', '--format=%B', sha) ?? '').split('\n').filter((l) => !l.startsWith('#')).join('\n');
+      // The dialogue folder as this commit carried it: harness, never the record.
+      const then = join(scratch, `tree-${sha}`);
+      try {
+        const tar = execFileSync('git', ['archive', '--format=tar', sha, '--', `${DEV_DIR}/dialogue`], { cwd: root, stdio: ['ignore', 'pipe', 'ignore'], maxBuffer: 1 << 28 });
+        mkdirSync(then, { recursive: true });
+        execFileSync('tar', ['-x', '-C', then], { input: tar, stdio: ['pipe', 'ignore', 'ignore'] });
+      } catch {
+        // No dialogue folder in that commit: the pushed one alone.
+      }
+      const why = await approvalRefusal(msg, parents[0], (...a) => gitWith(index, ...a), [then, root]);
+      judgedCount += 1;
+      if (why) refused.push(`${sha.slice(0, 9)} ${msg.split('\n')[0]}${why.replace(/^\ncommit-msg: commit refused —/, '\n   ').replace(/\n+$/, '')}`);
+    }
+  } finally {
+    rmSync(scratch, { recursive: true, force: true });
+  }
+  if (refused.length) {
+    process.stderr.write(`\ncommit-msg --replay: ${refused.length} commit(s) would have been refused by the approval rules (MNT-008, PMM-007):\n\n${refused.join('\n\n')}\n\n  Each went past the gate. Revert it, or bring the change back with his yes quoted.\n\n`);
+    process.exit(1);
+  }
+  console.log(`commit-msg --replay: ${judgedCount} commit(s) judged, each with the approval it needs`);
+  process.exit(0);
+}
+
+const message = readFileSync(process.argv[2], 'utf8')
+  .split('\n')
+  .filter((l) => !l.startsWith('#'))
+  .join('\n');
+
+// WKB-007, "Every change the developer asks for runs from spec to enforcement in
+// one flow.": new behaviour lands with the row it was built from. A `feat`
+// commit cites at least one row ID; a `fix` is held to it by the end-of-session
+// review instead, since a typo or a broken link has no row to cite.
+if (/^feat(\(|:|!)/.test(message.trimStart()) && !/\b[A-Z]{3}-\d{3}\b/.test(message)) {
+  await refuse('\ncommit-msg: commit refused — a feat commit cites the spec row it was built from (an ID like WKB-007), per WKB-007. Draft and approve the row first if none exists.\n\n');
+}
+
+// ARC-005's approved amendment (e3787b0) was silently undone by a commit from
+// another chat carrying a stale copy of the register, under a message about
+// something else (9755c5d, 2026-10-03). So a commit that changes a spec row
+// names that row: every row whose lines the staged diff touches, in the old
+// register or the new, must have its ID in the message. A register reshaped
+// wholesale says so on a line of its own, "Rows: all in <path>". A merge is
+// let through: it carries changes already committed under their own messages.
+// Judged only when git runs this for a commit, which names the commit's index
+// in GIT_INDEX_FILE: the selftest's message cases run it by hand, and must not
+// be judged against whatever happens to be staged in the tree they run in.
+const gitOut = (...args) => gitWith(null, ...args);
+// A new copy's first commit is let through too: no commit before it, no remote
+// and no ref of any kind is the repository new-copy.mjs starts (DEP-015), whose
+// registers are the download's, unchanged, and with nothing to compare against
+// every row would read as changed (set-up cases, 2026-10-27 · 8). An orphan
+// branch in a copy in use is judged, its remote removed or not: the copy's
+// other branches, remote-tracking refs, tags or stash are still there, and a
+// remote removed alone left them (t5, 2026-11-02).
+const firstOfNewCopy =
+  gitOut('rev-parse', '-q', '--verify', 'HEAD') === null && (gitOut('remote') ?? 'unread').trim() === '' && (gitOut('for-each-ref', '--count=1') ?? 'unread').trim() === '';
+const judged = Boolean(process.env.GIT_INDEX_FILE) && gitOut('rev-parse', '-q', '--verify', 'MERGE_HEAD') === null && !firstOfNewCopy;
+if (judged) {
+  // No commit yet (an orphan branch): every staged file is new against the empty tree.
+  const base = gitOut('rev-parse', '-q', '--verify', 'HEAD') === null ? (gitOut('hash-object', '-t', 'tree', '--stdin') ?? '').trim() : 'HEAD';
+  const why = await approvalRefusal(message, base, gitOut);
+  if (why) await refuse(why);
+}
+
+// MNT-008 design 5, "the commit gate lists each such row its message does not
+// name, and lets the commit through": a file a row's design names changed, so
+// the row may no longer describe it. A notice, never a refusal: replayed over
+// 584 commits, a refusal would have met two in three (2026-10-07). Best effort:
+// a copy without the design, or a read that fails, notes nothing.
+if (judged) {
+  try {
+    const designs = join(root, 'ux', 'scripts', 'design-paths.mjs');
+    if (existsSync(designs)) {
+      const { designPaths } = await import(pathToFileURL(designs).href);
+      const files = new Set((gitOut('-c', 'core.quotePath=false', 'diff', '--cached', '--name-only') ?? '').split('\n').filter(Boolean));
+      const rows = new Set(designPaths(root).filter(({ path }) => files.has(path)).map(({ id }) => id));
+      const unnamed = [...rows].filter((id) => !new RegExp(`\\b${id}\\b`).test(message)).sort();
+      if (unnamed.length) {
+        const shown = unnamed.slice(0, 10).join(', ') + (unnamed.length > 10 ? ` +${unnamed.length - 10} more` : '');
+        process.stderr.write(`\ncommit-msg: note (MNT-008) — this commit changes a file these rows' designs name, and does not name them: ${shown}.\n  Check each still describes it; nothing is refused.\n\n`);
+      }
+    }
+  } catch {
+    // A notice that cannot be read is no notice.
+  }
+}
+
+// SFG-014, "A check is never weakened to let a change through." Its design
+// admits the hole: a check and its case loosened together pass the selftest,
+// since nothing compared a check's cases before and after. This compares them.
+// A hook's acting cases in selftest.mjs ('deny', 'block', 'refuse', and
+// 'context', which is how the crisis floor acts) are counted per hook, and the case lines of each rule test under .claude/hooks/ per file;
+// a commit that leaves any count lower than it found it is refused. A case
+// reworded or moved within its own table keeps the count; a weakened one
+// ('deny' to 'pass') or a removed one lowers it. A hook deleted in the same
+// commit takes its cases with it. Anything else removed on purpose says so on
+// a line of its own, "Cases-removed: <hook or test path> — <why>", so the
+// history carries the reason. It counts cases, not what they prove: a case
+// rewritten to pass easily keeps its count, which SFG-014 leaves to review.
+const CASE_LINE = /^\s*(?:(?:check|scenario|expect|assert|t|test|it|cases\.push)\(\s*\[?\s*['"`]|\[\s*['"`][^'"`\n]{3,}['"`]\s*,)/;
+const REFUSAL = /'(deny|block|refuse|context)'/;
+const HOOK_KEY = /^\s*'([\w-]+\/[\w.-]+\.mjs)':\s*\[/;
+const SELFTEST = '.claude/hooks/selftest.mjs';
+/** { key: count }: refusal cases per hook for the selftest, case lines for a rule test. */
+function caseCounts(path, text) {
+  const counts = {};
+  if (path === SELFTEST) {
+    let hook = '';
+    for (const line of text.split(/\r?\n/)) {
+      const key = HOOK_KEY.exec(line);
+      if (key) hook = key[1];
+      else if (/^\s*\][,;]?\s*$/.test(line) || /^\s*const msgCases\b/.test(line)) hook = /msgCases/.test(line) ? 'git/commit-msg' : '';
+      if (hook && /^\s*\[\s*['"`]/.test(line) && REFUSAL.test(line)) counts[hook] = (counts[hook] ?? 0) + 1;
+    }
+  } else {
+    const n = text.split(/\r?\n/).filter((l) => CASE_LINE.test(l)).length;
+    if (n) counts[path] = n;
+  }
+  return counts;
+}
+if (judged) {
+  const acknowledged = [...message.matchAll(/^Cases-removed: (\S+)/gm)].map((m) => m[1]);
+  const isCaseFile = (f) => f === SELFTEST || /^\.claude\/hooks\/.*\/test-[^/]+\.mjs$/.test(f);
+  // name-status with renames, so a rule test moved to a new name is compared under it.
+  const moves = (gitOut('diff', '--cached', '-M', '--name-status', '--', '.claude/hooks') ?? '').split('\n').filter(Boolean).map((l) => l.split('\t'));
+  const lost = [];
+  for (const [status, from, to = from] of moves) {
+    if (!isCaseFile(from) && !isCaseFile(to)) continue;
+    const before = caseCounts(from, gitOut('show', `HEAD:${from}`) ?? '');
+    const after = caseCounts(from, status.startsWith('D') ? '' : (gitOut('show', `:${to}`) ?? ''));
+    for (const [key, n] of Object.entries(before)) {
+      const left = after[key] ?? 0;
+      if (left >= n) continue;
+      // A hook removed in this commit takes its selftest cases with it.
+      if (from === SELFTEST && gitOut('cat-file', '-e', `:.claude/hooks/${key}`) === null && key !== 'git/commit-msg') continue;
+      if (acknowledged.some((a) => a === key || a === from || a.endsWith(`/${key}`))) continue;
+      lost.push(`${key}: ${n} case(s) before, ${left} now`);
+    }
+  }
+  if (lost.length) {
+    await refuse(
+      `\ncommit-msg: commit refused — this commit leaves a check with fewer cases than it had (SFG-014):\n${lost.map((l) => `  - ${l}`).join('\n')}\n` +
+        '  A check is never weakened to let a change through: keep each case, or add the case that replaces it.\n' +
+        '  Removed on purpose (a retired check, a case moved elsewhere): a line "Cases-removed: <hook or test path> — <why>" in the body.\n\n',
+    );
+  }
+}
+
+const { profileName } = await import(pathToFileURL(join(root, '.claude', 'hooks', 'lib', 'profile-schema.mjs')).href);
+const { peopleSlugs } = await import(pathToFileURL(join(root, '.claude', 'hooks', 'lib', 'people.mjs')).href);
+const { CORE_DATA } = await import(pathToFileURL(join(root, '.claude', 'hooks', 'lib', 'modules.mjs')).href);
+const names = new Set();
+for (const dir of ['data', 'data-sandbox'].map((d) => join(root, d))) {
+  // people/ lives in the core module's folder; the old root path found no one
+  // from 2026-09-27 to 2026-09-29, and names went into history unrefused.
+  for (const slug of peopleSlugs(join(dir, CORE_DATA, 'people'))) names.add(slug);
+  const profile = join(dir, 'PROFILE.yaml');
+  if (existsSync(profile)) names.add(profileName(readFileSync(profile, 'utf8')));
+}
+
+const found = [...names].filter((n) => n && n.length > 2 && new RegExp(`\\b${n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i').test(message));
+
+// ARC-004's copy rule, as the privacy check holds every file to it (A-155): a line
+// of 60 characters or more whose words, quote and list markers aside, are a line
+// of the record. A name list cannot catch her words pasted into a body. The rule is
+// check-privacy.mjs's own, imported, so the two cannot drift; a copy without it
+// (a test's bare repository) has only the names rule above. Never the line, never
+// a path: only which line of the message it is.
+const privacyScript = join(root, 'ux', 'scripts', 'check-privacy.mjs');
+if (existsSync(privacyScript)) {
+  const { copiedLines } = await import(pathToFileURL(privacyScript).href);
+  const copied = copiedLines(root, message);
+  if (copied.length) {
+    await refuse(
+      `\ncommit-msg: commit refused — ${copied.length === 1 ? 'line' : 'lines'} ${copied.join(', ')} of this message ${copied.length === 1 ? 'repeats a line' : 'repeat lines'} from the record word for word. Name the file touched, never the content.\n\n`,
+    );
+  }
+}
+
+if (!found.length) process.exit(0);
+
+// The name itself is not printed: a terminal or CI log is outside the record too.
+await refuse(`\ncommit-msg: commit refused — this message contains ${found.length} name(s) from the record. Name the file touched, never the content.\n\n`);

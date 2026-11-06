@@ -5,12 +5,26 @@ Thumbs.db
 # data/ is DELIBERATELY tracked. Sessions run on a disposable cloud VM, so git
 # is the only persistence her record has. Privacy comes from the repository
 # being private and single-member — not from holding files out of it.
+#
+# One exception: data/archive-local/ holds archived material the developer has
+# decided stays on this machine, off the remote. Only its README is tracked, and
+# it says what the folder costs: nothing in it survives the machine it is on.
+/data/archive-local/*
+!/data/archive-local/README.md
 
 /temp
+# Hook state kept between sessions (FND-001): rebuilt unasked, so not tracked.
+# The README says what each file is.
+/.claude/hooks/state/*
+!/.claude/hooks/state/README.md
+# Subagents' isolated worktrees, made and removed by Claude Code: each is its
+# own checkout on its own branch, never a file of this one.
+/.claude/worktrees/
 # ── The dashboard, in ux/ ───────────────────────────────────────────────────
 # Build output and dependencies. Unanchored, so they match at any depth and keep
-# working if the app moves again.
-node_modules/
+# working if the app moves again. No trailing slash on node_modules: the admin
+# lint's prepare step links dev/ui/node_modules to ux's, and a link is a file.
+node_modules
 .next/
 out/
 
@@ -24,3 +38,5 @@ out/
 
 # Vercel CLI state: which project this clone is linked to. Local, not shared.
 .vercel
+# The save hook's failure flag: on this machine only, never committed (DEP-006).
+/data/*/state/PUSH_FAILED.md

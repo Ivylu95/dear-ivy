@@ -14,5 +14,5 @@ if (!inSandbox(sessionId(input))) pass();
 
 context(
   'UserPromptSubmit',
-  'SANDBOX: this chat uses data-sandbox/. Read every `data/` in CLAUDE.md, the skills and the specs as `data-sandbox/`; never read or write data/. Crisis handling is never sandboxed. `/sandbox off` returns this chat to data/.',
+  'SANDBOX: this chat uses data-sandbox/. Read every `data/` in CLAUDE.md, the skills and the specs as `data-sandbox/`; never read or write data/. Crisis handling is never sandboxed. `/dev-mode sandbox off` returns this chat to data/ and development mode.',
 );

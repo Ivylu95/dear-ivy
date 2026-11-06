@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import { Enter, PageHead, Prose, SectionHead, Source, dateLabel } from '@/components/ui';
+import { Card, Enter, Note, PageHead, Prose, SectionHead, Source, dateLabel } from '@/components/ui';
+import { ADMIN_BASE, ADMIN_PRESENT } from '@/config/admin.mjs';
 import { getIndex, getLastSession } from '@/lib/content';
 
 export const dynamic = 'force-dynamic';
 
 // What this is, where it keeps things, and what it will not do.
 //
-// The three promises below are restated here rather than only living in
+// ABT-001: the three promises below are restated here rather than only living in
 // CLAUDE.md, because a promise a person cannot read is not one they have been
 // made. They are the same three the record is built on: she never files, nothing
 // is ever deleted, and this is not a clinician.
@@ -22,15 +22,24 @@ export default async function About() {
         sub="A private space to think, and to remember."
       />
 
-      <div className="card">
-        <div className="prose">
+      <Card>
+        <Prose>
           <p>
             This page and everything behind it is a window onto a folder of plain
             text files. It reads them; it never writes to them. The record has one
-            author — the conversation — and this is just a way to look at it.{' '}
-            <Link href="/workflow">Workflow</Link> is how that happens, step by
-            step.
+            author — the conversation — and this is just a way to look at it. The
+            one thing you can change from here is your own picture.
           </p>
+          {/* ABT-003: the claim never stands without a route to the mechanism.
+              The workflow view is the developer's app, so the link is made only
+              where that app is present (ARC-007); a copy without it has no such
+              page to point at. */}
+          {ADMIN_PRESENT && (
+            <p>
+              How the conversation writes the record is drawn in{' '}
+              <a href={`${ADMIN_BASE}/workflow`}>the workflow view</a>.
+            </p>
+          )}
           <h2 id="three-things-it-promises">Three things it promises</h2>
           <p>
             <strong>You never file anything.</strong> There is nothing to tick,
@@ -55,20 +64,20 @@ export default async function About() {
             is working is your life outside it, which nothing on this screen can
             see — so nothing on this screen tries to grade it.
           </p>
-        </div>
-      </div>
+        </Prose>
+      </Card>
 
       {lastSession && (
-        <p className="note">Last conversation on file: {dateLabel(lastSession)}.</p>
+        <Note>Last conversation on file: {dateLabel(lastSession)}.</Note>
       )}
 
       {index && (
         <>
           <SectionHead title="Where things are kept" />
-          <div className="card">
+          <Card>
             <Prose html={index.html} />
-          </div>
-          <Source path="data/INDEX.md" />
+          </Card>
+          <Source path="data/README.md" />
         </>
       )}
     </Enter>

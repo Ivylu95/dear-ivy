@@ -1,4 +1,4 @@
-// The schema for `data/profile.yaml`: its parser, its rules, its canonical text,
+// The schema for `data/PROFILE.yaml`: its parser, its rules, its canonical text,
 // and the one place any of them is enforced.
 //
 // It lives in .claude/hooks/ because keeping the profile valid is enforcement,
@@ -45,6 +45,8 @@
 //   status_reason  free text: why it is in this status; may be empty
 //   revisit_when   declined only, and required then: what would make it worth
 //                  asking again
+//   ask_after      asked only, never required: a date (2026-10-11) before which it is
+//                  not raised again, for a "not now" (MEM-014)
 //   last_updated   date and time with an offset (2026-09-25T21:14:00+08:00);
 //                  required unless not_asked
 //
@@ -61,14 +63,14 @@ export const STATUSES = ['not_asked', 'asked', 'answered', 'declined', 'removed'
 
 const STATUS_MEANING = {
   not_asked: 'never raised',
-  asked: 'raised, no answer yet',
+  asked: 'raised, no answer yet; ask_after, if set, is when to raise it again',
   answered: 'value holds her answer',
   declined: 'she said no; revisit_when says when to ask again',
   removed: 'answered, then taken out; the old answer is in archive/',
 };
 
 // Every key a question may carry, in the order it is written.
-const KEYS = ['value', 'status', 'status_reason', 'revisit_when', 'last_updated'];
+const KEYS = ['value', 'status', 'status_reason', 'revisit_when', 'ask_after', 'last_updated'];
 const REQUIRED_KEYS = ['value', 'status', 'status_reason', 'last_updated'];
 
 // In asking order within each section. `comment` is written above the question
@@ -102,10 +104,13 @@ export const QUESTIONS = {
     clean: (value) => value.toLowerCase().split(/[\s/]+/)[0],
   },
 
+  // Never asked: the default holds until she says she is somewhere else, and
+  // the answer is written then (MEM-014). A default is known, so it is not owed.
   timezone: {
     section: 'mandatory',
-    comment: 'An IANA zone, so "today" means hers.',
-    describe: 'Where the person is, as an IANA zone, so "today" means their today.',
+    comment: 'An IANA zone, so "today" means hers. Asia/Singapore unless she says otherwise.',
+    describe: 'Where the person is, as an IANA zone, so "today" means their today. Defaults to Asia/Singapore; corrected when she mentions being elsewhere, never asked.',
+    default: 'Asia/Singapore',
     inline: true,
     check(value) {
       // The only reliable validator is the one the platform will use.
@@ -326,10 +331,10 @@ export function validateProfile(data, { now } = {}) {
   for (const [q, spec] of Object.entries(QUESTIONS)) {
     const where = `${spec.section}.${q}`;
     const entry = parsed[spec.section]?.[q];
-    value[q] = null;
+    value[q] = spec.default ?? null;
     if (!entry || typeof entry !== 'object') {
       errors.push(`"${where}" is missing`);
-      questions[q] = { section: spec.section, status: 'not_asked', value: '', status_reason: '', revisit_when: '', last_updated: '' };
+      questions[q] = { section: spec.section, status: 'not_asked', value: '', status_reason: '', revisit_when: '', ask_after: '', last_updated: '' };
       continue;
     }
     for (const k of Object.keys(entry)) {
@@ -346,8 +351,9 @@ export function validateProfile(data, { now } = {}) {
     const answer = text('value');
     const reason = text('status_reason');
     const revisit = text('revisit_when');
+    const askAfter = text('ask_after');
     const updated = text('last_updated');
-    questions[q] = { section: spec.section, status, value: answer, status_reason: reason, revisit_when: revisit, last_updated: updated };
+    questions[q] = { section: spec.section, status, value: answer, status_reason: reason, revisit_when: revisit, ask_after: askAfter, last_updated: updated };
 
     if (!STATUSES.includes(status)) {
       errors.push(`"${where}.status" is ${status ? `"${status}"` : 'empty'}; it must be one of: ${STATUSES.join(', ')}`);
@@ -369,6 +375,8 @@ export function validateProfile(data, { now } = {}) {
 
     if (status === 'declined' && !revisit) errors.push(`"${where}" is declined but has no revisit_when; say what would make it worth asking again`);
     if (status !== 'declined' && revisit) errors.push(`"${where}" has a revisit_when but is ${status}; only declined carries one`);
+    if (askAfter && status !== 'asked') errors.push(`"${where}" has an ask_after but is ${status}; only asked carries one`);
+    else if (askAfter && (!/^\d{4}-\d{2}-\d{2}$/.test(askAfter) || Number.isNaN(Date.parse(`${askAfter}T00:00:00Z`)))) errors.push(`"${where}.ask_after" must be a date like 2026-10-11`);
 
     if (status === 'not_asked') {
       if (updated) {
@@ -386,11 +394,28 @@ export function validateProfile(data, { now } = {}) {
   return { value, questions, errors };
 }
 
-// Parse and validate in one call: what every reader of the file wants.
+// Parse and validate in one call: what every reader of the file wants. The
+// header must be exactly what this module writes (DAT-004), so the rules the
+// file states and the rules checked here cannot drift apart.
 export function readProfile(text, options) {
   const parsed = parseProfile(text);
   const checked = validateProfile(parsed.data, options);
-  return { ...checked, data: parsed.data, errors: [...parsed.errors, ...checked.errors] };
+  const header = headerMatches(text)
+    ? []
+    : ['the header comment is not the one the schema writes, so it may state rules that no longer hold; restore it: node .claude/hooks/record/check-profile.mjs --fix-header <file>'];
+  return { ...checked, data: parsed.data, errors: [...parsed.errors, ...header, ...checked.errors] };
+}
+
+export function headerMatches(text) {
+  return String(text ?? '').replace(/\r\n/g, '\n').startsWith(`${HEADER}\n`);
+}
+
+// The same file with its header replaced by the current one; everything from the
+// first section down is kept exactly.
+export function withCurrentHeader(text) {
+  const t = String(text ?? '').replace(/\r\n/g, '\n');
+  const at = t.search(/^[A-Za-z_]+:/m);
+  return `${HEADER}\n${at === -1 ? '' : t.slice(at)}`;
 }
 
 // The old name, for the dashboard's callers: takes parsed data, returns { value, errors }.
@@ -402,11 +427,15 @@ export function validateRecordConfig(data) {
 // ── What a session owes ────────────────────────────────────────────────────
 
 // Questions still to ask up front, in asking order: mandatory then recommended,
-// each not_asked, asked or removed. Optional and declined ones are never owed.
-export function owedQuestions(questions) {
+// each not_asked, asked or removed. Optional and declined ones are never owed,
+// nor an asked one whose ask_after is still ahead of today (YYYY-MM-DD), nor one
+// never asked that has a default, which is known until she corrects it.
+export function owedQuestions(questions, today = new Date().toISOString().slice(0, 10)) {
   return Object.keys(QUESTIONS)
     .filter((q) => QUESTIONS[q].section !== 'optional')
     .filter((q) => ['not_asked', 'asked', 'removed'].includes(questions[q]?.status))
+    .filter((q) => !(questions[q].status === 'asked' && questions[q].ask_after && questions[q].ask_after > today))
+    .filter((q) => !(questions[q].status === 'not_asked' && QUESTIONS[q].default))
     .map((q) => ({ key: q, ...questions[q] }));
 }
 
@@ -439,6 +468,8 @@ ${STATUSES.map((s) => `#                    ${s.padEnd(10)} ${STATUS_MEANING[s]}
 #   status_reason  Free text: why it is in this status. May be empty.
 #   revisit_when   Only when declined, and required then: what would make it
 #                  worth asking again.
+#   ask_after      Only when asked, and never required. For a "not now", the date
+#                  (2026-10-11) before which it is not raised again.
 #   last_updated   Required unless not_asked. Date and time with an offset:
 #                  2026-09-25T21:14:00+08:00
 #
@@ -457,12 +488,13 @@ export function renderProfile(questions = {}) {
     out.push(`${s}:`);
     for (const [q, spec] of Object.entries(QUESTIONS)) {
       if (spec.section !== s) continue;
-      const e = { status: 'not_asked', value: '', status_reason: '', revisit_when: '', last_updated: '', ...questions[q] };
+      const e = { status: 'not_asked', value: '', status_reason: '', revisit_when: '', ask_after: '', last_updated: '', ...questions[q] };
       out.push('', `  # ${spec.comment}`, `  ${q}:`);
       out.push(spec.inline ? `    value: ${inline(e.value)}`.trimEnd() : block('value', e.value));
       out.push(`    status: ${e.status}`);
       out.push(`    status_reason: ${inline(e.status_reason)}`.trimEnd());
       if (e.status === 'declined' || e.revisit_when) out.push(`    revisit_when: ${inline(e.revisit_when)}`.trimEnd());
+      if (e.ask_after) out.push(`    ask_after: ${e.ask_after}`);
       out.push(`    last_updated: ${e.last_updated ?? ''}`.trimEnd());
     }
     out.push('');
@@ -569,4 +601,13 @@ export function zonedDateTime(date = new Date(), timeZone = 'UTC') {
   );
   const offset = parts.timeZoneName === 'GMT' ? '+00:00' : parts.timeZoneName.replace('GMT', '');
   return `${parts.year}-${parts.month}-${parts.day}T${parts.hour}:${parts.minute}:${parts.second}${offset}`;
+}
+
+// The name on file, from either shape, even from a profile that fails its other
+// rules: a broken file is no reason to stop looking for a leak of it. Lowercased
+// empty string when there is none. Read by the privacy checks, which must hold
+// her own name to the same standard as everyone else's.
+export function profileName(text) {
+  const value = isLegacyProfile(text) ? parseLegacy(text).name : parseProfile(text).data?.mandatory?.name?.value;
+  return typeof value === 'string' ? value.trim() : '';
 }
