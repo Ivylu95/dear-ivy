@@ -97,3 +97,10 @@ The full version, for the developer:
    - ship none of the developer jobs.
 9. **Scheduled tasks follow the record when it moves** (curated by the feedback chat). Her evening check-in, a separate scheduled task, still names the record's old paths after the 1.0.2 move. Re-point every scheduled task whenever a migration moves files.
 10. **Recommendations as a small table** (from her). Recommendations always come as a table that reads well on a phone: two or three short columns, short cells, never a list. This is the one exception to the narrow-by-default rule in item 1. Her short version: 📊 Recommendations in a small table that fits my phone.
+11. **The recommendation table's shape** (from her). The structure she liked, for reminder ideas and drafts: three short columns, emoji first in the first cell, cells of a few words.
+
+    | Reminder | When | Says something like |
+    |---|---|---|
+    | 💆 Facial | Fri 13 Nov, 5 pm | Facial at 6. Ask for the free eye treatment |
+
+    Use this shape (thing · when · a few words) for any recommendation, and for showing her reminders, in every chat. Her short version: 📊 Keep that 3-column table for ideas and reminders.
