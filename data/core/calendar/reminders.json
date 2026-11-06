@@ -56,45 +56,45 @@
       "set": "2026-11-06 22:25"
     },
     {
-      "id": "evening-antidepressant-1030",
+      "id": "evening-antidepressant-2153",
       "emoji": "💊",
       "text": "Take your antidepressant before bed",
-      "cron": "30 22 * * *",
-      "set": "2026-11-07 07:08"
+      "cron": "53 21 * * *",
+      "set": "2026-11-07 07:30"
     },
     {
-      "id": "workout-ask",
+      "id": "workout-ask-2053",
       "emoji": "🏋️",
       "text": "Ask what workout or exercises she did today (sets and reps if she has them; a walk or the ankle routine counts)",
-      "cron": "30 21 * * *",
       "reads": [
         "data/fitness/training.md",
         "data/fitness/daily_log.md"
       ],
-      "set": "2026-11-07 07:08"
+      "cron": "53 20 * * *",
+      "set": "2026-11-07 07:30"
     },
     {
-      "id": "workout-catchup",
+      "id": "workout-catchup-0853",
       "emoji": "⏰",
       "text": "Only if yesterday's workout is not in her record: ask what workout she did yesterday. If it is logged, send nothing",
-      "cron": "0 9 * * *",
-      "start": "2026-11-08 09:00",
       "reads": [
         "data/fitness/training.md",
         "data/fitness/daily_log.md"
       ],
-      "set": "2026-11-07 07:08"
+      "cron": "53 8 * * *",
+      "start": "2026-11-08 08:53",
+      "set": "2026-11-07 07:30"
     },
     {
-      "id": "workout-week",
+      "id": "workout-week-2153",
       "emoji": "📊",
       "text": "Her week of workouts as a phone-friendly list, Mon to Sun: each day and what she did, as logged",
-      "cron": "0 22 * * sun",
       "reads": [
         "data/fitness/training.md",
         "data/fitness/daily_log.md"
       ],
-      "set": "2026-11-07 07:08"
+      "cron": "53 21 * * sun",
+      "set": "2026-11-07 07:30"
     }
   ]
 }
