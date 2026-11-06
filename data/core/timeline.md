@@ -1,6 +1,6 @@
 # Timeline
 
-**Episodic memory. Read this after `state/now.md`, before anything else.**
+**Episodic memory. Read this after `data/core/state/now.md`, before anything else.**
 
 Read **Eras** first to orient. Then drop into **Entries** only for the range you
 need. Then open the two or three files those lines point at. Never sweep the
@@ -10,14 +10,14 @@ Sorted by **when it happened**, not when she said it. `(told YYYY-MM-DD)` marks 
 gap between the two.
 
 **Nothing here is ever overwritten.** A correction is a new dated line naming what
-changed; the superseded version moves to `archive/`.
+changed; the superseded version moves to `data/archive/`.
 
 ## Tags in use
 
 _Controlled list. Reuse what's here. Add a new tag only when nothing fits, and add
 it to this list — two tags meaning the same thing makes the timeline useless._
 
-`work` · `sleep` · `family` · `health` · `money` · `loneliness` · `hope` · `therapy` · `dating` · `adhd` · `weight`
+`work` · `sleep` · `family` · `data/fitness/` · `money` · `loneliness` · `hope` · `therapy` · `dating` · `adhd` · `weight`
 
 ---
 
@@ -43,7 +43,7 @@ _Anything marked `[inferred]` is my reading, not her words._
 | 2026-10-04 | question | `adhd` | Asked whether she has ADHD; what prompted it not yet known | → data/journal/2026-10-04.md |
 | 2026-10-05 | feeling | `dating` | Unsure about the guy she's dating: kind, but they talk on different levels; wondering whether to continue | → data/journal/2026-10-05.md |
 | 2026-10-07 | health | `sleep` | Said she doesn't sleep through the night | → data/journal/2026-10-07.md |
-| 2026-10-09 (told 2026-10-10) | health | `health` | Rolled her left ankle again; it has been sprained a few times and rolls easily | → data/journal/2026-10-10.md |
+| 2026-10-09 (told 2026-10-10) | health | `data/fitness/` | Rolled her left ankle again; it has been sprained a few times and rolls easily | → data/journal/2026-10-10.md |
 | 2026-10-09 (told 2026-10-10) | event | `dating` | HHN with Eugene: he wanted to leave early, complained, backed out of cabbing her home; she felt he won't spend on her and that she's "settling for less" | → data/journal/2026-10-10.md |
 | 2026-10-10 | feeling | `weight` | Said again she wants to be 42 kg | → data/journal/2026-10-10.md |
 | 2026-10-10 | update | `dating` | Still thinking about Eugene; said she is also seeing a few other people and will update as she goes | → data/people/eugene.md |
