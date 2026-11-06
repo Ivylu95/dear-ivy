@@ -73,3 +73,26 @@ The full version, for the developer:
 2. **No development mode in her copy** (no `dev/` folder). It never switches on: remove `dev-mode.mjs` and the dev-mode-reset, dev-reply-shape, dev-reply-check and dev-done-notify hooks, and the everyday-voice hook's line that switches development mode on for a plain development request. A development request gets one plain line: this copy can't change how it works, and changes come in an update. Ship none of the development reply shapes, the developer routes in skills (e.g. see-it's `developer.md`), or the development-mode rules in `CLAUDE.md` and the session hooks.
 3. **Nothing written outside her record.** In her copy, a guard refuses every write outside `data/`, `temp/` included. Developer feedback lives in `data/FEEDBACK.md` (moved here from the root on 2026-11-06); point CON-017, the privacy check's FEEDBACK rules and every 🔧 instruction at it. Git work (merging, pushing her saves) touches only `data/`.
 4. **One place for feedback.** Any request to change how the system works, in any chat, goes to the 💬 Any Feedback chat by default, and a chat that notices an improvement suggests sending it there. Build it in: a router row in `CLAUDE.md`, a step in the chats skill, `send_message` where the chat has it, and the chat marked as the feedback chat in `data/core/state/chats.json`. The feedback chat records each item here and curates it twice: a short version for her, a full one for the developer.
+
+## From her, 2026-11-06, later
+
+Her short version:
+
+- ⏰ Messages come at the time I set, not up to an hour late.
+- 📨 "Send it now" means now.
+- 💾 Saving works on the first try.
+- 🌙 Only my own things run in the background in my copy.
+
+The full version, for the developer:
+
+5. **On-time messages.** Reminders and check-ins go out with the hourly sweep, so an 8am message can land near 9am, and a 12:30 reminder as late as 1:30. She wants each at the time she set. Options: a one-off scheduled task at each due time, or a sweep that runs just after each due time.
+6. **"Send it now" sends now.** Asked for a message right away, the reminders skill queued it for the next sweep. `send-one` already exists and worked; route "send it now" and "just send" straight to it, and say so in `setting.md`.
+7. **Saves land on the first try.** Saving her record took several tries tonight:
+   - the shell guard read `<` and a run of `>` inside a script, and a commit-message trailer, as file writes;
+   - the pre-push gate refused a merge where one side already contained the other, until an empty "Kept one side" commit was added;
+   - pushes raced her other chats.
+8. **Only her jobs run in her copy** (curated by the feedback chat, not raised by her). The one hourly heartbeat runs every due job, the developer's included. Code maintenance, the heartbeat doctor, the safeguard check and the privacy check all change files outside `data/`, which breaks item 3. Only the dialogue loop stands down when there is no `dev/` folder. In a copy without `dev/`:
+   - run only reminders and check-ins;
+   - turn the safeguard, privacy and restore checks into report-only checks;
+   - ship none of the developer jobs.
+9. **Scheduled tasks follow the record when it moves** (curated by the feedback chat). Her evening check-in, a separate scheduled task, still names the record's old paths after the 1.0.2 move. Re-point every scheduled task whenever a migration moves files.
