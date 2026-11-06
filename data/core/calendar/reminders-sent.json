@@ -1,4 +1,13 @@
 {
-  "_what": "The last messages the sweep wrote for each reminder, so the next differs (HBT-010).",
-  "sent": []
+  "_what": "The last messages the sweep wrote for each reminder, so the next differs, how many Telegram accepted, and any held (HBT-010, HBT-014).",
+  "counts": {},
+  "sent": [
+    {
+      "id": "telegram-test",
+      "at": "2026-11-06 21:03",
+      "utc": "2026-11-06T13:03:14.358Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-06 21:00"
+    }
+  ]
 }
