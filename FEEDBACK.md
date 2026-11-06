@@ -12,3 +12,5 @@ Lessons about how the system works, not about the person it serves (CON-017).
   Why: two scheduled check-ins made before the core layout still name the old folders, and nothing caught it.
 - Rule: allow the messaging service's docs host in the cloud network, or ground its click paths another way.
   Why: its docs page would not resolve from the cloud session, so the bot steps could not be checked against the service's own page before handing them over.
+- Rule: show the chat ID address in the bot step with a made-up token already filled in, saying the angle brackets go and nothing else changes.
+  Why: the placeholder form left the person asking how to put the token in and which site gives the chat ID.
