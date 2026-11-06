@@ -44,6 +44,16 @@
       "text": "Therapy at 10 pm tonight; jot down anything she wants to bring up",
       "at": "2026-11-15 16:00",
       "set": "2026-11-06 21:44"
+    },
+    {
+      "id": "feedback-sunday",
+      "emoji": "📤",
+      "text": "Time to send Joel the feedback: include her feedback list, newest first, in her short versions where there are any, ready for her to forward",
+      "cron": "0 17 * * sun",
+      "reads": [
+        "data/FEEDBACK.md"
+      ],
+      "set": "2026-11-06 21:50"
     }
   ]
 }
