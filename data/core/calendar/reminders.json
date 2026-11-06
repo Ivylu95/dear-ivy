@@ -1,4 +1,5 @@
 {
-  "timezone": "UTC",
+  "timezone": "Asia/Singapore",
+  "send": "routine",
   "reminders": []
 }
