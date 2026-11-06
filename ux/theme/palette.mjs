@@ -302,11 +302,6 @@ export const tokens = {
   // inherited rather than failing where it can be seen.
   'f-serif': 'var(--f-serif-var), ui-serif, Georgia, "Times New Roman", serif',
 
-  // Code BLOCKS only (DES-005, owner's choice 2026-09-27): a listing whose
-  // columns must align. The device's own monospace, nothing downloaded, so the
-  // app still ships one face; a code span inside a sentence stays in the serif.
-  'f-code': 'ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace',
-
   // ── Weight ────────────────────────────────────────────────────────────────
   //
   // Shared rather than per character, for the same reason the family is: a
@@ -344,13 +339,6 @@ export const tokens = {
   'w-semi': '550',
   'w-strong': '600',
 
-  // The tracking of a small-caps label: the rail's headings, the nav's groups,
-  // the settings panel's, the harness tree's (DES-001 design 3). Five labels of
-  // one kind were tracked five ways, 0.07em to 0.16em; 0.12em is the middle of
-  // that run and the value the tree's toggle already held. Shared, because a
-  // label's spacing is the label's, not the reading style's.
-  'track-label': '0.12em',
-
   'dur-fast': '120ms',
   dur: '220ms',
   'dur-slow': '380ms',
@@ -370,17 +358,17 @@ export const tokens = {
   // It was tried at 800ms and the second press of a light/dark comparison was
   // visibly lost.
   //
-  // 300, inside that band and at Material's figure for a large element. It
-  // was 650, past the band on an earlier instruction so the reveal could be
-  // watched; a motion audit (2026-10-11) found 650ms of unpressable page, a
-  // full-viewport clip-path animated the whole time, and the developer asked
-  // for every movement crisp and nothing blocking ("yes fix ALL"). The wait
-  // anyone notices (DES-008) is the cost written above, so it is held short.
+  // 650 is PAST that band, deliberately and on instruction. The guidance tops
+  // out at 500 for the largest movement on the largest screen; this is a third
+  // longer, because the reveal is the one animation here anybody watches on
+  // purpose and at 500 it was still reading as feedback rather than as
+  // something to look at.
   //
-  // What it costs is still the reason the number is worth arguing about at
-  // all: every millisecond here is also unpressable page. 800 visibly lost the
-  // second press of a light/dark comparison; 650 was the old ceiling.
-  'dur-swap': '300ms',
+  // What it costs is written above and is the reason the number is worth
+  // arguing about at all: 650 is also 650ms of unpressable page. It is under the
+  // 800 where the second press of a light/dark comparison was visibly lost, and
+  // it is the ceiling — the next value up is the one that failed.
+  'dur-swap': '650ms',
 
   // And its own curve, which for a CIRCLE is not a matter of taste.
   //
@@ -413,39 +401,6 @@ export const tokens = {
   'ease-swap': 'cubic-bezier(0.45, 0, 0.55, 1)',
 
   ease: 'cubic-bezier(0.32, 0.72, 0, 1)',
-
-  // The switches' slide (components/ui/Segmented.jsx, Toggle.jsx): a pill or a
-  // knob that runs just past its mark and settles back, the one spring in the
-  // chrome, borrowed from an earlier admin app's switches at the developer's ask.
-  'ease-spring': 'cubic-bezier(0.34, 1.2, 0.64, 1)',
-
-  // ── The colour picker's own range ─────────────────────────────────────────
-  //
-  // The lightness and chroma every swatch and the slider's track are drawn at:
-  // the accent's own step on the colour scale, so a recommended colour cannot
-  // be a nicer colour than the accent can be. Two numbers in one token, for
-  // `oklch(var(--swatch-lc) <hue>)`; the picker supplies the hue, which is the
-  // one part it exists to vary (DES-004).
-  'swatch-lc': colourScale[500].join(' '),
-
-  // ── Fixed sizes in the chrome ─────────────────────────────────────────────
-  //
-  // Type that does NOT follow the character: the wordmark and its tagline, the
-  // sign-in lockup, the small counts and pills, the phone header and the
-  // rotate notice. Each was a pixel literal in globals.css; they are named here
-  // so the theme holds every size (DES-004), at exactly the values they had.
-  // Moving one onto the character's scale is a design change, not this.
-  'size-wordmark': '23px',
-  'size-wordmark-tag': '12px',
-  'size-login-title': '25px',
-  'size-login-tag': '12.5px',
-  'size-identity': '22px',
-  'size-pill': '11px',
-  'size-control': '11.5px',
-  'size-mobile-head': '18px',
-  'size-mobile-title': '30px',
-  'size-notice-title': '20px',
-  'size-notice-sub': '14px',
 };
 
 // ── Emitting colour ─────────────────────────────────────────────────────────
@@ -683,45 +638,6 @@ export function syntaxFor(mode) {
       oklch(colourScale[mode === 'light' ? 600 : 200], hue),
     ]),
   );
-}
-
-// Chart marks: a filled bar, not text, so they need what the role faces do
-// not give them. The faces share one step, which is right for text and wrong
-// for a stacked bar — at one lightness, ok and warn sat 13.6 ΔE apart, under
-// the 15 a reader with full colour vision needs to tell two fills apart.
-//
-// Same scale, same hues, so no louder paint enters the palette; only the step
-// is chosen for marks. These steps passed the dataviz palette validator against
-// the panel in each mode (lightness band, colour-blind and normal-vision
-// separation) at the default hue. The accent rotates with her choice, so a hue
-// picked near ok or warn narrows its separation, the cosmetic collision rule 2
-// already accepts for the role faces.
-const MARK_STEPS = {
-  light: { ok: 500, accent: 500, warn: 500 },
-  dark: { ok: 500, accent: 400, warn: 500 },
-};
-
-// Two neutral marks for the kinds that carry no meaning of their own (a
-// branch that is neither main nor rescued). Off the neutral scale, stepped away
-// from the line-soft track in each mode so both read against it; the text greys
-// stood in before, and they are a face for words, not a fill.
-const NEUTRAL_MARK_STEPS = {
-  light: { quiet: 500, faint: 300 },
-  dark: { quiet: 400, faint: 600 },
-};
-
-export function marksFor(mode) {
-  const hues = { ok: semanticHues.ok, accent: HUE, warn: semanticHues.warn };
-  return Object.fromEntries([
-    ...Object.entries(MARK_STEPS[mode]).map(([name, step]) => [
-      `mark-${name}`,
-      oklch(colourScale[step], hues[name]),
-    ]),
-    ...Object.entries(NEUTRAL_MARK_STEPS[mode]).map(([name, step]) => [
-      `mark-${name}`,
-      oklch(neutralScale[step], HUE),
-    ]),
-  ]);
 }
 
 export function rolesFor(mode) {

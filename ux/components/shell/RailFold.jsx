@@ -1,7 +1,7 @@
 'use client';
 
 import { useSyncExternalStore } from 'react';
-import { Chevron } from '@/components/ui';
+import { Icon } from '@/components/ui/icons';
 import { getFolded, serverFolded, setFolded, subscribeFolded } from '@/lib/rail-fold';
 
 // The head row of a rail block, with the fold on its heading.
@@ -25,7 +25,7 @@ import { getFolded, serverFolded, setFolded, subscribeFolded } from '@/lib/rail-
 // folded and downward when it is open. Same glyph and same turn as the harness
 // tree's fold, so the gesture is learned once for the app rather than per
 // column.
-function RailHead({ name, title, bodyId, children }) {
+export function RailHead({ name, title, bodyId, children }) {
   const folded = useRailFold(name);
 
   return (
@@ -42,7 +42,7 @@ function RailHead({ name, title, bodyId, children }) {
             {/* Decorative: aria-expanded already says which way this points, and
                 a screen reader naming a chevron after announcing "expanded" is
                 saying the same thing twice. */}
-            <Chevron small open={!folded} />
+            <Icon name="chevron" size={10} className="rail-fold-mark" aria-hidden="true" />
             {title}
           </button>
         </h2>
@@ -55,27 +55,9 @@ function RailHead({ name, title, bodyId, children }) {
   );
 }
 
-// One block of the right rail, drawn once (DES-001 design 3): the box, the
-// head with its fold, and the body, left out while folded. RailNav, RailFacts
-// and the timeline's tags each wrote the .rail-card box and its head by hand.
-// `name` is the fold's key; `bodyId` the id the caller puts on its body, which
-// the fold's aria-controls names; `head` is anything else on the head's row
-// (RailNav's "Top").
-export function RailCard({ name, title, bodyId, head, children }) {
-  const folded = useRailFold(name);
-  return (
-    <section className="rail-card">
-      <RailHead name={name} title={title} bodyId={bodyId}>
-        {head}
-      </RailHead>
-      {!folded && children}
-    </section>
-  );
-}
-
 // The same state, for the block itself. The body is not rendered while folded
 // rather than hidden with CSS: RailNav's list is driven by a scroll spy, and
 // there is no sense measuring a document for a list nobody can see.
-function useRailFold(name) {
+export function useRailFold(name) {
   return useSyncExternalStore(subscribeFolded, () => getFolded(name), () => serverFolded(name));
 }

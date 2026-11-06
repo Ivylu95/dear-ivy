@@ -1,4 +1,4 @@
-import { Card, Empty, Enter, Note, PageHead, Prose, SectionHead, Source } from '@/components/ui';
+import { Empty, Enter, PageHead, Prose, SectionHead, Source } from '@/components/ui';
 import { getOpenLoops } from '@/lib/content';
 
 export const dynamic = 'force-dynamic';
@@ -19,8 +19,8 @@ export const dynamic = 'force-dynamic';
 // dropping it from the view would be a small deletion of exactly the kind this
 // record does not do.
 export default async function Loops() {
-  const { groups, open, shown } = await getOpenLoops();
-  const anything = shown;
+  const { groups, open } = await getOpenLoops();
+  const anything = groups.some((g) => g.items.length > 0);
 
   return (
     <Enter>
@@ -51,7 +51,7 @@ export default async function Loops() {
               {group.items.length === 0 ? (
                 <Prose html={group.html} />
               ) : (
-                <Card>
+                <div className="card">
                   <ul className="loop-list">
                     {[...outstanding, ...done].map((item) => (
                       <li key={item.text} data-done={item.done ? 'true' : undefined}>
@@ -62,7 +62,7 @@ export default async function Loops() {
                       </li>
                     ))}
                   </ul>
-                </Card>
+                </div>
               )}
             </section>
           );
@@ -70,11 +70,11 @@ export default async function Loops() {
       )}
 
       {open > 0 && (
-        <Note>
+        <p className="note">
           These get picked up in conversation. There is nothing to tick here.
-        </Note>
+        </p>
       )}
-      <Source path="data/core/state/open_loops.md" />
+      <Source path="data/state/open_loops.md" />
     </Enter>
   );
 }

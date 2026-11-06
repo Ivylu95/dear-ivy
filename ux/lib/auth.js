@@ -12,16 +12,14 @@
 // editor's module resolution does not add `.mjs`, so it reported the config as a
 // missing module and every symbol from it as `any`. `app/layout.jsx` already
 // imports `@/theme/palette.mjs` the same way.
-import { accounts, sessionSecret, sessionDays } from '@/config/accounts.mjs';
+import { ACCOUNTS, SESSION_SECRET, SESSION_DAYS } from '@/config/accounts.mjs';
 
 // Renaming this once invalidated every cookie already issued, which is a
 // single re-login and the correct price: the old name carried hers.
 const COOKIE = 'dear_session';
 
 export const SESSION_COOKIE = COOKIE;
-// A lifetime, not a revocation: read once, at load. Revoking is the account list
-// and the secret, which are read on every request (PRV-005).
-export const SESSION_MAX_AGE = sessionDays() * 24 * 60 * 60;
+export const SESSION_MAX_AGE = SESSION_DAYS * 24 * 60 * 60;
 
 const encoder = new TextEncoder();
 
@@ -75,7 +73,7 @@ function normaliseUsername(value) {
 
 function isKnownAccount(username) {
   const name = normaliseUsername(username);
-  return accounts().some((a) => normaliseUsername(a.username) === name);
+  return ACCOUNTS.some((a) => normaliseUsername(a.username) === name);
 }
 
 // Returns the canonical username on success, null on failure.
@@ -86,7 +84,7 @@ function isKnownAccount(username) {
 // right.
 export async function authenticate(username, password) {
   let matched = null;
-  for (const account of accounts()) {
+  for (const account of ACCOUNTS) {
     const userOk = await secretsMatch(
       normaliseUsername(username),
       normaliseUsername(account.username),
@@ -99,13 +97,12 @@ export async function authenticate(username, password) {
 }
 
 // The username is signed into the session, so removing an account from the list,
-// or renaming one, invalidates every cookie already issued to it (PRV-005,
-// held by test/auth.test.mjs).
+// or renaming one, invalidates every cookie already issued to it.
 export async function createToken(username) {
   const payload = toBase64Url(
     encoder.encode(JSON.stringify({ sub: username, exp: Date.now() + SESSION_MAX_AGE * 1000 })),
   );
-  const signature = toBase64Url(await hmac(payload, sessionSecret()));
+  const signature = toBase64Url(await hmac(payload, SESSION_SECRET));
   return `${payload}.${signature}`;
 }
 
@@ -125,10 +122,9 @@ export async function sessionUser(token) {
   // returning, because Web Crypto refuses a zero-length HMAC key, and the proxy
   // awaits this with no try around it. Fail-closed either way, but a throw reads
   // as a broken app rather than as "DEAR_SESSION_SECRET never reached the build".
-  const secret = sessionSecret();
-  if (!secret) return null;
+  if (!SESSION_SECRET) return null;
 
-  const expected = toBase64Url(await hmac(payload, secret));
+  const expected = toBase64Url(await hmac(payload, SESSION_SECRET));
   if (!timingSafeEqual(signature, expected)) return null;
 
   try {
@@ -149,8 +145,8 @@ export async function verifyToken(token) {
 // authenticates nobody rather than letting in anyone who can reach the port.
 export function authConfigured() {
   return (
-    accounts().length > 0 &&
-    accounts().every((a) => a.username && a.password) &&
-    Boolean(sessionSecret())
+    ACCOUNTS.length > 0 &&
+    ACCOUNTS.every((a) => a.username && a.password) &&
+    Boolean(SESSION_SECRET)
   );
 }

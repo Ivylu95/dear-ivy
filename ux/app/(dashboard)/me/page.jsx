@@ -1,5 +1,5 @@
 import { AvatarEditor } from '@/components/me/AvatarEditor';
-import { Card, CardSection, Empty, Enter, Note, PageHead, Prose, SectionHead, Source } from '@/components/ui';
+import { Empty, Enter, PageHead, Prose, Source } from '@/components/ui';
 import { Icon } from '@/components/ui/icons';
 import { SESSION_COOKIE, sessionUser } from '@/lib/auth';
 import { avatarStamp } from '@/lib/avatar';
@@ -51,28 +51,35 @@ export default async function Me() {
           The path is shown for the same reason every other panel shows one: this
           is a record, and a record whose provenance you cannot see is just a
           screen telling you things. */}
-      <Card as="section" id="name" className="view-section" title="What I call you">
+      <section id="name" className="card view-section">
+        <h2 className="card-heading">What I call you</h2>
         <p className="identity-name">{identity.name ?? 'Not recorded yet'}</p>
-        <Note className="identity-note">
+        <p className="note" style={{ marginTop: 6 }}>
           {identity.name
             ? 'Say the word if you would rather be called something else, and it changes here and in the wordmark. Nothing on this page is edited by hand.'
             : 'Tell me your name in conversation and it gets written down here. Until then the wordmark reads "Dear you".'}
-        </Note>
+        </p>
         <Source path={`data/${identity.path}`} />
-      </Card>
+      </section>
 
       {files.map((file) => (
         <section key={file.slug} id={file.slug} className="view-section">
-          <SectionHead
-            title={file.label}
-            note={file.blurb}
-            id={file.slug}
-            anchorHere={false}
-            mark={file.caution && <Icon name="quill" size={16} className="heading-mark" />}
-          />
+          <div className="section-head">
+            <h2>
+              {file.caution && (
+                <Icon
+                  name="quill"
+                  size={16}
+                  className="heading-mark"
+                />
+              )}
+              {file.label}
+            </h2>
+            <span className="section-note">{file.blurb}</span>
+          </div>
 
           {file.filled ? (
-            <Card>
+            <div className="card">
               {/* Only the sections with something in them. An empty heading and
                   the file's own note about what belongs under it are scaffolding,
                   and showing her the scaffolding is showing her a record that
@@ -80,11 +87,12 @@ export default async function Me() {
               {file.sections
                 .filter((s) => s.filled)
                 .map((s) => (
-                  <CardSection key={s.heading} title={s.heading}>
+                  <section key={s.heading} className="card-section">
+                    <h3 className="card-heading">{s.heading}</h3>
                     <Prose html={s.html} />
-                  </CardSection>
+                  </section>
                 ))}
-            </Card>
+            </div>
           ) : (
             <Empty title="Nothing written here yet">
               {file.slug === 'patterns'

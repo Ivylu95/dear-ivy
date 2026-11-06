@@ -1,9 +1,6 @@
 import Link from 'next/link';
-import { Card, Empty, Enter, Note, PageHead, Prose, SectionHead, Source } from '@/components/ui';
-import { Arrow } from '@/components/ui/icons';
-import { MetaLine } from '@/components/ui/Row';
-import { TimelineEntry } from '@/components/ui/TimelineEntry';
-import { getMentions, getPerson, getPronouns } from '@/lib/content';
+import { Empty, Enter, PageHead, Prose, SectionHead, Source } from '@/components/ui';
+import { getMentions, getPerson } from '@/lib/content';
 
 export const dynamic = 'force-dynamic';
 
@@ -39,35 +36,30 @@ export default async function Person({ params }) {
           The file may have been renamed, or this link may be older than the
           record it points at.
         </Empty>
-        <Note>
-          <Link href="/people">
-            <Arrow back /> everyone on file
-          </Link>
-        </Note>
+        <p className="note">
+          <Link href="/people">← everyone on file</Link>
+        </p>
       </Enter>
     );
   }
 
   const mentions = await getMentions(person.name);
-  const p = await getPronouns();
 
   return (
     <Enter>
       <PageHead route="/people" title={person.name} sub={person.relation ?? undefined}>
-        <MetaLine as="p">
-          <Link href="/people">
-            <Arrow back /> everyone on file
-          </Link>
-        </MetaLine>
+        <p className="meta-line">
+          <Link href="/people">← everyone on file</Link>
+        </p>
       </PageHead>
 
       {/* Anchored, because the rail beside this page is a contents list and this
           is the first thing on it. */}
       <section id="their-file">
         {person.filled ? (
-          <Card>
+          <div className="card">
             <Prose html={person.html} />
-          </Card>
+          </div>
         ) : (
           <Empty title="This file has been started, but nothing is in it yet">
             It fills in as they come up in conversation.
@@ -83,7 +75,10 @@ export default async function Person({ params }) {
           <SectionHead title="On the timeline" note="Every dated line that mentions them." />
           <div className="tl">
             {mentions.map((entry) => (
-              <TimelineEntry key={`${entry.date}-${entry.what}`} entry={entry} p={p} />
+              <article key={`${entry.date}-${entry.what}`} className="tl-item">
+                <div className="tl-date">{entry.date}</div>
+                <p className="tl-what">{entry.what.replace(/\[inferred\]\s*/i, '')}</p>
+              </article>
             ))}
           </div>
         </>

@@ -7,10 +7,10 @@ import { cookies } from 'next/headers';
 //
 // There are two of them, and they are not the same kind of thing:
 //
-//   data/         hers. The real one. Written by the agent she talks to.
-//   data-sample/  invented. Nobody's. It exists so this app can be looked at with a
-//                 record in it — a timeline with years, people with files, a journal
-//                 that scrolls — without opening hers.
+//   data/     hers. The real one. Written by the agent she talks to.
+//   samples/  invented. Nobody's. It exists so this app can be looked at with a
+//             record in it — a timeline with years, people with files, a journal
+//             that scrolls — without opening hers.
 //
 // Both are read by the same resolver, the same parsers and the same views, with
 // no branch anywhere for "sample mode". A preview down its own code path would
@@ -45,19 +45,18 @@ import { cookies } from 'next/headers';
 // path still points at the most likely candidate: every read then returns null
 // and every view renders its empty state, which is wrong but safe — the
 // alternative, throwing at import time, takes the crisis numbers down with it.
-// The most likely candidate is `../`, read by index BEFORE the unset env is
-// filtered out: after it, [1] is `./`, a folder inside ux/.
 function resolve(candidates, marker) {
-  return candidates.filter(Boolean).find((path) => existsSync(join(path, marker))) ?? candidates[1];
+  const paths = candidates.filter(Boolean);
+  return paths.find((path) => existsSync(join(path, marker))) ?? paths[1];
 }
 
 const REAL = resolve(
   [process.env.DEAR_DATA, join(process.cwd(), '..', 'data'), join(process.cwd(), 'data')],
-  'PROFILE.yaml',
+  'timeline.md',
 );
 
 const SAMPLE = resolve(
-  [process.env.DEAR_SAMPLE, join(process.cwd(), '..', 'data-sample'), join(process.cwd(), 'data-sample')],
+  [process.env.DEAR_SAMPLE, join(process.cwd(), '..', 'samples'), join(process.cwd(), 'samples')],
   'IS_SAMPLE',
 );
 
@@ -66,7 +65,7 @@ export const RECORDS = {
   sample: { key: 'sample', dir: SAMPLE, isSample: true, label: 'Sample' },
 };
 
-// Whether there is a sample to switch TO. A clone without data-sample/ should not be
+// Whether there is a sample to switch TO. A clone without samples/ should not be
 // shown a control that does nothing.
 export const SAMPLE_EXISTS = existsSync(join(SAMPLE, 'IS_SAMPLE'));
 
@@ -96,9 +95,9 @@ export async function currentRecord() {
 
 // ── Carrying the answer down ────────────────────────────────────────────────
 //
-// The read layer (lib/read/, gathered by lib/content-read.js) is several hundred
-// lines of synchronous parsing that calls itself freely — getHome() calls
-// getNow(), getNavCounts() calls two others. Threading a directory argument through all of it, or making every one
+// The read layer in lib/content-read.js is ~700 lines of synchronous parsing
+// that calls itself freely — getHome() calls getNow(), getNavCounts() calls four
+// others. Threading a directory argument through all of it, or making every one
 // of them async, would put the plumbing in every function in the file and leave
 // one missed argument as the bug where a page reads the wrong record.
 //

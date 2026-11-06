@@ -1,14 +1,9 @@
-import { Empty, Enter, PageHead, SectionHead, Source, Tag, Tags, dateLabel, untilLabel } from '@/components/ui';
-import { Segmented } from '@/components/ui/Segmented';
-import { Row } from '@/components/ui/Row';
+import { Empty, Enter, PageHead, SectionHead, Source, Tag, dateLabel, untilLabel } from '@/components/ui';
 import { getCalendar, getToday } from '@/lib/content';
-import { DATE_VIEWS } from '@/lib/views';
 
 export const dynamic = 'force-dynamic';
 
-// What is coming, and the dates that land hard every year. The second view of
-// the Timeline tab: the rail opens on Timeline, so these dates show only once
-// she switches here (CAL-001).
+// What is coming, and the dates that land hard every year.
 //
 // ── Why the hard anniversaries are shown the way they are ───────────────────
 //
@@ -37,7 +32,7 @@ export default async function Calendar() {
         <Empty title="Nothing on the calendar yet">
           Appointments, deadlines, trips and birthdays land here as they come up.
         </Empty>
-        <Source path="data/core/calendar/calendar.md" />
+        <Source path="data/calendar/calendar.md" />
       </Enter>
     );
   }
@@ -48,21 +43,23 @@ export default async function Calendar() {
         route="/calendar"
         title="Calendar"
         sub="What's coming, and the dates that land hard."
-      >
-        <Segmented options={DATE_VIEWS} current="calendar" label="View dates as" />
-      </PageHead>
+      />
 
       <SectionHead title="Coming up" />
       {upcoming.length === 0 ? (
         <Empty title="Nothing coming up">Anything with a date lands here first.</Empty>
       ) : (
         upcoming.map((item) => (
-          <Row
-            key={`${item.date}-${item.what}`}
-            title={item.what}
-            meta={untilLabel(item.date, today)}
-            details={[dateLabel(item.date), item.notes]}
-          />
+          <div key={`${item.date}-${item.what}`} className="row">
+            <div className="row-head">
+              <span className="row-title">{item.what}</span>
+              <span className="row-meta">{untilLabel(item.date, today)}</span>
+            </div>
+            <div className="meta-line">
+              <span>{dateLabel(item.date)}</span>
+              {item.notes && <span>{item.notes}</span>}
+            </div>
+          </div>
         ))
       )}
 
@@ -74,46 +71,57 @@ export default async function Calendar() {
         <>
           <SectionHead title="Just gone" note="not yet moved to the timeline" />
           {passed.map((item) => (
-            <Row
-              key={`${item.date}-${item.what}`}
-              title={item.what}
-              meta={untilLabel(item.date, today)}
-              details={[dateLabel(item.date), item.notes]}
-              past
-            />
+            <div key={`${item.date}-${item.what}`} className="row is-past">
+              <div className="row-head">
+                <span className="row-title">{item.what}</span>
+                <span className="row-meta">{untilLabel(item.date, today)}</span>
+              </div>
+              <div className="meta-line">
+                <span>{dateLabel(item.date)}</span>
+                {item.notes && <span>{item.notes}</span>}
+              </div>
+            </div>
           ))}
         </>
       )}
 
       {hard.length > 0 && (
         <>
-          {/* The first recurring section carries the plain "every-year" anchor
-              the rail links to; slugged from its own title it would be
-              every-year-the-hard-ones, and the rail's row would go nowhere. */}
-          <SectionHead title="Every year — the hard ones" id="every-year" />
+          <SectionHead title="Every year — the hard ones" />
           {hard.map((item) => (
-            <Row key={`${item.when}-${item.what}`} title={item.what} meta={item.when} details={[item.handling]} />
+            <div key={`${item.when}-${item.what}`} className="row">
+              <div className="row-head">
+                <span className="row-title">{item.what}</span>
+                <span className="row-meta">{item.when}</span>
+              </div>
+              {item.handling && (
+                <div className="meta-line">
+                  <span>{item.handling}</span>
+                </div>
+              )}
+            </div>
           ))}
         </>
       )}
 
       {good.length > 0 && (
         <>
-          <SectionHead
-            title="Every year — the good ones"
-            id={hard.length ? undefined : 'every-year'}
-          />
+          <SectionHead title="Every year — the good ones" />
           {good.map((item) => (
-            <Row key={`${item.when}-${item.what}`} title={item.what} meta={item.when}>
-              <Tags>
+            <div key={`${item.when}-${item.what}`} className="row">
+              <div className="row-head">
+                <span className="row-title">{item.what}</span>
+                <span className="row-meta">{item.when}</span>
+              </div>
+              <div className="tags">
                 <Tag kind="ok">worth remembering warmly</Tag>
-              </Tags>
-            </Row>
+              </div>
+            </div>
           ))}
         </>
       )}
 
-      <Source path="data/core/calendar/calendar.md" />
+      <Source path="data/calendar/calendar.md" />
     </Enter>
   );
 }

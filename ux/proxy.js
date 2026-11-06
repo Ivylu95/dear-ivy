@@ -1,13 +1,11 @@
 import { NextResponse } from 'next/server';
 import { SESSION_COOKIE, verifyToken } from '@/lib/auth';
-import { ADMIN_BASE, ADMIN_ORIGIN, ADMIN_PRESENT } from '@/config/admin.mjs';
-import { adminAnswers } from '@/lib/admin';
 
 // The gate. Next 16 renamed the middleware convention to `proxy` and runs it on
 // Node rather than the Edge runtime. It runs before every matched request, and
 // it is the whole of the protection standing between her record and anything
 // else that can reach the port. The surface runs on her machine and nowhere else
-// — there is no hosted deployment (DPV-008).
+// — there is no hosted deployment (drafted as a DPV row, specs/REVIEW.md).
 //
 // Every route is gated. The default is deny and the allowlist is deliberately
 // tiny: the login page, the API it posts to, and logout. Nothing that reads
@@ -106,12 +104,7 @@ function policy(nonce) {
 // repetition is the point: metadata reaches a crawler that parsed the HTML, and
 // this reaches one that only read the headers — of a JSON route, say, which has
 // no <head> to put a meta tag in.
-function harden(headers, csp, tunnelled) {
-  // Through the tunnel (DPV-009, design 2), Cloudflare sits in the path of every
-  // page, so a response that came that way forbids it to store a copy (DPV-005).
-  // Only then: on the loopback the reasons below hold, and this would flatten
-  // the routes' own headers for nothing.
-  if (tunnelled) headers.set('Cache-Control', 'private, no-store');
+function harden(headers, csp) {
   headers.set('Content-Security-Policy', csp);
   headers.set('X-Content-Type-Options', 'nosniff');
   // Nothing about this origin travels in a Referer, to anywhere, ever. A path
@@ -129,7 +122,7 @@ function harden(headers, csp, tunnelled) {
     'camera=(), microphone=(), geolocation=(), payment=(), usb=()',
   );
   headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive, nosnippet');
-  // Cache-Control is deliberately NOT set here for the machine's own loopback. DPV-005 already holds without it:
+  // Cache-Control is deliberately NOT set here. DPV-005 already holds without it:
   // a force-dynamic page is served `private, no-cache, no-store` in production,
   // and the two route handlers state their own. Set here, it would reach only
   // those two routes and flatten both — /api/watch's `no-store` included. The
@@ -143,8 +136,6 @@ function harden(headers, csp, tunnelled) {
 export async function proxy(request) {
   const { pathname } = request.nextUrl;
 
-  // Arrived through the remote tunnel (scripts/remote.mjs), not the loopback.
-  const tunnelled = /\.trycloudflare\.com$/i.test(request.headers.get('host') || '');
   const nonce = mintNonce();
   const csp = policy(nonce);
 
@@ -164,7 +155,7 @@ export async function proxy(request) {
 
   if (PUBLIC.some((p) => pathname === p || pathname.startsWith(`${p}/`))) {
     const open = NextResponse.next({ request: { headers: forwarded } });
-    harden(open.headers, csp, tunnelled);
+    harden(open.headers, csp);
     return open;
   }
 
@@ -173,23 +164,8 @@ export async function proxy(request) {
   // their session on the next request rather than whenever their cookie expires.
   const token = request.cookies.get(SESSION_COOKIE)?.value;
   if (await verifyToken(token)) {
-    // The developer's views (WKB-002), only past the gate and only where their
-    // app is here; in a copy without it /admin is an ordinary missing page.
-    if (ADMIN_PRESENT && (pathname === ADMIN_BASE || pathname.startsWith(`${ADMIN_BASE}/`))) {
-      const up = await adminAnswers();
-      // A script or stylesheet of an admin page gets no page in its place.
-      if (!up && pathname.startsWith(`${ADMIN_BASE}/_next/`)) return new NextResponse(null, { status: 503 });
-      // Down, the page in its place is this server's own, so its protocol is
-      // forced to http for the reason the login rewrite below gives.
-      const target = up
-        ? new URL(`${pathname}${request.nextUrl.search}`, ADMIN_ORIGIN)
-        : Object.assign(request.nextUrl.clone(), { protocol: 'http:', pathname: '/admin-not-running', search: '' });
-      const passed = NextResponse.rewrite(target, { request: { headers: forwarded } });
-      harden(passed.headers, csp, tunnelled);
-      return passed;
-    }
     const allowed = NextResponse.next({ request: { headers: forwarded } });
-    harden(allowed.headers, csp, tunnelled);
+    harden(allowed.headers, csp);
     return allowed;
   }
 
@@ -208,7 +184,7 @@ export async function proxy(request) {
   target.pathname = '/login';
   target.search = '';
   const refused = NextResponse.rewrite(target, { request: { headers: forwarded } });
-  harden(refused.headers, csp, tunnelled);
+  harden(refused.headers, csp);
   return refused;
 }
 

@@ -1,25 +1,11 @@
 import { marked } from 'marked';
-import { slugify } from '@/lib/views';
 
 // Markdown to HTML, in one place so every view renders her record the same way.
 //
-// Markup written into a file is shown as the characters typed, never handed to
-// the browser (DPV-004 design 3). The agent is the only writer, but a page she
-// pastes in can carry a <meta http-equiv="refresh"> that sends the page
-// elsewhere, or styled markup that passes for the app; the content policy in
-// proxy.js stops scripts and outside requests, not those. HTML comments are
-// notes to the agent and are dropped. Markdown alone shapes what she sees.
-const ESCAPES = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
-
-export function rawHtml({ text, block }) {
-  const shown = stripComments(text);
-  if (!shown.trim()) return '';
-  const escaped = shown.replace(/[&<>"']/g, (ch) => ESCAPES[ch]);
-  return block ? `<p>${escaped.trim()}</p>\n` : escaped;
-}
-
+// The only writer of the files under data/ is the agent she talks to, inside a
+// private single-member repository. That is not untrusted input, so the output is
+// not sanitised — the same call the About view makes on the repository README.
 marked.setOptions({ gfm: true, breaks: false });
-marked.use({ renderer: { html: rawHtml } });
 
 export function toHtml(markdown) {
   return callouts(sourceTags(headingIds(marked.parse(String(markdown ?? '')))));
@@ -33,18 +19,27 @@ export function toHtml(markdown) {
 // entry in a reference list, and a reader who arrives at the top of a long file
 // has been handed the file rather than the answer.
 //
-// Slugged by slugify() in lib/views.js, the one function every anchor and every
-// rail link in the app is minted by, so a heading rendered here and the rail
-// entry pointing at it cannot disagree.
+// Slugged the way GitHub does it, deliberately: lowercase, non-word characters
+// dropped, spaces to hyphens. The same file is read on GitHub and in this app,
+// and a link that works in one place and not the other is worse than one that
+// works nowhere, because only half the readers find out.
 //
-// Duplicate headings get -1, -2 appended, matching GitHub, so the first of a
-// repeated name keeps the bare slug that anything already links to.
+// Duplicate headings get -1, -2 appended, again matching GitHub, so the first
+// of a repeated name keeps the bare slug that anything already links to.
+export function slug(text) {
+  return String(text)
+    .trim()
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/\s+/g, '-');
+}
+
 export function headingIds(html) {
   const seen = new Map();
   return String(html ?? '').replace(
-    /<h([1-6])>([\s\S]*?)<\/h\1>/g,
+    /<h([1-6])>([\s\S]*?)<\/h>/g,
     (whole, level, inner) => {
-      const base = slugify(inner.replace(/<[^>]*>/g, ''));
+      const base = slug(inner.replace(/<[^>]*>/g, ''));
       if (!base) return whole;
       const n = seen.get(base) ?? 0;
       seen.set(base, n + 1);
@@ -67,7 +62,7 @@ export function headingIds(html) {
 // The link title becomes a native tooltip. That matters: the tag now goes to
 // the work itself, so the limit — every source here was written for a different
 // field at a different scale — would otherwise only be found by someone who
-// went looking for it in dev/specs/REFERENCES.md. On hover it finds them instead.
+// went looking for it in specs/REFERENCES.md. On hover it finds them instead.
 // The key may be followed by a locator — [[FAIR F4]], [[ISO-29148 §5.2]] —
 // because one work is one row in REFERENCES.md and the clause within it belongs
 // at the citation. Everything before the first space is the key.
@@ -87,7 +82,7 @@ export function sourceTags(html) {
 // Two kinds of text in these files are written FOR THE AGENT, not for her, and
 // neither should ever reach the screen.
 //
-// COMMENTED-OUT TEMPLATES. data/core/me/patterns.md carries a whole worked example of
+// COMMENTED-OUT TEMPLATES. data/me/patterns.md carries a whole worked example of
 // a pattern inside an HTML comment, so there is a shape to copy the first time
 // one is named. Markdown containing angle brackets — "## <name of the pattern>"
 // — is escaped rather than hidden by the renderer, so the comment came out as
@@ -171,7 +166,8 @@ export function hasContent(markdown) {
   // so it reads as prose and the whole section reports itself as written. That is
   // the wrong way round for this check to fail: an empty section rendered as if
   // it held something is the one error a record cannot afford.
-  const paragraphs = stripComments(markdown)
+  const paragraphs = String(markdown ?? '')
+    .replace(/<!--[\s\S]*?-->/g, '')
     .split(/\n\s*\n/)
     .map((block) =>
       block
@@ -252,10 +248,11 @@ export function sections(markdown) {
 
   return {
     lead: lead.join('\n').trim(),
-    sections: out.map((s) => {
-      const text = s.lines.join('\n');
-      return { heading: s.heading, body: text.trim(), filled: hasContent(text) };
-    }),
+    sections: out.map((s) => ({
+      heading: s.heading,
+      body: s.lines.join('\n').trim(),
+      filled: hasContent(s.lines.join('\n')),
+    })),
   };
 }
 

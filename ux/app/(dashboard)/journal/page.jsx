@@ -1,6 +1,4 @@
-import { Fragment } from 'react';
-import { Empty, Enter, PageHead, YearRule } from '@/components/ui';
-import { DatedDoc } from '@/components/ui/DatedDoc';
+import { Empty, Enter, PageHead, Prose, Source, dateLabel } from '@/components/ui';
 import { getJournal } from '@/lib/content';
 
 export const dynamic = 'force-dynamic';
@@ -64,10 +62,21 @@ export default async function Journal() {
           {entries.map((entry, i) => {
             const startsYear = entry.year && entry.year !== entries[i - 1]?.year;
             return (
-              <Fragment key={entry.slug}>
-                {startsYear && <YearRule year={entry.year} />}
-                <DatedDoc doc={entry} className="journal-entry" as="h3" />
-              </Fragment>
+              <article key={entry.slug} id={entry.slug} className="journal-entry">
+                {startsYear && (
+                  <h2 id={`year-${entry.year}`} className="year-rule">
+                    {entry.year}
+                  </h2>
+                )}
+                <div className="section-head">
+                  <h3>{entry.title ?? dateLabel(entry.date)}</h3>
+                  {entry.title && <span className="section-note">{dateLabel(entry.date)}</span>}
+                </div>
+                <div className="card">
+                  <Prose html={entry.html} />
+                </div>
+                <Source path={`data/${entry.path}`} />
+              </article>
             );
           })}
         </>

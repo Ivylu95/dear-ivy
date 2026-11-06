@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { Banner, Button } from '@/components/ui';
 import { BrandMark } from '@/components/ui/icons';
 
 // The gate's only page.
@@ -98,14 +97,14 @@ export default function Login() {
           <input name="password" type="password" autoComplete="current-password" required />
         </label>
 
-        <Button type="submit" variant="primary" className="login-submit" disabled={busy}>
+        <button type="submit" className="btn-primary" disabled={busy}>
           {busy ? 'Checking…' : 'Sign in'}
-        </Button>
+        </button>
 
         {error && (
-          <Banner tone="warn" role="alert" className="login-error">
+          <p className="login-error" role="alert">
             {error}
-          </Banner>
+          </p>
         )}
       </form>
     </main>

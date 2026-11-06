@@ -1,6 +1,6 @@
 'use client';
 
-import { Actions, Button, Enter, Note, PageHead } from '@/components/ui';
+import Link from 'next/link';
 
 // When a view fails to render.
 //
@@ -14,17 +14,23 @@ import { Actions, Button, Enter, Note, PageHead } from '@/components/ui';
 // page that reads it is the honest thing to offer.
 export default function Error({ reset }) {
   return (
-    <Enter>
-      <PageHead title="This page did not load" />
-      <Note>
+    <div className="enter">
+      <h1 className="page-title">This page did not load</h1>
+      <p className="note">
         Nothing is lost. Your record is plain text on disk and nothing here writes
         to it — this is the screen failing, not the record.
-      </Note>
-      <Actions>
-        <Button onClick={reset}>Try again</Button>
-        <Button href="/">Back to Now</Button>
-        <Button href="/safety">Safety plan</Button>
-      </Actions>
-    </Enter>
+      </p>
+      <div className="actions">
+        <button type="button" className="btn" onClick={reset}>
+          Try again
+        </button>
+        <Link className="btn" href="/">
+          Back to Now
+        </Link>
+        <Link className="btn" href="/safety">
+          Safety plan
+        </Link>
+      </div>
+    </div>
   );
 }

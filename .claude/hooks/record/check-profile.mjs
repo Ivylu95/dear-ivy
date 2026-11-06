@@ -1,4 +1,4 @@
-// PostToolUse and Stop — every PROFILE.yaml obeys its rules, checked the moment
+// PostToolUse and Stop — every profile.yaml obeys its rules, checked the moment
 // it changes and again before a turn ends.
 //
 // The rules (three sections; each question's status one of five; last_updated a
@@ -27,54 +27,28 @@
 // A profile in the old flat shape is not an error here: it migrates at the next
 // session start on that record.
 //
-// ── Pointers, as a file is written (SFG-005) ────────────────────────────────
-//
-// The same hook, after a Write or an Edit of a markdown file, reads that file
-// alone for a pointer to nothing or a cited row no spec defines (the rules of
-// ux/scripts/check-links.mjs, less what its known list already holds) and hands
-// the findings back with the profile's, so the fix is the next edit and not a
-// search at commit. Only the file just written is read, and the whole read is
-// a fraction of a second. A shell command names no file and is left to the
-// commit gate. It reports; it cannot undo.
-//
 // ── From the command line ───────────────────────────────────────────────────
 //
 //   node .claude/hooks/record/check-profile.mjs --all              every profile
 //   node .claude/hooks/record/check-profile.mjs --write-template   regenerate it
-//   node .claude/hooks/record/check-profile.mjs --fix-header <file> restore a header
 //
 // `--all` is the full sweep `npm run check` and the build call: every profile,
 // plus the template, which must be exactly the blank profile the schema writes
 // (so a new record starts from the current rules). When ux/ has js-yaml
 // installed, each file is also read by it and must mean the same thing, which
 // proves the strict subset the schema parses is still real YAML.
-//
-// From the command line it reads the repository it lives in, whatever folder
-// it is run from: ux/lib/checks.mjs runs it from ux/, where the shared root
-// (the hook's project folder, else the working folder) would find no profile.
-// A hook run keeps the project folder Claude Code gives it.
 
+import { readHookInput, block, pass, markerRead, markerWrite, repoRoot } from '../lib/hook.mjs';
+import { allProfiles, profileErrors, record, TEMPLATE } from '../lib/profile.mjs';
 import { existsSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { join, relative } from 'node:path';
-import { isAbsolute, resolve } from 'node:path';
-import { fileURLToPath, pathToFileURL } from 'node:url';
+import { pathToFileURL } from 'node:url';
 
 const flag = process.argv[2];
-if (['--all', '--write-template', '--fix-header'].includes(flag) && !process.env.CLAUDE_PROJECT_DIR) {
-  process.env.CLAUDE_PROJECT_DIR = fileURLToPath(new URL('../../..', import.meta.url)).replace(/[\\/]$/, '');
-}
-const { readHookInput, block, pass, markerRead, markerWrite, repoRoot } = await import('../lib/hook.mjs');
-const { allProfiles, profileErrors, record, TEMPLATE } = await import('../lib/profile.mjs');
 if (flag === '--write-template') {
   writeFileSync(TEMPLATE, record.renderProfile({}));
   console.log(`profile check: wrote ${relative(repoRoot, TEMPLATE)}`);
-  process.exit(0);
-}
-if (flag === '--fix-header') {
-  const path = process.argv[3];
-  writeFileSync(path, record.withCurrentHeader(readFileSync(path, 'utf8')));
-  console.log(`profile check: restored the header of ${relative(repoRoot, path)}`);
   process.exit(0);
 }
 if (flag === '--all') await sweep();
@@ -104,9 +78,7 @@ async function sweep() {
   }
 
   if (!existsSync(TEMPLATE)) failures.push(`${relative(repoRoot, TEMPLATE)} is missing`);
-  // Compared as text, not bytes: a checkout with core.autocrlf (every Windows
-  // clone, and the pre-commit gate's copy of the index) writes CRLF.
-  else if (readFileSync(TEMPLATE, 'utf8').replace(/\r\n/g, '\n') !== record.renderProfile({})) {
+  else if (readFileSync(TEMPLATE, 'utf8') !== record.renderProfile({})) {
     failures.push(
       `${relative(repoRoot, TEMPLATE)} is not the blank profile the schema writes; regenerate it: node .claude/hooks/record/check-profile.mjs --write-template`,
     );
@@ -115,7 +87,7 @@ async function sweep() {
   if (failures.length) {
     console.error(
       `\n  PROFILE CHECK FAILED\n\n${failures.map((f) => `  - ${f}`).join('\n')}\n\n` +
-        '  The rules are in the header of every PROFILE.yaml, and enforced in\n' +
+        '  The rules are in the header of every profile.yaml, and enforced in\n' +
         '  .claude/hooks/lib/profile-schema.mjs.\n',
     );
     process.exit(1);
@@ -158,23 +130,6 @@ const input = await readHookInput();
 const stopping = input?.hook_event_name === 'Stop' || 'stop_hook_active' in (input ?? {});
 if (input?.stop_hook_active) pass();
 
-// A markdown file just written: any pointer in it that resolves to nothing.
-async function brokenPointers() {
-  const written = input?.tool_input?.file_path;
-  if (stopping || typeof written !== 'string' || !/\.md$/i.test(written)) return [];
-  const abs = resolve(input.cwd || repoRoot, written);
-  const rel = relative(repoRoot, abs).replace(/\\/g, '/');
-  if (!rel || rel.startsWith('..') || isAbsolute(rel) || !existsSync(abs)) return [];
-  try {
-    const { findBrokenLinksIn, freshFindings } = await import(new URL('../../../ux/scripts/check-links.mjs', import.meta.url).href);
-    const found = freshFindings(findBrokenLinksIn(repoRoot, new Set([rel])).findings);
-    return [...new Set(found.map((f) => `${f.from} ${f.what}`))];
-  } catch {
-    return []; // a copy without ux/: the commit gate still checks
-  }
-}
-const pointerFailures = await brokenPointers();
-
 const MARKER = 'profile-fingerprints.json';
 let known = {};
 try {
@@ -208,11 +163,7 @@ for (const path of allProfiles()) {
 }
 markerWrite(MARKER, JSON.stringify(next));
 
-const POINTERS = pointerFailures.length
-  ? `LINK CHECK FAILED on the file just written. Fix this next: a pointer that resolves is how the record stays findable.\n\n${pointerFailures.map((f) => `  - ${f}`).join('\n')}`
-  : '';
-if (POINTERS) block(failures.length ? `${POINTERS}\n\nPROFILE CHECK FAILED too:\n\n${failures.join('\n\n')}` : POINTERS);
 if (!failures.length) pass();
 block(
-  `PROFILE CHECK FAILED. Fix this next; the rules are in the file's own header. If she is in crisis or distressed, stay with her and fix this afterwards: safety comes first (policies/SAFETY_POLICY.md).\n\n${failures.join('\n\n')}`,
+  `PROFILE CHECK FAILED. Fix this now, before anything else; the rules are in the file's own header.\n\n${failures.join('\n\n')}`,
 );

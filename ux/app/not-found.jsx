@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Arrow, BrandMark } from '@/components/ui/icons';
+import { BrandMark } from '@/components/ui/icons';
 
 // The 404 for anything OUTSIDE the dashboard's route group.
 //
@@ -69,7 +69,7 @@ export default function NotFound() {
         </p>
         <p className="notice-back">
           <Link href="/">
-            <Arrow back /> Back to the start
+            <span aria-hidden="true">&larr;</span> Back to the start
           </Link>
         </p>
       </div>

@@ -1,4 +1,0 @@
-{
-  "_what": "Where this copy fetches harness releases from: the developer's private release repository. The real address names its owner, so it lives in the record, at data/core/setup/release-source.json, and this file names no one (A-155). Pinned there so an address pasted into a chat is never used. Read through .claude/hooks/lib/release-source.mjs, which reads the record's file first and this one after it.",
-  "repo": "<the release repository: set in data/core/setup/release-source.json>"
-}

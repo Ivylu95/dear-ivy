@@ -18,12 +18,8 @@ import { useCallback, useEffect, useRef } from 'react';
 // imperatively. The layout holding the grid is a server component, and threading
 // a pixel value through it per drag frame would re-render the whole tree sixty
 // times a second to move one column; putting aria-valuenow in state would do the
-// same thing for the same frame. Setting a property and an attribute skips React
-// entirely, but it is not free: a new column width is a style recalculation, a
-// layout and a paint of the grid. So a drag writes it at most once a frame, the
-// latest pointer position winning, and remembers it in storage only when the
-// pointer lets go — a synchronous localStorage write per pointermove was disk
-// work on the frame's critical path for a number nobody reads until reload.
+// same thing for the same frame. Setting a property and an attribute touches two
+// strings and lets the compositor do the rest.
 //
 // Where the width lives, what bounds it, and why it is restored by a blocking
 // script rather than an effect: lib/harness-width.js.
@@ -31,31 +27,21 @@ export function PaneSeam({ pane, className, label, origin = 'start' }) {
   const { KEY, VAR, MIN_W, MAX_W, STEP, currentWidth, clampWidth } = pane;
   const ref = useRef(null);
 
-  // Shows a width; returns what was shown, after the bounds.
-  const showWidth = useCallback(
+  const setWidth = useCallback(
     (px) => {
       const w = clampWidth(px);
       document.documentElement.style.setProperty(VAR, `${w}px`);
       ref.current?.setAttribute('aria-valuenow', String(w));
-      return w;
-    },
-    [VAR, clampWidth],
-  );
-
-  const keepWidth = useCallback(
-    (w) => {
       try {
         localStorage.setItem(KEY, String(w));
-      } catch {
-        // A private window, or storage the browser refuses. The drag still works
-        // for this session; only the remembering is lost, and that is not worth an
-        // error anybody has to see.
+    } catch {
+      // A private window, or storage the browser refuses. The drag still works
+      // for this session; only the remembering is lost, and that is not worth an
+      // error anybody has to see.
       }
     },
-    [KEY],
+    [KEY, VAR, clampWidth],
   );
-
-  const setWidth = useCallback((px) => keepWidth(showWidth(px)), [keepWidth, showWidth]);
 
   // The width is already correct by the time this runs — the blocking script set
   // it before paint. What is not yet correct is what this separator SAYS it is,
@@ -104,27 +90,8 @@ export function PaneSeam({ pane, className, label, origin = 'start' }) {
     const left = origin === 'start' ? (handle.parentElement?.getBoundingClientRect().left ?? 0) : 0;
     const right = window.innerWidth;
 
-    // The latest position, drawn on the next frame; a burst of pointermoves
-    // between two frames costs one layout, not one each.
-    let wanted = null;
-    let frame = 0;
-    let shown = null;
-    const draw = () => {
-      frame = 0;
-      if (wanted != null) shown = showWidth(wanted);
-    };
-    const move = (e) => {
-      wanted = origin === 'end' ? right - e.clientX : e.clientX - left;
-      if (!frame) frame = requestAnimationFrame(draw);
-    };
+    const move = (e) => setWidth(origin === 'end' ? right - e.clientX : e.clientX - left);
     const done = () => {
-      // The last position is shown at once rather than a frame late, and only
-      // now remembered.
-      if (frame) cancelAnimationFrame(frame);
-      draw();
-      if (shown != null) keepWidth(shown);
-      wanted = null;
-      shown = null;
       // Capture can be gone already — pointercancel, or the node losing it — and
       // releasing one that is not held throws.
       if (handle.hasPointerCapture(event.pointerId)) handle.releasePointerCapture(event.pointerId);

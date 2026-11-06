@@ -1,9 +1,6 @@
 import Link from 'next/link';
-import { Card, Empty, Enter, PageHead, Prose, SectionHead, Source, dateLabel, untilLabel } from '@/components/ui';
-import { Row } from '@/components/ui/Row';
-import { TimelineEntry } from '@/components/ui/TimelineEntry';
+import { Empty, Enter, PageHead, Prose, SectionHead, Source, Tag, dateLabel, untilLabel } from '@/components/ui';
 import { getHome, getPronouns, getToday } from '@/lib/content';
-import { moduleOn } from '@/lib/modules';
 import { agree } from '@/lib/pronouns';
 import { slugify } from '@/lib/views';
 
@@ -42,11 +39,12 @@ export default async function Home() {
             {now.sections
               .filter((s) => s.filled)
               .map((s) => (
-                <Card key={s.heading} as="section" id={slugify(s.heading)} title={s.heading}>
+                <section key={s.heading} id={slugify(s.heading)} className="card">
+                  <h2 className="card-heading">{s.heading}</h2>
                   <Prose html={s.html} />
-                </Card>
+                </section>
               ))}
-            <Source path="data/core/state/now.md" />
+            <Source path="data/state/now.md" />
           </>
         )}
       </Enter>
@@ -77,51 +75,36 @@ export default async function Home() {
         now.sections
           .filter((s) => s.filled)
           .map((s) => (
-            <Card key={s.heading} as="section" id={slugify(s.heading)} title={s.heading}>
+            <section key={s.heading} id={slugify(s.heading)} className="card">
+              <h2 className="card-heading">{s.heading}</h2>
               <Prose html={s.html} />
-            </Card>
+            </section>
           ))
-      ) : now?.missing ? (
-        <Empty title="The snapshot could not be read">
-          The file this page reads it from is missing, so what is shown here may
-          be incomplete.
-        </Empty>
       ) : (
         <Empty title="No snapshot written yet">
           The current picture gets rewritten at the end of every conversation.
         </Empty>
       )}
-      <Source path="data/core/state/now.md" />
+      <Source path="data/state/now.md" />
 
-      <SectionHead title="Lately" note={<Link href="/timeline">the whole timeline</Link>} />
-      {timelineFilled ? (
-        <div className="tl">
-          {recent.map((entry) => (
-            <TimelineEntry key={`${entry.date}-${entry.what}`} entry={entry} p={p} />
-          ))}
-        </div>
-      ) : (
-        <Empty title="No events on the timeline yet">
-          Anything that happens gets one dated line here, pointing at wherever the
-          detail lives.
-        </Empty>
-      )}
-      <Source path="data/core/timeline.md" />
-
-      {/* Coming up. After the timeline, as a session reads it (NOW-001): the
-          snapshot, then the spine, then what those two point at. */}
+      {/* Coming up. Above the timeline because what is ahead is the thing a
+          snapshot cannot tell you and the thing most likely to need thinking
+          about before it arrives. */}
       {upcoming.length > 0 && (
         <>
           <SectionHead title="Coming up" note={<Link href="/calendar">all dates</Link>} />
           {upcoming.map((item) => (
-            <Row
-              key={`${item.date}-${item.what}`}
-              title={item.what}
-              meta={untilLabel(item.date, today)}
-              details={[dateLabel(item.date), item.notes]}
-            />
+            <div key={`${item.date}-${item.what}`} className="row">
+              <div className="row-head">
+                <span className="row-title">{item.what}</span>
+                <span className="row-meta">{untilLabel(item.date, today)}</span>
+              </div>
+              <div className="meta-line">
+                <span>{dateLabel(item.date)}</span>
+                {item.notes && <span>{item.notes}</span>}
+              </div>
+            </div>
           ))}
-          <Source path="data/core/calendar/calendar.md" />
         </>
       )}
 
@@ -136,7 +119,7 @@ export default async function Home() {
             title="For the next appointment"
             note={<Link href="/loops">open loops</Link>}
           />
-          <Card>
+          <div className="card">
             <ul className="bullets">
               {forTherapist.items
                 .filter((i) => !i.done)
@@ -144,17 +127,45 @@ export default async function Home() {
                   <li key={item.text}>{item.text}</li>
                 ))}
             </ul>
-          </Card>
-          <Source path="data/core/state/open_loops.md" />
+          </div>
+          <Source path="data/state/open_loops.md" />
         </>
       )}
 
-      {moduleOn('therapy') && focus?.filled && (
+      <SectionHead title="Lately" note={<Link href="/timeline">the whole timeline</Link>} />
+      {timelineFilled ? (
+        <div className="tl">
+          {recent.map((entry) => (
+            <article key={`${entry.date}-${entry.what}`} className="tl-item">
+              <div className="tl-date">
+                {dateLabel(entry.date)}
+                {entry.told && ` · told ${dateLabel(entry.told)}`}
+              </div>
+              <p className="tl-what">{entry.what.replace(/\[inferred\]\s*/i, '')}</p>
+              <div className="tags">
+                {entry.type && <Tag kind="accent">{entry.type}</Tag>}
+                {entry.tags.map((t) => (
+                  <Tag key={t}>{t}</Tag>
+                ))}
+                {/* Her words are the record; a reading of them is not. */}
+                {entry.inferred && <Tag kind="inferred">a reading, not her words</Tag>}
+              </div>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <Empty title="No events on the timeline yet">
+          Anything that happens gets one dated line here, pointing at wherever the
+          detail lives.
+        </Empty>
+      )}
+
+      {focus?.filled && (
         <>
           <SectionHead title={`What ${p.subject} ${agree(p, 'be')} working on`} note={<Link href="/therapy">therapy</Link>} />
-          <Card>
+          <div className="card">
             <Prose html={focus.html} />
-          </Card>
+          </div>
           <Source path="data/therapy/what_im_working_on.md" />
         </>
       )}
@@ -164,10 +175,18 @@ export default async function Home() {
           <SectionHead title="People" note={<Link href="/people">everyone on file</Link>} />
           <div className="grid-2">
             {people.slice(0, 6).map((person) => (
-              <Row key={person.slug} href={`/people/${person.slug}`} title={person.name} details={[person.relation]} />
+              <Link key={person.slug} href={`/people/${person.slug}`} className="row">
+                <div className="row-head">
+                  <span className="row-title">{person.name}</span>
+                </div>
+                {person.relation && (
+                  <div className="meta-line">
+                    <span>{person.relation}</span>
+                  </div>
+                )}
+              </Link>
             ))}
           </div>
-          <Source path="data/core/people/" />
         </>
       )}
     </Enter>

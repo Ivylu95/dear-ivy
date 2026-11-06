@@ -1,8 +1,7 @@
 'use client';
 
 import { useId } from 'react';
-import { RailCard } from '@/components/shell/RailFold';
-import { FactList } from '@/components/ui';
+import { RailHead, useRailFold } from '@/components/shell/RailFold';
 
 // A block of stated facts in the right rail: label on the left, value on the
 // right, one per row.
@@ -36,23 +35,35 @@ import { FactList } from '@/components/ui';
 // does not participate in. Sharing the component would mean a list that looks
 // navigable and is not, which is the one thing a rail must never be.
 //
-// It borrows the BOX, though: RailCard and its head are the shapes the
+// It borrows the CLASSES, though: .rail-card and .rail-head are the shapes the
 // column is built out of, and a block here that framed itself differently would
 // read as something pasted into the margin rather than as part of it.
 export function RailFacts({ title, rows }) {
+  const folded = useRailFold('facts');
   const id = useId();
   const shown = (rows ?? []).filter((row) => row && row.value != null && row.value !== '');
   if (!shown.length) return null;
 
   return (
-    // The heading is the fold; nothing else is on this row. RailNav's head
-    // puts "Top" beside its own, and the two line up because both are built
-    // out of RailCard.
-    <RailCard name="facts" title={title} bodyId={id}>
+    <section className="rail-card">
+      {/* The heading is the fold; nothing else is on this row. RailNav's head
+          puts "Top" beside its own, and the two line up because both are built
+          out of .rail-head either way. */}
+      <RailHead name="facts" title={title} bodyId={id} />
+
       {/* A description list, because that is what this is: each row is a term
           and its value, and saying so in the markup is what lets a screen reader
           read the pair as a pair rather than as two loose strings. */}
-      <FactList className="rail-facts" id={id} rowClassName="rail-fact" rows={shown.map(({ label, value }) => ({ label, value }))} />
-    </RailCard>
+      {!folded && (
+        <dl className="rail-facts" id={id}>
+          {shown.map((row) => (
+            <div key={row.label} className="rail-fact">
+              <dt>{row.label}</dt>
+              <dd>{row.value}</dd>
+            </div>
+          ))}
+        </dl>
+      )}
+    </section>
   );
 }

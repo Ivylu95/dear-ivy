@@ -34,7 +34,6 @@ import {
   clamp01,
   colourScale,
   huePresets,
-  marksFor,
   neutralScale,
   hexOf,
   oklchToLinear,
@@ -208,8 +207,6 @@ function colourBlock(selector, mode, pad = '') {
   // are registered and tiered with everything else — see syntaxFor in
   // theme/palette.mjs for why that turned out to matter.
   for (const [name, value] of Object.entries(syntaxFor(mode))) push(`${pad}  --${name}: ${value};`);
-  // Chart marks, registered and tiered for the same reason. See marksFor.
-  for (const [name, value] of Object.entries(marksFor(mode))) push(`${pad}  --${name}: ${value};`);
   push(`${pad}}`);
   push();
 }
@@ -298,7 +295,7 @@ for (const character of characters) {
 // there. That is a real limitation and not a bug: a tab icon that changed colour
 // with a preference would be a tab she stops recognising at a glance.
 function writeIcon() {
-  const { x, y, w } = MARK_VIEWBOX;
+  const { x, y, w, h } = MARK_VIEWBOX;
   // Padded into a 32 box. The scale is what keeps the stroke weight looking like
   // the rail's once the artwork has been shrunk to leave room for the corner.
   const inset = 5;
@@ -330,9 +327,10 @@ function writeIcon() {
   ].join('\n');
 
   writeFileSync(join(root, 'app', 'icon.svg'), svg, 'utf8');
+  return svg.length;
 }
 
-writeIcon();
+const iconBytes = writeIcon();
 
 writeFileSync(out, `${lines.join('\n')}\n`, 'utf8');
 

@@ -4,7 +4,7 @@ import { MAX_BYTES, readAvatarBytes, removeAvatar, saveAvatar } from '@/lib/avat
 
 // The door to her picture: the one write route in this app.
 //
-// The file is data/core/assets/avatar.<ext> rather than something in public/, because
+// The file is data/assets/avatar.<ext> rather than something in public/, because
 // a photograph of her is as personal as anything else in the record and HAR-02
 // keeps everything personal in data/. Nothing under data/ is served statically,
 // so it is served through here instead.
@@ -34,25 +34,16 @@ export async function GET(request) {
   // an avatar the UI could not tell apart from a real one.
   if (!found) return new NextResponse(null, { status: 404 });
 
-  // Private, and revalidated every time (DPV-005 designs 1 and 2). What this
-  // forbids is a shared cache anywhere between here and her holding a copy of
-  // her face; the browser's own copy is kept, and asked about on every view.
-  const etag = `"${found.stamp}"`;
-  const caching = { 'Cache-Control': 'private, no-cache, must-revalidate', ETag: etag };
-
-  // The asking is what makes the browser's copy worth keeping. Without an answer
-  // to If-None-Match every full load sent the whole picture again for an ETag
-  // that had not changed (DES-008); a match now costs a header and no body.
-  const asked = request.headers.get('if-none-match');
-  if (asked && asked.split(',').some((tag) => tag.trim().replace(/^W\//, '') === etag)) {
-    return new NextResponse(null, { status: 304, headers: caching });
-  }
-
   return new NextResponse(found.bytes, {
     headers: {
       'Content-Type': found.type,
       'Content-Length': String(found.bytes.length),
-      ...caching,
+      // Private, and revalidated every time. The URL carries the mtime, so the
+      // browser's own cache answers instantly while the picture is unchanged;
+      // what this forbids is a shared cache anywhere between here and her
+      // holding a copy of her face.
+      'Cache-Control': 'private, no-cache, must-revalidate',
+      ETag: `"${found.stamp}"`,
     },
   });
 }

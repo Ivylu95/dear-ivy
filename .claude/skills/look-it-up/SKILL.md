@@ -1,50 +1,38 @@
 ---
 name: look-it-up
-description: She asks something that turns on evidence, not her record - "does this actually work", "is it normal to", "should I try", "what does the research say". Not medication, diagnosis or legal; never in a crisis.
+description: She asks something whose answer turns on evidence rather than on her record - "does this actually work", "is it normal to", "should I try", "what does the research say", or a question about sleep, food, exercise, money, work or relationships where a general fact would change what she does. Use to check the knowledge base before searching, say how well the answer is known, and file what was found so the next session has it. Not for medication, diagnosis or legal questions, and never in a crisis.
 ---
 
 # Look it up
 
-**Goal:** A question she asked is answered from the best evidence, saying how well it is known, and what was found is kept for next time.
-
-**Audience:** The person, in her own chats.
-
-**Reads:** `data/core/me/what_helps.md`, then `modules/core/knowledge/README.md` and the subject's `practices.md`, before any search; the knowledge base carries what was found.
-
 **Her record first, then the knowledge base, then a search.** What has actually
-worked for her, in `data/core/me/what_helps.md`, outranks anything general. Evidence
+worked for her, in `data/me/what_helps.md`, outranks anything general. Evidence
 is for the question her record can't answer.
 
 This skill only answers a question she asked. **Knowing a subject is never a
 reason to raise it** (**KNW-001**) — if she didn't ask, nothing here runs.
-Where her words touch a subject only loosely, an unclear match counts as no
-match: answer what she said and leave the subject unraised.
 
 ## Not this skill
 
 | She… | Instead |
 |---|---|
 | is unsafe, or you're unsure | Crisis, in `CLAUDE.md`. No searching, no filing |
-| asks about a method, a means or an amount that could harm, whatever reason she gives | Crisis, in `CLAUDE.md`. Never answered, never searched |
-| is panicking, frightened or can't stop crying, and asks whether a technique works | `CLAUDE.md`'s *calming down* rule first: her safety, then a person. No search |
 | wants to vent | Let her. A fact offered to someone venting is a correction |
-| asks about medication, a diagnosis, the law | `CLAUDE.md`'s *something you aren't* rule: one line saying so, any general public fact, who answers it as the next step |
-| asks a dose, a timing or a mix for a supplement | No figure. The prescribing doctor or a pharmacist; her list is `supplements` |
+| asks about medication, a diagnosis, the law | One line saying so, and who actually answers it |
 
 ## Before answering
 
 **If the subject can harm, ask why she's asking first** (**KNW-003**). Weight,
 calories, tracking her own body or mood, sleep scores, anything touching
-self-harm, though a method, a means or an amount is never given whatever the
-reason (the table above). The same fact is useful for one reason and damaging for another —
+self-harm. The same fact is useful for one reason and damaging for another —
 the reason decides the answer, not the topic.
 
 ## Order
 
 | # | Look in | Then |
 |---|---|---|
-| 1 | `data/core/me/what_helps.md`, and the timeline if she's tried this before | Her own evidence leads |
-| 2 | [`modules/core/knowledge/practices.md`](../../../modules/core/knowledge/practices.md), `modules/core/knowledge/<subject>/practices.md`, or another module's `modules/<name>/knowledge/practices.md` | A row checked within 12 months is usable as it stands |
+| 1 | `data/me/what_helps.md`, and the timeline if she's tried this before | Her own evidence leads |
+| 2 | [`knowledge/practices.md`](../../../knowledge/practices.md), or `knowledge/<subject>/practices.md` | A row checked within 12 months is usable as it stands |
 | 3 | A search, when there is no row or it's older than 12 months | Her details never go in the query. Current research over the popular technique |
 
 ## Saying it
@@ -56,10 +44,6 @@ whether the source was read, in plain words:
 - *"One study, and I only reached its summary"* — tier 2, `record`
 - *"Widely said, and I couldn't find anything behind it"* — `—`
 
-Both halves every time: how strong, and whether you read it or only its summary.
-An answer drawn from more than one row is said at the strength of the weakest
-of them.
-
 Then **one** recommendation, what it costs her, and hers to take or leave. Check
 it against her actual problem, not the one the literature is good at. Where the
 evidence is thin, say so rather than borrowing confidence from the topic.
@@ -69,11 +53,11 @@ evidence is thin, say so rather than borrowing confidence from the topic.
 After she has her answer, not before. **Only what a search found and a source
 backs** — an uncited line does not belong in the base.
 
-1. **Pick the subject** from the folders already in `modules/core/knowledge/`. Cross-cutting
-   stance goes in `modules/core/knowledge/practices.md`. If none fits, create one from
-   [`modules/core/templates/look-it-up/practices.md`](../../../modules/core/templates/look-it-up/practices.md) and add it to the
-   subject list in [`modules/core/knowledge/README.md`](../../../modules/core/knowledge/README.md).
-   The name is fixed before anything is filed under it (**FND-005**, designs 5 and 6).
+1. **Pick the subject** from the folders already in `knowledge/`. Cross-cutting
+   stance goes in `knowledge/practices.md`. If none fits, create one from
+   [`templates/practices.md`](templates/practices.md) and add it to the
+   subject list in [`knowledge/README.md`](../../../knowledge/README.md) —
+   the name is fixed before anything is filed under it (**KNW-005**).
 2. **One row**, same columns as the file: practice, why, source, tier, read,
    checked. The row says what the evidence says in general — **nothing about
    her**, no hint of why it was asked.

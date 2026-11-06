@@ -1,8 +1,19 @@
 'use client';
 
-import { NavLink } from '@/components/shell/NavLink';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useSyncExternalStore } from 'react';
+import {
+  getPendingRoute,
+  routeFor,
+  serverPendingRoute,
+  setPendingRoute,
+  subscribePendingRoute,
+} from '@/lib/route-pending';
+import { setDrawerOpen } from '@/lib/sidebar';
 import { VIEW_LABEL } from '@/lib/views';
 import { Avatar } from '@/components/me/Avatar';
+import { Reading } from '@/components/ui/Reading';
 
 // Who is signed in, and the way into her standing files.
 //
@@ -22,11 +33,28 @@ import { Avatar } from '@/components/me/Avatar';
 //
 // Signing out is still one row below, in the settings menu, where it cannot be
 // hit by accident on the way to this.
-// `name` is the one the record holds (DES-007), the same as the wordmark's.
-// `away`: rendered in the admin app (WKB-002); see NavLink.
-export function Profile({ name, avatarStamp, away = false }) {
+export function Profile({ account, avatarStamp }) {
+  const pathname = usePathname();
+  // Lit the moment it is clicked, and the nav above goes dark in the same frame
+  // — both read the one channel, so they cannot disagree about where the app is
+  // going. See lib/route-pending.js.
+  useSyncExternalStore(subscribePendingRoute, getPendingRoute, serverPendingRoute);
+  const active = routeFor(pathname)?.startsWith('/me');
+  const name = account.slice(0, 1).toUpperCase() + account.slice(1);
+
   return (
-    <NavLink href="/me" away={away} className="profile">
+    <Link
+      href="/me"
+      className="profile"
+      data-active={active ? 'true' : undefined}
+      aria-current={active ? 'page' : undefined}
+      onClick={() => {
+        setPendingRoute('/me', pathname);
+        // Picking it from the mobile drawer dismisses the drawer, the same as
+        // any nav row; on desktop there is none open and this is a no-op.
+        setDrawerOpen(false);
+      }}
+    >
       <Avatar name={name} stamp={avatarStamp} size={26} className="profile-mark" />
       {/* Her name, and nothing under it. Where the row goes is carried by the
           hover and the active wash, which is how every other row in this rail
@@ -40,6 +68,7 @@ export function Profile({ name, avatarStamp, away = false }) {
         {name}
         <span className="sr-only">, {VIEW_LABEL['/me'].toLowerCase()}</span>
       </span>
-    </NavLink>
+      <Reading />
+    </Link>
   );
 }

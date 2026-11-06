@@ -104,7 +104,7 @@ function ensureAccounts() {
 // A spawn rather than a shell one-liner because `DEAR_RECORD=... next dev` is
 // not a thing cmd.exe understands, and this repo is developed on Windows.
 function sample() {
-  const dir = join(dirname(dirname(dirname(fileURLToPath(import.meta.url)))), 'data-sample');
+  const dir = join(dirname(dirname(dirname(fileURLToPath(import.meta.url)))), 'samples');
   if (!existsSync(join(dir, 'IS_SAMPLE'))) {
     console.error(`No sample record at ${dir} — expected an IS_SAMPLE marker in it.`);
     process.exitCode = 1;
@@ -113,15 +113,13 @@ function sample() {
 
   ensureAccounts();
   console.log(`
-  Opening on the SAMPLE record at data-sample/. Nothing in data/ is touched.
+  Opening on the SAMPLE record at samples/. Nothing in data/ is touched.
   Settings › Record switches between the two without a restart.
 `);
 
-  // Through the same launcher as `npm run dev`, so the developer's views come up
-  // beside the sample too where they are here (WKB-002).
   const child = spawn(
-    process.execPath,
-    [join(dirname(fileURLToPath(import.meta.url)), 'dev.mjs')],
+    process.platform === 'win32' ? 'npx.cmd' : 'npx',
+    ['next', 'dev', '-p', '3220', '-H', '127.0.0.1'],
     { stdio: 'inherit', env: { ...process.env, DEAR_RECORD: 'sample' } },
   );
   child.on('exit', (code) => {

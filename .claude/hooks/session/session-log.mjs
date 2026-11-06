@@ -1,4 +1,4 @@
-// SessionEnd — one line in data/core/state/log.md, which drives the upkeep triggers.
+// SessionEnd — one line in data/state/log.md, which drives the upkeep triggers.
 //
 // CLAUDE.md gives log.md a job nothing else does: "One line per session, and
 // maintenance triggers. Not events." The upkeep, review and research thresholds
@@ -13,12 +13,11 @@
 import { readHookInput, pass, read, git, dataDir, today } from '../lib/hook.mjs';
 import { appendFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { CORE_DATA } from '../lib/modules.mjs';
 
 const input = await readHookInput();
 if (input?.reason === 'clear') pass(); // A cleared context is not a session lived.
 
-const logPath = join(dataDir, CORE_DATA, 'state', 'log.md');
+const logPath = join(dataDir, 'state', 'log.md');
 const log = read(logPath);
 if (!log) pass();
 
@@ -28,7 +27,7 @@ if (session && log.includes(session)) pass(); // Already logged; never twice.
 const files = new Set();
 for (const line of git(['log', '--since=midnight', '--name-only', '--pretty=format:', '--', 'data/']).split('\n')) {
   const path = line.trim();
-  if (path && !path.startsWith('data/core/state/')) files.add(path.replace(/^data\//, ''));
+  if (path && !path.startsWith('data/state/')) files.add(path.replace(/^data\//, ''));
 }
 if (!files.size) pass(); // Nothing was written; nothing to count.
 

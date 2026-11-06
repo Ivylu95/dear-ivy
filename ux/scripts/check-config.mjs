@@ -1,4 +1,4 @@
-// Every PROFILE.yaml is valid, or the check fails.
+// Every profile.yaml is valid, or the check fails.
 //
 //   node scripts/check-config.mjs        (runs as part of `npm run check`)
 //

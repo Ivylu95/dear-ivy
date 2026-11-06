@@ -24,7 +24,7 @@ export async function POST(request) {
   const asked = form?.get('record');
 
   // Validate before setting, and fall back rather than reject. 'sample' only
-  // when there IS one — a clone without data-sample/ that somehow posts for it gets
+  // when there IS one — a clone without samples/ that somehow posts for it gets
   // her record, not an empty shell that looks like data loss.
   const key = asked === 'sample' && SAMPLE_EXISTS ? 'sample' : 'real';
 

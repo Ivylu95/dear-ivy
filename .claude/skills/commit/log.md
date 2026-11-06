@@ -1,7 +1,7 @@
 # commit log
 
-What this skill was grounded on, and when it is next checked (`PMM-005`,
-`PMM-006`). Findings are not kept in full — a fresh search recovers them, and a
+What this skill was grounded on, and when it is next checked (`SKL-004`,
+`SKL-005`). Findings are not kept in full — a fresh search recovers them, and a
 pile of them biases the next run toward confirming itself. What is kept is what
 a search never returns: the dates, the scenarios, what was tried and reverted,
 and a prediction for the next run to grade.

@@ -1,6 +1,6 @@
 import { RailNav } from '@/components/shell/RailNav';
 import { getJournal } from '@/lib/content';
-import { titledDate } from '@/lib/dates';
+import { dateLabel } from '@/lib/dates';
 
 // Years, then the entries under them. A journal is the one view where the whole
 // page is a single long scroll with no structure but dates, so the rail is the
@@ -19,8 +19,11 @@ export default async function JournalRail() {
       year = entry.year;
       items.push({ href: `#year-${year}`, label: year, heading: true });
     }
-    const { title, note } = titledDate(entry);
-    items.push({ href: `#${entry.slug}`, label: title, meta: note });
+    items.push({
+      href: `#${entry.slug}`,
+      label: entry.title ?? dateLabel(entry.date),
+      meta: entry.title ? dateLabel(entry.date) : null,
+    });
   }
 
   return <RailNav title="On this page" items={items} />;

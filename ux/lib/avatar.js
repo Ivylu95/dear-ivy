@@ -1,8 +1,6 @@
-import { existsSync, mkdirSync, readFileSync, renameSync, statSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, readdirSync, renameSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { RECORDS, inRecord } from '@/lib/data-dir';
-import { getToday } from '@/lib/content-read';
-import { CORE_DATA } from '../../.claude/hooks/lib/modules.mjs';
+import { RECORDS } from '@/lib/data-dir';
 
 // Her picture: the one file in the record this surface may write.
 //
@@ -13,12 +11,12 @@ import { CORE_DATA } from '../../.claude/hooks/lib/modules.mjs';
 // "just let me edit that one thing here."
 //
 // This file is the one exception, and it is not one the agent granted itself:
-// it was raised with the developer and admitted by a person as DSH-002, "The
+// it was raised in REVIEW.md and admitted by a person as DSH-002, "The
 // single exception to DSH-001 is a thing she made rather than said: it is never
 // read back to her as her own account of anything." That row is the whole of the
 // permission, and it is drawn as narrowly as it can be drawn:
 //
-//   · One file, at one known path — data/core/assets/avatar.<ext>. The folder is not
+//   · One file, at one known path — data/assets/avatar.<ext>. The folder is not
 //     an open drawer: this module names the one file in it that this app writes,
 //     and a second kind of asset would need a second reason.
 //   · Never a .md file. Nothing this route can reach is ever read back to her
@@ -32,7 +30,7 @@ import { CORE_DATA } from '../../.claude/hooks/lib/modules.mjs';
 // everything personal in data/ and nowhere else. The cost is that it cannot be
 // served as a static asset; app/api/avatar/route.js is the door.
 
-// data/core/assets/ rather than data/core/me/: everything else in me/ is words she said or
+// data/assets/ rather than data/me/: everything else in me/ is words she said or
 // things she decided, read back to her in sessions, and a binary sitting among
 // them is a file every future reader has to work out the status of. Assets are a
 // different kind of thing — she made them, nothing quotes them — so they get a
@@ -53,7 +51,7 @@ import { CORE_DATA } from '../../.claude/hooks/lib/modules.mjs';
 // stamp at all while the sample is up, so her face does not appear beside an
 // invented name.
 const RECORD = RECORDS.real.dir;
-const DIR = join(RECORD, CORE_DATA, 'assets');
+const DIR = join(RECORD, 'assets');
 const ARCHIVE = join(RECORD, 'archive');
 
 // What the browser will render, and nothing else.
@@ -85,13 +83,8 @@ const EXTS = Object.keys(AVATAR_TYPES);
 // A move, never a delete, and never an overwrite. Two replacements inside one
 // second would land on the same name, so the second counts up instead —
 // overwriting is deletion (ARD-007), including in the archive.
-//
-// Dated where she is, like every other date in the record: getToday() read in
-// her own record, directly rather than through lib/content.js, because this is
-// bound to hers whatever the switch says. A bare toISOString() is the UTC date,
-// which east of UTC files a morning's replacement under the day before.
 function archiveCurrent() {
-  const when = inRecord(RECORDS.real, getToday).toISOString().slice(0, 10);
+  const when = new Date().toISOString().slice(0, 10);
   const current = EXTS.map((e) => join(DIR, `avatar.${e}`)).filter(existsSync);
   if (!current.length) return;
 
@@ -203,5 +196,23 @@ export function removeAvatar() {
     return { ok: true, stamp: null };
   } catch (error) {
     return writeFailure(error);
+  }
+}
+
+// Every picture she has had, newest first — the "nothing is deleted" promise
+// made inspectable from code rather than only by opening the folder. Kept for
+// the archive view that does not exist yet.
+//
+// Filtered by name rather than by extension, because the archive is shared with
+// the rest of the record and most of what is in there is markdown.
+export function archivedAvatars() {
+  if (!existsSync(ARCHIVE)) return [];
+  try {
+    return readdirSync(ARCHIVE)
+      .filter((name) => /_avatar(-\d+)?\.[a-z]+$/.test(name))
+      .sort()
+      .reverse();
+  } catch {
+    return [];
   }
 }

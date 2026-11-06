@@ -13,8 +13,8 @@ import { useRouter } from 'next/navigation';
 // router.refresh() rather than location.reload(), and the difference is the
 // whole reason this is pleasant to use: a refresh re-runs the server tree and
 // reconciles the result into the page already there, so client state survives
-// it. The dragged widths of the sidebar, rail and harness panes, an open fold, a
-// scroll position, half-typed text in a filter — all of it is still there
+// it. The dragged widths of the sidebar, rail and review panes, an open fold, a
+// scroll position, half-typed text in a review note — all of it is still there
 // afterwards. A reload would throw every one of them away, and watching the
 // agent write would mean losing your place every few seconds.
 //
@@ -41,21 +41,7 @@ import { useRouter } from 'next/navigation';
 //             that something changed, not a queue to be worked through — however
 //             many arrive while a render is in flight, one catch-up covers them.
 //
-// ── Why a revisit needs nothing more ────────────────────────────────────────
-//
-// Since 2026-10-07 the client router keeps a view it has shown for 30s under
-// `next dev` (staleTimes in next.config.mjs, DES-008), so going back to a tab
-// is instant rather than another 186-300ms render. That cache cannot hold a
-// view a change has overtaken, because every change ends in the refresh below,
-// and router.refresh() clears the whole client cache, not just the route on
-// screen: in Next 16.3.5 its reducer calls invalidateBfCache(), which bumps one
-// global version that every cached route is checked against
-// (next/dist/client/components/router-reducer/reducers/refresh-reducer.js).
-// A tab left before a change is re-read when it is returned to. Tracking
-// routes here as well was tried and dropped the same day: it rendered every
-// revisit after a change twice.
-//
-// Rendered only outside production, by components/shell/Shell.jsx.
+// Rendered only outside production, by app/(dashboard)/layout.jsx.
 export default function WatchForChanges() {
   const router = useRouter();
 

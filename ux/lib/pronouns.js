@@ -5,7 +5,7 @@
 // This app was written throughout for one woman, and said so in every sentence
 // it rendered — "her record", "what she said", "where she is". None of that was
 // a fact about the software. The record holds one person, and who that person is
-// belongs in data/PROFILE.yaml, which is the only file here that describes them;
+// belongs in data/profile.yaml, which is the only file here that describes them;
 // everything else has to be right for whoever opens it.
 //
 // The default is "they", and that is not a fallback so much as the correct
@@ -15,7 +15,7 @@
 //
 // ── Why one word in and three out ───────────────────────────────────────────
 //
-// PROFILE.yaml stores the subject form alone. Storing subject, object and
+// profile.yaml stores the subject form alone. Storing subject, object and
 // possessive as three keys is three chances for them to disagree, and there is
 // no set this app renders where knowing one does not give the other two.
 //

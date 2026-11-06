@@ -20,28 +20,9 @@ export const VIEW_ICON = {
   '/specs': 'spec',
   '/workflow': 'workflow',
   '/changes': 'history',
-  '/backlog': 'layers',
-  // Tiles of unequal size, for the code map: its first drawing is a treemap.
-  '/codemap': 'codemap',
-  // Blocks stacked on a base, for the tech stack: what the system stands on.
-  '/stack': 'stack',
-  // The developer's Agreements and Evals (WKB-002 design 4).
-  '/agreements': 'agreement',
-  '/evals': 'flask',
-};
-
-// The views that share one tab, in switch order, as Segmented options. The tab
-// index lets a tab hold more than one view (dev/specs/ux/tabs/README.md); the
-// rail shows the first and opens on it, and lights it on every view listed.
-export const DATE_VIEWS = [
-  { key: 'timeline', label: 'Timeline', href: '/timeline' },
-  { key: 'calendar', label: 'Calendar', href: '/calendar' },
-];
-
-// Views that belong to an optional module (ARC-006), shown only while that
-// module is switched on — see lib/modules.js. A view not listed here is core.
-export const VIEW_MODULE = {
-  '/therapy': 'therapy',
+  // An inbox tray: the queue the agent fills and a person clears. See `inbox`
+  // in components/ui/icons.jsx.
+  '/review': 'inbox',
 };
 
 export const VIEW_LABEL = {
@@ -56,19 +37,15 @@ export const VIEW_LABEL = {
   '/safety': 'Safety plan',
   '/about': 'About',
   '/harness': 'Harness',
-  '/specs': 'Specs Register',
+  '/specs': 'Specs',
   '/workflow': 'Workflow',
   '/changes': 'Changes',
-  '/backlog': 'For you',
-  '/codemap': 'Code map',
-  '/stack': 'Tech stack',
-  '/agreements': 'Agreements',
-  '/evals': 'Evals',
+  '/review': 'Review',
 };
 
 // A path out of the record, turned into a route in this app.
 //
-// Every timeline line ends with a pointer — `→ data/core/people/person-s.md` — and that
+// Every timeline line ends with a pointer — `→ data/people/sam.md` — and that
 // pointer is the mechanism REC-02 names: a short orienting layer, with
 // everything else reached by pointer rather than by sweeping the folder. The
 // timeline view's own subtitle promises it ("the detail lives in the file it
@@ -84,16 +61,10 @@ export function routeForFile(path) {
     .trim()
     .replace(/^→\s*/, '')
     .replace(/^`|`$/g, '')
-    .replace(/^\.?\/?data\//, '')
-    // core's files sit under data/core/ (CORE_DATA in .claude/hooks/lib/modules.mjs,
-    // not imported here because this file also reaches the browser). A module's
-    // own files keep their folder, which is how therapy/ below is matched.
-    .replace(/^core\//, '');
+    .replace(/^\.?\/?data\//, '');
 
-  // A person's front page, as a page or a folder (FND-004). The other files in a
-  // person's folder have no view of their own.
-  const person = /^people\/([^/]+?)(?:\.md|\/(?:README\.md)?)$/.exec(clean);
-  if (person && person[1] !== 'README') return `/people/${person[1]}`;
+  const person = /^people\/([^/]+)\.md$/.exec(clean);
+  if (person) return `/people/${person[1]}`;
 
   // Anchors match the ids the journal and therapy views give their entries,
   // which are the filenames without the extension.
@@ -135,22 +106,11 @@ export function viewForPath(pathname) {
 // saved to it. Nothing in this app stores such a link — the rail rebuilds itself
 // from the page on every request — so the trade is worth taking here and would
 // not be somewhere with shared URLs.
-//
-// Slugged the way GitHub does it, deliberately: lowercase, everything but
-// letters, digits, spaces, `_` and `-` dropped, each space to its own hyphen,
-// letters outside ASCII kept. The same file is read on GitHub and in this app,
-// and a link that works in one place and not the other is worse than one that
-// works nowhere, because only half the readers find out. So a spec row's heading
-// `PRD-001 • 🌙⚡🎒` lands at `#prd-001--` here as there.
-//
-// One function for the whole app, and no truncation: lib/markdown.js gave a
-// rendered heading its id with a GitHub-style slug while the rails linked to it
-// through a second slug cut at sixty characters, so a long heading carried two
-// anchors and its rail link missed.
 export function slugify(text) {
   return String(text ?? '')
-    .trim()
     .toLowerCase()
-    .replace(/[^\p{L}\p{N}\s_-]/gu, '')
-    .replace(/\s/g, '-');
+    .replace(/[^\w\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-')
+    .slice(0, 60);
 }

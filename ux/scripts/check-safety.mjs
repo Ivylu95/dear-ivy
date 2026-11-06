@@ -32,13 +32,13 @@ const planPath = process.env.DEAR_DATA
   : join(repoRoot, 'data', 'safety', 'safety_plan.md');
 // The crisis script. Harness, never relocated by DEAR_DATA — it is not part of
 // the record, it is what gets said about it.
-const scriptPath = join(repoRoot, 'CLAUDE.md');
+const scriptPath = join(repoRoot, '.claude', 'CLAUDE.md');
 
 function fail(message) {
   console.error(`\n  SAFETY CHECK FAILED\n  ${message}\n`);
   console.error(`  file: ${planPath}`);
   console.error('  Nothing ships until the crisis numbers parse. See SAF-002 in');
-  console.error('  dev/specs/interaction/safety.md.\n');
+  console.error('  specs/interaction/safety.md.\n');
   process.exit(1);
 }
 
@@ -52,19 +52,9 @@ if (!urgentSection(plan)) {
 
 const contacts = parseCrisisContacts(plan);
 
-// Her country (SAF-016), from the setup notes. Outside Singapore her plan holds
-// her country's lines, set at setup from the crisis-lines catalogue, and
-// CLAUDE.md gives those over its Singapore defaults: then a first route and an
-// emergency number are the floor, and the defaults are not expected in her plan.
-// With no country recorded, or Singapore, every rule below holds as before.
-const notesPath = join(dirname(dirname(planPath)), 'core', 'state', 'setup_notes.md');
-const country = existsSync(notesPath) ? readFileSync(notesPath, 'utf8').match(/^- country · (.+)$/m)?.[1].trim() : '';
-const abroad = Boolean(country) && !/^(singapore|sg)$/i.test(country);
-const minimum = abroad ? 2 : MINIMUM_CONTACTS;
-
-if (contacts.length < minimum) {
+if (contacts.length < MINIMUM_CONTACTS) {
   fail(
-    `Only ${contacts.length} number(s) parsed, expected at least ${minimum}.\n` +
+    `Only ${contacts.length} number(s) parsed, expected at least ${MINIMUM_CONTACTS}.\n` +
       `  Found: ${contacts.map((c) => `${c.label} ${c.number}`).join(', ') || 'none'}`,
   );
 }
@@ -86,7 +76,7 @@ for (const c of contacts) console.log(`  ${c.number.padEnd(12)} ${c.label}`);
 //
 // SAF-002's key consideration is not that a number might be absent; it is that
 // "duplicated numbers drift, and the copy that drifts is the one nobody reads
-// until it matters." The crisis script in CLAUDE.md is that second copy,
+// until it matters." The crisis script in .claude/CLAUDE.md is that second copy,
 // and it cannot be replaced by a pointer — SAF-001 requires it in the
 // always-loaded layer, where a file lookup is exactly what is not guaranteed to
 // happen. So the duplication stays and this watches it.
@@ -106,26 +96,23 @@ for (const c of contacts) console.log(`  ${c.number.padEnd(12)} ${c.label}`);
 //                                           here would block a build on
 //                                           something no agent may fix.
 if (!existsSync(scriptPath)) {
-  console.log('safety check: no CLAUDE.md to compare against — skipped.');
+  console.log('safety check: no .claude/CLAUDE.md to compare against — skipped.');
 } else {
   const onFile = new Set(contacts.map((c) => c.number));
   const spoken = spokenNumbers(readFileSync(scriptPath, 'utf8'));
 
   const stale = [...spoken].filter((n) => !onFile.has(n));
-  if (stale.length > 0 && abroad) {
-    console.log('safety check: her plan holds her own country\'s lines; CLAUDE.md gives those over its Singapore defaults (SAF-016).');
-  } else if (stale.length > 0) {
+  if (stale.length > 0) {
     fail(
-      `CLAUDE.md would say ${stale.map((n) => `"${n}"`).join(', ')}, ` +
+      `.claude/CLAUDE.md would say ${stale.map((n) => `"${n}"`).join(', ')}, ` +
         'which is not in her plan.\n' +
         `  Her plan has: ${[...onFile].join(', ')}\n` +
-        '  The crisis script and the record have to agree. Raise it with the\n' +
-        '  developer: the crisis block changes only on their word.',
+        '  The crisis script and the record have to agree. CLAUDE.md is not the\n' +
+        "  agent's to edit — the change goes to data/state/proposals.md.",
     );
   }
 
   const unsaid = [...onFile].filter((n) => !spoken.has(n));
-  if (abroad) process.exit(0);
   console.log(
     `safety check: ${spoken.size} numbers in the crisis script, all of them in her plan` +
       (unsaid.length > 0 ? ` (${unsaid.join(', ')} on file but not recited)` : ''),
