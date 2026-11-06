@@ -22,5 +22,7 @@ Lessons about how the system works, not about the person it serves (CON-017).
   Why: the first run by hand stopped at the claim step after a minute and a half and ended as an error, with no line saying what it waited on.
 - Rule: have the routine step say a run by hand only proves the pipe once the reminders flag has reached main.
   Why: the first run by hand read main before the flag landed, so it reported reminders as not sent.
+- Rule: name the scheduled task as the heartbeat in the routine step, and say how to see a run started, its run list on the task page.
+  Why: the person asked whether the test lived in the heartbeat and whether running it was the test, and the task showed no new run after they reported trying.
 - Rule: when the set-up skill asks for a dated case in a person's copy, point it at this file, since the developer folder is absent.
   Why: the gap rule named a cases file that a person's copy cannot hold or write.
