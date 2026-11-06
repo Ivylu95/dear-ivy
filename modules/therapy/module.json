@@ -1,0 +1,26 @@
+{
+  "standing": {
+    "templates/what_im_working_on.md": "what_im_working_on.md",
+    "templates/therapy-readme.md": "README.md",
+    "templates/adhd-readme.md": "adhd/README.md"
+  },
+  "growing": [
+    "sessions",
+    "adhd"
+  ],
+  "router": [
+    {
+      "she": "has had an appointment",
+      "skill": "therapy:appointment",
+      "must": "Get it down first, discuss second. Her clinician outranks me"
+    }
+  ],
+  "views": {
+    "/therapy": "Therapy"
+  },
+  "chat": {
+    "emoji": "🛋️",
+    "title": "Therapy",
+    "for": "her appointments and what she means to bring to them"
+  }
+}

@@ -11,7 +11,7 @@
 // the ninth looks like a security decision at the moment it is made. It looks
 // like adding a route.
 //
-// `specs/ux/perimeter.md` draws that perimeter, and the spec is normative: if the
+// `dev/specs/ux/perimeter.md` draws that perimeter, and the spec is normative: if the
 // router and the spec disagree, the router is wrong. But a map nothing compares
 // against the territory is a map that drifts, which is the criticism the spec's
 // own Perimeter section invites. This is the comparison.
@@ -51,14 +51,16 @@
 // because it never opens a file that holds any.
 
 import { existsSync, readFileSync } from 'node:fs';
+import { readdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { SPECS_DIR } from '../../.claude/hooks/lib/paths.mjs';
 
 const ux = dirname(dirname(fileURLToPath(import.meta.url)));
 const repoRoot = dirname(ux);
 
 const GATE = join(ux, 'proxy.js');
-const SPEC = join(repoRoot, 'specs', 'ux', 'perimeter.md');
+const SPEC = join(repoRoot, SPECS_DIR, 'ux', 'perimeter.md');
 
 const findings = [];
 
@@ -71,11 +73,26 @@ function read(path, label) {
 }
 
 const gate = read(GATE, 'the gate');
-const spec = read(SPEC, 'the perimeter spec');
+
+// The openings dev/specs/ux/perimeter.md names (its lines marked `# open:`),
+// carried here so the check holds in a copy that runs without the design
+// (ARC-008). Where the spec is present, the two are compared below, so a
+// change to the spec that this number has not followed fails here first.
+const NAMED_OPENINGS = 4;
+const spec = existsSync(SPEC) ? readFileSync(SPEC, 'utf8') : null;
+if (spec) {
+  const inSpec = [...spec.matchAll(/#\s*open:/g)].length;
+  if (inSpec !== NAMED_OPENINGS) {
+    findings.push(
+      `the perimeter spec names ${inSpec} openings and this check carries ${NAMED_OPENINGS}: ` +
+        `update NAMED_OPENINGS in ux/scripts/check-perimeter.mjs to follow the spec`,
+    );
+  }
+}
 
 // ── Count ───────────────────────────────────────────────────────────────────
 
-if (gate && spec) {
+if (gate) {
   // The allowlist literal, as written. Parsing rather than importing: this file
   // must be readable without executing the gate or pulling in its dependencies,
   // and a check that runs the thing it is checking can be defeated by it.
@@ -93,8 +110,7 @@ if (gate && spec) {
     const excuses = /\(\?!([^)]*)\)/.test(gate) ? 1 : 0;
     const openings = allow.length + excuses;
 
-    // Openings the spec names: lines inside the Perimeter block marked `# open:`.
-    const named = [...spec.matchAll(/#\s*open:/g)].length;
+    const named = NAMED_OPENINGS;
 
     if (named === 0) {
       findings.push(
@@ -104,7 +120,7 @@ if (gate && spec) {
       findings.push(
         `the gate has ${openings} openings; the perimeter spec names ${named}. ` +
           `Widening the gate is a change to the perimeter: add the opening to ` +
-          `specs/ux/perimeter.md, or take it out of the router`,
+          `dev/specs/ux/perimeter.md, or take it out of the router`,
       );
     } else if (openings < named) {
       // Not a security failure — the gate is tighter than the spec allows. Still
@@ -160,6 +176,60 @@ if (gate) {
             `any character, so a near-miss of that name bypasses the gate too`,
         );
       }
+    }
+  }
+}
+
+// ── Browser storage (DPV-006) ───────────────────────────────────────────────
+//
+// "What the browser keeps is never the record." Only the modules that hold
+// presentation preferences may write to browser storage, and none of them may
+// reach the record's reader or resolver. A new file that writes storage, or a
+// listed one that starts importing the record, fails here, so the choice to
+// put something in the browser is made in this list and not by accident.
+
+const PRESENTATION_WRITERS = [
+  'ux/lib/theme.js',
+  'ux/lib/sidebar.js',
+  'ux/lib/rail-fold.js',
+  'ux/lib/pane-width.js',
+  'ux/components/shell/PaneSeam.jsx',
+  'ux/components/shell/AppSwitch.jsx',
+];
+const RECORD_READERS = /['"`](?:[^'"`\n]*\/)?(?:content|data-dir)(?:\.js)?['"`]|['"`][^'"`\n]*\/data\/[^'"`\n]*['"`]/;
+const SOURCE = /\.(?:c?js|mjs|jsx)$/;
+
+function walk(dir, out) {
+  if (!existsSync(dir)) return;
+  for (const e of readdirSync(dir, { withFileTypes: true })) {
+    if (e.name === 'node_modules' || e.name.startsWith('.')) continue;
+    const full = join(dir, e.name);
+    if (e.isDirectory()) walk(full, out);
+    else if (SOURCE.test(e.name)) out.push(full);
+  }
+}
+
+const sources = [];
+for (const base of ['ux/app', 'ux/components', 'ux/lib', 'dev/ui/app', 'dev/ui/components', 'dev/ui/lib']) {
+  walk(join(repoRoot, base), sources);
+}
+for (const file of sources) {
+  const rel = file.slice(repoRoot.length + 1);
+  const text = readFileSync(file, 'utf8');
+  if (!/(?:localStorage|sessionStorage)\s*\.\s*setItem\s*\(/.test(text)) continue;
+  if (!PRESENTATION_WRITERS.includes(rel)) {
+    findings.push(
+      `${rel} writes browser storage but is not a listed presentation module (DPV-006): ` +
+        `what the browser keeps is never the record. Add it to PRESENTATION_WRITERS only if it holds a preference`,
+    );
+    continue;
+  }
+  for (const m of text.matchAll(/^\s*import\b[^\n]*$/gm)) {
+    if (RECORD_READERS.test(m[0])) {
+      findings.push(
+        `${rel} writes browser storage and imports ${m[0].trim()}: a module that keeps things in the ` +
+          `browser must not read the record (DPV-006)`,
+      );
     }
   }
 }

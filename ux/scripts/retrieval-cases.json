@@ -1,0 +1,62 @@
+[
+  {
+    "id": "job",
+    "question": "What is her job, and which area of the lab does she work in?",
+    "expect": ["biomedical", "haematology"],
+    "file": "core/me/about_me.md"
+  },
+  {
+    "id": "person-b",
+    "question": "Who is Person-B to her?",
+    "expect": ["manager"],
+    "file": "core/people/person-b.md"
+  },
+  {
+    "id": "climbing-back",
+    "question": "On what date did she go back to Thursday climbing?",
+    "expect": ["2026-08-23"],
+    "file": "core/timeline.md"
+  },
+  {
+    "id": "sleep-clinic",
+    "question": "When is her first sleep clinic appointment?",
+    "expect": ["2026-11-20"],
+    "file": "core/calendar/calendar.md"
+  },
+  {
+    "id": "person-e-letter",
+    "question": "In Person-E's letter postmarked July 2026, what flowers did she say were growing up the fence?",
+    "expect": ["sweet pea"],
+    "file": "core/people/person-e/letters/2026-07-02.md"
+  },
+  {
+    "id": "earliest",
+    "question": "What is the earliest event in her timeline? Give its date and say what happened.",
+    "expect": ["2025-11-03", "rota"],
+    "file": "core/timeline.md"
+  },
+  {
+    "id": "helps-failed",
+    "question": "What did the GP give her for sleep that she tried and found did not help?",
+    "expect": ["sleep hygiene"],
+    "file": "core/me/what_helps.md"
+  },
+  {
+    "id": "spring-word",
+    "question": "What phrase has she asked to be used for the spring of 2026, instead of 'a breakdown'?",
+    "expect": ["one i lost"],
+    "file": "core/me/how_to_talk_to_me.md"
+  },
+  {
+    "id": "profile-removed",
+    "question": "Which profile answer did she ask to have taken out in September 2026?",
+    "expect": ["work"],
+    "file": "archive/2026-09-12_profile-work_or_study.md"
+  },
+  {
+    "id": "person-w-surname",
+    "question": "What is Person-W's surname?",
+    "expect": ["not recorded"],
+    "file": "core/people/person-w.md"
+  }
+]

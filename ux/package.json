@@ -5,29 +5,40 @@
   "description": "A read surface over the record. Reads the markdown in data/ at request time; no database. Runs on localhost under next dev, behind a login gate. Never hosted: it runs on her machine only.",
   "scripts": {
     "predev": "node scripts/dashboard.mjs ensure-accounts",
-    "dev": "next dev -p 3220 -H 127.0.0.1",
+    "dev": "node scripts/dev.mjs",
     "dev:sample": "node scripts/dashboard.mjs sample",
     "build": "node scripts/dashboard.mjs ensure-accounts && npm run check && npm run gen:theme && next build",
     "dashboard": "node scripts/dashboard.mjs",
     "gen:theme": "node scripts/generate-theme.mjs",
     "lint": "eslint app components lib",
-    "check": "node scripts/check-safety.mjs && node scripts/check-config.mjs && node scripts/check-privacy.mjs && node scripts/check-links.mjs && node scripts/check-perimeter.mjs && node scripts/check-record-paths.mjs && node scripts/sandbox.mjs check",
+    "check": "node lib/run-checks.mjs",
+    "work": "node scripts/dev.mjs --work",
+    "git:reconcile": "node scripts/git-reconcile.mjs",
+    "remote": "node scripts/remote.mjs",
     "spec:move": "node scripts/spec-move.mjs",
-    "spec:banner": "node scripts/check-spec-banner.mjs"
+    "spec:banner": "node scripts/check-spec-banner.mjs",
+    "spec:lint": "node scripts/spec-lint.mjs",
+    "spec:map": "node ../.claude/hooks/lib/spec-map.mjs",
+    "spec:stress": "node scripts/spec-stress.mjs",
+    "modules": "node scripts/modules.mjs",
+    "hygiene": "node scripts/check-hygiene.mjs",
+    "retrieval": "node scripts/check-retrieval.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "js-yaml": "^4.3.2",
-    "marked": "^14.1.2",
+    "js-yaml": "^5.5.0",
+    "marked": "^18.1.2",
     "next": "^16.3.4",
     "react": "^19.3.0",
     "react-dom": "^19.3.0"
   },
   "devDependencies": {
-    "eslint": "^9.39.5",
-    "eslint-config-next": "^16.3.4"
+    "eslint": "^10.13.0",
+    "eslint-config-next": "^16.3.4",
+    "jscpd": "5.4.2",
+    "knip": "6.43.0"
   },
   "engines": {
-    "node": ">=20.9.0"
+    "node": ">=22"
   }
 }

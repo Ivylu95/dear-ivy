@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Actions, Button, Enter, Note, PageHead } from '@/components/ui';
 
 // The 404 for routes INSIDE the shell, where the sidebar and the rail stay up —
 // being lost somewhere you are allowed to be is a different problem from landing
@@ -9,17 +9,15 @@ import Link from 'next/link';
 // here is very often a file that has not been written yet rather than a mistake.
 export default function NotFound() {
   return (
-    <div className="enter">
-      <h1 className="page-title">Nothing written here</h1>
-      <p className="note">
+    <Enter>
+      <PageHead title="Nothing written here" />
+      <Note>
         That page does not exist — or that file has not been written yet, which
         happens far more often and is not a fault.
-      </p>
-      <div className="actions">
-        <Link className="btn" href="/">
-          Back to Now
-        </Link>
-      </div>
-    </div>
+      </Note>
+      <Actions>
+        <Button href="/">Back to Now</Button>
+      </Actions>
+    </Enter>
   );
 }

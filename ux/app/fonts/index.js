@@ -14,10 +14,9 @@ import localFont from 'next/font/local';
 // then carried everything quoted exactly: paths, hashes, dates, counts.
 //
 // Both are gone, on the owner's explicit instruction, and the second one costs
-// something real: a file path in a sentence and a block of source in the harness
-// viewer no longer have a face of their own, only a tinted ground. That is a
-// departure from DES-005, which the agent may not amend, so it is recorded in
-// .claude/REVIEW.md for a person to clear.
+// something real: a file path in a sentence no longer has a face of its own,
+// only a tinted ground. Code blocks take the device's monospace through the
+// f-code token in theme/palette.mjs, which downloads nothing (DES-005).
 //
 // The serif does all of the work here. Her record is prose — entries, quotes,
 // what she said — and a reading face rather than an interface face is what makes

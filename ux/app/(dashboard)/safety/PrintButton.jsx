@@ -1,6 +1,7 @@
 'use client';
 
 import { useSyncExternalStore } from 'react';
+import { Button } from '@/components/ui';
 
 // The only button in the app that does something, and it is on the safety plan.
 //
@@ -27,8 +28,8 @@ export default function PrintButton() {
   if (!mounted) return null;
 
   return (
-    <button type="button" className="btn print-btn" onClick={() => window.print()}>
+    <Button className="print-btn" onClick={() => window.print()}>
       Print a copy
-    </button>
+    </Button>
   );
 }

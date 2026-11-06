@@ -7,7 +7,7 @@
    Nothing else in the app styles rendered markdown, and a rule that wants to
    belongs here rather than beside the view that noticed it first.
 
-   The reference case is specs/system/ARCHITECTURE.md read in the harness. It is
+   The reference case is dev/specs/system/ARCHITECTURE.md read in the harness. It is
    the document that exercises the whole contract at once — a callout, four-column
    registers, source tags, code spans, anchored headings and anchored rows — so it
    is what these rules are tuned against, and what every other markdown file in
@@ -513,7 +513,7 @@
 /* Tables in these documents are registers — four or five columns, most of them
    full sentences — and they are read inside the harness panel, which can be
    narrower than a phone. Left to itself the browser gives every column a share
-   of 100% and starves the narrow one: an identifier like APPEND-ONLY or ARC-011
+   of 100% and starves the narrow one: an identifier like APPEND-ONLY or FND-003
    is the shortest text in the row, so it is what gets crushed, and it then
    breaks at its own hyphen into APP / END- / ONL / Y.
 
@@ -626,16 +626,8 @@
    it takes the card it is in.
 
    Scoped to the panel, so her record keeps its measure untouched — the same
-   :has() boundary as everything else in that view.
-
-   The review panel answers the same question the same way. A finding is read in
-   a panel that was widened on purpose, and the two used to disagree: this one
-   dropped to ragged right on the reasoning that justification opens holes across
-   a wide line, while ARCHITECTURE.md beside it stayed justified at the same
-   width. One question, one answer — the reference case wins, `hyphens: auto` is
-   what makes it affordable, and the two are now one rule. */
-.harness-panel .prose,
-.review-said {
+   :has() boundary as everything else in that view. */
+.harness-panel .prose {
   max-width: none;
 }
 
@@ -664,10 +656,6 @@
 .harness-panel .prose td {
   text-align: left;
   hyphens: manual;
-}
-
-.review-said > :first-child {
-  margin-top: 0;
 }
 
 /* The safety plan, whose sheet is wider than the reading column on purpose —
@@ -724,3 +712,67 @@
    clearing the harness's pinned band, declared beside `.harness-panel [id]`,
    which it exists to out-specify. It is about that band's height, not about how
    markdown is set. */
+
+/* ── A spec register's row ──────────────────────────────────────────────────
+   Each row of a register is a section of its own (dev/specs/README.md); the
+   Specs tab sets it as one block, so a row reads as a unit on a phone: its ID
+   and short name, the statement it holds, then why and how. Built by
+   specRowBlocks() in dev/ui/lib/harness.js from the rendered markdown; the
+   anchor is the row's ID, the same one its table row carried (DES-006). */
+
+.prose .spec-row {
+  margin-block: 1.1em;
+  padding: 0.85em 1em 0.9em;
+  border: var(--line-w) solid var(--line-soft);
+  border-radius: var(--r2);
+  background: var(--panel-2);
+}
+
+.prose .spec-row-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25em 0.6em;
+}
+
+.prose .spec-row-id {
+  font-size: var(--text-fine);
+  font-weight: var(--w-medium);
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: var(--line-w) solid var(--accent-border);
+  border-radius: var(--r2);
+  padding: 0.05em 0.45em;
+}
+
+.prose .spec-row-name {
+  font-family: var(--f-display);
+  font-weight: var(--w-medium);
+  color: var(--fg-dim);
+}
+
+.prose .spec-row-statement {
+  margin-top: 0.55em;
+  font-weight: var(--w-strong);
+}
+
+.prose .spec-row-parts {
+  margin-top: 0.6em;
+}
+
+.prose .spec-row-parts dt {
+  margin-top: 0.5em;
+  font-size: var(--text-meta);
+  font-weight: var(--w-medium);
+  color: var(--fg-dimmer);
+}
+
+.prose .spec-row-parts dd {
+  margin: 0.1em 0 0;
+}
+
+.prose .spec-row-why {
+  color: var(--fg-dim);
+  font-size: var(--text-meta);
+}

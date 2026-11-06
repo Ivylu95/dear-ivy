@@ -1,0 +1,517 @@
+/* ── Sidebar ─────────────────────────────────────────────────────────────── */
+
+/* Two elements, not one. .sidebar reserves the column in the shell's flex row;
+   .sidebar-inner is the panel that actually draws. Collapsed, the outer stays
+   narrow while the inner widens on hover, so the peek floats OVER the page
+   instead of shoving it sideways. */
+/* The default the reader's own width falls back to. One home for the number:
+   lib/sidebar-width.js clamps against its own bounds and never carries a copy of
+   this. */
+:root {
+  --sidebar-w: 248px;
+  /* The collapsed rail's width, and the width the peek opens to over the page.
+     Named because the panel's clip, its lift and the column all have to agree
+     on them. */
+  --sidebar-rail-w: 64px;
+  --sidebar-peek-w: 248px;
+  /* The phone drawer's width (responsive.css): the panel and its lift, which
+     slides with it, must be the same box. */
+  --sidebar-drawer-w: 272px;
+}
+
+/* The column snaps; only the panel moves. A width transition here reflowed the
+   reading column on every frame of the collapse (DES-002, DES-008), so the
+   column takes its new width at once and the fixed panel above it carries the
+   whole motion, by clip — see .sidebar-inner. */
+.sidebar {
+  flex: 0 0 auto;
+  width: var(--sidebar-w);
+}
+
+/* The lift under the floating panel, as its own layer so it fades by opacity
+   rather than interpolating a three-layer box-shadow every frame. On .sidebar
+   rather than on the panel because the panel's clip would cut it off. It rides
+   the panel's edge: the same duration and easing as the clip, and a translate
+   that covers the same distance. Desktop shows it only for the peek; the phone
+   drawer reuses it (responsive.css). */
+.sidebar::after {
+  content: '';
+  position: fixed;
+  top: var(--sample-bar);
+  bottom: 0;
+  left: 0;
+  width: var(--sidebar-peek-w);
+  z-index: calc(var(--z-rail) - 1);
+  pointer-events: none;
+  box-shadow: var(--lift-right);
+  opacity: 0;
+  transform: translateX(calc(var(--sidebar-rail-w) - var(--sidebar-peek-w)));
+  transition:
+    opacity var(--dur) var(--ease),
+    transform var(--dur) var(--ease);
+}
+
+/* The lift a panel gets when it stops reserving space and starts floating over
+   the page — the collapsed rail-s peek, and the mobile drawer. Three layers
+   rather than one: a tight contact shadow to seat the edge, a mid layer for the
+   lift and a wide one for the falloff. A single soft shadow at this alpha reads
+   as nothing against warm paper, which is how the peek ended up looking like a
+   hard cut through the text behind it. */
+:root {
+  --lift-right:
+    2px 0 4px -2px var(--shadow),
+    10px 0 20px -8px var(--shadow-lift),
+    28px 0 48px -18px var(--shadow-lift);
+  /* The same idea cast downward, for the one card that floats on its own
+     ground: the sign-in panel. It had this as a literal, the only shadow in the
+     app not named here. */
+  --lift-modal: 0 18px 48px -24px var(--shadow-lift);
+}
+
+/* The height the sample strip reserves at the top of the viewport, and zero in
+   every other case — so the three things pinned to the top of the window (the
+   rail's sticky column, the fixed sidebar, the mobile header) offset by it
+   without any of them knowing what it is for. */
+:root {
+  --sample-bar: 0px;
+}
+
+/* The air above the reading column's first line — the page's own top padding,
+   carried on .main below the breakpoint and moved onto .main-inner above it,
+   where .main is the scroller and padding on a scroller pushes every pin line
+   down with it. Named rather than repeated because the harness index pins AT
+   it: a column whose sticky offset is a literal drifts by the difference the
+   moment that padding changes, and a drifting column is one that scrolls a
+   little before it decides not to. */
+:root {
+  --page-top: 44px;
+}
+
+/* The height of one heading row in the right rail, and the unit the whole column
+   stacks in.
+
+   Expressed rather than measured, for the reason --harness-band is: the label is
+   typed from the character — 9.5px in the default and 11.5px in Open — so a
+   fixed number would leave the heads overlapping by two pixels in one reading
+   style and gapped in the other. The 21 is the 12 above the word, the 8 below
+   it, and the hairline that closes the row. */
+:root {
+  --rail-head-h: calc(var(--text-label) * 1.45 + 21px);
+}
+
+/* The air above the right rail's first heading.
+
+   Outside the scroller, deliberately, and it is the only place it can be. A
+   sticky heading has to pin exactly where it already sits, or it jumps on the
+   first pixel of scroll; and whatever lies between the scrollport's top edge and
+   that pin line is a band the block scrolls THROUGH, in full view. Padding on
+   the scroller gives both problems at once. As a margin the scroll box simply
+   begins lower: the heading's resting place and its pin line are the same pixel,
+   and there is no band above it for anything to appear in. */
+:root {
+  --rail-air: 46px;
+}
+
+/* And the air under its last line. Named for the same reason as the air above
+   it, and one more: a view with a sticky column has to hand this padding to the
+   column that HOLDS that sticky element rather than keep it on the scroller —
+   see .main:has(.harness-split). Padding on the scroller is scroll range that
+   lies outside the sticky element's containing block, so the column runs out of
+   block to stick in and rides the last stretch of the scroll up off the top.
+   Two places have to agree on the number; they agree on this. */
+:root {
+  --page-bottom: 96px;
+}
+
+:root.is-sample {
+  --sample-bar: 30px;
+}
+
+/* And the third band, which is not pinned to the window but to the top of the
+   reading column: the section heading in the harness panel, which stays put
+   while the section under it scrolls.
+
+   It is expressed rather than measured because the heading it paints is typed
+   from the character — 22px in the default and 25px in Open — so a fixed number
+   would clear the band on one reading style and not on another. The 25 is the 12
+   above the words, the 12 below them, and the hairline that closes it. */
+:root {
+  --harness-band: calc(var(--h2-size) * 1.25 + 25px);
+}
+
+/* And the same idea for the mobile header, which is the other band that owns the
+   top of the window — 0 above the breakpoint, where there is no header, and its
+   real height below it. Anything pinning itself under the top of the page adds
+   the two together and does not have to know which of them is there. */
+:root {
+  --header-bar: 0px;
+}
+
+@media (max-width: 900px) {
+  :root {
+    /* Height PLUS the safe-area inset: the bar paints the strip under the clock
+       itself — see .mobile-header, which sets this as its height. */
+    --header-bar: calc(54px + env(safe-area-inset-top));
+  }
+}
+
+/* Fixed, full width, above everything including the rotate lock. A fabricated
+   record that does not say so is the worst thing this app could render, so this
+   is not dismissible, not a toast, and not behind a route.
+
+   On --accent-* rather than --warn-*, which is the same three values on
+   var(--hue) instead of a fixed amber. Two reasons. It is not a warning —
+   nothing is wrong, and dressing it as a fault teaches her to dismiss the one
+   strip that must never be dismissed. And it was the last element in the app
+   that ignored the colour she chose, so on nine of the twelve hues it read as a
+   piece of someone else's interface stuck to the top of hers. */
+.sample-flag {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: calc(var(--z-lock) + 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: var(--sample-bar);
+  padding: 0 12px;
+  background: var(--accent-bg);
+  color: var(--accent-fg);
+  border-bottom: 1px solid var(--accent-border);
+  font-size: var(--text-meta);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Arrives rather than appears. The strip is 30px of quiet text at the very
+     top of the window, which is precisely where a reader's eye is not — so it
+     drops in once, after first paint, to be seen being added. */
+  animation: sample-in 460ms var(--ease) 120ms both;
+}
+
+.sample-flag strong {
+  font-weight: var(--w-strong);
+}
+
+/* And then keeps asking, permanently. A soft highlight crosses the strip and
+   begins again, so there is never a stretch of time in which the strip is
+   indistinguishable from a static bar — a tab left open all afternoon still
+   says what it is showing.
+
+   It sweeps toward the TEXT colour, not away from it. The first version washed
+   white, which is invisible by construction: the strip's ground is
+   --accent-bg, already within a few percent of white, so a white highlight had
+   nothing to contrast against and the motion could not be seen at all. Mixing
+   from currentColor instead means the band darkens the pale grounds and lightens
+   the dark ones, because currentColor IS --accent-fg — legible on this strip in
+   both themes by definition, since that is the one thing it is chosen for.
+
+   Low percentages doing visible work, which is the whole trick: a band at 18% of
+   the text colour is unmistakable as movement and still nowhere near reading as
+   a second element on the strip. A wide band with soft shoulders rather than a
+   narrow bright line, so what crosses is a change in the light rather than an
+   object travelling past.
+
+   The gap between passes comes from the geometry, not from a pause — the band is
+   off both ends of the strip at the extremes of its travel — which keeps the
+   cycle from reading as a conveyor.
+
+   The reduced-motion rule at the foot of this file cuts both animations to a
+   single 0.01ms pass. That is why each ends where it should rest: the strip
+   fully down, the band already gone past the right edge. */
+.sample-flag::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 45%;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    color-mix(in oklab, currentColor 5%, transparent) 26%,
+    color-mix(in oklab, currentColor 18%, transparent) 50%,
+    color-mix(in oklab, currentColor 5%, transparent) 74%,
+    transparent 100%
+  );
+  animation: sample-sheen 4.2s linear infinite;
+}
+
+@keyframes sample-in {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes sample-sheen {
+  from {
+    transform: translateX(-110%);
+  }
+  to {
+    transform: translateX(330%);
+  }
+}
+
+/* The stacking order, written down once.
+
+   These were seven bare numbers scattered through the file — 5, 19, 20, 30, 60,
+   100, 200 — and the only record of how they related to each other was a
+   sentence in the comment above .menu saying which two it had to clear. Naming
+   them makes the order readable, and the toggle is expressed as one below the
+   rail rather than as the number 19, so the pair cannot drift apart. */
+/* How long a row takes to answer the pointer, and how long it takes to let go.
+
+   In is an alias rather than a number, so a change to the motion scale in
+   theme/palette.mjs still reaches every hover. Out is zero, and zero is not a
+   duration the scale has an opinion about — see "How a row answers the pointer"
+   further down, where the pair is used and argued. */
+:root {
+  --hover-in: var(--dur-fast);
+  --hover-out: 0ms;
+}
+
+:root {
+  --z-sticky: 5;
+  --z-rail: 20;
+  --z-header: 30;
+  --z-menu: 60;
+  --z-skip: 100;
+  --z-lock: 200;
+}
+
+.sidebar-inner {
+  position: fixed;
+  top: var(--sample-bar);
+  bottom: 0;
+  left: 0;
+  width: var(--sidebar-w);
+  z-index: var(--z-rail);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 22px 14px 16px;
+  background-color: var(--panel);
+  /* The same tooth as the body, so the column reads as a second sheet of the
+     same paper rather than as a flat chrome strip bolted to the side of it.
+     background-color and background-image separately, not the shorthand: the
+     shorthand resets the image every time the colour is set. */
+  background-image: var(--grain);
+  overflow: hidden;
+}
+
+html.nav-collapsed .sidebar {
+  width: var(--sidebar-rail-w);
+}
+
+html.nav-collapsed .sidebar-inner {
+  width: var(--sidebar-rail-w);
+}
+
+/* The peek. Hover or KEYBOARD focus reopens the panel to full width without the
+   page reflowing, because only .sidebar-inner moves.
+
+   :focus-visible, not :focus-within. A mouse click leaves DOM focus on whatever
+   was clicked, so :focus-within held the rail open after the pointer had gone —
+   click Collapse and it stayed at 248px until you clicked somewhere else, which
+   is the one moment the control is meant to be most obviously working. Clicking
+   any nav link did the same. :focus-visible is the distinction that was wanted
+   all along: hold it open for someone tabbing through, not for someone who just
+   clicked something.
+
+   The third selector keeps it open while the settings panel is up. That panel is
+   portalled to <body>, so hovering it does not hover the rail, and without this
+   the rail would shrink out from under its own open menu.
+
+   These and the label rules below have to change together: a width rule that
+   collapses while the label rule still shows full-width labels puts clipped text
+   in a 64px column. */
+html.nav-collapsed .sidebar-inner:hover,
+html.nav-collapsed .sidebar-inner:has(:focus-visible),
+html.nav-collapsed .sidebar-inner:has(.settings-trigger[aria-expanded='true']) {
+  width: var(--sidebar-peek-w);
+}
+
+/* How the panel travels between those widths, on a wide screen only: the phone
+   drawer slides by transform instead and sets its own transitions
+   (responsive.css), which these selectors would otherwise outweigh.
+
+   The collapse is drawn by the clip, never by the width: a clip is paint only,
+   where a width animation re-laid the whole panel out on every frame. Widening,
+   the width jumps first and the clip opens over it; narrowing, the clip closes
+   and the width follows only once it has (the delayed 0s), so the content is
+   never laid out narrower than what is on show. Each end state is the same box
+   at the same width it always was. */
+@media (min-width: 901px) {
+  .sidebar-inner {
+    clip-path: inset(0);
+    transition: clip-path var(--dur) var(--ease);
+  }
+
+  html.nav-collapsed .sidebar-inner {
+    clip-path: inset(0 calc(100% - var(--sidebar-rail-w)) 0 0);
+    transition:
+      clip-path var(--dur) var(--ease),
+      width 0s linear var(--dur);
+  }
+
+  html.nav-collapsed .sidebar-inner:hover,
+  html.nav-collapsed .sidebar-inner:has(:focus-visible),
+  html.nav-collapsed .sidebar-inner:has(.settings-trigger[aria-expanded='true']) {
+    clip-path: inset(0);
+    transition: clip-path var(--dur) var(--ease);
+  }
+
+  /* The peek's lift, keyed to the same three states. */
+  html.nav-collapsed .sidebar:has(.sidebar-inner:hover)::after,
+  html.nav-collapsed .sidebar:has(.sidebar-inner :focus-visible)::after,
+  html.nav-collapsed .sidebar:has(.settings-trigger[aria-expanded='true'])::after {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* The lockup: mark, wordmark, tagline.
+
+   Built on the wordmark's cap height, which is the unit a lockup is measured in.
+   The gap between mark and text is about a third of the type size, and the mark
+   is centred on the two-line block rather than on the wordmark alone.
+
+   The tagline is the serif italic, not the sans. It is the one decision here
+   that is taste rather than arithmetic, and the argument for it is that "Dear
+   Dear <name>" is a salutation: a letter's subtitle is set in the letter's own hand, and
+   a sans line underneath reads as an app's strapline bolted to a book's title.
+   The pen's written stroke happens to land at the tagline's height, which is a
+   gift from the artwork rather than a plan. */
+.brand {
+  display: flex;
+  align-items: center;
+  /* A third of the block height, which is the clearance rule now that the mark
+     is measured against the block rather than against the wordmark alone.
+     Trimming the mark's viewBox is what made this necessary: the old gap was
+     borrowing about 3px of air from inside the icon's own box, and once that
+     went the same number read as packed. 14 also works and looks slightly
+     better, but leaves only 4px before the tagline clips. */
+  gap: 12px;
+  padding: 4px 10px 18px;
+  color: var(--accent);
+}
+
+/* The two lines, as one column. Everything the mark is measured against. */
+/* A label stacked over its own second line: a name with a description under it,
+   a filename with its gloss, an editor's field with its hint. min-width:0 is the
+   load-bearing third of it — without it the column refuses to shrink below its
+   longest word and pushes whatever sits beside it off the row. Declared once per
+   DES-001; each member keeps only the gap it sets between the two lines. */
+.brand-text,
+.avatar-editor-side,
+.harness-what {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* The wordmark, in both places it appears: the rail and the login card. One
+   rule, because the two silently diverged once already. */
+.brand-name,
+.login-title {
+  font-family: var(--f-display);
+  font-weight: var(--w-medium);
+  /* Newsreader carries an optical-size axis (6-72), and the browser sets it
+     automatically to match the pixel size — so at 23px the wordmark was being
+     drawn with the 23pt TEXT cut: sturdier hairlines, looser fit, everything a
+     face needs to survive being read in paragraphs.
+
+     A wordmark is not read in paragraphs. It is set small but wants to look like
+     display type, and that is a distinction the automatic mapping cannot make,
+     because it only knows the size and not the job. Pinned to 44 it gets the
+     finer hairlines and crisper serifs of the display cut, which is the whole
+     reason the axis exists. Checked at 1x as well as 3x: it does not go thin.
+
+     The only override of its kind in the app. Everywhere else the automatic
+     mapping is right, because everywhere else the size IS the job. */
+  font-variation-settings: 'opsz' 44;
+  letter-spacing: 0.003em;
+  color: var(--fg);
+  /* The name is the one string here nobody can bound. A short one fits; a longer
+     one has to degrade rather than break, so it truncates instead of overflowing
+     or wrapping. Wrapping was the other option and is worse: it changes the
+     block's height, and the rail animates its width, so a name that re-wraps
+     mid-animation makes the whole sidebar jump. Truncating holds the height
+     fixed at every width. The full text stays in the DOM for screen readers, and
+     the title attribute gives it back on hover. */
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* The only thing that differs between the two. */
+.brand-name {
+  font-size: var(--size-wordmark);
+  line-height: 1.05;
+}
+
+/* No indent: it is in the same column as the wordmark, so it aligns by
+   construction. It truncates for the same reason the name does — the rail is a
+   fixed width and this line is the one most likely to be reworded. */
+.brand-tag {
+  margin-top: 4px;
+  font-family: var(--f-serif);
+  font-style: italic;
+  /* Roughly half the wordmark. A tagline wants to be read second, and at 13.5 it
+     was close enough in size to the name that the eye had to choose. */
+  font-size: var(--size-wordmark-tag);
+  line-height: 1.3;
+  letter-spacing: 0.008em;
+  color: var(--fg-dimmer);
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Everything that only makes sense at full width fades rather than unmounting,
+   so links keep their accessible names and nothing reflows mid-animation. */
+.brand-name,
+.brand-tag,
+.nav-label,
+.nav-count,
+.nav-section-label,
+.sidebar-toggle-label,
+.settings-label,
+.settings-flag,
+.foot-link-label,
+.profile-name {
+  opacity: 1;
+  transition: opacity var(--dur-fast) var(--ease);
+}
+
+/* The collapsed, un-peeked rail, written once with the labels grouped in :is().
+   Every argument is one class, so :is() weighs exactly what each long selector
+   did (0,7,1). The phone drawer's override under the 900px query repeats the
+   chain and must keep the same weight, or it stops winning. */
+html.nav-collapsed .sidebar-inner:not(:hover):not(:has(:focus-visible)):not(:has(.settings-trigger[aria-expanded='true']))
+  :is(
+    .brand-name,
+    .brand-tag,
+    .nav-label,
+    .nav-count,
+    .nav-section-label,
+    .sidebar-toggle-label,
+    .settings-label,
+    .settings-flag,
+    .foot-link-label,
+    .profile-name,
+    .profile-switch
+  ) {
+  opacity: 0;
+  pointer-events: none;
+}

@@ -16,7 +16,7 @@ const PATHS = {
   // moment takes the one glyph that is about light rather than paper.
   now: 'M9 18h6m-5 3h4M12 2a7 7 0 0 0-4 12.8V17h8v-2.2A7 7 0 0 0 12 2Z',
   // Three dated rows: a short mark for the date, a longer one for what happened,
-  // stacked in order. Which is what `data/timeline.md` literally looks like.
+  // stacked in order. Which is what `data/core/timeline.md` literally looks like.
   //
   // It was a vertical spine with events hung off it — true to the file, and it
   // did not survive being small. At 16px, the size the rail actually uses, the
@@ -56,6 +56,10 @@ const PATHS = {
   // what this holds is her.
   safety: 'M12 21s7-3.6 7-9V6.2a1 1 0 0 0-.7-1L12 3 5.7 5.2a1 1 0 0 0-.7 1V12c0 5.4 7 9 7 9Zm-2.6-9.3 1.9 1.9 3.8-4',
   about: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0-4v-5m0-4v.01',
+  // The two sides of the dashboard switch (WKB-002): a person for hers, and a
+  // console prompt for the developer's. Not a shield, which is the Safety plan's.
+  user: 'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 8a7 7 0 0 1 14 0',
+  terminal: 'M5 16.5 9.5 12 5 7.5M12.5 17H19',
   // A clock with its hand turned back, for the Changes tab: what the system did,
   // in the order it did it. Chosen by the owner over git's node-on-a-line, which
   // said "commit" to a developer and nothing to anyone else. The cost, weighed
@@ -83,6 +87,10 @@ const PATHS = {
   moon: 'M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z',
   monitor: 'M3 4h18v12H3V4Zm5 16h8m-4-4v4',
   chevron: 'm9 6 6 6-6 6',
+  // A shaft and a head: a link that goes somewhere else, where the chevron is
+  // a thing that opens in place. Drawn rather than typed (DES-003): an arrow
+  // character is set in whatever font the reader has that carries one.
+  arrow: 'M5 12h14m-6-6 6 6-6 6',
   // Sliders rather than a cog. A cog says "configuration"; these are three
   // preferences about how a page looks to read, and a row of adjustments is the
   // honest picture of that.
@@ -114,103 +122,34 @@ const PATHS = {
   // A leaf, for anything on file but not yet written in. Growing, not missing:
   // an empty file in this record is a thing that has not happened yet.
   leaf: 'M4 20c0-8 5.5-14 16-14 0 10-5.5 14-13 14H4Zm3-1c3-5 6-7.5 10-9',
-  // ── The harness, entry by entry ─────────────────────────────────
-  // One glyph per thing at the top of `.claude/`, chosen the way the view marks
-  // above are: for what the thing IS, not for what kind of file it happens to
-  // be. Ten folders and files all wearing the same folder icon is a list you
-  // read by reading; ten marks that mean something is a list you can scan.
-  //
-  // They are a lookup with a fallback, never a requirement — anything added to
-  // the harness that has no glyph here still appears, wearing the plain folder
-  // or file below. See MARK in components/harness/HarnessList.jsx.
+  // The harness tree's own glyphs — a mark per thing at the top of `.claude/`,
+  // and one per kind of file — are the developer's alone and live with that
+  // app, in dev/ui/lib/harness-marks.js, handed to <Icon> as a path. The two
+  // below stay here because her dashboard draws them too: `layers` marks the
+  // Backlog in the machine section of her nav, and `file` is the plain page.
 
-  // A prompt and a typed line. Commands are the one part of the harness a person
-  // invokes on purpose, by name.
-  terminal: 'm5 7 5 5-5 5M13 17h6',
-  // A bolt. Hooks are the only rules here that do not wait to be read and
-  // chosen — they fire at a fixed moment whether or not anyone remembers them.
-  spark: 'M13 2 5 13h6l-2 9 8-11h-6l2-9Z',
-  // A speech bubble, for the text sent on a schedule. What is in `prompts/` is
-  // said to the agent by nobody who is awake to say it.
-  speech: 'M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H9l-5 4V6Z',
   // Sheets, stacked. One skill is one session shape, and the set of them is a
   // pile to be drawn from rather than a sequence to be followed.
   layers: 'm12 3 9 5-9 5-9-5 9-5Zm9 11-9 5-9-5',
-  // A plumb bob: the oldest instrument for "is this true?". The specs are the
-  // rows the repository is checked against, not a description of it.
-  plumb: 'M12 3v9m0 0 3.2 4.8a3.8 3.8 0 1 1-6.4 0L12 12Z',
-  // An inbox tray, for the Review tab: things waiting for a person to deal with.
-  // Chosen by the owner over the pennant it replaces, which was right about who
-  // raises an item — the agent flags it — and silent about the part the tab is
-  // for, which is a person clearing it.
-  inbox: 'M3 13h5l1.5 3h5l1.5-3h5M5.5 5h13l2.5 8v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-6l2.5-8Z',
-  // The asterisk, for CLAUDE.md. It is the mark of the thing reading the file,
-  // which is the one fact about it no glyph about DOCUMENTS can carry: every
-  // other file in here is read by the agent, and this is the file that is the
-  // agent's instructions.
-  //
-  // Eight spokes, with the diagonals a little short of the orthogonals so the
-  // silhouette comes out round rather than square. The mark it is drawn after
-  // has more, and more is what fails here: at 13px ten spokes close into a dark
-  // disc at the centre and the glyph stops being a star at all.
-  asterisk: 'M12 4v16M4 12h16M7.2 7.2l9.6 9.6M16.8 7.2 7.2 16.8',
-
-  // ── The harness tree ──────────────────────────────────────────
-  // The two most conventional glyphs in the set, and deliberately so. Everywhere
-  // else here an icon is chosen to mean something about her record — a quill for
-  // what to read first, a leaf for what has not happened yet. These two say only
-  // "folder" and "file", because that is the whole question the harness tree has
-  // to answer and a clever glyph would answer it worse than the obvious one.
-  folder: 'M3 7a1 1 0 0 1 1-1h4.6a1 1 0 0 1 .7.3L11 8h9a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7Z',
   // A page with the corner turned, which is also how the corner is drawn: one
   // path for the sheet, one for the fold, so the fold reads as a fold rather
   // than as a notch cut out of the outline.
   file: 'M6 3h7.2L19 8.6V20a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm7.2 0v5.6H19',
-
-  // ── By what a file IS ─────────────────────────────────────────
-  // Below the bespoke marks and above the plain page: a file with no glyph of
-  // its own still says what KIND of thing it is. Nearly everything in `.claude/`
-  // is markdown, so the plain page was doing no work on 39 of 42 files — it
-  // marked "a file", which the reader could already see.
-
-  // An M and a down arrow: markdown's own mark everywhere it has one, drawn
-  // without its usual rounded box. The box is the half that does not survive
-  // being rendered at 13px in a margin — at that size it closes the M in and
-  // both go grey — and the zigzag-plus-arrow silhouette is the half that is
-  // actually recognised.
-  //
-  // Both halves are set at the full height of the grid and nothing sits between
-  // them. A glyph this small has room for two shapes and a gap, and the gap is
-  // what keeps the pair from fusing into one dark smudge.
-  markdown: 'M3 17V7l4.5 5.5L12 7v10M17.5 7v10m0 0 3-3.1m-3 3.1-3-3.1',
-  // Brackets around three rows: a structured file, drawn as its shape rather
-  // than as its syntax.
-  //
-  // `{ }` is the conventional mark and is not available here — `harness` is a
-  // pair of braces, it heads this very column, and two brace glyphs six pixels
-  // apart meaning different things is the one thing this set refuses. Square
-  // brackets read as data just as plainly, and the rows between them survive
-  // 12px where a brace's curl does not.
-  brackets: 'M9.5 4H7a1.2 1.2 0 0 0-1.2 1.2v13.6A1.2 1.2 0 0 0 7 20h2.5M14.5 4H17a1.2 1.2 0 0 1 1.2 1.2v13.6A1.2 1.2 0 0 1 17 20h-2.5M10.6 9.6h2.8M10.6 14.4h2.8',
-  // A pair of drafting dividers. ARCHITECTURE.md is the document the rest of the
-  // harness is set out from, and the instrument for setting something out is the
-  // oldest picture of that there is.
-  //
-  // Its neighbour `plumb` is the other drafting instrument in the set, for
-  // `specs/` — the folder this file sits in. They are told apart by which end
-  // carries the weight: the plumb bob hangs from a line, the dividers stand on
-  // two legs from a hinge.
-  //
-  // The hinge is drawn large for the glyph — a fifth of its height — because a
-  // correctly proportioned one disappears at this size and leaves a bare chevron
-  // behind, which is the mark the tree already spends on folders.
-  dividers: 'M12 2a2.6 2.6 0 1 1 0 5.2A2.6 2.6 0 0 1 12 2ZM10.7 6.9 5.2 20.6m8.1-13.7L18.8 20.6',
   // A charter scroll, for the Specs tab: standing rules, written down and
   // binding — what the harness is held to rather than one more document in it.
   // Chosen by the owner over a clipboard-and-tick, which read as "approved" as
   // much as "required". The dividers stay on ARCHITECTURE.md, the one document
   // the rest is set out from.
+  // Tiles of unequal size, for the Code map, which opens on a treemap: a
+  // tile's area is its size.
+  codemap: 'M4 4h9v9H4V4Zm11 0h5v5h-5V4Zm0 7h5v9h-5v-9ZM4 15h9v5H4v-5Z',
+  // Three blocks on a base, for the Tech stack: what the system stands on.
+  stack: 'M3 20h18M5 16h6v4H5v-4Zm8 0h6v4h-6v-4ZM9 11h6v5H9v-5Zm0-6h6v6H9V5Z',
   spec: 'M8 6V5a2 2 0 0 0-2-2 2 2 0 0 0-2 2v1h4Zm0 0v13a2 2 0 0 0 2 2M6 3h11a2 2 0 0 1 2 2v12M10 21h9a2 2 0 0 0 2-2v-2h-9v2a2 2 0 0 1-2 2ZM11 8h5M11 12h5',
+  // A page with a tick, for the Agreements: what was said and agreed, nothing more.
+  agreement: 'M6 3h9l4 4v14H6V3Zm9 0v4h4M9 14l2 2 4-4',
+  // A flask, for the Evals: each card a test, run and kept.
+  flask: 'M9 3h6M10 3v6l-5.5 10a1.5 1.5 0 0 0 1.3 2h12.4a1.5 1.5 0 0 0 1.3-2L14 9V3M7 15h10',
 };
 
 /**
@@ -243,8 +182,11 @@ const PATHS = {
 // hand, and they were reading the result on a real screen.
 const MIN_STROKE = 1.15;
 
-export function Icon({ name, size = 16, weight, className, ...rest }) {
-  const d = PATHS[name];
+// `d` is a path drawn on the same grid, for a glyph this set does not hold: the
+// developer's app keeps its own (dev/ui/lib/harness-marks.js), and ux/ never
+// imports from it (ARC-008). Given, it wins over `name`.
+export function Icon({ name, d: path, size = 16, weight, className, ...rest }) {
+  const d = path ?? PATHS[name];
   if (!d) return null;
   // What the stroke should measure once drawn, then converted back into the
   // grid's units — the path is scaled by size / 24, so the value written here
@@ -275,6 +217,15 @@ export function Icon({ name, size = 16, weight, className, ...rest }) {
       <path d={d} />
     </svg>
   );
+}
+
+// The way a link points (DES-001 design 3, DES-003): after the words for a
+// way on ("Next gap", "Open the row"), before them and mirrored for a way back
+// ("everyone on file", "Back to the start"). Six links typed ← or → and one
+// borrowed the chevron; each now puts this inside its own link or button, so
+// the link keeps its look and its destination. Decorative: the words say where.
+export function Arrow({ back }) {
+  return <Icon name="arrow" size={13} className="arrow" data-back={back ? 'true' : undefined} />;
 }
 
 // The app's mark: a pen, and the line it has just written.

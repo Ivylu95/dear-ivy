@@ -1,0 +1,163 @@
+/* ── Nav ─────────────────────────────────────────────────────────────────── */
+
+.nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.nav-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 28px;
+  margin-top: 12px;
+  padding: 0 10px;
+  font-size: var(--text-label);
+  font-weight: var(--w-strong);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--fg-dimmer);
+  white-space: nowrap;
+}
+
+/* The rule after the words keeps the groups visibly separated once the rail is
+   64px wide and the words themselves have faded out. */
+.nav-section::after {
+  content: '';
+  flex: 1 1 auto;
+  height: 1px;
+  background: var(--line-soft);
+}
+
+/* The rail's two row tints, defined once for every row in the rail — the views,
+   her name, Settings and About — so a hovered or current row looks the same
+   wherever it is.
+
+   Both see-through, so the paper grain runs on under a row rather than stopping
+   at a chip. Hover is a faint wash of the text colour, not --panel-2: that token
+   is near-white in the light theme, and white over the grain at any strength
+   fogs it. Current is a mid purple — the soft tint with 40% of the full accent —
+   at 45%: a colour has to be rich before it can be faint and still read as that
+   colour. Tried and dropped, by eye: the soft tint alone at 40% washed out, 16%
+   of the full accent went grey, and the soft tint at 75% hid the grain.
+
+   On :root because the theme tokens are, so each resolves against whichever
+   theme and accent is active. */
+:root {
+  --rail-hover: color-mix(in oklab, var(--fg) 5%, transparent);
+  --rail-current: color-mix(
+    in oklab,
+    color-mix(in oklab, var(--accent-soft) 60%, var(--accent)) 45%,
+    transparent
+  );
+}
+
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 8px 10px;
+  border-radius: var(--r2);
+  color: var(--fg-dim);
+  /* The same face as the headings above these rows, which are <h2> and have been
+     taking --f-display from the element rule all along. Without this line the
+     column was set in two faces — a serif label over a sans list, with nothing
+     saying why — which is the exact fault the right rail's index was fixed for;
+     the note on .rail-list carries the argument, and it applies here word for
+     word. A rail is one object: the heading names it, the rows are it.
+
+     What tells the heading from the rows is what was already telling them
+     apart: its caps, its tracking and its weight.
+
+     Smaller than the body, and lighter. A rail of ten labels set at reading size
+     and reading weight has the presence of the page it points at; navigation
+     should be easy to find and easy to stop looking at. The hair of tracking is
+     what keeps it from reading as cramped once the size comes down. */
+  font-family: var(--f-display);
+  font-size: var(--text-nav);
+  font-weight: var(--w-ui);
+  letter-spacing: 0.005em;
+  text-decoration: none;
+  white-space: nowrap;
+  /* The row pair every list shares (--hover-in / --hover-out, sidebar.css). */
+  transition:
+    background var(--hover-out) var(--ease),
+    color var(--hover-out) var(--ease);
+}
+
+.nav-icon {
+  flex: 0 0 auto;
+  opacity: 0.72;
+  transition: opacity var(--dur-fast) var(--ease);
+  /* Raised onto the words rather than centred on their line box. The row
+     centres the glyph on the label's box, and that box keeps room below the
+     baseline for descenders whether a label has any or not — so the letters sit
+     above its middle and every mark in the rail read 1–1.5px low against its
+     word. The same optics .harness-panel .page-icon corrects for, with a smaller
+     constant: a mixed-case label's visual middle is between the x-height and the
+     caps, not at the caps, so 0.08em rather than 0.17. In em of the row's own
+     font size, so it holds if --text-nav changes. */
+  position: relative;
+  top: -0.08em;
+}
+
+.nav-label {
+  flex: 1 1 auto;
+}
+
+.nav-item:hover {
+  background: var(--rail-hover);
+  color: var(--fg);
+  transition-duration: var(--hover-in);
+}
+
+.nav-item[data-active='true'] {
+  color: var(--fg);
+  font-weight: var(--w-semi);
+  background: var(--rail-current);
+}
+
+.nav-item[data-active='true'] .nav-icon {
+  opacity: 1;
+  color: var(--accent);
+}
+
+/* One marker for the whole nav, positioned from JS off the active row; see the
+   note in components/shell/Nav.jsx.
+
+   It used to slide from the old row to the new one, and that travel was the
+   movement you saw on every tab change. A marker is a statement of where you
+   are, and animating it turns the statement into an event: the one moving thing
+   on screen at the moment the new page is trying to be read, drawing the eye
+   back to the rail you have just finished with.
+
+   So it cuts. There is no transition, and at 2px nothing pops -- the mark is
+   simply in the right place, from the first frame of the new view. Where it
+   moves for a reason, it still animates: the marker is measured again when the
+   rail changes width, and that is a transition of the row beneath it rather
+   than of this. */
+.nav-marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 18px;
+  margin-top: -9px;
+  border-radius: 1px;
+  background: var(--accent);
+}
+
+/* The safety plan had its own rule here: a warm tint and a gap above it, on the
+   argument that the one row she might need on a bad night should be findable
+   without being read. It is gone, and the row is now an ordinary member of The
+   space. Colour was doing the work that position should do, and it also made
+   the row look like the exception in a rail where nothing else is — which is a
+   lot of attention to put on the one row that should feel ordinary to open.
+   Its group now says whose it is, which is what the rest of this rail says
+   too. */

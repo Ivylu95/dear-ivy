@@ -1,5 +1,8 @@
-import { Banner, Empty, Enter, PageHead, Prose, SectionHead, Source, dateLabel } from '@/components/ui';
+import { Banner, Card, CardSection, Empty, Enter, PageHead, Prose, SectionHead, Source } from '@/components/ui';
+import { DatedDoc } from '@/components/ui/DatedDoc';
+import { notFound } from 'next/navigation';
 import { getOpenLoops, getTherapy } from '@/lib/content';
+import { moduleOn } from '@/lib/modules';
 
 export const dynamic = 'force-dynamic';
 
@@ -12,6 +15,7 @@ export const dynamic = 'force-dynamic';
 // the space it costs. Where anything here and her clinician disagree, her
 // clinician wins, and the page says so rather than leaving her to infer it.
 export default async function Therapy() {
+  if (!moduleOn('therapy')) notFound();
   const { focus, appointments } = await getTherapy();
   const forTherapist = (await getOpenLoops()).groups.find((g) => /appointment/i.test(g.heading));
   const pending = forTherapist?.items.filter((i) => !i.done) ?? [];
@@ -32,16 +36,15 @@ export default async function Therapy() {
 
       <SectionHead title="What you're working on" />
       {focus?.filled ? (
-        <div className="card">
+        <Card>
           {focus.sections
             .filter((s) => s.filled)
             .map((s) => (
-              <section key={s.heading} className="card-section">
-                <h3 className="card-heading">{s.heading}</h3>
+              <CardSection key={s.heading} title={s.heading}>
                 <Prose html={s.html} />
-              </section>
+              </CardSection>
             ))}
-        </div>
+        </Card>
       ) : (
         <Empty title="No current focus written down">
           What you and your therapist are working on goes here, in short — the
@@ -55,14 +58,14 @@ export default async function Therapy() {
       {pending.length > 0 && (
         <>
           <SectionHead title="To raise next time" note="in your words" />
-          <div className="card">
+          <Card>
             <ul className="bullets">
               {pending.map((item) => (
                 <li key={item.text}>{item.text}</li>
               ))}
             </ul>
-          </div>
-          <Source path="data/state/open_loops.md" />
+          </Card>
+          <Source path="data/core/state/open_loops.md" />
         </>
       )}
 
@@ -74,18 +77,7 @@ export default async function Therapy() {
         </Empty>
       ) : (
         appointments.map((appointment) => (
-          <article key={appointment.slug} id={appointment.slug} className="view-section">
-            <div className="section-head">
-              <h2>{appointment.title ?? dateLabel(appointment.date)}</h2>
-              {appointment.title && (
-                <span className="section-note">{dateLabel(appointment.date)}</span>
-              )}
-            </div>
-            <div className="card">
-              <Prose html={appointment.html} />
-            </div>
-            <Source path={`data/${appointment.path}`} />
-          </article>
+          <DatedDoc key={appointment.slug} doc={appointment} className="view-section" />
         ))
       )}
     </Enter>

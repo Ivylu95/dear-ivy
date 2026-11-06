@@ -1,0 +1,566 @@
+/* ── Harness ───────────────────────────────────────────────────────────── */
+
+/* The second view read by a developer rather than by her, and the sibling of
+   Hooks above. It borrows that view's furniture almost entirely — the same
+   panel, the same hairline between rows, the same chevron that leans on hover —
+   because the two sit under one tab now and a reader moving between them should
+   not have to re-learn a list.
+
+   What it does not borrow is the state colour. A hook is on or off, and that is
+   a fact worth a hue; a spec is a spec. Nothing in here carries a judgement, so
+   nothing in here spends colour on one. */
+
+/* ── The way back up ────────────────────────────────────────────────── */
+
+/* Above the page head, in the type the rest of the app uses for provenance:
+   small, dim, and not competing with the title underneath it. The separator is
+   drawn rather than typed, so it cannot be selected or read aloud. */
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 8px;
+  margin-bottom: 10px;
+  font-size: var(--text-fine);
+  color: var(--fg-dimmer);
+}
+
+.crumbs a {
+  color: var(--fg-dim);
+  text-decoration: none;
+  border-bottom: var(--line-w) solid transparent;
+  transition:
+    color var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease);
+}
+
+.crumbs a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* No margin of its own — the row's column gap is the only thing between any two
+   children, so the air on the left of a slash is the air on its right, at every
+   crumb and at the last one. */
+.crumb-sep {
+  color: var(--fg-dimmer);
+}
+
+/* The last crumb, when it is this page. Set in the same ink as the links beside
+   it rather than brighter: the trail is orientation, not emphasis, and the thing
+   it ends on is named again in full underneath. It is not a link, so it carries
+   none of a link's hover. */
+.crumb-current {
+  color: var(--fg-dim);
+}
+
+/* The right rail is NOT narrowed here, and that is deliberate.
+   
+   It was, for a while: it holds three or four heading names in this view, beside
+   a middle column that already has a navigation column of its own, so the width
+   looked like it was going spare. But this rail is the one element that is in
+   the same place on every tab — it is where you look for where you are inside
+   the page, on the timeline, in the journal, and here. A column that is 276px
+   wide everywhere and 208px on one tab reads as that tab being slightly broken,
+   and the pixels it buys are not worth the flinch.
+   
+   The middle column gets its extra room from the cap and the gutters above
+   instead, which cost nothing anyone can see. */
+
+/* The default width of the index, and its only home. The script that restores a
+   remembered one and the drag that sets a new one both read this property rather
+   than carrying a copy of the number — see lib/harness-width.js. */
+:root {
+  --harness-index-w: 240px;
+}
+
+/* The divider IS the control.
+   
+   Three designs were tried here — a full-height accent rule, a pill with an
+   accent fill, a six-dot grabber — and each was louder than the gesture it
+   serves. The research settles it in two moves. Atlassian's drag-and-drop
+   guidance: an always-visible handle is for a PRIMARY action, and where dragging
+   is secondary a hover affordance is the correct trade, clutter against
+   discoverability. Ant Design's Splitter, the most-used implementation of this
+   exact control, carries no grip at all — a 2px bar, a 6px hit area, three
+   background states.
+   
+   Resizing this column is secondary: the act on this screen is reading a
+   document. And every other edge in this surface is a hairline, so an ornament
+   here would be the one piece of furniture in the room.
+   
+   So the line thickens and darkens under the pointer instead of growing a mark.
+   It is discoverable the way a window's edge is — the cursor changes on
+   approach, over a hit area six times the width of what is drawn. */
+/* The navigation's right edge, draggable. Fixed like the column it borders, and
+   above it so the grab lands on the seam rather than on the panel beneath.
+   Hidden while the rail is collapsed: that is a different control with a width
+   of its own, and a seam offering to resize it would be two answers to one
+   question. */
+.nav-seam {
+  position: fixed;
+  top: var(--sample-bar);
+  bottom: 0;
+  left: var(--sidebar-w);
+  z-index: calc(var(--z-rail) + 1);
+  display: flex;
+  justify-content: center;
+  width: 13px;
+  margin-left: -6px;
+  cursor: col-resize;
+  touch-action: none;
+}
+
+html.nav-collapsed .nav-seam {
+  display: none;
+}
+
+/* The contents rail's left edge. In flow rather than fixed, like the column it
+   borders — the shell stretches it, so the line runs the full height of the page
+   whatever this route's index happens to hold. It replaces the rail's own
+   border: one edge, drawn once, and it is the control. */
+.rail-seam {
+  position: sticky;
+  top: var(--sample-bar);
+  height: 100dvh;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 13px;
+  margin-inline: -6px;
+  cursor: col-resize;
+  touch-action: none;
+}
+
+.rail-seam:focus-visible {
+  outline: none;
+}
+
+.nav-seam:focus-visible {
+  outline: none;
+}
+
+/* Both seams, drawn the same. The divider IS the control — see the note at
+   .harness-seam — so the line thickens and darkens a single tonal step under the
+   pointer and carries no ornament. */
+/* Thickened by scaleX rather than by width, so the change never lays the seam
+   out again: from its left edge, which sits on a whole pixel, so the doubled
+   line covers the same two pixels a 2px width did. */
+.pane-seam-line {
+  width: 1px;
+  background: var(--line-soft);
+  transform-origin: left;
+  transition:
+    transform var(--dur-fast) var(--ease),
+    background-color var(--dur-fast) var(--ease);
+}
+
+/* One tonal step, not five. --fg-dimmer is text ink at n(400); against a rule
+   drawn at n(150) it lands as a black bar down the middle of the page. The line
+   goes to --line, the next rule tone up, and the width does the rest of the
+   work. */
+.harness-seam:hover .pane-seam-line,
+.nav-seam:hover .pane-seam-line,
+.rail-seam:hover .pane-seam-line {
+  transform: scaleX(2);
+  background: var(--line);
+}
+
+/* Held: one step darker again, and it stays while the pointer is anywhere on the
+   page, because by then the hand has left the seam.
+   
+   Keyed to the seam being dragged, not to the page. `body[data-resizing]` is
+   what stops the document selecting text under a drag, and matching the line
+   against it lit every seam in the app whenever any one of them was moved. */
+[data-dragging] .pane-seam-line {
+  transform: scaleX(2);
+  background: var(--fg-dimmer);
+}
+
+/* Focus has to be seen, and it is the one state that may use the accent: a
+   keyboard reader gets no cursor to tell them what this is. */
+.harness-seam:focus-visible .pane-seam-line,
+.nav-seam:focus-visible .pane-seam-line,
+.rail-seam:focus-visible .pane-seam-line {
+  /* A real width here, not the scale: the ring around it would be stretched
+     with the line. Focus arrives by keyboard, so the one layout costs nothing
+     anyone is dragging. */
+  width: 2px;
+  transform: none;
+  background: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+/* While a drag is in flight, nothing else on the page should be selecting text
+   or flipping to a text cursor because the pointer crossed it. */
+body[data-resizing] {
+  cursor: col-resize;
+  user-select: none;
+}
+
+/* And nothing should EASE toward the new width.
+   
+   The panel carries a transition for the collapse toggle, where the animation
+   is the point — a rail that snaps between 248px and 64px reads as a glitch.
+   Under a drag it is exactly wrong: every frame starts a fresh animation toward
+   a width the pointer has already left, so the panel arrives behind its own
+   edge and the seam appears to tear away from the paper it is moving.
+
+   The transition is suppressed for the length of the drag and comes back with
+   the pointer, so the toggle keeps its animation and the drag becomes direct. */
+body[data-resizing] .sidebar,
+body[data-resizing] .sidebar-inner,
+body[data-resizing] .rail {
+  transition: none;
+}
+
+/* ── The dissolve ───────────────────────────────────────────────────────── */
+
+/* The swap itself, handed to the browser.
+
+   components/harness/HarnessPanel.jsx wraps the panel's content in React's
+   <ViewTransition>, which makes the browser hold a picture of the file being
+   left while the file arriving is painted underneath it. That is the frame no
+   stylesheet could reach on its own: the router unmounts the outgoing file in
+   the same commit that mounts the incoming one, and a node that is gone cannot
+   be animated.
+
+   Scoped to the panel, and only the panel. A browser names the document root
+   `root` by default, so any transition at all would otherwise cross-fade the
+   whole window — tree, rail and file together, which is the opposite of what
+   this view is for: the point of a panel is that the column beside it did NOT
+   move. Taking the name off the root leaves the panel as the only thing in the
+   frame carrying one, so it is the only thing that animates. */
+:root {
+  view-transition-name: none;
+}
+
+/* A transition is a picture, not a surface to click.
+
+   The snapshots are drawn in a fixed overlay above the whole page, and a
+   pseudo-element dispatches its events to the element it belongs to — the root.
+   So a click landing on the overlay arrives at `<html>`, which is nowhere near
+   the control that was actually under the pointer. The settings panel closes
+   itself on any pointerdown outside it, so pressing Light and then Dark inside
+   the length of one sweep read as a click on the page: the panel shut and the
+   second press did nothing.
+
+   Off, and every press goes to the live DOM underneath, which already holds the
+   new state. The one honest cost: for the length of the animation she is
+   clicking a layout she cannot fully see, since part of the screen is still
+   showing the old picture. That is true of any transition and is the reason they
+   are short.
+
+   On the parent alone. Hit testing skips a subtree whose root opts out, and
+   nothing below sets `pointer-events: auto`, so this covers both the theme swap
+   and the harness dissolve in one declaration. */
+::view-transition {
+  pointer-events: none;
+}
+
+/* ── Changing the surface ────────────────────────────────────────────────── */
+
+/* Light to dark, one hue to another, one reading style to another: three
+   switches that repaint every pixel on the page at once.
+
+   Done as a plain repaint it is a blink — not a fast animation, an absence of
+   one, and the larger the change the more it reads as the page having been
+   replaced rather than adjusted. Done as CSS transitions it is worse: several
+   hundred rows each resolving a new background, a new rule colour and, for a
+   character change, new metrics. That is a layout, and it lands on the one frame
+   with nothing spare.
+
+   So the browser does it instead. lib/theme.js names the root for the length of
+   the change and the two snapshots are animated on the compositor — two
+   viewport-sized textures, the same cost on a 680-row timeline as on an empty
+   page, because a snapshot of the root is the size of the window and not of the
+   document.
+
+   The name goes on and comes off around the change rather than standing
+   permanently, because the root is deliberately unnamed above: a name here for
+   good would mean every harness file opened cross-faded the whole window, rail
+   and all. */
+:root[data-theme-swap] {
+  view-transition-name: root;
+}
+
+/* Two changes, two animations, because they are not the same event.
+
+   A HUE or a READING STYLE is the same surface in different paint. It has no
+   origin — nothing moved and nothing was replaced, the page is simply warmer or
+   set differently — so it cross-fades in place, which is the browser's own
+   default given this app's curve and its longest length. It keeps --ease and
+   --dur-slow rather than the reveal's pair below: a fade has no edge for the eye
+   to follow across the screen, so the time the reveal needs would just be a page
+   sitting half-way between two colours.
+
+   Only the timing is overridden. The default pair also carries
+   `mix-blend-mode: plus-lighter`, which is what keeps a cross-fade at full
+   brightness through the middle instead of dipping grey at 50/50, and it is
+   worth keeping — so the rule touches duration and easing and leaves the
+   blending alone. */
+:root[data-theme-swap='surface']::view-transition-old(root),
+:root[data-theme-swap='surface']::view-transition-new(root) {
+  animation-duration: var(--dur-slow);
+  animation-timing-function: var(--ease);
+}
+
+/* LIGHT TO DARK gets a circle, because it is the one change with somewhere it
+   came from: she pressed a control, and the new surface arrives from under her
+   finger. A cross-fade would pass through a washed middle where the page is
+   neither ground, which between two grounds this far apart is visibly grey. A
+   circle keeps both sides fully painted the whole way — old surface outside the
+   edge, new surface inside, and nothing in between.
+
+   The circle itself is animated from lib/theme.js rather than declared here.
+   Its radius is the distance from the press to the furthest corner, which is a
+   hypotenuse and not a percentage, so a stylesheet cannot work it out. What is
+   declared here is everything AROUND it: the browser's default cross-fade taken
+   off both halves, so the only thing moving is the clip.
+
+   The old snapshot holds still and the new one is clipped over the top of it.
+   Animating both would put the edge of the circle in pursuit of a surface that
+   is itself fading, which is two events where there was one. */
+:root[data-theme-swap='mode']::view-transition-old(root),
+:root[data-theme-swap='mode']::view-transition-new(root) {
+  animation: none;
+  /* The blending a cross-fade wants is exactly wrong here. `plus-lighter` adds
+     the two layers where they overlap, which is right when both are part-way
+     transparent and wrong when the top one is fully opaque inside a clip: the
+     revealed area would be the new ground PLUS the old one, so a dark surface
+     opening over a light one arrives grey and only settles as the old snapshot
+     is dropped. */
+  mix-blend-mode: normal;
+}
+
+/* Explicit, both of them. The pair's paint order is the spec's to decide and the
+   whole effect depends on which surface is on top, so it is said here rather
+   than inherited from a default that is free to change. */
+:root[data-theme-swap='mode']::view-transition-old(root) {
+  z-index: 0;
+}
+
+:root[data-theme-swap='mode']::view-transition-new(root) {
+  z-index: 1;
+}
+
+/* Isolation off, so `normal` above actually means normal. The image pair is its
+   own isolated group by default, which is what makes plus-lighter work; left on,
+   it keeps compositing the two halves as a group rather than letting the clipped
+   one simply sit over the other. */
+:root[data-theme-swap='mode']::view-transition-image-pair(root) {
+  isolation: auto;
+}
+
+/* Asked for less motion, neither change is animated: lib/theme.js applies it
+   directly and never starts a transition, so the root is never named and nothing
+   in this section has anything to match. Said here rather than left to be
+   discovered, because the absence of a reduced-motion block in a section full of
+   animation reads as an oversight. */
+
+/* Why the harness reads to the edge: .prose gives up its 68ch measure inside
+   this panel, because the specs are four-column registers. The rule and the
+   reasoning are in app/prose.css, with the other two views that differ. */
+
+/* ── The index ──────────────────────────────────────────────────────────── */
+
+/* A margin index, not a file explorer.
+   
+   It is the same furniture as the right rail, deliberately: quiet lines on no
+   ground, the meta faint and tabular at the right edge, and the row you are on
+   marked by a rule in the accent rather than by a filled block. The rail's own
+   note says why the block is wrong — "a highlighted block in a list of twenty
+   reads as a selection she made, and this is a report of where she is" — and
+   that is exactly as true here.
+   
+   It did look like an editor for a while: a little folder and a little dog-eared
+   page on every row, a lavender pill on the open file, counts wedged against the
+   names. All of it legible, none of it this app. Folder and file are still told
+   apart three ways — the trailing slash, the count only a folder carries, and
+   the ink — but in type rather than in pictures. */
+/* Anchored headings land clear of the top edge rather than jammed against it.
+   Every rail row and every contents link scrolls to one of these, and a heading
+   flush at y=0 reads as the top of the page rather than as the top of a section
+   — there is nothing above it to say you arrived somewhere. Below the
+   breakpoint the mobile header is sticky and would cover it outright. */
+.section-head {
+  scroll-margin-top: 26px;
+}
+
+@media (max-width: 900px) {
+  .section-head {
+    scroll-margin-top: 80px;
+  }
+}
+
+/* No margin to hang in at this width — the column runs to the page edge, so an
+   anchor outside it would sit off-screen. The rail's contents list is still a
+   way to reach a section here, and the URL still carries the fragment. */
+@media (max-width: 900px) {
+  .section-anchor {
+    display: none;
+  }
+}
+
+/* The heading is the anchor, and a pinned element reports where it is pinned
+   rather than where it lives — which would tell the right rail's scroll spy that
+   this section starts wherever the reader happens to be. The spy sets this
+   attribute for the one frame in which it measures. See RailNav in
+   components/shell/RailNav.jsx. */
+body[data-measuring] .section-head {
+  position: static;
+}
+
+/* ── Back to the top of a document ──────────────────────────────────────────
+
+   A row in the rail rather than a button floating over the page. Nothing else
+   in this app hovers above the record, and a circle in the corner would be the
+   one element that does — on a surface whose whole argument is that it is paper
+   with margins, not an interface with controls. The rail is already pinned and
+   is already where a reader looks to move within a document, so this costs no
+   new surface.
+
+   It sits at the head of the list, dimmer than the sections under it and set in
+   the same row vocabulary: it is a way back, not a place you are, so it never
+   takes the accent the current section wears. */
+.rail-top {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  /* Flush to the column's right edge, on the title's line. */
+  margin-left: auto;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: var(--text-fine);
+  color: var(--fg-dimmer);
+  text-align: left;
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease);
+}
+
+.rail-top:hover:not(:disabled),
+.rail-top:focus-visible {
+  color: var(--fg);
+}
+
+/* At the top already. Faded rather than removed, so the row above the list keeps
+   its shape — and no pointer cursor, because the one thing worse than a control
+   that does nothing is one that still invites the click. */
+.rail-top:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* The chevron points the way it sends you. One glyph, rotated, rather than a
+   second icon in the set for a direction the set already has. */
+.rail-top-mark {
+  transform: rotate(-90deg);
+}
+
+/* Where a rail row lands. The `.harness-panel [id]` rule further up already
+   clears the pinned band for anchors in this column, and a line is an [id] like
+   any other, so nothing is needed here — noted so the next person looking for
+   it does not add a second answer. */
+
+/* ── Stated facts in the rail ───────────────────────────────── */
+
+/* Label and value on one line, the value hard against the column's right edge.
+   
+   Two columns rather than a stack, because these are pairs and a stack makes
+   them a list of six things instead of three. The label column takes only what
+   it needs and the value takes the rest, so "Runs on" and "Lines" do not force
+   a width on each other. */
+/* The fold, which IS the heading.
+   
+   A bare button carrying the title: no ground, no border, no size of its own —
+   .rail-title above already sets the caps, the tracking and the ink, and this
+   inherits all of it. What a reader sees is the heading they were already
+   reading, with a chevron in front of it.
+   
+   It was a word, `hide` / `show`, sitting where RailNav puts its "Top". That
+   read as a label rather than as furniture, and it could not work for the
+   contents list at all: that row already has a control, and two small words side
+   by side in a 206px margin is the toolbar the harness index refused for the
+   same reason. */
+.rail-fold {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  /* Negative, so the chevron hangs in the gutter and the TITLE keeps the left
+     edge every other block in this column starts from. A heading indented by
+     the width of its own marker is a heading that has moved because it became
+     clickable. */
+  margin-left: -16px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease);
+}
+
+.rail-fold:hover,
+.rail-fold:focus-visible {
+  color: var(--fg-dim);
+}
+
+/* The fold's mark brightens with its title, as it did before it became the
+   shared Chevron, whose own colour would otherwise hold it dim. */
+.rail-fold:hover .chevron,
+.rail-fold:focus-visible .chevron {
+  color: inherit;
+}
+
+.rail-facts {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+}
+
+.rail-fact {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+}
+
+/* The same quiet the rail labels above are set in, one step down in size — a
+   term in a margin is furniture, and the value beside it is the answer. */
+.rail-fact dt {
+  flex: none;
+  font-size: var(--text-fine);
+  color: var(--fg-dimmer);
+}
+
+/* Mono, because every value this block carries is a machine's word for
+   something — an event name, a format, a count — and the face is what says so
+   before the label is read. Right-aligned so a column of counts lines up on its
+   digits, and allowed to wrap rather than truncate: an event name is the row
+   most worth reading in full and there is nothing below it that a second line
+   would push out of place. */
+.rail-fact dd {
+  margin: 0;
+  min-width: 0;
+  /* The same face as the term opposite it, not mono.
+     
+     Mono is right for a column of numbers that have to line up as a column —
+     the register IDs in the contents list are set that way for exactly that
+     reason. These do not line up: there are two of them per row, at opposite
+     edges, and each is read across from its own label rather than down against
+     the one above. All the mono did was make the pair look like a label and a
+     reading from something, instead of like a sentence with its answer at the
+     end of it. */
+  font-size: var(--text-fine);
+  text-align: right;
+  color: var(--fg-dim);
+  /* Kept from the mono: the digits still have to sit at a stable width, or a
+     count that ticks from 9 to 10 shifts the number under it. */
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}

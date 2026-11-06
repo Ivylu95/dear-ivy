@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import Link from 'next/link';
 import { Icon } from './icons';
+import { AnchorLink } from './AnchorLink';
 import { VIEW_ICON, slugify } from '@/lib/views';
 
 // Pure label helpers, re-exported so this stays the one import for a view's
@@ -8,8 +9,9 @@ import { VIEW_ICON, slugify } from '@/lib/views';
 // cannot import anything from this file that reaches lib/content.js, and so `fs`.
 export { dateLabel, untilLabel } from '@/lib/dates';
 
-// Shared presentational pieces. Server components: they render from data the page
-// already read, and never fetch anything themselves.
+// Shared presentational pieces. They render from data the page already read and
+// never fetch anything themselves, so client components import them too (the
+// rail, the harness index, the sign-in page): nothing here may reach the disk.
 
 // The view's header. `route` keys the glyph from lib/views.js, which switches the
 // header to a two-column grid: the glyph in the first, the title and subtitle in
@@ -24,11 +26,15 @@ export { dateLabel, untilLabel } from '@/lib/dates';
 // `id` makes the header itself a jump target, for a view whose contents list
 // wants a row for the top of the document. Nothing needed one until the harness
 // rail started with the document's own name.
+//
+// `icon` is a glyph's name, or `{ d }` for a path the icon set does not hold
+// (the harness tree's marks, which live in dev/ui).
 export function PageHead({ title, sub, route, icon: glyph, id, children }) {
   const icon = glyph ?? (route ? VIEW_ICON[route] : null);
+  const iconProps = typeof icon === 'string' ? { name: icon } : icon;
   return (
     <header className={`page-head${icon ? ' has-icon' : ''}`} id={id}>
-      {icon && <Icon name={icon} size={30} className="page-icon" />}
+      {icon && <Icon {...iconProps} size={30} className="page-icon" />}
       <h1 className="page-title">{title}</h1>
       {sub && <p className="page-sub">{sub}</p>}
       {children}
@@ -57,7 +63,11 @@ export function PageHead({ title, sub, route, icon: glyph, id, children }) {
 // puts the id on the section WRAPPER, which does not move, and passes false
 // here. The heading still sits at the top of that wrapper, so the landing is
 // the same place; it is just computed from a box that holds still.
-export function SectionHead({ title, note, id, anchorHere = true, children }) {
+//
+// `as` sets the heading's level where the outline needs it (a journal entry
+// sits under its year's h2), and `mark` is a glyph set before the title, as
+// About me marks the files that hold her own words.
+export function SectionHead({ title, note, id, anchorHere = true, as: H = 'h2', mark, children }) {
   const anchor = id ?? slugify(title);
   return (
     <div className="section-head" id={anchorHere ? anchor : undefined}>
@@ -68,10 +78,13 @@ export function SectionHead({ title, note, id, anchorHere = true, children }) {
           column of hash marks reads as punctuation nobody asked for — but always
           present in the markup, so it is reachable by keyboard and by anyone who
           knows to look. */}
-      <a className="section-anchor" href={`#${anchor}`} aria-label={`Link to ${title}`}>
+      <AnchorLink className="section-anchor" href={`#${anchor}`} aria-label={`Link to ${title}`}>
         #
-      </a>
-      <h2>{title}</h2>
+      </AnchorLink>
+      <H>
+        {mark}
+        {title}
+      </H>
       {note && <span className="section-note">{note}</span>}
       {children}
     </div>
@@ -136,6 +149,206 @@ export function Tag({ children, kind }) {
   return <span className={`tag${kind ? ` ${kind}` : ''}`}>{children}</span>;
 }
 
+// A row of tags or filter chips, wrapping, drawn once (DES-001 design 3): a
+// timeline line's, a calendar or People row's, the timeline rail's, and the
+// Timeline's filters each wrote the box by hand. `className` is for a
+// container's placement only (the filters' `tag-filters`); anything else, an
+// `id` for a fold to name, passes through.
+export function Tags({ className, children, ...rest }) {
+  return (
+    <div className={className ? `tags ${className}` : 'tags'} {...rest}>
+      {children}
+    </div>
+  );
+}
+
+// ── Count ───────────────────────────────────────────────────────────────────
+//
+// A small number, drawn once (DES-001 design 3). The pill form sits at the end
+// of a row — a nav item's count, the settings row's "Sample", a switch's "+12" —
+// quiet by default, `tone="accent"` for the one that says notice me. `plain`
+// is the bare figure in a margin column: no pill, the dimmest legible ink, and
+// tabular figures so a column of them lines up.
+//
+// `className` is for a container's placement and state hooks only, never for
+// the look. `as` sets the element where the markup needs one (a <dd>).
+export function Count({ children, tone, plain, as: El = 'span', className, ...rest }) {
+  const classes = [plain ? 'count-n' : 'count', !plain && tone, className].filter(Boolean).join(' ');
+  return (
+    <El className={classes} {...rest}>
+      {children}
+    </El>
+  );
+}
+
+// ── Button ──────────────────────────────────────────────────────────────────
+//
+// The one button (DES-001 design 3), in the .btn look in globals.css. The
+// error page's actions, the avatar's, the print button, the sign-in, the
+// Changes search and the spec map's controls each drew their own; a view now
+// passes the label and picks a variant:
+//   (none)    the outline control
+//   quiet     a second action beside a first, no border until hovered
+//   primary   the one thing the screen is for, on the accent
+//   icon      a glyph alone (pass `aria-label`), no border until hovered
+// With `href` it is a Next <Link> (which adds the admin app's base path);
+// otherwise a <button>, type="button" unless `type` says otherwise.
+// `className` is for a container's placement only, never for the look.
+const BUTTON_VARIANT = { quiet: 'btn-quiet', primary: 'btn-primary', icon: 'btn-icon' };
+
+export function Button({ variant, href, type = 'button', className, children, ...rest }) {
+  const classes = ['btn', BUTTON_VARIANT[variant], className].filter(Boolean).join(' ');
+  if (href) {
+    return (
+      <Link href={href} className={classes} {...rest}>
+        {children}
+      </Link>
+    );
+  }
+  return (
+    <button type={type} className={classes} {...rest}>
+      {children}
+    </button>
+  );
+}
+
+// A row of Buttons under a page's message (DES-001 design 3): the shell's
+// error and not-found pages each wrote the box by hand. The avatar's controls
+// keep their own row, which sits tighter and with no gap above.
+export function Actions({ children }) {
+  return <div className="actions">{children}</div>;
+}
+
+// ── Chevron ─────────────────────────────────────────────────────────────────
+//
+// The mark on anything that opens to show more (DES-001 design 3): the rail's
+// folds, the harness tree's twists, a commit row, the workflow's cards. It
+// points at the row when shut and turns a quarter down when open, on one
+// rule and one timing in globals.css. Each control keeps its own semantics —
+// a button's aria-expanded, a <details>' open — and says which way to point:
+// `open` from the state the control already holds, or nothing inside a
+// <summary>, where the <details>' own [open] turns it.
+//
+// Two sizes: `small` (10px) for a margin column, where it is punctuation and
+// holds a 10px slot; otherwise 14px, on a row or a card. Decorative: the
+// control around it already says expanded or not.
+// `className` is for a container's placement and hover only, never the turn.
+export function Chevron({ open, small, className }) {
+  return (
+    <Icon
+      name="chevron"
+      size={small ? 10 : 14}
+      className={className ? `chevron ${className}` : 'chevron'}
+      data-open={open ? 'true' : undefined}
+    />
+  );
+}
+
+// ── Meter ───────────────────────────────────────────────────────────────────
+//
+// A share of a whole as a bar (DES-001 design 3): the spec map's clauses
+// carried, a branch side's kinds in Changes. Developer surfaces only — the note
+// at the foot of this file is why nothing over her record scores anything.
+//
+// Either `value` (0–1), one fill, read out as a progressbar with `now` of
+// `max`; or `segments` [{ key, share, kind, title }], each `share` of the
+// track, coloured by its `kind` through the container's --mark (the kinds'
+// colours belong to the view), read out as an image whose `label` says the
+// parts. `as` sets the element (a <dd> in a list). `className` is for a
+// container's placement only.
+export function Meter({ value, segments, label, now, max, as: El = 'div', className }) {
+  const classes = className ? `meter ${className}` : 'meter';
+  if (segments) {
+    return (
+      <El className={classes} role="img" aria-label={label} style={{ '--segs': segments.length }}>
+        {segments.map(({ key, share, kind, title }) => (
+          <span key={key} className="meter-seg" data-kind={kind} title={title} style={{ '--share': share }} />
+        ))}
+      </El>
+    );
+  }
+  return (
+    <El
+      className={classes}
+      role="progressbar"
+      aria-valuemin={0}
+      aria-valuemax={max ?? 1}
+      aria-valuenow={now ?? value}
+      aria-label={label}
+    >
+      <span className="meter-fill" style={{ '--share': value }} />
+    </El>
+  );
+}
+
+// ── FactList ────────────────────────────────────────────────────────────────
+//
+// A list of labels, each beside its figure, drawn once (DES-001 design 3): the
+// rail's stated facts, the specs header's figures and the Changes branches each
+// wrote the <dl>, its rows and their <dt>/<dd> pairs out by hand. A description
+// list, so a screen reader reads each label and figure as a pair.
+//
+// `rows` are { label, value } (keyed by `key`, else the label); a row's own
+// `figure` replaces its <dd> when the figure is more than text (a Count and a
+// Meter, each `as="dd"`). `className`, `id` and `rowClassName` (or a row's own
+// `className`) are the view's own, for its look and place: the look stays
+// with each view, as it was.
+export function FactList({ rows, className, id, rowClassName }) {
+  return (
+    <dl className={className} id={id}>
+      {rows.map((row) => (
+        <div key={row.key ?? row.label} className={row.className ?? rowClassName}>
+          <dt>{row.label}</dt>
+          {row.figure ?? <dd>{row.value}</dd>}
+        </div>
+      ))}
+    </dl>
+  );
+}
+
+// ── Card ────────────────────────────────────────────────────────────────────
+//
+// A panel of content with an optional heading, drawn once (DES-001 design 3).
+// Now, About me and Therapy each wrote the box and its .card-heading out by
+// hand. `title` is the heading; `titleAs` its level, because the look is the
+// same whether it is an h2 directly under the page (Now) or an h3 under a
+// section's own h2. `as` is the box's element (a <section> when it is a jump
+// target with an `id`). `className` is for a container's placement only.
+export function Card({ title, titleAs: H = 'h2', as: El = 'div', className, children, ...rest }) {
+  return (
+    <El className={className ? `card ${className}` : 'card'} {...rest}>
+      {title && <H className="card-heading">{title}</H>}
+      {children}
+    </El>
+  );
+}
+
+// One titled part of a card holding several (a file's sections on About me and
+// Therapy). The heading wears the card's heading look, one level down.
+export function CardSection({ title, titleAs: H = 'h3', children }) {
+  return (
+    <section className="card-section">
+      {title && <H className="card-heading">{title}</H>}
+      {children}
+    </section>
+  );
+}
+
+// ── YearRule ────────────────────────────────────────────────────────────────
+//
+// Where one year of a dated list ends and the next begins (DES-001 design 3):
+// the Journal's and the Timeline's, one look. Its id is `year-YYYY` because the
+// right rail and the Journal's year chips link to it. `as` keeps each list's
+// outline: the Journal's is an h2 its entries sit under, the Timeline's is not a
+// heading at all.
+export function YearRule({ year, as: El = 'h2' }) {
+  return (
+    <El id={`year-${year}`} className="year-rule">
+      {year}
+    </El>
+  );
+}
+
 // ── Empty ───────────────────────────────────────────────────────────────────
 //
 // The single most-used component in this app on day one, and the one most worth
@@ -162,15 +375,61 @@ export function Empty({ title, children }) {
   );
 }
 
-export function Banner({ tone, children }) {
-  return <div className={`banner${tone ? ` ${tone}` : ''}`}>{children}</div>;
+// ── NoMatch ─────────────────────────────────────────────────────────────────
+//
+// A search or a filter that found nothing (DES-001 design 3). Not Empty: an
+// empty file is a thing that has not come up yet, and this is an answer to a
+// question just asked, so it is one quiet line in the place the results would
+// be, never a box. A blank column reads as something broken. Quote what was
+// searched for in a <strong>, so it is clear what found nothing.
+//
+// `className` is for spacing in its container only, never for its look.
+export function NoMatch({ children, className }) {
+  return <p className={`no-match${className ? ` ${className}` : ''}`}>{children}</p>;
+}
+
+// ── Banner ──────────────────────────────────────────────────────────────────
+//
+// A notice across the column (DES-001 design 3). Untoned it is a standing note,
+// calm: what this page is, where something lives. `tone="warn"` is for
+// something wrong, in the warn colours. Every boxed notice is this one,
+// including the sign-in error (`role="alert"`, so it is read out when it
+// appears); `className` is for spacing in its container only.
+export function Banner({ tone, role, className, children }) {
+  const classes = ['banner', tone, className].filter(Boolean).join(' ');
+  return (
+    <div className={classes} role={role}>
+      {children}
+    </div>
+  );
+}
+
+// ── Note ────────────────────────────────────────────────────────────────────
+//
+// The quiet aside under a panel: a line that explains what is above it rather
+// than adding to it (DES-001 design 3). Nine views wrote <p className="note">
+// by hand, one with its own inline gap. `className` is for a container's
+// placement only, never for the look.
+export function Note({ className, children }) {
+  return <p className={className ? `note ${className}` : 'note'}>{children}</p>;
 }
 
 // Rendered markdown from a file under data/. The only writer of those files is
 // the agent she talks to, inside a private single-member repository, so it is not
 // treated as untrusted input.
-export function Prose({ html, className = '' }) {
-  return <div className={`prose ${className}`.trim()} dangerouslySetInnerHTML={{ __html: html }} />;
+//
+// Or written text in the same measure (DES-001 design 3): About, the admin
+// app's "not running" page and the For you lists set their own words in the
+// .prose look and wrote the class by hand. Pass `children` for that, or `html`
+// for rendered markdown, never both. `as` sets the element (a <ul> for a list
+// set as prose). `className` is for a container's placement only.
+export function Prose({ html, children, as: El = 'div', className = '' }) {
+  const classes = `prose ${className}`.trim();
+  if (children != null) {
+    if (html != null) throw new Error('Prose takes `html` or `children`, not both');
+    return <El className={classes}>{children}</El>;
+  }
+  return <El className={classes} dangerouslySetInnerHTML={{ __html: html }} />;
 }
 
 // There is no Verbatim component here any more.
@@ -208,14 +467,18 @@ export function Enter({ children, className }) {
 
 // ── A note on what is NOT in this file ──────────────────────────────────────
 //
-// There is no Stat tile, no Sparkline, no progress meter and no streak. That is
-// not an omission to be filled in later; it is the design.
+// There is no Stat tile, no Sparkline and no streak, and the Meter above is
+// never used over her record — it measures specs and branches in the
+// developer's views. That is not an omission to be filled in later; it is the
+// design.
 //
 // A number on a surface invites comparison with the same number last week, and
 // every number this record could honestly produce is a count of her: entries
 // written, sessions held, days since. Rendering those turns a record she is free
 // to ignore into a scoreboard she is failing. The measure of this app is her life
 // outside it, and nothing here can see that, so nothing here should score it.
+//
+// NOW-002: test/read.test.mjs sweeps the pages for a rendered length.
 //
 // The one exception is a count of things ON FILE — how many people have a file,
 // how many threads are open — which is navigation, not assessment, and lives in

@@ -14,7 +14,7 @@
 // app/layout.jsx, which runs before the body renders so there is no flash of the
 // wrong surface. These helpers cover everything after that.
 
-import { GROUND, hexOf, neutralScale } from '@/theme/palette.mjs';
+import { DEFAULT_HUE, GROUND, hexOf, neutralScale } from '@/theme/palette.mjs';
 
 const MODE_KEY = 'dear-theme';
 const HUE_KEY = 'dear-hue';
@@ -99,16 +99,20 @@ function resolveDark(mode) {
 // chrome that may not be, and a value it cannot parse leaves the old colour
 // painted in the gutter — the exact seam this function exists to close.
 //
-// So it is resolved rather than copied: the live --hue and the resolved mode go
+// So it is resolved rather than copied: the hue and the resolved mode go
 // through the same scale and the same conversion the stylesheet and the contrast
 // gate use, which keeps the tag correct as the palette moves without this file
 // holding a colour of its own.
 //
+// The hue is the one already known — the caller's, or the stored one, or the
+// palette's default, which is the same constant the stylesheet's --hue is
+// generated from — never read back with getComputedStyle: that forced a full
+// style recalculation of the page on every frame of a hue drag.
+//
 // (Canvas will not do this job. Its fillStyle serialises a modern colour
 // function straight back to oklch(), so it round-trips rather than converting.)
-export function syncThemeColor() {
+export function syncThemeColor(hue = getHue() ?? DEFAULT_HUE) {
   const root = document.documentElement;
-  const hue = Number(getComputedStyle(root).getPropertyValue('--hue').trim());
   if (!Number.isFinite(hue)) return;
 
   const step = neutralScale[root.classList.contains('dark') ? GROUND.dark : GROUND.light];
@@ -324,10 +328,19 @@ export function setThemeMode(mode) {
   window.dispatchEvent(new Event(THEME_EVENT));
 }
 
-// Deliberately NOT wrapped in a view transition by its caller while dragging.
-// The hue slider fires continuously, and a crossfade per frame would be both
-// wrong to look at and expensive; the live drag writes the property directly and
-// the transition is for discrete changes. See HueSlider in components/shell/Theme.jsx.
+// A hue shown while the slider is held: the property and the browser's chrome
+// colour, and nothing else. Not stored and not announced — a storage write and
+// a re-render of every theme control on each frame of a drag was the cost the
+// drag paid for a value only its release needs. See HueSlider in
+// components/shell/Theme.jsx.
+export function previewHue(hue) {
+  document.documentElement.style.setProperty('--hue', String(hue));
+  syncThemeColor(hue);
+}
+
+// The hue chosen: a preset pressed, or the slider let go. Deliberately NOT
+// wrapped in a view transition by the slider; the transition is for discrete
+// changes.
 export function setHue(hue) {
   if (hue == null) {
     write(HUE_KEY, null);
@@ -336,7 +349,7 @@ export function setHue(hue) {
     write(HUE_KEY, String(hue));
     document.documentElement.style.setProperty('--hue', String(hue));
   }
-  syncThemeColor();
+  syncThemeColor(hue ?? DEFAULT_HUE);
   window.dispatchEvent(new Event(THEME_EVENT));
 }
 

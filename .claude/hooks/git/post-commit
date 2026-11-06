@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+// git post-commit — settle the cards the commit gate took in (T-643).
+//
+// pre-commit rebuilds the cards and their index from the Transcript and adds them
+// to the commit (T-631). A commit that names its files (`git commit -- <paths>`)
+// commits from a temporary index and updates the main one only for the paths it
+// names, and holds the main one locked while it runs, so the cards stayed stale
+// there: staged as an undoing of what was just committed, and the next pull
+// refused to run over them (3 Nov). Here, after the commit, each generated file
+// whose copy on disk is what was committed has its index entry set back to the
+// commit. A file whose copy on disk differs is left exactly as it is.
+//
+// Never fails a commit: the commit has already happened, and anything here is tidying.
+
+import { spawnSync } from 'node:child_process';
+import { GENERATED } from '../lib/refused-staged.mjs';
+
+try {
+  const root = spawnSync('git', ['rev-parse', '--show-toplevel'], { encoding: 'utf8' }).stdout.trim();
+  if (root && spawnSync('git', ['diff', '--quiet', 'HEAD', '--', ...GENERATED], { cwd: root }).status === 0) {
+    spawnSync('git', ['reset', '-q', 'HEAD', '--', ...GENERATED], { cwd: root });
+  }
+} catch {
+  /* tidying only */
+}

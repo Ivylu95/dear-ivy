@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { Empty, Enter, PageHead } from '@/components/ui';
+import { Row } from '@/components/ui/Row';
+import { Empty, Enter, PageHead, Tag, Tags } from '@/components/ui';
 import { getPeople } from '@/lib/content';
 
 export const dynamic = 'force-dynamic';
@@ -29,24 +29,16 @@ export default async function People() {
       ) : (
         <div className="grid-2">
           {people.map((person) => (
-            <Link key={person.slug} href={`/people/${person.slug}`} className="row">
-              <div className="row-head">
-                <span className="row-title">{person.name}</span>
-              </div>
-              {person.relation && (
-                <div className="meta-line">
-                  <span>{person.relation}</span>
-                </div>
-              )}
+            <Row key={person.slug} href={`/people/${person.slug}`} title={person.name} details={[person.relation]}>
               {!person.filled && (
-                <div className="tags">
+                <Tags>
                   {/* The quiet tag, not the ok one. A file with nothing in it
                       yet is not a good outcome or a bad one, and the green it
                       used to wear said it was one of the two. */}
-                  <span className="tag">file started, nothing in it yet</span>
-                </div>
+                  <Tag>file started, nothing in it yet</Tag>
+                </Tags>
               )}
-            </Link>
+            </Row>
           ))}
         </div>
       )}

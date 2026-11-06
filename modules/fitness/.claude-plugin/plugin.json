@@ -1,0 +1,6 @@
+{
+  "name": "fitness",
+  "description": "What she eats, drinks and takes, and how she trains and recovers: a daily food log read from photos and labels, her supplement list with brands and labels, her sets and lifts, and her sleep, soreness and energy.",
+  "version": "1.0.0",
+  "author": { "name": "dear harness" }
+}

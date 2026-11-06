@@ -1,0 +1,215 @@
+/* ── Reset ───────────────────────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  /* The other thing that moved between tabs, and the one that was never an
+     animation: a short view has no scrollbar and a long one does, so arriving
+     from About me at the timeline took the scrollbar's width out of the window
+     and shifted the whole layout -- sidebar, content and rail together -- a
+     dozen pixels left. Reserving the gutter always costs that width on one edge
+     and buys back every page in the app agreeing where its columns are.
+
+     No effect where scrollbars overlay the content rather than taking space
+     from it, which is the default on macOS and on touch, so this is a fix for
+     the platforms that have the problem and a no-op on the ones that do not. */
+  scrollbar-gutter: stable;
+}
+
+/* Anchor links travel rather than jump.
+   
+   Every row of the right rail is a link to something further down the document,
+   and a jump gives no account of where it went: a reader who clicks ARD-010 and
+   lands on a screen of table cannot tell whether the page moved a little or a
+   long way, and whether what they are looking at is above or below what they
+   were reading. The travel says it. It is also what the Top button in that same
+   column has always done, so the two controls beside each other now behave the
+   same way rather than differently for no stated reason.
+   
+   In CSS rather than in the click handler it would otherwise take, because a
+   handler has to preventDefault and then put back by hand everything the
+   default was doing: the hash in the address bar so the link is copyable, the
+   history entry so Back returns, and the focus move that is how a keyboard or
+   screen-reader user knows they arrived. This changes how the scroll is
+   performed and leaves all of that alone.
+   
+   Guarded by the media query rather than overridden inside it, so the default
+   stays an instant jump and motion is the thing that gets added — a reader who
+   has asked the system for less movement is never the one relying on an
+   exception further down a stylesheet. The Top button already tests the same
+   query and passes `auto`, which beats this, so the two cannot disagree. */
+@media (prefers-reduced-motion: no-preference) {
+  /* Which element scrolls depends on the width, and the two are handled apart.
+
+     Below the breakpoint the document scrolls, so the rule sits on `html`, and
+     <html> carries data-scroll-behavior="smooth" (components/shell/Document.jsx)
+     so Next turns it off while it puts a new route at the top.
+
+     Above 901px `.main` is the scroller — `.shell` is the height of the window
+     and hides its overflow, so the reading column scrolls itself. Next's
+     switch-off only reaches <html>, so a standing smooth rule on `.main` made
+     every tab change animate its scroll-to-top through the page. `.main` is
+     smooth only while an in-page link is being followed: the right rail's rows
+     and the section headings' anchors set data-anchor-travel for the length of
+     the trip (lib/anchor-travel.js). */
+  html,
+  .main[data-anchor-travel] {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  /* One face for the whole surface.
+
+     It was Public Sans here and Newsreader on everything that called itself a
+     heading, which meant the app was set in two families and the line between
+     them was drawn by whoever wrote each rule. That line kept moving: the left
+     rail took its headings from the <h2> element rule and its rows from this
+     declaration, and ended up with a serif label over a sans list.
+
+     So the surface is one family, declared here, and inherited by everything.
+     Not *almost* everything: the quoted things — a path, a hash, a phone number
+     — used to be the stated exception and kept the mono, and when that face was
+     removed the exception was left standing with nothing in it, so `code` and
+     `pre` fell through to the browser's own monospace instead. The reset above
+     closes that, on the owner's explicit instruction that one face means one
+     face. What a quoted span IS, the reader now learns from its ground. */
+  font-family: var(--f-serif);
+  /* Both from the character. Letter's 16.5px is 16 plus half a pixel, because her
+     record is prose read at length, sometimes late, and half a pixel of extra
+     body size is the cheapest legibility there is; Open takes that argument
+     further. */
+  font-size: var(--text-base);
+  line-height: var(--leading);
+  color: var(--fg);
+  background-color: var(--bg);
+  /* The tooth of the paper: a noise tile from theme/palette.mjs, repeating at its
+     natural 140px. Deliberately NOT background-attachment: fixed — the field is
+     random, so there is nothing to line up and nothing to look misaligned, and a
+     fixed layer costs a full-viewport repaint on every frame of a long scroll. */
+  background-image: var(--grain);
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Every SVG in this app is an icon drawn at an exact size — there is no such
+   thing here as one that should stretch or squeeze to fit.
+   
+   As a flex item an icon shrinks like anything else, and a shrunk icon is not a
+   smaller icon: a 16px mark squeezed to 15.4px lands its whole geometry on
+   fractions of a pixel, and every edge that was on a boundary is now spread
+   across two at part strength. It looks like a blurry version of itself, in one
+   row, on one screen width — which is the hardest kind of rendering fault to
+   catch, because it is invisible everywhere it is not happening.
+   
+   Declared once on the element rather than per icon class: half of them carried
+   a flex rule already and the other half did not, and the ones that did not
+   were the ones sitting next to text that can run long. */
+svg {
+  flex: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/* The other half of the rule above, and the last place in the app wearing a
+   face nothing here chose.
+
+   The UA stylesheet sets `font-family: monospace` on these four by ELEMENT, and
+   an element rule beats an inherited value however far up it was declared — so
+   `body`'s one family stopped at the edge of every backticked path, every
+   listing in the harness viewer and every fenced block in the register. When
+   the mono was removed from this stylesheet it was these elements that were
+   left behind: not set to the serif, just handed back to whatever the browser
+   picks for generic monospace, which is Consolas here, Menlo elsewhere and a
+   different thing again on a phone. One face everywhere has to mean these too,
+   or the one place the app quotes the repository verbatim is the one place it
+   cannot say what it is set in.
+
+   `inherit` rather than `var(--f-serif)`, so this says *the surface's face*
+   rather than naming a second copy of it — a code span inside `.prose` takes
+   --f-prose the same way the sentence around it does, and type keeps one home
+   in theme/palette.mjs.
+
+   `kbd` and `samp` are unused today and are here anyway: they carry the same UA
+   default, and the cost of the two extra selectors is less than the cost of
+   this being rediscovered the first time something renders one.
+
+   Blocks are the exception (DES-005): a listing takes --f-code, the device's
+   own monospace, so what comes after an indent still aligns down the block. A
+   span inside a sentence stays in the sentence's face. */
+code,
+pre,
+kbd,
+samp {
+  font-family: inherit;
+}
+
+.harness-code,
+.prose pre {
+  font-family: var(--f-code);
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+/* ── Accessibility ───────────────────────────────────────────────────────── */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Parked 112px above its place, which is the same -100px it sat at by `top`,
+   and brought down by a transform so the drop runs on the compositor. */
+.skip-link {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: var(--z-skip);
+  padding: 10px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--r2);
+  text-decoration: none;
+  transform: translateY(-112px);
+  transition: transform var(--dur-fast) var(--ease);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--r1);
+}

@@ -1,0 +1,607 @@
+/* ── Mobile ──────────────────────────────────────────────────────────────── */
+
+.mobile-header,
+.nav-scrim {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .mobile-header {
+    position: sticky;
+    top: var(--sample-bar);
+    z-index: var(--z-header);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Height PLUS the safe-area inset, with the content padded down by the same
+       amount, so the bar paints the strip under the clock as ground rather than
+       leaving the OS to fill it with a flat colour. Carried in --header-bar, so
+       anything else pinning under this bar offsets by it without copying the
+       number. */
+    height: var(--header-bar);
+    padding: env(safe-area-inset-top) 14px 0;
+    background-color: var(--bg);
+    background-image: var(--grain);
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .nav-burger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: var(--r2);
+    background: transparent;
+    color: var(--fg);
+    cursor: pointer;
+  }
+
+  .mobile-header-view {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--f-serif);
+    font-size: var(--size-mobile-head);
+  }
+
+  .mobile-header-view-icon {
+    color: var(--accent);
+  }
+
+  /* The rail stops being a rail and becomes an off-canvas drawer: "collapsed" is
+     meaningless without hover, and the only question is open or shut. */
+  .sidebar {
+    width: 0;
+  }
+
+  html.nav-collapsed .sidebar {
+    width: 0;
+  }
+
+  .sidebar-inner,
+  html.nav-collapsed .sidebar-inner {
+    width: var(--sidebar-drawer-w);
+    padding-top: calc(22px + env(safe-area-inset-top));
+    transform: translateX(-100%);
+    transition: transform var(--dur) var(--ease);
+  }
+
+  html.nav-open .sidebar-inner {
+    transform: translateX(0);
+  }
+
+  /* The drawer's lift is the layer sidebar.css draws for the peek, sized to the
+     drawer and sliding with it. It used to be a box-shadow on the panel that was
+     not in the transition list, so it popped on at the start of the slide and
+     vanished at the start of the way back; as its own layer it fades with the
+     travel instead. */
+  .sidebar::after {
+    width: var(--sidebar-drawer-w);
+    transform: translateX(-100%);
+  }
+
+  html.nav-open .sidebar::after {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Shut, the drawer is moved off-screen and also taken out of reach. A
+     transform alone left every nav link in the tab order and in the screen
+     reader's list, so a keyboard walked through links nobody could see.
+     visibility flips after the slide out (the delay is the slide's own
+     duration) and at once on the way in, so the motion is unchanged. */
+  .sidebar-inner,
+  html.nav-collapsed .sidebar-inner {
+    visibility: hidden;
+    transition:
+      transform var(--dur) var(--ease),
+      visibility 0s linear var(--dur);
+  }
+
+  /* Opening lists no visibility transition at all, so it switches at once even
+     under reduced motion, whose 0.01ms !important duration would otherwise
+     leave the drawer hidden at the moment focus is moved into it. */
+  html.nav-open .sidebar-inner,
+  html.nav-open.nav-collapsed .sidebar-inner {
+    visibility: visible;
+    transition: transform var(--dur) var(--ease);
+  }
+
+  /* The peek has no meaning on a touch screen, and without this the drawer would
+     open on any stray hover event the browser synthesises. */
+  html.nav-collapsed .sidebar-inner:hover,
+  html.nav-collapsed .sidebar-inner:has(:focus-visible),
+  html.nav-collapsed .sidebar-inner:has(.settings-trigger[aria-expanded='true']) {
+    width: var(--sidebar-drawer-w);
+  }
+
+  /* The desktop rule's chain and weight (0,7,1), so this one, later, wins.
+     .foot-link-label is left out here as it was before. */
+  html.nav-collapsed .sidebar-inner:not(:hover):not(:has(:focus-visible)):not(:has(.settings-trigger[aria-expanded='true']))
+    :is(
+      .brand-name,
+      .brand-tag,
+      .nav-label,
+      .nav-count,
+      .nav-section-label,
+      .sidebar-toggle-label,
+      .settings-label,
+      .settings-flag,
+      .profile-name,
+      .profile-switch
+    ) {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .sidebar-toggle {
+    display: none;
+  }
+
+  /* Always laid out under the breakpoint, and faded in and out with the drawer
+     rather than switched on with display. Shut, it is invisible and takes no
+     taps; visibility flips after the fade on the way out and at once on the way
+     in, the same arrangement the drawer itself uses above. Taps stop the moment
+     it starts closing, not when the fade ends: pointer-events is not
+     transitioned, so for that fade the layer is still visible to the eye but no
+     longer catches the tap meant for the page under it. */
+  .nav-scrim {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: calc(var(--z-rail) - 1);
+    background: var(--shadow-lift);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      opacity var(--dur) var(--ease),
+      visibility 0s linear var(--dur);
+  }
+
+  html.nav-open .nav-scrim {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity var(--dur) var(--ease);
+  }
+
+  /* The shell wraps, so the rail drops under the page instead of beside it.
+     The rail's content is secondary by definition, and on a phone the page it
+     contextualises is the whole screen — it moves, rather than disappearing, so
+     nothing is lost. */
+  .shell {
+    flex-wrap: wrap;
+  }
+
+  .main {
+    flex: 1 1 100%;
+    padding: 26px 18px 72px;
+  }
+
+  .rail {
+    width: 100%;
+    padding: 0 18px 64px;
+  }
+
+  /* Stacked under the page rather than beside it, so none of the sticky column
+     behaviour applies: there is no second column to stay level with, and a
+     100dvh scroll box in the middle of a scrolling page is a trap. */
+  .rail-sticky {
+    position: static;
+    max-height: none;
+    padding-block: 0;
+    margin-block: 0;
+    overflow: visible;
+  }
+
+  .page-title {
+    font-size: var(--size-mobile-title);
+  }
+}
+
+/* Under ~560px there is no margin to hold the mark, so it goes above the block
+   and the grid becomes one column. */
+@media (max-width: 560px) {
+  .notice-body {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 0;
+  }
+
+  .notice-mark {
+    grid-row: auto;
+    margin-bottom: 14px;
+  }
+
+  .notice-body > :not(.notice-mark) {
+    grid-column: 1;
+  }
+}
+
+/* ── Rotate lock ─────────────────────────────────────────────────────────── */
+
+/* Portrait only, on phones. No browser lets a page lock orientation outside
+   fullscreen, so a phone turned sideways gets this cover instead of a layout
+   that was never drawn for it. */
+.rotate-lock {
+  display: none;
+}
+
+@media (max-height: 460px) and (orientation: landscape) and (pointer: coarse) {
+  .rotate-lock {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-lock);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: var(--bg);
+    background-image: var(--grain);
+    text-align: center;
+  }
+
+  .rotate-lock-mark {
+    color: var(--accent);
+  }
+
+  .rotate-lock-title {
+    font-family: var(--f-serif);
+    font-size: var(--size-notice-title);
+  }
+
+  .rotate-lock-sub {
+    font-size: var(--size-notice-sub);
+    color: var(--fg-dim);
+  }
+}
+
+/* ── Motion ──────────────────────────────────────────────────────────────── */
+
+/* A view settling in.
+
+   This was --dur-slow, 380ms, with `both` — which means the content of every
+   page was held at opacity 0 for 380ms after it arrived. The reads behind these
+   pages take about 80ms, so for four fifths of every tab change the app was
+   waiting on itself. An entrance carries no information; it is there to stop a
+   swap being abrupt, and 200ms does that as well as 380 does.
+
+   Only opacity and transform, so the whole thing runs on the compositor and
+   never touches layout — a 400-row timeline fades as cheaply as an empty page. */
+/* The main panel arriving, as a cascade rather than as one block.
+
+   A single fade over the whole page is a blink: everything is absent, then
+   everything is present, and nothing about it says a new view has arrived. The
+   parts coming in a beat apart reads as the page assembling — the head, then
+   what is under it — which is the same information a slide would give without
+   anything travelling for the eye to follow.
+
+   The steps shorten as they go (40, 30, 25, then hold at 115) so the cascade
+   accelerates and the tail does not drag: the last section of a six-section page
+   is fully there 355ms after the swap, and the part she actually looks at first
+   is there in 240.
+
+   Capped at the fifth child on purpose. An uncapped stagger makes a long page
+   take longer to arrive the longer it is, which is exactly backwards.
+
+   Opacity only. No layout, no paint, one property on one layer, so a 400-row
+   timeline costs the same as an empty one. */
+/* `backwards`, not `both`: the first keyframe holds through each child's delay,
+   and once the fade is done the element lets go of it. A `forwards` fill kept
+   every child of every view on an animated opacity for as long as the page was
+   open — a stacking context per section, which is what broke the harness's
+   sticky band (see harness-source.css, where the same change was made). */
+.enter > * {
+  animation: enter 240ms var(--ease) backwards;
+}
+
+.enter > :nth-child(2) {
+  animation-delay: 40ms;
+}
+
+.enter > :nth-child(3) {
+  animation-delay: 70ms;
+}
+
+.enter > :nth-child(4) {
+  animation-delay: 95ms;
+}
+
+.enter > :nth-child(n + 5) {
+  animation-delay: 115ms;
+}
+
+/* The keyframe the harness cross-fade arrives on. See "Moving between files"
+   below, where ::view-transition-new(harness-file) runs it.
+
+   It lived on a `.doc-enter` class here for a while, on <Enter>'s own wrapper,
+   which was a mistake worth leaving a note about: this view's entrance is owned
+   by a ViewTransition, and an animation on the content INSIDE the arriving
+   snapshot runs on top of the transition's own — two fades of different lengths
+   on the same pixels, which is the exact thing the @supports block below exists
+   to prevent. It only guarded `.enter > *`, so a rule on `.enter` itself slipped
+   underneath it. One entrance, and the thing that owns it owns it. */
+@keyframes settle {
+  from {
+    opacity: 0.3;
+    transform: translateX(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* The rail no longer fades out of nothing.
+
+   Its pace is the one it always had — --dur-fast behind a 40ms delay, so the two
+   columns read as one movement with a direction. What changed is only the floor:
+   it used to run `enter`, which starts at zero, and the rail is remounted on
+   every navigation (see RemountOnRoute), so on the harness — where that is a row
+   click, several times a minute — a fade from zero was a column blinking out and
+   back. Starting at 0.3 keeps the movement and takes away the blink. */
+.rail-enter {
+  animation: settle-rail var(--dur-fast) var(--ease) 40ms both;
+}
+
+@keyframes settle-rail {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* A fade and nothing else.
+
+   It used to lift 4px as it came in, and on a tab change that reads as the page
+   moving rather than as the page arriving -- every heading you were about to
+   read starts a few pixels below where it ends up, so the eye follows it instead
+   of settling. A slide is right for something entering from an edge, which is
+   what a drawer or a toast does; a view that replaces another one in place has
+   no direction to come from, and inventing one gives the reader something to
+   track for no reason.
+
+   Opacity alone is also the cheapest thing a compositor can be asked for: no
+   layout, no paint, one property on one layer. */
+/* The standalone pages have one short block and nothing being read yet, so they
+   can afford the small rise the dashboard's entrance deliberately leaves out. */
+.notice-body.enter > * {
+  animation-name: enter-rise;
+  animation-duration: 420ms;
+}
+
+@keyframes enter-rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* The in-flight mark on a clicked link — see components/ui/Reading.jsx.
+
+   Invisible for its first 200ms, which is longer than a local read takes, so a
+   normal tab change never shows it and it appears only when there is genuinely
+   something to wait for. `forwards` rather than `both` is what buys that: a
+   backwards fill would paint the first keyframe during the delay, which is the
+   whole thing this is avoiding. */
+/* Taken out of flow rather than sized to nothing. In flow it would add its width
+   and the row's gap to every nav row permanently, to be seen on perhaps one
+   navigation in fifty — and animating a width to make that up costs a layout on
+   the one frame that can least afford one. Absolute, it costs the column
+   nothing, ever. */
+.reading {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  margin-top: -2.5px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0;
+}
+
+/* The dot lands where a count sits, so the count steps aside for it. The row
+   being navigated to is the one row whose count nobody is reading. */
+.nav-item:has(.reading[data-pending='true']) .nav-count {
+  opacity: 0;
+}
+
+.reading[data-pending='true'] {
+  animation: reading 900ms var(--ease) 200ms infinite forwards;
+}
+
+@keyframes reading {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Asked for less motion, get none. Not "less": a settle-in animation has no
+   information in it, so the honest response to the request is to remove it.
+   Delays go too, not only durations: a visibility flip set to wait for a slide
+   (the drawer, the scrim) or a stagger held on its first keyframe would
+   otherwise still wait out the full time of a motion that no longer takes it. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+  }
+}
+
+.print-btn {
+  margin-top: 14px;
+}
+
+/* ── Print ───────────────────────────────────────────────────────────────── */
+
+/* This exists for exactly one page: the safety plan.
+   
+   A plan written on a better day is worth having on paper. A phone goes flat, a
+   password gets forgotten, and the whole point of the thing is that it works on
+   the night it is needed — which is the night least likely to involve
+   successfully logging into a website. Printed and stuck inside a cupboard door,
+   it needs no battery and no password.
+   
+   Everything that is chrome goes: the rail, the nav, the mobile bar, the
+   provenance lines, the settle-in animation. What is left is the numbers, her
+   warning signs, what helps, who to call, and her reasons — in ink on paper. */
+/* Paper is its own medium, and this block is written for it rather than derived
+   from the screen: sizes in `pt` because a physical unit is the only one that
+   means anything on a page, and weights as literals rather than as the --w-*
+   scale for the same reason. The two raw `font-weight` values below are the only
+   ones left in this stylesheet and they are deliberate, not stragglers.
+
+   The argument is not consistency but legibility at a different physical size.
+   What this block mostly prints is the safety plan, which exists to be readable
+   by someone having a bad day, folded in a wallet, possibly badly photocopied —
+   a heavier head at 9pt on paper is doing a job that the same step does not do
+   at 14px on a backlit screen. Anything that pulls the scale in here should have
+   to argue against that first. */
+@media print {
+  .sidebar,
+  .rail,
+  .mobile-header,
+  .nav-scrim,
+  .skip-link,
+  .rotate-lock,
+  .source,
+  .year-jump {
+    display: none !important;
+  }
+
+  body {
+    background: none;
+    font-size: 11pt;
+  }
+
+  .shell {
+    display: block;
+  }
+
+  .main {
+    max-width: none;
+    padding: 0;
+  }
+
+  .enter {
+    animation: none;
+  }
+
+  /* Borders rather than washes: a pale tint on a colour printer is invisible and
+     on a mono one comes out as grey mud over the text. */
+  .card,
+  .crisis,
+  .empty {
+    border: 1px solid var(--fg);
+    background: none;
+    break-inside: avoid;
+  }
+
+  /* The numbers are the reason the page is on paper, so they are the largest
+     thing on it, and the tel: href is meaningless in ink. */
+  .crisis-num {
+    font-size: 15pt;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  /* Keep a heading with what it introduces. */
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  /* The wallet card.
+
+     The whole plan on paper is the right thing for a cupboard door. It is not
+     the thing that goes in a wallet, and a number in a wallet is the one that
+     survives a flat phone in a place she did not plan to be.
+
+     So the numbers print a second time, at card size, on their own page with a
+     cut line. Everything else about the block is unchanged — same rows, same
+     source, same parse — because a card that says something different from the
+     plan is the drift SAF-002 exists to prevent. It is a second IMPRESSION of
+     one block, not a second copy of the numbers.
+
+     Sized to a credit card at 85.6 x 54mm so it fits the slot it is cut for.
+     Height is a minimum rather than a fixed value: a plan that grows a fifth
+     number should print a taller card, never a clipped one. */
+  .wallet {
+    display: block;
+    break-before: page;
+    box-sizing: border-box;
+    width: 85.6mm;
+    min-height: 54mm;
+    padding: 5mm;
+    border: 1px dashed var(--fg);
+    border-radius: 3mm;
+  }
+
+  .wallet .crisis-line {
+    max-width: none;
+    padding: 1.2mm 0;
+  }
+
+  .wallet .crisis-num {
+    font-size: 11pt;
+  }
+
+  /* No notes on the card. There is room for the numbers or for the numbers and
+     an explanation, and the explanation is what gets dropped. */
+  .wallet .crisis-note {
+    display: none;
+  }
+
+  .wallet-head {
+    margin-bottom: 2mm;
+    padding-bottom: 1.5mm;
+    border-bottom: 1px solid var(--fg);
+    font-size: 9pt;
+    font-weight: 700;
+  }
+
+  .wallet-foot {
+    margin-top: 2mm;
+    font-size: 7pt;
+    font-style: italic;
+  }
+
+  /* A printed copy should say what it is and when it was taken, or it becomes an
+     undated sheet of numbers in a drawer. */
+  .page-head::after {
+    content: 'Printed from your own record. If this is out of date, the version in the app is the real one.';
+    display: block;
+    margin-top: 10px;
+    font-size: 9pt;
+    font-style: italic;
+  }
+}

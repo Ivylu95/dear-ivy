@@ -6,11 +6,11 @@ import * as read from '@/lib/content-read';
 //
 // Every view in this app asks for its content here, and this file does exactly
 // one thing before handing the question on: it works out WHICH record the
-// request is reading — hers, in data/, or the invented one in samples/ — and
+// request is reading — hers, in data/, or the invented one in data-sample/ — and
 // enters that scope.
 //
-// It is a separate file from lib/content-read.js, which holds the parsing, for a
-// reason worth keeping. That file is several hundred lines of synchronous reads
+// It is a separate file from lib/content-read.js, which gathers the parsing in
+// lib/read/, for a reason worth keeping. That layer is several hundred lines of synchronous reads
 // that call each other freely; deciding the record is asynchronous, because the
 // answer is in a cookie. Mixing the two would make every getter in the read
 // layer async and put `await` in front of a hundred internal calls, and the one
@@ -20,7 +20,9 @@ import * as read from '@/lib/content-read';
 // So the split is: this file is the only place that knows about requests, and
 // that file is the only place that knows about markdown. Nothing imports
 // content-read.js directly except this one. Doing so would read hers regardless
-// of the switch, which is safe but wrong.
+// of the switch, which is safe but wrong — except in lib/avatar.js, which dates
+// her picture and is bound to hers on purpose, and the unit tests, which read
+// the sample.
 //
 // NOTHING BELOW WRITES, and neither does anything it calls. The dashboard is a
 // window, not a second author — see the note at the top of lib/content-read.js
@@ -43,7 +45,6 @@ function scoped(fn) {
   });
 }
 
-export const getNow = scoped(read.getNow);
 export const getSettings = scoped(read.getSettings);
 export const getToday = scoped(read.getToday);
 export const getIdentity = scoped(read.getIdentity);

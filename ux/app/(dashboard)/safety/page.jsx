@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Empty, Enter, PageHead, Prose, SectionHead, Source } from '@/components/ui';
+import { Card, Empty, Enter, PageHead, Prose, SectionHead, Source } from '@/components/ui';
 import PrintButton from './PrintButton';
 import { getSafetyPlan } from '@/lib/content';
 
@@ -180,10 +180,10 @@ export default async function Safety() {
             <section key={section.heading} className="view-section">
               <SectionHead title={section.heading} />
               {section.filled ? (
-                <div className="card">
+                <Card>
                   {/* The people this section names who have a number on file,
                       above her own words about them rather than woven into
-                      them. Her table says WHEN to call Orla and what calling
+                      them. Her table says WHEN to call Person-O and what calling
                       her is like; this is the tap that does it, and the two are
                       different things — rewriting her table to carry a link
                       would be editing what she wrote.
@@ -220,7 +220,7 @@ export default async function Safety() {
                     </div>
                   )}
                   <Prose html={section.html} />
-                </div>
+                </Card>
               ) : (
                 <Empty title="Not filled in yet">
                   Worth doing with your therapist rather than alone.

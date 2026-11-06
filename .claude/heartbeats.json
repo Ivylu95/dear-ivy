@@ -1,0 +1,37 @@
+{
+  "$comment": "The heartbeat's one launch spec, for every runner (HBT-002): the orchestrator entry's prompt is the only prompt any runner gives it. BAXTER reads this file as its manifest (one entry, its schedule, model and timeout) and never writes it: dear-me is \"stamp_manifest\": false in its repos.json. The Claude routine's own prompt only points here (runners.claude-routine.prompt). Everything the run does is in .claude/jobs/README.md, never here.",
+  "heartbeats": [
+    {
+      "name": "orchestrator",
+      "prompt": "You run unattended, with no one present. Open .claude/jobs/README.md in this repository, read it whole, and follow it exactly, from step 0.",
+      "model": "sonnet",
+      "schedule": {
+        "type": "every",
+        "minutes": 30
+      },
+      "timeout_min": 90,
+      "enabled": true,
+      "description": "Starts dear-me's one heartbeat (HBT-002, HBT-006): .claude/jobs/README.md, the orchestrator, which runs the inline jobs and every due job in .claude/jobs/, and stands down when a run is already going or nothing is due."
+    }
+  ],
+  "runners": {
+    "_what": "How each runner starts the orchestrator entry above. Its timer lives with the runner; this records what it should be. Only the runner marked \"sends\": true runs the inline jobs (reminders, check-ins), so two runners never send the same message.",
+    "baxter": {
+      "where": "the developer's computer, BAXTER's sweep",
+      "reads": "this file directly",
+      "schedule": "every 30 minutes",
+      "model": "sonnet",
+      "timeout_min": 90,
+      "sends": "backup",
+      "backup_after_min": 90,
+      "_backup": "A-177: sends only the reminders the routine has left this long, each claimed on main first; needs TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID in BAXTER's own environment, never in the repository"
+    },
+    "claude-routine": {
+      "where": "a Claude Code routine in the Claude app",
+      "environment": "Heartbeats (the bot key and chat id as environment variables; api.telegram.org allowed)",
+      "schedule": "5 * * * * (hourly, at five past)",
+      "prompt": "You run unattended, with no one present. Open .claude/heartbeats.json in this repository and do exactly what the prompt of its orchestrator entry says.",
+      "sends": true
+    }
+  }
+}

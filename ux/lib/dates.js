@@ -18,7 +18,7 @@ export function parseISO(value) {
   const m = ISO.exec(String(value ?? '').trim());
   if (!m) return null;
   // Noon UTC, not midnight: a date-only value parsed at midnight lands on the
-  // previous day for anyone west of UTC, and this record is read in Singapore.
+  // previous day for anyone west of UTC, and Singapore, the default, is east of it.
   const date = new Date(Date.UTC(Number(m[1]), Number(m[2]) - 1, Number(m[3]), 12));
   return Number.isNaN(date.getTime()) ? null : date;
 }
@@ -29,6 +29,14 @@ export function dateLabel(value) {
   const d = parseISO(value);
   if (!d) return String(value ?? '');
   return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
+}
+
+// What a dated document is called (DES-001 design 3): its title, or its date
+// when it has none, with the date as the note beside a title and no note
+// beside a bare date. The journal's rail, the therapy rail and DatedDoc each
+// worked this out for themselves.
+export function titledDate({ title, date }) {
+  return { title: title ?? dateLabel(date), note: title ? dateLabel(date) : null };
 }
 
 export function yearOf(value) {
@@ -42,7 +50,7 @@ export function yearOf(value) {
 // anchor it is given decides what "today" means. Left as new Date() that is the
 // UTC date — and for anyone east of UTC the early hours of the morning fall on
 // the previous UTC day, which is how an appointment happening this evening ends
-// up labelled "tomorrow" until 8am. The record is read in Singapore, so it was
+// up labelled "tomorrow" until 8am. In Singapore, the default zone, it was
 // wrong for a third of every day.
 //
 // Returns a Date whose UTC date is her local date, so the functions below need
@@ -52,15 +60,26 @@ export function yearOf(value) {
 //
 // No zone configured, or one the platform does not know, falls back to the
 // server clock — the behaviour before this existed.
+//
+// A formatter is costly to build and the zone rarely changes, so one is kept per
+// zone. A zone the platform rejects throws at construction, before anything is
+// kept, so it falls back every time exactly as before.
+const dayFormats = new Map();
+
 export function todayIn(timeZone) {
   if (!timeZone) return new Date();
   try {
-    const local = new Intl.DateTimeFormat('en-CA', {
-      timeZone,
-      year: 'numeric',
-      month: '2-digit',
-      day: '2-digit',
-    }).format(new Date());
+    let format = dayFormats.get(timeZone);
+    if (!format) {
+      format = new Intl.DateTimeFormat('en-CA', {
+        timeZone,
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+      });
+      dayFormats.set(timeZone, format);
+    }
+    const local = format.format(new Date());
     return parseISO(local) ?? new Date();
   } catch {
     return new Date();
@@ -104,7 +123,8 @@ export function agoLabel(value, now = new Date()) {
   if (ago < 14) return `${ago} days ago`;
   if (ago < 60) return `${Math.round(ago / 7)} weeks ago`;
   if (ago < 365) return `${Math.round(ago / 30)} months ago`;
-  return `${Math.round(ago / 365)} years ago`;
+  const years = Math.round(ago / 365);
+  return `${years} year${years === 1 ? '' : 's'} ago`;
 }
 
 // When a file last changed: the date, and how long ago that was.
