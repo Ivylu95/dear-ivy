@@ -1,5 +1,7 @@
 {
-  "timezone": "UTC",
+  "timezone": "Asia/Singapore",
   "send": "routine",
-  "check_ins": []
+  "check_ins": [
+    { "id": "morning-update", "emoji": "🌅", "text": "Morning update: today's calendar events and the next few days, plus anything else relevant", "cron": "0 8 * * *", "set": "2026-11-06 20:59" }
+  ]
 }

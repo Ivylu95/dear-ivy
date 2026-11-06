@@ -1,5 +1,5 @@
 ---
-nudge: off
+nudge: on
 ---
 # The check-in nudge
 
@@ -11,3 +11,5 @@ starts it.
 ## What she said
 
 _Her words, dated, each time she turns it on or off._
+
+- 2026-11-06 · on · *"send me a morning checkup every morning via telegram. IT shpu;d just be a general update on my calender events and etc. and also anything u deem as relevant."* Then *"yes to both"*.

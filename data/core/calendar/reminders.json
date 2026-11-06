@@ -1,5 +1,7 @@
 {
   "timezone": "Asia/Singapore",
   "send": "routine",
-  "reminders": []
+  "reminders": [
+    { "id": "telegram-test", "emoji": "✅", "text": "Test message: Telegram is working", "at": "2026-11-06 21:00", "set": "2026-11-06 20:59" }
+  ]
 }
