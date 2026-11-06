@@ -96,3 +96,4 @@ The full version, for the developer:
    - turn the safeguard, privacy and restore checks into report-only checks;
    - ship none of the developer jobs.
 9. **Scheduled tasks follow the record when it moves** (curated by the feedback chat). Her evening check-in, a separate scheduled task, still names the record's old paths after the 1.0.2 move. Re-point every scheduled task whenever a migration moves files.
+10. **Recommendations as a small table** (from her). Recommendations always come as a table that reads well on a phone: two or three short columns, short cells, never a list. This is the one exception to the narrow-by-default rule in item 1. Her short version: 📊 Recommendations in a small table that fits my phone.
