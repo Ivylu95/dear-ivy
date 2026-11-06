@@ -8,6 +8,14 @@
       "at": "2026-11-15 16:00",
       "set": "2026-11-06 21:44",
       "ended": "2026-11-06"
+    },
+    {
+      "id": "evening-antidepressant",
+      "emoji": "💊",
+      "text": "Take your antidepressant before bed",
+      "cron": "0 22 * * *",
+      "set": "2026-11-07 06:27",
+      "ended": "2026-11-07"
     }
   ]
 }
