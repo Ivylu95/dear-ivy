@@ -1,6 +1,13 @@
 {
   "_what": "The last messages the sweep wrote for each reminder, so the next differs, how many Telegram accepted, and any held (HBT-010, HBT-014).",
-  "counts": {},
+  "counts": {
+    "telegram-test": {
+      "sent": 1,
+      "first": "2026-11-06 21:03",
+      "last": "2026-11-06 21:03",
+      "lastUtc": "2026-11-06T13:03:38.113Z"
+    }
+  },
   "sent": [
     {
       "id": "telegram-test",
@@ -8,6 +15,12 @@
       "utc": "2026-11-06T13:03:14.358Z",
       "claimed": "cc-routine",
       "due": "2026-11-06 21:00"
+    },
+    {
+      "id": "telegram-test",
+      "at": "2026-11-06 21:03",
+      "utc": "2026-11-06T13:03:38.113Z",
+      "text": "Telegram is connected\nYour phone is getting messages from here just fine 📱"
     }
   ]
 }
