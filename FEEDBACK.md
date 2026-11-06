@@ -26,3 +26,5 @@ Lessons about how the system works, not about the person it serves (CON-017).
   Why: the person asked whether the test lived in the heartbeat and whether running it was the test, and the task showed no new run after they reported trying.
 - Rule: when the set-up skill asks for a dated case in a person's copy, point it at this file, since the developer folder is absent.
   Why: the gap rule named a cases file that a person's copy cannot hold or write.
+- Rule: ship a person's copy with no development mode at all: no dev-mode switch or command, no dev reply shapes or menus (DEV-003), no developer route in skills, no development-mode lines in the session hooks or the main instructions.
+  Why: the person, in their own copy with no developer folder, asked that every development mode and development reply template be removed from it; the copy cannot change its own harness (DEP-013), so it has to come in a release.
