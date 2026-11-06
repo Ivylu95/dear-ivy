@@ -26,6 +26,15 @@
       "kind": "everyday",
       "state": "open",
       "modules": ["fitness"]
+    },
+    {
+      "url": "https://claude.ai/code/session_01RkebH5j9jBduAsrSVieBGm",
+      "title": "Workouts and exercises",
+      "title_from": "app",
+      "for": "workouts and exercises: her training plan, sets and reps, and her ankle routine",
+      "kind": "everyday",
+      "state": "open",
+      "modules": ["fitness"]
     }
   ],
   "offers": {
