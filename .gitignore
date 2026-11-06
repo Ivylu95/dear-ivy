@@ -24,3 +24,7 @@ out/
 
 # Vercel CLI state: which project this clone is linked to. Local, not shared.
 .vercel
+
+# Hook state kept between sessions: rebuilt unasked, so not tracked.
+/.claude/hooks/state/*
+!/.claude/hooks/state/README.md
