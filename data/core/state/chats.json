@@ -9,6 +9,14 @@
       "kind": "everyday",
       "state": "open",
       "modules": []
+    },
+    {
+      "url": "https://claude.ai/code/session_01RkebH4gsGcHpitnhd8CADi",
+      "title": "🔔 Reminders + Telegram",
+      "for": "setting, seeing and changing her reminders, and anything about her Telegram messages",
+      "kind": "everyday",
+      "state": "open",
+      "modules": []
     }
   ],
   "offers": {}

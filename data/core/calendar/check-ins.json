@@ -2,6 +2,20 @@
   "timezone": "Asia/Singapore",
   "send": "routine",
   "check_ins": [
-    { "id": "morning-update", "emoji": "🌅", "text": "Morning update: today's calendar events and the next few days, plus anything else relevant", "cron": "0 8 * * *", "set": "2026-11-06 20:59" }
+    {
+      "id": "morning-update-2",
+      "emoji": "🌅",
+      "text": "Morning update: today's calendar events and the next few days; then every reminder still pending, each with its day and time (or say there are none); then one line that she can change, move or stop any reminder by tapping the link below",
+      "cron": "0 8 * * *",
+      "reads": [
+        "data/core/calendar/reminders.json",
+        "data/core/calendar/calendar.md"
+      ],
+      "set": "2026-11-06 21:38",
+      "chat": {
+        "url": "https://claude.ai/code/session_01RkebH4gsGcHpitnhd8CADi",
+        "title": "🔔 Reminders + Telegram"
+      }
+    }
   ]
 }
