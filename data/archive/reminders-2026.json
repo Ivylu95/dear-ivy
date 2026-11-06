@@ -1,0 +1,13 @@
+{
+  "_what": "Reminders she stopped, or one-offs already sent, moved from core/calendar/reminders.json. Never deleted.",
+  "reminders": [
+    {
+      "id": "session-nov15",
+      "emoji": "🗣️",
+      "text": "Therapy at 10 pm tonight; jot down anything she wants to bring up",
+      "at": "2026-11-15 16:00",
+      "set": "2026-11-06 21:44",
+      "ended": "2026-11-06"
+    }
+  ]
+}
