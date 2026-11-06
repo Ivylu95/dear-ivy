@@ -1,6 +1,15 @@
 {
   "_what": "Her Claude chats a message to her phone may link to, and what each is for (card A-128). A notification links only an everyday chat that is open; the general one is where anything with no chat of its own goes. Checked against her live chats before a linked message is sent, and kept current: a closed chat is marked closed, never removed. Each everyday chat names the areas it covers (\"modules\"); \"offers\" keeps her answer when a chat for an area was offered, so it is never offered twice (card A-158).",
   "checked": null,
-  "chats": [],
+  "chats": [
+    {
+      "url": "https://claude.ai/code/session_01RkebH5oJkRFMitaDyH4Cke",
+      "title": "💬 Any Feedback?",
+      "for": "telling the developer what works, what doesn't, and what she'd like changed in how this works",
+      "kind": "everyday",
+      "state": "open",
+      "modules": []
+    }
+  ],
   "offers": {}
 }
