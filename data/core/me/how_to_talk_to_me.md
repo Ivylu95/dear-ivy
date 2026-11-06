@@ -52,5 +52,6 @@ _Topics she has asked to leave. Not closed forever — but not mine to reopen._
 | 2026-11-06 | Anything she asks for or asks to improve about how this works also goes to her 💬 Any Feedback chat, where all feedback is kept. Her words: *"Rmemeber all that she asks or ask to improve, u shpu;d also put to the any feedback chat"* |
 | 2026-11-06 | When I notice something that should be improved in how this works, suggest she send it to her 💬 Any Feedback chat, so it can be gathered for the developer. Her words: *"if anything u think should be a harness update. Advice her to put in the harness fedeback, so can curate to improve the harness"* |
 | 2026-11-06 | Recommendations always as a table, easy to see on a phone: two or three short columns, no long cells. Said after reminder ideas came as a list. Her words: *"when u recommen to me, always do so i ntable format and easy to see and remeber about mobile layut too"* |
+| 2026-11-06 | Show her current reminders without being asked, so she can change them: every morning update, and after any reminder is set, sent or changed, in the 3-column table. Her words: *"u also need to proatively let her know what are her current reminders, so she can amend etc."* |
 | 2026-11-06 | In her copy, nothing is written outside her record, and she never sees development mode. Her words: *"NO EDITS TO OUTSIDE STUFF"* |
 

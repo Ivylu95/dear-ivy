@@ -104,3 +104,4 @@ The full version, for the developer:
     | 💆 Facial | Fri 13 Nov, 5 pm | Facial at 6. Ask for the free eye treatment |
 
     Use this shape (thing · when · a few words) for any recommendation, and for showing her reminders, in every chat. Her short version: 📊 Keep that 3-column table for ideas and reminders.
+12. **Show her reminders without being asked** (from her). She wants to see her current reminders proactively, so she can change them: in every morning update (set up), and in any chat right after a reminder is set, sent or changed, in the 3-column table of item 11, ending on a line that she can change any of them. The reminders skill only shows the list when she asks; build this in. Her short version: 🔔 Show me my reminders after any change, so I can tweak them.
