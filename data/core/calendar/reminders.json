@@ -54,6 +54,13 @@
       "text": "Therapy tomorrow at 10 am; jot down tonight anything she wants to bring up",
       "at": "2026-11-14 20:00",
       "set": "2026-11-06 22:25"
+    },
+    {
+      "id": "evening-antidepressant",
+      "emoji": "💊",
+      "text": "Take your antidepressant before bed",
+      "cron": "0 22 * * *",
+      "set": "2026-11-07 06:27"
     }
   ]
 }
