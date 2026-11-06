@@ -11,7 +11,7 @@
 # them, so a colon or a quote in what she said cannot break the file.
 
 # What to call her. Shown in the dashboard.
-name: Joel
+name: Person-J
 
 # The pronouns the record is written in: she, he or they.
 pronouns: he
