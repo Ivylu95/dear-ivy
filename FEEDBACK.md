@@ -16,3 +16,11 @@ Lessons about how the system works, not about the person it serves (CON-017).
   Why: the placeholder form left the person asking how to put the token in and which site gives the chat ID.
 - Rule: make the crisis-continuation hook key on the chat it is running in, and the profile hook read the current profile path.
   Why: in a chat with no crisis message, the safety-floor hook said a crisis had happened and that she had said where something was; the profile hook also said seven questions were owed when the current profile has them answered.
+- Rule: have the routine step say which connectors to keep, the calendar one only, since the check-in refreshes the calendar copy through it.
+  Why: the step said to remove every connector, which would starve the check-in of the calendar; the person kept them all instead.
+- Rule: make the run claim time out and say why, rather than hang until the run is aborted.
+  Why: the first run by hand stopped at the claim step after a minute and a half and ended as an error, with no line saying what it waited on.
+- Rule: have the routine step say a run by hand only proves the pipe once the reminders flag has reached main.
+  Why: the first run by hand read main before the flag landed, so it reported reminders as not sent.
+- Rule: when the set-up skill asks for a dated case in a person's copy, point it at this file, since the developer folder is absent.
+  Why: the gap rule named a cases file that a person's copy cannot hold or write.
