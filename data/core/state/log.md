@@ -2,7 +2,7 @@
 
 One line per session, newest at the bottom. This drives the maintenance
 triggers — check the last `upkeep` and `research` lines before closing. What
-those runs must hold to is `specs/system/maintenance.md`.
+those runs must hold to is specs/system/maintenance.md (old harness, in v0).
 
 Format: `YYYY-MM-DD · <playbook> · <one clause>` — plus `upkeep` and `research`
 lines when those run.
@@ -11,7 +11,7 @@ lines when those run.
 |---|---|---|
 | upkeep | 8 sessions or 3 weeks | — |
 | review (with her) | 25 sessions or 3 months | — |
-| research | 8 weeks or 30 sessions | — _(tracked in `knowledge/log.md`)_ |
+| research | 8 weeks or 30 sessions | — _(tracked in `modules/core/knowledge/log.md`)_ |
 
 Sessions since last upkeep: **2**
 

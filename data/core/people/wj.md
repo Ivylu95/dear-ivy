@@ -14,4 +14,4 @@
 ## Where it stands (newest first)
 - 2026-10-12: Not met yet. Likely one of the 3 meeting next week [inferred].
 
-Detail: `journal/2026-10-12.md`. Compare: `people/eugene.md`, `people/del.md`.
+Detail: `data/core/journal/2026-10-12.md`. Compare: `data/core/people/eugene.md`, `data/core/people/del.md`.
