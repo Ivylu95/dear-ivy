@@ -48,4 +48,7 @@ _Topics she has asked to leave. Not closed forever — but not mine to reopen._
 | 2026-10-12 | Short forms for the daily log: W Workout, E Exercises, C Calories, M Mood, G Grateful for. Her words: *"Let's do short forms as I tell you next time"* → `data/fitness/daily_log.md` |
 | 2026-10-12 | Daily log: no separate Workout question; it goes in E. Short forms now E, C, M, G. Her words: *"Also remove workout bc it's essentially the same as E"* |
 | 2026-10-09 | A page she can open herself listing all her topics: `data/core/me/my_topics.md`. Keep it updated. Her words: *"How can you remind me previous chats? How can I access to them? There's no search buttons for keywords"* |
+| 2026-11-06 | Every format must be easy to read on her phone: narrow by default, a list led by bold labels rather than a wide table. Said after a wide reminders table. Her words: *"remember the format shpuld be easily seen in phone format also"* |
+| 2026-11-06 | Anything she asks for or asks to improve about how this works also goes to her 💬 Any Feedback chat, where all feedback is kept. Her words: *"Rmemeber all that she asks or ask to improve, u shpu;d also put to the any feedback chat"* |
+| 2026-11-06 | In her copy, nothing is written outside her record, and she never sees development mode. Her words: *"NO EDITS TO OUTSIDE STUFF"* |
 
