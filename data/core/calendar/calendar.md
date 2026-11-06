@@ -19,6 +19,14 @@ _Appointments, deadlines, trips, birthdays. Soonest first. Remove once past
 | 2026-11-12 | Cancel ClassPass — trial ends 14 Nov, $99 charge if not | From her Google Calendar |
 | 2026-11-13 18:00 | Facial at Clementi; ask for the free eye treatment | From her Google Calendar |
 | 2026-11-15 22:00 | Therapy | From her Google Calendar |
+| 2026-11-27 | MLK concert | From her Google Calendar (told 2026-11-06) |
+| 2026-11-30 | MLK school closure; training at HF | From her Google Calendar |
+| 2026-11-30 – 2026-12-04 | MLK staff retreat | From her Google Calendar |
+| 2026-12-14 – 2026-12-15 | MLK annual leave | From her Google Calendar |
+| 2026-12-18 | MLK spring cleaning | From her Google Calendar |
+| 2026-12-19 | MLK PTC | From her Google Calendar |
+| 2026-12-21 | MLK class promotion day | From her Google Calendar |
+| 2026-12-28 10:00 | MLK BL (marked "???" in her calendar) | From her Google Calendar |
 | Date not yet known | Preschool concert — her class (Playgroup & Toddler) sings "I Can't Wait To Be King" | She was making the class poster on 2026-10-16 |
 
 ## Recurring — the hard ones

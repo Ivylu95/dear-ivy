@@ -12,6 +12,12 @@
       "first": "2026-11-06 21:15",
       "last": "2026-11-06 21:15",
       "lastUtc": "2026-11-06T13:15:52.753Z"
+    },
+    "work-dates-nov-dec": {
+      "sent": 1,
+      "first": "2026-11-06 21:32",
+      "last": "2026-11-06 21:32",
+      "lastUtc": "2026-11-06T13:32:26.119Z"
     }
   },
   "sent": [
@@ -33,6 +39,12 @@
       "at": "2026-11-06 21:15",
       "utc": "2026-11-06T13:15:52.753Z",
       "text": "Your week ahead 📅\n\nSat 7 Nov, 8am: meet Robin\nMon 9 Nov: public holiday, and Eugene is back\nMon 9 Nov, 4:15pm: STRONG Pilates at Orchard\nThu 12 Nov: ‼️ cancel ClassPass (trial ends 14 Nov, $99 if not)\nFri 13 Nov, 6pm: facial at Clementi, ask for the free eye treatment\nSun 15 Nov, 10pm: therapy"
+    },
+    {
+      "id": "work-dates-nov-dec",
+      "at": "2026-11-06 21:32",
+      "utc": "2026-11-06T13:32:26.119Z",
+      "text": "Your MLK dates for the next two months 🏫\n\nNOVEMBER\nMon 9 Nov: public holiday\nFri 27 Nov: concert\nMon 30 Nov: school closure, training at HF\nMon 30 Nov to Fri 4 Dec: staff retreat\n\nDECEMBER\nMon 14 to Tue 15 Dec: annual leave\nFri 18 Dec: spring cleaning\nSat 19 Dec: PTC\nMon 21 Dec: class promotion day\nMon 28 Dec, 10am: BL (you put ??? on this one)"
     }
   ]
 }
