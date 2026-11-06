@@ -1,0 +1,4 @@
+{
+  "_what": "Each heartbeat job's run record, and the run's (\"run\"): written only by .claude/hooks/lib/heartbeats.mjs claim|finish; this copy's own, never shipped or overwritten by a release (HBT-008). The inline jobs (reminders, check-ins) keep no line here: what they sent is in her sent logs, and the developer's report names each send, late one and miss.",
+  "run": {"status":"running","last_started":"2026-11-06T13:04:10.753Z","failures":0,"last_runner":"cc-routine"}
+}
