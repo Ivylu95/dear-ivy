@@ -14,15 +14,13 @@
 #   value          Her answer, in her words. Empty unless status is answered.
 #   status         Required. One of:
 #                    not_asked  never raised
-#                    asked      raised, no answer yet; ask_after, if set, is when to raise it again
+#                    asked      raised, no answer yet
 #                    answered   value holds her answer
 #                    declined   she said no; revisit_when says when to ask again
 #                    removed    answered, then taken out; the old answer is in archive/
 #   status_reason  Free text: why it is in this status. May be empty.
 #   revisit_when   Only when declined, and required then: what would make it
 #                  worth asking again.
-#   ask_after      Only when asked, and never required. For a "not now", the date
-#                  (2026-10-11) before which it is not raised again.
 #   last_updated   Required unless not_asked. Date and time with an offset:
 #                  2026-09-25T21:14:00+08:00
 #

@@ -20,4 +20,4 @@
 ## Where it stands (newest first)
 - 2026-10-12: Met once. He wants to meet again; she does too.
 
-Detail: `data/core/journal/2026-10-12.md`. Compare: `data/core/people/eugene.md`, `data/core/people/wj.md`.
+Detail: `journal/2026-10-12.md`. Compare: `people/eugene.md`, `people/wj.md`.

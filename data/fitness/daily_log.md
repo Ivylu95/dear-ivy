@@ -4,7 +4,7 @@
 
 She asked for this on 2026-10-07: each evening, ask what workout she did, her calories for the day, her mood, and one thing she's grateful for (mood and gratitude added the same day at her request: *"Maybe can also add mood into the table and one grateful thing"*). Every Sunday, a weekly table comparing this week with last week (days worked out, total calories).
 
-**Guardrails (her goal was 42 kg, which is underweight at 157 cm; see `data/core/me/what_i_want.md`):**
+**Guardrails (her goal was 42 kg, which is underweight at 157 cm; see `me/what_i_want.md`):**
 - Never praise a low number. Praise showing up, strength, energy.
 - If a day is under about 1,200 kcal, or several days look low, say so once, kindly.
 - If logging starts to feel stressful, she can stop any time.
@@ -18,7 +18,7 @@ She asked for this on 2026-10-07: each evening, ask what workout she did, her ca
 | Calf raises | 3 × 15 |
 | Heel and toe walks | 2 × 20 steps |
 
-**Workout plan (added 2026-10-12 at her request: *"Add workout into the table"*).** Goes with the 46 kg plan in `data/core/me/what_i_want.md`: strength 3 times a week, walking daily. Picked to be gentle on her left ankle while it heals: no jumping, no running.
+**Workout plan (added 2026-10-12 at her request: *"Add workout into the table"*).** Goes with the 46 kg plan in `me/what_i_want.md`: strength 3 times a week, walking daily. Picked to be gentle on her left ankle while it heals: no jumping, no running.
 
 | Day | Workout |
 |---|---|
@@ -55,7 +55,7 @@ Rest 60 sec between sets. Stop any move that hurts the ankle. When 3 × 12 feels
 | Date | Exercises (sets × reps) | Calories (kcal) | Mood | Grateful for | Her notes |
 |---|---|---|---|---|---|
 | 2026-10-12 | TM walk (treadmill walk; how long: not yet known) | 1,500 (her count) | *"happy in the day, a bit gloomy in the evening as I started thinking about my losses from my failed romatic engagement and starting again after a 5 years Rs"* | *"a relief tr came to help my class. 2 boys said I'm cute on dating apps. 3 guys wanted to meet me next week on dating apps"* | Lunch box earlier: about 400–450 (my estimate). Dressing or oil: not yet known |
-| 2026-10-13 | not yet known | not yet known | Cried at night. Her words (told 2026-10-14): *"Cried last night reminiscing abt Joel and my loss life"* | not yet known | → `data/core/people/joel.md` |
+| 2026-10-13 | not yet known | not yet known | Cried at night. Her words (told 2026-10-14): *"Cried last night reminiscing abt Joel and my loss life"* | not yet known | → `people/joel.md` |
 
 ## Weekly summaries
 

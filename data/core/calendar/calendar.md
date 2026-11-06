@@ -2,13 +2,13 @@
 
 What's coming, and the dates that land hard every year.
 
-**Read alongside `data/core/state/now.md`.** Anything here that has passed moves to
-`data/core/timeline.md` as a dated event — it doesn't linger here.
+**Read alongside `data/state/now.md`.** Anything here that has passed moves to
+`data/timeline.md` as a dated event — it doesn't linger here.
 
 ## Coming up
 
 _Appointments, deadlines, trips, birthdays. Soonest first. Remove once past
-(and add the event to `data/core/timeline.md` if it mattered)._
+(and add the event to `data/timeline.md` if it mattered)._
 
 | Date | What | Notes |
 |---|---|---|

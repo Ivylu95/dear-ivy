@@ -27,10 +27,10 @@
 
 ## Where it stands (newest first)
 - 2026-10-12: Met 5+ times. Comes home *"a little let down"*. Wants to feel valued, not the money itself. Drafted a message for her to tell him; whether she sends it: not yet known.
-- 2026-10-12: Compared with Del and WJ. Her words: *"Eugene is better looking"*, but conversation *"a bit boring"* → `data/core/people/del.md`, `data/core/people/wj.md`.
-- 2026-10-09: HHN together → `data/core/journal/2026-10-10.md`.
+- 2026-10-12: Compared with Del and WJ. Her words: *"Eugene is better looking"*, but conversation *"a bit boring"* → `people/del.md`, `people/wj.md`.
+- 2026-10-09: HHN together → `journal/2026-10-10.md`.
 - 2026-10-10: Still on her mind. She's also seeing a few other people. Her words: *"I'm also seeing a few other ppl who I will update you as I go along"*.
-- 2026-10-05: Unsure whether to continue. Giving it 3 to 4 weeks, then deciding. Check-in around 2026-11-02 (`data/core/calendar/calendar.md`). HHN together planned.
+- 2026-10-05: Unsure whether to continue. Giving it 3 to 4 weeks, then deciding. Check-in around 2026-11-02 (`calendar/calendar.md`). HHN together planned.
 - 2026-10-03: Anxious when he replied less than usual. Turned out to be a busy, tired day.
 
-Detail: `data/core/journal/2026-10-03.md`, `data/core/journal/2026-10-05.md`.
+Detail: `journal/2026-10-03.md`, `journal/2026-10-05.md`.

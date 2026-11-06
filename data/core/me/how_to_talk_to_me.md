@@ -13,7 +13,7 @@ _Use her language, not clinical language. If she says "flat", don't write
 
 | Her word | What it refers to |
 |---|---|
-| HCI | Her Health Check In: the daily table of exercises, calories, mood, grateful-for → `data/fitness/daily_log.md` (named 2026-10-14) |
+| HCI | Her Health Check In: the daily table of exercises, calories, mood, grateful-for → `health/daily_log.md` (named 2026-10-14) |
 |  |  |
 
 ## What lands badly
@@ -44,8 +44,8 @@ _Topics she has asked to leave. Not closed forever — but not mine to reopen._
 | 2026-10-03 | Recommendations (cafés, places, products) as a comparison table with price range, location, opening hours, and what they sell. Her words: *"Provide the info for me like this next time so I can compare and make better decisions"* |
 | 2026-10-03 | Under any table of names, add a code box with the names so she can copy them. Text in tables can't be copied in her app. Her words: *"Why can't I copy the names in the table"* |
 | 2026-10-07 | A daily morning check-in at about 8am: ask about her day and wellbeing, remind her of what we talked about last time, and give a short daily news summary. Her words: *"Could you check in with me everyday and ask me stuffs about my day and wellbeing? And also remind me of stuffs from yesterday or our previous chat? Could you also give me some daily news summary?"* Set up 2026-10-07, every day at 7:58am. |
-| 2026-10-12 | In the daily log, also ask which exercises she did, with sets and reps. Her words: *"Add workouts or exercises into it"* → `data/fitness/daily_log.md` |
-| 2026-10-12 | Short forms for the daily log: W Workout, E Exercises, C Calories, M Mood, G Grateful for. Her words: *"Let's do short forms as I tell you next time"* → `data/fitness/daily_log.md` |
+| 2026-10-12 | In the daily log, also ask which exercises she did, with sets and reps. Her words: *"Add workouts or exercises into it"* → `health/daily_log.md` |
+| 2026-10-12 | Short forms for the daily log: W Workout, E Exercises, C Calories, M Mood, G Grateful for. Her words: *"Let's do short forms as I tell you next time"* → `health/daily_log.md` |
 | 2026-10-12 | Daily log: no separate Workout question; it goes in E. Short forms now E, C, M, G. Her words: *"Also remove workout bc it's essentially the same as E"* |
-| 2026-10-09 | A page she can open herself listing all her topics: `data/core/me/my_topics.md`. Keep it updated. Her words: *"How can you remind me previous chats? How can I access to them? There's no search buttons for keywords"* |
+| 2026-10-09 | A page she can open herself listing all her topics: `my_topics.md`. Keep it updated. Her words: *"How can you remind me previous chats? How can I access to them? There's no search buttons for keywords"* |
 
