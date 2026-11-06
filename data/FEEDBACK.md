@@ -1,6 +1,9 @@
 # Feedback for the developer
 
-Lessons about how the system works, not about the person it serves (CON-017).
+What should change in how this works, kept for the developer. It lives in her
+folder because she asked, on 2026-11-06, that nothing outside it is ever edited.
+New feedback is added here, newest at the end, and also curated in the
+💬 Any Feedback chat: a short version for her, a full one for the developer.
 
 ## Entries
 
@@ -54,3 +57,19 @@ Lessons about how the system works, not about the person it serves (CON-017).
   Why: the old sandbox's invented person shared a first name with someone in the record.
 - Rule: ship what the release's own files point at: a hooks-state README and a placeholder in each module's growing folder.
   Why: both were missing from v1.0.2 and were written by hand to pass the link check.
+
+## From her, 2026-11-06
+
+Her short version:
+
+- 📱 Easy to read on my phone. Lists, not wide tables.
+- 🙈 No techy stuff in my chats. Only my life.
+- 🔒 Only my own notes get changed. Nothing else.
+- 💬 All feedback goes to my "Any Feedback" chat.
+
+The full version, for the developer:
+
+1. **Phone first, everywhere.** Every reply reads easily on a phone, narrow by default: a list led by bold labels, a table only when the chat chose wide. The reminders skill's `seeing.md` shows reminders as one 8-column table "whatever the chat's view", with no line on switching; make the narrow list the default there, and the same in `check-ins.md`. Check every skill for other forced tables.
+2. **No development mode in her copy** (no `dev/` folder). It never switches on: remove `dev-mode.mjs` and the dev-mode-reset, dev-reply-shape, dev-reply-check and dev-done-notify hooks, and the everyday-voice hook's line that switches development mode on for a plain development request. A development request gets one plain line: this copy can't change how it works, and changes come in an update. Ship none of the development reply shapes, the developer routes in skills (e.g. see-it's `developer.md`), or the development-mode rules in `CLAUDE.md` and the session hooks.
+3. **Nothing written outside her record.** In her copy, a guard refuses every write outside `data/`, `temp/` included. Developer feedback lives in `data/FEEDBACK.md` (moved here from the root on 2026-11-06); point CON-017, the privacy check's FEEDBACK rules and every 🔧 instruction at it. Git work (merging, pushing her saves) touches only `data/`.
+4. **One place for feedback.** Any request to change how the system works, in any chat, goes to the 💬 Any Feedback chat by default, and a chat that notices an improvement suggests sending it there. Build it in: a router row in `CLAUDE.md`, a step in the chats skill, `send_message` where the chat has it, and the chat marked as the feedback chat in `data/core/state/chats.json`. The feedback chat records each item here and curates it twice: a short version for her, a full one for the developer.

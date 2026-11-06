@@ -19,6 +19,7 @@ Carried from the old index on 2026-11-06; its last version is `archive/2026-11-0
 | File | What it holds | Last touched |
 |---|---|---|
 | `PROFILE.yaml` | Name, pronouns, timezone, and the four essentials asked before anything else. Required. | 2026-09-25 |
+| `FEEDBACK.md` | What should change in how this works, kept for the developer; curated in the 💬 Any Feedback chat. Moved here from the root on her rule that nothing outside this folder is edited. | 2026-11-06 |
 | `core/state/now.md` | Current snapshot. Read first, every session. | 2026-08-29 |
 | `core/state/open_loops.md` | Threads to come back to. | — |
 | `core/state/proposals.md` | Things I'm unsure of, or that need her. | 2026-08-29 |
