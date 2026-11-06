@@ -1,0 +1,13 @@
+{
+  "_what": "Check-ins she stopped, or one-offs already sent, moved from core/calendar/check-ins.json. Never deleted.",
+  "check_ins": [
+    {
+      "id": "morning-update",
+      "emoji": "🌅",
+      "text": "Morning update: today's calendar events and the next few days, plus anything else relevant",
+      "cron": "0 8 * * *",
+      "set": "2026-11-06 20:59",
+      "ended": "2026-11-06"
+    }
+  ]
+}
