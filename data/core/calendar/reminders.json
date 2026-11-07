@@ -95,6 +95,13 @@
       ],
       "cron": "53 21 * * sun",
       "set": "2026-11-07 07:30"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "emoji": "🌙",
+      "text": "Stop snacking after 10 pm (at 8 pm: anything still wanted tonight, have it soon; at 10 pm: kitchen's closed for tonight)",
+      "cron": "0 20,22 * * *",
+      "set": "2026-11-07 11:03"
     }
   ]
 }
