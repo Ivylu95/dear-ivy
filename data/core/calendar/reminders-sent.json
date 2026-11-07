@@ -109,6 +109,20 @@
       "at": "2026-11-07 20:56",
       "utc": "2026-11-07T12:56:08.393Z",
       "text": "Food check\nNothing logged for today yet, so I can't show where your day stands.\n\nIf you've eaten, tell me what and roughly how much, and I'll add it up with you. If dinner's still to come, a plate with some protein and veg is an easy start 🍗"
+    },
+    {
+      "id": "nutrition-updates-2",
+      "at": "2026-11-07 21:54",
+      "utc": "2026-11-07T13:54:37.308Z",
+      "held": true,
+      "why": "already sent one tonight, nothing logged"
+    },
+    {
+      "id": "evening-antidepressant-2153",
+      "at": "2026-11-07 21:54",
+      "utc": "2026-11-07T13:54:41.983Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-07 21:53"
     }
   ]
 }
