@@ -43,10 +43,9 @@ her words, blank when not said._
 
 ## Log
 
-- YYYY-MM-DD · what she did, and how it felt
+- 2026-11-07 (told 2026-11-07, 8:16 am; which day she ran: not yet known) · Ran 4 km outdoors. Her words: *"Ran 4km outdoors"*. How the left ankle felt: not yet known
 
 ## Worth keeping in view
 
 -
 
-<!-- unfilled: nothing real recorded here yet. Delete this line the first time you write something she actually said. -->

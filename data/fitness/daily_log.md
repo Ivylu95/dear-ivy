@@ -56,6 +56,7 @@ Rest 60 sec between sets. Stop any move that hurts the ankle. When 3 × 12 feels
 |---|---|---|---|---|---|
 | 2026-10-12 | TM walk (treadmill walk; how long: not yet known) | 1,500 (her count) | *"happy in the day, a bit gloomy in the evening as I started thinking about my losses from my failed romatic engagement and starting again after a 5 years Rs"* | *"a relief tr came to help my class. 2 boys said I'm cute on dating apps. 3 guys wanted to meet me next week on dating apps"* | Lunch box earlier: about 400–450 (my estimate). Dressing or oil: not yet known |
 | 2026-10-13 | not yet known | not yet known | Cried at night. Her words (told 2026-10-14): *"Cried last night reminiscing abt Joel and my loss life"* | not yet known | → `data/core/people/joel.md` |
+| 2026-11-07 (told 8:16 am; day not yet known) | Ran 4 km outdoors | not yet known | not yet known | not yet known | Her words: *"Ran 4km outdoors"* |
 
 ## Weekly summaries
 
