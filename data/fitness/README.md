@@ -17,6 +17,16 @@ is marked ended, never removed._
 | Target | Amount | Kind | Days | Window | Set | Her words | Ended |
 |---|---|---|---|---|---|---|---|
 
+## Usual meal times
+
+_As she said them, 2026-11-07: "9am, 1pm, 7pm"._
+
+| Meal | Usual time |
+|---|---|
+| Breakfast | 9 am |
+| Lunch | 1 pm |
+| Dinner | 7 pm |
+
 ## Updates on Telegram
 
 _Which meals she wants a nutrition update before, and when. Each can be paused or stopped on
