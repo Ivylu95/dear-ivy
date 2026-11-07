@@ -52,6 +52,27 @@
       "utc": "2026-11-07T11:53:59.043Z",
       "held": true,
       "why": "no meal near, nothing logged yet"
+    },
+    {
+      "id": "workout-ask-2053",
+      "at": "2026-11-07 20:55",
+      "utc": "2026-11-07T12:55:51.307Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-07 20:53"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-07 20:55",
+      "utc": "2026-11-07T12:55:51.418Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-07 20:00"
+    },
+    {
+      "id": "nutrition-updates-2",
+      "at": "2026-11-07 20:55",
+      "utc": "2026-11-07T12:55:51.532Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-07 20:00"
     }
   ]
 }
