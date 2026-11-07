@@ -120,3 +120,4 @@ The full version, for the developer:
     - don't push from a clone whose origin is a local path;
     - have the brief check a branch's author before calling it a save to rescue;
     - never tell an agent to merge a branch it hasn't checked.
+20. **An unanswered setup question was dropped when the topic changed** (2026-11-07). She asked for food-logging check-ins. The reply asked her usual meal times, then she moved on to another reminder, and the check-ins were never set or asked about again. She later found nothing had come. Fix: keep an open setup question as a pending item, and bring it back once, at the next pause, before the turn closes.
