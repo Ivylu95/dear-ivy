@@ -1,6 +1,6 @@
 # Eugene
 
-**Who they are to me:** the guy I'm dating (name given 2026-10-09: *"The date who is stupid"*). How long we've been dating: not yet known. Met more than 5 times (told 2026-10-12).
+**Who they are to me:** someone I dated; she ended it (told 2026-11-07). Before that, the guy I'm dating (name given 2026-10-09: *"The date who is stupid"*). How long we've been dating: not yet known. Met more than 5 times (told 2026-10-12).
 
 ## What's good
 - *"I enjoy being around him"*. He still wants to keep meeting (2026-10-12).
@@ -26,6 +26,7 @@
 - *"having my brain stimulated it's very important to me"* (2026-10-05).
 
 ## Where it stands (newest first)
+- 2026-11-07: She ended things with him. Her words: *"I ended things w E"*. When and why: not yet known.
 - 2026-10-12: Met 5+ times. Comes home *"a little let down"*. Wants to feel valued, not the money itself. Drafted a message for her to tell him; whether she sends it: not yet known.
 - 2026-10-12: Compared with Del and WJ. Her words: *"Eugene is better looking"*, but conversation *"a bit boring"* → `data/core/people/del.md`, `data/core/people/wj.md`.
 - 2026-10-09: HHN together → `data/core/journal/2026-10-10.md`.

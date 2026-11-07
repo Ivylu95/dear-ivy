@@ -59,3 +59,5 @@ _Anything marked `[inferred]` is my reading, not her words._
 | 2026-10-29 | question | `adhd` | Sidetracked many times on the way to making her morning matcha; asked what this is | → data/journal/2026-10-29.md |
 | 2026-11-06 | question | `adhd` | Asked again whether she has ADHD; asked for questions to answer. Gave her the 6-question WHO screener | → data/therapy/adhd/screener.md |
 | 2026-11-07 | question | `adhd` | Answered the ADHD screener (at least 3 of 6, maybe 6); said someone told her she might be on the autism spectrum; asked whether they overlap | → data/therapy/adhd/screener.md |
+| ? (told 2026-11-07) | event | `dating` | Ended things with Eugene; date and reason not yet known | → data/core/people/eugene.md |
+| ? (told 2026-11-07) | event | `dating` | Starting things with Del | → data/core/people/del.md |
