@@ -66,3 +66,4 @@ Rest 60 sec between sets. Stop any move that hurts the ankle. When 3 × 12 feels
 | 2026-10-12 – 2026-10-18 | 1 logged (treadmill walk, Mon) | not logged | 1,500 (1 day logged) | – (1 day only) | Happy by day Mon, gloomy that evening; cried Tue night | Relief teacher helped her class; compliments and 3 dates lined up | Up from 0 days logged. Only Mon fully logged |
 | 2026-10-19 – 2026-10-25 | not logged | not logged | not logged | – | Not logged here (chatted about dating in other sessions) | – | No HCI entries this week. Haze cleared 2026-10-23 |
 | 2026-10-26 – 2026-11-01 | not logged | not logged | not logged | – | Not logged here. Asked about freezing on tasks and getting sidetracked (2026-10-29) | – | Second week with no HCI entries |
+| 2026-11-02 – 2026-11-08 (in progress) | 1 logged (ran 4 km outdoors, Fri or Sat) | not logged | not logged | – | not logged | – | First run logged since the ankle plan. Week still open |
