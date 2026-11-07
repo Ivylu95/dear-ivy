@@ -57,6 +57,13 @@ Rest 60 sec between sets. Stop any move that hurts the ankle. When 3 × 12 feels
 | 2026-10-12 | TM walk (treadmill walk; how long: not yet known) | 1,500 (her count) | *"happy in the day, a bit gloomy in the evening as I started thinking about my losses from my failed romatic engagement and starting again after a 5 years Rs"* | *"a relief tr came to help my class. 2 boys said I'm cute on dating apps. 3 guys wanted to meet me next week on dating apps"* | Lunch box earlier: about 400–450 (my estimate). Dressing or oil: not yet known |
 | 2026-10-13 | not yet known | not yet known | Cried at night. Her words (told 2026-10-14): *"Cried last night reminiscing abt Joel and my loss life"* | not yet known | → `data/core/people/joel.md` |
 | 2026-11-07 (told 8:16 am; day not yet known) | Ran 4 km outdoors | not yet known | not yet known | not yet known | Her words: *"Ran 4km outdoors"* |
+| 2026-11-02 (Mon) | BFT (CrossFit) | not logged | not logged | not logged | Her words (told 2026-11-07): *"mon to sat in order Bft, bft, 5km run, spin, pilates, 4km run"* |
+| 2026-11-03 (Tue) | BFT (CrossFit) | not logged | not logged | not logged | Her words (told 2026-11-07): *"mon to sat in order Bft, bft, 5km run, spin, pilates, 4km run"* |
+| 2026-11-04 (Wed) | 5 km run | not logged | not logged | not logged | Her words (told 2026-11-07): *"mon to sat in order Bft, bft, 5km run, spin, pilates, 4km run"* |
+| 2026-11-05 (Thu) | Spin | not logged | not logged | not logged | Her words (told 2026-11-07): *"mon to sat in order Bft, bft, 5km run, spin, pilates, 4km run"* |
+| 2026-11-06 (Fri) | Pilates | not logged | not logged | not logged | Her words (told 2026-11-07): *"mon to sat in order Bft, bft, 5km run, spin, pilates, 4km run"* |
+| 2026-11-07 (Sat) | 4 km run outdoors, in the morning | not logged | not logged | not logged | Her words (told 2026-11-07): *"mon to sat in order Bft, bft, 5km run, spin, pilates, 4km run"* |
+| 2026-11-07 · correction | The row above marked *day not yet known* is this Saturday's 4 km run; her earlier Mon–Fri list was Mon–Sat (her correction, 2026-11-07) | | | | |
 
 ## Weekly summaries
 
@@ -66,4 +73,4 @@ Rest 60 sec between sets. Stop any move that hurts the ankle. When 3 × 12 feels
 | 2026-10-12 – 2026-10-18 | 1 logged (treadmill walk, Mon) | not logged | 1,500 (1 day logged) | – (1 day only) | Happy by day Mon, gloomy that evening; cried Tue night | Relief teacher helped her class; compliments and 3 dates lined up | Up from 0 days logged. Only Mon fully logged |
 | 2026-10-19 – 2026-10-25 | not logged | not logged | not logged | – | Not logged here (chatted about dating in other sessions) | – | No HCI entries this week. Haze cleared 2026-10-23 |
 | 2026-10-26 – 2026-11-01 | not logged | not logged | not logged | – | Not logged here. Asked about freezing on tasks and getting sidetracked (2026-10-29) | – | Second week with no HCI entries |
-| 2026-11-02 – 2026-11-08 (in progress) | 6 sessions, Mon–Fri as she listed them (told 2026-11-07): BFT (CrossFit), BFT, 5 km run, spin, Pilates, 4 km run. Which day each: not yet known. Her words: *"This week m-f workout Bft (cross fit), bft, 5km run, spin, pilates, 4km run"* | not logged | not logged | – | not logged | – | First full week of workouts logged since the ankle plan. Week still open |
+| 2026-11-02 – 2026-11-08 (in progress) | 6 so far, Mon–Sat: Mon BFT · Tue BFT · Wed 5 km run · Thu spin · Fri Pilates · Sat 4 km run | not logged | not logged | – | not logged | – | First full week of workouts logged since the ankle plan. Sunday still to come |

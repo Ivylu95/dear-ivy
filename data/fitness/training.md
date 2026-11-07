@@ -45,6 +45,7 @@ her words, blank when not said._
 
 - 2026-11-07 (told 2026-11-07, 8:16 am; which day she ran: not yet known) · Ran 4 km outdoors. Her words: *"Ran 4km outdoors"*. How the left ankle felt: not yet known
 - 2026-11-02 – 2026-11-06 (told 2026-11-07) · Her week, Mon–Fri as she listed it: BFT (CrossFit), BFT, 5 km run, spin, Pilates, 4 km run. Which day each: not yet known. The 4 km run is the same one told earlier
+- 2026-11-07 · Correction (her words: *"Sorry let me try again mon to sat in order"*): Mon 2 BFT (CrossFit) · Tue 3 BFT · Wed 4 5 km run · Thu 5 spin · Fri 6 Pilates · Sat 7 4 km run outdoors, this morning. The Mon–Fri line above is superseded by this one
 
 ## Worth keeping in view
 
