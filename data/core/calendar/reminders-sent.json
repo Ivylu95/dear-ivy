@@ -26,10 +26,10 @@
       "lastUtc": "2026-11-07T12:56:06.051Z"
     },
     "no-snacks-after-10": {
-      "sent": 1,
+      "sent": 2,
       "first": "2026-11-07 20:56",
-      "last": "2026-11-07 20:56",
-      "lastUtc": "2026-11-07T12:56:07.401Z"
+      "last": "2026-11-07 22:54",
+      "lastUtc": "2026-11-07T14:54:49.452Z"
     },
     "nutrition-updates-2": {
       "sent": 1,
@@ -142,6 +142,12 @@
       "utc": "2026-11-07T14:54:36.813Z",
       "claimed": "cc-routine",
       "due": "2026-11-07 22:00"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-07 22:54",
+      "utc": "2026-11-07T14:54:49.452Z",
+      "text": "Kitchen's closed for tonight\nIt's 10 pm now, so the snacking can stop here. You did the day well, rest up 🌙"
     }
   ]
 }
