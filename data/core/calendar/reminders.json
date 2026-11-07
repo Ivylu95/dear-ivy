@@ -104,7 +104,7 @@
       "set": "2026-11-07 11:03"
     },
     {
-      "id": "nutrition-updates",
+      "id": "nutrition-updates-2",
       "emoji": "🍽️",
       "text": "Nutrition before my next meal: where today stands against my goals, what's left, and what I could eat to close the gap",
       "module": "fitness",
@@ -116,8 +116,8 @@
         "data/fitness/supplements.md"
       ],
       "cron": "0 8-21 * * *",
-      "start": "2026-11-08 08:00",
-      "set": "2026-11-07 18:31"
+      "start": "2026-11-07 19:00",
+      "set": "2026-11-07 18:40"
     }
   ]
 }
