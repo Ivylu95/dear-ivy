@@ -28,3 +28,7 @@ Thinking hard about the guy she's dating. Calm, practical, wants a plan.
 - Short sentences, simple English, tables, a copy box under lists of names → `data/core/me/how_to_talk_to_me.md`.
 - Weight: I've said once that 42 kg is too low. Don't lecture again unless she asks for help getting there.
 - Bad-night person: Joel, her ex-fiancé. She wants to rely on him less (2026-10-14) → `data/core/people/joel.md`.
+
+## Next session opens with
+
+Check-in morning-update-2 (2026-11-07 08:54): Morning update sent to her phone: today's 8am meet-up, Monday's holiday and Pilates, ClassPass cancel Thursday, facial Friday, and her pending reminders. No question asked.

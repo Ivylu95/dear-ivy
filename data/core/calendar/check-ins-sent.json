@@ -1,5 +1,19 @@
 {
-  "_what": "The last questions the sweep asked for each check-in, so the next differs, how many Telegram accepted, and any held (HBT-014).",
-  "counts": {},
-  "sent": []
+  "_what": "The last messages the sweep wrote for each check-in, so the next differs, how many Telegram accepted, and any held (HBT-010, HBT-014).",
+  "counts": {
+    "morning-update-2": {
+      "sent": 1,
+      "first": "2026-11-07 08:54",
+      "last": "2026-11-07 08:54",
+      "lastUtc": "2026-11-07T00:54:38.573Z"
+    }
+  },
+  "sent": [
+    {
+      "id": "morning-update-2",
+      "at": "2026-11-07 08:54",
+      "utc": "2026-11-07T00:54:38.573Z",
+      "text": "Good morning, Saturday 7 Nov\n\n📅 Today: your 8am meet-up\n📅 Tomorrow, Sun 8 Nov: nothing on\n🏖️ Mon 9 Nov: public holiday, and STRONG Pilates at 4:15pm in Orchard\n💳 Thu 12 Nov: cancel ClassPass before the trial ends on the 14th ($99 if not)\n💆 Fri 13 Nov: facial at 6pm in Clementi\n\nYour reminders still to come:\n• Thu 12 Nov, 12:30pm: cancel ClassPass\n• Fri 13 Nov, 5pm: facial\n• Sat 14 Nov, 8pm: jot-down note for Sunday\n• Every Sun, 5pm: your feedback list\n• Every Sun, 9:53pm: your workout week\n• Every day, 8:53am (from Sun): workout catch-up\n• Every day, 8:53pm: workout check\n• Every day, 9:53pm: bedtime reminder\n\nTap the link below to change, move or stop any of them."
+    }
+  ]
 }
