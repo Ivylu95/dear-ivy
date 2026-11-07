@@ -58,3 +58,4 @@ _Anything marked `[inferred]` is my reading, not her words._
 | 2026-10-29 | question | `adhd` | Asked why she freezes when told to do something: knows the answer but thoughts jumble and she can't put the plan into words | → data/journal/2026-10-29.md |
 | 2026-10-29 | question | `adhd` | Sidetracked many times on the way to making her morning matcha; asked what this is | → data/journal/2026-10-29.md |
 | 2026-11-06 | question | `adhd` | Asked again whether she has ADHD; asked for questions to answer. Gave her the 6-question WHO screener | → data/therapy/adhd/screener.md |
+| 2026-11-07 | question | `adhd` | Answered the ADHD screener (at least 3 of 6, maybe 6); said someone told her she might be on the autism spectrum; asked whether they overlap | → data/therapy/adhd/screener.md |

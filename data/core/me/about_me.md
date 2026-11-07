@@ -16,6 +16,7 @@ _Health, mental health, big events. Only what's useful to have on the record._
 
 - **Therapy (told 2026-10-03):** sees a therapist / psychologist. Name, how often, and how long: not yet known. Her view: *"I don't think they are very helpful"*. Detail → `data/therapy/what_im_working_on.md`.
 - **Antidepressant (told 2026-11-07):** takes an antidepressant at night, before bed; asked for a daily 10 pm reminder. Name, dose and prescriber: not yet known.
+- **Autism (told 2026-11-07):** asked about her childhood, she said *"they said I might be on the asd spectrum"*. Who said it, and whether she was ever assessed: not yet known. Not a diagnosis on the record. ADHD screener → `data/therapy/adhd/screener.md`.
 - **A 5-year relationship and an engagement that ended (told 2026-10-12):** her words: *"my failed romatic engagement and starting again after a 5 years Rs"*. He is Joel → `data/core/people/joel.md` (named 2026-10-14). When it ended: not yet known. Thinking about it made her evening gloomy on 2026-10-12.
 
 ## What drains me
