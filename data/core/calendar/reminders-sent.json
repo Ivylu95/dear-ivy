@@ -18,6 +18,24 @@
       "first": "2026-11-06 21:32",
       "last": "2026-11-06 21:32",
       "lastUtc": "2026-11-06T13:32:26.119Z"
+    },
+    "workout-ask-2053": {
+      "sent": 1,
+      "first": "2026-11-07 20:56",
+      "last": "2026-11-07 20:56",
+      "lastUtc": "2026-11-07T12:56:06.051Z"
+    },
+    "no-snacks-after-10": {
+      "sent": 1,
+      "first": "2026-11-07 20:56",
+      "last": "2026-11-07 20:56",
+      "lastUtc": "2026-11-07T12:56:07.401Z"
+    },
+    "nutrition-updates-2": {
+      "sent": 1,
+      "first": "2026-11-07 20:56",
+      "last": "2026-11-07 20:56",
+      "lastUtc": "2026-11-07T12:56:08.393Z"
     }
   },
   "sent": [
@@ -73,6 +91,24 @@
       "utc": "2026-11-07T12:55:51.532Z",
       "claimed": "cc-routine",
       "due": "2026-11-07 20:00"
+    },
+    {
+      "id": "workout-ask-2053",
+      "at": "2026-11-07 20:56",
+      "utc": "2026-11-07T12:56:06.051Z",
+      "text": "Workout check 🏋️\nNice 4 km run this morning 👏\n\nAnything else you did today?\n• Sets and reps, if you have them\n• A walk or your ankle routine counts too"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-07 20:56",
+      "utc": "2026-11-07T12:56:07.401Z",
+      "text": "Kitchen closes at 10\nAnything you still want tonight, have it soon. After 10 pm the kitchen is closed 🌙"
+    },
+    {
+      "id": "nutrition-updates-2",
+      "at": "2026-11-07 20:56",
+      "utc": "2026-11-07T12:56:08.393Z",
+      "text": "Food check\nNothing logged for today yet, so I can't show where your day stands.\n\nIf you've eaten, tell me what and roughly how much, and I'll add it up with you. If dinner's still to come, a plate with some protein and veg is an easy start 🍗"
     }
   ]
 }
