@@ -36,6 +36,12 @@
       "first": "2026-11-07 20:56",
       "last": "2026-11-07 20:56",
       "lastUtc": "2026-11-07T12:56:08.393Z"
+    },
+    "evening-antidepressant-2153": {
+      "sent": 1,
+      "first": "2026-11-07 21:54",
+      "last": "2026-11-07 21:54",
+      "lastUtc": "2026-11-07T13:54:52.280Z"
     }
   },
   "sent": [
@@ -123,6 +129,12 @@
       "utc": "2026-11-07T13:54:41.983Z",
       "claimed": "cc-routine",
       "due": "2026-11-07 21:53"
+    },
+    {
+      "id": "evening-antidepressant-2153",
+      "at": "2026-11-07 21:54",
+      "utc": "2026-11-07T13:54:52.280Z",
+      "text": "Time for bed soon 🌙\nYour antidepressant is waiting for you tonight. Hope the evening was kind."
     }
   ]
 }
