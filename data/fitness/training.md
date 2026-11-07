@@ -44,6 +44,7 @@ her words, blank when not said._
 ## Log
 
 - 2026-11-07 (told 2026-11-07, 8:16 am; which day she ran: not yet known) · Ran 4 km outdoors. Her words: *"Ran 4km outdoors"*. How the left ankle felt: not yet known
+- 2026-11-02 – 2026-11-06 (told 2026-11-07) · Her week, Mon–Fri as she listed it: BFT (CrossFit), BFT, 5 km run, spin, Pilates, 4 km run. Which day each: not yet known. The 4 km run is the same one told earlier
 
 ## Worth keeping in view
 
