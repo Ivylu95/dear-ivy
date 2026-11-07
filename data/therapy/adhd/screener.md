@@ -16,6 +16,8 @@ Scoring (standard): Q1–3 count if Sometimes or more. Q4–6 count if Often or 
 | 6 | Feel too active, like you're driven by a motor? | *"y"* (2026-11-07) | unclear: counts only if Often or more; asked her |
 | + | As a child (before 12), were you like this too? Ask family if unsure | *"not sure, they said I might be on the asd spectrum"* (2026-11-07). Who "they" are: not yet known | (not scored; assessors ask this) |
 
-**Score so far (2026-11-07):** at least 3 of 6. If her "y" on 4–6 means Often, 6 of 6. Either way, close to or over the line for "worth a proper assessment". She asked whether ADHD and autism overlap: told her yes, they often occur together and share some traits, and one assessment can look at both. Her prescriber or psychologist is who answers it.
+**Update (2026-11-07):** asked whether her "y" on 4–6 was closer to sometimes or often: *"Often"*. So 4, 5 and 6 count. **Score: 6 of 6** (line for "worth a proper assessment" is 4). A screen, not a diagnosis.
+
+**Score so far (2026-11-07, before her answer above):** at least 3 of 6. If her "y" on 4–6 means Often, 6 of 6. Either way, close to or over the line for "worth a proper assessment". She asked whether ADHD and autism overlap: told her yes, they often occur together and share some traits, and one assessment can look at both. Her prescriber or psychologist is who answers it.
 
 Related things she has described: freezing when given a task, thoughts jumbled, sidetracked making matcha (`data/core/journal/2026-10-29.md`); asked about ADHD 2026-10-04, -05, -09 (`data/core/journal/2026-10-04.md`); doesn't sleep through the night (`data/core/journal/2026-10-07.md`).
