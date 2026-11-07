@@ -34,3 +34,4 @@ its own._
 
 | Meal | Time | Since | Her words |
 |---|---|---|---|
+| Breakfast, lunch, dinner | Judged, before her usual 9 am, 1 pm, 7 pm, or after a long gap | 2026-11-08 | *"Set"* (after asking for nudges to log her food intake) |
