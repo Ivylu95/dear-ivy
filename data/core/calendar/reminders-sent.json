@@ -135,6 +135,13 @@
       "at": "2026-11-07 21:54",
       "utc": "2026-11-07T13:54:52.280Z",
       "text": "Time for bed soon 🌙\nYour antidepressant is waiting for you tonight. Hope the evening was kind."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-07 22:54",
+      "utc": "2026-11-07T14:54:36.813Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-07 22:00"
     }
   ]
 }
