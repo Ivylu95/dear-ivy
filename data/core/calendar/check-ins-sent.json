@@ -2,10 +2,10 @@
   "_what": "The last messages the sweep wrote for each check-in, so the next differs, how many Telegram accepted, and any held (HBT-010, HBT-014).",
   "counts": {
     "morning-update-2": {
-      "sent": 1,
+      "sent": 2,
       "first": "2026-11-07 08:54",
-      "last": "2026-11-07 08:54",
-      "lastUtc": "2026-11-07T00:54:38.573Z"
+      "last": "2026-11-08 08:54",
+      "lastUtc": "2026-11-08T00:54:40.610Z"
     },
     "midday": {
       "sent": 1,
@@ -38,6 +38,12 @@
       "at": "2026-11-07 16:54",
       "utc": "2026-11-07T08:54:24.543Z",
       "text": "Afternoon water top-up\nNothing left on for the rest of today, so the evening is yours 🌤️\n\nHow many glasses have you got through since lunch?"
+    },
+    {
+      "id": "morning-update-2",
+      "at": "2026-11-08 08:54",
+      "utc": "2026-11-08T00:54:40.610Z",
+      "text": "Good morning, Sunday 8 Nov\n\n📅 Nothing on in your calendar today\n🏖️ Tomorrow, Mon 9 Nov: public holiday, and STRONG Pilates at 4:15pm in Orchard\n🛋️ Next Sunday, 15 Nov: your 10am appointment\n\nComing up from your reminders:\n📝 Today at 10:45am, lesson plan nudge\n💳 Four days from now, 12:30pm: a nudge to stop the ClassPass trial\n💆 Friday 13th at 5pm, facial heads-up\n🗒️ Saturday 14th at 8pm, jot-down note\n🔁 Daily: workout catch-up in the morning, workout check at 8:30pm, snack nudges at 8 and 10pm, bedtime reminder at 9:53pm, food checks before meals\n🔁 Sundays: your feedback list at 5pm, your workout week at 9:53pm\n\nWant any of these changed, moved or stopped? The link below takes you there."
     }
   ]
 }
