@@ -219,6 +219,13 @@
       "at": "2026-11-08 12:54",
       "utc": "2026-11-08T04:54:37.480Z",
       "text": "Lunch time soon\nNothing logged yet today, so it's a clean slate and a good moment to eat something you like.\n\nTell me what you have and I'll keep the day's count for you 🍱"
+    },
+    {
+      "id": "feedback-sunday",
+      "at": "2026-11-08 17:54",
+      "utc": "2026-11-08T09:54:17.982Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-08 17:00"
     }
   ]
 }
