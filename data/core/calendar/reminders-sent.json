@@ -283,6 +283,20 @@
       "at": "2026-11-08 20:54",
       "utc": "2026-11-08T12:54:23.839Z",
       "text": "Evening snack window\nAnything you still fancy tonight, enjoy it in the next hour or so. The kitchen closes at 10 🌙"
+    },
+    {
+      "id": "evening-antidepressant-2153",
+      "at": "2026-11-08 21:54",
+      "utc": "2026-11-08T13:54:42.064Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-08 21:53"
+    },
+    {
+      "id": "workout-week-2153",
+      "at": "2026-11-08 21:54",
+      "utc": "2026-11-08T13:54:42.152Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-08 21:53"
     }
   ]
 }
