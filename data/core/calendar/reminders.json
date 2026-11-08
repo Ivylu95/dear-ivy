@@ -118,6 +118,13 @@
       "cron": "0 8-21 * * *",
       "start": "2026-11-07 19:00",
       "set": "2026-11-07 18:40"
+    },
+    {
+      "id": "lesson-plan-nov8",
+      "emoji": "📝",
+      "text": "Do your lesson plan after CrossFit, before your meet-up",
+      "at": "2026-11-08 10:15",
+      "set": "2026-11-08 08:44"
     }
   ]
 }
