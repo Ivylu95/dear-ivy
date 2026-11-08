@@ -14,10 +14,10 @@
       "lastUtc": "2026-11-08T04:54:41.169Z"
     },
     "afternoon": {
-      "sent": 1,
+      "sent": 2,
       "first": "2026-11-07 16:54",
-      "last": "2026-11-07 16:54",
-      "lastUtc": "2026-11-07T08:54:24.543Z"
+      "last": "2026-11-08 16:54",
+      "lastUtc": "2026-11-08T08:54:22.341Z"
     }
   },
   "sent": [
@@ -50,6 +50,12 @@
       "at": "2026-11-08 12:54",
       "utc": "2026-11-08T04:54:41.169Z",
       "text": "Midday water check\nSunday's wide open, so it's an easy one to sneak some water in 💧\n\nHow many glasses have you had so far this morning?"
+    },
+    {
+      "id": "afternoon",
+      "at": "2026-11-08 16:54",
+      "utc": "2026-11-08T08:54:22.341Z",
+      "text": "Afternoon water top-up\nSunday's still wide open, so there's plenty of time to go gently 🌤️\n💧 A glass now keeps the afternoon topped up\n🏋️ Your workout check comes round at 8:30 tonight\n\nHow's the water been going since lunch?"
     }
   ]
 }
