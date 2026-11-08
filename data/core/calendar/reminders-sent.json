@@ -54,6 +54,12 @@
       "first": "2026-11-08 11:20",
       "last": "2026-11-08 11:20",
       "lastUtc": "2026-11-08T03:20:54.134Z"
+    },
+    "food-lunch": {
+      "sent": 1,
+      "first": "2026-11-08 12:54",
+      "last": "2026-11-08 12:54",
+      "lastUtc": "2026-11-08T04:54:37.480Z"
     }
   },
   "sent": [
@@ -200,6 +206,12 @@
       "at": "2026-11-08 11:20",
       "utc": "2026-11-08T03:20:54.134Z",
       "text": "Breakfast time 🍳\nYou haven't eaten yet today. Grab something now, even small, and log it when you can."
+    },
+    {
+      "id": "food-lunch",
+      "at": "2026-11-08 12:54",
+      "utc": "2026-11-08T04:54:37.480Z",
+      "text": "Lunch time soon\nNothing logged yet today, so it's a clean slate and a good moment to eat something you like.\n\nTell me what you have and I'll keep the day's count for you 🍱"
     }
   ]
 }
