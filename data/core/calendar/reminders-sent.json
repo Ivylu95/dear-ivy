@@ -257,6 +257,20 @@
       "at": "2026-11-08 19:56",
       "utc": "2026-11-08T11:56:00.005Z",
       "text": "Dinner time\nNothing logged yet today, so the day is a clean slate 🍲\n\n🍽️ Have a proper dinner when you can.\nSomething with protein and a veg would sit nicely, and tell me what you had so I can log it."
+    },
+    {
+      "id": "workout-ask-2053",
+      "at": "2026-11-08 20:54",
+      "utc": "2026-11-08T12:54:07.117Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-08 20:53"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-08 20:54",
+      "utc": "2026-11-08T12:54:07.217Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-08 20:00"
     }
   ]
 }
