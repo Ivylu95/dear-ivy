@@ -124,3 +124,9 @@ The full version, for the developer:
 21. **The pre-push gate reads a newer counter as a lost change** (curated by the feedback chat, 2026-11-08). The session start asked for two branches holding reminder-sent logs to be merged into main. The merge was settled by comparing entries: every sent entry of theirs was already in main's copy. The only difference was a send counter, which read 1 on their side and 2 on main's, because a later message went out. The gate compares lines, so it called that "a real loss" and refused the push, even with a "Kept one side" line. The two branches stay unmerged, though nothing of theirs is missing. Fix:
     - let the gate compare JSON record files by entry, and accept a counter that only went up;
     - or have the sender merge its own log as it saves, so its branches never conflict with main.
+22. **Food nudges don't guess that a meal happened** (from her, 2026-11-08). This morning the food nudges were held back: "breakfast just under two hours past, lunch over an hour away". She hadn't eaten breakfast or logged anything. Her usual meal times aren't in her record at all, so the sweep guessed a breakfast time and treated it as eaten. She wants food nudges whether or not a meal is logged. Fix:
+    - never assume a meal happened from the clock;
+    - with no usual times on record, ask her for them once, or use fixed times;
+    - an unlogged meal brings a nudge on, never holds one back.
+
+    Item 20 is the same gap: her meal times were asked for once and then dropped. Her short version: 🍽️ Nudge me about food even if I haven't logged anything.
