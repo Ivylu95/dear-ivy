@@ -35,3 +35,4 @@ its own._
 | Meal | Time | Since | Her words |
 |---|---|---|---|
 | Breakfast, lunch, dinner | Judged, before her usual 9 am, 1 pm, 7 pm, or after a long gap | 2026-11-08 | *"Set"* (after asking for nudges to log her food intake) |
+| Breakfast, lunch, dinner | Fixed: 9 am, 12:30 pm, 6:30 pm daily, sent whether or not a meal is logged (replaces judged) | 2026-11-08 | *"Nudge me regardless of whether I have recorded a meal or not"* |

@@ -104,27 +104,53 @@
       "set": "2026-11-07 11:03"
     },
     {
-      "id": "nutrition-updates-2",
-      "emoji": "🍽️",
-      "text": "Nutrition before my next meal: where today stands against my goals, what's left, and what I could eat to close the gap",
+      "id": "lp-nudge-nov8",
+      "emoji": "📝",
+      "text": "LP nudge: do your lesson plan after CrossFit, before your meet-up",
+      "at": "2026-11-08 10:45",
+      "set": "2026-11-08 08:46"
+    },
+    {
+      "id": "food-breakfast",
+      "emoji": "🍳",
+      "text": "Breakfast nudge: time to eat and log breakfast; where today stands against my goals",
       "module": "fitness",
-      "timing": "judged",
       "reads": [
         "data/fitness/days/",
         "data/fitness/README.md",
         "data/fitness/usual_meals.md",
         "data/fitness/supplements.md"
       ],
-      "cron": "0 8-21 * * *",
-      "start": "2026-11-07 19:00",
-      "set": "2026-11-07 18:40"
+      "cron": "0 9 * * *",
+      "set": "2026-11-08 11:21"
     },
     {
-      "id": "lp-nudge-nov8",
-      "emoji": "📝",
-      "text": "LP nudge: do your lesson plan after CrossFit, before your meet-up",
-      "at": "2026-11-08 10:45",
-      "set": "2026-11-08 08:46"
+      "id": "food-lunch",
+      "emoji": "🍱",
+      "text": "Lunch nudge: time to eat and log lunch; where today stands, what's left, and what I could eat",
+      "module": "fitness",
+      "reads": [
+        "data/fitness/days/",
+        "data/fitness/README.md",
+        "data/fitness/usual_meals.md",
+        "data/fitness/supplements.md"
+      ],
+      "cron": "30 12 * * *",
+      "set": "2026-11-08 11:21"
+    },
+    {
+      "id": "food-dinner",
+      "emoji": "🍲",
+      "text": "Dinner nudge: time to eat and log dinner; where today stands, what's left, and what I could eat",
+      "module": "fitness",
+      "reads": [
+        "data/fitness/days/",
+        "data/fitness/README.md",
+        "data/fitness/usual_meals.md",
+        "data/fitness/supplements.md"
+      ],
+      "cron": "30 18 * * *",
+      "set": "2026-11-08 11:21"
     }
   ]
 }

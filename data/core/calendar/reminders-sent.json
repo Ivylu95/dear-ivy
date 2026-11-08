@@ -48,6 +48,12 @@
       "first": "2026-11-08 10:45",
       "last": "2026-11-08 10:45",
       "lastUtc": "2026-11-08T02:45:43.427Z"
+    },
+    "food-breakfast": {
+      "sent": 1,
+      "first": "2026-11-08 11:20",
+      "last": "2026-11-08 11:20",
+      "lastUtc": "2026-11-08T03:20:54.134Z"
     }
   },
   "sent": [
@@ -188,6 +194,12 @@
       "utc": "2026-11-08T02:54:35.991Z",
       "held": true,
       "why": "breakfast just under two hours past, lunch over an hour away"
+    },
+    {
+      "id": "food-breakfast",
+      "at": "2026-11-08 11:20",
+      "utc": "2026-11-08T03:20:54.134Z",
+      "text": "Breakfast time 🍳\nYou haven't eaten yet today. Grab something now, even small, and log it when you can."
     }
   ]
 }
