@@ -20,16 +20,16 @@
       "lastUtc": "2026-11-06T13:32:26.119Z"
     },
     "workout-ask-2053": {
-      "sent": 1,
-      "first": "2026-11-07 20:56",
-      "last": "2026-11-07 20:56",
-      "lastUtc": "2026-11-07T12:56:06.051Z"
-    },
-    "no-snacks-after-10": {
       "sent": 2,
       "first": "2026-11-07 20:56",
-      "last": "2026-11-07 22:54",
-      "lastUtc": "2026-11-07T14:54:49.452Z"
+      "last": "2026-11-08 20:54",
+      "lastUtc": "2026-11-08T12:54:22.542Z"
+    },
+    "no-snacks-after-10": {
+      "sent": 3,
+      "first": "2026-11-07 20:56",
+      "last": "2026-11-08 20:54",
+      "lastUtc": "2026-11-08T12:54:23.839Z"
     },
     "nutrition-updates-2": {
       "sent": 1,
@@ -271,6 +271,18 @@
       "utc": "2026-11-08T12:54:07.217Z",
       "claimed": "cc-routine",
       "due": "2026-11-08 20:00"
+    },
+    {
+      "id": "workout-ask-2053",
+      "at": "2026-11-08 20:54",
+      "utc": "2026-11-08T12:54:22.542Z",
+      "text": "Workout check\nHope Sunday was kind to you ☀️\n\nDid you move today?\n• A walk, a stretch or your ankle routine counts\n• Sets and reps, if you have them"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-08 20:54",
+      "utc": "2026-11-08T12:54:23.839Z",
+      "text": "Evening snack window\nAnything you still fancy tonight, enjoy it in the next hour or so. The kitchen closes at 10 🌙"
     }
   ]
 }
