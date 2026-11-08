@@ -148,6 +148,20 @@
       "at": "2026-11-07 22:54",
       "utc": "2026-11-07T14:54:49.452Z",
       "text": "Kitchen's closed for tonight\nIt's 10 pm now, so the snacking can stop here. You did the day well, rest up 🌙"
+    },
+    {
+      "id": "workout-catchup-0853",
+      "at": "2026-11-08 08:54",
+      "utc": "2026-11-08T00:54:45.523Z",
+      "held": true,
+      "why": "yesterday's run is already logged"
+    },
+    {
+      "id": "nutrition-updates-2",
+      "at": "2026-11-08 08:54",
+      "utc": "2026-11-08T00:54:45.613Z",
+      "held": true,
+      "why": "no meal 30 to 90 minutes away; nothing logged yet"
     }
   ]
 }
