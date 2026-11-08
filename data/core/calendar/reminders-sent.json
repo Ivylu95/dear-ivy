@@ -162,6 +162,13 @@
       "utc": "2026-11-08T00:54:45.613Z",
       "held": true,
       "why": "no meal 30 to 90 minutes away; nothing logged yet"
+    },
+    {
+      "id": "nutrition-updates-2",
+      "at": "2026-11-08 09:54",
+      "utc": "2026-11-08T01:54:10.490Z",
+      "held": true,
+      "why": "breakfast under two hours past, nothing near"
     }
   ]
 }
