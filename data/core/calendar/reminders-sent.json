@@ -66,6 +66,12 @@
       "first": "2026-11-08 17:54",
       "last": "2026-11-08 17:54",
       "lastUtc": "2026-11-08T09:54:32.892Z"
+    },
+    "food-dinner": {
+      "sent": 1,
+      "first": "2026-11-08 19:56",
+      "last": "2026-11-08 19:56",
+      "lastUtc": "2026-11-08T11:56:00.005Z"
     }
   },
   "sent": [
@@ -245,6 +251,12 @@
       "utc": "2026-11-08T11:55:41.457Z",
       "claimed": "cc-routine",
       "due": "2026-11-08 18:30"
+    },
+    {
+      "id": "food-dinner",
+      "at": "2026-11-08 19:56",
+      "utc": "2026-11-08T11:56:00.005Z",
+      "text": "Dinner time\nNothing logged yet today, so the day is a clean slate 🍲\n\n🍽️ Have a proper dinner when you can.\nSomething with protein and a veg would sit nicely, and tell me what you had so I can log it."
     }
   ]
 }
