@@ -181,6 +181,13 @@
       "at": "2026-11-08 10:45",
       "utc": "2026-11-08T02:45:43.427Z",
       "text": "LP time 📝\nCrossFit done, so it's lesson plan time now, before you head out to meet up."
+    },
+    {
+      "id": "nutrition-updates-2",
+      "at": "2026-11-08 10:54",
+      "utc": "2026-11-08T02:54:35.991Z",
+      "held": true,
+      "why": "breakfast just under two hours past, lunch over an hour away"
     }
   ]
 }
