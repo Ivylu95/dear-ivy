@@ -38,10 +38,10 @@
       "lastUtc": "2026-11-07T12:56:08.393Z"
     },
     "evening-antidepressant-2153": {
-      "sent": 1,
+      "sent": 2,
       "first": "2026-11-07 21:54",
-      "last": "2026-11-07 21:54",
-      "lastUtc": "2026-11-07T13:54:52.280Z"
+      "last": "2026-11-08 21:54",
+      "lastUtc": "2026-11-08T13:54:55.021Z"
     },
     "lp-nudge-nov8": {
       "sent": 1,
@@ -72,6 +72,12 @@
       "first": "2026-11-08 19:56",
       "last": "2026-11-08 19:56",
       "lastUtc": "2026-11-08T11:56:00.005Z"
+    },
+    "workout-week-2153": {
+      "sent": 1,
+      "first": "2026-11-08 21:54",
+      "last": "2026-11-08 21:54",
+      "lastUtc": "2026-11-08T13:54:56.229Z"
     }
   },
   "sent": [
@@ -297,6 +303,18 @@
       "utc": "2026-11-08T13:54:42.152Z",
       "claimed": "cc-routine",
       "due": "2026-11-08 21:53"
+    },
+    {
+      "id": "evening-antidepressant-2153",
+      "at": "2026-11-08 21:54",
+      "utc": "2026-11-08T13:54:55.021Z",
+      "text": "Almost bedtime 🌙\nYour antidepressant is ready for you tonight. Sleep well after."
+    },
+    {
+      "id": "workout-week-2153",
+      "at": "2026-11-08 21:54",
+      "utc": "2026-11-08T13:54:56.229Z",
+      "text": "Your week of workouts – strong start 💪\n\n• Mon: BFT (CrossFit)\n• Tue: BFT (CrossFit)\n• Wed: 5 km run\n• Thu: Spin\n• Fri: Pilates\n• Sat: 4 km run outdoors\n• Sun: nothing logged yet\n\nSix days in a row. Rest well tonight."
     }
   ]
 }

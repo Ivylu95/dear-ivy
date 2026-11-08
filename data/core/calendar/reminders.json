@@ -1,29 +1,8 @@
 {
   "timezone": "Asia/Singapore",
-  "sent_through": "2026-11-08 20:53",
+  "sent_through": "2026-11-08 21:54",
   "send": "routine",
   "reminders": [
-    {
-      "id": "telegram-test",
-      "emoji": "✅",
-      "text": "Test message: Telegram is working",
-      "at": "2026-11-06 21:00",
-      "set": "2026-11-06 20:59"
-    },
-    {
-      "id": "week-ahead-nov7",
-      "emoji": "📅",
-      "text": "Your upcoming events: Sat 7 Nov 8am meet Robin · Mon 9 Nov public holiday, Eugene back, 4:15pm STRONG Pilates at Orchard · Thu 12 Nov cancel ClassPass (trial ends 14 Nov, $99 if not) · Fri 13 Nov 6pm facial at Clementi, ask for the free eye treatment · Sun 15 Nov 10pm therapy",
-      "at": "2026-11-06 21:15",
-      "set": "2026-11-06 21:14"
-    },
-    {
-      "id": "work-dates-nov-dec",
-      "emoji": "🏫",
-      "text": "Your MLK dates, Nov to Dec: 9 Nov public holiday · 27 Nov concert · 30 Nov school closure and training at HF · 30 Nov to 4 Dec staff retreat · 14 to 15 Dec annual leave · 18 Dec spring cleaning · 19 Dec PTC · 21 Dec class promotion day · 28 Dec 10am BL (with a question mark)",
-      "at": "2026-11-06 21:32",
-      "set": "2026-11-06 21:32"
-    },
     {
       "id": "cancel-classpass",
       "emoji": "💳",
