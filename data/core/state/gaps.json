@@ -1,4 +1,12 @@
 {
   "about": "Gap questions put to her (card A-180) and what she said, so none is asked twice. asked: put to her; answered and declined: never again; not_now: not before ask_after. Kept by .claude/hooks/lib/gaps.mjs.",
-  "gaps": {}
+  "gaps": {
+    "6ae97d45": {
+      "status": "asked",
+      "updated": "2026-11-09",
+      "question": "How did it go: Meet Robin (Sat 7 Nov)?",
+      "asked": "2026-11-09",
+      "session": "cse_017bko3vimAQDo5SVw4YVvzT"
+    }
+  }
 }
