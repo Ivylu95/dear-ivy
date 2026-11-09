@@ -7,6 +7,7 @@ The basics, so I never have to explain them twice.
 _Age, work, where I live, who I live with, how the days actually go._
 
 - Work: preschool teacher. Her class is 1.5 to 3 years old (told 2026-10-03).
+- Class materials (told 2026-11-09): anything made for the children uses a kids' school font with the single-storey "a" (and "g"), the way children learn to write it. Her words: *"dont ever write the "a" that way. do it in the correct english way for kids font"*. Andika works.
 - Height 157 cm. Weight about 48 kg (told 2026-10-03).
 - Left ankle: sprained a few times, rolls easily. Rolled again 2026-10-09 (told 2026-10-10).
 
