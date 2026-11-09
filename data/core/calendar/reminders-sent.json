@@ -174,13 +174,6 @@
     {
       "id": "no-snacks-after-10",
       "at": "2026-11-07 22:54",
-      "utc": "2026-11-07T14:54:36.813Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-07 22:00"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-07 22:54",
       "utc": "2026-11-07T14:54:49.452Z",
       "text": "Kitchen's closed for tonight\nIt's 10 pm now, so the snacking can stop here. You did the day well, rest up 🌙"
     },
@@ -406,6 +399,13 @@
       "at": "2026-11-09 21:57",
       "utc": "2026-11-09T13:57:55.291Z",
       "text": "Kitchen's closed for tonight\nIt's past 10 pm, so the snacking can stop here. Good work today, rest well 🌙"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-09 22:55",
+      "utc": "2026-11-09T14:55:31.462Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-09 22:00"
     }
   ]
 }
