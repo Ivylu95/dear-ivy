@@ -16,6 +16,7 @@ is marked ended, never removed._
 
 | Target | Amount | Kind | Days | Window | Set | Her words | Ended |
 |---|---|---|---|---|---|---|---|
+| Calories | 1,200 kcal | budget | every day | a day | 2026-11-09 | *"total calories to eat in a day = 1200 for me"*; asked 1,200 or 1,500 after being told once that 1,200 is the lowest without a doctor's care while training most days: *"1200"* | |
 
 ## Usual meal times
 
