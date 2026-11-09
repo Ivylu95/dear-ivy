@@ -50,10 +50,10 @@
       "lastUtc": "2026-11-08T02:45:43.427Z"
     },
     "food-breakfast": {
-      "sent": 1,
+      "sent": 2,
       "first": "2026-11-08 11:20",
-      "last": "2026-11-08 11:20",
-      "lastUtc": "2026-11-08T03:20:54.134Z"
+      "last": "2026-11-09 09:54",
+      "lastUtc": "2026-11-09T01:54:40.441Z"
     },
     "food-lunch": {
       "sent": 1,
@@ -78,6 +78,12 @@
       "first": "2026-11-08 21:54",
       "last": "2026-11-08 21:54",
       "lastUtc": "2026-11-08T13:54:56.229Z"
+    },
+    "workout-catchup-0853": {
+      "sent": 1,
+      "first": "2026-11-09 09:54",
+      "last": "2026-11-09 09:54",
+      "lastUtc": "2026-11-09T01:54:39.157Z"
     }
   },
   "sent": [
@@ -328,6 +334,18 @@
       "at": "2026-11-08 22:54",
       "utc": "2026-11-08T14:54:40.399Z",
       "text": "Kitchen's closed now\nIt's 10 pm, so that's it for eating tonight. Brush your teeth and wind down 🌙"
+    },
+    {
+      "id": "workout-catchup-0853",
+      "at": "2026-11-09 09:54",
+      "utc": "2026-11-09T01:54:39.157Z",
+      "text": "Yesterday's workout\nHappy Monday holiday 🏖️ Quick catch-up from Sunday.\n\nWhat did you do for exercise on Sunday? Sets and reps are welcome if you have them."
+    },
+    {
+      "id": "food-breakfast",
+      "at": "2026-11-09 09:54",
+      "utc": "2026-11-09T01:54:40.441Z",
+      "text": "Breakfast time\nYour usual 9am is here, and the holiday means no rush 🍳\n\nNothing is logged yet today, so the day is a clean page.\nSomething with protein would be a good start. Eggs on toast or yoghurt with fruit both work, and tell me when you've eaten."
     }
   ]
 }

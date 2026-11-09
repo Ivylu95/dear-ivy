@@ -2,10 +2,10 @@
   "_what": "The last messages the sweep wrote for each check-in, so the next differs, how many Telegram accepted, and any held (HBT-010, HBT-014).",
   "counts": {
     "morning-update-2": {
-      "sent": 2,
+      "sent": 3,
       "first": "2026-11-07 08:54",
-      "last": "2026-11-08 08:54",
-      "lastUtc": "2026-11-08T00:54:40.610Z"
+      "last": "2026-11-09 09:55",
+      "lastUtc": "2026-11-09T01:55:08.333Z"
     },
     "midday": {
       "sent": 2,
@@ -56,6 +56,12 @@
       "at": "2026-11-08 16:54",
       "utc": "2026-11-08T08:54:22.341Z",
       "text": "Afternoon water top-up\nSunday's still wide open, so there's plenty of time to go gently 🌤️\n💧 A glass now keeps the afternoon topped up\n🏋️ Your workout check comes round at 8:30 tonight\n\nHow's the water been going since lunch?"
+    },
+    {
+      "id": "morning-update-2",
+      "at": "2026-11-09 09:55",
+      "utc": "2026-11-09T01:55:08.333Z",
+      "text": "Good morning, Monday 9 Nov\n\n🏖️ Today: public holiday, with STRONG Pilates at 4:15pm in Orchard\n📅 Tomorrow, Tue 10 Nov: nothing on\n\nYour reminders carry on as usual this week, from the facial heads-up on Friday to the Sunday ones. The link below is there if any need changing.\n\nHow did you sleep, and how does your body feel after the weekend?"
     }
   ]
 }
