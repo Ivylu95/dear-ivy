@@ -360,6 +360,20 @@
       "at": "2026-11-09 09:54",
       "utc": "2026-11-09T01:54:40.441Z",
       "text": "Breakfast time\nYour usual 9am is here, and the holiday means no rush 🍳\n\nNothing is logged yet today, so the day is a clean page.\nSomething with protein would be a good start. Eggs on toast or yoghurt with fruit both work, and tell me when you've eaten."
+    },
+    {
+      "id": "workout-ask-2053",
+      "at": "2026-11-09 20:56",
+      "utc": "2026-11-09T12:56:53.301Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-09 20:53"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-09 20:56",
+      "utc": "2026-11-09T12:56:53.457Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-09 20:00"
     }
   ]
 }
