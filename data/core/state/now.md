@@ -31,7 +31,7 @@ Thinking hard about the guy she's dating. Calm, practical, wants a plan.
 
 ## Next session opens with
 
-Check-in afternoon (2026-11-08 16:53): How's the water been going since lunch?
+Check-in afternoon (2026-11-09 17:55): How many glasses of water since lunch?
 Check-in midday (2026-11-08 12:54): How many glasses have you had so far this morning?
 Check-in morning-update-2 (2026-11-09 09:53): How did you sleep, and how does your body feel after the weekend?
 Check-in midday (2026-11-09 12:54): How many glasses have you had so far today?

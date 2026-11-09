@@ -6,3 +6,4 @@ Superseded "Next session opens with" check-in lines.
 Check-in afternoon (2026-11-07 16:54): How many glasses have you got through since lunch?
 Check-in morning-update-2 (2026-11-08 08:54): Morning update sent to her phone: nothing on today, Monday's holiday and Pilates, her appointment next Sunday, and her pending reminders. No question asked.
 Check-in midday (2026-11-07 12:54): Have you had a glass of water yet today?
+Check-in afternoon (2026-11-08 16:53): How's the water been going since lunch?
