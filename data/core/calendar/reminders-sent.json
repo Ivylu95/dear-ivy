@@ -26,10 +26,10 @@
       "lastUtc": "2026-11-09T13:57:53.962Z"
     },
     "no-snacks-after-10": {
-      "sent": 5,
+      "sent": 6,
       "first": "2026-11-07 20:56",
-      "last": "2026-11-09 21:57",
-      "lastUtc": "2026-11-09T13:57:55.291Z"
+      "last": "2026-11-09 22:55",
+      "lastUtc": "2026-11-09T14:55:43.464Z"
     },
     "nutrition-updates-2": {
       "sent": 1,
@@ -138,12 +138,6 @@
       "at": "2026-11-07 20:56",
       "utc": "2026-11-07T12:56:06.051Z",
       "text": "Workout check 🏋️\nNice 4 km run this morning 👏\n\nAnything else you did today?\n• Sets and reps, if you have them\n• A walk or your ankle routine counts too"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-07 20:56",
-      "utc": "2026-11-07T12:56:07.401Z",
-      "text": "Kitchen closes at 10\nAnything you still want tonight, have it soon. After 10 pm the kitchen is closed 🌙"
     },
     {
       "id": "nutrition-updates-2",
@@ -406,6 +400,12 @@
       "at": "2026-11-09 21:57",
       "utc": "2026-11-09T13:57:55.291Z",
       "text": "Kitchen's closed for tonight\nIt's past 10 pm, so the snacking can stop here. Good work today, rest well 🌙"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-09 22:55",
+      "utc": "2026-11-09T14:55:43.464Z",
+      "text": "Kitchen's closed for the night\nIt's 10 pm, so that's the last of the eating today. Lights down soon, and sleep well 🌙"
     }
   ]
 }
