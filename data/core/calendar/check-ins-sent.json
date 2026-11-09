@@ -8,10 +8,10 @@
       "lastUtc": "2026-11-09T01:55:08.333Z"
     },
     "midday": {
-      "sent": 2,
+      "sent": 3,
       "first": "2026-11-07 12:54",
-      "last": "2026-11-08 12:54",
-      "lastUtc": "2026-11-08T04:54:41.169Z"
+      "last": "2026-11-09 12:54",
+      "lastUtc": "2026-11-09T04:54:50.367Z"
     },
     "afternoon": {
       "sent": 2,
@@ -62,6 +62,12 @@
       "at": "2026-11-09 09:55",
       "utc": "2026-11-09T01:55:08.333Z",
       "text": "Good morning, Monday 9 Nov\n\n🏖️ Today: public holiday, with STRONG Pilates at 4:15pm in Orchard\n📅 Tomorrow, Tue 10 Nov: nothing on\n\nYour reminders carry on as usual this week, from the facial heads-up on Friday to the Sunday ones. The link below is there if any need changing.\n\nHow did you sleep, and how does your body feel after the weekend?"
+    },
+    {
+      "id": "midday",
+      "at": "2026-11-09 12:54",
+      "utc": "2026-11-09T04:54:50.367Z",
+      "text": "Midday water check\nPilates at 4:15 in Orchard this afternoon, so it's a good one to have a glass in before you head out 💧\n\nHow many glasses have you had so far today?"
     }
   ]
 }
