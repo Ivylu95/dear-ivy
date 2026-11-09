@@ -124,6 +124,51 @@
       "text": "Your MLK dates, Nov to Dec: 9 Nov public holiday · 27 Nov concert · 30 Nov school closure and training at HF · 30 Nov to 4 Dec staff retreat · 14 to 15 Dec annual leave · 18 Dec spring cleaning · 19 Dec PTC · 21 Dec class promotion day · 28 Dec 10am BL (with a question mark)",
       "at": "2026-11-06 21:32",
       "set": "2026-11-06 21:32"
+    },
+    {
+      "id": "food-breakfast",
+      "emoji": "🍳",
+      "text": "Breakfast nudge: time to eat and log breakfast; where today stands against my goals",
+      "module": "fitness",
+      "reads": [
+        "data/fitness/days/",
+        "data/fitness/README.md",
+        "data/fitness/usual_meals.md",
+        "data/fitness/supplements.md"
+      ],
+      "cron": "0 9 * * *",
+      "set": "2026-11-08 11:21",
+      "ended": "2026-11-09"
+    },
+    {
+      "id": "food-lunch",
+      "emoji": "🍱",
+      "text": "Lunch nudge: time to eat and log lunch; where today stands, what's left, and what I could eat",
+      "module": "fitness",
+      "reads": [
+        "data/fitness/days/",
+        "data/fitness/README.md",
+        "data/fitness/usual_meals.md",
+        "data/fitness/supplements.md"
+      ],
+      "cron": "30 12 * * *",
+      "set": "2026-11-08 11:21",
+      "ended": "2026-11-09"
+    },
+    {
+      "id": "food-dinner",
+      "emoji": "🍲",
+      "text": "Dinner nudge: time to eat and log dinner; where today stands, what's left, and what I could eat",
+      "module": "fitness",
+      "reads": [
+        "data/fitness/days/",
+        "data/fitness/README.md",
+        "data/fitness/usual_meals.md",
+        "data/fitness/supplements.md"
+      ],
+      "cron": "30 18 * * *",
+      "set": "2026-11-08 11:21",
+      "ended": "2026-11-09"
     }
   ]
 }
