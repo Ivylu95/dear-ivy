@@ -26,6 +26,7 @@
 - *"having my brain stimulated it's very important to me"* (2026-10-05).
 
 ## Where it stands (newest first)
+- 2026-11-10: How she feels about ending it: *"Feeling alright, thanks"*.
 - 2026-11-07: She ended things with him. Her words: *"I ended things w E"*. When and why: not yet known.
 - 2026-10-12: Met 5+ times. Comes home *"a little let down"*. Wants to feel valued, not the money itself. Drafted a message for her to tell him; whether she sends it: not yet known.
 - 2026-10-12: Compared with Del and WJ. Her words: *"Eugene is better looking"*, but conversation *"a bit boring"* → `data/core/people/del.md`, `data/core/people/wj.md`.
