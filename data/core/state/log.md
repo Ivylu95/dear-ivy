@@ -19,3 +19,4 @@ Sessions since last upkeep: **2**
 
 | 2026-08-29 · 4.2 check-in · first session; set up how the record saves, no ground covered yet |
 | 2026-09-25 · first-contact · system session: profile gate built, save-to-main verified; no personal ground covered |
+| 2026-11-10 · crisis · ongoing |
