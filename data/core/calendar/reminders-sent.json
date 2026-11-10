@@ -406,6 +406,13 @@
       "at": "2026-11-09 22:55",
       "utc": "2026-11-09T14:55:43.464Z",
       "text": "Kitchen's closed for the night\nIt's 10 pm, so that's the last of the eating today. Lights down soon, and sleep well 🌙"
+    },
+    {
+      "id": "workout-catchup-0853",
+      "at": "2026-11-10 08:54",
+      "utc": "2026-11-10T00:54:01.150Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-10 08:53"
     }
   ]
 }
