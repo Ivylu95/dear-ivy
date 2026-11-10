@@ -276,13 +276,6 @@
       "due": "2026-11-08 20:53"
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-08 20:54",
-      "utc": "2026-11-08T12:54:07.217Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-08 20:00"
-    },
-    {
       "id": "workout-ask-2053",
       "at": "2026-11-08 20:54",
       "utc": "2026-11-08T12:54:22.542Z",
@@ -476,6 +469,20 @@
       "at": "2026-11-10 18:57",
       "utc": "2026-11-10T10:57:47.303Z",
       "text": "Dinner time soon\nNothing logged yet today, so the whole 1,200 kcal is still open 🍽️\n🔥 0 of 1,200 kcal\nSomething warm and simple would suit, like soup with eggs or chicken and rice, and send me what you have when you're done."
+    },
+    {
+      "id": "workout-ask-2053",
+      "at": "2026-11-10 20:56",
+      "utc": "2026-11-10T12:56:28.301Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-10 20:53"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-10 20:56",
+      "utc": "2026-11-10T12:56:28.413Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-10 20:00"
     }
   ]
 }
