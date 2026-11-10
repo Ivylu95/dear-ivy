@@ -169,6 +169,13 @@
       "cron": "30 18 * * *",
       "set": "2026-11-08 11:21",
       "ended": "2026-11-09"
+    },
+    {
+      "id": "lp-nudge-nov8",
+      "emoji": "📝",
+      "text": "LP nudge: do your lesson plan after CrossFit, before your meet-up",
+      "at": "2026-11-08 10:45",
+      "set": "2026-11-08 08:46"
     }
   ]
 }

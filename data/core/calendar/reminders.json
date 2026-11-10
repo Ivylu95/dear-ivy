@@ -1,6 +1,6 @@
 {
   "timezone": "Asia/Singapore",
-  "sent_through": "2026-11-10 09:53",
+  "sent_through": "2026-11-10 12:53",
   "send": "routine",
   "reminders": [
     {
@@ -81,13 +81,6 @@
       "text": "Stop snacking after 10 pm (at 8 pm: anything still wanted tonight, have it soon; at 10 pm: kitchen's closed for tonight)",
       "cron": "0 20,22 * * *",
       "set": "2026-11-07 11:03"
-    },
-    {
-      "id": "lp-nudge-nov8",
-      "emoji": "📝",
-      "text": "LP nudge: do your lesson plan after CrossFit, before your meet-up",
-      "at": "2026-11-08 10:45",
-      "set": "2026-11-08 08:46"
     },
     {
       "id": "food-breakfast-linked",
