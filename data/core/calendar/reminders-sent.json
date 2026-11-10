@@ -438,6 +438,13 @@
       "at": "2026-11-10 09:54",
       "utc": "2026-11-10T01:54:20.686Z",
       "text": "Breakfast time\nFresh day, nothing logged yet 🌅\n\n🔥 Calories: 0 of 1,200 so far, all 1,200 still open\n\nSend me your bfk when you have it and I'll log it.\n\nSomething filling like eggs on toast or yoghurt with fruit would sit nicely in that room, no need to fill it all."
+    },
+    {
+      "id": "food-lunch-linked",
+      "at": "2026-11-10 12:54",
+      "utc": "2026-11-10T04:54:05.360Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-10 12:30"
     }
   ]
 }
