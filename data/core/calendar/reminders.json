@@ -218,6 +218,13 @@
       "text": "Poster due tomorrow: finish what's left",
       "at": "2026-11-17 19:00",
       "set": "2026-11-11 07:10"
+    },
+    {
+      "id": "concert-plan-summary",
+      "emoji": "🗓️",
+      "text": "Her concert poster and montage plan, as short points",
+      "at": "2026-11-11 07:05",
+      "set": "2026-11-11 07:05"
     }
   ]
 }

@@ -102,6 +102,12 @@
       "first": "2026-11-10 18:57",
       "last": "2026-11-10 18:57",
       "lastUtc": "2026-11-10T10:57:47.303Z"
+    },
+    "concert-plan-summary": {
+      "sent": 1,
+      "first": "2026-11-11 07:06",
+      "last": "2026-11-11 07:06",
+      "lastUtc": "2026-11-10T23:06:04.769Z"
     }
   },
   "sent": [
@@ -502,6 +508,12 @@
       "at": "2026-11-10 22:54",
       "utc": "2026-11-10T14:54:57.278Z",
       "text": "Kitchen's closed\nIt's 10 pm, so eating can stop for tonight. Rest well."
+    },
+    {
+      "id": "concert-plan-summary",
+      "at": "2026-11-11 07:06",
+      "utc": "2026-11-10T23:06:04.769Z",
+      "text": "Concert plan\n🎨 Poster\n\n🖌️ Today 7pm: plan layout\n\n🖨️ Thu 9am: print names + title\n\n🌳 Thu 4pm: print trees + leaves\n\n📸 Fri 9am: costume photos\n\n🖨️ Fri 4pm: print photos\n\n✂️ Mon 2pm: cut + stick\n\n✅ Mon 6pm: last touches\n\n⏰ Tue 7pm: due tomorrow\n\n🎬 Montage\n\n🎞️ Thu 1pm: get most done\n\n🏁 Fri 1pm: finish\n\n⏰ Mon 9am: last day"
     }
   ]
 }
