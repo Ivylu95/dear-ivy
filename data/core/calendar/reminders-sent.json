@@ -38,10 +38,10 @@
       "lastUtc": "2026-11-07T12:56:08.393Z"
     },
     "evening-antidepressant-2153": {
-      "sent": 3,
+      "sent": 4,
       "first": "2026-11-07 21:54",
-      "last": "2026-11-09 21:57",
-      "lastUtc": "2026-11-09T13:57:52.856Z"
+      "last": "2026-11-10 21:55",
+      "lastUtc": "2026-11-10T13:55:42.952Z"
     },
     "lp-nudge-nov8": {
       "sent": 1,
@@ -496,6 +496,12 @@
       "utc": "2026-11-10T13:55:29.449Z",
       "claimed": "cc-routine",
       "due": "2026-11-10 21:53"
+    },
+    {
+      "id": "evening-antidepressant-2153",
+      "at": "2026-11-10 21:55",
+      "utc": "2026-11-10T13:55:42.952Z",
+      "text": "Bedtime soon\nYour antidepressant is here when you're ready for it tonight. Be gentle with yourself."
     }
   ]
 }
