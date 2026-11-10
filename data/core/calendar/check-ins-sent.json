@@ -8,10 +8,10 @@
       "lastUtc": "2026-11-10T00:54:32.198Z"
     },
     "midday": {
-      "sent": 3,
+      "sent": 4,
       "first": "2026-11-07 12:54",
-      "last": "2026-11-09 12:54",
-      "lastUtc": "2026-11-09T04:54:50.367Z"
+      "last": "2026-11-10 12:55",
+      "lastUtc": "2026-11-10T04:55:01.871Z"
     },
     "afternoon": {
       "sent": 3,
@@ -80,6 +80,12 @@
       "at": "2026-11-10 08:54",
       "utc": "2026-11-10T00:54:32.198Z",
       "text": "Good morning, Tuesday 10 Nov\n\n📅 Nothing on today or tomorrow\n💳 Two days to go before the ClassPass cancel nudge on Thursday\n💆 Facial heads-up lands Friday afternoon\n\nYour reminders run as usual. The link below is there if you want to change any."
+    },
+    {
+      "id": "midday",
+      "at": "2026-11-10 12:55",
+      "utc": "2026-11-10T04:55:01.871Z",
+      "text": "Water check at midday\nTuesday's calendar is clear, so there's room to fit some water in around lunch 🥤\n\nHow many glasses have you got in since you woke up?"
     }
   ]
 }
