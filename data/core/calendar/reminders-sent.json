@@ -84,6 +84,12 @@
       "first": "2026-11-09 09:54",
       "last": "2026-11-10 08:54",
       "lastUtc": "2026-11-10T00:54:12.319Z"
+    },
+    "food-breakfast-linked": {
+      "sent": 1,
+      "first": "2026-11-10 09:54",
+      "last": "2026-11-10 09:54",
+      "lastUtc": "2026-11-10T01:54:20.686Z"
     }
   },
   "sent": [
@@ -426,6 +432,12 @@
       "utc": "2026-11-10T01:54:08.531Z",
       "claimed": "cc-routine",
       "due": "2026-11-10 09:00"
+    },
+    {
+      "id": "food-breakfast-linked",
+      "at": "2026-11-10 09:54",
+      "utc": "2026-11-10T01:54:20.686Z",
+      "text": "Breakfast time\nFresh day, nothing logged yet 🌅\n\n🔥 Calories: 0 of 1,200 so far, all 1,200 still open\n\nSend me your bfk when you have it and I'll log it.\n\nSomething filling like eggs on toast or yoghurt with fruit would sit nicely in that room, no need to fill it all."
     }
   ]
 }
