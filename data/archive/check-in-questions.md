@@ -9,3 +9,4 @@ Check-in midday (2026-11-07 12:54): Have you had a glass of water yet today?
 Check-in afternoon (2026-11-08 16:53): How's the water been going since lunch?
 Check-in midday (2026-11-08 12:54): How many glasses have you had so far this morning?
 Check-in midday (2026-11-09 12:54): How many glasses have you had so far today?
+Check-in afternoon (2026-11-09 17:55): How many glasses of water since lunch?
