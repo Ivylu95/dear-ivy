@@ -18,6 +18,7 @@
 - Brain stimulation matters a lot to her: *"having my brain stimulated it's very important to me"* (2026-10-05, said about Eugene).
 
 ## Where it stands (newest first)
+- 2026-11-10: Her words: *"I'm seeing del somewhat exclusively rn"*. Whether they've talked about it together: not yet known.
 - 2026-11-07: Starting things with him, after ending things with Eugene. Her words: *"start ng things w Del"*. Exclusive or not: not yet known.
 - 2026-10-12: Met once. He wants to meet again; she does too.
 
