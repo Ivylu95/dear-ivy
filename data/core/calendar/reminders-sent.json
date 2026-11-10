@@ -96,6 +96,12 @@
       "first": "2026-11-10 12:54",
       "last": "2026-11-10 12:54",
       "lastUtc": "2026-11-10T04:54:23.283Z"
+    },
+    "food-dinner-linked": {
+      "sent": 1,
+      "first": "2026-11-10 18:57",
+      "last": "2026-11-10 18:57",
+      "lastUtc": "2026-11-10T10:57:47.303Z"
     }
   },
   "sent": [
@@ -464,6 +470,12 @@
       "utc": "2026-11-10T10:57:34.727Z",
       "claimed": "cc-routine",
       "due": "2026-11-10 18:30"
+    },
+    {
+      "id": "food-dinner-linked",
+      "at": "2026-11-10 18:57",
+      "utc": "2026-11-10T10:57:47.303Z",
+      "text": "Dinner time soon\nNothing logged yet today, so the whole 1,200 kcal is still open 🍽️\n🔥 0 of 1,200 kcal\nSomething warm and simple would suit, like soup with eggs or chicken and rice, and send me what you have when you're done."
     }
   ]
 }
