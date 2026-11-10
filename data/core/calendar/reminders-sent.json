@@ -96,6 +96,12 @@
       "first": "2026-11-10 12:54",
       "last": "2026-11-10 12:54",
       "lastUtc": "2026-11-10T04:54:23.283Z"
+    },
+    "food-dinner-linked": {
+      "sent": 1,
+      "first": "2026-11-10 18:57",
+      "last": "2026-11-10 18:57",
+      "lastUtc": "2026-11-10T10:57:47.303Z"
     }
   },
   "sent": [
@@ -457,6 +463,12 @@
       "at": "2026-11-10 12:54",
       "utc": "2026-11-10T04:54:23.283Z",
       "text": "Lunch is coming up\nNothing logged yet today, so the whole day's still open 🌤️\n\n🔥 0 of 1,200 kcal\n🥩 Protein: nothing in yet, and today's a good day to start with it\n\nA bowl with chicken or eggs, some rice and veg would sit well in that room, around 400 to 500 kcal and leave space for dinner. Tell me what you end up having and I'll log it."
+    },
+    {
+      "id": "food-dinner-linked",
+      "at": "2026-11-10 18:57",
+      "utc": "2026-11-10T10:57:47.303Z",
+      "text": "Dinner time soon\nNothing logged yet today, so the whole 1,200 kcal is still open 🍽️\n🔥 0 of 1,200 kcal\nSomething warm and simple would suit, like soup with eggs or chicken and rice, and send me what you have when you're done."
     }
   ]
 }
