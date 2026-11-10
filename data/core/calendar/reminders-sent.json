@@ -310,13 +310,6 @@
     {
       "id": "no-snacks-after-10",
       "at": "2026-11-08 22:54",
-      "utc": "2026-11-08T14:54:18.777Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-08 22:00"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-08 22:54",
       "utc": "2026-11-08T14:54:40.399Z",
       "text": "Kitchen's closed now\nIt's 10 pm, so that's it for eating tonight. Brush your teeth and wind down 🌙"
     },
@@ -502,6 +495,13 @@
       "at": "2026-11-10 21:55",
       "utc": "2026-11-10T13:55:42.952Z",
       "text": "Bedtime soon\nYour antidepressant is here when you're ready for it tonight. Be gentle with yourself."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-10 22:54",
+      "utc": "2026-11-10T14:54:47.351Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-10 22:00"
     }
   ]
 }
