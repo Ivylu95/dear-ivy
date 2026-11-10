@@ -16,6 +16,7 @@ _Use her language, not clinical language. If she says "flat", don't write
 | HCI | Her Health Check In: the daily table of exercises, calories, mood, grateful-for → `data/fitness/daily_log.md` (named 2026-10-14) |
 | Luna | Her name for the Telegram bot that sends her reminders and check-ins (named 2026-11-07; her words: *"I have named the take bot Luna"*) |
 | LP | Lesson plan, for her preschool class (named 2026-11-08: *"Lesson plan (LP) nudge"*) |
+| MLK | My Little Kingdom preschool, her workplace (named 2026-11-11) |
 | bfk | Breakfast (named 2026-11-09: *"breakfat (bfk for short now)"*) |
 |  |  |
 
