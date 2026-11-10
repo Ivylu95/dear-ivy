@@ -131,3 +131,4 @@ The full version, for the developer:
 
     Item 20 is the same gap: her meal times were asked for once and then dropped. Her short version: 🍽️ Nudge me about food even if I haven't logged anything.
 23. **Every message from Luna is easy to scan** (from her, 2026-11-11; Luna is her name for the Telegram bot). Every reminder and check-in uses short words and short phrases, in point form. Put one blank line between points, or group them by kind (work, food, health). The sweep applies this to every message it writes, so it doesn't depend on each reminder's own text. This goes with item 1: phone first, at a glance. Her short version: 📱 Luna: short points, gaps between, easy to scan.
+    *Added the same day:* one emoji on each point, so she can spot each item at a glance. Her short version: 😊 Emojis on each point in Luna's messages.
