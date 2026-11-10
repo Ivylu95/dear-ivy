@@ -141,6 +141,83 @@
       },
       "bot": "main",
       "start": "2026-11-10 00:00"
+    },
+    {
+      "id": "poster-start",
+      "emoji": "🎨",
+      "text": "Poster: plan layout",
+      "at": "2026-11-11 19:00",
+      "set": "2026-11-11 07:10"
+    },
+    {
+      "id": "poster-print-names",
+      "emoji": "🖨️",
+      "text": "Poster: print names + title",
+      "at": "2026-11-12 09:00",
+      "set": "2026-11-11 07:10"
+    },
+    {
+      "id": "montage-work",
+      "emoji": "🎬",
+      "text": "Montage: get most done",
+      "at": "2026-11-12 13:00",
+      "set": "2026-11-11 07:10"
+    },
+    {
+      "id": "poster-print-trees",
+      "emoji": "🌳",
+      "text": "Poster: print trees + leaves",
+      "at": "2026-11-12 16:00",
+      "set": "2026-11-11 07:10"
+    },
+    {
+      "id": "poster-photos",
+      "emoji": "📸",
+      "text": "Poster: costume photos",
+      "at": "2026-11-13 09:00",
+      "set": "2026-11-11 07:10"
+    },
+    {
+      "id": "montage-finish",
+      "emoji": "🎬",
+      "text": "Montage: finish today",
+      "at": "2026-11-13 13:00",
+      "set": "2026-11-11 07:10"
+    },
+    {
+      "id": "poster-print-photos",
+      "emoji": "🖨️",
+      "text": "Poster: print photos",
+      "at": "2026-11-13 16:00",
+      "set": "2026-11-11 07:10"
+    },
+    {
+      "id": "montage-due",
+      "emoji": "⏰",
+      "text": "Montage: last day, finish it",
+      "at": "2026-11-16 09:00",
+      "set": "2026-11-11 07:10"
+    },
+    {
+      "id": "poster-assemble",
+      "emoji": "✂️",
+      "text": "Poster: cut + stick",
+      "at": "2026-11-16 14:00",
+      "set": "2026-11-11 07:10"
+    },
+    {
+      "id": "poster-finish",
+      "emoji": "✅",
+      "text": "Poster: last touches, done tonight",
+      "at": "2026-11-16 18:00",
+      "set": "2026-11-11 07:10"
+    },
+    {
+      "id": "poster-due",
+      "emoji": "⏰",
+      "text": "Poster due tomorrow: finish what's left",
+      "at": "2026-11-17 19:00",
+      "set": "2026-11-11 07:10"
     }
   ]
 }

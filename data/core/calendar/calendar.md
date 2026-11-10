@@ -19,6 +19,8 @@ _Appointments, deadlines, trips, birthdays. Soonest first. Remove once past
 | 2026-11-12 | Cancel ClassPass — trial ends 14 Nov, $99 charge if not | From her Google Calendar |
 | 2026-11-13 18:00 | Facial at Clementi; ask for the free eye treatment | From her Google Calendar |
 | 2026-11-15 10:00 | Therapy | She corrected the time on 2026-11-06: 10 am, not 10 pm (her Google Calendar moved to 10–11 am the same day, on her yes) |
+| 2026-11-16 | Concert video montage due (aim: Fri 13 Nov) | Told 2026-11-11 |
+| 2026-11-18 | Concert poster due (aim: Mon 16 Nov evening) | Told 2026-11-11 |
 | 2026-11-25 | Madeline's birthday (yearly in her calendar) | From her Google Calendar (told 2026-11-06) |
 | 2026-11-27 | MLK concert | From her Google Calendar (told 2026-11-06) |
 | 2026-11-30 | MLK school closure; training at HF | From her Google Calendar |
