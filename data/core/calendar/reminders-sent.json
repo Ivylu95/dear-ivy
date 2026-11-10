@@ -489,6 +489,13 @@
       "at": "2026-11-10 20:56",
       "utc": "2026-11-10T12:56:42.487Z",
       "text": "Evening snack window\nIf you still want something tonight, have it in the next hour or so. The kitchen closes at 10."
+    },
+    {
+      "id": "evening-antidepressant-2153",
+      "at": "2026-11-10 21:55",
+      "utc": "2026-11-10T13:55:29.449Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-10 21:53"
     }
   ]
 }
