@@ -47,6 +47,7 @@ her words, blank when not said._
 - 2026-11-02 – 2026-11-06 (told 2026-11-07) · Her week, Mon–Fri as she listed it: BFT (CrossFit), BFT, 5 km run, spin, Pilates, 4 km run. Which day each: not yet known. The 4 km run is the same one told earlier
 - 2026-11-07 · Correction (her words: *"Sorry let me try again mon to sat in order"*): Mon 2 BFT (CrossFit) · Tue 3 BFT · Wed 4 5 km run · Thu 5 spin · Fri 6 Pilates · Sat 7 4 km run outdoors, this morning. The Mon–Fri line above is superseded by this one
 - 2026-11-07 · Left ankle after the week's two runs, her words: *"Ankle is alright"*
+- 2026-11-10 (Tue, told 8:27 am) · Cardio workout at BFT, 50 min. Her words: *"Did cardio workout at bft today, 50 mins"*
 
 ## Worth keeping in view
 
