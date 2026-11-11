@@ -1,6 +1,6 @@
 {
   "timezone": "Asia/Singapore",
-  "sent_through": "2026-11-10 22:54",
+  "sent_through": "2026-11-11 08:54",
   "send": "routine",
   "reminders": [
     {
@@ -33,13 +33,6 @@
       "text": "Therapy tomorrow at 10 am; jot down tonight anything she wants to bring up",
       "at": "2026-11-14 20:00",
       "set": "2026-11-06 22:25"
-    },
-    {
-      "id": "evening-antidepressant-2153",
-      "emoji": "💊",
-      "text": "Take your antidepressant before bed",
-      "cron": "53 21 * * *",
-      "set": "2026-11-07 07:30"
     },
     {
       "id": "workout-ask-2053",
@@ -81,66 +74,6 @@
       "text": "Stop snacking after 10 pm (at 8 pm: anything still wanted tonight, have it soon; at 10 pm: kitchen's closed for tonight)",
       "cron": "0 20,22 * * *",
       "set": "2026-11-07 11:03"
-    },
-    {
-      "id": "food-breakfast-linked",
-      "emoji": "🍳",
-      "text": "Breakfast nudge: time to eat and log breakfast; where today stands against my goals",
-      "module": "fitness",
-      "reads": [
-        "data/fitness/days/",
-        "data/fitness/README.md",
-        "data/fitness/usual_meals.md",
-        "data/fitness/supplements.md"
-      ],
-      "cron": "0 9 * * *",
-      "set": "2026-11-09 12:17",
-      "chat": {
-        "url": "https://claude.ai/code/session_01RkebH73Sqeq5M4dzwA3cXe",
-        "title": "Calories and nutrition"
-      },
-      "bot": "main",
-      "start": "2026-11-10 00:00"
-    },
-    {
-      "id": "food-lunch-linked",
-      "emoji": "🍱",
-      "text": "Lunch nudge: time to eat and log lunch; where today stands, what's left, and what I could eat",
-      "module": "fitness",
-      "reads": [
-        "data/fitness/days/",
-        "data/fitness/README.md",
-        "data/fitness/usual_meals.md",
-        "data/fitness/supplements.md"
-      ],
-      "cron": "30 12 * * *",
-      "set": "2026-11-09 12:17",
-      "chat": {
-        "url": "https://claude.ai/code/session_01RkebH73Sqeq5M4dzwA3cXe",
-        "title": "Calories and nutrition"
-      },
-      "bot": "main",
-      "start": "2026-11-10 00:00"
-    },
-    {
-      "id": "food-dinner-linked",
-      "emoji": "🍲",
-      "text": "Dinner nudge: time to eat and log dinner; where today stands, what's left, and what I could eat",
-      "module": "fitness",
-      "reads": [
-        "data/fitness/days/",
-        "data/fitness/README.md",
-        "data/fitness/usual_meals.md",
-        "data/fitness/supplements.md"
-      ],
-      "cron": "30 18 * * *",
-      "set": "2026-11-09 12:17",
-      "chat": {
-        "url": "https://claude.ai/code/session_01RkebH73Sqeq5M4dzwA3cXe",
-        "title": "Calories and nutrition"
-      },
-      "bot": "main",
-      "start": "2026-11-10 00:00"
     },
     {
       "id": "poster-start",
@@ -211,6 +144,70 @@
       "text": "Her updated concert poster and montage plan, as short points",
       "at": "2026-11-11 08:40",
       "set": "2026-11-11 08:40"
+    },
+    {
+      "id": "food-breakfast-0753",
+      "emoji": "🍳",
+      "text": "Breakfast nudge: time to eat and log breakfast; where today stands against my goals",
+      "module": "fitness",
+      "reads": [
+        "data/fitness/days/",
+        "data/fitness/README.md",
+        "data/fitness/usual_meals.md",
+        "data/fitness/supplements.md"
+      ],
+      "cron": "53 7 * * *",
+      "set": "2026-11-11 08:57",
+      "chat": {
+        "url": "https://claude.ai/code/session_01RkebH73Sqeq5M4dzwA3cXe",
+        "title": "Calories and nutrition"
+      },
+      "bot": "main"
+    },
+    {
+      "id": "food-lunch-1253",
+      "emoji": "🍱",
+      "text": "Lunch nudge: time to eat and log lunch; where today stands, what's left, and what I could eat",
+      "module": "fitness",
+      "reads": [
+        "data/fitness/days/",
+        "data/fitness/README.md",
+        "data/fitness/usual_meals.md",
+        "data/fitness/supplements.md"
+      ],
+      "cron": "53 12 * * *",
+      "set": "2026-11-11 08:57",
+      "chat": {
+        "url": "https://claude.ai/code/session_01RkebH73Sqeq5M4dzwA3cXe",
+        "title": "Calories and nutrition"
+      },
+      "bot": "main"
+    },
+    {
+      "id": "food-dinner-1853",
+      "emoji": "🍲",
+      "text": "Dinner nudge: time to eat and log dinner; where today stands, what's left, and what I could eat",
+      "module": "fitness",
+      "reads": [
+        "data/fitness/days/",
+        "data/fitness/README.md",
+        "data/fitness/usual_meals.md",
+        "data/fitness/supplements.md"
+      ],
+      "cron": "53 18 * * *",
+      "set": "2026-11-11 08:57",
+      "chat": {
+        "url": "https://claude.ai/code/session_01RkebH73Sqeq5M4dzwA3cXe",
+        "title": "Calories and nutrition"
+      },
+      "bot": "main"
+    },
+    {
+      "id": "antidepressant-2053",
+      "emoji": "💊",
+      "text": "Take your antidepressant before bed",
+      "cron": "53 20 * * *",
+      "set": "2026-11-11 08:57"
     }
   ]
 }
