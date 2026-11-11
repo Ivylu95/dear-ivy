@@ -9,7 +9,7 @@ _Age, work, where I live, who I live with, how the days actually go._
 - Work: preschool teacher. Her class is 1.5 to 3 years old (told 2026-10-03).
 - Workplace (told 2026-11-11): MLK, short for My Little Kingdom preschool. Her words: *"MLK stands for My little kingdom preschool = my workplace"*.
 - Work days (told 2026-11-11): weekdays only. Her words: *"I don't work on weekends"*. Work reminders go on weekdays.
-- Work time for admin (told 2026-11-11): lunch break is 12:30 to 2:30 pm; admin and prep work only fits then, or after 7 pm. Her words: *"my lunch break at work is from 12:30 to 2:30, so that's when I will have time to do admin work... I can only either work during my lunch break or after work at after 7 p.m."*
+- Work time for admin (told 2026-11-11; changed the same day: admin in the break is 1 to 2:30 pm, *"move my lunch break work to between 1pm to 2:30pm"*): lunch break is 12:30 to 2:30 pm; admin and prep work only fits then, or after 7 pm. Her words: *"my lunch break at work is from 12:30 to 2:30, so that's when I will have time to do admin work... I can only either work during my lunch break or after work at after 7 p.m."*
 - Class materials (told 2026-11-09): anything made for the children uses a kids' school font with the single-storey "a" (and "g"), the way children learn to write it. Her words: *"dont ever write the "a" that way. do it in the correct english way for kids font"*. Andika works.
 - Height 157 cm. Weight about 48 kg (told 2026-10-03).
 - Left ankle: sprained a few times, rolls easily. Rolled again 2026-10-09 (told 2026-10-10).
