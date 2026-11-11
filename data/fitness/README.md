@@ -18,6 +18,10 @@ is marked ended, never removed._
 |---|---|---|---|---|---|---|---|
 | Calories | 1,200 kcal | budget | every day | a day | 2026-11-09 | *"total calories to eat in a day = 1200 for me"*; asked 1,200 or 1,500 after being told once that 1,200 is the lowest without a doctor's care while training most days: *"1200"* | |
 
+## Her preferences
+
+- 2026-11-11: workouts belong with her food day. Her words: *"Yes workout and calories should overlap"*. Each day's page shows any workout in her training log on its **Activity** line, and the food view names it; its calories are taken off only when she or a machine (watch, BFT app) gives a figure, never estimated.
+
 ## Usual meal times
 
 _As she said them, 2026-11-07: "9am, 1pm, 7pm"._
