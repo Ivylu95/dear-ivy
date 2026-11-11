@@ -666,6 +666,13 @@
       "at": "2026-11-11 22:54",
       "utc": "2026-11-11T14:54:45.969Z",
       "text": "Kitchen's closed now\nIt's nearly 11, so no more food tonight. Go easy and get some rest."
+    },
+    {
+      "id": "week-cal-in-out",
+      "at": "2026-11-11 23:54",
+      "utc": "2026-11-11T15:54:35.698Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-11 23:00"
     }
   ]
 }
