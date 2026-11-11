@@ -311,6 +311,43 @@
       "bot": "main",
       "start": "2026-11-10 00:00",
       "ended": "2026-11-11"
+    },
+    {
+      "id": "workout-ask-2053",
+      "emoji": "🏋️",
+      "text": "Ask what workout or exercises she did today (sets and reps if she has them; a walk or the ankle routine counts)",
+      "reads": [
+        "data/fitness/training.md",
+        "data/fitness/daily_log.md"
+      ],
+      "cron": "53 20 * * *",
+      "set": "2026-11-07 07:30",
+      "ended": "2026-11-11"
+    },
+    {
+      "id": "workout-catchup-0853",
+      "emoji": "⏰",
+      "text": "Only if yesterday's workout is not in her record: ask what workout she did yesterday. If it is logged, send nothing",
+      "reads": [
+        "data/fitness/training.md",
+        "data/fitness/daily_log.md"
+      ],
+      "cron": "53 8 * * *",
+      "start": "2026-11-08 08:53",
+      "set": "2026-11-07 07:30",
+      "ended": "2026-11-11"
+    },
+    {
+      "id": "workout-week-2153",
+      "emoji": "📊",
+      "text": "Her week of workouts as a phone-friendly list, Mon to Sun: each day and what she did, as logged",
+      "reads": [
+        "data/fitness/training.md",
+        "data/fitness/daily_log.md"
+      ],
+      "cron": "53 21 * * sun",
+      "set": "2026-11-07 07:30",
+      "ended": "2026-11-11"
     }
   ]
 }

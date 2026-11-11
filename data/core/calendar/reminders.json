@@ -35,40 +35,6 @@
       "set": "2026-11-06 22:25"
     },
     {
-      "id": "workout-ask-2053",
-      "emoji": "🏋️",
-      "text": "Ask what workout or exercises she did today (sets and reps if she has them; a walk or the ankle routine counts)",
-      "reads": [
-        "data/fitness/training.md",
-        "data/fitness/daily_log.md"
-      ],
-      "cron": "53 20 * * *",
-      "set": "2026-11-07 07:30"
-    },
-    {
-      "id": "workout-catchup-0853",
-      "emoji": "⏰",
-      "text": "Only if yesterday's workout is not in her record: ask what workout she did yesterday. If it is logged, send nothing",
-      "reads": [
-        "data/fitness/training.md",
-        "data/fitness/daily_log.md"
-      ],
-      "cron": "53 8 * * *",
-      "start": "2026-11-08 08:53",
-      "set": "2026-11-07 07:30"
-    },
-    {
-      "id": "workout-week-2153",
-      "emoji": "📊",
-      "text": "Her week of workouts as a phone-friendly list, Mon to Sun: each day and what she did, as logged",
-      "reads": [
-        "data/fitness/training.md",
-        "data/fitness/daily_log.md"
-      ],
-      "cron": "53 21 * * sun",
-      "set": "2026-11-07 07:30"
-    },
-    {
       "id": "no-snacks-after-10",
       "emoji": "🌙",
       "text": "Stop snacking after 10 pm (at 8 pm: anything still wanted tonight, have it soon; at 10 pm: kitchen's closed for tonight)",
@@ -208,6 +174,42 @@
       "text": "Take your antidepressant before bed",
       "cron": "53 20 * * *",
       "set": "2026-11-11 08:57"
+    },
+    {
+      "id": "workout-ask-cal",
+      "emoji": "🏋️",
+      "text": "Check her calendar copy for today's workouts first: any workout there counts as done and is logged, said back in one line. Then ask only whether she did anything else today (sets and reps if she has them; a walk or the ankle routine counts). Nothing on the calendar: ask what workout or exercises she did today",
+      "cron": "53 20 * * *",
+      "reads": [
+        "data/fitness/training.md",
+        "data/fitness/daily_log.md",
+        "data/core/calendar/google.json"
+      ],
+      "set": "2026-11-11 12:00"
+    },
+    {
+      "id": "workout-catchup-cal",
+      "emoji": "⏰",
+      "text": "Only if yesterday has no workout in her record and none on her calendar copy: ask what workout she did yesterday. If yesterday's workout is on her calendar, it counts as done: log it and send nothing",
+      "cron": "53 8 * * *",
+      "reads": [
+        "data/fitness/training.md",
+        "data/fitness/daily_log.md",
+        "data/core/calendar/google.json"
+      ],
+      "set": "2026-11-11 12:00"
+    },
+    {
+      "id": "workout-week-cal",
+      "emoji": "📊",
+      "text": "Her week of workouts as a phone-friendly list, Mon to Sun: each day and what she did, as logged, with workouts on her calendar copy counted as done. Weeks from Mon 9 Nov 2026 only",
+      "cron": "53 21 * * sun",
+      "reads": [
+        "data/fitness/training.md",
+        "data/fitness/daily_log.md",
+        "data/core/calendar/google.json"
+      ],
+      "set": "2026-11-11 12:00"
     }
   ]
 }
