@@ -8,6 +8,19 @@
       "cron": "0 8 * * *",
       "set": "2026-11-06 20:59",
       "ended": "2026-11-06"
+    },
+    {
+      "id": "midday",
+      "emoji": "☀️",
+      "text": "Midday nudge: whether she has drunk water, and only what fits today: a meeting, plan or workout class coming up later, or something she said she had to do",
+      "cron": "30 12 * * *",
+      "reads": [
+        "data/core/calendar/calendar.md",
+        "data/core/state/now.md",
+        "data/core/state/open_loops.md"
+      ],
+      "set": "2026-11-07 10:54",
+      "ended": "2026-11-11"
     }
   ]
 }
