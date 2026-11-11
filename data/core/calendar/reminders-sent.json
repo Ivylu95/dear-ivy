@@ -578,6 +578,13 @@
       "utc": "2026-11-11T05:55:24.765Z",
       "held": true,
       "why": "already sent from her chat at 13:10"
+    },
+    {
+      "id": "food-dinner-1853",
+      "at": "2026-11-11 18:54",
+      "utc": "2026-11-11T10:54:47.925Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-11 18:53"
     }
   ]
 }
