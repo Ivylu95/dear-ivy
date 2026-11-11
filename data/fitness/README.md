@@ -21,6 +21,7 @@ is marked ended, never removed._
 ## Her preferences
 
 - 2026-11-11: workouts belong with her food day. Her words: *"Yes workout and calories should overlap"*. Each day's page shows any workout in her training log on its **Activity** line, and the food view names it; its calories are taken off only when she or a machine (watch, BFT app) gives a figure, never estimated.
+- 2026-11-11: calories burned are logged but kept apart from calories eaten, never subtracted. Her words: *"keep it separated from my calories consume which means that when you show me the [log], it should show calories consume and calories burn separately, but in the one [log] itself, you shouldn't minus the calories burn"* (voice-typed "lock" for "log"). So the day view shows eaten against her 1,200 budget, and burned on its own line; no net figure. This replaces the net-calories line for her.
 
 ## Usual meal times
 
