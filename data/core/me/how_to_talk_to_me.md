@@ -21,6 +21,7 @@ _Use her language, not clinical language. If she says "flat", don't write
 | bfk | Breakfast (named 2026-11-09: *"breakfat (bfk for short now)"*) |
 | HM matcha latte | Her homemade matcha latte, 150 kcal; one bought outside is a different drink (named 2026-11-12: *"HM matcha latte for shot in future"*) |
 | store bought, SB | SB is her short form (2026-11-12: *"SB for short"*). What she calls food or drink bought outside, as against homemade (HM). Voice typing wrote it as "starboard" once; her correction, 2026-11-12: *"Store bought I mean"* |
+| lock (voice slip) | "Log". Her voice typing writes "lock" for "log"; her correction, 2026-11-12: *"Log not lock"*. Read it as log without asking |
 |  |  |
 
 ## What lands badly
