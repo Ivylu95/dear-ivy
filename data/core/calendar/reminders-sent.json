@@ -26,10 +26,10 @@
       "lastUtc": "2026-11-10T12:56:41.247Z"
     },
     "no-snacks-after-10": {
-      "sent": 9,
+      "sent": 10,
       "first": "2026-11-07 20:56",
-      "last": "2026-11-11 20:57",
-      "lastUtc": "2026-11-11T12:57:02.867Z"
+      "last": "2026-11-11 22:54",
+      "lastUtc": "2026-11-11T14:54:45.969Z"
     },
     "nutrition-updates-2": {
       "sent": 1,
@@ -423,12 +423,6 @@
     },
     {
       "id": "no-snacks-after-10",
-      "at": "2026-11-09 21:57",
-      "utc": "2026-11-09T13:57:55.291Z",
-      "text": "Kitchen's closed for tonight\nIt's past 10 pm, so the snacking can stop here. Good work today, rest well 🌙"
-    },
-    {
-      "id": "no-snacks-after-10",
       "at": "2026-11-09 22:55",
       "utc": "2026-11-09T14:55:31.462Z",
       "claimed": "cc-routine",
@@ -666,6 +660,12 @@
       "at": "2026-11-11 22:11",
       "utc": "2026-11-11T14:11:27.762Z",
       "text": "Your week so far ⚖️\nMon to Wed · limit 1,200\n\n📅 Mon: ~680 in · out not logged · only breakfast logged\n📅 Tue: food not logged · BFT cardio 50 min\n📅 Wed: ~1,600 in · 285 out · balance ~1,315, over by ~115\n\n🏋️ Burn = lower end, kept apart\n🔁 Restarts Monday"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-11 22:54",
+      "utc": "2026-11-11T14:54:45.969Z",
+      "text": "Kitchen's closed now\nIt's nearly 11, so no more food tonight. Go easy and get some rest."
     }
   ]
 }
