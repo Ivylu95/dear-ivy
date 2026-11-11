@@ -132,6 +132,12 @@
       "first": "2026-11-11 18:55",
       "last": "2026-11-11 18:55",
       "lastUtc": "2026-11-11T10:55:21.302Z"
+    },
+    "poster-start": {
+      "sent": 1,
+      "first": "2026-11-11 19:55",
+      "last": "2026-11-11 19:55",
+      "lastUtc": "2026-11-11T11:55:52.005Z"
     }
   },
   "sent": [
@@ -604,6 +610,12 @@
       "utc": "2026-11-11T11:55:15.483Z",
       "claimed": "cc-routine",
       "due": "2026-11-11 19:00"
+    },
+    {
+      "id": "poster-start",
+      "at": "2026-11-11 19:55",
+      "utc": "2026-11-11T11:55:52.005Z",
+      "text": "Poster: just the layout tonight\n\nRough spots for the title, names and trees.\nPhotos come Friday."
     }
   ]
 }
