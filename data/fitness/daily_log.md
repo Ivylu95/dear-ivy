@@ -68,7 +68,7 @@ Rest 60 sec between sets. Stop any move that hurts the ankle. When 3 × 12 feels
 | 2026-11-09 (Mon) | STRONG Pilates at Orchard, 4:15–5:15 pm (from her calendar) | ~680 eaten, breakfast only logged → `data/fitness/days/2026-11-09.md` | not logged | not logged | Logged from her Google Calendar at her ask, 2026-11-11 |
 | 2026-11-11 (Wed) | Strength, Lower Body, 7:10–8:05 am (from her calendar) | ~1,600 eaten (limit 1,200) · 285 burned across both sessions (150 morning, 135 evening), kept apart → `data/fitness/days/2026-11-11.md` | not logged | not logged | Logged from her Google Calendar at her ask, 2026-11-11 |
 | 2026-11-11 (Wed, evening) | BFT lower body, 50 min (a second session today) | see the morning row | not logged | not logged | Her words: *"Another bft lower body workout evening 50 mins"* |
-| 2026-11-12 (Thu) | Cardio and strength at BFT, 50 min | ~270 eaten so far (limit 1,200) · 160 burned, kept apart → `data/fitness/days/2026-11-12.md` | not logged | not logged | Her words: *"Log my workout for the day 50 minutes cardio strength training at bft"* |
+| 2026-11-12 (Thu) | Cardio and strength at BFT, 50 min | ~220 eaten so far (limit 1,200) · 160 burned, kept apart → `data/fitness/days/2026-11-12.md` | not logged | not logged | Her words: *"Log my workout for the day 50 minutes cardio strength training at bft"* |
 
 ## Weekly summaries
 
