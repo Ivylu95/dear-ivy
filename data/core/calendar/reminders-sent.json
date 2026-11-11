@@ -156,6 +156,12 @@
       "first": "2026-11-11 22:11",
       "last": "2026-11-11 22:11",
       "lastUtc": "2026-11-11T14:11:27.762Z"
+    },
+    "week-cal-in-out": {
+      "sent": 1,
+      "first": "2026-11-11 23:54",
+      "last": "2026-11-11 23:54",
+      "lastUtc": "2026-11-11T15:54:58.848Z"
     }
   },
   "sent": [
@@ -666,6 +672,12 @@
       "at": "2026-11-11 22:54",
       "utc": "2026-11-11T14:54:45.969Z",
       "text": "Kitchen's closed now\nIt's nearly 11, so no more food tonight. Go easy and get some rest."
+    },
+    {
+      "id": "week-cal-in-out",
+      "at": "2026-11-11 23:54",
+      "utc": "2026-11-11T15:54:58.848Z",
+      "text": "Your week so far, Mon to Wed\n\nMon: in ~680 (only bfk logged) · out not logged · 520 under 1,200\n\nTue: no food logged · out not logged\n\nWed: in ~1,600 · out 285 · balance ~1,315, 115 over 1,200\n\n~ some of this is estimated"
     }
   ]
 }
