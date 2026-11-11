@@ -205,13 +205,6 @@
       "due": "2026-11-07 20:53"
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-07 20:55",
-      "utc": "2026-11-07T12:55:51.418Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-07 20:00"
-    },
-    {
       "id": "nutrition-updates-2",
       "at": "2026-11-07 20:55",
       "utc": "2026-11-07T12:55:51.532Z",
@@ -223,12 +216,6 @@
       "at": "2026-11-07 20:56",
       "utc": "2026-11-07T12:56:06.051Z",
       "text": "Workout check 🏋️\nNice 4 km run this morning 👏\n\nAnything else you did today?\n• Sets and reps, if you have them\n• A walk or your ankle routine counts too"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-07 20:56",
-      "utc": "2026-11-07T12:56:07.401Z",
-      "text": "Kitchen closes at 10\nAnything you still want tonight, have it soon. After 10 pm the kitchen is closed 🌙"
     },
     {
       "id": "nutrition-updates-2",
@@ -255,19 +242,6 @@
       "at": "2026-11-07 21:54",
       "utc": "2026-11-07T13:54:52.280Z",
       "text": "Time for bed soon 🌙\nYour antidepressant is waiting for you tonight. Hope the evening was kind."
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-07 22:54",
-      "utc": "2026-11-07T14:54:36.813Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-07 22:00"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-07 22:54",
-      "utc": "2026-11-07T14:54:49.452Z",
-      "text": "Kitchen's closed for tonight\nIt's 10 pm now, so the snacking can stop here. You did the day well, rest up 🌙"
     },
     {
       "id": "workout-catchup-0853",
@@ -356,23 +330,10 @@
       "due": "2026-11-08 20:53"
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-08 20:54",
-      "utc": "2026-11-08T12:54:07.217Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-08 20:00"
-    },
-    {
       "id": "workout-ask-2053",
       "at": "2026-11-08 20:54",
       "utc": "2026-11-08T12:54:22.542Z",
       "text": "Workout check\nHope Sunday was kind to you ☀️\n\nDid you move today?\n• A walk, a stretch or your ankle routine counts\n• Sets and reps, if you have them"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-08 20:54",
-      "utc": "2026-11-08T12:54:23.839Z",
-      "text": "Evening snack window\nAnything you still fancy tonight, enjoy it in the next hour or so. The kitchen closes at 10 🌙"
     },
     {
       "id": "evening-antidepressant-2153",
@@ -399,19 +360,6 @@
       "at": "2026-11-08 21:54",
       "utc": "2026-11-08T13:54:56.229Z",
       "text": "Your week of workouts – strong start 💪\n\n• Mon: BFT (CrossFit)\n• Tue: BFT (CrossFit)\n• Wed: 5 km run\n• Thu: Spin\n• Fri: Pilates\n• Sat: 4 km run outdoors\n• Sun: nothing logged yet\n\nSix days in a row. Rest well tonight."
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-08 22:54",
-      "utc": "2026-11-08T14:54:18.777Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-08 22:00"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-08 22:54",
-      "utc": "2026-11-08T14:54:40.399Z",
-      "text": "Kitchen's closed now\nIt's 10 pm, so that's it for eating tonight. Brush your teeth and wind down 🌙"
     },
     {
       "id": "workout-catchup-0853",
@@ -447,13 +395,6 @@
       "due": "2026-11-09 20:53"
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-09 20:56",
-      "utc": "2026-11-09T12:56:53.457Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-09 20:00"
-    },
-    {
       "id": "evening-antidepressant-2153",
       "at": "2026-11-09 21:57",
       "utc": "2026-11-09T13:57:39.824Z",
@@ -468,13 +409,6 @@
       "due": "2026-11-09 20:53"
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-09 21:57",
-      "utc": "2026-11-09T13:57:40.036Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-09 20:00"
-    },
-    {
       "id": "evening-antidepressant-2153",
       "at": "2026-11-09 21:57",
       "utc": "2026-11-09T13:57:52.856Z",
@@ -485,12 +419,6 @@
       "at": "2026-11-09 21:57",
       "utc": "2026-11-09T13:57:53.962Z",
       "text": "Workout check 🏋️\nMonday's nearly done.\n\nDid you move today?\n• A walk or your ankle routine counts\n• Sets and reps, if you have them"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-09 21:57",
-      "utc": "2026-11-09T13:57:55.291Z",
-      "text": "Kitchen's closed for tonight\nIt's past 10 pm, so the snacking can stop here. Good work today, rest well 🌙"
     },
     {
       "id": "no-snacks-after-10",
@@ -757,6 +685,13 @@
       "at": "2026-11-11 23:54",
       "utc": "2026-11-11T15:54:58.848Z",
       "text": "Your week so far, Mon to Wed\n\nMon: in ~680 (only bfk logged) · out not logged · 520 under 1,200\n\nTue: no food logged · out not logged\n\nWed: in ~1,600 · out 285 · balance ~1,315, 115 over 1,200\n\n~ some of this is estimated"
+    },
+    {
+      "id": "food-breakfast-0753",
+      "at": "2026-11-12 07:59",
+      "utc": "2026-11-11T23:59:36.404Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-12 07:53"
     }
   ]
 }
