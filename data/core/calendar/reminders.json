@@ -269,6 +269,13 @@
       "text": "Tidy OT hours document: finish before the day ends",
       "at": "2026-11-14 17:53",
       "set": "2026-11-12 05:31"
+    },
+    {
+      "id": "ot-doc-sun",
+      "emoji": "⏱️",
+      "text": "Tidy OT hours document: last chance, finish tonight",
+      "at": "2026-11-15 18:53",
+      "set": "2026-11-12 05:35"
     }
   ]
 }
