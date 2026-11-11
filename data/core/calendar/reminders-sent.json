@@ -526,6 +526,20 @@
       "at": "2026-11-11 08:39",
       "utc": "2026-11-11T00:39:27.353Z",
       "text": "New concert plan\n🖌️ Today 7pm: plan poster layout\n\n🖨️ Thu 1pm: print names + title, trees + leaves\n\n🎞️ Thu 7pm: montage, most done\n\n📸 Fri 9am: costume photos\n\n🏁 Fri 1pm: print photos, finish montage\n\n✂️ Mon 1pm: montage last day, cut + stick\n\n✅ Mon 7pm: poster last touches\n\n⏰ Tue 7pm: poster due tomorrow"
+    },
+    {
+      "id": "workout-catchup-0853",
+      "at": "2026-11-11 08:54",
+      "utc": "2026-11-11T00:54:39.339Z",
+      "held": true,
+      "why": "yesterday's workout already logged"
+    },
+    {
+      "id": "concert-plan-summary-2",
+      "at": "2026-11-11 08:54",
+      "utc": "2026-11-11T00:54:39.439Z",
+      "held": true,
+      "why": "already sent at 08:39"
     }
   ]
 }

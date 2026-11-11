@@ -92,6 +92,13 @@
       "at": "2026-11-10 16:54",
       "utc": "2026-11-10T08:54:19.482Z",
       "text": "Afternoon water top-up\nTuesday's still clear, so there's a quiet stretch to get some water in 🌤️\n\nWhat's your glass count since lunch?"
+    },
+    {
+      "id": "morning-update-2",
+      "at": "2026-11-11 08:55",
+      "utc": "2026-11-11T00:55:37.770Z",
+      "held": true,
+      "why": "a hard day"
     }
   ]
 }
