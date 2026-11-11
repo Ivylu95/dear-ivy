@@ -24,6 +24,7 @@ is marked ended, never removed._
 - 2026-11-11: calories burned are logged but kept apart from calories eaten, never subtracted. Her words: *"keep it separated from my calories consume which means that when you show me the [log], it should show calories consume and calories burn separately, but in the one [log] itself, you shouldn't minus the calories burn"* (voice-typed "lock" for "log"). So the day view shows eaten against her 1,200 budget, and burned on its own line; no net figure. This replaces the net-calories line for her.
 - 2026-11-11: *"Always log the lower end of the calories burned for workouts and the higher end for calories consumed for food."* Lower end for burns: kept, used when no watch or app figure. Higher end for food: not taken up; I said once that food stays at my best estimate, because rounding every item up would make each day read fuller than it was. Her own figures for an item always win.
 - 2026-11-11: the day table keeps rows for In and Out, and adds a third for the balance (in minus out). Her words: *"Love the table but could you also add another row to show the balance?"* Her 1,200 limit is still measured against In only.
+- 2026-11-11, later: the balance row is also set against her 1,200 (balance minus 1,200, as over or under), while the In row keeps its own comparison. Her words, on seeing it: *"This is it! Thank you!"*
 
 ## Usual meal times
 
