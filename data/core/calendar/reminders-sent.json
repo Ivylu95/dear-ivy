@@ -403,13 +403,6 @@
       "due": "2026-11-09 20:53"
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-09 21:57",
-      "utc": "2026-11-09T13:57:40.036Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-09 20:00"
-    },
-    {
       "id": "evening-antidepressant-2153",
       "at": "2026-11-09 21:57",
       "utc": "2026-11-09T13:57:52.856Z",
@@ -666,6 +659,13 @@
       "at": "2026-11-11 22:11",
       "utc": "2026-11-11T14:11:27.762Z",
       "text": "Your week so far ⚖️\nMon to Wed · limit 1,200\n\n📅 Mon: ~680 in · out not logged · only breakfast logged\n📅 Tue: food not logged · BFT cardio 50 min\n📅 Wed: ~1,600 in · 285 out · balance ~1,315, over by ~115\n\n🏋️ Burn = lower end, kept apart\n🔁 Restarts Monday"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-11 22:54",
+      "utc": "2026-11-11T14:54:29.864Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-11 22:00"
     }
   ]
 }
