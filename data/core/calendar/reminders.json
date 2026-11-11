@@ -150,66 +150,10 @@
       "set": "2026-11-11 07:10"
     },
     {
-      "id": "poster-print-names",
-      "emoji": "🖨️",
-      "text": "Poster: print names + title",
-      "at": "2026-11-12 09:00",
-      "set": "2026-11-11 07:10"
-    },
-    {
-      "id": "montage-work",
-      "emoji": "🎬",
-      "text": "Montage: get most done",
-      "at": "2026-11-12 13:00",
-      "set": "2026-11-11 07:10"
-    },
-    {
-      "id": "poster-print-trees",
-      "emoji": "🌳",
-      "text": "Poster: print trees + leaves",
-      "at": "2026-11-12 16:00",
-      "set": "2026-11-11 07:10"
-    },
-    {
       "id": "poster-photos",
       "emoji": "📸",
       "text": "Poster: costume photos",
       "at": "2026-11-13 09:00",
-      "set": "2026-11-11 07:10"
-    },
-    {
-      "id": "montage-finish",
-      "emoji": "🎬",
-      "text": "Montage: finish today",
-      "at": "2026-11-13 13:00",
-      "set": "2026-11-11 07:10"
-    },
-    {
-      "id": "poster-print-photos",
-      "emoji": "🖨️",
-      "text": "Poster: print photos",
-      "at": "2026-11-13 16:00",
-      "set": "2026-11-11 07:10"
-    },
-    {
-      "id": "montage-due",
-      "emoji": "⏰",
-      "text": "Montage: last day, finish it",
-      "at": "2026-11-16 09:00",
-      "set": "2026-11-11 07:10"
-    },
-    {
-      "id": "poster-assemble",
-      "emoji": "✂️",
-      "text": "Poster: cut + stick",
-      "at": "2026-11-16 14:00",
-      "set": "2026-11-11 07:10"
-    },
-    {
-      "id": "poster-finish",
-      "emoji": "✅",
-      "text": "Poster: last touches, done tonight",
-      "at": "2026-11-16 18:00",
       "set": "2026-11-11 07:10"
     },
     {
@@ -225,6 +169,48 @@
       "text": "Her concert poster and montage plan, as short points",
       "at": "2026-11-11 07:05",
       "set": "2026-11-11 07:05"
+    },
+    {
+      "id": "lunch-thu12",
+      "emoji": "🖨️",
+      "text": "Lunch work: print poster names + title, then trees + leaves",
+      "at": "2026-11-12 13:00",
+      "set": "2026-11-11 08:40"
+    },
+    {
+      "id": "montage-thu12-eve",
+      "emoji": "🎞️",
+      "text": "Montage: get most done",
+      "at": "2026-11-12 19:00",
+      "set": "2026-11-11 08:40"
+    },
+    {
+      "id": "lunch-fri13",
+      "emoji": "🏁",
+      "text": "Lunch work: print photos, then finish montage",
+      "at": "2026-11-13 13:00",
+      "set": "2026-11-11 08:40"
+    },
+    {
+      "id": "lunch-mon16",
+      "emoji": "✂️",
+      "text": "Lunch work: montage last day, then poster cut + stick",
+      "at": "2026-11-16 13:00",
+      "set": "2026-11-11 08:40"
+    },
+    {
+      "id": "poster-finish-2",
+      "emoji": "✅",
+      "text": "Poster: last touches, done tonight",
+      "at": "2026-11-16 19:00",
+      "set": "2026-11-11 08:40"
+    },
+    {
+      "id": "concert-plan-summary-2",
+      "emoji": "🗓️",
+      "text": "Her updated concert poster and montage plan, as short points",
+      "at": "2026-11-11 08:40",
+      "set": "2026-11-11 08:40"
     }
   ]
 }

@@ -108,6 +108,12 @@
       "first": "2026-11-11 07:06",
       "last": "2026-11-11 07:06",
       "lastUtc": "2026-11-10T23:06:04.769Z"
+    },
+    "concert-plan-summary-2": {
+      "sent": 1,
+      "first": "2026-11-11 08:39",
+      "last": "2026-11-11 08:39",
+      "lastUtc": "2026-11-11T00:39:27.353Z"
     }
   },
   "sent": [
@@ -514,6 +520,12 @@
       "at": "2026-11-11 07:06",
       "utc": "2026-11-10T23:06:04.769Z",
       "text": "Concert plan\n🎨 Poster\n\n🖌️ Today 7pm: plan layout\n\n🖨️ Thu 9am: print names + title\n\n🌳 Thu 4pm: print trees + leaves\n\n📸 Fri 9am: costume photos\n\n🖨️ Fri 4pm: print photos\n\n✂️ Mon 2pm: cut + stick\n\n✅ Mon 6pm: last touches\n\n⏰ Tue 7pm: due tomorrow\n\n🎬 Montage\n\n🎞️ Thu 1pm: get most done\n\n🏁 Fri 1pm: finish\n\n⏰ Mon 9am: last day"
+    },
+    {
+      "id": "concert-plan-summary-2",
+      "at": "2026-11-11 08:39",
+      "utc": "2026-11-11T00:39:27.353Z",
+      "text": "New concert plan\n🖌️ Today 7pm: plan poster layout\n\n🖨️ Thu 1pm: print names + title, trees + leaves\n\n🎞️ Thu 7pm: montage, most done\n\n📸 Fri 9am: costume photos\n\n🏁 Fri 1pm: print photos, finish montage\n\n✂️ Mon 1pm: montage last day, cut + stick\n\n✅ Mon 7pm: poster last touches\n\n⏰ Tue 7pm: poster due tomorrow"
     }
   ]
 }

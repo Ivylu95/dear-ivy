@@ -176,6 +176,70 @@
       "text": "LP nudge: do your lesson plan after CrossFit, before your meet-up",
       "at": "2026-11-08 10:45",
       "set": "2026-11-08 08:46"
+    },
+    {
+      "id": "poster-print-names",
+      "emoji": "🖨️",
+      "text": "Poster: print names + title",
+      "at": "2026-11-12 09:00",
+      "set": "2026-11-11 07:10",
+      "ended": "2026-11-11"
+    },
+    {
+      "id": "montage-work",
+      "emoji": "🎬",
+      "text": "Montage: get most done",
+      "at": "2026-11-12 13:00",
+      "set": "2026-11-11 07:10",
+      "ended": "2026-11-11"
+    },
+    {
+      "id": "poster-print-trees",
+      "emoji": "🌳",
+      "text": "Poster: print trees + leaves",
+      "at": "2026-11-12 16:00",
+      "set": "2026-11-11 07:10",
+      "ended": "2026-11-11"
+    },
+    {
+      "id": "montage-finish",
+      "emoji": "🎬",
+      "text": "Montage: finish today",
+      "at": "2026-11-13 13:00",
+      "set": "2026-11-11 07:10",
+      "ended": "2026-11-11"
+    },
+    {
+      "id": "poster-print-photos",
+      "emoji": "🖨️",
+      "text": "Poster: print photos",
+      "at": "2026-11-13 16:00",
+      "set": "2026-11-11 07:10",
+      "ended": "2026-11-11"
+    },
+    {
+      "id": "montage-due",
+      "emoji": "⏰",
+      "text": "Montage: last day, finish it",
+      "at": "2026-11-16 09:00",
+      "set": "2026-11-11 07:10",
+      "ended": "2026-11-11"
+    },
+    {
+      "id": "poster-assemble",
+      "emoji": "✂️",
+      "text": "Poster: cut + stick",
+      "at": "2026-11-16 14:00",
+      "set": "2026-11-11 07:10",
+      "ended": "2026-11-11"
+    },
+    {
+      "id": "poster-finish",
+      "emoji": "✅",
+      "text": "Poster: last touches, done tonight",
+      "at": "2026-11-16 18:00",
+      "set": "2026-11-11 07:10",
+      "ended": "2026-11-11"
     }
   ]
 }
