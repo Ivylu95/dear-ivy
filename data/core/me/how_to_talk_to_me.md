@@ -20,6 +20,7 @@ _Use her language, not clinical language. If she says "flat", don't write
 | log, log table | Her HCI table (2026-11-11: *"Yes that's the log table ty"*), after asking *"What's hci"*: she may not remember the short form, so say "your log (HCI)" |
 | bfk | Breakfast (named 2026-11-09: *"breakfat (bfk for short now)"*) |
 | HM matcha latte | Her homemade matcha latte, 150 kcal; one bought outside is a different drink (named 2026-11-12: *"HM matcha latte for shot in future"*) |
+| store bought | What she calls food or drink bought outside, as against homemade (HM). Voice typing wrote it as "starboard" once; her correction, 2026-11-12: *"Store bought I mean"* |
 |  |  |
 
 ## What lands badly
