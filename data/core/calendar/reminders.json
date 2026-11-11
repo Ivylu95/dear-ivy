@@ -210,6 +210,13 @@
         "data/core/calendar/google.json"
       ],
       "set": "2026-11-11 12:00"
+    },
+    {
+      "id": "log-now-nov11",
+      "emoji": "📋",
+      "text": "Sent at her ask, now: her reminder list, calories eaten and workouts done this week",
+      "at": "2026-11-11 13:12",
+      "set": "2026-11-11 13:12"
     }
   ]
 }
