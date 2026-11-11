@@ -607,6 +607,13 @@
     {
       "id": "poster-start",
       "at": "2026-11-11 19:55",
+      "utc": "2026-11-11T11:55:15.483Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-11 19:00"
+    },
+    {
+      "id": "poster-start",
+      "at": "2026-11-11 19:55",
       "utc": "2026-11-11T11:55:52.005Z",
       "text": "Poster: just the layout tonight\n\nRough spots for the title, names and trees.\nPhotos come Friday."
     }
