@@ -17,6 +17,7 @@ _Use her language, not clinical language. If she says "flat", don't write
 | Luna | Her name for the Telegram bot that sends her reminders and check-ins (named 2026-11-07; her words: *"I have named the take bot Luna"*) |
 | LP | Lesson plan, for her preschool class (named 2026-11-08: *"Lesson plan (LP) nudge"*) |
 | MLK | My Little Kingdom preschool, her workplace (named 2026-11-11) |
+| log, log table | Her HCI table (2026-11-11: *"Yes that's the log table ty"*), after asking *"What's hci"*: she may not remember the short form, so say "your log (HCI)" |
 | bfk | Breakfast (named 2026-11-09: *"breakfat (bfk for short now)"*) |
 |  |  |
 
