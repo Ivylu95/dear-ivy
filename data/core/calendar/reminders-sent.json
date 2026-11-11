@@ -126,6 +126,12 @@
       "first": "2026-11-11 13:10",
       "last": "2026-11-11 13:10",
       "lastUtc": "2026-11-11T05:10:39.496Z"
+    },
+    "food-dinner-1853": {
+      "sent": 1,
+      "first": "2026-11-11 18:55",
+      "last": "2026-11-11 18:55",
+      "lastUtc": "2026-11-11T10:55:21.302Z"
     }
   },
   "sent": [
@@ -578,6 +584,12 @@
       "utc": "2026-11-11T05:55:24.765Z",
       "held": true,
       "why": "already sent from her chat at 13:10"
+    },
+    {
+      "id": "food-dinner-1853",
+      "at": "2026-11-11 18:55",
+      "utc": "2026-11-11T10:55:21.302Z",
+      "text": "Dinner time, when you're ready\n\nToday so far:\n██████████ 124% · ~1,485 of 1,200 kcal eaten\nBurned: 150 kcal at BFT\n~ some of today is estimated\n\nIf you're hungry, something light and warm, like a clear soup with fish or tofu and greens. Log it when you can, no rush."
     }
   ]
 }
