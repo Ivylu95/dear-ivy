@@ -114,6 +114,12 @@
       "first": "2026-11-11 08:39",
       "last": "2026-11-11 08:39",
       "lastUtc": "2026-11-11T00:39:27.353Z"
+    },
+    "food-lunch-1253": {
+      "sent": 1,
+      "first": "2026-11-11 12:59",
+      "last": "2026-11-11 12:59",
+      "lastUtc": "2026-11-11T04:59:05.706Z"
     }
   },
   "sent": [
@@ -540,6 +546,12 @@
       "utc": "2026-11-11T00:54:39.439Z",
       "held": true,
       "why": "already sent at 08:39"
+    },
+    {
+      "id": "food-lunch-1253",
+      "at": "2026-11-11 12:59",
+      "utc": "2026-11-11T04:59:05.706Z",
+      "text": "Lunch is logged already\n\n▰▰▰▰▰▰▰▱▱▱ 70% of 1,200 kcal\nEaten ~835, no exercise figure\n~365 kcal room\n\nDinner: some fish or chicken with greens fits well.\n\n~ some of today is estimated"
     }
   ]
 }
