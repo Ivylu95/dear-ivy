@@ -597,6 +597,13 @@
       "at": "2026-11-11 18:55",
       "utc": "2026-11-11T10:55:21.302Z",
       "text": "Dinner time, when you're ready\n\nToday so far:\n██████████ 124% · ~1,485 of 1,200 kcal eaten\nBurned: 150 kcal at BFT\n~ some of today is estimated\n\nIf you're hungry, something light and warm, like a clear soup with fish or tofu and greens. Log it when you can, no rush."
+    },
+    {
+      "id": "poster-start",
+      "at": "2026-11-11 19:55",
+      "utc": "2026-11-11T11:55:15.483Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-11 19:00"
     }
   ]
 }
