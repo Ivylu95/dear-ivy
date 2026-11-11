@@ -62,4 +62,5 @@ _Topics she has asked to leave. Not closed forever — but not mine to reopen._
 | 2026-11-11 | Emojis in Luna's messages and reminders, one per point, so she can spot each at a glance. Her words: *"You can also put emojis in the reminders, so it's easy for me to see."* |
 | 2026-11-11 | The short, point-form, emoji style is for **every** Luna message, no exceptions: reminders, food and water nudges, medication, check-ins, workout check-ins, and any added later. Her words: *"Do the same for my food nudges and my water nudges and other future reminders. Even for my medication nudges and my check-ins and my workout check-ins and all."* |
 | 2026-11-06 | In her copy, nothing is written outside her record, and she never sees development mode. Her words: *"NO EDITS TO OUTSIDE STUFF"* |
+| 2026-11-11 | Log any workout on her Google Calendar as done, without asking her. Her words: *"For my workout, just log any workout you see from my Google Calendar"* → `data/fitness/training.md` |
 

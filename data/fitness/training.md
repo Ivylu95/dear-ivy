@@ -48,8 +48,12 @@ her words, blank when not said._
 - 2026-11-07 · Correction (her words: *"Sorry let me try again mon to sat in order"*): Mon 2 BFT (CrossFit) · Tue 3 BFT · Wed 4 5 km run · Thu 5 spin · Fri 6 Pilates · Sat 7 4 km run outdoors, this morning. The Mon–Fri line above is superseded by this one
 - 2026-11-07 · Left ankle after the week's two runs, her words: *"Ankle is alright"*
 - 2026-11-10 (Tue, told 8:27 am) · Cardio workout at BFT, 50 min. Her words: *"Did cardio workout at bft today, 50 mins"*
+- 2026-11-09 (Mon) · STRONG Pilates at Orchard, 4:15 to 5:15 pm. From her Google Calendar, logged at her ask (2026-11-11); she has not said how it went
+- 2026-11-11 (Wed) · Strength, Lower Body, 7:10 to 8:05 am, at West Coast Rd. From her Google Calendar, logged at her ask (2026-11-11)
 
 ## Worth keeping in view
+
+- **From her calendar (2026-11-11):** her words: *"For my workout, just log any workout you see from my Google Calendar"*. Any workout on her Google Calendar is logged as done, marked "from her calendar". Read in her chats, never by a run with no one present (A-121).
 
 -
 

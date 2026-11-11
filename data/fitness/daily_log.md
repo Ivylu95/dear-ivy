@@ -65,6 +65,8 @@ Rest 60 sec between sets. Stop any move that hurts the ankle. When 3 × 12 feels
 | 2026-11-07 (Sat) | 4 km run outdoors, in the morning | not logged | not logged | not logged | Her words (told 2026-11-07): *"mon to sat in order Bft, bft, 5km run, spin, pilates, 4km run"* |
 | 2026-11-07 · correction | The row above marked *day not yet known* is this Saturday's 4 km run; her earlier Mon–Fri list was Mon–Sat (her correction, 2026-11-07) | | | | |
 | 2026-11-10 (Tue) | Cardio at BFT, 50 min | not logged | not logged | not logged | Her words: *"Did cardio workout at bft today, 50 mins"* |
+| 2026-11-09 (Mon) | STRONG Pilates at Orchard, 4:15–5:15 pm (from her calendar) | not logged | not logged | not logged | Logged from her Google Calendar at her ask, 2026-11-11 |
+| 2026-11-11 (Wed) | Strength, Lower Body, 7:10–8:05 am (from her calendar) | not logged | not logged | not logged | Logged from her Google Calendar at her ask, 2026-11-11 |
 
 ## Weekly summaries
 
@@ -75,4 +77,4 @@ Rest 60 sec between sets. Stop any move that hurts the ankle. When 3 × 12 feels
 | 2026-10-19 – 2026-10-25 | not logged | not logged | not logged | – | Not logged here (chatted about dating in other sessions) | – | No HCI entries this week. Haze cleared 2026-10-23 |
 | 2026-10-26 – 2026-11-01 | not logged | not logged | not logged | – | Not logged here. Asked about freezing on tasks and getting sidetracked (2026-10-29) | – | Second week with no HCI entries |
 | 2026-11-02 – 2026-11-08 | 6 of 6 known days, Mon–Sat: Mon BFT · Tue BFT · Wed 5 km run · Thu spin · Fri Pilates · Sat 4 km run. Sun: not yet known | not logged | not logged | – | not logged | – | Up from 0 days logged the week before. First full week of workouts since the ankle plan; ankle *"alright"* after two runs (2026-11-07). Built Sunday evening |
-| 2026-11-09 – 2026-11-15 (in progress) | 1 logged so far: Tue BFT cardio, 50 min. Mon: not yet known | not logged | not logged | – | not logged | – | Week still open |
+| 2026-11-09 – 2026-11-15 (in progress) | 3 so far: Mon STRONG Pilates (calendar) · Tue BFT cardio, 50 min · Wed Strength, Lower Body (calendar) | not logged | not logged | – | not logged | – | Week still open |
