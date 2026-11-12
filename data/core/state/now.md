@@ -34,3 +34,4 @@ Thinking hard about the guy she's dating. Calm, practical, wants a plan.
 Check-in afternoon (2026-11-10 16:54): What's your glass count since lunch?
 Check-in morning-update-2 (2026-11-12 08:02): How did you sleep, and how's your body after Shred this morning?
 Check-in midday (2026-11-10 12:55): How many glasses have you got in since you woke up?
+Check-in midday-1153 (2026-11-12 11:54): How many glasses have you had since Shred?
