@@ -833,6 +833,13 @@
       "at": "2026-11-12 23:55",
       "utc": "2026-11-12T15:55:07.681Z",
       "text": "Week so far, Mon to Thu\n\nMon: in ~680 (bfk only) · out not logged · 520 under 1,200\nTue: no food logged · out not logged\nWed: in ~1,600 · out 285 · balance ~1,315, 115 over 1,200\nThu: in ~2,290 · out 160 · balance ~2,130, ~930 over 1,200\n\n~ some of this is estimated"
+    },
+    {
+      "id": "food-breakfast-0753",
+      "at": "2026-11-13 07:55",
+      "utc": "2026-11-12T23:55:20.658Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-13 07:53"
     }
   ]
 }
