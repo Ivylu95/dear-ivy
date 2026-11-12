@@ -26,10 +26,10 @@
       "lastUtc": "2026-11-10T12:56:41.247Z"
     },
     "no-snacks-after-10": {
-      "sent": 10,
+      "sent": 11,
       "first": "2026-11-07 20:56",
-      "last": "2026-11-11 22:54",
-      "lastUtc": "2026-11-11T14:54:45.969Z"
+      "last": "2026-11-12 20:56",
+      "lastUtc": "2026-11-12T12:56:38.325Z"
     },
     "nutrition-updates-2": {
       "sent": 1,
@@ -140,16 +140,16 @@
       "lastUtc": "2026-11-11T11:55:52.005Z"
     },
     "antidepressant-2053": {
-      "sent": 1,
+      "sent": 2,
       "first": "2026-11-11 20:57",
-      "last": "2026-11-11 20:57",
-      "lastUtc": "2026-11-11T12:57:04.178Z"
+      "last": "2026-11-12 20:56",
+      "lastUtc": "2026-11-12T12:56:39.409Z"
     },
     "workout-ask-cal": {
-      "sent": 1,
+      "sent": 2,
       "first": "2026-11-11 20:57",
-      "last": "2026-11-11 20:57",
-      "lastUtc": "2026-11-11T12:57:05.289Z"
+      "last": "2026-11-12 20:56",
+      "lastUtc": "2026-11-12T12:56:45.193Z"
     },
     "week-cal-now-nov11": {
       "sent": 1,
@@ -450,12 +450,6 @@
       "utc": "2026-11-09T14:55:31.462Z",
       "claimed": "cc-routine",
       "due": "2026-11-09 22:00"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-09 22:55",
-      "utc": "2026-11-09T14:55:43.464Z",
-      "text": "Kitchen's closed for the night\nIt's 10 pm, so that's the last of the eating today. Lights down soon, and sleep well 🌙"
     },
     {
       "id": "workout-catchup-0853",
@@ -794,6 +788,24 @@
       "at": "2026-11-12 19:55",
       "utc": "2026-11-12T11:55:37.209Z",
       "text": "Montage time tonight\n\n🎬 Aim to get most of it done now\n🖨️ Fri lunch: print photos, then finish it\n\nOne clip at a time. You've got this."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-12 20:56",
+      "utc": "2026-11-12T12:56:38.325Z",
+      "text": "Last call for snacks\nAbout an hour till 10, when the kitchen closes.\n\n🍎 Want something tonight? Grab it now, then you're done."
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-12 20:56",
+      "utc": "2026-11-12T12:56:39.409Z",
+      "text": "Meds before sleep\nPop them by the bed so they're the last thing tonight."
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-12 20:56",
+      "utc": "2026-11-12T12:56:45.193Z",
+      "text": "Today's training\n💪 Shred at 6 this morning – on the calendar, counted as done.\n\nDid you fit in anything else since? Sets and reps if you have them, or even a walk."
     }
   ]
 }
