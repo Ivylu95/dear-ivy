@@ -753,6 +753,13 @@
     {
       "id": "lunch-thu12",
       "at": "2026-11-12 13:54",
+      "utc": "2026-11-12T05:54:28.753Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-12 13:00"
+    },
+    {
+      "id": "lunch-thu12",
+      "at": "2026-11-12 13:54",
       "utc": "2026-11-12T05:54:57.155Z",
       "text": "Lunch break: poster work\n\n- Print the names + title first\n- Then the trees + leaves"
     }
