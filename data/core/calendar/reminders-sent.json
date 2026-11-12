@@ -180,6 +180,12 @@
       "first": "2026-11-12 13:54",
       "last": "2026-11-12 13:54",
       "lastUtc": "2026-11-12T05:54:57.155Z"
+    },
+    "montage-thu12-eve": {
+      "sent": 1,
+      "first": "2026-11-12 19:55",
+      "last": "2026-11-12 19:55",
+      "lastUtc": "2026-11-12T11:55:37.209Z"
     }
   },
   "sent": [
@@ -775,6 +781,12 @@
       "at": "2026-11-12 18:55",
       "utc": "2026-11-12T10:55:00.182Z",
       "text": "Dinner's coming up, around 7\nBFT done today 💪\n\n🍽️ Eaten: ~1,485 of 1,200 kcal (124%)\n🔥 Burned: 160 kcal at BFT\n⚖️ Balance: ~1,325, about 125 over\n~ some of today is estimated\n\nIf you're hungry, keep it small and warm, like steamed greens with a little tofu or fish. Log it when you can."
+    },
+    {
+      "id": "montage-thu12-eve",
+      "at": "2026-11-12 19:55",
+      "utc": "2026-11-12T11:55:37.209Z",
+      "text": "Montage time tonight\n\n🎬 Aim to get most of it done now\n🖨️ Fri lunch: print photos, then finish it\n\nOne clip at a time. You've got this."
     }
   ]
 }
