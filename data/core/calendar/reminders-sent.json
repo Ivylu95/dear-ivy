@@ -711,6 +711,20 @@
       "utc": "2026-11-12T00:54:38.562Z",
       "held": true,
       "why": "yesterday's workout already logged"
+    },
+    {
+      "id": "cancel-classpass",
+      "at": "2026-11-12 12:55",
+      "utc": "2026-11-12T04:55:24.302Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-12 12:30"
+    },
+    {
+      "id": "food-lunch-1253",
+      "at": "2026-11-12 12:55",
+      "utc": "2026-11-12T04:55:24.390Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-12 12:53"
     }
   ]
 }
