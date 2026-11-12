@@ -14,10 +14,10 @@
       "lastUtc": "2026-11-10T04:55:01.871Z"
     },
     "afternoon": {
-      "sent": 4,
+      "sent": 5,
       "first": "2026-11-07 16:54",
-      "last": "2026-11-10 16:54",
-      "lastUtc": "2026-11-10T08:54:19.482Z"
+      "last": "2026-11-12 16:56",
+      "lastUtc": "2026-11-12T08:56:01.882Z"
     },
     "midday-1153": {
       "sent": 1,
@@ -131,6 +131,12 @@
       "at": "2026-11-12 11:54",
       "utc": "2026-11-12T03:54:40.392Z",
       "text": "Midday water check\n\n💧 Shred was at 6 this morning, so a top-up helps\n🖨️ Poster printing at lunch, montage tonight\n\nHow many glasses have you had since Shred?"
+    },
+    {
+      "id": "afternoon",
+      "at": "2026-11-12 16:56",
+      "utc": "2026-11-12T08:56:01.882Z",
+      "text": "Afternoon water top-up\n\nClassPass: today is the day to cancel, if it isn't done yet\nMontage push tonight\n\nCan you get a glass of water in before you sit down to the montage?"
     }
   ]
 }
