@@ -2,10 +2,10 @@
   "_what": "The last messages the sweep wrote for each check-in, so the next differs, how many Telegram accepted, and any held (HBT-010, HBT-014).",
   "counts": {
     "morning-update-2": {
-      "sent": 4,
+      "sent": 5,
       "first": "2026-11-07 08:54",
-      "last": "2026-11-10 08:54",
-      "lastUtc": "2026-11-10T00:54:32.198Z"
+      "last": "2026-11-12 08:02",
+      "lastUtc": "2026-11-12T00:02:18.158Z"
     },
     "midday": {
       "sent": 4,
@@ -113,6 +113,12 @@
       "utc": "2026-11-11T08:54:37.948Z",
       "held": true,
       "why": "a hard day"
+    },
+    {
+      "id": "morning-update-2",
+      "at": "2026-11-12 08:02",
+      "utc": "2026-11-12T00:02:18.158Z",
+      "text": "Good morning, Thursday 12 Nov\n\n📅 Today: cancel ClassPass before Sat's trial end (9 if not)\n🖨️ Lunch: print poster names and title, then trees and leaves\n🎞️ Tonight: montage push, aim to get most done\n💆 Tomorrow, Fri 13: facial at 6pm in Clementi, nudge at 5pm\n⏱️ Sat 14: OT hours doc due by end of day\n\nReminders still to come:\n• Today 12:30pm: ClassPass\n• Today 1pm and 7pm: poster, then montage\n• Fri 9am: poster costume photos\n• Fri 1pm: print photos, finish montage\n• Fri 7:53pm, Sat 10:53am and 5:53pm, Sun 6:53pm: OT doc\n• Sat 8pm: notes for Sunday morning\n• Mon 1pm and 7pm, Tue 7pm: poster and montage last steps\n• Plus your usual meal, snack, workout and Sunday ones\n\nWant to change one? The link below opens it.\n\nHow did you sleep, and how's your body after Shred this morning?"
     }
   ]
 }
