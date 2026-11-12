@@ -762,6 +762,13 @@
       "at": "2026-11-12 13:54",
       "utc": "2026-11-12T05:54:57.155Z",
       "text": "Lunch break: poster work\n\n- Print the names + title first\n- Then the trees + leaves"
+    },
+    {
+      "id": "food-dinner-1853",
+      "at": "2026-11-12 18:54",
+      "utc": "2026-11-12T10:54:35.397Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-12 18:53"
     }
   ]
 }
