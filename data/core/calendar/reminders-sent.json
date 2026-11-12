@@ -785,6 +785,13 @@
     {
       "id": "montage-thu12-eve",
       "at": "2026-11-12 19:55",
+      "utc": "2026-11-12T11:55:10.155Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-12 19:00"
+    },
+    {
+      "id": "montage-thu12-eve",
+      "at": "2026-11-12 19:55",
       "utc": "2026-11-12T11:55:37.209Z",
       "text": "Montage time tonight\n\n🎬 Aim to get most of it done now\n🖨️ Fri lunch: print photos, then finish it\n\nOne clip at a time. You've got this."
     }
