@@ -447,13 +447,6 @@
     {
       "id": "no-snacks-after-10",
       "at": "2026-11-09 22:55",
-      "utc": "2026-11-09T14:55:31.462Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-09 22:00"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-09 22:55",
       "utc": "2026-11-09T14:55:43.464Z",
       "text": "Kitchen's closed for the night\nIt's 10 pm, so that's the last of the eating today. Lights down soon, and sleep well 🌙"
     },
@@ -794,6 +787,27 @@
       "at": "2026-11-12 19:55",
       "utc": "2026-11-12T11:55:37.209Z",
       "text": "Montage time tonight\n\n🎬 Aim to get most of it done now\n🖨️ Fri lunch: print photos, then finish it\n\nOne clip at a time. You've got this."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-12 20:56",
+      "utc": "2026-11-12T12:56:01.859Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-12 20:00"
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-12 20:56",
+      "utc": "2026-11-12T12:56:01.970Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-12 20:53"
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-12 20:56",
+      "utc": "2026-11-12T12:56:02.105Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-12 20:53"
     }
   ]
 }
