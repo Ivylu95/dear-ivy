@@ -820,6 +820,13 @@
       "at": "2026-11-12 22:54",
       "utc": "2026-11-12T14:54:55.368Z",
       "text": "Food's done for today\nIt's past 10, so the kitchen's shut till morning. Rest well."
+    },
+    {
+      "id": "week-cal-in-out",
+      "at": "2026-11-12 23:54",
+      "utc": "2026-11-12T15:54:45.581Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-12 23:00"
     }
   ]
 }
