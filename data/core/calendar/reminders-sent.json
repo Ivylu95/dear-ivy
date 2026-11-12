@@ -704,6 +704,13 @@
       "at": "2026-11-12 08:00",
       "utc": "2026-11-12T00:00:06.439Z",
       "text": "Bfk and lunch both logged\nnice and early\n\n🔥 Eaten ▓▓▓▓▓▓░░░░ 61% · ~465 kcal room\n🏃 Burned 160 kcal at BFT\n⚖️ Balance ~575 · ~625 under 1,200\n\nDinner: eggs or lean meat with veg sits well in the room left.\n\n~ some of today is estimated"
+    },
+    {
+      "id": "workout-catchup-cal",
+      "at": "2026-11-12 08:54",
+      "utc": "2026-11-12T00:54:38.562Z",
+      "held": true,
+      "why": "yesterday's workout already logged"
     }
   ]
 }
