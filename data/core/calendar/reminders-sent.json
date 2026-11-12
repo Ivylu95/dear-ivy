@@ -162,6 +162,12 @@
       "first": "2026-11-11 23:54",
       "last": "2026-11-11 23:54",
       "lastUtc": "2026-11-11T15:54:58.848Z"
+    },
+    "food-breakfast-0753": {
+      "sent": 1,
+      "first": "2026-11-12 08:00",
+      "last": "2026-11-12 08:00",
+      "lastUtc": "2026-11-12T00:00:06.439Z"
     }
   },
   "sent": [
@@ -692,6 +698,12 @@
       "utc": "2026-11-11T23:59:36.404Z",
       "claimed": "cc-routine",
       "due": "2026-11-12 07:53"
+    },
+    {
+      "id": "food-breakfast-0753",
+      "at": "2026-11-12 08:00",
+      "utc": "2026-11-12T00:00:06.439Z",
+      "text": "Bfk and lunch both logged\nnice and early\n\n🔥 Eaten ▓▓▓▓▓▓░░░░ 61% · ~465 kcal room\n🏃 Burned 160 kcal at BFT\n⚖️ Balance ~575 · ~625 under 1,200\n\nDinner: eggs or lean meat with veg sits well in the room left.\n\n~ some of today is estimated"
     }
   ]
 }
