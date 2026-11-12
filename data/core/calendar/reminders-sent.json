@@ -128,10 +128,10 @@
       "lastUtc": "2026-11-11T05:10:39.496Z"
     },
     "food-dinner-1853": {
-      "sent": 1,
+      "sent": 2,
       "first": "2026-11-11 18:55",
-      "last": "2026-11-11 18:55",
-      "lastUtc": "2026-11-11T10:55:21.302Z"
+      "last": "2026-11-12 18:55",
+      "lastUtc": "2026-11-12T10:55:00.182Z"
     },
     "poster-start": {
       "sent": 1,
@@ -769,6 +769,12 @@
       "utc": "2026-11-12T10:54:35.397Z",
       "claimed": "cc-routine",
       "due": "2026-11-12 18:53"
+    },
+    {
+      "id": "food-dinner-1853",
+      "at": "2026-11-12 18:55",
+      "utc": "2026-11-12T10:55:00.182Z",
+      "text": "Dinner's coming up, around 7\nBFT done today 💪\n\n🍽️ Eaten: ~1,485 of 1,200 kcal (124%)\n🔥 Burned: 160 kcal at BFT\n⚖️ Balance: ~1,325, about 125 over\n~ some of today is estimated\n\nIf you're hungry, keep it small and warm, like steamed greens with a little tofu or fish. Log it when you can."
     }
   ]
 }
