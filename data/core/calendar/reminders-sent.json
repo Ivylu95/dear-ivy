@@ -116,10 +116,10 @@
       "lastUtc": "2026-11-11T00:39:27.353Z"
     },
     "food-lunch-1253": {
-      "sent": 1,
+      "sent": 2,
       "first": "2026-11-11 12:59",
-      "last": "2026-11-11 12:59",
-      "lastUtc": "2026-11-11T04:59:05.706Z"
+      "last": "2026-11-12 12:56",
+      "lastUtc": "2026-11-12T04:56:00.215Z"
     },
     "log-now-nov11": {
       "sent": 1,
@@ -168,6 +168,12 @@
       "first": "2026-11-12 08:00",
       "last": "2026-11-12 08:00",
       "lastUtc": "2026-11-12T00:00:06.439Z"
+    },
+    "cancel-classpass": {
+      "sent": 1,
+      "first": "2026-11-12 12:55",
+      "last": "2026-11-12 12:55",
+      "lastUtc": "2026-11-12T04:55:58.907Z"
     }
   },
   "sent": [
@@ -711,6 +717,18 @@
       "utc": "2026-11-12T00:54:38.562Z",
       "held": true,
       "why": "yesterday's workout already logged"
+    },
+    {
+      "id": "cancel-classpass",
+      "at": "2026-11-12 12:55",
+      "utc": "2026-11-12T04:55:58.907Z",
+      "text": "Cancel ClassPass today\n\n⏳ Trial ends Sat 14 Nov\n💸 $99 charge if it's still on"
+    },
+    {
+      "id": "food-lunch-1253",
+      "at": "2026-11-12 12:56",
+      "utc": "2026-11-12T04:56:00.215Z",
+      "text": "Lunch is in\nGood protein from the eggs 💪\n\n🔥 ▰▰▰▰▰▰▰▰▰▱ 96% of 1,200 kcal\n~45 kcal room left\n🏃‍♀️ BFT burned 160 kcal, kept apart\n\nDinner: something light, like greens or a clear soup, fits what's left.\n\n~ some of today is estimated"
     }
   ]
 }
