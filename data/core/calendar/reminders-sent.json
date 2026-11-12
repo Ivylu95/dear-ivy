@@ -504,13 +504,6 @@
       "due": "2026-11-10 20:53"
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-10 20:56",
-      "utc": "2026-11-10T12:56:28.413Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-10 20:00"
-    },
-    {
       "id": "workout-ask-2053",
       "at": "2026-11-10 20:56",
       "utc": "2026-11-10T12:56:41.247Z",
@@ -820,6 +813,13 @@
       "at": "2026-11-12 20:56",
       "utc": "2026-11-12T12:56:45.193Z",
       "text": "Today's training\n💪 Shred at 6 this morning – on the calendar, counted as done.\n\nDid you fit in anything else since? Sets and reps if you have them, or even a walk."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-12 22:54",
+      "utc": "2026-11-12T14:54:31.639Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-12 22:00"
     }
   ]
 }
