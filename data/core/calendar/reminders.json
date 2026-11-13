@@ -1,6 +1,6 @@
 {
   "timezone": "Asia/Singapore",
-  "sent_through": "2026-11-13 18:54",
+  "sent_through": "2026-11-13 22:49",
   "send": "routine",
   "reminders": [
     {
@@ -40,13 +40,6 @@
       "text": "Stop snacking after 10 pm (at 8 pm: anything still wanted tonight, have it soon; at 10 pm: kitchen's closed for tonight)",
       "cron": "0 20,22 * * *",
       "set": "2026-11-07 11:03"
-    },
-    {
-      "id": "poster-start",
-      "emoji": "🎨",
-      "text": "Poster: plan layout",
-      "at": "2026-11-11 19:00",
-      "set": "2026-11-11 07:10"
     },
     {
       "id": "poster-photos",
@@ -210,18 +203,6 @@
       ],
       "cron": "0 23 * * *",
       "set": "2026-11-13 07:04",
-      "bot": "main",
-      "chat": {
-        "url": "https://claude.ai/code/session_01RkebH73Sqeq5M4dzwA3cXe",
-        "title": "Calories and nutrition"
-      }
-    },
-    {
-      "id": "week-cal-now-nov11",
-      "emoji": "⚖️",
-      "text": "Sent at her ask, now: my week so far, calories in, out and balance against my 1,200",
-      "at": "2026-11-11 22:10",
-      "set": "2026-11-11 22:10",
       "bot": "main",
       "chat": {
         "url": "https://claude.ai/code/session_01RkebH73Sqeq5M4dzwA3cXe",
