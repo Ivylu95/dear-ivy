@@ -210,6 +210,12 @@
       "first": "2026-11-13 22:50",
       "last": "2026-11-13 22:50",
       "lastUtc": "2026-11-13T14:50:25.635Z"
+    },
+    "week-cal-in-out-2": {
+      "sent": 1,
+      "first": "2026-11-14 00:56",
+      "last": "2026-11-14 00:56",
+      "lastUtc": "2026-11-13T16:56:07.400Z"
     }
   },
   "sent": [
@@ -1002,6 +1008,12 @@
       "utc": "2026-11-13T15:57:51.931Z",
       "claimed": "cc-routine",
       "due": "2026-11-13 23:00"
+    },
+    {
+      "id": "week-cal-in-out-2",
+      "at": "2026-11-14 00:56",
+      "utc": "2026-11-13T16:56:07.400Z",
+      "text": "Your week so far, Mon to Fri\nBFT 4 days in a row 💪\n\n📅 Mon: in 680 · out 0 · balance 680 (520 under)\n📅 Tue: nothing logged\n📅 Wed: in 1,600 · out 285 · balance 1,315 (115 over)\n📅 Thu: in 2,290 · out 160 · balance 2,130 (930 over)\n📅 Fri: in 1,520 · out 80 · balance 1,440 (240 over)\n\n~ some of this week is estimated"
     }
   ]
 }
