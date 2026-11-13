@@ -198,6 +198,12 @@
       "first": "2026-11-13 13:55",
       "last": "2026-11-13 13:55",
       "lastUtc": "2026-11-13T05:55:38.019Z"
+    },
+    "facial-nov13": {
+      "sent": 1,
+      "first": "2026-11-13 17:55",
+      "last": "2026-11-13 17:55",
+      "lastUtc": "2026-11-13T09:55:47.144Z"
     }
   },
   "sent": [
@@ -925,6 +931,12 @@
       "utc": "2026-11-13T09:55:37.850Z",
       "claimed": "cc-routine",
       "due": "2026-11-13 17:00"
+    },
+    {
+      "id": "facial-nov13",
+      "at": "2026-11-13 17:55",
+      "utc": "2026-11-13T09:55:47.144Z",
+      "text": "Facial at 6 today\nClementi, 6 pm, so about an hour to go. Ask for Jess or Jade, and don't forget to ask for the free eye treatment. Enjoy it 💆"
     }
   ]
 }
