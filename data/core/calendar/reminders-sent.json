@@ -953,6 +953,34 @@
     },
     {
       "id": "ot-doc-fri",
+      "at": "2026-11-13 22:49",
+      "utc": "2026-11-13T14:49:50.246Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-13 19:53"
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-13 22:49",
+      "utc": "2026-11-13T14:49:50.380Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-13 20:53"
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-13 22:49",
+      "utc": "2026-11-13T14:49:50.565Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-13 20:53"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-13 22:49",
+      "utc": "2026-11-13T14:49:50.705Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-13 22:00"
+    },
+    {
+      "id": "ot-doc-fri",
       "at": "2026-11-13 22:50",
       "utc": "2026-11-13T14:50:25.635Z",
       "text": "OT hours doc due tomorrow\n\n📄 Tidy it up by end of day Saturday"
