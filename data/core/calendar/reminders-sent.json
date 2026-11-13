@@ -192,6 +192,12 @@
       "first": "2026-11-13 09:54",
       "last": "2026-11-13 09:54",
       "lastUtc": "2026-11-13T01:54:58.630Z"
+    },
+    "lunch-fri13": {
+      "sent": 1,
+      "first": "2026-11-13 13:55",
+      "last": "2026-11-13 13:55",
+      "lastUtc": "2026-11-13T05:55:38.019Z"
     }
   },
   "sent": [
@@ -899,6 +905,12 @@
       "at": "2026-11-13 12:55",
       "utc": "2026-11-13T04:55:06.599Z",
       "text": "Lunch is logged\nNice steady morning 💪\n\n🔥 ▰▰▰▰▰▰▰▱▱▱ 67% of 1,200 kcal\n~395 kcal room left\n🏃‍♀️ BFT stretch burned ~80 kcal, kept apart\n\nTonight: a palm of chicken, tofu or egg with lots of veg tops up protein and fibre, inside what's left.\n\n~ some of today is estimated"
+    },
+    {
+      "id": "lunch-fri13",
+      "at": "2026-11-13 13:55",
+      "utc": "2026-11-13T05:55:38.019Z",
+      "text": "Lunch break: photos, then montage\n\n🖨️ Print the photos first\n🎬 Then finish the montage\n\nPhotos done means the montage is next. You've got this 💪"
     }
   ]
 }
