@@ -12,3 +12,4 @@ Check-in midday (2026-11-09 12:54): How many glasses have you had so far today?
 Check-in afternoon (2026-11-09 17:55): How many glasses of water since lunch?
 Check-in morning-update-2 (2026-11-09 09:53): How did you sleep, and how does your body feel after the weekend?
 Check-in afternoon (2026-11-10 16:54): What's your glass count since lunch?
+Check-in morning-update-2 (2026-11-12 08:02): How did you sleep, and how's your body after Shred this morning?

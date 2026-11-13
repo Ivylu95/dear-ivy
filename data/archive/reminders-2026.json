@@ -368,6 +368,20 @@
         "url": "https://claude.ai/code/session_01RkebH73Sqeq5M4dzwA3cXe",
         "title": "Calories and nutrition"
       }
+    },
+    {
+      "id": "concert-plan-summary",
+      "emoji": "🗓️",
+      "text": "Her concert poster and montage plan, as short points",
+      "at": "2026-11-11 07:05",
+      "set": "2026-11-11 07:05"
+    },
+    {
+      "id": "concert-plan-summary-2",
+      "emoji": "🗓️",
+      "text": "Her updated concert poster and montage plan, as short points",
+      "at": "2026-11-11 08:40",
+      "set": "2026-11-11 08:40"
     }
   ]
 }

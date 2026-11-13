@@ -1,6 +1,6 @@
 {
   "timezone": "Asia/Singapore",
-  "sent_through": "2026-11-12 23:54",
+  "sent_through": "2026-11-13 08:54",
   "send": "routine",
   "reminders": [
     {
@@ -63,13 +63,6 @@
       "set": "2026-11-11 07:10"
     },
     {
-      "id": "concert-plan-summary",
-      "emoji": "🗓️",
-      "text": "Her concert poster and montage plan, as short points",
-      "at": "2026-11-11 07:05",
-      "set": "2026-11-11 07:05"
-    },
-    {
       "id": "lunch-thu12",
       "emoji": "🖨️",
       "text": "Lunch work: print poster names + title, then trees + leaves",
@@ -102,13 +95,6 @@
       "emoji": "✅",
       "text": "Poster: last touches, done tonight",
       "at": "2026-11-16 19:00",
-      "set": "2026-11-11 08:40"
-    },
-    {
-      "id": "concert-plan-summary-2",
-      "emoji": "🗓️",
-      "text": "Her updated concert poster and montage plan, as short points",
-      "at": "2026-11-11 08:40",
       "set": "2026-11-11 08:40"
     },
     {

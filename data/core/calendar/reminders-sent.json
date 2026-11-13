@@ -844,6 +844,20 @@
     {
       "id": "food-breakfast-0753",
       "at": "2026-11-13 08:56",
+      "utc": "2026-11-13T00:56:15.326Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-13 07:53"
+    },
+    {
+      "id": "workout-catchup-cal",
+      "at": "2026-11-13 08:56",
+      "utc": "2026-11-13T00:56:15.424Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-13 08:53"
+    },
+    {
+      "id": "food-breakfast-0753",
+      "at": "2026-11-13 08:56",
       "utc": "2026-11-13T00:56:48.237Z",
       "text": "Bfk time, nothing logged yet\n\n🔥 Eaten ░░░░░░░░░░ 0% · 1,200 kcal room\n\nAn HM matcha latte (150) and a boiled egg (70) would be a light start, about 220 in all."
     },
