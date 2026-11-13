@@ -543,13 +543,6 @@
     {
       "id": "no-snacks-after-10",
       "at": "2026-11-10 22:54",
-      "utc": "2026-11-10T14:54:47.351Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-10 22:00"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-10 22:54",
       "utc": "2026-11-10T14:54:57.278Z",
       "text": "Kitchen's closed\nIt's 10 pm, so eating can stop for tonight. Rest well."
     },
@@ -950,6 +943,34 @@
       "at": "2026-11-13 18:55",
       "utc": "2026-11-13T10:55:09.970Z",
       "text": "Dinner's around 7\nEasy stretch day at BFT 🧘\n\n🍽️ ██████████ 127% · ~1,520 of 1,200 kcal eaten\n🔥 Burned: 80 kcal at BFT\n⚖️ Balance: ~1,440, about 240 over\n~ some of today is estimated\n\nToday's 1,200 is already used up, so if you're hungry, keep dinner small and simple: a plate of steamed broccoli and carrot, like the veg at lunch, is only about 50 kcal. Send it over when you've eaten."
+    },
+    {
+      "id": "ot-doc-fri",
+      "at": "2026-11-13 22:49",
+      "utc": "2026-11-13T14:49:50.246Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-13 19:53"
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-13 22:49",
+      "utc": "2026-11-13T14:49:50.380Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-13 20:53"
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-13 22:49",
+      "utc": "2026-11-13T14:49:50.565Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-13 20:53"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-13 22:49",
+      "utc": "2026-11-13T14:49:50.705Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-13 22:00"
     }
   ]
 }
