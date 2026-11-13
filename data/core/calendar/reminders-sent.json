@@ -164,10 +164,10 @@
       "lastUtc": "2026-11-12T15:55:07.681Z"
     },
     "food-breakfast-0753": {
-      "sent": 1,
+      "sent": 2,
       "first": "2026-11-12 08:00",
-      "last": "2026-11-12 08:00",
-      "lastUtc": "2026-11-12T00:00:06.439Z"
+      "last": "2026-11-13 08:56",
+      "lastUtc": "2026-11-13T00:56:48.237Z"
     },
     "cancel-classpass": {
       "sent": 1,
@@ -854,6 +854,19 @@
       "utc": "2026-11-13T00:56:15.424Z",
       "claimed": "cc-routine",
       "due": "2026-11-13 08:53"
+    },
+    {
+      "id": "food-breakfast-0753",
+      "at": "2026-11-13 08:56",
+      "utc": "2026-11-13T00:56:48.237Z",
+      "text": "Bfk time, nothing logged yet\n\n🔥 Eaten ░░░░░░░░░░ 0% · 1,200 kcal room\n\nAn HM matcha latte (150) and a boiled egg (70) would be a light start, about 220 in all."
+    },
+    {
+      "id": "workout-catchup-cal",
+      "at": "2026-11-13 08:56",
+      "utc": "2026-11-13T00:56:48.334Z",
+      "held": true,
+      "why": "yesterday's workout already logged"
     }
   ]
 }
