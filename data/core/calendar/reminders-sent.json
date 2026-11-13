@@ -192,6 +192,12 @@
       "first": "2026-11-13 09:54",
       "last": "2026-11-13 09:54",
       "lastUtc": "2026-11-13T01:54:58.630Z"
+    },
+    "lunch-fri13": {
+      "sent": 1,
+      "first": "2026-11-13 13:55",
+      "last": "2026-11-13 13:55",
+      "lastUtc": "2026-11-13T05:55:38.019Z"
     }
   },
   "sent": [
@@ -906,6 +912,12 @@
       "utc": "2026-11-13T05:54:58.960Z",
       "claimed": "cc-routine",
       "due": "2026-11-13 13:00"
+    },
+    {
+      "id": "lunch-fri13",
+      "at": "2026-11-13 13:55",
+      "utc": "2026-11-13T05:55:38.019Z",
+      "text": "Lunch break: photos, then montage\n\n🖨️ Print the photos first\n🎬 Then finish the montage\n\nPhotos done means the montage is next. You've got this 💪"
     }
   ]
 }
