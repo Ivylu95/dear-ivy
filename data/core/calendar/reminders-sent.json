@@ -128,10 +128,10 @@
       "lastUtc": "2026-11-11T05:10:39.496Z"
     },
     "food-dinner-1853": {
-      "sent": 2,
+      "sent": 3,
       "first": "2026-11-11 18:55",
-      "last": "2026-11-12 18:55",
-      "lastUtc": "2026-11-12T10:55:00.182Z"
+      "last": "2026-11-13 18:55",
+      "lastUtc": "2026-11-13T10:55:09.970Z"
     },
     "poster-start": {
       "sent": 1,
@@ -937,6 +937,12 @@
       "at": "2026-11-13 17:55",
       "utc": "2026-11-13T09:55:47.144Z",
       "text": "Facial at 6 today\nClementi, 6 pm, so about an hour to go. Ask for Jess or Jade, and don't forget to ask for the free eye treatment. Enjoy it 💆"
+    },
+    {
+      "id": "food-dinner-1853",
+      "at": "2026-11-13 18:55",
+      "utc": "2026-11-13T10:55:09.970Z",
+      "text": "Dinner's around 7\nEasy stretch day at BFT 🧘\n\n🍽️ ██████████ 127% · ~1,520 of 1,200 kcal eaten\n🔥 Burned: 80 kcal at BFT\n⚖️ Balance: ~1,440, about 240 over\n~ some of today is estimated\n\nToday's 1,200 is already used up, so if you're hungry, keep dinner small and simple: a plate of steamed broccoli and carrot, like the veg at lunch, is only about 50 kcal. Send it over when you've eaten."
     }
   ]
 }
