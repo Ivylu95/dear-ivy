@@ -26,10 +26,10 @@
       "lastUtc": "2026-11-10T12:56:41.247Z"
     },
     "no-snacks-after-10": {
-      "sent": 12,
+      "sent": 13,
       "first": "2026-11-07 20:56",
-      "last": "2026-11-12 22:54",
-      "lastUtc": "2026-11-12T14:54:55.368Z"
+      "last": "2026-11-13 22:50",
+      "lastUtc": "2026-11-13T14:50:29.448Z"
     },
     "nutrition-updates-2": {
       "sent": 1,
@@ -140,16 +140,16 @@
       "lastUtc": "2026-11-11T11:55:52.005Z"
     },
     "antidepressant-2053": {
-      "sent": 2,
+      "sent": 3,
       "first": "2026-11-11 20:57",
-      "last": "2026-11-12 20:56",
-      "lastUtc": "2026-11-12T12:56:39.409Z"
+      "last": "2026-11-13 22:50",
+      "lastUtc": "2026-11-13T14:50:26.920Z"
     },
     "workout-ask-cal": {
-      "sent": 2,
+      "sent": 3,
       "first": "2026-11-11 20:57",
-      "last": "2026-11-12 20:56",
-      "lastUtc": "2026-11-12T12:56:45.193Z"
+      "last": "2026-11-13 22:50",
+      "lastUtc": "2026-11-13T14:50:28.334Z"
     },
     "week-cal-now-nov11": {
       "sent": 1,
@@ -204,6 +204,12 @@
       "first": "2026-11-13 17:55",
       "last": "2026-11-13 17:55",
       "lastUtc": "2026-11-13T09:55:47.144Z"
+    },
+    "ot-doc-fri": {
+      "sent": 1,
+      "first": "2026-11-13 22:50",
+      "last": "2026-11-13 22:50",
+      "lastUtc": "2026-11-13T14:50:25.635Z"
     }
   },
   "sent": [
@@ -546,12 +552,6 @@
       "utc": "2026-11-10T14:54:47.351Z",
       "claimed": "cc-routine",
       "due": "2026-11-10 22:00"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-10 22:54",
-      "utc": "2026-11-10T14:54:57.278Z",
-      "text": "Kitchen's closed\nIt's 10 pm, so eating can stop for tonight. Rest well."
     },
     {
       "id": "concert-plan-summary",
@@ -950,6 +950,30 @@
       "at": "2026-11-13 18:55",
       "utc": "2026-11-13T10:55:09.970Z",
       "text": "Dinner's around 7\nEasy stretch day at BFT 🧘\n\n🍽️ ██████████ 127% · ~1,520 of 1,200 kcal eaten\n🔥 Burned: 80 kcal at BFT\n⚖️ Balance: ~1,440, about 240 over\n~ some of today is estimated\n\nToday's 1,200 is already used up, so if you're hungry, keep dinner small and simple: a plate of steamed broccoli and carrot, like the veg at lunch, is only about 50 kcal. Send it over when you've eaten."
+    },
+    {
+      "id": "ot-doc-fri",
+      "at": "2026-11-13 22:50",
+      "utc": "2026-11-13T14:50:25.635Z",
+      "text": "OT hours doc due tomorrow\n\n📄 Tidy it up by end of day Saturday"
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-13 22:50",
+      "utc": "2026-11-13T14:50:26.920Z",
+      "text": "Meds tonight\n\n💊 Take them before bed, if not done yet"
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-13 22:50",
+      "utc": "2026-11-13T14:50:28.334Z",
+      "text": "Training today\nBalanced at 6am is in, nice start 💪\n\nDid you do anything else, like a walk or your ankle routine? Sets and reps if you have them."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-13 22:50",
+      "utc": "2026-11-13T14:50:29.448Z",
+      "text": "Kitchen's shut for tonight\n\n🌙 Food's done till bfk. Sleep well."
     }
   ]
 }
