@@ -164,10 +164,10 @@
       "lastUtc": "2026-11-12T15:55:07.681Z"
     },
     "food-breakfast-0753": {
-      "sent": 2,
+      "sent": 3,
       "first": "2026-11-12 08:00",
-      "last": "2026-11-13 08:56",
-      "lastUtc": "2026-11-13T00:56:48.237Z"
+      "last": "2026-11-14 07:55",
+      "lastUtc": "2026-11-13T23:55:06.610Z"
     },
     "cancel-classpass": {
       "sent": 1,
@@ -1021,6 +1021,12 @@
       "at": "2026-11-14 00:56",
       "utc": "2026-11-13T16:56:07.400Z",
       "text": "Your week so far, Mon to Fri\nBFT 4 days in a row 💪\n\n📅 Mon: in 680 · out 0 · balance 680 (520 under)\n📅 Tue: nothing logged\n📅 Wed: in 1,600 · out 285 · balance 1,315 (115 over)\n📅 Thu: in 2,290 · out 160 · balance 2,130 (930 over)\n📅 Fri: in 1,520 · out 80 · balance 1,440 (240 over)\n\n~ some of this week is estimated"
+    },
+    {
+      "id": "food-breakfast-0753",
+      "at": "2026-11-14 07:55",
+      "utc": "2026-11-13T23:55:06.610Z",
+      "text": "Morning, bfk soon\nFresh Saturday, clean log\n\n🔥 Eaten ░░░░░░░░░░ 0% · 1,200 kcal room\n\nTwo eggs on wholemeal toast is about 230, a good protein start with plenty of room left."
     }
   ]
 }
