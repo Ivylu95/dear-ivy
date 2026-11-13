@@ -186,6 +186,12 @@
       "first": "2026-11-12 19:55",
       "last": "2026-11-12 19:55",
       "lastUtc": "2026-11-12T11:55:37.209Z"
+    },
+    "poster-photos": {
+      "sent": 1,
+      "first": "2026-11-13 09:54",
+      "last": "2026-11-13 09:54",
+      "lastUtc": "2026-11-13T01:54:58.630Z"
     }
   },
   "sent": [
@@ -867,6 +873,12 @@
       "utc": "2026-11-13T00:56:48.334Z",
       "held": true,
       "why": "yesterday's workout already logged"
+    },
+    {
+      "id": "poster-photos",
+      "at": "2026-11-13 09:54",
+      "utc": "2026-11-13T01:54:58.630Z",
+      "text": "Costume photos for the concert poster\n\nToday's a good day to snap the kids in costume, so the cut-outs are ready when you sit down to finish the poster on Monday."
     }
   ]
 }
