@@ -210,6 +210,12 @@
       "first": "2026-11-13 22:50",
       "last": "2026-11-13 22:50",
       "lastUtc": "2026-11-13T14:50:25.635Z"
+    },
+    "week-cal-in-out-2": {
+      "sent": 1,
+      "first": "2026-11-13 23:58",
+      "last": "2026-11-13 23:58",
+      "lastUtc": "2026-11-13T15:58:47.351Z"
     }
   },
   "sent": [
@@ -545,13 +551,6 @@
       "at": "2026-11-10 21:55",
       "utc": "2026-11-10T13:55:42.952Z",
       "text": "Bedtime soon\nYour antidepressant is here when you're ready for it tonight. Be gentle with yourself."
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-10 22:54",
-      "utc": "2026-11-10T14:54:47.351Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-10 22:00"
     },
     {
       "id": "concert-plan-summary",
@@ -1002,6 +1001,12 @@
       "at": "2026-11-13 22:50",
       "utc": "2026-11-13T14:50:29.448Z",
       "text": "Kitchen's shut for tonight\n\n🌙 Food's done till bfk. Sleep well."
+    },
+    {
+      "id": "week-cal-in-out-2",
+      "at": "2026-11-13 23:58",
+      "utc": "2026-11-13T15:58:47.351Z",
+      "text": "Your week so far, in and out\n\n📅 Mon: in 680, out none logged, balance 680, 520 under\n\n📅 Tue: nothing logged\n\n📅 Wed: in 1,600, out 285, balance 1,315, 115 over\n\n📅 Thu: in 2,290, out 160, balance 2,130, 930 over\n\n📅 Fri: in 1,520, out 80, balance 1,440, 240 over\n\n~ some of this week is estimated"
     }
   ]
 }
