@@ -1024,6 +1024,13 @@
     },
     {
       "id": "food-breakfast-0753",
+      "at": "2026-11-14 07:54",
+      "utc": "2026-11-13T23:54:49.935Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-14 07:53"
+    },
+    {
+      "id": "food-breakfast-0753",
       "at": "2026-11-14 07:55",
       "utc": "2026-11-13T23:55:06.610Z",
       "text": "Morning, bfk soon\nFresh Saturday, clean log\n\n🔥 Eaten ░░░░░░░░░░ 0% · 1,200 kcal room\n\nTwo eggs on wholemeal toast is about 230, a good protein start with plenty of room left."
