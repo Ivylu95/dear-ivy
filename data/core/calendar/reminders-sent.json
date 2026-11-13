@@ -547,13 +547,6 @@
       "text": "Bedtime soon\nYour antidepressant is here when you're ready for it tonight. Be gentle with yourself."
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-10 22:54",
-      "utc": "2026-11-10T14:54:47.351Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-10 22:00"
-    },
-    {
       "id": "concert-plan-summary",
       "at": "2026-11-11 07:06",
       "utc": "2026-11-10T23:06:04.769Z",
@@ -1002,6 +995,13 @@
       "at": "2026-11-13 22:50",
       "utc": "2026-11-13T14:50:29.448Z",
       "text": "Kitchen's shut for tonight\n\n🌙 Food's done till bfk. Sleep well."
+    },
+    {
+      "id": "week-cal-in-out-2",
+      "at": "2026-11-13 23:57",
+      "utc": "2026-11-13T15:57:51.931Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-13 23:00"
     }
   ]
 }
