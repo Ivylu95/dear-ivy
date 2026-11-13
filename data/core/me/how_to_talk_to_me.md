@@ -18,7 +18,9 @@ _Use her language, not clinical language. If she says "flat", don't write
 | LP | Lesson plan, for her preschool class (named 2026-11-08: *"Lesson plan (LP) nudge"*) |
 | MLK | My Little Kingdom preschool, her workplace (named 2026-11-11) |
 | log, log table | Her HCI table (2026-11-11: *"Yes that's the log table ty"*), after asking *"What's hci"*: she may not remember the short form, so say "your log (HCI)" |
-| bfk | Breakfast (named 2026-11-09: *"breakfat (bfk for short now)"*) |
+| bfk | Breakfast (named 2026-11-09: *"breakfat (bfk for short now)"*); also written "Bkf" (2026-11-13) |
+| WO | Workout (named 2026-11-13: *"Workout (WO)"*) |
+| c (after a number) | Calories, e.g. *"200c"* (2026-11-13) |
 | HM matcha latte | Her homemade matcha latte, 150 kcal; one bought outside is a different drink (named 2026-11-12: *"HM matcha latte for shot in future"*) |
 | store bought, SB | SB is her short form (2026-11-12: *"SB for short"*). What she calls food or drink bought outside, as against homemade (HM). Voice typing wrote it as "starboard" once; her correction, 2026-11-12: *"Store bought I mean"* |
 | lock (voice slip) | "Log". Her voice typing writes "lock" for "log"; her correction, 2026-11-12: *"Log not lock"*. Read it as log without asking |

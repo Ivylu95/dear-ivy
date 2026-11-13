@@ -52,6 +52,7 @@ her words, blank when not said._
 - 2026-11-11 (Wed) · Strength, Lower Body, 7:10 to 8:05 am, at West Coast Rd. From her Google Calendar, logged at her ask (2026-11-11)
 - 2026-11-11 (Wed, evening; told 10:04 pm) · A second session: BFT lower body, 50 min. Her words: *"Another bft lower body workout evening 50 mins"*
 - 2026-11-12 (Thu, told 7:14 am) · Cardio and strength at BFT, 50 min. Her words: *"Log my workout for the day 50 minutes cardio strength training at bft"*
+- 2026-11-13 (Fri, told 9:06 am) · Light training at BFT, mostly stretching; length not given. Her words: *"light training at bft, probably burned only 80-100c bc it's more of stretching?"*
 
 ## Worth keeping in view
 
