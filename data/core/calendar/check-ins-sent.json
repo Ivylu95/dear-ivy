@@ -2,10 +2,10 @@
   "_what": "The last messages the sweep wrote for each check-in, so the next differs, how many Telegram accepted, and any held (HBT-010, HBT-014).",
   "counts": {
     "morning-update-2": {
-      "sent": 5,
+      "sent": 6,
       "first": "2026-11-07 08:54",
-      "last": "2026-11-12 08:02",
-      "lastUtc": "2026-11-12T00:02:18.158Z"
+      "last": "2026-11-13 08:57",
+      "lastUtc": "2026-11-13T00:57:36.797Z"
     },
     "midday": {
       "sent": 4,
@@ -27,12 +27,6 @@
     }
   },
   "sent": [
-    {
-      "id": "morning-update-2",
-      "at": "2026-11-07 08:54",
-      "utc": "2026-11-07T00:54:38.573Z",
-      "text": "Good morning, Saturday 7 Nov\n\n📅 Today: your 8am meet-up\n📅 Tomorrow, Sun 8 Nov: nothing on\n🏖️ Mon 9 Nov: public holiday, and STRONG Pilates at 4:15pm in Orchard\n💳 Thu 12 Nov: cancel ClassPass before the trial ends on the 14th ($99 if not)\n💆 Fri 13 Nov: facial at 6pm in Clementi\n\nYour reminders still to come:\n• Thu 12 Nov, 12:30pm: cancel ClassPass\n• Fri 13 Nov, 5pm: facial\n• Sat 14 Nov, 8pm: jot-down note for Sunday\n• Every Sun, 5pm: your feedback list\n• Every Sun, 9:53pm: your workout week\n• Every day, 8:53am (from Sun): workout catch-up\n• Every day, 8:53pm: workout check\n• Every day, 9:53pm: bedtime reminder\n\nTap the link below to change, move or stop any of them."
-    },
     {
       "id": "midday",
       "at": "2026-11-07 12:54",
@@ -137,6 +131,12 @@
       "at": "2026-11-12 16:56",
       "utc": "2026-11-12T08:56:01.882Z",
       "text": "Afternoon water top-up\n\nClassPass: today is the day to cancel, if it isn't done yet\nMontage push tonight\n\nCan you get a glass of water in before you sit down to the montage?"
+    },
+    {
+      "id": "morning-update-2",
+      "at": "2026-11-13 08:57",
+      "utc": "2026-11-13T00:57:36.797Z",
+      "text": "Good morning, Friday 13 Nov\n\n📅 Today: facial at 6pm in Clementi\n🎞️ Today: your aim to finish the montage\n💳 Tomorrow, Sat 14: ClassPass trial ends, $99 if still on\n⏱️ Tomorrow: OT hours doc due by end of day\n🖍️ Mon 16: staying back at MLK for the poster\n\nReminders still to come:\n• Today 9am: poster costume photos\n• Today 1pm: print photos, finish montage\n• Today 5pm: facial heads-up\n• Today 7:53pm: OT doc, due tomorrow\n• Tonight 11pm: your week of in and out\n• Weekend to Tue: the same ones as in Thursday's list\n• Plus your daily meal, snack, workout and bedtime ones\n\nAny to move or stop? The link below opens them.\n\nHow did you sleep, and how's your body after this morning's Balanced class?"
     }
   ]
 }
