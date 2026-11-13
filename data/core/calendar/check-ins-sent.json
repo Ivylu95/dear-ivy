@@ -14,10 +14,10 @@
       "lastUtc": "2026-11-10T04:55:01.871Z"
     },
     "afternoon": {
-      "sent": 5,
+      "sent": 6,
       "first": "2026-11-07 16:54",
-      "last": "2026-11-12 16:56",
-      "lastUtc": "2026-11-12T08:56:01.882Z"
+      "last": "2026-11-13 16:55",
+      "lastUtc": "2026-11-13T08:55:36.555Z"
     },
     "midday-1153": {
       "sent": 2,
@@ -32,12 +32,6 @@
       "at": "2026-11-07 12:54",
       "utc": "2026-11-07T04:54:19.803Z",
       "text": "Water break\nNothing else on your plate this afternoon, so it's a good time to catch up on water.\n\nHave you had a glass yet today?"
-    },
-    {
-      "id": "afternoon",
-      "at": "2026-11-07 16:54",
-      "utc": "2026-11-07T08:54:24.543Z",
-      "text": "Afternoon water top-up\nNothing left on for the rest of today, so the evening is yours 🌤️\n\nHow many glasses have you got through since lunch?"
     },
     {
       "id": "morning-update-2",
@@ -143,6 +137,12 @@
       "at": "2026-11-13 12:55",
       "utc": "2026-11-13T04:55:59.767Z",
       "text": "Midday water check\nClass done and lunch in, a steady start 💪\n\nHow many glasses of water so far, before the 1pm printing?"
+    },
+    {
+      "id": "afternoon",
+      "at": "2026-11-13 16:55",
+      "utc": "2026-11-13T08:55:36.555Z",
+      "text": "Afternoon water top-up\nMontage day and a facial to round it off 🌤️\n\n💧 A glass now, before you head to Clementi\n\nHow's the water count looking since the 1pm printing?"
     }
   ]
 }

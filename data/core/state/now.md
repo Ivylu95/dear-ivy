@@ -31,7 +31,7 @@ Thinking hard about the guy she's dating. Calm, practical, wants a plan.
 
 ## Next session opens with
 
-Check-in afternoon (2026-11-12 16:55): Can you get a glass of water in before you sit down to the montage?
+Check-in afternoon (2026-11-13 16:55): How's the water count looking since the 1pm printing?
 Check-in morning-update-2 (2026-11-13 08:57): How did you sleep, and how's your body after this morning's Balanced class?
 Check-in midday (2026-11-10 12:55): How many glasses have you got in since you woke up?
 Check-in midday-1153 (2026-11-13 12:55): How many glasses of water so far, before the 1pm printing?
