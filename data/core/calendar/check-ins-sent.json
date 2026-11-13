@@ -20,10 +20,10 @@
       "lastUtc": "2026-11-12T08:56:01.882Z"
     },
     "midday-1153": {
-      "sent": 1,
+      "sent": 2,
       "first": "2026-11-12 11:54",
-      "last": "2026-11-12 11:54",
-      "lastUtc": "2026-11-12T03:54:40.392Z"
+      "last": "2026-11-13 12:55",
+      "lastUtc": "2026-11-13T04:55:59.767Z"
     }
   },
   "sent": [
@@ -137,6 +137,12 @@
       "at": "2026-11-13 08:57",
       "utc": "2026-11-13T00:57:36.797Z",
       "text": "Good morning, Friday 13 Nov\n\n📅 Today: facial at 6pm in Clementi\n🎞️ Today: your aim to finish the montage\n💳 Tomorrow, Sat 14: ClassPass trial ends, $99 if still on\n⏱️ Tomorrow: OT hours doc due by end of day\n🖍️ Mon 16: staying back at MLK for the poster\n\nReminders still to come:\n• Today 9am: poster costume photos\n• Today 1pm: print photos, finish montage\n• Today 5pm: facial heads-up\n• Today 7:53pm: OT doc, due tomorrow\n• Tonight 11pm: your week of in and out\n• Weekend to Tue: the same ones as in Thursday's list\n• Plus your daily meal, snack, workout and bedtime ones\n\nAny to move or stop? The link below opens them.\n\nHow did you sleep, and how's your body after this morning's Balanced class?"
+    },
+    {
+      "id": "midday-1153",
+      "at": "2026-11-13 12:55",
+      "utc": "2026-11-13T04:55:59.767Z",
+      "text": "Midday water check\nClass done and lunch in, a steady start 💪\n\nHow many glasses of water so far, before the 1pm printing?"
     }
   ]
 }
