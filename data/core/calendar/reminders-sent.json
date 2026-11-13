@@ -116,10 +116,10 @@
       "lastUtc": "2026-11-11T00:39:27.353Z"
     },
     "food-lunch-1253": {
-      "sent": 2,
+      "sent": 3,
       "first": "2026-11-11 12:59",
-      "last": "2026-11-12 12:56",
-      "lastUtc": "2026-11-12T04:56:00.215Z"
+      "last": "2026-11-13 12:55",
+      "lastUtc": "2026-11-13T04:55:06.599Z"
     },
     "log-now-nov11": {
       "sent": 1,
@@ -886,6 +886,12 @@
       "at": "2026-11-13 09:54",
       "utc": "2026-11-13T01:54:58.630Z",
       "text": "Costume photos for the concert poster\n\nToday's a good day to snap the kids in costume, so the cut-outs are ready when you sit down to finish the poster on Monday."
+    },
+    {
+      "id": "food-lunch-1253",
+      "at": "2026-11-13 12:55",
+      "utc": "2026-11-13T04:55:06.599Z",
+      "text": "Lunch is logged\nNice steady morning 💪\n\n🔥 ▰▰▰▰▰▰▰▱▱▱ 67% of 1,200 kcal\n~395 kcal room left\n🏃‍♀️ BFT stretch burned ~80 kcal, kept apart\n\nTonight: a palm of chicken, tofu or egg with lots of veg tops up protein and fibre, inside what's left.\n\n~ some of today is estimated"
     }
   ]
 }
