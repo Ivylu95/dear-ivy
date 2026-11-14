@@ -1,15 +1,8 @@
 {
   "timezone": "Asia/Singapore",
-  "sent_through": "2026-11-14 10:54",
+  "sent_through": "2026-11-14 12:54",
   "send": "routine",
   "reminders": [
-    {
-      "id": "cancel-classpass",
-      "emoji": "💳",
-      "text": "Cancel ClassPass today, before the trial ends on 14 Nov and the $99 charge",
-      "at": "2026-11-12 12:30",
-      "set": "2026-11-06 21:35"
-    },
     {
       "id": "facial-nov13",
       "emoji": "💆",
