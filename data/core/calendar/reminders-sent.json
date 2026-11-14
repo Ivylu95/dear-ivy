@@ -222,6 +222,12 @@
       "first": "2026-11-14 10:55",
       "last": "2026-11-14 10:55",
       "lastUtc": "2026-11-14T02:55:48.756Z"
+    },
+    "montage-sat": {
+      "sent": 1,
+      "first": "2026-11-14 14:55",
+      "last": "2026-11-14 14:55",
+      "lastUtc": "2026-11-14T06:55:21.423Z"
     }
   },
   "sent": [
@@ -1073,6 +1079,12 @@
       "at": "2026-11-14 12:55",
       "utc": "2026-11-14T04:55:13.803Z",
       "text": "Time for lunch\n\nNothing logged yet today\n🔥 1,200 kcal of room for the day\n\nFor lunch, a palm of chicken, fish or tofu with rice and plenty of veg makes a solid start. Log it when you can."
+    },
+    {
+      "id": "montage-sat",
+      "at": "2026-11-14 14:55",
+      "utc": "2026-11-14T06:55:21.423Z",
+      "text": "Montage time today\nA free Saturday afternoon – good window\n\n🎬 Concert montage: due Mon 16 Nov\n📁 Work portfolio: send by Sunday\n\nEven one hour on the montage today makes Sunday lighter."
     }
   ]
 }
