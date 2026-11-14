@@ -803,13 +803,6 @@
       "text": "Montage time tonight\n\n🎬 Aim to get most of it done now\n🖨️ Fri lunch: print photos, then finish it\n\nOne clip at a time. You've got this."
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-12 20:56",
-      "utc": "2026-11-12T12:56:01.859Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-12 20:00"
-    },
-    {
       "id": "antidepressant-2053",
       "at": "2026-11-12 20:56",
       "utc": "2026-11-12T12:56:01.970Z",
@@ -1207,6 +1200,20 @@
       "utc": "2026-11-14T14:55:06.704Z",
       "claimed": "cc-routine",
       "due": "2026-11-14 22:00"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-14 23:54",
+      "utc": "2026-11-14T15:54:20.112Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-14 22:00"
+    },
+    {
+      "id": "week-cal-in-out-2",
+      "at": "2026-11-14 23:54",
+      "utc": "2026-11-14T15:54:20.204Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-14 23:00"
     }
   ]
 }
