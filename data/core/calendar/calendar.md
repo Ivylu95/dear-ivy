@@ -16,7 +16,7 @@ _Appointments, deadlines, trips, birthdays. Soonest first. Remove once past
 | 2026-11-07 08:00 | Meet Robin | From her Google Calendar (told 2026-11-06) |
 | 2026-11-09 | Public holiday; Eugene back | From her Google Calendar → data/core/people/eugene.md |
 | 2026-11-09 16:15 | STRONG Pilates at Orchard | From her Google Calendar |
-| 2026-11-12 | Cancel ClassPass — trial ends 14 Nov, $99 charge if not | From her Google Calendar |
+| 2026-11-12 | ~~Cancel ClassPass~~ — done: she has cancelled it (told 2026-11-14); no more reminders | From her Google Calendar |
 | 2026-11-13 18:00 | Facial at Clementi; ask for the free eye treatment | From her Google Calendar |
 | 2026-11-14 | Tidy OT hours document, by end of day | Told 2026-11-12 |
 | 2026-11-15 10:00 | Therapy | She corrected the time on 2026-11-06: 10 am, not 10 pm (her Google Calendar moved to 10–11 am the same day, on her yes) |
