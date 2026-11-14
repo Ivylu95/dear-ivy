@@ -1060,6 +1060,13 @@
       "at": "2026-11-14 10:55",
       "utc": "2026-11-14T02:55:48.756Z",
       "text": "OT hours doc: today's the day\n\n📄 Tidy it up this morning, while it's quiet\n⏰ Sunday night is the last call"
+    },
+    {
+      "id": "food-lunch-1253",
+      "at": "2026-11-14 12:54",
+      "utc": "2026-11-14T04:54:49.136Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-14 12:53"
     }
   ]
 }
