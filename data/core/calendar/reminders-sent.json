@@ -26,10 +26,10 @@
       "lastUtc": "2026-11-10T12:56:41.247Z"
     },
     "no-snacks-after-10": {
-      "sent": 13,
+      "sent": 14,
       "first": "2026-11-07 20:56",
-      "last": "2026-11-13 22:50",
-      "lastUtc": "2026-11-13T14:50:29.448Z"
+      "last": "2026-11-14 20:55",
+      "lastUtc": "2026-11-14T12:55:38.143Z"
     },
     "nutrition-updates-2": {
       "sent": 1,
@@ -140,16 +140,16 @@
       "lastUtc": "2026-11-11T11:55:52.005Z"
     },
     "antidepressant-2053": {
-      "sent": 3,
+      "sent": 4,
       "first": "2026-11-11 20:57",
-      "last": "2026-11-13 22:50",
-      "lastUtc": "2026-11-13T14:50:26.920Z"
+      "last": "2026-11-14 20:55",
+      "lastUtc": "2026-11-14T12:55:39.250Z"
     },
     "workout-ask-cal": {
-      "sent": 3,
+      "sent": 4,
       "first": "2026-11-11 20:57",
-      "last": "2026-11-13 22:50",
-      "lastUtc": "2026-11-13T14:50:28.334Z"
+      "last": "2026-11-14 20:55",
+      "lastUtc": "2026-11-14T12:55:40.339Z"
     },
     "week-cal-now-nov11": {
       "sent": 1,
@@ -246,6 +246,12 @@
       "first": "2026-11-14 19:55",
       "last": "2026-11-14 19:55",
       "lastUtc": "2026-11-14T11:55:14.191Z"
+    },
+    "session-nov15-eve": {
+      "sent": 1,
+      "first": "2026-11-14 20:55",
+      "last": "2026-11-14 20:55",
+      "lastUtc": "2026-11-14T12:55:36.850Z"
     }
   },
   "sent": [
@@ -680,12 +686,6 @@
       "utc": "2026-11-11T12:56:33.096Z",
       "claimed": "cc-routine",
       "due": "2026-11-11 20:53"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-11 20:57",
-      "utc": "2026-11-11T12:57:02.867Z",
-      "text": "Snacks close at 10 tonight\nIf you want something, have it soon."
     },
     {
       "id": "antidepressant-2053",
@@ -1162,6 +1162,30 @@
       "at": "2026-11-14 19:55",
       "utc": "2026-11-14T11:55:14.191Z",
       "text": "Time to grab your dance spot\n\n🕛 Sunday's class is at 12 pm\n📲 Book it tonight so it's yours"
+    },
+    {
+      "id": "session-nov15-eve",
+      "at": "2026-11-14 20:55",
+      "utc": "2026-11-14T12:55:36.850Z",
+      "text": "Your appointment's tomorrow at 10\n\n📝 Jot down tonight anything you want to bring up\n🛏️ Keep it short, a few words is fine"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-14 20:55",
+      "utc": "2026-11-14T12:55:38.143Z",
+      "text": "About an hour of snack time left\n\n🍌 Still peckish? Eat it before 10, then you're set for the night."
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-14 20:55",
+      "utc": "2026-11-14T12:55:39.250Z",
+      "text": "Before lights out\n\n💊 Your meds, then rest"
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-14 20:55",
+      "utc": "2026-11-14T12:55:40.339Z",
+      "text": "Strength Endurance at 9:30 is counted 💪\n\nAnything else since then? A walk or your ankle routine counts too."
     }
   ]
 }
