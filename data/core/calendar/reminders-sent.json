@@ -1041,6 +1041,13 @@
       "utc": "2026-11-14T00:54:39.878Z",
       "held": true,
       "why": "yesterday's workout already logged"
+    },
+    {
+      "id": "ot-doc-sat-am",
+      "at": "2026-11-14 10:55",
+      "utc": "2026-11-14T02:55:22.936Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-14 10:53"
     }
   ]
 }
