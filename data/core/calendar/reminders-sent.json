@@ -216,6 +216,12 @@
       "first": "2026-11-14 00:56",
       "last": "2026-11-14 00:56",
       "lastUtc": "2026-11-13T16:56:07.400Z"
+    },
+    "ot-doc-sat-am": {
+      "sent": 1,
+      "first": "2026-11-14 10:55",
+      "last": "2026-11-14 10:55",
+      "lastUtc": "2026-11-14T02:55:48.756Z"
     }
   },
   "sent": [
@@ -1048,6 +1054,12 @@
       "utc": "2026-11-14T02:55:22.936Z",
       "claimed": "cc-routine",
       "due": "2026-11-14 10:53"
+    },
+    {
+      "id": "ot-doc-sat-am",
+      "at": "2026-11-14 10:55",
+      "utc": "2026-11-14T02:55:48.756Z",
+      "text": "OT hours doc: today's the day\n\n📄 Tidy it up this morning, while it's quiet\n⏰ Sunday night is the last call"
     }
   ]
 }
