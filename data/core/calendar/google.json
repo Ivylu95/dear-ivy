@@ -1,41 +1,41 @@
 {
   "_what": "A copy of her Google Calendar, the next fortnight, refreshed by the heartbeat or a session through the connector (A-093). Read-only: nothing writes to her calendar from here.",
-  "synced_at": "2026-11-14T00:56:06.002Z",
+  "synced_at": "2026-11-14T08:56:09.574Z",
   "events": [
     {
       "start": "2026-11-14T09:30:00+08:00",
       "end": "2026-11-14T10:35:00+08:00",
       "all_day": false,
       "title": "Strength Endurance",
-      "calendar": "ivyyypotatopls@gmail.com"
+      "calendar": null
     },
     {
       "start": "2026-11-15T10:00:00+08:00",
       "end": "2026-11-15T11:00:00+08:00",
       "all_day": false,
       "title": "Therapy",
-      "calendar": "ivyyypotatopls@gmail.com"
+      "calendar": null
     },
     {
       "start": "2026-11-16",
       "end": "2026-11-17",
       "all_day": true,
       "title": "MLK Stay back to do poster",
-      "calendar": "ivyyypotatopls@gmail.com"
+      "calendar": null
     },
     {
       "start": "2026-11-25",
       "end": "2026-11-26",
       "all_day": true,
       "title": "Madeline birthday",
-      "calendar": "ivyyypotatopls@gmail.com"
+      "calendar": null
     },
     {
       "start": "2026-11-27",
       "end": "2026-11-28",
       "all_day": true,
       "title": "MLK Concert",
-      "calendar": "ivyyypotatopls@gmail.com"
+      "calendar": null
     }
   ]
 }
