@@ -20,10 +20,10 @@
       "lastUtc": "2026-11-13T08:55:36.555Z"
     },
     "midday-1153": {
-      "sent": 2,
+      "sent": 3,
       "first": "2026-11-12 11:54",
-      "last": "2026-11-13 12:55",
-      "lastUtc": "2026-11-13T04:55:59.767Z"
+      "last": "2026-11-14 11:55",
+      "lastUtc": "2026-11-14T03:55:21.545Z"
     }
   },
   "sent": [
@@ -143,6 +143,12 @@
       "at": "2026-11-14 08:56",
       "utc": "2026-11-14T00:56:49.157Z",
       "text": "Good morning, Saturday 14 Nov\n\n📅 Today 9:30am: Strength Endurance\n💳 Today: ClassPass trial ends, $99 if still on\n⏱️ Today: OT hours doc due by end of day\n🗓️ Tomorrow 10am: your appointment\n\nReminders still to come:\n• Today 10:53am and 5:53pm: OT doc\n• Tonight 8pm: notes for tomorrow's appointment\n• Tue 7pm: poster due Wed\n• Your daily food, snack and workout nudges carry on\n\nTap the link below to change or stop one.\n\nHow did you sleep, and how's your body feeling before Strength Endurance?"
+    },
+    {
+      "id": "midday-1153",
+      "at": "2026-11-14 11:55",
+      "utc": "2026-11-14T03:55:21.545Z",
+      "text": "Midday water check\nStrength Endurance done this morning 💪\n\n💧 A glass or two helps after class\n💃 Book tomorrow's 12pm dance class tonight\n\nHave you had a glass of water since Strength Endurance?"
     }
   ]
 }
