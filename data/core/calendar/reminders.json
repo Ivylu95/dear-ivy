@@ -1,6 +1,6 @@
 {
   "timezone": "Asia/Singapore",
-  "sent_through": "2026-11-14 18:53",
+  "sent_through": "2026-11-14 19:54",
   "send": "routine",
   "reminders": [
     {
@@ -47,13 +47,6 @@
       "text": "Poster due tomorrow: finish what's left",
       "at": "2026-11-17 19:00",
       "set": "2026-11-11 07:10"
-    },
-    {
-      "id": "montage-thu12-eve",
-      "emoji": "🎞️",
-      "text": "Montage: get most done",
-      "at": "2026-11-12 19:00",
-      "set": "2026-11-11 08:40"
     },
     {
       "id": "lunch-fri13",

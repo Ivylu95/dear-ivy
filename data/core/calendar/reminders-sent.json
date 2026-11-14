@@ -240,6 +240,12 @@
       "first": "2026-11-14 17:54",
       "last": "2026-11-14 17:54",
       "lastUtc": "2026-11-14T09:54:58.788Z"
+    },
+    "book-dance": {
+      "sent": 1,
+      "first": "2026-11-14 19:55",
+      "last": "2026-11-14 19:55",
+      "lastUtc": "2026-11-14T11:55:14.191Z"
     }
   },
   "sent": [
@@ -1150,6 +1156,12 @@
       "utc": "2026-11-14T11:54:37.066Z",
       "claimed": "cc-routine",
       "due": "2026-11-14 19:53"
+    },
+    {
+      "id": "book-dance",
+      "at": "2026-11-14 19:55",
+      "utc": "2026-11-14T11:55:14.191Z",
+      "text": "Time to grab your dance spot\n\n🕛 Sunday's class is at 12 pm\n📲 Book it tonight so it's yours"
     }
   ]
 }
