@@ -228,6 +228,12 @@
       "first": "2026-11-14 14:55",
       "last": "2026-11-14 14:55",
       "lastUtc": "2026-11-14T06:55:21.423Z"
+    },
+    "portfolio-sat": {
+      "sent": 1,
+      "first": "2026-11-14 16:55",
+      "last": "2026-11-14 16:55",
+      "lastUtc": "2026-11-14T08:55:20.768Z"
     }
   },
   "sent": [
@@ -1092,6 +1098,12 @@
       "at": "2026-11-14 14:55",
       "utc": "2026-11-14T06:55:21.423Z",
       "text": "Montage time today\nA free Saturday afternoon – good window\n\n🎬 Concert montage: due Mon 16 Nov\n📁 Work portfolio: send by Sunday\n\nEven one hour on the montage today makes Sunday lighter."
+    },
+    {
+      "id": "portfolio-sat",
+      "at": "2026-11-14 16:55",
+      "utc": "2026-11-14T08:55:20.768Z",
+      "text": "Portfolio time\nA free slot before dinner\n\n📁 Work portfolio: send by tomorrow (Sun)\n\nOne small part now makes tomorrow easy."
     }
   ]
 }
