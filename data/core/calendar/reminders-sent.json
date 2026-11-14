@@ -701,13 +701,6 @@
     {
       "id": "no-snacks-after-10",
       "at": "2026-11-11 22:54",
-      "utc": "2026-11-11T14:54:29.864Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-11 22:00"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-11 22:54",
       "utc": "2026-11-11T14:54:45.969Z",
       "text": "Kitchen's closed now\nIt's nearly 11, so no more food tonight. Go easy and get some rest."
     },
@@ -1207,6 +1200,13 @@
       "at": "2026-11-14 20:55",
       "utc": "2026-11-14T12:55:40.339Z",
       "text": "Strength Endurance at 9:30 is counted 💪\n\nAnything else since then? A walk or your ankle routine counts too."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-14 22:55",
+      "utc": "2026-11-14T14:55:06.704Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-14 22:00"
     }
   ]
 }
