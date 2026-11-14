@@ -53,6 +53,7 @@ her words, blank when not said._
 - 2026-11-11 (Wed, evening; told 10:04 pm) · A second session: BFT lower body, 50 min. Her words: *"Another bft lower body workout evening 50 mins"*
 - 2026-11-12 (Thu, told 7:14 am) · Cardio and strength at BFT, 50 min. Her words: *"Log my workout for the day 50 minutes cardio strength training at bft"*
 - 2026-11-13 (Fri, told 9:06 am) · Light training at BFT, mostly stretching; length not given. Her words: *"light training at bft, probably burned only 80-100c bc it's more of stretching?"*
+- 2026-11-14 (Sat, told 2026-11-15) · A workout, type and length not given; 200 kcal burned, her figure. Her words: *"worked out 200 calories out"*
 
 ## Worth keeping in view
 
