@@ -2,10 +2,10 @@
   "_what": "The last messages the sweep wrote for each check-in, so the next differs, how many Telegram accepted, and any held (HBT-010, HBT-014).",
   "counts": {
     "morning-update-2": {
-      "sent": 6,
+      "sent": 7,
       "first": "2026-11-07 08:54",
-      "last": "2026-11-13 08:57",
-      "lastUtc": "2026-11-13T00:57:36.797Z"
+      "last": "2026-11-14 08:56",
+      "lastUtc": "2026-11-14T00:56:49.157Z"
     },
     "midday": {
       "sent": 4,
@@ -32,12 +32,6 @@
       "at": "2026-11-07 12:54",
       "utc": "2026-11-07T04:54:19.803Z",
       "text": "Water break\nNothing else on your plate this afternoon, so it's a good time to catch up on water.\n\nHave you had a glass yet today?"
-    },
-    {
-      "id": "morning-update-2",
-      "at": "2026-11-08 08:54",
-      "utc": "2026-11-08T00:54:40.610Z",
-      "text": "Good morning, Sunday 8 Nov\n\n📅 Nothing on in your calendar today\n🏖️ Tomorrow, Mon 9 Nov: public holiday, and STRONG Pilates at 4:15pm in Orchard\n🛋️ Next Sunday, 15 Nov: your 10am appointment\n\nComing up from your reminders:\n📝 Today at 10:45am, lesson plan nudge\n💳 Four days from now, 12:30pm: a nudge to stop the ClassPass trial\n💆 Friday 13th at 5pm, facial heads-up\n🗒️ Saturday 14th at 8pm, jot-down note\n🔁 Daily: workout catch-up in the morning, workout check at 8:30pm, snack nudges at 8 and 10pm, bedtime reminder at 9:53pm, food checks before meals\n🔁 Sundays: your feedback list at 5pm, your workout week at 9:53pm\n\nWant any of these changed, moved or stopped? The link below takes you there."
     },
     {
       "id": "midday",
@@ -143,6 +137,12 @@
       "at": "2026-11-13 16:55",
       "utc": "2026-11-13T08:55:36.555Z",
       "text": "Afternoon water top-up\nMontage day and a facial to round it off 🌤️\n\n💧 A glass now, before you head to Clementi\n\nHow's the water count looking since the 1pm printing?"
+    },
+    {
+      "id": "morning-update-2",
+      "at": "2026-11-14 08:56",
+      "utc": "2026-11-14T00:56:49.157Z",
+      "text": "Good morning, Saturday 14 Nov\n\n📅 Today 9:30am: Strength Endurance\n💳 Today: ClassPass trial ends, $99 if still on\n⏱️ Today: OT hours doc due by end of day\n🗓️ Tomorrow 10am: your appointment\n\nReminders still to come:\n• Today 10:53am and 5:53pm: OT doc\n• Tonight 8pm: notes for tomorrow's appointment\n• Tue 7pm: poster due Wed\n• Your daily food, snack and workout nudges carry on\n\nTap the link below to change or stop one.\n\nHow did you sleep, and how's your body feeling before Strength Endurance?"
     }
   ]
 }
