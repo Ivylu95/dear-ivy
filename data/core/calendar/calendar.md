@@ -19,6 +19,7 @@ _Appointments, deadlines, trips, birthdays. Soonest first. Remove once past
 | 2026-11-12 | ~~Cancel ClassPass~~ — done: she has cancelled it (told 2026-11-14); no more reminders | From her Google Calendar |
 | 2026-11-13 18:00 | Facial at Clementi; ask for the free eye treatment | From her Google Calendar |
 | 2026-11-14 | Tidy OT hours document, by end of day | Told 2026-11-12 |
+| 2026-11-16 | Tidy OT hours document, by tonight (not finished the week before; told 2026-11-16) | Told 2026-11-16 |
 | 2026-11-14 | Book Sunday's dance class tonight | Told 2026-11-14 |
 | 2026-11-14 – 2026-11-15 | Finish video montage this weekend; submit work portfolio by Sunday | Told 2026-11-14 |
 | 2026-11-15 10:00 | Therapy | She corrected the time on 2026-11-06: 10 am, not 10 pm (her Google Calendar moved to 10–11 am the same day, on her yes) |

@@ -236,6 +236,27 @@
       "text": "Sent at her ask, now: her workout week 9 to 15 Nov again, with Sunday's dance added",
       "at": "2026-11-16 07:36",
       "set": "2026-11-16 07:36"
+    },
+    {
+      "id": "ot-doc-mon-lunch",
+      "emoji": "⏱️",
+      "text": "Tidy OT hours document: use your break",
+      "at": "2026-11-16 13:53",
+      "set": "2026-11-16 07:38"
+    },
+    {
+      "id": "ot-doc-mon-eve",
+      "emoji": "⏱️",
+      "text": "Tidy OT hours document: finish tonight",
+      "at": "2026-11-16 19:53",
+      "set": "2026-11-16 07:38"
+    },
+    {
+      "id": "ot-doc-mon-last",
+      "emoji": "⏱️",
+      "text": "Tidy OT hours document: last chance today",
+      "at": "2026-11-16 21:53",
+      "set": "2026-11-16 07:38"
     }
   ]
 }
