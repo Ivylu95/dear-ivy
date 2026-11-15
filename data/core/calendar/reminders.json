@@ -1,15 +1,8 @@
 {
   "timezone": "Asia/Singapore",
-  "sent_through": "2026-11-15 16:54",
+  "sent_through": "2026-11-15 17:54",
   "send": "routine",
   "reminders": [
-    {
-      "id": "facial-nov13",
-      "emoji": "💆",
-      "text": "Facial at 6 pm in Clementi; ask for Jess or Jade, and for the free eye treatment",
-      "at": "2026-11-13 17:00",
-      "set": "2026-11-06 21:44"
-    },
     {
       "id": "feedback-sunday",
       "emoji": "📤",
