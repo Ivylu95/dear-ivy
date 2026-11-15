@@ -128,10 +128,10 @@
       "lastUtc": "2026-11-11T05:10:39.496Z"
     },
     "food-dinner-1853": {
-      "sent": 4,
+      "sent": 5,
       "first": "2026-11-11 18:55",
-      "last": "2026-11-14 18:55",
-      "lastUtc": "2026-11-14T10:55:10.053Z"
+      "last": "2026-11-15 18:55",
+      "lastUtc": "2026-11-15T10:55:25.017Z"
     },
     "poster-start": {
       "sent": 1,
@@ -270,6 +270,12 @@
       "first": "2026-11-15 16:55",
       "last": "2026-11-15 16:55",
       "lastUtc": "2026-11-15T08:55:30.908Z"
+    },
+    "ot-doc-sun": {
+      "sent": 1,
+      "first": "2026-11-15 18:55",
+      "last": "2026-11-15 18:55",
+      "lastUtc": "2026-11-15T10:55:26.131Z"
     }
   },
   "sent": [
@@ -1323,6 +1329,18 @@
       "at": "2026-11-15 17:55",
       "utc": "2026-11-15T09:55:02.492Z",
       "text": "Your feedback list, ready to forward\nFour new ones this week ✨\n\n🏋️ My workouts show up with my calories\n😊 Emojis on each point in Luna's messages\n📱 Luna: short points, gaps between, easy to scan\n⏰ Luna at the exact time I pick\n🍽️ Nudge me about food even if I haven't logged anything\n💬 Keep a setup question going if I change topic\n⏰ Reminders at the exact time I set\n🗓️ Suggest reminders from my calendar\n🔔 Show my reminders after any change\n📊 Keep the 3-column table for ideas and reminders\n📊 Recommendations in a small table for my phone\n⏰ Messages on time, not up to an hour late\n📨 Send it now means now\n💾 Saving works first try\n🌙 Only my own things run in the background\n📱 Easy to read on my phone, lists not wide tables\n🙈 No techy stuff in my chats\n🔒 Only my own notes get changed\n💬 All feedback goes to my Any Feedback chat"
+    },
+    {
+      "id": "food-dinner-1853",
+      "at": "2026-11-15 18:55",
+      "utc": "2026-11-15T10:55:25.017Z",
+      "text": "Dinner's around 7\nA homemade snack in there today 🍅\n\n🍽️ █████████░ 89% · ~1,070 of 1,200 kcal eaten\n🔥 About 130 kcal of room left\n~ some of today is estimated\n\nIf you're hungry, something light fits well, like steamed fish or tofu with greens. Send it over when you've eaten."
+    },
+    {
+      "id": "ot-doc-sun",
+      "at": "2026-11-15 18:55",
+      "utc": "2026-11-15T10:55:26.131Z",
+      "text": "Last call for the OT hours doc\n\n📄 Tidy it up and finish it tonight"
     }
   ]
 }
