@@ -164,10 +164,10 @@
       "lastUtc": "2026-11-12T15:55:07.681Z"
     },
     "food-breakfast-0753": {
-      "sent": 4,
+      "sent": 5,
       "first": "2026-11-12 08:00",
-      "last": "2026-11-15 07:55",
-      "lastUtc": "2026-11-14T23:55:05.049Z"
+      "last": "2026-11-16 07:55",
+      "lastUtc": "2026-11-15T23:55:03.763Z"
     },
     "cancel-classpass": {
       "sent": 1,
@@ -1425,6 +1425,12 @@
       "utc": "2026-11-15T23:54:42.636Z",
       "claimed": "cc-routine",
       "due": "2026-11-16 07:53"
+    },
+    {
+      "id": "food-breakfast-0753",
+      "at": "2026-11-16 07:55",
+      "utc": "2026-11-15T23:55:03.763Z",
+      "text": "New week, bfk time\nMoved every day last week 💪\n\n🔥 Eaten ░░░░░░░░░░ 0% · 1,200 kcal room\n\nOvernight oats with Greek yoghurt is about 250, a filling Monday start with lots of room left."
     }
   ]
 }
