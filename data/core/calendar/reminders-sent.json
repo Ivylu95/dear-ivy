@@ -992,13 +992,6 @@
       "due": "2026-11-13 20:53"
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-13 22:49",
-      "utc": "2026-11-13T14:49:50.705Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-13 22:00"
-    },
-    {
       "id": "ot-doc-fri",
       "at": "2026-11-13 22:50",
       "utc": "2026-11-13T14:50:25.635Z",
@@ -1400,6 +1393,13 @@
       "at": "2026-11-15 21:55",
       "utc": "2026-11-15T13:55:23.056Z",
       "text": "Your workout week, 9 to 15 Nov\nSix days of moving, that's a strong week 💪\n\n🧘 Mon: STRONG Pilates\n🏃 Tue: BFT cardio, 50 min\n🦵 Wed: lower body twice, morning and evening\n🏋️ Thu: BFT cardio and strength, 50 min\n🤸 Fri: light BFT, mostly stretching\n🔥 Sat: HIIT strength, 1 hour\n📅 Sun: nothing logged yet"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-15 22:54",
+      "utc": "2026-11-15T14:54:42.634Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-15 22:00"
     }
   ]
 }
