@@ -1381,6 +1381,13 @@
       "at": "2026-11-15 20:55",
       "utc": "2026-11-15T12:55:32.844Z",
       "text": "Any movement today?\n\nNothing on your calendar for today.\n\n🏃 Tell me what you did, even a walk or the ankle routine. Sets and reps if you have them."
+    },
+    {
+      "id": "workout-week-cal",
+      "at": "2026-11-15 21:54",
+      "utc": "2026-11-15T13:54:44.129Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-15 21:53"
     }
   ]
 }
