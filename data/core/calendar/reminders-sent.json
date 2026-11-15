@@ -1233,6 +1233,13 @@
       "at": "2026-11-15 07:55",
       "utc": "2026-11-14T23:55:05.049Z",
       "text": "Sunday bfk, nothing logged yet\n\n🔥 Eaten ░░░░░░░░░░ 0% · 1,200 kcal room\n\nGreek yoghurt with some berries is about 150, a light protein start that leaves lots of room."
+    },
+    {
+      "id": "workout-catchup-cal",
+      "at": "2026-11-15 08:54",
+      "utc": "2026-11-15T00:54:34.668Z",
+      "held": true,
+      "why": "yesterday's workout already logged"
     }
   ]
 }
