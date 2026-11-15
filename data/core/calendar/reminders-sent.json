@@ -749,13 +749,6 @@
     },
     {
       "id": "food-breakfast-0753",
-      "at": "2026-11-12 07:59",
-      "utc": "2026-11-11T23:59:36.404Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-12 07:53"
-    },
-    {
-      "id": "food-breakfast-0753",
       "at": "2026-11-12 08:00",
       "utc": "2026-11-12T00:00:06.439Z",
       "text": "Bfk and lunch both logged\nnice and early\n\n🔥 Eaten ▓▓▓▓▓▓░░░░ 61% · ~465 kcal room\n🏃 Burned 160 kcal at BFT\n⚖️ Balance ~575 · ~625 under 1,200\n\nDinner: eggs or lean meat with veg sits well in the room left.\n\n~ some of today is estimated"
@@ -1425,6 +1418,13 @@
       "at": "2026-11-16 07:35",
       "utc": "2026-11-15T23:35:59.656Z",
       "text": "📊 Your workout week, 9 to 15 Nov\nSeven days of moving, every single day 💪\n\n• 🧘 Mon: STRONG Pilates\n• 🏃 Tue: BFT cardio, 50 min\n• 🦵 Wed: lower body twice, morning and evening\n• 🏋️ Thu: BFT cardio and strength, 50 min\n• 🤸 Fri: light BFT, mostly stretching\n• 🔥 Sat: HIIT strength, 1 hour\n• 💃 Sun: dance, 1 hour"
+    },
+    {
+      "id": "food-breakfast-0753",
+      "at": "2026-11-16 07:54",
+      "utc": "2026-11-15T23:54:42.636Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-16 07:53"
     }
   ]
 }
