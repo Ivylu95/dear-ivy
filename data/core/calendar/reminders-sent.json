@@ -164,10 +164,10 @@
       "lastUtc": "2026-11-12T15:55:07.681Z"
     },
     "food-breakfast-0753": {
-      "sent": 4,
+      "sent": 5,
       "first": "2026-11-12 08:00",
-      "last": "2026-11-15 07:55",
-      "lastUtc": "2026-11-14T23:55:05.049Z"
+      "last": "2026-11-16 07:55",
+      "lastUtc": "2026-11-15T23:55:03.763Z"
     },
     "cancel-classpass": {
       "sent": 1,
@@ -1425,6 +1425,12 @@
       "at": "2026-11-16 07:35",
       "utc": "2026-11-15T23:35:59.656Z",
       "text": "📊 Your workout week, 9 to 15 Nov\nSeven days of moving, every single day 💪\n\n• 🧘 Mon: STRONG Pilates\n• 🏃 Tue: BFT cardio, 50 min\n• 🦵 Wed: lower body twice, morning and evening\n• 🏋️ Thu: BFT cardio and strength, 50 min\n• 🤸 Fri: light BFT, mostly stretching\n• 🔥 Sat: HIIT strength, 1 hour\n• 💃 Sun: dance, 1 hour"
+    },
+    {
+      "id": "food-breakfast-0753",
+      "at": "2026-11-16 07:55",
+      "utc": "2026-11-15T23:55:03.763Z",
+      "text": "New week, bfk time\nMoved every day last week 💪\n\n🔥 Eaten ░░░░░░░░░░ 0% · 1,200 kcal room\n\nOvernight oats with Greek yoghurt is about 250, a filling Monday start with lots of room left."
     }
   ]
 }
