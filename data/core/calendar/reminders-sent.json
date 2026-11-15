@@ -276,6 +276,12 @@
       "first": "2026-11-15 18:55",
       "last": "2026-11-15 18:55",
       "lastUtc": "2026-11-15T10:55:26.131Z"
+    },
+    "workout-week-cal": {
+      "sent": 1,
+      "first": "2026-11-15 21:55",
+      "last": "2026-11-15 21:55",
+      "lastUtc": "2026-11-15T13:55:23.056Z"
     }
   },
   "sent": [
@@ -1388,6 +1394,12 @@
       "utc": "2026-11-15T13:54:44.129Z",
       "claimed": "cc-routine",
       "due": "2026-11-15 21:53"
+    },
+    {
+      "id": "workout-week-cal",
+      "at": "2026-11-15 21:55",
+      "utc": "2026-11-15T13:55:23.056Z",
+      "text": "Your workout week, 9 to 15 Nov\nSix days of moving, that's a strong week 💪\n\n🧘 Mon: STRONG Pilates\n🏃 Tue: BFT cardio, 50 min\n🦵 Wed: lower body twice, morning and evening\n🏋️ Thu: BFT cardio and strength, 50 min\n🤸 Fri: light BFT, mostly stretching\n🔥 Sat: HIIT strength, 1 hour\n📅 Sun: nothing logged yet"
     }
   ]
 }
