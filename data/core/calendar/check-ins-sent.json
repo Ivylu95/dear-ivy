@@ -20,10 +20,10 @@
       "lastUtc": "2026-11-14T08:56:23.977Z"
     },
     "midday-1153": {
-      "sent": 3,
+      "sent": 4,
       "first": "2026-11-12 11:54",
-      "last": "2026-11-14 11:55",
-      "lastUtc": "2026-11-14T03:55:21.545Z"
+      "last": "2026-11-15 11:55",
+      "lastUtc": "2026-11-15T03:55:20.919Z"
     }
   },
   "sent": [
@@ -149,6 +149,12 @@
       "at": "2026-11-15 08:55",
       "utc": "2026-11-15T00:55:43.355Z",
       "text": "Good morning, Sunday 15 Nov\n\n📅 Today 10am: your appointment\n💃 Today 12pm: dance class\n📁 Today: portfolio due, and the OT hours doc's last day\n🎞️ Tomorrow, Mon 16: montage due, and staying back at MLK for the poster\n\nReminders still to come:\n• Today 10:53am: dance class heads-up\n• Today 3:53pm: finish the montage\n• Today 4:53pm: submit the portfolio\n• Today 5pm: Sunday feedback\n• Today 6:53pm: OT doc, last chance\n• Tonight 9:53pm: your week of workouts\n• Tomorrow lunch and 7pm: montage wrap-up, then the poster\n• Tue 7pm: one last poster push\n• Plus the everyday ones: meals, snacks, bedtime and workouts\n\nTap below if you'd like to change one or let it go.\n\nHow did you sleep, and how's your body after yesterday's hour of HIIT?"
+    },
+    {
+      "id": "midday-1153",
+      "at": "2026-11-15 11:55",
+      "utc": "2026-11-15T03:55:20.919Z",
+      "text": "Water before dance\nDance class at 12, nearly time 💃\n\n💧 Sip some water on the way in\n🎞️ Montage and portfolio to wrap up this afternoon\n\nGot a bottle packed for class?"
     }
   ]
 }

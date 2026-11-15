@@ -34,4 +34,4 @@ Thinking hard about the guy she's dating. Calm, practical, wants a plan.
 Check-in afternoon (2026-11-14 16:56): How many glasses have you had this afternoon?
 Check-in morning-update-2 (2026-11-15 08:56): How did you sleep, and how's your body after yesterday's hour of HIIT?
 Check-in midday (2026-11-10 12:55): How many glasses have you got in since you woke up?
-Check-in midday-1153 (2026-11-14 11:55): Have you had a glass of water since Strength Endurance?
+Check-in midday-1153 (2026-11-15 11:55): Got a bottle packed for class?
