@@ -1291,6 +1291,13 @@
       "at": "2026-11-15 15:55",
       "utc": "2026-11-15T07:55:03.526Z",
       "text": "Montage: last push today\n\n🎞️ Finish it off this afternoon\n📅 It's due tomorrow, Mon 16\n\nOne more sitting and it's done. You've got this 💪"
+    },
+    {
+      "id": "portfolio-sun",
+      "at": "2026-11-15 16:55",
+      "utc": "2026-11-15T08:55:00.794Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-15 16:53"
     }
   ]
 }
