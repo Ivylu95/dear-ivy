@@ -1301,6 +1301,13 @@
     {
       "id": "portfolio-sun",
       "at": "2026-11-15 16:55",
+      "utc": "2026-11-15T08:55:00.794Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-15 16:53"
+    },
+    {
+      "id": "portfolio-sun",
+      "at": "2026-11-15 16:55",
       "utc": "2026-11-15T08:55:30.908Z",
       "text": "Portfolio goes in today\nYou put your weekend into this one.\n\nSend off your work portfolio before the day ends, then enjoy the rest of Sunday 🌿"
     }
