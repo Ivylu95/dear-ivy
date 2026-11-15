@@ -1400,6 +1400,13 @@
       "at": "2026-11-15 22:55",
       "utc": "2026-11-15T14:55:11.840Z",
       "text": "Done eating for today\n\n🌙 It's past 10, so next up is bfk. Night night."
+    },
+    {
+      "id": "week-cal-in-out-2",
+      "at": "2026-11-15 23:54",
+      "utc": "2026-11-15T15:54:56.259Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-15 23:00"
     }
   ]
 }
