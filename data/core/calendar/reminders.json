@@ -1,6 +1,6 @@
 {
   "timezone": "Asia/Singapore",
-  "sent_through": "2026-11-15 08:54",
+  "sent_through": "2026-11-15 10:53",
   "send": "routine",
   "reminders": [
     {
@@ -33,13 +33,6 @@
       "text": "Stop snacking after 10 pm (at 8 pm: anything still wanted tonight, have it soon; at 10 pm: kitchen's closed for tonight)",
       "cron": "0 20,22 * * *",
       "set": "2026-11-07 11:03"
-    },
-    {
-      "id": "poster-photos",
-      "emoji": "📸",
-      "text": "Poster: costume photos",
-      "at": "2026-11-13 09:00",
-      "set": "2026-11-11 07:10"
     },
     {
       "id": "poster-due",
