@@ -1259,6 +1259,13 @@
       "at": "2026-11-15 10:54",
       "utc": "2026-11-15T02:54:50.559Z",
       "text": "Dance class at 12 today, about an hour to go. Have fun!"
+    },
+    {
+      "id": "food-lunch-1253",
+      "at": "2026-11-15 12:54",
+      "utc": "2026-11-15T04:54:26.447Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-15 12:53"
     }
   ]
 }
