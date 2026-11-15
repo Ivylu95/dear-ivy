@@ -1263,6 +1263,13 @@
     {
       "id": "food-lunch-1253",
       "at": "2026-11-15 12:54",
+      "utc": "2026-11-15T04:54:26.447Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-15 12:53"
+    },
+    {
+      "id": "food-lunch-1253",
+      "at": "2026-11-15 12:54",
       "utc": "2026-11-15T04:54:43.211Z",
       "text": "Lunchtime on a Sunday\n\n🔥 Nothing logged yet today\n1,200 kcal of room for the day\n\nA palm of fish, chicken or egg with rice and greens would set the afternoon up nicely. Log it when you can 🙂"
     }
