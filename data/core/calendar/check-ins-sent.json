@@ -2,10 +2,10 @@
   "_what": "The last messages the sweep wrote for each check-in, so the next differs, how many Telegram accepted, and any held (HBT-010, HBT-014).",
   "counts": {
     "morning-update-2": {
-      "sent": 7,
+      "sent": 8,
       "first": "2026-11-07 08:54",
-      "last": "2026-11-14 08:56",
-      "lastUtc": "2026-11-14T00:56:49.157Z"
+      "last": "2026-11-15 08:55",
+      "lastUtc": "2026-11-15T00:55:43.355Z"
     },
     "midday": {
       "sent": 4,
@@ -38,12 +38,6 @@
       "at": "2026-11-08 12:54",
       "utc": "2026-11-08T04:54:41.169Z",
       "text": "Midday water check\nSunday's wide open, so it's an easy one to sneak some water in 💧\n\nHow many glasses have you had so far this morning?"
-    },
-    {
-      "id": "morning-update-2",
-      "at": "2026-11-09 09:55",
-      "utc": "2026-11-09T01:55:08.333Z",
-      "text": "Good morning, Monday 9 Nov\n\n🏖️ Today: public holiday, with STRONG Pilates at 4:15pm in Orchard\n📅 Tomorrow, Tue 10 Nov: nothing on\n\nYour reminders carry on as usual this week, from the facial heads-up on Friday to the Sunday ones. The link below is there if any need changing.\n\nHow did you sleep, and how does your body feel after the weekend?"
     },
     {
       "id": "midday",
@@ -149,6 +143,12 @@
       "at": "2026-11-14 16:56",
       "utc": "2026-11-14T08:56:23.977Z",
       "text": "Afternoon water top-up\nClass done, a strong Saturday so far 🌤️\n\n💧 A glass now keeps the evening easy\n⏱️ OT hours doc: due tonight\n\nHow many glasses have you had this afternoon?"
+    },
+    {
+      "id": "morning-update-2",
+      "at": "2026-11-15 08:55",
+      "utc": "2026-11-15T00:55:43.355Z",
+      "text": "Good morning, Sunday 15 Nov\n\n📅 Today 10am: your appointment\n💃 Today 12pm: dance class\n📁 Today: portfolio due, and the OT hours doc's last day\n🎞️ Tomorrow, Mon 16: montage due, and staying back at MLK for the poster\n\nReminders still to come:\n• Today 10:53am: dance class heads-up\n• Today 3:53pm: finish the montage\n• Today 4:53pm: submit the portfolio\n• Today 5pm: Sunday feedback\n• Today 6:53pm: OT doc, last chance\n• Tonight 9:53pm: your week of workouts\n• Tomorrow lunch and 7pm: montage wrap-up, then the poster\n• Tue 7pm: one last poster push\n• Plus the everyday ones: meals, snacks, bedtime and workouts\n\nTap below if you'd like to change one or let it go.\n\nHow did you sleep, and how's your body after yesterday's hour of HIIT?"
     }
   ]
 }
