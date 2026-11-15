@@ -1313,6 +1313,13 @@
     },
     {
       "id": "feedback-sunday",
+      "at": "2026-11-15 17:54",
+      "utc": "2026-11-15T09:54:46.965Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-15 17:00"
+    },
+    {
+      "id": "feedback-sunday",
       "at": "2026-11-15 17:55",
       "utc": "2026-11-15T09:55:02.492Z",
       "text": "Your feedback list, ready to forward\nFour new ones this week ✨\n\n🏋️ My workouts show up with my calories\n😊 Emojis on each point in Luna's messages\n📱 Luna: short points, gaps between, easy to scan\n⏰ Luna at the exact time I pick\n🍽️ Nudge me about food even if I haven't logged anything\n💬 Keep a setup question going if I change topic\n⏰ Reminders at the exact time I set\n🗓️ Suggest reminders from my calendar\n🔔 Show my reminders after any change\n📊 Keep the 3-column table for ideas and reminders\n📊 Recommendations in a small table for my phone\n⏰ Messages on time, not up to an hour late\n📨 Send it now means now\n💾 Saving works first try\n🌙 Only my own things run in the background\n📱 Easy to read on my phone, lists not wide tables\n🙈 No techy stuff in my chats\n🔒 Only my own notes get changed\n💬 All feedback goes to my Any Feedback chat"
