@@ -18,6 +18,7 @@
 - Brain stimulation matters a lot to her: *"having my brain stimulated it's very important to me"* (2026-10-05, said about Eugene).
 
 ## Where it stands (newest first)
+- 2026-11-15: Planning to meet up; one of them is coming from Serangoon and the other from Dhoby Ghaut, so they want a cafe in the middle. Date not yet known.
 - 2026-10-12: Met once. He wants to meet again; she does too.
 
 Detail: `journal/2026-10-12.md`. Compare: `people/eugene.md`, `people/wj.md`.
