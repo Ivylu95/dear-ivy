@@ -23,6 +23,7 @@ _Use her language, not clinical language. If she says "flat", don't write
 | c (after a number) | Calories, e.g. *"200c"* (2026-11-13) |
 | HM matcha latte | Her homemade matcha latte, 150 kcal; one bought outside is a different drink (named 2026-11-12: *"HM matcha latte for shot in future"*) |
 | store bought, SB | SB is her short form (2026-11-12: *"SB for short"*). What she calls food or drink bought outside, as against homemade (HM). Voice typing wrote it as "starboard" once; her correction, 2026-11-12: *"Store bought I mean"* |
+| a stray word in a voice memo | Her voice notes can pick up a sneeze or a noise as a word (2026-11-16: *"I did not call you a bitch, it came out I sneezed and the voice memo recorded it"*). A strange word in the middle of a food line is noise: read around it, and don't repeat it back |
 | lock (voice slip) | "Log". Her voice typing writes "lock" for "log"; her correction, 2026-11-12: *"Log not lock"*. Read it as log without asking |
 |  |  |
 
