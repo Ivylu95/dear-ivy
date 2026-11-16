@@ -1438,6 +1438,20 @@
       "at": "2026-11-16 12:55",
       "utc": "2026-11-16T04:55:47.078Z",
       "text": "Your sandwich is logged\nA good mix in there today 🥪\n\n🔥 ▰▰▰▰▰▰▰▱▱▱ 73% of 1,200 kcal\n~320 kcal room left\n🏃‍♀️ No exercise logged yet\n\nFor dinner, half a salmon fillet or a palm of chicken, airfried with broccoli, fits the room and adds the protein the day is light on.\n\n~ some of today is estimated"
+    },
+    {
+      "id": "lunch-mon16",
+      "at": "2026-11-16 13:54",
+      "utc": "2026-11-16T05:54:50.186Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-16 13:00"
+    },
+    {
+      "id": "ot-doc-mon-lunch",
+      "at": "2026-11-16 13:54",
+      "utc": "2026-11-16T05:54:50.321Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-16 13:53"
     }
   ]
 }
