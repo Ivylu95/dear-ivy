@@ -128,10 +128,10 @@
       "lastUtc": "2026-11-11T05:10:39.496Z"
     },
     "food-dinner-1853": {
-      "sent": 5,
+      "sent": 6,
       "first": "2026-11-11 18:55",
-      "last": "2026-11-15 18:55",
-      "lastUtc": "2026-11-15T10:55:25.017Z"
+      "last": "2026-11-16 18:55",
+      "lastUtc": "2026-11-16T10:55:13.010Z"
     },
     "poster-start": {
       "sent": 1,
@@ -681,12 +681,6 @@
       "utc": "2026-11-11T10:54:47.925Z",
       "claimed": "cc-routine",
       "due": "2026-11-11 18:53"
-    },
-    {
-      "id": "food-dinner-1853",
-      "at": "2026-11-11 18:55",
-      "utc": "2026-11-11T10:55:21.302Z",
-      "text": "Dinner time, when you're ready\n\nToday so far:\n██████████ 124% · ~1,485 of 1,200 kcal eaten\nBurned: 150 kcal at BFT\n~ some of today is estimated\n\nIf you're hungry, something light and warm, like a clear soup with fish or tofu and greens. Log it when you can, no rush."
     },
     {
       "id": "poster-start",
@@ -1476,6 +1470,12 @@
       "at": "2026-11-16 13:55",
       "utc": "2026-11-16T05:55:34.814Z",
       "text": "Break time: OT hours doc\n\n⏱️ Use your break to tidy it up"
+    },
+    {
+      "id": "food-dinner-1853",
+      "at": "2026-11-16 18:55",
+      "utc": "2026-11-16T10:55:13.010Z",
+      "text": "Dinner's about 7, eat when you're ready\nNice sandwich lunch today 🥪\n\n🍽️ █████████░ 86% · ~1,030 of 1,200 kcal eaten\n🔥 About 170 kcal of room left\n~ some of today is estimated\n\nProtein's been light today, so a small piece of fish or some tofu with greens would fit well. Send it over once you've eaten."
     }
   ]
 }
