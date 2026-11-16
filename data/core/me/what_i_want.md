@@ -13,6 +13,7 @@ delete the old version.
   - 2026-10-10: opened a talk about physical health, then said: *"I want to be 42kg"*. I kept to 46 kg and asked what's bringing it up today.
   - 2026-11-09: set a daily calorie limit of 1,200 (*"total calories to eat in a day = 1200 for me"*), after I said once that 1,500 would suit her training better. Then asked: *"Can change limit to 1000?"* I said I can't set a limit under 1,200 without a doctor or dietitian looking after it, and kept 1,200.
   - 2026-11-12: asked again for 1,000, as a stricter line to keep herself on track while still eating 1,200. Her words: *"I know I'm supposed to consume 1200 calories, but could you just change my total intake to 1000? I will still consume 1200 on my own accords, but I just want to put 1000 on the lower side so I can keep myself on track."* Kept 1,200; pointed her to a doctor or dietitian for anything lower, without arguing it again. Minutes later, on seeing the table: *"No, it should be versus 1000 cal. Please change it and calculate accordingly."* Kept 1,200 again, briefly.
+  - 2026-11-16: she said *"I'm 45kg"*, which is below the 46 kg the plan of 2026-10-03 was set to stop at; I had said then that I would stop helping with weight loss at 46 kg. Said once, kindly, that I'm keeping to that and that a GP or dietitian is the right person to be alongside her now. Her response: not yet known.
 
 - **In a partner (told 2026-10-05):** *"I think having my brain stimulated it's very important to me."*
 

@@ -32,6 +32,7 @@ _As she weighs in, at most weekly. A number for protein per kilogram, never a co
 
 | Date | kg | Note |
 |---|---|---|
+| 2026-11-16 | 45 | Her words: *"I'm 45kg"*, said while asking about a 2-hour hike. Her earlier figures: about 48 kg on 2026-10-03, and 42 kg as the weight she wants → `data/core/me/what_i_want.md` |
 
 ## Recovery
 
