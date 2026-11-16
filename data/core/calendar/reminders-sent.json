@@ -844,13 +844,6 @@
     },
     {
       "id": "food-breakfast-0753",
-      "at": "2026-11-13 07:55",
-      "utc": "2026-11-12T23:55:20.658Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-13 07:53"
-    },
-    {
-      "id": "food-breakfast-0753",
       "at": "2026-11-13 08:56",
       "utc": "2026-11-13T00:56:15.326Z",
       "claimed": "cc-routine",
@@ -1546,6 +1539,13 @@
       "at": "2026-11-16 23:55",
       "utc": "2026-11-16T15:55:09.383Z",
       "text": "Your week so far, Monday\nNew week, and a clean start 🌱\n\n📅 Mon: in 1,030 · out 0 · balance 1,030 (170 under)\n\n~ some of today is estimated"
+    },
+    {
+      "id": "food-breakfast-0753",
+      "at": "2026-11-17 07:55",
+      "utc": "2026-11-16T23:55:09.860Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-17 07:53"
     }
   ]
 }
