@@ -677,13 +677,6 @@
     },
     {
       "id": "food-dinner-1853",
-      "at": "2026-11-11 18:54",
-      "utc": "2026-11-11T10:54:47.925Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-11 18:53"
-    },
-    {
-      "id": "food-dinner-1853",
       "at": "2026-11-11 18:55",
       "utc": "2026-11-11T10:55:21.302Z",
       "text": "Dinner time, when you're ready\n\nToday so far:\n██████████ 124% · ~1,485 of 1,200 kcal eaten\nBurned: 150 kcal at BFT\n~ some of today is estimated\n\nIf you're hungry, something light and warm, like a clear soup with fish or tofu and greens. Log it when you can, no rush."
@@ -1476,6 +1469,13 @@
       "at": "2026-11-16 13:55",
       "utc": "2026-11-16T05:55:34.814Z",
       "text": "Break time: OT hours doc\n\n⏱️ Use your break to tidy it up"
+    },
+    {
+      "id": "food-dinner-1853",
+      "at": "2026-11-16 18:54",
+      "utc": "2026-11-16T10:54:37.606Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-16 18:53"
     }
   ]
 }
