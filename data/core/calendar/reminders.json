@@ -1,6 +1,6 @@
 {
   "timezone": "Asia/Singapore",
-  "sent_through": "2026-11-16 18:54",
+  "sent_through": "2026-11-16 19:54",
   "send": "routine",
   "reminders": [
     {
@@ -179,13 +179,6 @@
       "emoji": "🎬",
       "text": "Montage: finish before the weekend ends",
       "at": "2026-11-15 15:53",
-      "set": "2026-11-14 09:33"
-    },
-    {
-      "id": "book-dance",
-      "emoji": "💃",
-      "text": "Book tomorrow's 12 pm dance class now",
-      "at": "2026-11-14 19:53",
       "set": "2026-11-14 09:33"
     },
     {

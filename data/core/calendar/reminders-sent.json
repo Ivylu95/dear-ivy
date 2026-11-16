@@ -300,6 +300,18 @@
       "first": "2026-11-16 13:55",
       "last": "2026-11-16 13:55",
       "lastUtc": "2026-11-16T05:55:34.814Z"
+    },
+    "poster-finish-2": {
+      "sent": 1,
+      "first": "2026-11-16 19:55",
+      "last": "2026-11-16 19:55",
+      "lastUtc": "2026-11-16T11:55:55.953Z"
+    },
+    "ot-doc-mon-eve": {
+      "sent": 1,
+      "first": "2026-11-16 19:55",
+      "last": "2026-11-16 19:55",
+      "lastUtc": "2026-11-16T11:55:57.291Z"
     }
   },
   "sent": [
@@ -1490,6 +1502,18 @@
       "utc": "2026-11-16T11:55:23.491Z",
       "claimed": "cc-routine",
       "due": "2026-11-16 19:53"
+    },
+    {
+      "id": "poster-finish-2",
+      "at": "2026-11-16 19:55",
+      "utc": "2026-11-16T11:55:55.953Z",
+      "text": "Poster tonight: just the last touches, then it's done 🎨"
+    },
+    {
+      "id": "ot-doc-mon-eve",
+      "at": "2026-11-16 19:55",
+      "utc": "2026-11-16T11:55:57.291Z",
+      "text": "Tidy up your OT hours doc tonight, and call it finished"
     }
   ]
 }
