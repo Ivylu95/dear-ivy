@@ -1533,6 +1533,13 @@
       "at": "2026-11-16 22:55",
       "utc": "2026-11-16T14:55:12.674Z",
       "text": "Snacks are done for today\n\n🌙 That's the food day wrapped. Next bite is bfk, so rest up."
+    },
+    {
+      "id": "week-cal-in-out-2",
+      "at": "2026-11-16 23:54",
+      "utc": "2026-11-16T15:54:46.505Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-16 23:00"
     }
   ]
 }
