@@ -702,20 +702,6 @@
     },
     {
       "id": "antidepressant-2053",
-      "at": "2026-11-11 20:56",
-      "utc": "2026-11-11T12:56:32.972Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-11 20:53"
-    },
-    {
-      "id": "workout-ask-cal",
-      "at": "2026-11-11 20:56",
-      "utc": "2026-11-11T12:56:33.096Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-11 20:53"
-    },
-    {
-      "id": "antidepressant-2053",
       "at": "2026-11-11 20:57",
       "utc": "2026-11-11T12:57:04.178Z",
       "text": "Bedtime meds\nTake them before you sleep tonight."
@@ -1145,13 +1131,6 @@
       "due": "2026-11-14 20:00"
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-14 20:55",
-      "utc": "2026-11-14T12:55:06.564Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-14 20:00"
-    },
-    {
       "id": "antidepressant-2053",
       "at": "2026-11-14 20:55",
       "utc": "2026-11-14T12:55:06.716Z",
@@ -1514,6 +1493,27 @@
       "at": "2026-11-16 19:55",
       "utc": "2026-11-16T11:55:57.291Z",
       "text": "Tidy up your OT hours doc tonight, and call it finished"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-16 20:58",
+      "utc": "2026-11-16T12:58:01.729Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-16 20:00"
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-16 20:58",
+      "utc": "2026-11-16T12:58:01.854Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-16 20:53"
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-16 20:58",
+      "utc": "2026-11-16T12:58:01.962Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-16 20:53"
     }
   ]
 }
