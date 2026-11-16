@@ -58,6 +58,7 @@ her words, blank when not said._
 
 ## Worth keeping in view
 
+- **How long, and how to ask (2026-11-16):** her workouts are one hour unless she says otherwise. Runs are different: always ask the distance and the time, since a run can be 30 minutes, an hour, or a half marathon. When a calendar entry could be strength or cardio, ask which before logging it. Her calories-burned figures by type are in `data/fitness/README.md`, under **Her preferences**.
 - **From her calendar (2026-11-11):** her words: *"For my workout, just log any workout you see from my Google Calendar"*. Any workout on her Google Calendar is logged as done, marked "from her calendar". Read in her chats, never by a run with no one present (A-121).
 
 -
