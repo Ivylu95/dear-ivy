@@ -2,10 +2,10 @@
   "_what": "The last messages the sweep wrote for each check-in, so the next differs, how many Telegram accepted, and any held (HBT-010, HBT-014).",
   "counts": {
     "morning-update-2": {
-      "sent": 8,
+      "sent": 9,
       "first": "2026-11-07 08:54",
-      "last": "2026-11-15 08:55",
-      "lastUtc": "2026-11-15T00:55:43.355Z"
+      "last": "2026-11-16 08:56",
+      "lastUtc": "2026-11-16T00:56:19.053Z"
     },
     "midday": {
       "sent": 4,
@@ -44,12 +44,6 @@
       "at": "2026-11-09 12:54",
       "utc": "2026-11-09T04:54:50.367Z",
       "text": "Midday water check\nPilates at 4:15 in Orchard this afternoon, so it's a good one to have a glass in before you head out 💧\n\nHow many glasses have you had so far today?"
-    },
-    {
-      "id": "morning-update-2",
-      "at": "2026-11-10 08:54",
-      "utc": "2026-11-10T00:54:32.198Z",
-      "text": "Good morning, Tuesday 10 Nov\n\n📅 Nothing on today or tomorrow\n💳 Two days to go before the ClassPass cancel nudge on Thursday\n💆 Facial heads-up lands Friday afternoon\n\nYour reminders run as usual. The link below is there if you want to change any."
     },
     {
       "id": "midday",
@@ -155,6 +149,12 @@
       "at": "2026-11-15 16:56",
       "utc": "2026-11-15T08:56:59.588Z",
       "text": "Afternoon water top-up\n\n💧 A glass now, before the last push\n📁 Portfolio: submit it before the day ends\n🎞️ Montage: due tomorrow\n\nCan you keep a glass beside you while you finish the portfolio?"
+    },
+    {
+      "id": "morning-update-2",
+      "at": "2026-11-16 08:56",
+      "utc": "2026-11-16T00:56:19.053Z",
+      "text": "Good morning, Monday 16 Nov\nDance yesterday and H.I.R.T this morning, a strong start 💪\n\n🎞️ Today: montage due\n🖍️ Today: staying back at MLK for the poster\n⏱️ Today: OT hours doc, finish by tonight\n📌 Tomorrow, Tue 17: last poster push at 7pm, due Wed\n🧘 Sun 22, 9am: Reformer Pilates\n🎵 Fri 27: MLK concert\n\nReminders still to come:\n• Today 1pm: montage last bits, then poster cut and stick\n• Today 1:53pm, 7:53pm and 9:53pm: OT doc\n• Today 7pm: poster last touches\n• Sun 5pm: Sunday feedback\n• Your food, water, workout and night ones keep going daily\n\nNeed one moved or dropped? The link below has them all.\n\nHow did you sleep, and how does your body feel after dance and H.I.R.T?"
     }
   ]
 }
