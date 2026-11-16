@@ -38,6 +38,7 @@ _Appointments, deadlines, trips, birthdays. Soonest first. Remove once past
 | 2026-12-19 | MLK PTC | From her Google Calendar |
 | 2026-12-21 | MLK class promotion day | From her Google Calendar |
 | 2026-12-28 10:00 | MLK BL (marked "???" in her calendar) | From her Google Calendar |
+| 2027-06 – 2027-09 (dates not set) | Europe trip, about 10–12 days | Planning it; first asked where to go on 2026-11-16. Her words: *"i wanna plan a europe trip next year approx 10-12 days between june-sept"* |
 | Date not yet known | Preschool concert — her class (Playgroup & Toddler) sings "I Can't Wait To Be King" | She was making the class poster on 2026-10-16 |
 
 ## Recurring — the hard ones
