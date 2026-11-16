@@ -1536,6 +1536,13 @@
     },
     {
       "id": "week-cal-in-out-2",
+      "at": "2026-11-16 23:54",
+      "utc": "2026-11-16T15:54:46.505Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-16 23:00"
+    },
+    {
+      "id": "week-cal-in-out-2",
       "at": "2026-11-16 23:55",
       "utc": "2026-11-16T15:55:09.383Z",
       "text": "Your week so far, Monday\nNew week, and a clean start 🌱\n\n📅 Mon: in 1,030 · out 0 · balance 1,030 (170 under)\n\n~ some of today is estimated"
