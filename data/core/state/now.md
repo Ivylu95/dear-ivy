@@ -34,4 +34,4 @@ Thinking hard about the guy she's dating. Calm, practical, wants a plan.
 Check-in afternoon (2026-11-15 16:56): Can you keep a glass beside you while you finish the portfolio?
 Check-in morning-update-2 (2026-11-16 08:57): How did you sleep, and how does your body feel after dance and H.I.R.T?
 Check-in midday (2026-11-10 12:55): How many glasses have you got in since you woke up?
-Check-in midday-1153 (2026-11-15 11:55): Got a bottle packed for class?
+Check-in midday-1153 (2026-11-16 11:55): How many glasses since H.I.R.T?
