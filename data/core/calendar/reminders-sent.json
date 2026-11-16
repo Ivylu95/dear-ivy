@@ -288,6 +288,18 @@
       "first": "2026-11-16 07:35",
       "last": "2026-11-16 07:35",
       "lastUtc": "2026-11-15T23:35:59.656Z"
+    },
+    "lunch-mon16": {
+      "sent": 1,
+      "first": "2026-11-16 13:55",
+      "last": "2026-11-16 13:55",
+      "lastUtc": "2026-11-16T05:55:33.676Z"
+    },
+    "ot-doc-mon-lunch": {
+      "sent": 1,
+      "first": "2026-11-16 13:55",
+      "last": "2026-11-16 13:55",
+      "lastUtc": "2026-11-16T05:55:34.814Z"
     }
   },
   "sent": [
@@ -1452,6 +1464,18 @@
       "utc": "2026-11-16T05:54:50.321Z",
       "claimed": "cc-routine",
       "due": "2026-11-16 13:53"
+    },
+    {
+      "id": "lunch-mon16",
+      "at": "2026-11-16 13:55",
+      "utc": "2026-11-16T05:55:33.676Z",
+      "text": "Lunch work today\n\n🎬 Montage: last day, finish it first\n📌 Then cut the poster and stick it up"
+    },
+    {
+      "id": "ot-doc-mon-lunch",
+      "at": "2026-11-16 13:55",
+      "utc": "2026-11-16T05:55:34.814Z",
+      "text": "Break time: OT hours doc\n\n⏱️ Use your break to tidy it up"
     }
   ]
 }
