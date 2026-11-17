@@ -726,13 +726,6 @@
       "text": "Your week so far, Mon to Wed\n\nMon: in ~680 (only bfk logged) · out not logged · 520 under 1,200\n\nTue: no food logged · out not logged\n\nWed: in ~1,600 · out 285 · balance ~1,315, 115 over 1,200\n\n~ some of this is estimated"
     },
     {
-      "id": "workout-catchup-cal",
-      "at": "2026-11-12 08:54",
-      "utc": "2026-11-12T00:54:38.562Z",
-      "held": true,
-      "why": "yesterday's workout already logged"
-    },
-    {
       "id": "cancel-classpass",
       "at": "2026-11-12 12:55",
       "utc": "2026-11-12T04:55:24.302Z",
@@ -1546,6 +1539,13 @@
       "at": "2026-11-17 07:55",
       "utc": "2026-11-16T23:55:53.047Z",
       "text": "Tuesday bfk, nothing logged yet\n\n🔥 Eaten ░░░░░░░░░░ 0% · 1,200 kcal room\n\nOne scrambled egg on a slice of wholemeal toast is about 150, a warm protein start that leaves plenty of room."
+    },
+    {
+      "id": "workout-catchup-cal",
+      "at": "2026-11-17 08:54",
+      "utc": "2026-11-17T00:54:25.396Z",
+      "held": true,
+      "why": "yesterday's workout is on her calendar"
     }
   ]
 }
