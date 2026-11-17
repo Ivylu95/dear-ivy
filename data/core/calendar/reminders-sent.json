@@ -1209,13 +1209,6 @@
       "text": "Last call for the OT hours doc\n\n📄 Tidy it up and finish it tonight"
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-15 20:55",
-      "utc": "2026-11-15T12:55:02.565Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-15 20:00"
-    },
-    {
       "id": "antidepressant-2053",
       "at": "2026-11-15 20:55",
       "utc": "2026-11-15T12:55:02.742Z",
@@ -1565,6 +1558,13 @@
       "at": "2026-11-17 20:56",
       "utc": "2026-11-17T12:56:29.563Z",
       "text": "HIIT at 8 tonight\n\n💪 Did it go ahead as planned?\n🏃 Anything else today, like a walk or the ankle routine? Sets and reps if you have them."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-17 22:54",
+      "utc": "2026-11-17T14:54:29.059Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-17 22:00"
     }
   ]
 }
