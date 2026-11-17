@@ -26,10 +26,10 @@
       "lastUtc": "2026-11-10T12:56:41.247Z"
     },
     "no-snacks-after-10": {
-      "sent": 19,
+      "sent": 20,
       "first": "2026-11-07 20:56",
-      "last": "2026-11-16 22:55",
-      "lastUtc": "2026-11-16T14:55:12.674Z"
+      "last": "2026-11-17 20:56",
+      "lastUtc": "2026-11-17T12:56:27.247Z"
     },
     "nutrition-updates-2": {
       "sent": 1,
@@ -140,16 +140,16 @@
       "lastUtc": "2026-11-11T11:55:52.005Z"
     },
     "antidepressant-2053": {
-      "sent": 6,
+      "sent": 7,
       "first": "2026-11-11 20:57",
-      "last": "2026-11-16 20:58",
-      "lastUtc": "2026-11-16T12:58:37.512Z"
+      "last": "2026-11-17 20:56",
+      "lastUtc": "2026-11-17T12:56:28.410Z"
     },
     "workout-ask-cal": {
-      "sent": 6,
+      "sent": 7,
       "first": "2026-11-11 20:57",
-      "last": "2026-11-16 20:58",
-      "lastUtc": "2026-11-16T12:58:45.390Z"
+      "last": "2026-11-17 20:56",
+      "lastUtc": "2026-11-17T12:56:29.563Z"
     },
     "week-cal-now-nov11": {
       "sent": 1,
@@ -771,18 +771,6 @@
       "text": "Montage time tonight\n\n🎬 Aim to get most of it done now\n🖨️ Fri lunch: print photos, then finish it\n\nOne clip at a time. You've got this."
     },
     {
-      "id": "antidepressant-2053",
-      "at": "2026-11-12 20:56",
-      "utc": "2026-11-12T12:56:39.409Z",
-      "text": "Meds before sleep\nPop them by the bed so they're the last thing tonight."
-    },
-    {
-      "id": "workout-ask-cal",
-      "at": "2026-11-12 20:56",
-      "utc": "2026-11-12T12:56:45.193Z",
-      "text": "Today's training\n💪 Shred at 6 this morning – on the calendar, counted as done.\n\nDid you fit in anything else since? Sets and reps if you have them, or even a walk."
-    },
-    {
       "id": "week-cal-in-out",
       "at": "2026-11-12 23:54",
       "utc": "2026-11-12T15:54:45.581Z",
@@ -1102,12 +1090,6 @@
       "utc": "2026-11-14T15:54:20.204Z",
       "claimed": "cc-routine",
       "due": "2026-11-14 23:00"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-14 23:54",
-      "utc": "2026-11-14T15:54:52.577Z",
-      "text": "Kitchen's closed for tonight\n\n🌙 Nothing more till bfk. Get some good sleep."
     },
     {
       "id": "week-cal-in-out-2",
@@ -1565,6 +1547,24 @@
       "utc": "2026-11-17T12:55:59.784Z",
       "claimed": "cc-routine",
       "due": "2026-11-17 20:53"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-17 20:56",
+      "utc": "2026-11-17T12:56:27.247Z",
+      "text": "Kitchen shuts at 10\n\n🥚 Hungry after HIIT? Eat something soon, then food is done for today."
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-17 20:56",
+      "utc": "2026-11-17T12:56:28.410Z",
+      "text": "Meds tonight\n\n💊 Once you're home and showered, take them before sleep."
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-17 20:56",
+      "utc": "2026-11-17T12:56:29.563Z",
+      "text": "HIIT at 8 tonight\n\n💪 Did it go ahead as planned?\n🏃 Anything else today, like a walk or the ankle routine? Sets and reps if you have them."
     }
   ]
 }
