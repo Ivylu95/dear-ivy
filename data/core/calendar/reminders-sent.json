@@ -773,20 +773,6 @@
     {
       "id": "antidepressant-2053",
       "at": "2026-11-12 20:56",
-      "utc": "2026-11-12T12:56:01.970Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-12 20:53"
-    },
-    {
-      "id": "workout-ask-cal",
-      "at": "2026-11-12 20:56",
-      "utc": "2026-11-12T12:56:02.105Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-12 20:53"
-    },
-    {
-      "id": "antidepressant-2053",
-      "at": "2026-11-12 20:56",
       "utc": "2026-11-12T12:56:39.409Z",
       "text": "Meds before sleep\nPop them by the bed so they're the last thing tonight."
     },
@@ -1109,13 +1095,6 @@
       "at": "2026-11-14 20:55",
       "utc": "2026-11-14T12:55:40.339Z",
       "text": "Strength Endurance at 9:30 is counted 💪\n\nAnything else since then? A walk or your ankle routine counts too."
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-14 23:54",
-      "utc": "2026-11-14T15:54:20.112Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-14 22:00"
     },
     {
       "id": "week-cal-in-out-2",
@@ -1565,6 +1544,27 @@
       "at": "2026-11-17 19:54",
       "utc": "2026-11-17T11:54:56.451Z",
       "text": "Your concert poster is due tomorrow\n\n🖼️ Finish the last bits tonight\n💾 Save it so it's ready to hand in\n\nNearly there, you've got this 💪"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-17 20:55",
+      "utc": "2026-11-17T12:55:59.550Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-17 20:00"
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-17 20:55",
+      "utc": "2026-11-17T12:55:59.674Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-17 20:53"
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-17 20:55",
+      "utc": "2026-11-17T12:55:59.784Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-17 20:53"
     }
   ]
 }
