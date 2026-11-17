@@ -318,6 +318,12 @@
       "first": "2026-11-16 21:57",
       "last": "2026-11-16 21:57",
       "lastUtc": "2026-11-16T13:57:06.001Z"
+    },
+    "poster-due": {
+      "sent": 1,
+      "first": "2026-11-17 19:54",
+      "last": "2026-11-17 19:54",
+      "lastUtc": "2026-11-17T11:54:56.451Z"
     }
   },
   "sent": [
@@ -1546,6 +1552,12 @@
       "at": "2026-11-17 18:54",
       "utc": "2026-11-17T10:54:43.060Z",
       "text": "Dinner's around 7, HIIT at 8\nGood protein from the salmon today 🐟\n\n🍽️ ██████████ 155% · ~1,860 of 1,200 kcal eaten\n🔥 HIIT tonight: 200 kcal, once it's done\n⚖️ Balance after it: ~1,660, about 460 over\n~ some of today is estimated\n\nWith HIIT at 8, something light about an hour before sits best, like a boiled egg with some cucumber or tomato. Send it over once you've eaten."
+    },
+    {
+      "id": "poster-due",
+      "at": "2026-11-17 19:54",
+      "utc": "2026-11-17T11:54:56.451Z",
+      "text": "Your concert poster is due tomorrow\n\n🖼️ Finish the last bits tonight\n💾 Save it so it's ready to hand in\n\nNearly there, you've got this 💪"
     }
   ]
 }
