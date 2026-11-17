@@ -916,13 +916,6 @@
     },
     {
       "id": "week-cal-in-out-2",
-      "at": "2026-11-13 23:57",
-      "utc": "2026-11-13T15:57:51.931Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-13 23:00"
-    },
-    {
-      "id": "week-cal-in-out-2",
       "at": "2026-11-14 00:55",
       "utc": "2026-11-13T16:55:39.888Z",
       "claimed": "cc-routine",
@@ -1565,6 +1558,13 @@
       "at": "2026-11-17 22:54",
       "utc": "2026-11-17T14:54:51.589Z",
       "text": "Kitchen's closed for tonight\n\n🌙 That's food wrapped up. Next stop is bfk, sleep well."
+    },
+    {
+      "id": "week-cal-in-out-2",
+      "at": "2026-11-17 23:54",
+      "utc": "2026-11-17T15:54:56.911Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-17 23:00"
     }
   ]
 }
