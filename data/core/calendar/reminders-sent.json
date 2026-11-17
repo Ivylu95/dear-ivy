@@ -733,13 +733,6 @@
       "due": "2026-11-12 12:30"
     },
     {
-      "id": "food-lunch-1253",
-      "at": "2026-11-12 12:55",
-      "utc": "2026-11-12T04:55:24.390Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-12 12:53"
-    },
-    {
       "id": "cancel-classpass",
       "at": "2026-11-12 12:55",
       "utc": "2026-11-12T04:55:58.907Z",
@@ -757,13 +750,6 @@
       "at": "2026-11-12 13:54",
       "utc": "2026-11-12T05:54:57.155Z",
       "text": "Lunch break: poster work\n\n- Print the names + title first\n- Then the trees + leaves"
-    },
-    {
-      "id": "food-dinner-1853",
-      "at": "2026-11-12 18:54",
-      "utc": "2026-11-12T10:54:35.397Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-12 18:53"
     },
     {
       "id": "food-dinner-1853",
@@ -1553,6 +1539,13 @@
       "at": "2026-11-17 12:55",
       "utc": "2026-11-17T04:55:12.691Z",
       "text": "Lunch is on the log already\nSalmon and greens, a good one 🐟\n\n🔥 ▰▰▰▰▰▰▰▰▰▱ 91% of 1,200 kcal\n~110 kcal room left\n🏃‍♀️ No exercise logged yet\n\nDinner: a boiled egg with a big plate of steamed veg fits that room and adds a little protein.\n\n~ some of today is estimated"
+    },
+    {
+      "id": "food-dinner-1853",
+      "at": "2026-11-17 18:54",
+      "utc": "2026-11-17T10:54:08.325Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-17 18:53"
     }
   ]
 }
