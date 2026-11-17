@@ -14,10 +14,10 @@
       "lastUtc": "2026-11-10T04:55:01.871Z"
     },
     "afternoon": {
-      "sent": 9,
+      "sent": 10,
       "first": "2026-11-07 16:54",
-      "last": "2026-11-16 16:55",
-      "lastUtc": "2026-11-16T08:55:51.918Z"
+      "last": "2026-11-17 16:55",
+      "lastUtc": "2026-11-17T08:55:14.026Z"
     },
     "midday-1153": {
       "sent": 6,
@@ -71,12 +71,6 @@
       "utc": "2026-11-11T08:54:37.948Z",
       "held": true,
       "why": "a hard day"
-    },
-    {
-      "id": "afternoon",
-      "at": "2026-11-12 16:56",
-      "utc": "2026-11-12T08:56:01.882Z",
-      "text": "Afternoon water top-up\n\nClassPass: today is the day to cancel, if it isn't done yet\nMontage push tonight\n\nCan you get a glass of water in before you sit down to the montage?"
     },
     {
       "id": "morning-update-2",
@@ -161,6 +155,12 @@
       "at": "2026-11-17 12:56",
       "utc": "2026-11-17T04:56:09.281Z",
       "text": "Midday water check\nSummit at 6, a big early start 💪\n\n💧 Water log still empty today\n📌 Poster push at 7 tonight, due tomorrow\n\nHave you had any water yet since the 6am Summit?"
+    },
+    {
+      "id": "afternoon",
+      "at": "2026-11-17 16:55",
+      "utc": "2026-11-17T08:55:14.026Z",
+      "text": "Afternoon water top-up\nLunch and snacks all logged, a steady day 🌤️\n\n💧 Two glasses before 7 would catch you up\n📌 Poster push at 7, then it's ready for tomorrow\n🍩 Thu 1:30pm: doughnut pickup\n\nCould you fill a bottle now and keep it beside you for the poster?"
     }
   ]
 }
