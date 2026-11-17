@@ -20,10 +20,10 @@
       "lastUtc": "2026-11-16T08:55:51.918Z"
     },
     "midday-1153": {
-      "sent": 5,
+      "sent": 6,
       "first": "2026-11-12 11:54",
-      "last": "2026-11-16 11:54",
-      "lastUtc": "2026-11-16T03:54:59.823Z"
+      "last": "2026-11-17 12:56",
+      "lastUtc": "2026-11-17T04:56:09.281Z"
     }
   },
   "sent": [
@@ -71,12 +71,6 @@
       "utc": "2026-11-11T08:54:37.948Z",
       "held": true,
       "why": "a hard day"
-    },
-    {
-      "id": "midday-1153",
-      "at": "2026-11-12 11:54",
-      "utc": "2026-11-12T03:54:40.392Z",
-      "text": "Midday water check\n\n💧 Shred was at 6 this morning, so a top-up helps\n🖨️ Poster printing at lunch, montage tonight\n\nHow many glasses have you had since Shred?"
     },
     {
       "id": "afternoon",
@@ -161,6 +155,12 @@
       "at": "2026-11-17 08:55",
       "utc": "2026-11-17T00:55:55.180Z",
       "text": "Good morning, Tuesday 17 Nov\n\n📌 Today 7pm: last poster push\n🖍️ Tomorrow, Wed 18: poster due\n🏕️ Mon 30: MLK staff retreat starts, to Fri 4 Dec\n\nReminders still to come:\n• Today 12:53pm and 6:53pm: lunch and dinner\n• Today 7pm: poster\n• Tonight 8pm and 10pm: snack cut-off\n• Tonight 8:53pm: workout check and your night one\n• Tonight 11pm: your week of in and out\n• Wed 7:53am: breakfast\n\nAny of these you'd rather shift or drop? Tap below.\n\nHow did you sleep, and how does your body feel after the 6am Summit?"
+    },
+    {
+      "id": "midday-1153",
+      "at": "2026-11-17 12:56",
+      "utc": "2026-11-17T04:56:09.281Z",
+      "text": "Midday water check\nSummit at 6, a big early start 💪\n\n💧 Water log still empty today\n📌 Poster push at 7 tonight, due tomorrow\n\nHave you had any water yet since the 6am Summit?"
     }
   ]
 }
