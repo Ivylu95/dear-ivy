@@ -212,10 +212,10 @@
       "lastUtc": "2026-11-13T14:50:25.635Z"
     },
     "week-cal-in-out-2": {
-      "sent": 4,
+      "sent": 5,
       "first": "2026-11-14 00:56",
-      "last": "2026-11-16 23:55",
-      "lastUtc": "2026-11-16T15:55:09.383Z"
+      "last": "2026-11-17 23:55",
+      "lastUtc": "2026-11-17T15:55:14.969Z"
     },
     "ot-doc-sat-am": {
       "sent": 1,
@@ -1565,6 +1565,12 @@
       "utc": "2026-11-17T15:54:56.911Z",
       "claimed": "cc-routine",
       "due": "2026-11-17 23:00"
+    },
+    {
+      "id": "week-cal-in-out-2",
+      "at": "2026-11-17 23:55",
+      "utc": "2026-11-17T15:55:14.969Z",
+      "text": "Your week so far, Mon and Tue\nTonight's HIIT is in 💪\n\n📅 Mon: in 2,130 · out 0 · balance 2,130 (930 over)\n📅 Tue: in 2,235 · out 200 · balance 2,035 (835 over)\n\nMon now has your dinner in it.\n~ some of this week is estimated"
     }
   ]
 }
