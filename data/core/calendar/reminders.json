@@ -1,6 +1,6 @@
 {
   "timezone": "Asia/Singapore",
-  "sent_through": "2026-11-17 12:53",
+  "sent_through": "2026-11-17 18:53",
   "send": "routine",
   "reminders": [
     {
@@ -159,27 +159,6 @@
         "url": "https://claude.ai/code/session_01RkebH73Sqeq5M4dzwA3cXe",
         "title": "Calories and nutrition"
       }
-    },
-    {
-      "id": "ot-doc-sun",
-      "emoji": "⏱️",
-      "text": "Tidy OT hours document: last chance, finish tonight",
-      "at": "2026-11-15 18:53",
-      "set": "2026-11-12 05:35"
-    },
-    {
-      "id": "montage-sun",
-      "emoji": "🎬",
-      "text": "Montage: finish before the weekend ends",
-      "at": "2026-11-15 15:53",
-      "set": "2026-11-14 09:33"
-    },
-    {
-      "id": "portfolio-sun",
-      "emoji": "📁",
-      "text": "Portfolio: submit it today",
-      "at": "2026-11-15 16:53",
-      "set": "2026-11-14 09:33"
     },
     {
       "id": "workout-week-resend-nov16",
