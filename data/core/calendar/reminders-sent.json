@@ -128,10 +128,10 @@
       "lastUtc": "2026-11-11T05:10:39.496Z"
     },
     "food-dinner-1853": {
-      "sent": 7,
+      "sent": 8,
       "first": "2026-11-11 18:55",
-      "last": "2026-11-17 18:54",
-      "lastUtc": "2026-11-17T10:54:43.060Z"
+      "last": "2026-11-18 18:54",
+      "lastUtc": "2026-11-18T10:54:38.611Z"
     },
     "poster-start": {
       "sent": 1,
@@ -828,12 +828,6 @@
       "at": "2026-11-13 17:55",
       "utc": "2026-11-13T09:55:47.144Z",
       "text": "Facial at 6 today\nClementi, 6 pm, so about an hour to go. Ask for Jess or Jade, and don't forget to ask for the free eye treatment. Enjoy it 💆"
-    },
-    {
-      "id": "food-dinner-1853",
-      "at": "2026-11-13 18:55",
-      "utc": "2026-11-13T10:55:09.970Z",
-      "text": "Dinner's around 7\nEasy stretch day at BFT 🧘\n\n🍽️ ██████████ 127% · ~1,520 of 1,200 kcal eaten\n🔥 Burned: 80 kcal at BFT\n⚖️ Balance: ~1,440, about 240 over\n~ some of today is estimated\n\nToday's 1,200 is already used up, so if you're hungry, keep dinner small and simple: a plate of steamed broccoli and carrot, like the veg at lunch, is only about 50 kcal. Send it over when you've eaten."
     },
     {
       "id": "ot-doc-fri",
@@ -1571,6 +1565,12 @@
       "utc": "2026-11-18T10:54:23.197Z",
       "claimed": "cc-routine",
       "due": "2026-11-18 18:53"
+    },
+    {
+      "id": "food-dinner-1853",
+      "at": "2026-11-18 18:54",
+      "utc": "2026-11-18T10:54:38.611Z",
+      "text": "Dinner's around 7\nSolid protein from lunch today 🍗\n\n🍽️ ██████████ 148% · ~1,775 of 1,200 kcal eaten\n⚖️ About 575 over the 1,200\n~ some of today is estimated\n\nThe 1,200 is used up, so if you're hungry, go light: a bowl of clear soup with tofu and greens is about 150 kcal. Tell me what you had after."
     }
   ]
 }
