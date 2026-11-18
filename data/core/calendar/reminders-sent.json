@@ -1169,13 +1169,6 @@
       "text": "Your workout week, 9 to 15 Nov\nSix days of moving, that's a strong week 💪\n\n🧘 Mon: STRONG Pilates\n🏃 Tue: BFT cardio, 50 min\n🦵 Wed: lower body twice, morning and evening\n🏋️ Thu: BFT cardio and strength, 50 min\n🤸 Fri: light BFT, mostly stretching\n🔥 Sat: HIIT strength, 1 hour\n📅 Sun: nothing logged yet"
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-15 22:54",
-      "utc": "2026-11-15T14:54:42.634Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-15 22:00"
-    },
-    {
       "id": "week-cal-in-out-2",
       "at": "2026-11-15 23:54",
       "utc": "2026-11-15T15:54:56.259Z",
@@ -1291,13 +1284,6 @@
       "at": "2026-11-16 19:55",
       "utc": "2026-11-16T11:55:57.291Z",
       "text": "Tidy up your OT hours doc tonight, and call it finished"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-16 20:58",
-      "utc": "2026-11-16T12:58:01.729Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-16 20:00"
     },
     {
       "id": "antidepressant-2053",
@@ -1578,6 +1564,13 @@
       "at": "2026-11-18 20:55",
       "utc": "2026-11-18T12:55:31.122Z",
       "text": "Workout check\nPump Upper Body at 7:10 is counted 💪\n\n🏃 Did you add anything else, like a walk or the ankle routine? Sets and reps if you have them."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-18 22:54",
+      "utc": "2026-11-18T14:54:26.349Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-18 22:00"
     }
   ]
 }
