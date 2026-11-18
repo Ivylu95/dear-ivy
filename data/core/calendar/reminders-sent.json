@@ -26,10 +26,10 @@
       "lastUtc": "2026-11-10T12:56:41.247Z"
     },
     "no-snacks-after-10": {
-      "sent": 22,
+      "sent": 23,
       "first": "2026-11-07 20:56",
-      "last": "2026-11-18 20:55",
-      "lastUtc": "2026-11-18T12:55:28.550Z"
+      "last": "2026-11-18 22:54",
+      "lastUtc": "2026-11-18T14:54:45.383Z"
     },
     "nutrition-updates-2": {
       "sent": 1,
@@ -1169,13 +1169,6 @@
       "text": "Your workout week, 9 to 15 Nov\nSix days of moving, that's a strong week 💪\n\n🧘 Mon: STRONG Pilates\n🏃 Tue: BFT cardio, 50 min\n🦵 Wed: lower body twice, morning and evening\n🏋️ Thu: BFT cardio and strength, 50 min\n🤸 Fri: light BFT, mostly stretching\n🔥 Sat: HIIT strength, 1 hour\n📅 Sun: nothing logged yet"
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-15 22:54",
-      "utc": "2026-11-15T14:54:42.634Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-15 22:00"
-    },
-    {
       "id": "week-cal-in-out-2",
       "at": "2026-11-15 23:54",
       "utc": "2026-11-15T15:54:56.259Z",
@@ -1312,12 +1305,6 @@
       "utc": "2026-11-16T12:58:01.962Z",
       "claimed": "cc-routine",
       "due": "2026-11-16 20:53"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-16 20:58",
-      "utc": "2026-11-16T12:58:36.394Z",
-      "text": "About an hour before the kitchen shuts\n\n🥜 Still hungry after H.I.R.T? Have it before 10, then you're set till bfk."
     },
     {
       "id": "antidepressant-2053",
@@ -1578,6 +1565,12 @@
       "at": "2026-11-18 20:55",
       "utc": "2026-11-18T12:55:31.122Z",
       "text": "Workout check\nPump Upper Body at 7:10 is counted 💪\n\n🏃 Did you add anything else, like a walk or the ankle routine? Sets and reps if you have them."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-18 22:54",
+      "utc": "2026-11-18T14:54:45.383Z",
+      "text": "10 pm has come and gone\n\n🌙 No more sn tonight. Your next food is bfk, so get some good sleep."
     }
   ]
 }
