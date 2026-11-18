@@ -804,13 +804,6 @@
       "text": "Costume photos for the concert poster\n\nToday's a good day to snap the kids in costume, so the cut-outs are ready when you sit down to finish the poster on Monday."
     },
     {
-      "id": "food-lunch-1253",
-      "at": "2026-11-13 12:54",
-      "utc": "2026-11-13T04:54:41.094Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-13 12:53"
-    },
-    {
       "id": "lunch-fri13",
       "at": "2026-11-13 13:54",
       "utc": "2026-11-13T05:54:58.960Z",
@@ -835,13 +828,6 @@
       "at": "2026-11-13 17:55",
       "utc": "2026-11-13T09:55:47.144Z",
       "text": "Facial at 6 today\nClementi, 6 pm, so about an hour to go. Ask for Jess or Jade, and don't forget to ask for the free eye treatment. Enjoy it 💆"
-    },
-    {
-      "id": "food-dinner-1853",
-      "at": "2026-11-13 18:54",
-      "utc": "2026-11-13T10:54:50.543Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-13 18:53"
     },
     {
       "id": "food-dinner-1853",
@@ -1578,6 +1564,13 @@
       "at": "2026-11-18 12:54",
       "utc": "2026-11-18T04:54:52.703Z",
       "text": "Lunch time\nA light start to the day 🌱\n\n🔥 ▰▰▱▱▱▱▱▱▱▱ 20% of 1,200 kcal\n~955 kcal room left\n\nProtein is low so far. Tofu, chicken or fish with rice and veg would fill that gap well, with plenty of room to spare.\n\n~ some of today is estimated"
+    },
+    {
+      "id": "food-dinner-1853",
+      "at": "2026-11-18 18:54",
+      "utc": "2026-11-18T10:54:23.197Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-18 18:53"
     }
   ]
 }
