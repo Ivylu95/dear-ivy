@@ -27,3 +27,4 @@ Check-in morning-update-2 (2026-11-16 08:57): How did you sleep, and how does yo
 Check-in midday-1153 (2026-11-16 11:55): How many glasses since H.I.R.T?
 Check-in afternoon (2026-11-16 16:55): Can you finish a full glass before you head to H.I.R.T?
 Check-in morning-update-2 (2026-11-17 08:56): How did you sleep, and how does your body feel after the 6am Summit?
+Check-in midday-1153 (2026-11-17 12:56): Have you had any water yet since the 6am Summit?

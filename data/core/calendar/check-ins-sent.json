@@ -20,10 +20,10 @@
       "lastUtc": "2026-11-17T08:55:14.026Z"
     },
     "midday-1153": {
-      "sent": 6,
+      "sent": 7,
       "first": "2026-11-12 11:54",
-      "last": "2026-11-17 12:56",
-      "lastUtc": "2026-11-17T04:56:09.281Z"
+      "last": "2026-11-18 11:55",
+      "lastUtc": "2026-11-18T03:55:33.591Z"
     }
   },
   "sent": [
@@ -71,12 +71,6 @@
       "utc": "2026-11-11T08:54:37.948Z",
       "held": true,
       "why": "a hard day"
-    },
-    {
-      "id": "midday-1153",
-      "at": "2026-11-13 12:55",
-      "utc": "2026-11-13T04:55:59.767Z",
-      "text": "Midday water check\nClass done and lunch in, a steady start 💪\n\nHow many glasses of water so far, before the 1pm printing?"
     },
     {
       "id": "afternoon",
@@ -161,6 +155,12 @@
       "at": "2026-11-18 08:56",
       "utc": "2026-11-18T00:56:24.327Z",
       "text": "Good morning, Wednesday 18 Nov\nPump Upper Body done before 8, a strong start 💪\n\n🖍️ Today: poster due, the last stretch\n🍩 Tomorrow 1:30pm: collect your doughnut\n🔥 Tomorrow 8:40pm: Cardio HIIT\n🏋️ Sat 21, 9:30am: CrewFit\n🛍️ Sun 22, 12:30pm: boutique fair\n\nReminders still to come:\n• 12:53pm lunch, 6:53pm dinner\n• 8pm and 10pm: snacks wind down\n• 8:53pm: workout check, plus your night one\n• 11pm: your week of in and out\n• Thu 7:53am: breakfast\n• Thu 12:53pm: doughnut pick-up\n\nWant any moved, changed or stopped? Tap the link below.\n\nHow did you sleep, and how do your arms feel after Pump this morning?"
+    },
+    {
+      "id": "midday-1153",
+      "at": "2026-11-18 11:55",
+      "utc": "2026-11-18T03:55:33.591Z",
+      "text": "Midday water check\nPump done and breakfast in 💪\n\n💧 No water logged yet today\n🖍️ Poster due today, the final stretch\n\nCan you finish a glass with lunch before the poster?"
     }
   ]
 }
