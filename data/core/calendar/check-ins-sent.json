@@ -2,10 +2,10 @@
   "_what": "The last messages the sweep wrote for each check-in, so the next differs, how many Telegram accepted, and any held (HBT-010, HBT-014).",
   "counts": {
     "morning-update-2": {
-      "sent": 10,
+      "sent": 11,
       "first": "2026-11-07 08:54",
-      "last": "2026-11-17 08:55",
-      "lastUtc": "2026-11-17T00:55:55.180Z"
+      "last": "2026-11-18 08:56",
+      "lastUtc": "2026-11-18T00:56:24.327Z"
     },
     "midday": {
       "sent": 4,
@@ -71,12 +71,6 @@
       "utc": "2026-11-11T08:54:37.948Z",
       "held": true,
       "why": "a hard day"
-    },
-    {
-      "id": "morning-update-2",
-      "at": "2026-11-13 08:57",
-      "utc": "2026-11-13T00:57:36.797Z",
-      "text": "Good morning, Friday 13 Nov\n\n📅 Today: facial at 6pm in Clementi\n🎞️ Today: your aim to finish the montage\n💳 Tomorrow, Sat 14: ClassPass trial ends, $99 if still on\n⏱️ Tomorrow: OT hours doc due by end of day\n🖍️ Mon 16: staying back at MLK for the poster\n\nReminders still to come:\n• Today 9am: poster costume photos\n• Today 1pm: print photos, finish montage\n• Today 5pm: facial heads-up\n• Today 7:53pm: OT doc, due tomorrow\n• Tonight 11pm: your week of in and out\n• Weekend to Tue: the same ones as in Thursday's list\n• Plus your daily meal, snack, workout and bedtime ones\n\nAny to move or stop? The link below opens them.\n\nHow did you sleep, and how's your body after this morning's Balanced class?"
     },
     {
       "id": "midday-1153",
@@ -161,6 +155,12 @@
       "at": "2026-11-17 16:55",
       "utc": "2026-11-17T08:55:14.026Z",
       "text": "Afternoon water top-up\nLunch and snacks all logged, a steady day 🌤️\n\n💧 Two glasses before 7 would catch you up\n📌 Poster push at 7, then it's ready for tomorrow\n🍩 Thu 1:30pm: doughnut pickup\n\nCould you fill a bottle now and keep it beside you for the poster?"
+    },
+    {
+      "id": "morning-update-2",
+      "at": "2026-11-18 08:56",
+      "utc": "2026-11-18T00:56:24.327Z",
+      "text": "Good morning, Wednesday 18 Nov\nPump Upper Body done before 8, a strong start 💪\n\n🖍️ Today: poster due, the last stretch\n🍩 Tomorrow 1:30pm: collect your doughnut\n🔥 Tomorrow 8:40pm: Cardio HIIT\n🏋️ Sat 21, 9:30am: CrewFit\n🛍️ Sun 22, 12:30pm: boutique fair\n\nReminders still to come:\n• 12:53pm lunch, 6:53pm dinner\n• 8pm and 10pm: snacks wind down\n• 8:53pm: workout check, plus your night one\n• 11pm: your week of in and out\n• Thu 7:53am: breakfast\n• Thu 12:53pm: doughnut pick-up\n\nWant any moved, changed or stopped? Tap the link below.\n\nHow did you sleep, and how do your arms feel after Pump this morning?"
     }
   ]
 }
