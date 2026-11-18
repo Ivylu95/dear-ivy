@@ -548,6 +548,20 @@
       "text": "Tidy OT hours document: use your break",
       "at": "2026-11-16 13:53",
       "set": "2026-11-16 07:38"
+    },
+    {
+      "id": "poster-finish-2",
+      "emoji": "✅",
+      "text": "Poster: last touches, done tonight",
+      "at": "2026-11-16 19:00",
+      "set": "2026-11-11 08:40"
+    },
+    {
+      "id": "ot-doc-mon-eve",
+      "emoji": "⏱️",
+      "text": "Tidy OT hours document: finish tonight",
+      "at": "2026-11-16 19:53",
+      "set": "2026-11-16 07:38"
     }
   ]
 }
