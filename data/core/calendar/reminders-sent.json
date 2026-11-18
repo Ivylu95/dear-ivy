@@ -805,13 +805,6 @@
     },
     {
       "id": "food-lunch-1253",
-      "at": "2026-11-13 12:54",
-      "utc": "2026-11-13T04:54:41.094Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-13 12:53"
-    },
-    {
-      "id": "food-lunch-1253",
       "at": "2026-11-13 12:55",
       "utc": "2026-11-13T04:55:06.599Z",
       "text": "Lunch is logged\nNice steady morning 💪\n\n🔥 ▰▰▰▰▰▰▰▱▱▱ 67% of 1,200 kcal\n~395 kcal room left\n🏃‍♀️ BFT stretch burned ~80 kcal, kept apart\n\nTonight: a palm of chicken, tofu or egg with lots of veg tops up protein and fibre, inside what's left.\n\n~ some of today is estimated"
@@ -1571,6 +1564,13 @@
       "utc": "2026-11-18T00:54:37.904Z",
       "held": true,
       "why": "yesterday's workout already in her record"
+    },
+    {
+      "id": "food-lunch-1253",
+      "at": "2026-11-18 12:54",
+      "utc": "2026-11-18T04:54:21.376Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-18 12:53"
     }
   ]
 }
