@@ -26,6 +26,7 @@ _Appointments, deadlines, trips, birthdays. Soonest first. Remove once past
 | 2026-11-15 12:00 | Dance class | Told 2026-11-14 |
 | 2026-11-16 | Concert video montage due (aim: Fri 13 Nov) | Told 2026-11-11 |
 | 2026-11-18 | Concert poster due (aim: Mon 16 Nov evening) | Told 2026-11-11 |
+| 2026-11-19 17:00 | Submit MC and medical invoice, by 5 pm | Told 2026-11-18 |
 | 2026-11-19 13:30 | Collect her doughnut | Told 2026-11-17 |
 | 2026-11-25 | Madeline's birthday (yearly in her calendar) | From her Google Calendar (told 2026-11-06) |
 | 2026-11-27 | MLK concert | From her Google Calendar (told 2026-11-06) |
