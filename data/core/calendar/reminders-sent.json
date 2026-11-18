@@ -1569,6 +1569,13 @@
     {
       "id": "food-lunch-1253",
       "at": "2026-11-18 12:54",
+      "utc": "2026-11-18T04:54:21.376Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-18 12:53"
+    },
+    {
+      "id": "food-lunch-1253",
+      "at": "2026-11-18 12:54",
       "utc": "2026-11-18T04:54:52.703Z",
       "text": "Lunch time\nA light start to the day 🌱\n\n🔥 ▰▰▱▱▱▱▱▱▱▱ 20% of 1,200 kcal\n~955 kcal room left\n\nProtein is low so far. Tofu, chicken or fish with rice and veg would fill that gap well, with plenty of room to spare.\n\n~ some of today is estimated"
     }
