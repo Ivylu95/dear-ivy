@@ -164,10 +164,10 @@
       "lastUtc": "2026-11-12T15:55:07.681Z"
     },
     "food-breakfast-0753": {
-      "sent": 7,
+      "sent": 8,
       "first": "2026-11-12 08:00",
-      "last": "2026-11-18 07:55",
-      "lastUtc": "2026-11-17T23:55:17.191Z"
+      "last": "2026-11-19 07:54",
+      "lastUtc": "2026-11-18T23:54:54.197Z"
     },
     "cancel-classpass": {
       "sent": 1,
@@ -848,12 +848,6 @@
       "utc": "2026-11-13T23:54:49.935Z",
       "claimed": "cc-routine",
       "due": "2026-11-14 07:53"
-    },
-    {
-      "id": "food-breakfast-0753",
-      "at": "2026-11-14 07:55",
-      "utc": "2026-11-13T23:55:06.610Z",
-      "text": "Morning, bfk soon\nFresh Saturday, clean log\n\n🔥 Eaten ░░░░░░░░░░ 0% · 1,200 kcal room\n\nTwo eggs on wholemeal toast is about 230, a good protein start with plenty of room left."
     },
     {
       "id": "workout-catchup-cal",
@@ -1571,6 +1565,12 @@
       "at": "2026-11-18 23:54",
       "utc": "2026-11-18T15:54:54.383Z",
       "text": "Your week so far, Mon to Wed\nThree days logged in a row 📝\n\n📅 Mon: in 2,130 · out 0 · balance 2,130 (930 over)\n📅 Tue: in 2,235 · out 200 · balance 2,035 (835 over)\n📅 Wed: in 2,125 · out 0 · balance 2,125 (925 over)\n\n~ some of this week is estimated"
+    },
+    {
+      "id": "food-breakfast-0753",
+      "at": "2026-11-19 07:54",
+      "utc": "2026-11-18T23:54:54.197Z",
+      "text": "Thursday bfk, already in\nLogged before 8, nice one 🙌\n\n🔥 Eaten ███░░░░░░░ 26% · ~890 kcal room\n~ some of today is estimated\n\nBreakfast was light on protein, so for lunch, grilled chicken or tofu with rice and veg is about 450 and gives you a solid protein lift."
     }
   ]
 }
