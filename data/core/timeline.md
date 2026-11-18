@@ -62,3 +62,4 @@ _Anything marked `[inferred]` is my reading, not her words._
 | ? (told 2026-11-07) | event | `dating` | Ended things with Eugene; date and reason not yet known | → data/core/people/eugene.md |
 | ? (told 2026-11-07) | event | `dating` | Starting things with Del | → data/core/people/del.md |
 | 2026-11-07 | update | `adhd` | Said her answers to screener questions 4–6 were "Often": scores 6 of 6 | → data/therapy/adhd/screener.md |
+| 2026-11-18 | health | `health` | Asked how to stop eating at night: starts after work around 6 pm and goes on until she sleeps | → data/core/journal/2026-11-18.md |

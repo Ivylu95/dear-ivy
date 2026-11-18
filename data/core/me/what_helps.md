@@ -27,6 +27,6 @@ don't get suggested again._
 
 _Suggested but not yet tried. Don't count these as evidence._
 
--
+- 2026-11-18, for eating at night: more protein at breakfast, and a planned 4–5 pm snack before leaving work. Not yet tried.
 
 <!-- unfilled: nothing real recorded here yet. Delete this line the first time you write something she actually said. -->
