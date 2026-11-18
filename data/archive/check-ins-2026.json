@@ -21,6 +21,32 @@
       ],
       "set": "2026-11-07 10:54",
       "ended": "2026-11-11"
+    },
+    {
+      "id": "afternoon",
+      "emoji": "🌤️",
+      "text": "Afternoon nudge: water again, and only what fits today: work or a task she mentioned, anything due soon, an evening plan or class",
+      "cron": "0 16 * * *",
+      "reads": [
+        "data/core/calendar/calendar.md",
+        "data/core/state/now.md",
+        "data/core/state/open_loops.md"
+      ],
+      "set": "2026-11-07 10:54",
+      "ended": "2026-11-18"
+    },
+    {
+      "id": "midday-1153",
+      "emoji": "☀️",
+      "text": "Midday nudge: whether she has drunk water, and only what fits today: a meeting, plan or workout class coming up later, or something she said she had to do",
+      "cron": "53 11 * * *",
+      "reads": [
+        "data/core/calendar/calendar.md",
+        "data/core/state/now.md",
+        "data/core/state/open_loops.md"
+      ],
+      "set": "2026-11-11 08:57",
+      "ended": "2026-11-18"
     }
   ]
 }
