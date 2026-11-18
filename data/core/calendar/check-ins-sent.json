@@ -14,10 +14,10 @@
       "lastUtc": "2026-11-10T04:55:01.871Z"
     },
     "afternoon": {
-      "sent": 10,
+      "sent": 11,
       "first": "2026-11-07 16:54",
-      "last": "2026-11-17 16:55",
-      "lastUtc": "2026-11-17T08:55:14.026Z"
+      "last": "2026-11-18 16:55",
+      "lastUtc": "2026-11-18T08:55:14.402Z"
     },
     "midday-1153": {
       "sent": 7,
@@ -71,12 +71,6 @@
       "utc": "2026-11-11T08:54:37.948Z",
       "held": true,
       "why": "a hard day"
-    },
-    {
-      "id": "afternoon",
-      "at": "2026-11-13 16:55",
-      "utc": "2026-11-13T08:55:36.555Z",
-      "text": "Afternoon water top-up\nMontage day and a facial to round it off 🌤️\n\n💧 A glass now, before you head to Clementi\n\nHow's the water count looking since the 1pm printing?"
     },
     {
       "id": "morning-update-2",
@@ -161,6 +155,12 @@
       "at": "2026-11-18 11:55",
       "utc": "2026-11-18T03:55:33.591Z",
       "text": "Midday water check\nPump done and breakfast in 💪\n\n💧 No water logged yet today\n🖍️ Poster due today, the final stretch\n\nCan you finish a glass with lunch before the poster?"
+    },
+    {
+      "id": "afternoon",
+      "at": "2026-11-18 16:55",
+      "utc": "2026-11-18T08:55:14.402Z",
+      "text": "Afternoon water check\nLunch and a latte all logged, nice going 🌤️\n\n💧 No water logged yet today\n🖍️ Poster due today, nearly done\n\nHow about two glasses before 6, then tell me?"
     }
   ]
 }
