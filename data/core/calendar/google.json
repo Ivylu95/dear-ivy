@@ -1,69 +1,90 @@
 {
   "_what": "A copy of her Google Calendar, the next fortnight, refreshed by the heartbeat or a session through the connector (A-093). Read-only: nothing writes to her calendar from here.",
-  "synced_at": "2026-11-17T08:54:24.111Z",
+  "synced_at": "2026-11-18T00:55:40.072Z",
   "events": [
+    {
+      "start": "2026-11-18T07:10:00+08:00",
+      "end": "2026-11-18T08:05:00+08:00",
+      "all_day": false,
+      "title": "Pump - Upper Body",
+      "calendar": "ivyyypotatopls@gmail.com"
+    },
+    {
+      "start": "2026-11-19T20:40:00+08:00",
+      "end": "2026-11-19T21:35:00+08:00",
+      "all_day": false,
+      "title": "Cardio HIIT",
+      "calendar": "ivyyypotatopls@gmail.com"
+    },
     {
       "start": "2026-11-21",
       "end": "2026-11-22",
       "all_day": true,
       "title": "Date w Del",
-      "calendar": "own"
+      "calendar": "ivyyypotatopls@gmail.com"
+    },
+    {
+      "start": "2026-11-21T09:30:00+08:00",
+      "end": "2026-11-21T10:35:00+08:00",
+      "all_day": false,
+      "title": "CrewFit",
+      "calendar": "ivyyypotatopls@gmail.com"
     },
     {
       "start": "2026-11-22T09:00:00+08:00",
       "end": "2026-11-22T10:00:00+08:00",
       "all_day": false,
       "title": "Pilates (Reformer) Fit & Tone 60",
-      "calendar": "own"
+      "calendar": "ivyyypotatopls@gmail.com"
     },
     {
       "start": "2026-11-22T12:30:00+08:00",
       "end": "2026-11-22T13:30:00+08:00",
       "all_day": false,
       "title": "Boutique fair w Nicole",
-      "calendar": "own"
+      "calendar": "ivyyypotatopls@gmail.com"
     },
     {
       "start": "2026-11-25",
       "end": "2026-11-26",
       "all_day": true,
       "title": "Madeline birthday",
-      "calendar": "own"
+      "calendar": "ivyyypotatopls@gmail.com"
     },
     {
       "start": "2026-11-27",
       "end": "2026-11-28",
       "all_day": true,
       "title": "MLK Concert",
-      "calendar": "own"
+      "calendar": "ivyyypotatopls@gmail.com"
     },
     {
       "start": "2026-11-29T10:30:00+08:00",
       "end": "2026-11-29T11:30:00+08:00",
       "all_day": false,
       "title": "Therapy 10:30am",
-      "calendar": "own"
+      "calendar": "ivyyypotatopls@gmail.com"
     },
     {
       "start": "2026-11-30",
       "end": "2026-12-05",
       "all_day": true,
       "title": "MLK staff retreat",
-      "calendar": "own"
+      "calendar": "ivyyypotatopls@gmail.com"
     },
     {
       "start": "2026-11-30",
       "end": "2026-12-01",
       "all_day": true,
       "title": "MLK training @HF",
-      "calendar": "own"
+      "calendar": "ivyyypotatopls@gmail.com"
     },
     {
       "start": "2026-11-30",
       "end": "2026-12-01",
       "all_day": true,
       "title": "MLK School closure",
-      "calendar": "own"
+      "calendar": "ivyyypotatopls@gmail.com"
     }
   ]
 }
