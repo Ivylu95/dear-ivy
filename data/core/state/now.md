@@ -31,7 +31,7 @@ Thinking hard about the guy she's dating. Calm, practical, wants a plan.
 
 ## Next session opens with
 
-Check-in afternoon (2026-11-17 16:55): Could you fill a bottle now and keep it beside you for the poster?
+Check-in afternoon (2026-11-18 16:56): How about two glasses before 6, then tell me?
 Check-in morning-update-2 (2026-11-18 08:56): How did you sleep, and how do your arms feel after Pump this morning?
 Check-in midday (2026-11-10 12:55): How many glasses have you got in since you woke up?
 Check-in midday-1153 (2026-11-18 11:56): Can you finish a glass with lunch before the poster?
