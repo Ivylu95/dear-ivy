@@ -857,13 +857,6 @@
     },
     {
       "id": "food-lunch-1253",
-      "at": "2026-11-14 12:54",
-      "utc": "2026-11-14T04:54:49.136Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-14 12:53"
-    },
-    {
-      "id": "food-lunch-1253",
       "at": "2026-11-14 12:55",
       "utc": "2026-11-14T04:55:13.803Z",
       "text": "Time for lunch\n\nNothing logged yet today\n🔥 1,200 kcal of room for the day\n\nFor lunch, a palm of chicken, fish or tofu with rice and plenty of veg makes a solid start. Log it when you can."
@@ -1571,6 +1564,20 @@
       "utc": "2026-11-19T00:55:07.905Z",
       "held": true,
       "why": "yesterday's workout is on her calendar; logged in a chat, not by a run (A-121)"
+    },
+    {
+      "id": "food-lunch-1253",
+      "at": "2026-11-19 12:54",
+      "utc": "2026-11-19T04:54:31.708Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-19 12:53"
+    },
+    {
+      "id": "doughnut-thu",
+      "at": "2026-11-19 12:54",
+      "utc": "2026-11-19T04:54:31.770Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-19 12:53"
     }
   ]
 }
