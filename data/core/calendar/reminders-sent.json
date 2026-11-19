@@ -330,6 +330,12 @@
       "first": "2026-11-19 12:55",
       "last": "2026-11-19 12:55",
       "lastUtc": "2026-11-19T04:55:10.545Z"
+    },
+    "mc-invoice-lunch": {
+      "sent": 1,
+      "first": "2026-11-19 13:55",
+      "last": "2026-11-19 13:55",
+      "lastUtc": "2026-11-19T05:55:11.964Z"
     }
   },
   "sent": [
@@ -1597,6 +1603,12 @@
       "utc": "2026-11-19T05:54:41.911Z",
       "claimed": "cc-routine",
       "due": "2026-11-19 13:53"
+    },
+    {
+      "id": "mc-invoice-lunch",
+      "at": "2026-11-19 13:55",
+      "utc": "2026-11-19T05:55:11.964Z",
+      "text": "Your MC and medical invoice\nA quick one for your break\n\nSend them in while you eat, and it's off your plate well before 5."
     }
   ]
 }
