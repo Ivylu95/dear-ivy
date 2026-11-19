@@ -843,13 +843,6 @@
       "text": "OT hours doc due tomorrow\n\n📄 Tidy it up by end of day Saturday"
     },
     {
-      "id": "workout-catchup-cal",
-      "at": "2026-11-14 08:54",
-      "utc": "2026-11-14T00:54:39.878Z",
-      "held": true,
-      "why": "yesterday's workout already logged"
-    },
-    {
       "id": "ot-doc-sat-am",
       "at": "2026-11-14 10:55",
       "utc": "2026-11-14T02:55:22.936Z",
@@ -1571,6 +1564,13 @@
       "at": "2026-11-19 07:54",
       "utc": "2026-11-18T23:54:54.197Z",
       "text": "Thursday bfk, already in\nLogged before 8, nice one 🙌\n\n🔥 Eaten ███░░░░░░░ 26% · ~890 kcal room\n~ some of today is estimated\n\nBreakfast was light on protein, so for lunch, grilled chicken or tofu with rice and veg is about 450 and gives you a solid protein lift."
+    },
+    {
+      "id": "workout-catchup-cal",
+      "at": "2026-11-19 08:55",
+      "utc": "2026-11-19T00:55:07.905Z",
+      "held": true,
+      "why": "yesterday's workout is on her calendar; logged in a chat, not by a run (A-121)"
     }
   ]
 }
