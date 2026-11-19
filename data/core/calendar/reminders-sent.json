@@ -164,10 +164,10 @@
       "lastUtc": "2026-11-12T15:55:07.681Z"
     },
     "food-breakfast-0753": {
-      "sent": 8,
+      "sent": 9,
       "first": "2026-11-12 08:00",
-      "last": "2026-11-19 07:54",
-      "lastUtc": "2026-11-18T23:54:54.197Z"
+      "last": "2026-11-20 07:55",
+      "lastUtc": "2026-11-19T23:55:28.072Z"
     },
     "cancel-classpass": {
       "sent": 1,
@@ -939,12 +939,6 @@
       "text": "Your appointment's tomorrow at 10\n\n📝 Jot down tonight anything you want to bring up\n🛏️ Keep it short, a few words is fine"
     },
     {
-      "id": "food-breakfast-0753",
-      "at": "2026-11-15 07:55",
-      "utc": "2026-11-14T23:55:05.049Z",
-      "text": "Sunday bfk, nothing logged yet\n\n🔥 Eaten ░░░░░░░░░░ 0% · 1,200 kcal room\n\nGreek yoghurt with some berries is about 150, a light protein start that leaves lots of room."
-    },
-    {
       "id": "workout-catchup-cal",
       "at": "2026-11-15 08:54",
       "utc": "2026-11-15T00:54:34.668Z",
@@ -1628,6 +1622,12 @@
       "utc": "2026-11-19T23:54:57.980Z",
       "claimed": "cc-routine",
       "due": "2026-11-20 07:53"
+    },
+    {
+      "id": "food-breakfast-0753",
+      "at": "2026-11-20 07:55",
+      "utc": "2026-11-19T23:55:28.072Z",
+      "text": "Friday bfk, plan's already in\nLogged the whole day last night, nice 🙌\n\n🔥 Eaten ░░░░░░░░░░ 0% · 1,200 kcal room\n📋 Planned ~1,330, about 130 over\n~ some of today is estimated\n\nThe Luckin oat latte is ~280 to start. One cookie instead of two this afternoon brings the planned day to about 1,130."
     }
   ]
 }
