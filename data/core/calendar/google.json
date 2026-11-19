@@ -1,19 +1,33 @@
 {
   "_what": "A copy of her Google Calendar, the next fortnight, refreshed by the heartbeat or a session through the connector (A-093). Read-only: nothing writes to her calendar from here.",
-  "synced_at": "2026-11-18T08:54:56.623Z",
+  "synced_at": "2026-11-19T00:56:28.711Z",
   "events": [
     {
-      "start": "2026-11-18T07:10:00+08:00",
-      "end": "2026-11-18T08:05:00+08:00",
+      "start": "2026-11-19T20:40:00+08:00",
+      "end": "2026-11-19T21:35:00+08:00",
       "all_day": false,
-      "title": "Pump - Upper Body",
+      "title": "Cardio HIIT",
       "calendar": "ivyyypotatopls@gmail.com"
     },
     {
       "start": "2026-11-19T20:40:00+08:00",
       "end": "2026-11-19T21:35:00+08:00",
       "all_day": false,
-      "title": "Cardio HIIT",
+      "title": "‎Cardio HIIT",
+      "calendar": "ivyyypotatopls@gmail.com"
+    },
+    {
+      "start": "2026-11-20T07:10:00+08:00",
+      "end": "2026-11-20T08:05:00+08:00",
+      "all_day": false,
+      "title": "Strength - Mixed",
+      "calendar": "ivyyypotatopls@gmail.com"
+    },
+    {
+      "start": "2026-11-20T07:10:00+08:00",
+      "end": "2026-11-20T08:05:00+08:00",
+      "all_day": false,
+      "title": "‎Strength - Mixed",
       "calendar": "ivyyypotatopls@gmail.com"
     },
     {
@@ -28,6 +42,13 @@
       "end": "2026-11-21T10:35:00+08:00",
       "all_day": false,
       "title": "CrewFit",
+      "calendar": "ivyyypotatopls@gmail.com"
+    },
+    {
+      "start": "2026-11-21T09:30:00+08:00",
+      "end": "2026-11-21T10:35:00+08:00",
+      "all_day": false,
+      "title": "‎CrewFit",
       "calendar": "ivyyypotatopls@gmail.com"
     },
     {

@@ -2,10 +2,10 @@
   "_what": "The last messages the sweep wrote for each check-in, so the next differs, how many Telegram accepted, and any held (HBT-010, HBT-014).",
   "counts": {
     "morning-update-2": {
-      "sent": 11,
+      "sent": 12,
       "first": "2026-11-07 08:54",
-      "last": "2026-11-18 08:56",
-      "lastUtc": "2026-11-18T00:56:24.327Z"
+      "last": "2026-11-19 08:56",
+      "lastUtc": "2026-11-19T00:56:55.779Z"
     },
     "midday": {
       "sent": 4,
@@ -71,12 +71,6 @@
       "utc": "2026-11-11T08:54:37.948Z",
       "held": true,
       "why": "a hard day"
-    },
-    {
-      "id": "morning-update-2",
-      "at": "2026-11-14 08:56",
-      "utc": "2026-11-14T00:56:49.157Z",
-      "text": "Good morning, Saturday 14 Nov\n\n📅 Today 9:30am: Strength Endurance\n💳 Today: ClassPass trial ends, $99 if still on\n⏱️ Today: OT hours doc due by end of day\n🗓️ Tomorrow 10am: your appointment\n\nReminders still to come:\n• Today 10:53am and 5:53pm: OT doc\n• Tonight 8pm: notes for tomorrow's appointment\n• Tue 7pm: poster due Wed\n• Your daily food, snack and workout nudges carry on\n\nTap the link below to change or stop one.\n\nHow did you sleep, and how's your body feeling before Strength Endurance?"
     },
     {
       "id": "midday-1153",
@@ -161,6 +155,12 @@
       "at": "2026-11-18 16:55",
       "utc": "2026-11-18T08:55:14.402Z",
       "text": "Afternoon water check\nLunch and a latte all logged, nice going 🌤️\n\n💧 No water logged yet today\n🖍️ Poster due today, nearly done\n\nHow about two glasses before 6, then tell me?"
+    },
+    {
+      "id": "morning-update-2",
+      "at": "2026-11-19 08:56",
+      "utc": "2026-11-19T00:56:55.779Z",
+      "text": "Good morning, Thursday 19 Nov\nA full day ahead, you've got this 🌤️\n\n🍩 Today 1:30pm: doughnut pick-up\n🧾 Today by 5pm: MC and medical invoice\n🔥 Tonight 8:40pm: Cardio HIIT\n🏋️ Tomorrow 7:10am: Strength - Mixed\n\nReminders still to come:\n• 12:53pm: lunch, and the doughnut heads-up\n• 1:53pm and 4:53pm: MC and invoice\n• 6:53pm: dinner\n• 8pm, then 10pm: last call on snacks\n• 8:53pm: after-HIIT check and your bedtime one\n• 11pm: your week of in and out\n• Fri 7:53am: breakfast\n\nSomething here not working for you? Tap below to change it.\n\nHow did you sleep, and how's your body feeling ahead of HIIT tonight?"
     }
   ]
 }
