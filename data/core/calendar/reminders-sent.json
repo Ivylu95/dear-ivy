@@ -128,10 +128,10 @@
       "lastUtc": "2026-11-11T05:10:39.496Z"
     },
     "food-dinner-1853": {
-      "sent": 8,
+      "sent": 9,
       "first": "2026-11-11 18:55",
-      "last": "2026-11-18 18:54",
-      "lastUtc": "2026-11-18T10:54:38.611Z"
+      "last": "2026-11-19 18:55",
+      "lastUtc": "2026-11-19T10:55:20.585Z"
     },
     "poster-start": {
       "sent": 1,
@@ -920,12 +920,6 @@
       "due": "2026-11-14 18:53"
     },
     {
-      "id": "food-dinner-1853",
-      "at": "2026-11-14 18:55",
-      "utc": "2026-11-14T10:55:10.053Z",
-      "text": "Dinner's around 7\n\n🍽️ Nothing logged yet today\n🔥 Your 1,200 kcal is all still open\n\nSomething warm with protein and veg would sit well tonight, like fish or tofu with greens and a little rice. Send over what you had today when you can, no rush."
-    },
-    {
       "id": "book-dance",
       "at": "2026-11-14 19:54",
       "utc": "2026-11-14T11:54:37.066Z",
@@ -1628,6 +1622,12 @@
       "at": "2026-11-19 16:54",
       "utc": "2026-11-19T08:54:36.820Z",
       "text": "Last call for your MC and invoice\n\nAbout seven minutes left before 5 pm. Send them in now and it's done for the day."
+    },
+    {
+      "id": "food-dinner-1853",
+      "at": "2026-11-19 18:55",
+      "utc": "2026-11-19T10:55:20.585Z",
+      "text": "Dinner's around 7, HIIT at 8:40\nGood protein from the fillet and egg at lunch 🍳\n\n🍽️ ██████████ 98% · ~1,175 of 1,200 kcal eaten\n🔥 HIIT tonight adds about 200 kcal of room, once it's done\n~ some of today is estimated\n\nProtein's been on the light side, so a small bowl of tofu or a plain Greek yogurt about an hour before HIIT would sit well. Send it over once you've eaten."
     }
   ]
 }
