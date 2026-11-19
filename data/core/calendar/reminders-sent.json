@@ -1330,13 +1330,6 @@
       "text": "Your concert poster is due tomorrow\n\n🖼️ Finish the last bits tonight\n💾 Save it so it's ready to hand in\n\nNearly there, you've got this 💪"
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-17 20:55",
-      "utc": "2026-11-17T12:55:59.550Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-17 20:00"
-    },
-    {
       "id": "antidepressant-2053",
       "at": "2026-11-17 20:55",
       "utc": "2026-11-17T12:55:59.674Z",
@@ -1622,6 +1615,13 @@
       "at": "2026-11-19 20:55",
       "utc": "2026-11-19T12:55:44.760Z",
       "text": "Cardio HIIT at 8:40 tonight is counted 💪\n\n🏃 Anything else today? A walk or the ankle routine counts too. Sets and reps if you have them."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-19 22:54",
+      "utc": "2026-11-19T14:54:34.892Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-19 22:00"
     },
     {
       "id": "no-snacks-after-10",
