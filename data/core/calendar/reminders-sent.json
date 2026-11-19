@@ -336,6 +336,12 @@
       "first": "2026-11-19 13:55",
       "last": "2026-11-19 13:55",
       "lastUtc": "2026-11-19T05:55:11.964Z"
+    },
+    "mc-invoice-last": {
+      "sent": 1,
+      "first": "2026-11-19 16:54",
+      "last": "2026-11-19 16:54",
+      "lastUtc": "2026-11-19T08:54:36.820Z"
     }
   },
   "sent": [
@@ -1616,6 +1622,12 @@
       "utc": "2026-11-19T08:54:14.658Z",
       "claimed": "cc-routine",
       "due": "2026-11-19 16:53"
+    },
+    {
+      "id": "mc-invoice-last",
+      "at": "2026-11-19 16:54",
+      "utc": "2026-11-19T08:54:36.820Z",
+      "text": "Last call for your MC and invoice\n\nAbout seven minutes left before 5 pm. Send them in now and it's done for the day."
     }
   ]
 }
