@@ -26,10 +26,10 @@
       "lastUtc": "2026-11-10T12:56:41.247Z"
     },
     "no-snacks-after-10": {
-      "sent": 23,
+      "sent": 24,
       "first": "2026-11-07 20:56",
-      "last": "2026-11-18 22:54",
-      "lastUtc": "2026-11-18T14:54:45.383Z"
+      "last": "2026-11-19 20:55",
+      "lastUtc": "2026-11-19T12:55:42.333Z"
     },
     "nutrition-updates-2": {
       "sent": 1,
@@ -140,16 +140,16 @@
       "lastUtc": "2026-11-11T11:55:52.005Z"
     },
     "antidepressant-2053": {
-      "sent": 8,
+      "sent": 9,
       "first": "2026-11-11 20:57",
-      "last": "2026-11-18 20:55",
-      "lastUtc": "2026-11-18T12:55:30.058Z"
+      "last": "2026-11-19 20:55",
+      "lastUtc": "2026-11-19T12:55:43.461Z"
     },
     "workout-ask-cal": {
-      "sent": 8,
+      "sent": 9,
       "first": "2026-11-11 20:57",
-      "last": "2026-11-18 20:55",
-      "lastUtc": "2026-11-18T12:55:31.122Z"
+      "last": "2026-11-19 20:55",
+      "lastUtc": "2026-11-19T12:55:44.760Z"
     },
     "week-cal-now-nov11": {
       "sent": 1,
@@ -953,18 +953,6 @@
       "text": "Your appointment's tomorrow at 10\n\n📝 Jot down tonight anything you want to bring up\n🛏️ Keep it short, a few words is fine"
     },
     {
-      "id": "antidepressant-2053",
-      "at": "2026-11-14 20:55",
-      "utc": "2026-11-14T12:55:39.250Z",
-      "text": "Before lights out\n\n💊 Your meds, then rest"
-    },
-    {
-      "id": "workout-ask-cal",
-      "at": "2026-11-14 20:55",
-      "utc": "2026-11-14T12:55:40.339Z",
-      "text": "Strength Endurance at 9:30 is counted 💪\n\nAnything else since then? A walk or your ankle routine counts too."
-    },
-    {
       "id": "week-cal-in-out-2",
       "at": "2026-11-14 23:54",
       "utc": "2026-11-14T15:54:20.204Z",
@@ -1289,12 +1277,6 @@
       "utc": "2026-11-16T14:54:41.520Z",
       "claimed": "cc-routine",
       "due": "2026-11-16 22:00"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-16 22:55",
-      "utc": "2026-11-16T14:55:12.674Z",
-      "text": "Snacks are done for today\n\n🌙 That's the food day wrapped. Next bite is bfk, so rest up."
     },
     {
       "id": "week-cal-in-out-2",
@@ -1628,6 +1610,24 @@
       "at": "2026-11-19 18:55",
       "utc": "2026-11-19T10:55:20.585Z",
       "text": "Dinner's around 7, HIIT at 8:40\nGood protein from the fillet and egg at lunch 🍳\n\n🍽️ ██████████ 98% · ~1,175 of 1,200 kcal eaten\n🔥 HIIT tonight adds about 200 kcal of room, once it's done\n~ some of today is estimated\n\nProtein's been on the light side, so a small bowl of tofu or a plain Greek yogurt about an hour before HIIT would sit well. Send it over once you've eaten."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-19 20:55",
+      "utc": "2026-11-19T12:55:42.333Z",
+      "text": "Food closes at 10 tonight\n\n💪 Hungry after HIIT? Have a light bite soon. After 10, next food is bfk."
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-19 20:55",
+      "utc": "2026-11-19T12:55:43.461Z",
+      "text": "Meds after HIIT\n\n💊 Once you've cooled down, take tonight's before sleep."
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-19 20:55",
+      "utc": "2026-11-19T12:55:44.760Z",
+      "text": "Cardio HIIT at 8:40 tonight is counted 💪\n\n🏃 Anything else today? A walk or the ankle routine counts too. Sets and reps if you have them."
     }
   ]
 }
