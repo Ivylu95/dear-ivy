@@ -940,13 +940,6 @@
     },
     {
       "id": "food-breakfast-0753",
-      "at": "2026-11-15 07:54",
-      "utc": "2026-11-14T23:54:41.223Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-15 07:53"
-    },
-    {
-      "id": "food-breakfast-0753",
       "at": "2026-11-15 07:55",
       "utc": "2026-11-14T23:55:05.049Z",
       "text": "Sunday bfk, nothing logged yet\n\n🔥 Eaten ░░░░░░░░░░ 0% · 1,200 kcal room\n\nGreek yoghurt with some berries is about 150, a light protein start that leaves lots of room."
@@ -1628,6 +1621,13 @@
       "at": "2026-11-19 23:55",
       "utc": "2026-11-19T15:55:09.352Z",
       "text": "Your week so far, Mon to Thu\nSecond HIIT of the week done 💪\n\n📅 Mon: in 2,130 · out 0 · balance 2,130 (930 over)\n📅 Tue: in 2,235 · out 200 · balance 2,035 (835 over)\n📅 Wed: in 2,925 · out 0 · balance 2,925 (1,725 over)\n📅 Thu: in 1,635 · out 200 · balance 1,435 (235 over)\n\nWed now has last night's supper in it.\n~ some of this week is estimated"
+    },
+    {
+      "id": "food-breakfast-0753",
+      "at": "2026-11-20 07:54",
+      "utc": "2026-11-19T23:54:57.980Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-20 07:53"
     }
   ]
 }
