@@ -569,6 +569,13 @@
       "text": "Tidy OT hours document: last chance today",
       "at": "2026-11-16 21:53",
       "set": "2026-11-16 07:38"
+    },
+    {
+      "id": "poster-due",
+      "emoji": "⏰",
+      "text": "Poster due tomorrow: finish what's left",
+      "at": "2026-11-17 19:00",
+      "set": "2026-11-11 07:10"
     }
   ]
 }

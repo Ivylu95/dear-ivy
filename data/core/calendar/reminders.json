@@ -1,6 +1,6 @@
 {
   "timezone": "Asia/Singapore",
-  "sent_through": "2026-11-19 18:54",
+  "sent_through": "2026-11-19 20:54",
   "send": "routine",
   "reminders": [
     {
@@ -19,13 +19,6 @@
       "text": "Stop snacking after 10 pm (at 8 pm: anything still wanted tonight, have it soon; at 10 pm: kitchen's closed for tonight)",
       "cron": "0 20,22 * * *",
       "set": "2026-11-07 11:03"
-    },
-    {
-      "id": "poster-due",
-      "emoji": "⏰",
-      "text": "Poster due tomorrow: finish what's left",
-      "at": "2026-11-17 19:00",
-      "set": "2026-11-11 07:10"
     },
     {
       "id": "food-breakfast-0753",
