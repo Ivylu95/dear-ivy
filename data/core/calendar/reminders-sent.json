@@ -1006,20 +1006,6 @@
     {
       "id": "antidepressant-2053",
       "at": "2026-11-15 20:55",
-      "utc": "2026-11-15T12:55:02.742Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-15 20:53"
-    },
-    {
-      "id": "workout-ask-cal",
-      "at": "2026-11-15 20:55",
-      "utc": "2026-11-15T12:55:02.926Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-15 20:53"
-    },
-    {
-      "id": "antidepressant-2053",
-      "at": "2026-11-15 20:55",
       "utc": "2026-11-15T12:55:31.673Z",
       "text": "Meds before bed\n\n💊 Last thing before you sleep tonight."
     },
@@ -1295,13 +1281,6 @@
       "at": "2026-11-17 20:56",
       "utc": "2026-11-17T12:56:29.563Z",
       "text": "HIIT at 8 tonight\n\n💪 Did it go ahead as planned?\n🏃 Anything else today, like a walk or the ankle routine? Sets and reps if you have them."
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-17 22:54",
-      "utc": "2026-11-17T14:54:29.059Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-17 22:00"
     },
     {
       "id": "no-snacks-after-10",
@@ -1628,6 +1607,27 @@
       "at": "2026-11-20 18:54",
       "utc": "2026-11-20T10:54:54.051Z",
       "text": "Dinner's around 7, onigiri on the plan\nNice protein from the chicken and salmon at lunch 🍗\n\n🍽️ ████████░░ 84% · ~1,005 of 1,200 kcal logged as eaten\n☕ Latte and soy chips still to confirm, ~480\n🍙 Onigiri ~230\n\nIf the latte and chips went in, the day is already near 1,500, so the onigiri on its own is plenty tonight. Send it over once you've eaten.\n\n~ some of today is estimated"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-20 20:56",
+      "utc": "2026-11-20T12:56:01.719Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-20 20:00"
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-20 20:56",
+      "utc": "2026-11-20T12:56:01.784Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-20 20:53"
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-20 20:56",
+      "utc": "2026-11-20T12:56:01.852Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-20 20:53"
     }
   ]
 }
