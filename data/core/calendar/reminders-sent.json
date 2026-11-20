@@ -939,13 +939,6 @@
       "text": "Your appointment's tomorrow at 10\n\n📝 Jot down tonight anything you want to bring up\n🛏️ Keep it short, a few words is fine"
     },
     {
-      "id": "workout-catchup-cal",
-      "at": "2026-11-15 08:54",
-      "utc": "2026-11-15T00:54:34.668Z",
-      "held": true,
-      "why": "yesterday's workout already logged"
-    },
-    {
       "id": "dance-sun",
       "at": "2026-11-15 10:54",
       "utc": "2026-11-15T02:54:19.393Z",
@@ -1628,6 +1621,13 @@
       "at": "2026-11-20 07:55",
       "utc": "2026-11-19T23:55:28.072Z",
       "text": "Friday bfk, plan's already in\nLogged the whole day last night, nice 🙌\n\n🔥 Eaten ░░░░░░░░░░ 0% · 1,200 kcal room\n📋 Planned ~1,330, about 130 over\n~ some of today is estimated\n\nThe Luckin oat latte is ~280 to start. One cookie instead of two this afternoon brings the planned day to about 1,130."
+    },
+    {
+      "id": "workout-catchup-cal",
+      "at": "2026-11-20 08:54",
+      "utc": "2026-11-20T00:54:10.202Z",
+      "held": true,
+      "why": "yesterday's workout already logged"
     }
   ]
 }
