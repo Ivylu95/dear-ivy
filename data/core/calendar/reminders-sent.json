@@ -26,10 +26,10 @@
       "lastUtc": "2026-11-10T12:56:41.247Z"
     },
     "no-snacks-after-10": {
-      "sent": 26,
+      "sent": 27,
       "first": "2026-11-07 20:56",
-      "last": "2026-11-20 20:56",
-      "lastUtc": "2026-11-20T12:56:44.755Z"
+      "last": "2026-11-20 22:55",
+      "lastUtc": "2026-11-20T14:55:49.174Z"
     },
     "nutrition-updates-2": {
       "sent": 1,
@@ -1344,12 +1344,6 @@
       "due": "2026-11-18 20:53"
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-18 20:55",
-      "utc": "2026-11-18T12:55:28.550Z",
-      "text": "Just over an hour till 10\n\n🍎 Want anything else tonight? Have it soon, then food's done till bfk."
-    },
-    {
       "id": "antidepressant-2053",
       "at": "2026-11-18 20:55",
       "utc": "2026-11-18T12:55:30.058Z",
@@ -1628,6 +1622,12 @@
       "utc": "2026-11-20T14:55:22.008Z",
       "claimed": "cc-routine",
       "due": "2026-11-20 22:00"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-20 22:55",
+      "utc": "2026-11-20T14:55:49.174Z",
+      "text": "10 pm, food's wrapped up for today\nOnigiri was a nice easy dinner\n\n🌙 Nothing more tonight. Next up is bfk."
     }
   ]
 }
