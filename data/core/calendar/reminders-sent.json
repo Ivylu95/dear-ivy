@@ -1330,13 +1330,6 @@
       "text": "Dinner's around 7\nSolid protein from lunch today 🍗\n\n🍽️ ██████████ 148% · ~1,775 of 1,200 kcal eaten\n⚖️ About 575 over the 1,200\n~ some of today is estimated\n\nThe 1,200 is used up, so if you're hungry, go light: a bowl of clear soup with tofu and greens is about 150 kcal. Tell me what you had after."
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-18 20:55",
-      "utc": "2026-11-18T12:55:08.619Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-18 20:00"
-    },
-    {
       "id": "antidepressant-2053",
       "at": "2026-11-18 20:55",
       "utc": "2026-11-18T12:55:08.694Z",
@@ -1628,6 +1621,13 @@
       "at": "2026-11-20 20:56",
       "utc": "2026-11-20T12:56:47.236Z",
       "text": "Strong start this morning\nStrength (Mixed) at 7:10 is counted 💪\n\n🏃 Anything else today? A walk or the ankle routine counts.\n📝 Sets and reps if you have them."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-20 22:55",
+      "utc": "2026-11-20T14:55:22.008Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-20 22:00"
     }
   ]
 }
