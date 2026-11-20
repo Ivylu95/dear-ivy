@@ -30,3 +30,4 @@ Check-in morning-update-2 (2026-11-17 08:56): How did you sleep, and how does yo
 Check-in midday-1153 (2026-11-17 12:56): Have you had any water yet since the 6am Summit?
 Check-in afternoon (2026-11-17 16:55): Could you fill a bottle now and keep it beside you for the poster?
 Check-in morning-update-2 (2026-11-18 08:56): How did you sleep, and how do your arms feel after Pump this morning?
+Check-in morning-update-2 (2026-11-19 08:57): How did you sleep, and how's your body feeling ahead of HIIT tonight?
