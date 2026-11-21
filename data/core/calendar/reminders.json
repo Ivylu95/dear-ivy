@@ -159,6 +159,13 @@
       "text": "Submit your MC and medical invoice: last call before 5 pm",
       "at": "2026-11-19 16:53",
       "set": "2026-11-18 17:45"
+    },
+    {
+      "id": "snack-before-home",
+      "emoji": "🍎",
+      "text": "Snack time: protein and fruit before you head home",
+      "cron": "30 16 * * 1-5",
+      "set": "2026-11-21 12:40"
     }
   ]
 }
