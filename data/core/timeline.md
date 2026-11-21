@@ -63,3 +63,4 @@ _Anything marked `[inferred]` is my reading, not her words._
 | ? (told 2026-11-07) | event | `dating` | Starting things with Del | → data/core/people/del.md |
 | 2026-11-07 | update | `adhd` | Said her answers to screener questions 4–6 were "Often": scores 6 of 6 | → data/therapy/adhd/screener.md |
 | 2026-11-18 | health | `health` | Asked how to stop eating at night: starts after work around 6 pm and goes on until she sleeps | → data/core/journal/2026-11-18.md |
+| 2026-11-21 | health | `weight` | Said she thinks she is about 53 kg, wants to go down to 45 kg, and asked to be reminded to eat half portions; conflicts with the 45 kg she gave on 2026-11-16 | → data/core/journal/2026-11-21.md |
