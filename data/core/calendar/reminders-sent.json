@@ -1049,13 +1049,6 @@
       "text": "Break time: OT hours doc\n\n⏱️ Use your break to tidy it up"
     },
     {
-      "id": "food-dinner-1853",
-      "at": "2026-11-16 18:54",
-      "utc": "2026-11-16T10:54:37.606Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-16 18:53"
-    },
-    {
       "id": "poster-finish-2",
       "at": "2026-11-16 19:55",
       "utc": "2026-11-16T11:55:23.368Z",
@@ -1622,6 +1615,13 @@
       "at": "2026-11-21 12:55",
       "utc": "2026-11-21T04:55:35.148Z",
       "text": "Lunch is up next\nLatte and a cookie to start the day ☕\n\n🔥 ▰▰▰▱▱▱▱▱▱▱ 28% of 1,200 kcal\n~870 kcal room left\n🏃‍♀️ No workout logged today\n\nBreakfast came late, so lunch has plenty of room. Eggs, chicken or fish with veg and some rice would add the protein the day hasn't had yet."
+    },
+    {
+      "id": "food-dinner-1853",
+      "at": "2026-11-21 18:55",
+      "utc": "2026-11-21T10:55:14.512Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-21 18:53"
     },
     {
       "id": "food-dinner-1853",
