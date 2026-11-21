@@ -26,10 +26,10 @@
       "lastUtc": "2026-11-10T12:56:41.247Z"
     },
     "no-snacks-after-10": {
-      "sent": 27,
+      "sent": 28,
       "first": "2026-11-07 20:56",
-      "last": "2026-11-20 22:55",
-      "lastUtc": "2026-11-20T14:55:49.174Z"
+      "last": "2026-11-21 20:55",
+      "lastUtc": "2026-11-21T12:55:33.336Z"
     },
     "nutrition-updates-2": {
       "sent": 1,
@@ -140,16 +140,16 @@
       "lastUtc": "2026-11-11T11:55:52.005Z"
     },
     "antidepressant-2053": {
-      "sent": 10,
+      "sent": 11,
       "first": "2026-11-11 20:57",
-      "last": "2026-11-20 20:56",
-      "lastUtc": "2026-11-20T12:56:46.176Z"
+      "last": "2026-11-21 20:55",
+      "lastUtc": "2026-11-21T12:55:34.587Z"
     },
     "workout-ask-cal": {
-      "sent": 10,
+      "sent": 11,
       "first": "2026-11-11 20:57",
-      "last": "2026-11-20 20:56",
-      "lastUtc": "2026-11-20T12:56:47.236Z"
+      "last": "2026-11-21 20:55",
+      "lastUtc": "2026-11-21T12:55:35.734Z"
     },
     "week-cal-now-nov11": {
       "sent": 1,
@@ -1089,18 +1089,6 @@
       "due": "2026-11-16 20:53"
     },
     {
-      "id": "antidepressant-2053",
-      "at": "2026-11-16 20:58",
-      "utc": "2026-11-16T12:58:37.512Z",
-      "text": "Night meds\n\n💊 Have them before you turn in tonight."
-    },
-    {
-      "id": "workout-ask-cal",
-      "at": "2026-11-16 20:58",
-      "utc": "2026-11-16T12:58:45.390Z",
-      "text": "Two H.I.R.T sessions today\n💪 8:20 and 6:20 are both on your calendar, counted as done.\n\nAnything else on top? Sets and reps if you have them, or a walk or the ankle routine."
-    },
-    {
       "id": "ot-doc-mon-last",
       "at": "2026-11-16 21:56",
       "utc": "2026-11-16T13:56:29.009Z",
@@ -1302,12 +1290,6 @@
       "utc": "2026-11-18T14:54:26.349Z",
       "claimed": "cc-routine",
       "due": "2026-11-18 22:00"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-18 22:54",
-      "utc": "2026-11-18T14:54:45.383Z",
-      "text": "10 pm has come and gone\n\n🌙 No more sn tonight. Your next food is bfk, so get some good sleep."
     },
     {
       "id": "week-cal-in-out-2",
@@ -1628,6 +1610,24 @@
       "at": "2026-11-21 18:55",
       "utc": "2026-11-21T10:55:48.072Z",
       "text": "Dinner time, around 7\nEasy start with the latte and cookie 🍪\n\n🍽️ ███░░░░░░░ 28% · 330 of 1,200 kcal eaten\n🔥 About 870 kcal of room left\n🥩 No protein logged yet today\n\nPlenty of room for a proper plate tonight: some chicken or fish with rice and greens would bring the protein up nicely. Send it over once you've eaten."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-21 20:55",
+      "utc": "2026-11-21T12:55:33.336Z",
+      "text": "Food closes at 10 tonight\n\n🍔 Dinner's just in, so you may be set already.\n🌙 Want a small bite still? Have it before 10. After that, next food is bfk."
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-21 20:55",
+      "utc": "2026-11-21T12:55:34.587Z",
+      "text": "Bedtime meds\n\n💊 Take tonight's before you sleep."
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-21 20:55",
+      "utc": "2026-11-21T12:55:35.734Z",
+      "text": "CrewFit this morning is in 💪\n\n🏃 Did you fit in anything else, like a walk or your ankle routine?\n📝 Sets and reps if you've got them."
     }
   ]
 }
