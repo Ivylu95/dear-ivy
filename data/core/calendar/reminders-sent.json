@@ -1050,13 +1050,6 @@
     },
     {
       "id": "food-dinner-1853",
-      "at": "2026-11-16 18:54",
-      "utc": "2026-11-16T10:54:37.606Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-16 18:53"
-    },
-    {
-      "id": "food-dinner-1853",
       "at": "2026-11-16 18:55",
       "utc": "2026-11-16T10:55:13.010Z",
       "text": "Dinner's about 7, eat when you're ready\nNice sandwich lunch today 🥪\n\n🍽️ █████████░ 86% · ~1,030 of 1,200 kcal eaten\n🔥 About 170 kcal of room left\n~ some of today is estimated\n\nProtein's been light today, so a small piece of fish or some tofu with greens would fit well. Send it over once you've eaten."
@@ -1628,6 +1621,13 @@
       "at": "2026-11-21 12:55",
       "utc": "2026-11-21T04:55:35.148Z",
       "text": "Lunch is up next\nLatte and a cookie to start the day ☕\n\n🔥 ▰▰▰▱▱▱▱▱▱▱ 28% of 1,200 kcal\n~870 kcal room left\n🏃‍♀️ No workout logged today\n\nBreakfast came late, so lunch has plenty of room. Eggs, chicken or fish with veg and some rice would add the protein the day hasn't had yet."
+    },
+    {
+      "id": "food-dinner-1853",
+      "at": "2026-11-21 18:55",
+      "utc": "2026-11-21T10:55:14.512Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-21 18:53"
     }
   ]
 }
