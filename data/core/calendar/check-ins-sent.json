@@ -2,10 +2,10 @@
   "_what": "The last messages the sweep wrote for each check-in, so the next differs, how many Telegram accepted, and any held (HBT-010, HBT-014).",
   "counts": {
     "morning-update-2": {
-      "sent": 13,
+      "sent": 14,
       "first": "2026-11-07 08:54",
-      "last": "2026-11-20 08:56",
-      "lastUtc": "2026-11-20T00:56:48.555Z"
+      "last": "2026-11-21 09:55",
+      "lastUtc": "2026-11-21T01:55:25.034Z"
     },
     "midday": {
       "sent": 4,
@@ -97,12 +97,6 @@
       "text": "Afternoon water top-up\n\n💧 A glass now, before the last push\n📁 Portfolio: submit it before the day ends\n🎞️ Montage: due tomorrow\n\nCan you keep a glass beside you while you finish the portfolio?"
     },
     {
-      "id": "morning-update-2",
-      "at": "2026-11-16 08:56",
-      "utc": "2026-11-16T00:56:19.053Z",
-      "text": "Good morning, Monday 16 Nov\nDance yesterday and H.I.R.T this morning, a strong start 💪\n\n🎞️ Today: montage due\n🖍️ Today: staying back at MLK for the poster\n⏱️ Today: OT hours doc, finish by tonight\n📌 Tomorrow, Tue 17: last poster push at 7pm, due Wed\n🧘 Sun 22, 9am: Reformer Pilates\n🎵 Fri 27: MLK concert\n\nReminders still to come:\n• Today 1pm: montage last bits, then poster cut and stick\n• Today 1:53pm, 7:53pm and 9:53pm: OT doc\n• Today 7pm: poster last touches\n• Sun 5pm: Sunday feedback\n• Your food, water, workout and night ones keep going daily\n\nNeed one moved or dropped? The link below has them all.\n\nHow did you sleep, and how does your body feel after dance and H.I.R.T?"
-    },
-    {
       "id": "midday-1153",
       "at": "2026-11-16 11:54",
       "utc": "2026-11-16T03:54:59.823Z",
@@ -161,6 +155,12 @@
       "at": "2026-11-20 08:56",
       "utc": "2026-11-20T00:56:48.555Z",
       "text": "Good morning, Friday 20 Nov\nStrength - Mixed done at 7:10, a strong start 💪\n\n📅 Nothing else on today\n🏋️ Tomorrow 9:30am: CrewFit, then your plans for the day\n🎂 Wed 25: a friend's birthday\n\nReminders still to come:\n• Today 12:53pm and 6:53pm: your lunch and dinner nudges\n• Tonight from 8pm: the snack wind-down, closing at 10pm\n• At 8:53pm: today's workouts, plus your bedtime one\n• 11pm: your week of in and out\n• Sat 7:53am: breakfast\n\nIf any of these needs shifting or dropping, the link below takes you there.\n\nHow did you sleep, and how are your legs after this morning's Strength?"
+    },
+    {
+      "id": "morning-update-2",
+      "at": "2026-11-21 09:55",
+      "utc": "2026-11-21T01:55:25.034Z",
+      "text": "Good morning, Saturday 21 Nov\nCrewFit underway at 9:30, a lively start 💪\n\n📅 Today: your date\n🧘 Tomorrow 9am: Reformer Pilates\n🛍️ Tomorrow 12:30pm: boutique fair\n🍽️ Sat 28, 6pm: dinner plans\n\nReminders still to come:\n• Food check-ins just before lunch and dinner\n• Tonight: a snack heads-up, then last call\n• 8:53pm: what you trained today, plus the bedtime one\n• 11pm: this week's calories in and out\n• Tomorrow 7:53am: breakfast\n• Tomorrow 5pm: feedback list, ready to forward\n\nWant to shift or stop one? It's all behind the link below.\n\nHow did you sleep, and how's your body holding up through CrewFit?"
     }
   ]
 }
