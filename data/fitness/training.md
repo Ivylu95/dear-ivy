@@ -56,6 +56,7 @@ her words, blank when not said._
 - 2026-11-12 (Thu, told 7:14 am) · Cardio and strength at BFT, 50 min. Her words: *"Log my workout for the day 50 minutes cardio strength training at bft"*
 - 2026-11-13 (Fri, told 9:06 am) · Light training at BFT, mostly stretching; length not given. Her words: *"light training at bft, probably burned only 80-100c bc it's more of stretching?"*
 - 2026-11-14 (Sat, told 2026-11-15) · HIIT strength workout, 1 hour; 200 kcal burned, her figure. Her words: *"worked out 200 calories out"*, then *"Did a hiit strength work out for an [hour] yesterday"* (voice-typed "out" for "hour")
+- 2026-11-21 (Sat, told at night) · HIIT in the morning, 1 hour (her usual length); 200 kcal burned, her cardio figure. Her words: *"Did hiit in the morning"*
 - 2026-11-19 (Thu, told 11:33 pm) · HIIT, 1 hour (her usual length; time not given); 200 kcal burned, her cardio figure. Her words: *"Today did hiit log it"*
 - 2026-11-17 (Tue, told 6:10 pm, before it happened) · HIIT at 8 pm, 1 hour; 200 kcal burned, her cardio figure. Her words: *"HIIT at 8pm today log it"*. To be confirmed once it has happened.
 - 2026-11-15 (Sun, told 2026-11-16) · Dance, 1 hour (it was on her calendar as a dance class). Her words: *"I had dance 1 hour yesterday. Log it"*
