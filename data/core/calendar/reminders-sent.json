@@ -212,10 +212,10 @@
       "lastUtc": "2026-11-13T14:50:25.635Z"
     },
     "week-cal-in-out-2": {
-      "sent": 8,
+      "sent": 9,
       "first": "2026-11-14 00:56",
-      "last": "2026-11-20 23:54",
-      "lastUtc": "2026-11-20T15:54:43.245Z"
+      "last": "2026-11-21 23:55",
+      "lastUtc": "2026-11-21T15:55:21.227Z"
     },
     "ot-doc-sat-am": {
       "sent": 1,
@@ -1095,12 +1095,6 @@
       "due": "2026-11-16 23:00"
     },
     {
-      "id": "week-cal-in-out-2",
-      "at": "2026-11-16 23:55",
-      "utc": "2026-11-16T15:55:09.383Z",
-      "text": "Your week so far, Monday\nNew week, and a clean start 🌱\n\n📅 Mon: in 1,030 · out 0 · balance 1,030 (170 under)\n\n~ some of today is estimated"
-    },
-    {
       "id": "food-breakfast-0753",
       "at": "2026-11-17 07:55",
       "utc": "2026-11-16T23:55:09.860Z",
@@ -1628,6 +1622,12 @@
       "at": "2026-11-21 22:54",
       "utc": "2026-11-21T14:54:42.239Z",
       "text": "10 pm, the kitchen's closed now\nThat burger stack should keep you full\n\n🌙 No more food tonight. Sleep well, bfk is the next stop."
+    },
+    {
+      "id": "week-cal-in-out-2",
+      "at": "2026-11-21 23:55",
+      "utc": "2026-11-21T15:55:21.227Z",
+      "text": "Your week so far, Mon to Sat\nSix days logged, plus a morning HIIT 💪\n\n📅 Mon: in 2,130 · out 0 · balance 2,130 (930 over)\n📅 Tue: in 2,235 · out 200 · balance 2,035 (835 over)\n📅 Wed: in 2,925 · out 0 · balance 2,925 (1,725 over)\n📅 Thu: in 1,635 · out 200 · balance 1,435 (235 over)\n📅 Fri: in 2,115 · out 0 · balance 2,115 (915 over)\n📅 Sat so far: in 2,650 · out 200 · balance 2,450 (1,250 over)\n\nFri is now the whole day as you told it.\n~ some of this week is estimated"
     }
   ]
 }
