@@ -1025,13 +1025,6 @@
     {
       "id": "food-lunch-1253",
       "at": "2026-11-16 12:55",
-      "utc": "2026-11-16T04:55:00.285Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-16 12:53"
-    },
-    {
-      "id": "food-lunch-1253",
-      "at": "2026-11-16 12:55",
       "utc": "2026-11-16T04:55:47.078Z",
       "text": "Your sandwich is logged\nA good mix in there today 🥪\n\n🔥 ▰▰▰▰▰▰▰▱▱▱ 73% of 1,200 kcal\n~320 kcal room left\n🏃‍♀️ No exercise logged yet\n\nFor dinner, half a salmon fillet or a palm of chicken, airfried with broccoli, fits the room and adds the protein the day is light on.\n\n~ some of today is estimated"
     },
@@ -1628,6 +1621,13 @@
       "utc": "2026-11-21T00:54:05.451Z",
       "held": true,
       "why": "yesterday's workout is on her calendar"
+    },
+    {
+      "id": "food-lunch-1253",
+      "at": "2026-11-21 12:54",
+      "utc": "2026-11-21T04:54:51.752Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-21 12:53"
     }
   ]
 }
