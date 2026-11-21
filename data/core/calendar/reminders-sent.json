@@ -1023,13 +1023,6 @@
       "text": "📊 Your workout week, 9 to 15 Nov\nSeven days of moving, every single day 💪\n\n• 🧘 Mon: STRONG Pilates\n• 🏃 Tue: BFT cardio, 50 min\n• 🦵 Wed: lower body twice, morning and evening\n• 🏋️ Thu: BFT cardio and strength, 50 min\n• 🤸 Fri: light BFT, mostly stretching\n• 🔥 Sat: HIIT strength, 1 hour\n• 💃 Sun: dance, 1 hour"
     },
     {
-      "id": "workout-catchup-cal",
-      "at": "2026-11-16 08:54",
-      "utc": "2026-11-16T00:54:12.950Z",
-      "held": true,
-      "why": "yesterday already logged"
-    },
-    {
       "id": "food-lunch-1253",
       "at": "2026-11-16 12:55",
       "utc": "2026-11-16T04:55:00.285Z",
@@ -1628,6 +1621,13 @@
       "at": "2026-11-21 07:54",
       "utc": "2026-11-20T23:54:42.749Z",
       "text": "Saturday bfk, Pilates at 9\n\n🔥 Eaten ░░░░░░░░░░ 0% · 1,200 kcal room\n\nA banana with a spoon of peanut butter is about 190, light enough before Reformer and something to keep you going after."
+    },
+    {
+      "id": "workout-catchup-cal",
+      "at": "2026-11-21 08:54",
+      "utc": "2026-11-21T00:54:05.451Z",
+      "held": true,
+      "why": "yesterday's workout is on her calendar"
     }
   ]
 }
