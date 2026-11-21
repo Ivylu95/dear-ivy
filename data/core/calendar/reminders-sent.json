@@ -26,10 +26,10 @@
       "lastUtc": "2026-11-10T12:56:41.247Z"
     },
     "no-snacks-after-10": {
-      "sent": 28,
+      "sent": 29,
       "first": "2026-11-07 20:56",
-      "last": "2026-11-21 20:55",
-      "lastUtc": "2026-11-21T12:55:33.336Z"
+      "last": "2026-11-21 22:54",
+      "lastUtc": "2026-11-21T14:54:42.239Z"
     },
     "nutrition-updates-2": {
       "sent": 1,
@@ -1383,12 +1383,6 @@
       "due": "2026-11-19 20:53"
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-19 20:55",
-      "utc": "2026-11-19T12:55:42.333Z",
-      "text": "Food closes at 10 tonight\n\n💪 Hungry after HIIT? Have a light bite soon. After 10, next food is bfk."
-    },
-    {
       "id": "antidepressant-2053",
       "at": "2026-11-19 20:55",
       "utc": "2026-11-19T12:55:43.461Z",
@@ -1628,6 +1622,12 @@
       "utc": "2026-11-21T14:54:23.600Z",
       "claimed": "cc-routine",
       "due": "2026-11-21 22:00"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-21 22:54",
+      "utc": "2026-11-21T14:54:42.239Z",
+      "text": "10 pm, the kitchen's closed now\nThat burger stack should keep you full\n\n🌙 No more food tonight. Sleep well, bfk is the next stop."
     }
   ]
 }
