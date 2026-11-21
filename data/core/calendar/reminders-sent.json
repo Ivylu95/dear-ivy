@@ -1369,13 +1369,6 @@
       "text": "Dinner's around 7, HIIT at 8:40\nGood protein from the fillet and egg at lunch 🍳\n\n🍽️ ██████████ 98% · ~1,175 of 1,200 kcal eaten\n🔥 HIIT tonight adds about 200 kcal of room, once it's done\n~ some of today is estimated\n\nProtein's been on the light side, so a small bowl of tofu or a plain Greek yogurt about an hour before HIIT would sit well. Send it over once you've eaten."
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-19 20:54",
-      "utc": "2026-11-19T12:54:57.431Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-19 20:00"
-    },
-    {
       "id": "antidepressant-2053",
       "at": "2026-11-19 20:54",
       "utc": "2026-11-19T12:54:57.527Z",
@@ -1628,6 +1621,13 @@
       "at": "2026-11-21 20:55",
       "utc": "2026-11-21T12:55:35.734Z",
       "text": "CrewFit this morning is in 💪\n\n🏃 Did you fit in anything else, like a walk or your ankle routine?\n📝 Sets and reps if you've got them."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-21 22:54",
+      "utc": "2026-11-21T14:54:23.600Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-21 22:00"
     }
   ]
 }
