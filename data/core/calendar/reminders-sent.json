@@ -164,10 +164,10 @@
       "lastUtc": "2026-11-12T15:55:07.681Z"
     },
     "food-breakfast-0753": {
-      "sent": 10,
+      "sent": 11,
       "first": "2026-11-12 08:00",
-      "last": "2026-11-21 07:54",
-      "lastUtc": "2026-11-20T23:54:42.749Z"
+      "last": "2026-11-22 07:55",
+      "lastUtc": "2026-11-21T23:55:37.840Z"
     },
     "cancel-classpass": {
       "sent": 1,
@@ -1088,12 +1088,6 @@
       "text": "Last stretch for the OT hours doc\n\n⏱️ Today is its final day\n📄 A quick tidy, then call it done"
     },
     {
-      "id": "food-breakfast-0753",
-      "at": "2026-11-17 07:55",
-      "utc": "2026-11-16T23:55:53.047Z",
-      "text": "Tuesday bfk, nothing logged yet\n\n🔥 Eaten ░░░░░░░░░░ 0% · 1,200 kcal room\n\nOne scrambled egg on a slice of wholemeal toast is about 150, a warm protein start that leaves plenty of room."
-    },
-    {
       "id": "workout-catchup-cal",
       "at": "2026-11-17 08:54",
       "utc": "2026-11-17T00:54:25.396Z",
@@ -1628,6 +1622,12 @@
       "utc": "2026-11-21T23:55:14.354Z",
       "claimed": "cc-routine",
       "due": "2026-11-22 07:53"
+    },
+    {
+      "id": "food-breakfast-0753",
+      "at": "2026-11-22 07:55",
+      "utc": "2026-11-21T23:55:37.840Z",
+      "text": "Sunday bfk, a fresh start\n\n🔥 Eaten ▱▱▱▱▱▱▱▱▱▱ 0% · 1,200 kcal room\n\nYour HM matcha latte with a boiled egg is about 230, a warm start with some protein, and lots of room left for the day."
     }
   ]
 }
