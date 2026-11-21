@@ -576,6 +576,13 @@
       "text": "Poster due tomorrow: finish what's left",
       "at": "2026-11-17 19:00",
       "set": "2026-11-11 07:10"
+    },
+    {
+      "id": "doughnut-thu",
+      "emoji": "🍩",
+      "text": "Collect your doughnut at 1:30 pm",
+      "at": "2026-11-19 12:53",
+      "set": "2026-11-17 08:00"
     }
   ]
 }
