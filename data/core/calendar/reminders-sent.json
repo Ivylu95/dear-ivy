@@ -128,10 +128,10 @@
       "lastUtc": "2026-11-11T05:10:39.496Z"
     },
     "food-dinner-1853": {
-      "sent": 10,
+      "sent": 11,
       "first": "2026-11-11 18:55",
-      "last": "2026-11-20 18:54",
-      "lastUtc": "2026-11-20T10:54:54.051Z"
+      "last": "2026-11-21 18:55",
+      "lastUtc": "2026-11-21T10:55:48.072Z"
     },
     "poster-start": {
       "sent": 1,
@@ -1049,12 +1049,6 @@
       "text": "Break time: OT hours doc\n\n⏱️ Use your break to tidy it up"
     },
     {
-      "id": "food-dinner-1853",
-      "at": "2026-11-16 18:55",
-      "utc": "2026-11-16T10:55:13.010Z",
-      "text": "Dinner's about 7, eat when you're ready\nNice sandwich lunch today 🥪\n\n🍽️ █████████░ 86% · ~1,030 of 1,200 kcal eaten\n🔥 About 170 kcal of room left\n~ some of today is estimated\n\nProtein's been light today, so a small piece of fish or some tofu with greens would fit well. Send it over once you've eaten."
-    },
-    {
       "id": "poster-finish-2",
       "at": "2026-11-16 19:55",
       "utc": "2026-11-16T11:55:23.368Z",
@@ -1628,6 +1622,12 @@
       "utc": "2026-11-21T10:55:14.512Z",
       "claimed": "cc-routine",
       "due": "2026-11-21 18:53"
+    },
+    {
+      "id": "food-dinner-1853",
+      "at": "2026-11-21 18:55",
+      "utc": "2026-11-21T10:55:48.072Z",
+      "text": "Dinner time, around 7\nEasy start with the latte and cookie 🍪\n\n🍽️ ███░░░░░░░ 28% · 330 of 1,200 kcal eaten\n🔥 About 870 kcal of room left\n🥩 No protein logged yet today\n\nPlenty of room for a proper plate tonight: some chicken or fish with rice and greens would bring the protein up nicely. Send it over once you've eaten."
     }
   ]
 }
