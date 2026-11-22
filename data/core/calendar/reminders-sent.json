@@ -128,10 +128,10 @@
       "lastUtc": "2026-11-11T05:10:39.496Z"
     },
     "food-dinner-1853": {
-      "sent": 11,
+      "sent": 12,
       "first": "2026-11-11 18:55",
-      "last": "2026-11-21 18:55",
-      "lastUtc": "2026-11-21T10:55:48.072Z"
+      "last": "2026-11-22 18:55",
+      "lastUtc": "2026-11-22T10:55:17.873Z"
     },
     "poster-start": {
       "sent": 1,
@@ -1095,12 +1095,6 @@
       "due": "2026-11-17 18:53"
     },
     {
-      "id": "food-dinner-1853",
-      "at": "2026-11-17 18:54",
-      "utc": "2026-11-17T10:54:43.060Z",
-      "text": "Dinner's around 7, HIIT at 8\nGood protein from the salmon today 🐟\n\n🍽️ ██████████ 155% · ~1,860 of 1,200 kcal eaten\n🔥 HIIT tonight: 200 kcal, once it's done\n⚖️ Balance after it: ~1,660, about 460 over\n~ some of today is estimated\n\nWith HIIT at 8, something light about an hour before sits best, like a boiled egg with some cucumber or tomato. Send it over once you've eaten."
-    },
-    {
       "id": "poster-due",
       "at": "2026-11-17 19:54",
       "utc": "2026-11-17T11:54:22.315Z",
@@ -1641,6 +1635,12 @@
       "at": "2026-11-22 17:55",
       "utc": "2026-11-22T09:55:25.631Z",
       "text": "Sunday feedback, all set to forward\nSame list as last week, nothing new added\n\n🏋️ Show my workouts with my calories\n😊 One emoji on each point Luna sends\n📱 Luna in short points, with space between\n⏰ Luna right on the time I choose\n🍽️ Food nudges even when nothing is logged\n💬 Keep a setup question open if I switch topic\n⏰ Reminders go at the exact time set\n🗓️ Suggest reminders from my calendar\n🔔 Show my reminders whenever one changes\n📊 Keep the 3-column table for ideas and reminders\n📊 Recommendations as a small phone-sized table\n⏰ Messages on time, never an hour late\n📨 When I say send it now, send it now\n💾 Saves work the first time\n🌙 Only my own jobs run in the background\n📱 Phone-friendly: lists over wide tables\n🙈 Keep tech talk out of my chats\n🔒 Only my own notes ever get changed\n💬 Every bit of feedback goes to my Any Feedback chat"
+    },
+    {
+      "id": "food-dinner-1853",
+      "at": "2026-11-22 18:55",
+      "utc": "2026-11-22T10:55:17.873Z",
+      "text": "Dinner's around 7, plenty of room tonight\nA sweet, easy start to the day ☕\n\n🍽️ ██████░░░░ 56% · ~670 of 1,200 kcal eaten\n🔥 About 530 kcal of room left\n🥩 Protein's light so far, around 12 g\n~ some of today is estimated\n\nA palm-sized piece of grilled chicken or fish with greens and a little rice fits well inside that room and lifts the protein. Send it over once you've eaten."
     }
   ]
 }
