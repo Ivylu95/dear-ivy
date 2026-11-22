@@ -1088,13 +1088,6 @@
       "text": "Last stretch for the OT hours doc\n\n⏱️ Today is its final day\n📄 A quick tidy, then call it done"
     },
     {
-      "id": "workout-catchup-cal",
-      "at": "2026-11-17 08:54",
-      "utc": "2026-11-17T00:54:25.396Z",
-      "held": true,
-      "why": "yesterday's workout is on her calendar"
-    },
-    {
       "id": "food-lunch-1253",
       "at": "2026-11-17 12:54",
       "utc": "2026-11-17T04:54:47.917Z",
@@ -1628,6 +1621,13 @@
       "at": "2026-11-22 07:55",
       "utc": "2026-11-21T23:55:37.840Z",
       "text": "Sunday bfk, a fresh start\n\n🔥 Eaten ▱▱▱▱▱▱▱▱▱▱ 0% · 1,200 kcal room\n\nYour HM matcha latte with a boiled egg is about 230, a warm start with some protein, and lots of room left for the day."
+    },
+    {
+      "id": "workout-catchup-cal",
+      "at": "2026-11-22 08:54",
+      "utc": "2026-11-22T00:54:34.174Z",
+      "held": true,
+      "why": "yesterday's workout already logged"
     }
   ]
 }
