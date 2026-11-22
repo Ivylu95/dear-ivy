@@ -26,10 +26,10 @@
       "lastUtc": "2026-11-10T12:56:41.247Z"
     },
     "no-snacks-after-10": {
-      "sent": 30,
+      "sent": 31,
       "first": "2026-11-07 20:56",
-      "last": "2026-11-22 20:55",
-      "lastUtc": "2026-11-22T12:55:38.847Z"
+      "last": "2026-11-22 22:55",
+      "lastUtc": "2026-11-22T14:55:35.247Z"
     },
     "nutrition-updates-2": {
       "sent": 1,
@@ -1383,12 +1383,6 @@
       "due": "2026-11-20 20:53"
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-20 20:56",
-      "utc": "2026-11-20T12:56:44.755Z",
-      "text": "Food winds down at 10 tonight\n\n🍌 Still want a bite? Have it in the next hour. After that, your next food is bfk."
-    },
-    {
       "id": "antidepressant-2053",
       "at": "2026-11-20 20:56",
       "utc": "2026-11-20T12:56:46.176Z",
@@ -1654,6 +1648,12 @@
       "utc": "2026-11-22T14:55:10.398Z",
       "claimed": "cc-routine",
       "due": "2026-11-22 22:00"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-22 22:55",
+      "utc": "2026-11-22T14:55:35.247Z",
+      "text": "Kitchen's shut for the night\nDinner's done and covered\n\n🌙 Nothing more to eat from here.\n☀️ Bfk tomorrow is your next bite."
     }
   ]
 }
