@@ -278,10 +278,10 @@
       "lastUtc": "2026-11-15T10:55:26.131Z"
     },
     "workout-week-cal": {
-      "sent": 1,
+      "sent": 2,
       "first": "2026-11-15 21:55",
-      "last": "2026-11-15 21:55",
-      "lastUtc": "2026-11-15T13:55:23.056Z"
+      "last": "2026-11-22 21:55",
+      "lastUtc": "2026-11-22T13:55:01.941Z"
     },
     "workout-week-resend-nov16": {
       "sent": 1,
@@ -1648,6 +1648,12 @@
       "utc": "2026-11-22T13:54:28.786Z",
       "claimed": "cc-routine",
       "due": "2026-11-22 21:53"
+    },
+    {
+      "id": "workout-week-cal",
+      "at": "2026-11-22 21:55",
+      "utc": "2026-11-22T13:55:01.941Z",
+      "text": "Your workouts, 16 to 22 Nov\nFour sessions in, lovely steady week 🙌\n\n📅 Mon: nothing logged\n🔥 Tue: HIIT at 8pm, 1 hour (logged before it started)\n📅 Wed: nothing logged\n🔥 Thu: HIIT, 1 hour\n📅 Fri: nothing logged\n🔥 Sat: morning HIIT, 1 hour\n🧘 Sun: Reformer Pilates, from your calendar"
     }
   ]
 }
