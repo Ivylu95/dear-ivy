@@ -32,6 +32,6 @@ Thinking hard about the guy she's dating. Calm, practical, wants a plan.
 ## Next session opens with
 
 Check-in afternoon (2026-11-18 16:56): How about two glasses before 6, then tell me?
-Check-in morning-update-2 (2026-11-21 09:55): How did you sleep, and how's your body holding up through CrewFit?
+Check-in morning-update-2 (2026-11-22 08:56): How did you sleep, and how's your body after yesterday's HIIT, going into Pilates?
 Check-in midday (2026-11-10 12:55): How many glasses have you got in since you woke up?
 Check-in midday-1153 (2026-11-18 11:56): Can you finish a glass with lunch before the poster?

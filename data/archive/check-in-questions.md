@@ -32,3 +32,4 @@ Check-in afternoon (2026-11-17 16:55): Could you fill a bottle now and keep it b
 Check-in morning-update-2 (2026-11-18 08:56): How did you sleep, and how do your arms feel after Pump this morning?
 Check-in morning-update-2 (2026-11-19 08:57): How did you sleep, and how's your body feeling ahead of HIIT tonight?
 Check-in morning-update-2 (2026-11-20 08:58): How did you sleep, and how are your legs after this morning's Strength?
+Check-in morning-update-2 (2026-11-21 09:55): How did you sleep, and how's your body holding up through CrewFit?
