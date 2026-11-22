@@ -1369,13 +1369,6 @@
       "text": "Dinner's around 7, onigiri on the plan\nNice protein from the chicken and salmon at lunch 🍗\n\n🍽️ ████████░░ 84% · ~1,005 of 1,200 kcal logged as eaten\n☕ Latte and soy chips still to confirm, ~480\n🍙 Onigiri ~230\n\nIf the latte and chips went in, the day is already near 1,500, so the onigiri on its own is plenty tonight. Send it over once you've eaten.\n\n~ some of today is estimated"
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-20 20:56",
-      "utc": "2026-11-20T12:56:01.719Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-20 20:00"
-    },
-    {
       "id": "antidepressant-2053",
       "at": "2026-11-20 20:56",
       "utc": "2026-11-20T12:56:01.784Z",
@@ -1654,6 +1647,13 @@
       "at": "2026-11-22 21:55",
       "utc": "2026-11-22T13:55:01.941Z",
       "text": "Your workouts, 16 to 22 Nov\nFour sessions in, lovely steady week 🙌\n\n📅 Mon: nothing logged\n🔥 Tue: HIIT at 8pm, 1 hour (logged before it started)\n📅 Wed: nothing logged\n🔥 Thu: HIIT, 1 hour\n📅 Fri: nothing logged\n🔥 Sat: morning HIIT, 1 hour\n🧘 Sun: Reformer Pilates, from your calendar"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-22 22:55",
+      "utc": "2026-11-22T14:55:10.398Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-22 22:00"
     }
   ]
 }
