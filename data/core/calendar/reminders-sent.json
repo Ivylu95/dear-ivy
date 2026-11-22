@@ -26,10 +26,10 @@
       "lastUtc": "2026-11-10T12:56:41.247Z"
     },
     "no-snacks-after-10": {
-      "sent": 29,
+      "sent": 30,
       "first": "2026-11-07 20:56",
-      "last": "2026-11-21 22:54",
-      "lastUtc": "2026-11-21T14:54:42.239Z"
+      "last": "2026-11-22 20:55",
+      "lastUtc": "2026-11-22T12:55:38.847Z"
     },
     "nutrition-updates-2": {
       "sent": 1,
@@ -140,16 +140,16 @@
       "lastUtc": "2026-11-11T11:55:52.005Z"
     },
     "antidepressant-2053": {
-      "sent": 11,
+      "sent": 12,
       "first": "2026-11-11 20:57",
-      "last": "2026-11-21 20:55",
-      "lastUtc": "2026-11-21T12:55:34.587Z"
+      "last": "2026-11-22 20:55",
+      "lastUtc": "2026-11-22T12:55:40.075Z"
     },
     "workout-ask-cal": {
-      "sent": 11,
+      "sent": 12,
       "first": "2026-11-11 20:57",
-      "last": "2026-11-21 20:55",
-      "lastUtc": "2026-11-21T12:55:35.734Z"
+      "last": "2026-11-22 20:55",
+      "lastUtc": "2026-11-22T12:55:57.882Z"
     },
     "week-cal-now-nov11": {
       "sent": 1,
@@ -1101,18 +1101,6 @@
       "text": "Your concert poster is due tomorrow\n\n🖼️ Finish the last bits tonight\n💾 Save it so it's ready to hand in\n\nNearly there, you've got this 💪"
     },
     {
-      "id": "antidepressant-2053",
-      "at": "2026-11-17 20:56",
-      "utc": "2026-11-17T12:56:28.410Z",
-      "text": "Meds tonight\n\n💊 Once you're home and showered, take them before sleep."
-    },
-    {
-      "id": "workout-ask-cal",
-      "at": "2026-11-17 20:56",
-      "utc": "2026-11-17T12:56:29.563Z",
-      "text": "HIIT at 8 tonight\n\n💪 Did it go ahead as planned?\n🏃 Anything else today, like a walk or the ankle routine? Sets and reps if you have them."
-    },
-    {
       "id": "week-cal-in-out-2",
       "at": "2026-11-17 23:54",
       "utc": "2026-11-17T15:54:56.911Z",
@@ -1320,12 +1308,6 @@
       "at": "2026-11-19 20:55",
       "utc": "2026-11-19T12:55:44.760Z",
       "text": "Cardio HIIT at 8:40 tonight is counted 💪\n\n🏃 Anything else today? A walk or the ankle routine counts too. Sets and reps if you have them."
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-19 22:55",
-      "utc": "2026-11-19T14:55:00.828Z",
-      "text": "It's past 10, the kitchen's shut\n\n🌙 That's food done for today. Let your body rest, and bfk is waiting in the morning."
     },
     {
       "id": "week-cal-in-out-2",
@@ -1641,6 +1623,24 @@
       "utc": "2026-11-22T12:55:07.243Z",
       "claimed": "cc-routine",
       "due": "2026-11-22 20:53"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-22 20:55",
+      "utc": "2026-11-22T12:55:38.847Z",
+      "text": "Kitchen closes in about an hour\n\n🌙 Anything else you want tonight, have it before 10.\n☀️ After that, your next food is tomorrow's bfk."
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-22 20:55",
+      "utc": "2026-11-22T12:55:40.075Z",
+      "text": "Sunday wind-down\n\n💊 Have tonight's meds before you sleep."
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-22 20:55",
+      "utc": "2026-11-22T12:55:57.882Z",
+      "text": "Workout check\nReformer Pilates this morning is counted 💪\n\n🏃 Did you do anything else today? A walk counts, so does the ankle routine.\n📝 Add sets and reps if you kept them."
     }
   ]
 }
