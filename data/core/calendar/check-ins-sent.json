@@ -2,10 +2,10 @@
   "_what": "The last messages the sweep wrote for each check-in, so the next differs, how many Telegram accepted, and any held (HBT-010, HBT-014).",
   "counts": {
     "morning-update-2": {
-      "sent": 14,
+      "sent": 15,
       "first": "2026-11-07 08:54",
-      "last": "2026-11-21 09:55",
-      "lastUtc": "2026-11-21T01:55:25.034Z"
+      "last": "2026-11-22 08:57",
+      "lastUtc": "2026-11-22T00:57:02.762Z"
     },
     "midday": {
       "sent": 4,
@@ -109,12 +109,6 @@
       "text": "Water before H.I.R.T\nPoster stay-back day at MLK 🌤️\n\n💧 A glass now, another before the 6:20pm class\n⏱️ OT hours doc: tidy it by tonight\n⏰ Summit is 6am tomorrow, so an easy night after\n\nCan you finish a full glass before you head to H.I.R.T?"
     },
     {
-      "id": "morning-update-2",
-      "at": "2026-11-17 08:55",
-      "utc": "2026-11-17T00:55:55.180Z",
-      "text": "Good morning, Tuesday 17 Nov\n\n📌 Today 7pm: last poster push\n🖍️ Tomorrow, Wed 18: poster due\n🏕️ Mon 30: MLK staff retreat starts, to Fri 4 Dec\n\nReminders still to come:\n• Today 12:53pm and 6:53pm: lunch and dinner\n• Today 7pm: poster\n• Tonight 8pm and 10pm: snack cut-off\n• Tonight 8:53pm: workout check and your night one\n• Tonight 11pm: your week of in and out\n• Wed 7:53am: breakfast\n\nAny of these you'd rather shift or drop? Tap below.\n\nHow did you sleep, and how does your body feel after the 6am Summit?"
-    },
-    {
       "id": "midday-1153",
       "at": "2026-11-17 12:56",
       "utc": "2026-11-17T04:56:09.281Z",
@@ -161,6 +155,12 @@
       "at": "2026-11-21 09:55",
       "utc": "2026-11-21T01:55:25.034Z",
       "text": "Good morning, Saturday 21 Nov\nCrewFit underway at 9:30, a lively start 💪\n\n📅 Today: your date\n🧘 Tomorrow 9am: Reformer Pilates\n🛍️ Tomorrow 12:30pm: boutique fair\n🍽️ Sat 28, 6pm: dinner plans\n\nReminders still to come:\n• Food check-ins just before lunch and dinner\n• Tonight: a snack heads-up, then last call\n• 8:53pm: what you trained today, plus the bedtime one\n• 11pm: this week's calories in and out\n• Tomorrow 7:53am: breakfast\n• Tomorrow 5pm: feedback list, ready to forward\n\nWant to shift or stop one? It's all behind the link below.\n\nHow did you sleep, and how's your body holding up through CrewFit?"
+    },
+    {
+      "id": "morning-update-2",
+      "at": "2026-11-22 08:57",
+      "utc": "2026-11-22T00:57:02.762Z",
+      "text": "Good morning, Sunday 22 Nov\nA Sunday with some movement in it 🌤️\n\n🧘 Today 9am: Reformer Pilates\n🛍️ Today 12:30pm: boutique fair\n📅 Nothing on tomorrow\n🎶 Fri 27: MLK concert\n📌 Sun 29, 10:30am: your appointment\n\nReminders still to come:\n• 12:53pm: lunch nudge\n• 5pm: feedback list, ready to forward\n• 6:53pm: dinner nudge\n• 8pm and 10pm tonight: easing off the snacks\n• 8:53pm: today's training, plus your bedtime one\n• 9:53pm: your week of workouts, Mon to Sun\n• 11pm: calories in and out, Mon to today\n• Mon 7:53am: breakfast\n\nTo move, change or stop any of these, tap the link below.\n\nHow did you sleep, and how's your body after yesterday's HIIT, going into Pilates?"
     }
   ]
 }
