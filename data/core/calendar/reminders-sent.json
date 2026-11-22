@@ -1102,13 +1102,6 @@
     },
     {
       "id": "week-cal-in-out-2",
-      "at": "2026-11-17 23:54",
-      "utc": "2026-11-17T15:54:56.911Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-17 23:00"
-    },
-    {
-      "id": "week-cal-in-out-2",
       "at": "2026-11-17 23:55",
       "utc": "2026-11-17T15:55:14.969Z",
       "text": "Your week so far, Mon and Tue\nTonight's HIIT is in 💪\n\n📅 Mon: in 2,130 · out 0 · balance 2,130 (930 over)\n📅 Tue: in 2,235 · out 200 · balance 2,035 (835 over)\n\nMon now has your dinner in it.\n~ some of this week is estimated"
@@ -1654,6 +1647,13 @@
       "at": "2026-11-22 22:55",
       "utc": "2026-11-22T14:55:35.247Z",
       "text": "Kitchen's shut for the night\nDinner's done and covered\n\n🌙 Nothing more to eat from here.\n☀️ Bfk tomorrow is your next bite."
+    },
+    {
+      "id": "week-cal-in-out-2",
+      "at": "2026-11-22 23:54",
+      "utc": "2026-11-22T15:54:58.535Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-22 23:00"
     }
   ]
 }
