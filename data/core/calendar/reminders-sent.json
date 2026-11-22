@@ -62,10 +62,10 @@
       "lastUtc": "2026-11-08T04:54:37.480Z"
     },
     "feedback-sunday": {
-      "sent": 2,
+      "sent": 3,
       "first": "2026-11-08 17:54",
-      "last": "2026-11-15 17:55",
-      "lastUtc": "2026-11-15T09:55:02.492Z"
+      "last": "2026-11-22 17:55",
+      "lastUtc": "2026-11-22T09:55:25.631Z"
     },
     "food-dinner": {
       "sent": 1,
@@ -1088,13 +1088,6 @@
       "text": "Last stretch for the OT hours doc\n\n⏱️ Today is its final day\n📄 A quick tidy, then call it done"
     },
     {
-      "id": "food-lunch-1253",
-      "at": "2026-11-17 12:54",
-      "utc": "2026-11-17T04:54:47.917Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-17 12:53"
-    },
-    {
       "id": "food-dinner-1853",
       "at": "2026-11-17 18:54",
       "utc": "2026-11-17T10:54:08.325Z",
@@ -1635,6 +1628,12 @@
       "at": "2026-11-22 12:55",
       "utc": "2026-11-22T04:55:24.498Z",
       "text": "Lunch time\nA sweet, cosy start to Sunday ☕\n\n🔥 ▰▰▰▰▰▰▱▱▱▱ 56% of 1,200 kcal\n~530 kcal room\n🏃‍♀️ eaten ~670 · no exercise figure\n\nFor lunch, grilled chicken or fish with a big pile of veg and a small scoop of rice comes to about 400 to 450, and brings the protein breakfast was light on. Pop it in the log after.\n\n~ some of today is estimated"
+    },
+    {
+      "id": "feedback-sunday",
+      "at": "2026-11-22 17:55",
+      "utc": "2026-11-22T09:55:25.631Z",
+      "text": "Sunday feedback, all set to forward\nSame list as last week, nothing new added\n\n🏋️ Show my workouts with my calories\n😊 One emoji on each point Luna sends\n📱 Luna in short points, with space between\n⏰ Luna right on the time I choose\n🍽️ Food nudges even when nothing is logged\n💬 Keep a setup question open if I switch topic\n⏰ Reminders go at the exact time set\n🗓️ Suggest reminders from my calendar\n🔔 Show my reminders whenever one changes\n📊 Keep the 3-column table for ideas and reminders\n📊 Recommendations as a small phone-sized table\n⏰ Messages on time, never an hour late\n📨 When I say send it now, send it now\n💾 Saves work the first time\n🌙 Only my own jobs run in the background\n📱 Phone-friendly: lists over wide tables\n🙈 Keep tech talk out of my chats\n🔒 Only my own notes ever get changed\n💬 Every bit of feedback goes to my Any Feedback chat"
     }
   ]
 }
