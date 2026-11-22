@@ -116,10 +116,10 @@
       "lastUtc": "2026-11-11T00:39:27.353Z"
     },
     "food-lunch-1253": {
-      "sent": 11,
+      "sent": 12,
       "first": "2026-11-11 12:59",
-      "last": "2026-11-21 12:55",
-      "lastUtc": "2026-11-21T04:55:35.148Z"
+      "last": "2026-11-22 12:55",
+      "lastUtc": "2026-11-22T04:55:24.498Z"
     },
     "log-now-nov11": {
       "sent": 1,
@@ -1095,12 +1095,6 @@
       "due": "2026-11-17 12:53"
     },
     {
-      "id": "food-lunch-1253",
-      "at": "2026-11-17 12:55",
-      "utc": "2026-11-17T04:55:12.691Z",
-      "text": "Lunch is on the log already\nSalmon and greens, a good one 🐟\n\n🔥 ▰▰▰▰▰▰▰▰▰▱ 91% of 1,200 kcal\n~110 kcal room left\n🏃‍♀️ No exercise logged yet\n\nDinner: a boiled egg with a big plate of steamed veg fits that room and adds a little protein.\n\n~ some of today is estimated"
-    },
-    {
       "id": "food-dinner-1853",
       "at": "2026-11-17 18:54",
       "utc": "2026-11-17T10:54:08.325Z",
@@ -1628,6 +1622,12 @@
       "utc": "2026-11-22T00:54:34.174Z",
       "held": true,
       "why": "yesterday's workout already logged"
+    },
+    {
+      "id": "food-lunch-1253",
+      "at": "2026-11-22 12:55",
+      "utc": "2026-11-22T04:55:24.498Z",
+      "text": "Lunch time\nA sweet, cosy start to Sunday ☕\n\n🔥 ▰▰▰▰▰▰▱▱▱▱ 56% of 1,200 kcal\n~530 kcal room\n🏃‍♀️ eaten ~670 · no exercise figure\n\nFor lunch, grilled chicken or fish with a big pile of veg and a small scoop of rice comes to about 400 to 450, and brings the protein breakfast was light on. Pop it in the log after.\n\n~ some of today is estimated"
     }
   ]
 }
