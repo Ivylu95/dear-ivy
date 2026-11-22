@@ -1088,13 +1088,6 @@
       "text": "Last stretch for the OT hours doc\n\n⏱️ Today is its final day\n📄 A quick tidy, then call it done"
     },
     {
-      "id": "food-dinner-1853",
-      "at": "2026-11-17 18:54",
-      "utc": "2026-11-17T10:54:08.325Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-17 18:53"
-    },
-    {
       "id": "poster-due",
       "at": "2026-11-17 19:54",
       "utc": "2026-11-17T11:54:22.315Z",
@@ -1106,20 +1099,6 @@
       "at": "2026-11-17 19:54",
       "utc": "2026-11-17T11:54:56.451Z",
       "text": "Your concert poster is due tomorrow\n\n🖼️ Finish the last bits tonight\n💾 Save it so it's ready to hand in\n\nNearly there, you've got this 💪"
-    },
-    {
-      "id": "antidepressant-2053",
-      "at": "2026-11-17 20:55",
-      "utc": "2026-11-17T12:55:59.674Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-17 20:53"
-    },
-    {
-      "id": "workout-ask-cal",
-      "at": "2026-11-17 20:55",
-      "utc": "2026-11-17T12:55:59.784Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-17 20:53"
     },
     {
       "id": "antidepressant-2053",
@@ -1341,13 +1320,6 @@
       "at": "2026-11-19 20:55",
       "utc": "2026-11-19T12:55:44.760Z",
       "text": "Cardio HIIT at 8:40 tonight is counted 💪\n\n🏃 Anything else today? A walk or the ankle routine counts too. Sets and reps if you have them."
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-19 22:54",
-      "utc": "2026-11-19T14:54:34.892Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-19 22:00"
     },
     {
       "id": "no-snacks-after-10",
@@ -1648,6 +1620,27 @@
       "at": "2026-11-22 18:55",
       "utc": "2026-11-22T10:55:17.873Z",
       "text": "Dinner's around 7, plenty of room tonight\nA sweet, easy start to the day ☕\n\n🍽️ ██████░░░░ 56% · ~670 of 1,200 kcal eaten\n🔥 About 530 kcal of room left\n🥩 Protein's light so far, around 12 g\n~ some of today is estimated\n\nA palm-sized piece of grilled chicken or fish with greens and a little rice fits well inside that room and lifts the protein. Send it over once you've eaten."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-22 20:55",
+      "utc": "2026-11-22T12:55:07.077Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-22 20:00"
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-22 20:55",
+      "utc": "2026-11-22T12:55:07.162Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-22 20:53"
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-22 20:55",
+      "utc": "2026-11-22T12:55:07.243Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-22 20:53"
     }
   ]
 }
