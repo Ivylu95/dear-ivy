@@ -60,6 +60,7 @@ her words, blank when not said._
 - 2026-11-19 (Thu, told 11:33 pm) · HIIT, 1 hour (her usual length; time not given); 200 kcal burned, her cardio figure. Her words: *"Today did hiit log it"*
 - 2026-11-17 (Tue, told 6:10 pm, before it happened) · HIIT at 8 pm, 1 hour; 200 kcal burned, her cardio figure. Her words: *"HIIT at 8pm today log it"*. To be confirmed once it has happened.
 - 2026-11-15 (Sun, told 2026-11-16) · Dance, 1 hour (it was on her calendar as a dance class). Her words: *"I had dance 1 hour yesterday. Log it"*
+- 2026-11-22 (Sun) · Pilates (Reformer), 9 to 10 am. From her Google Calendar copy, logged by the morning workout check as she asked (2026-11-11); she has not said how it went
 
 ## Worth keeping in view
 

@@ -1101,13 +1101,6 @@
       "text": "Your concert poster is due tomorrow\n\n🖼️ Finish the last bits tonight\n💾 Save it so it's ready to hand in\n\nNearly there, you've got this 💪"
     },
     {
-      "id": "workout-catchup-cal",
-      "at": "2026-11-18 08:54",
-      "utc": "2026-11-18T00:54:37.904Z",
-      "held": true,
-      "why": "yesterday's workout already in her record"
-    },
-    {
       "id": "food-lunch-1253",
       "at": "2026-11-18 12:54",
       "utc": "2026-11-18T04:54:21.376Z",
@@ -1654,6 +1647,13 @@
       "at": "2026-11-23 07:54",
       "utc": "2026-11-22T23:54:55.008Z",
       "text": "Monday bfk, new week\n\n🔥 Eaten ▱▱▱▱▱▱▱▱▱▱ 0% · 1,200 kcal room\n\nYour HM matcha latte with two boiled eggs is about 290, a good bit of protein to carry you through the morning."
+    },
+    {
+      "id": "workout-catchup-cal",
+      "at": "2026-11-23 08:54",
+      "utc": "2026-11-23T00:54:49.820Z",
+      "held": true,
+      "why": "yesterday's workout on her calendar; logged"
     }
   ]
 }
