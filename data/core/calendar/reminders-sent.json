@@ -116,10 +116,10 @@
       "lastUtc": "2026-11-11T00:39:27.353Z"
     },
     "food-lunch-1253": {
-      "sent": 12,
+      "sent": 13,
       "first": "2026-11-11 12:59",
-      "last": "2026-11-22 12:55",
-      "lastUtc": "2026-11-22T04:55:24.498Z"
+      "last": "2026-11-23 12:54",
+      "lastUtc": "2026-11-23T04:54:54.563Z"
     },
     "log-now-nov11": {
       "sent": 1,
@@ -1101,12 +1101,6 @@
       "text": "Your concert poster is due tomorrow\n\n🖼️ Finish the last bits tonight\n💾 Save it so it's ready to hand in\n\nNearly there, you've got this 💪"
     },
     {
-      "id": "food-lunch-1253",
-      "at": "2026-11-18 12:54",
-      "utc": "2026-11-18T04:54:52.703Z",
-      "text": "Lunch time\nA light start to the day 🌱\n\n🔥 ▰▰▱▱▱▱▱▱▱▱ 20% of 1,200 kcal\n~955 kcal room left\n\nProtein is low so far. Tofu, chicken or fish with rice and veg would fill that gap well, with plenty of room to spare.\n\n~ some of today is estimated"
-    },
-    {
       "id": "food-dinner-1853",
       "at": "2026-11-18 18:54",
       "utc": "2026-11-18T10:54:23.197Z",
@@ -1654,6 +1648,12 @@
       "utc": "2026-11-23T04:54:32.976Z",
       "claimed": "cc-routine",
       "due": "2026-11-23 12:53"
+    },
+    {
+      "id": "food-lunch-1253",
+      "at": "2026-11-23 12:54",
+      "utc": "2026-11-23T04:54:54.563Z",
+      "text": "Your egg and ham lunch is up\nTwo lattes to get the morning going ☕\n\n🔥 ▰▰▰▱▱▱▱▱▱▱ 32% of 1,200 kcal\n~820 kcal room\n🏃‍♀️ eaten ~380 · no exercise figure\n\nThe eggs and ham you planned come to about 270, with good protein. A handful of greens or some tomato on the side adds fibre and still leaves about 550 for later.\n\n~ some of today is estimated"
     }
   ]
 }
