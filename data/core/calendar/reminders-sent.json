@@ -1673,6 +1673,13 @@
       "at": "2026-11-23 22:55",
       "utc": "2026-11-23T14:55:12.333Z",
       "text": "Kitchen's closed for tonight\nYou called time on food yourself, nice one\n\n🌙 Nothing more to eat now.\n☀️ Bfk in the morning is your next stop."
+    },
+    {
+      "id": "week-cal-in-out-3",
+      "at": "2026-11-23 23:55",
+      "utc": "2026-11-23T15:55:01.941Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-23 23:00"
     }
   ]
 }
