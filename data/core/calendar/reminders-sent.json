@@ -26,10 +26,10 @@
       "lastUtc": "2026-11-10T12:56:41.247Z"
     },
     "no-snacks-after-10": {
-      "sent": 31,
+      "sent": 32,
       "first": "2026-11-07 20:56",
-      "last": "2026-11-22 22:55",
-      "lastUtc": "2026-11-22T14:55:35.247Z"
+      "last": "2026-11-23 20:56",
+      "lastUtc": "2026-11-23T12:56:40.496Z"
     },
     "nutrition-updates-2": {
       "sent": 1,
@@ -140,16 +140,16 @@
       "lastUtc": "2026-11-11T11:55:52.005Z"
     },
     "antidepressant-2053": {
-      "sent": 12,
+      "sent": 13,
       "first": "2026-11-11 20:57",
-      "last": "2026-11-22 20:55",
-      "lastUtc": "2026-11-22T12:55:40.075Z"
+      "last": "2026-11-23 20:56",
+      "lastUtc": "2026-11-23T12:56:41.755Z"
     },
     "workout-ask-cal": {
-      "sent": 12,
+      "sent": 13,
       "first": "2026-11-11 20:57",
-      "last": "2026-11-22 20:55",
-      "lastUtc": "2026-11-22T12:55:57.882Z"
+      "last": "2026-11-23 20:56",
+      "lastUtc": "2026-11-23T12:56:42.958Z"
     },
     "week-cal-now-nov11": {
       "sent": 1,
@@ -1107,13 +1107,6 @@
       "text": "Your concert poster is due tomorrow\n\n🖼️ Finish the last bits tonight\n💾 Save it so it's ready to hand in\n\nNearly there, you've got this 💪"
     },
     {
-      "id": "food-dinner-1853",
-      "at": "2026-11-18 18:54",
-      "utc": "2026-11-18T10:54:23.197Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-18 18:53"
-    },
-    {
       "id": "antidepressant-2053",
       "at": "2026-11-18 20:55",
       "utc": "2026-11-18T12:55:08.694Z",
@@ -1126,18 +1119,6 @@
       "utc": "2026-11-18T12:55:08.783Z",
       "claimed": "cc-routine",
       "due": "2026-11-18 20:53"
-    },
-    {
-      "id": "antidepressant-2053",
-      "at": "2026-11-18 20:55",
-      "utc": "2026-11-18T12:55:30.058Z",
-      "text": "Meds check\n\n💊 Have tonight's before you head to bed."
-    },
-    {
-      "id": "workout-ask-cal",
-      "at": "2026-11-18 20:55",
-      "utc": "2026-11-18T12:55:31.122Z",
-      "text": "Workout check\nPump Upper Body at 7:10 is counted 💪\n\n🏃 Did you add anything else, like a walk or the ankle routine? Sets and reps if you have them."
     },
     {
       "id": "week-cal-in-out-2",
@@ -1354,12 +1335,6 @@
       "utc": "2026-11-20T14:55:22.008Z",
       "claimed": "cc-routine",
       "due": "2026-11-20 22:00"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-20 22:55",
-      "utc": "2026-11-20T14:55:49.174Z",
-      "text": "10 pm, food's wrapped up for today\nOnigiri was a nice easy dinner\n\n🌙 Nothing more tonight. Next up is bfk."
     },
     {
       "id": "week-cal-in-out-2",
@@ -1680,6 +1655,24 @@
       "at": "2026-11-23 18:54",
       "utc": "2026-11-23T10:54:41.742Z",
       "text": "Dinner's in, the whole day is logged\nThanks for getting every bite down today ✍️\n\n🍽️ ██████████ 150% · ~1,800 of 1,200 kcal eaten\n🔥 180 burned at your workout\n⚖️ Balance ~1,620, about 420 over the 1,200\n~ some of today is estimated\n\nDinner's already done, so nothing more is needed tonight. If you get peckish later, warm tea or a few cucumber slices are close to zero."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-23 20:56",
+      "utc": "2026-11-23T12:56:40.496Z",
+      "text": "About an hour left for food tonight\nGarlic bread made a good dinner\n\n🌙 Still want a little something? Have it before 10.\n☀️ After that, rest until bfk."
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-23 20:56",
+      "utc": "2026-11-23T12:56:41.755Z",
+      "text": "Before you sleep\n\n💊 Tonight's meds, once you start winding down."
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-23 20:56",
+      "utc": "2026-11-23T12:56:42.958Z",
+      "text": "Today's hour of cardio and strength is in 💪\n\n🚶 Did you add anything else, like a walk or the ankle routine?\n📝 Sets and reps too, if you kept them."
     }
   ]
 }
