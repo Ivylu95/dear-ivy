@@ -597,6 +597,26 @@
       "text": "Submit your MC and medical invoice: last call before 5 pm",
       "at": "2026-11-19 16:53",
       "set": "2026-11-18 17:45"
+    },
+    {
+      "id": "week-cal-in-out-2",
+      "emoji": "⚖️",
+      "text": "My week so far, Monday to today, one line a day: calories in, calories out (lower end, kept apart) and the balance against my 1,200; restarts each Monday. On Sundays also: this week's total in and total out; this month's weeks so far, each with total in and out (restarts each month; a week counts in the month its Sunday falls in); this year's months so far, each with total in and out (restarts each year)",
+      "module": "fitness",
+      "reads": [
+        "data/fitness/days/",
+        "data/fitness/README.md",
+        "data/fitness/training.md",
+        "data/fitness/daily_log.md"
+      ],
+      "cron": "0 23 * * *",
+      "set": "2026-11-13 07:04",
+      "ended": "2026-11-23",
+      "bot": "main",
+      "chat": {
+        "url": "https://claude.ai/code/session_01RkebH73Sqeq5M4dzwA3cXe",
+        "title": "Calories and nutrition"
+      }
     }
   ]
 }
