@@ -1128,13 +1128,6 @@
     {
       "id": "food-breakfast-0753",
       "at": "2026-11-19 07:54",
-      "utc": "2026-11-18T23:54:25.755Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-19 07:53"
-    },
-    {
-      "id": "food-breakfast-0753",
-      "at": "2026-11-19 07:54",
       "utc": "2026-11-18T23:54:54.197Z",
       "text": "Thursday bfk, already in\nLogged before 8, nice one 🙌\n\n🔥 Eaten ███░░░░░░░ 26% · ~890 kcal room\n~ some of today is estimated\n\nBreakfast was light on protein, so for lunch, grilled chicken or tofu with rice and veg is about 450 and gives you a solid protein lift."
     },
@@ -1692,6 +1685,13 @@
       "at": "2026-11-23 23:55",
       "utc": "2026-11-23T15:55:20.707Z",
       "text": "Your week so far\nFresh week, so it's just today\n\n🍽️ Mon: in ~2,080 · out 180\n⚖️ Balance ~1,900, 700 over your 1,200\n\n~ some of today is estimated"
+    },
+    {
+      "id": "food-breakfast-0753",
+      "at": "2026-11-24 07:54",
+      "utc": "2026-11-23T23:54:36.920Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-24 07:53"
     }
   ]
 }
