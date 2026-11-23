@@ -348,6 +348,12 @@
       "first": "2026-11-23 16:54",
       "last": "2026-11-23 16:54",
       "lastUtc": "2026-11-23T08:54:53.543Z"
+    },
+    "week-cal-in-out-3": {
+      "sent": 1,
+      "first": "2026-11-23 23:55",
+      "last": "2026-11-23 23:55",
+      "lastUtc": "2026-11-23T15:55:20.707Z"
     }
   },
   "sent": [
@@ -1673,6 +1679,12 @@
       "at": "2026-11-23 22:55",
       "utc": "2026-11-23T14:55:12.333Z",
       "text": "Kitchen's closed for tonight\nYou called time on food yourself, nice one\n\n🌙 Nothing more to eat now.\n☀️ Bfk in the morning is your next stop."
+    },
+    {
+      "id": "week-cal-in-out-3",
+      "at": "2026-11-23 23:55",
+      "utc": "2026-11-23T15:55:20.707Z",
+      "text": "Your week so far\nFresh week, so it's just today\n\n🍽️ Mon: in ~2,080 · out 180\n⚖️ Balance ~1,900, 700 over your 1,200\n\n~ some of today is estimated"
     }
   ]
 }
