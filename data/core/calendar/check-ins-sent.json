@@ -2,10 +2,10 @@
   "_what": "The last messages the sweep wrote for each check-in, so the next differs, how many Telegram accepted, and any held (HBT-010, HBT-014).",
   "counts": {
     "morning-update-2": {
-      "sent": 15,
+      "sent": 16,
       "first": "2026-11-07 08:54",
-      "last": "2026-11-22 08:57",
-      "lastUtc": "2026-11-22T00:57:02.762Z"
+      "last": "2026-11-23 08:56",
+      "lastUtc": "2026-11-23T00:56:45.896Z"
     },
     "midday": {
       "sent": 4,
@@ -121,12 +121,6 @@
       "text": "Afternoon water top-up\nLunch and snacks all logged, a steady day 🌤️\n\n💧 Two glasses before 7 would catch you up\n📌 Poster push at 7, then it's ready for tomorrow\n🍩 Thu 1:30pm: doughnut pickup\n\nCould you fill a bottle now and keep it beside you for the poster?"
     },
     {
-      "id": "morning-update-2",
-      "at": "2026-11-18 08:56",
-      "utc": "2026-11-18T00:56:24.327Z",
-      "text": "Good morning, Wednesday 18 Nov\nPump Upper Body done before 8, a strong start 💪\n\n🖍️ Today: poster due, the last stretch\n🍩 Tomorrow 1:30pm: collect your doughnut\n🔥 Tomorrow 8:40pm: Cardio HIIT\n🏋️ Sat 21, 9:30am: CrewFit\n🛍️ Sun 22, 12:30pm: boutique fair\n\nReminders still to come:\n• 12:53pm lunch, 6:53pm dinner\n• 8pm and 10pm: snacks wind down\n• 8:53pm: workout check, plus your night one\n• 11pm: your week of in and out\n• Thu 7:53am: breakfast\n• Thu 12:53pm: doughnut pick-up\n\nWant any moved, changed or stopped? Tap the link below.\n\nHow did you sleep, and how do your arms feel after Pump this morning?"
-    },
-    {
       "id": "midday-1153",
       "at": "2026-11-18 11:55",
       "utc": "2026-11-18T03:55:33.591Z",
@@ -161,6 +155,12 @@
       "at": "2026-11-22 08:57",
       "utc": "2026-11-22T00:57:02.762Z",
       "text": "Good morning, Sunday 22 Nov\nA Sunday with some movement in it 🌤️\n\n🧘 Today 9am: Reformer Pilates\n🛍️ Today 12:30pm: boutique fair\n📅 Nothing on tomorrow\n🎶 Fri 27: MLK concert\n📌 Sun 29, 10:30am: your appointment\n\nReminders still to come:\n• 12:53pm: lunch nudge\n• 5pm: feedback list, ready to forward\n• 6:53pm: dinner nudge\n• 8pm and 10pm tonight: easing off the snacks\n• 8:53pm: today's training, plus your bedtime one\n• 9:53pm: your week of workouts, Mon to Sun\n• 11pm: calories in and out, Mon to today\n• Mon 7:53am: breakfast\n\nTo move, change or stop any of these, tap the link below.\n\nHow did you sleep, and how's your body after yesterday's HIIT, going into Pilates?"
+    },
+    {
+      "id": "morning-update-2",
+      "at": "2026-11-23 08:56",
+      "utc": "2026-11-23T00:56:45.896Z",
+      "text": "Good morning, Monday 23 Nov\nReformer Pilates yesterday is logged, a good Sunday 🧘\n\n📅 Nothing on today or tomorrow\n🏫 Mon 30 to Fri 4 Dec: staff retreat, a week away\n\nReminders still to come:\n• Noon-ish and early evening: a nudge before each meal\n• 4:30pm: a snack before you head home\n• From 8pm: the evening snack wind-down, kitchen shut at 10\n• 8:53pm: today's training, plus your bedtime one\n• Late tonight: your Monday in and out, the new week's first line\n• Tue 7:53am: breakfast\n\nNeed one moved or stopped? The link below takes you there.\n\nHow did you sleep, and how does your body feel after Pilates?"
     }
   ]
 }
