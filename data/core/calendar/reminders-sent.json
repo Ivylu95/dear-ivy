@@ -1375,13 +1375,6 @@
       "text": "Dinner time, around 7\nEasy start with the latte and cookie 🍪\n\n🍽️ ███░░░░░░░ 28% · 330 of 1,200 kcal eaten\n🔥 About 870 kcal of room left\n🥩 No protein logged yet today\n\nPlenty of room for a proper plate tonight: some chicken or fish with rice and greens would bring the protein up nicely. Send it over once you've eaten."
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-21 20:54",
-      "utc": "2026-11-21T12:54:58.382Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-21 20:00"
-    },
-    {
       "id": "antidepressant-2053",
       "at": "2026-11-21 20:54",
       "utc": "2026-11-21T12:54:58.488Z",
@@ -1673,6 +1666,13 @@
       "at": "2026-11-23 20:56",
       "utc": "2026-11-23T12:56:42.958Z",
       "text": "Today's hour of cardio and strength is in 💪\n\n🚶 Did you add anything else, like a walk or the ankle routine?\n📝 Sets and reps too, if you kept them."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-23 22:54",
+      "utc": "2026-11-23T14:54:49.721Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-23 22:00"
     }
   ]
 }
