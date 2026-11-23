@@ -164,10 +164,10 @@
       "lastUtc": "2026-11-12T15:55:07.681Z"
     },
     "food-breakfast-0753": {
-      "sent": 12,
+      "sent": 13,
       "first": "2026-11-12 08:00",
-      "last": "2026-11-23 07:54",
-      "lastUtc": "2026-11-22T23:54:55.008Z"
+      "last": "2026-11-24 07:55",
+      "lastUtc": "2026-11-23T23:55:03.876Z"
     },
     "cancel-classpass": {
       "sent": 1,
@@ -1133,12 +1133,6 @@
       "due": "2026-11-19 07:53"
     },
     {
-      "id": "food-breakfast-0753",
-      "at": "2026-11-19 07:54",
-      "utc": "2026-11-18T23:54:54.197Z",
-      "text": "Thursday bfk, already in\nLogged before 8, nice one 🙌\n\n🔥 Eaten ███░░░░░░░ 26% · ~890 kcal room\n~ some of today is estimated\n\nBreakfast was light on protein, so for lunch, grilled chicken or tofu with rice and veg is about 450 and gives you a solid protein lift."
-    },
-    {
       "id": "workout-catchup-cal",
       "at": "2026-11-19 08:55",
       "utc": "2026-11-19T00:55:07.905Z",
@@ -1692,6 +1686,12 @@
       "at": "2026-11-23 23:55",
       "utc": "2026-11-23T15:55:20.707Z",
       "text": "Your week so far\nFresh week, so it's just today\n\n🍽️ Mon: in ~2,080 · out 180\n⚖️ Balance ~1,900, 700 over your 1,200\n\n~ some of today is estimated"
+    },
+    {
+      "id": "food-breakfast-0753",
+      "at": "2026-11-24 07:55",
+      "utc": "2026-11-23T23:55:03.876Z",
+      "text": "Tuesday bfk, the whole day's planned\nPlanned it all last night, nice 🙌\n\n🔥 Eaten ▱▱▱▱▱▱▱▱▱▱ 0% · 1,200 kcal room\n📋 Planned ~1,565, about 365 over\n~ some of today is estimated\n\nYour HM matcha is 150 to start. A black coffee instead of the SB one, and the banana pie saved for another day, brings the plan to about 1,190."
     }
   ]
 }
