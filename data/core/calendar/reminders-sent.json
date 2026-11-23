@@ -342,6 +342,12 @@
       "first": "2026-11-19 16:54",
       "last": "2026-11-19 16:54",
       "lastUtc": "2026-11-19T08:54:36.820Z"
+    },
+    "snack-before-home": {
+      "sent": 1,
+      "first": "2026-11-23 16:54",
+      "last": "2026-11-23 16:54",
+      "lastUtc": "2026-11-23T08:54:53.543Z"
     }
   },
   "sent": [
@@ -1661,6 +1667,12 @@
       "utc": "2026-11-23T08:54:35.283Z",
       "claimed": "cc-routine",
       "due": "2026-11-23 16:30"
+    },
+    {
+      "id": "snack-before-home",
+      "at": "2026-11-23 16:54",
+      "utc": "2026-11-23T08:54:53.543Z",
+      "text": "Snack before you head home\n\n🥚 Something with protein\n🍌 Plus a piece of fruit\n\nKeeps you going till dinner."
     }
   ]
 }
