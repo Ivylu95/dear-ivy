@@ -1107,27 +1107,6 @@
       "text": "Your concert poster is due tomorrow\n\n🖼️ Finish the last bits tonight\n💾 Save it so it's ready to hand in\n\nNearly there, you've got this 💪"
     },
     {
-      "id": "food-dinner-1853",
-      "at": "2026-11-18 18:54",
-      "utc": "2026-11-18T10:54:23.197Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-18 18:53"
-    },
-    {
-      "id": "antidepressant-2053",
-      "at": "2026-11-18 20:55",
-      "utc": "2026-11-18T12:55:08.694Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-18 20:53"
-    },
-    {
-      "id": "workout-ask-cal",
-      "at": "2026-11-18 20:55",
-      "utc": "2026-11-18T12:55:08.783Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-18 20:53"
-    },
-    {
       "id": "antidepressant-2053",
       "at": "2026-11-18 20:55",
       "utc": "2026-11-18T12:55:30.058Z",
@@ -1347,13 +1326,6 @@
       "at": "2026-11-20 20:56",
       "utc": "2026-11-20T12:56:47.236Z",
       "text": "Strong start this morning\nStrength (Mixed) at 7:10 is counted 💪\n\n🏃 Anything else today? A walk or the ankle routine counts.\n📝 Sets and reps if you have them."
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-20 22:55",
-      "utc": "2026-11-20T14:55:22.008Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-20 22:00"
     },
     {
       "id": "no-snacks-after-10",
@@ -1680,6 +1652,27 @@
       "at": "2026-11-23 18:54",
       "utc": "2026-11-23T10:54:41.742Z",
       "text": "Dinner's in, the whole day is logged\nThanks for getting every bite down today ✍️\n\n🍽️ ██████████ 150% · ~1,800 of 1,200 kcal eaten\n🔥 180 burned at your workout\n⚖️ Balance ~1,620, about 420 over the 1,200\n~ some of today is estimated\n\nDinner's already done, so nothing more is needed tonight. If you get peckish later, warm tea or a few cucumber slices are close to zero."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-23 20:56",
+      "utc": "2026-11-23T12:56:15.142Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-23 20:00"
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-23 20:56",
+      "utc": "2026-11-23T12:56:15.230Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-23 20:53"
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-23 20:56",
+      "utc": "2026-11-23T12:56:15.318Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-23 20:53"
     }
   ]
 }
