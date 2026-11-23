@@ -1101,13 +1101,6 @@
       "text": "Your concert poster is due tomorrow\n\n🖼️ Finish the last bits tonight\n💾 Save it so it's ready to hand in\n\nNearly there, you've got this 💪"
     },
     {
-      "id": "food-lunch-1253",
-      "at": "2026-11-18 12:54",
-      "utc": "2026-11-18T04:54:21.376Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-18 12:53"
-    },
-    {
       "id": "food-dinner-1853",
       "at": "2026-11-18 18:54",
       "utc": "2026-11-18T10:54:23.197Z",
@@ -1661,6 +1654,13 @@
       "at": "2026-11-23 12:54",
       "utc": "2026-11-23T04:54:54.563Z",
       "text": "Your egg and ham lunch is up\nTwo lattes to get the morning going ☕\n\n🔥 ▰▰▰▱▱▱▱▱▱▱ 32% of 1,200 kcal\n~820 kcal room\n🏃‍♀️ eaten ~380 · no exercise figure\n\nThe eggs and ham you planned come to about 270, with good protein. A handful of greens or some tomato on the side adds fibre and still leaves about 550 for later.\n\n~ some of today is estimated"
+    },
+    {
+      "id": "snack-before-home",
+      "at": "2026-11-23 16:54",
+      "utc": "2026-11-23T08:54:35.283Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-23 16:30"
     }
   ]
 }
