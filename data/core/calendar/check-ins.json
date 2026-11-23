@@ -4,15 +4,15 @@
   "send": "routine",
   "check_ins": [
     {
-      "id": "morning-update-2",
+      "id": "morning-update-3",
       "emoji": "🌅",
-      "text": "Morning update: today's calendar events and the next few days; then every reminder still pending, each with its day and time (or say there are none); then one line that she can change, move or stop any reminder by tapping the link below",
+      "text": "Morning update, SHORT. Format: one line greeting with the date and an emoji. Then groups, each with an emoji heading and ONE BLANK LINE between groups: 📅 Today (events, or 'Nothing on'); 🗓️ Coming up (next 2 events only); ⏰ Reminders today (each as a short phrase with time and its own emoji, no sentences, merge food nudges into one line). Every line is a short phrase of 6 words or fewer, never a full sentence. No explaining, no recap of yesterday beyond one phrase. End with one short line: 'Change any? Tap below.' then at most one short question. Whole message about 10 lines.",
       "cron": "0 8 * * *",
       "reads": [
         "data/core/calendar/reminders.json",
         "data/core/calendar/calendar.md"
       ],
-      "set": "2026-11-06 21:38",
+      "set": "2026-11-23 09:00",
       "chat": {
         "url": "https://claude.ai/code/session_01RkebH4gsGcHpitnhd8CADi",
         "title": "🔔 Reminders + Telegram"
