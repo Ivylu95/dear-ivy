@@ -1166,20 +1166,6 @@
     },
     {
       "id": "antidepressant-2053",
-      "at": "2026-11-19 20:54",
-      "utc": "2026-11-19T12:54:57.527Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-19 20:53"
-    },
-    {
-      "id": "workout-ask-cal",
-      "at": "2026-11-19 20:54",
-      "utc": "2026-11-19T12:54:57.615Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-19 20:53"
-    },
-    {
-      "id": "antidepressant-2053",
       "at": "2026-11-19 20:55",
       "utc": "2026-11-19T12:55:43.461Z",
       "text": "Meds after HIIT\n\n💊 Once you've cooled down, take tonight's before sleep."
@@ -1353,13 +1339,6 @@
       "at": "2026-11-21 20:55",
       "utc": "2026-11-21T12:55:35.734Z",
       "text": "CrewFit this morning is in 💪\n\n🏃 Did you fit in anything else, like a walk or your ankle routine?\n📝 Sets and reps if you've got them."
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-21 22:54",
-      "utc": "2026-11-21T14:54:23.600Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-21 22:00"
     },
     {
       "id": "no-snacks-after-10",
@@ -1705,6 +1684,27 @@
       "at": "2026-11-24 18:55",
       "utc": "2026-11-24T10:55:47.915Z",
       "text": "Dinner's in, the whole day is down\nNice swap to tofu and miso tonight 🥢\n\n🍽️ ██████████ 164% · ~1,963 of 1,200 kcal\n🍫 Protein bar still to confirm, 230\n~ some of today is estimated\n\nNothing more is needed tonight. If the protein bar didn't happen, just tell me and I'll take it off."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-24 20:56",
+      "utc": "2026-11-24T12:56:02.878Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-24 20:00"
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-24 20:56",
+      "utc": "2026-11-24T12:56:02.935Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-24 20:53"
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-24 20:56",
+      "utc": "2026-11-24T12:56:02.989Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-24 20:53"
     }
   ]
 }
