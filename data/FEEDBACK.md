@@ -141,3 +141,9 @@ The full version, for the developer:
     - or keep the sent log one file per day, so two runs never edit the same lines.
 
     Items 7 and 21 are the same family.
+26. **Never link a chat she has archived** (from her, 2026-11-24). She archived her workouts chat, but Luna's workout message still ended "Carry on in Workouts and exercises". Her other chat marked it closed and pointed her three workout reminders at the food chat by hand. Fix:
+    - when a chat is archived, mark it closed on her chat list automatically;
+    - have the sweep fall back to the open chat that covers the same area;
+    - never write a closed chat's name into a message.
+
+    Her short version: 🔗 Don't link chats I've archived.
