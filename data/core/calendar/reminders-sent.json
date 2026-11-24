@@ -344,10 +344,10 @@
       "lastUtc": "2026-11-19T08:54:36.820Z"
     },
     "snack-before-home": {
-      "sent": 1,
+      "sent": 2,
       "first": "2026-11-23 16:54",
-      "last": "2026-11-23 16:54",
-      "lastUtc": "2026-11-23T08:54:53.543Z"
+      "last": "2026-11-24 16:55",
+      "lastUtc": "2026-11-24T08:55:00.887Z"
     },
     "week-cal-in-out-3": {
       "sent": 1,
@@ -1692,6 +1692,12 @@
       "at": "2026-11-24 12:55",
       "utc": "2026-11-24T04:55:08.885Z",
       "text": "Eggs, ham and oats on the plan\nA protein-rich lunch lined up 🍳\n\n🔥 Logged ▱▱▱▱▱▱▱▱▱▱ 0% · 1,200 kcal room\n📋 Today's plan ~1,565, about 365 over\n🏃‍♀️ No workout logged yet\n\nYour planned lunch comes to about 450, with around 30 g protein from the eggs, ham and oats. If you'd like the day nearer 1,200, leaving out the banana pie and the protein bar would bring it to about 1,155. Pop lunch in the log once it's eaten 🙂\n\n~ some of today is estimated"
+    },
+    {
+      "id": "snack-before-home",
+      "at": "2026-11-24 16:55",
+      "utc": "2026-11-24T08:55:00.887Z",
+      "text": "Snack time before home\n\n🥚 A bit of protein, like an egg or yogurt\n🍎 And a piece of fruit\n\nDinner is on the light side today, so this helps carry you there."
     }
   ]
 }
