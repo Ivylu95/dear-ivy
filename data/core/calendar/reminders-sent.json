@@ -26,10 +26,10 @@
       "lastUtc": "2026-11-10T12:56:41.247Z"
     },
     "no-snacks-after-10": {
-      "sent": 33,
+      "sent": 34,
       "first": "2026-11-07 20:56",
-      "last": "2026-11-23 22:55",
-      "lastUtc": "2026-11-23T14:55:12.333Z"
+      "last": "2026-11-24 20:56",
+      "lastUtc": "2026-11-24T12:56:50.725Z"
     },
     "nutrition-updates-2": {
       "sent": 1,
@@ -140,16 +140,16 @@
       "lastUtc": "2026-11-11T11:55:52.005Z"
     },
     "antidepressant-2053": {
-      "sent": 13,
-      "first": "2026-11-11 20:57",
-      "last": "2026-11-23 20:56",
-      "lastUtc": "2026-11-23T12:56:41.755Z"
-    },
-    "workout-ask-cal": {
       "sent": 14,
       "first": "2026-11-11 20:57",
-      "last": "2026-11-24 08:22",
-      "lastUtc": "2026-11-24T00:22:35.371Z"
+      "last": "2026-11-24 20:56",
+      "lastUtc": "2026-11-24T12:56:51.871Z"
+    },
+    "workout-ask-cal": {
+      "sent": 15,
+      "first": "2026-11-11 20:57",
+      "last": "2026-11-24 20:56",
+      "lastUtc": "2026-11-24T12:56:52.697Z"
     },
     "week-cal-now-nov11": {
       "sent": 1,
@@ -1179,12 +1179,6 @@
       "due": "2026-11-19 20:53"
     },
     {
-      "id": "antidepressant-2053",
-      "at": "2026-11-19 20:55",
-      "utc": "2026-11-19T12:55:43.461Z",
-      "text": "Meds after HIIT\n\n💊 Once you've cooled down, take tonight's before sleep."
-    },
-    {
       "id": "week-cal-in-out-2",
       "at": "2026-11-19 23:54",
       "utc": "2026-11-19T15:54:38.995Z",
@@ -1262,12 +1256,6 @@
       "at": "2026-11-20 20:56",
       "utc": "2026-11-20T12:56:46.176Z",
       "text": "Tonight's meds\n\n💊 Have them as you wind down for bed."
-    },
-    {
-      "id": "workout-ask-cal",
-      "at": "2026-11-20 20:56",
-      "utc": "2026-11-20T12:56:47.236Z",
-      "text": "Strong start this morning\nStrength (Mixed) at 7:10 is counted 💪\n\n🏃 Anything else today? A walk or the ankle routine counts.\n📝 Sets and reps if you have them."
     },
     {
       "id": "week-cal-in-out-2",
@@ -1360,12 +1348,6 @@
       "utc": "2026-11-21T14:54:23.600Z",
       "claimed": "cc-routine",
       "due": "2026-11-21 22:00"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-21 22:54",
-      "utc": "2026-11-21T14:54:42.239Z",
-      "text": "10 pm, the kitchen's closed now\nThat burger stack should keep you full\n\n🌙 No more food tonight. Sleep well, bfk is the next stop."
     },
     {
       "id": "week-cal-in-out-2",
@@ -1705,6 +1687,24 @@
       "at": "2026-11-24 18:55",
       "utc": "2026-11-24T10:55:47.915Z",
       "text": "Dinner's in, the whole day is down\nNice swap to tofu and miso tonight 🥢\n\n🍽️ ██████████ 164% · ~1,963 of 1,200 kcal\n🍫 Protein bar still to confirm, 230\n~ some of today is estimated\n\nNothing more is needed tonight. If the protein bar didn't happen, just tell me and I'll take it off."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-24 20:56",
+      "utc": "2026-11-24T12:56:50.725Z",
+      "text": "About an hour of kitchen time left\nTofu and miso made a light dinner\n\n🌙 Still want a bite tonight? Have it before 10.\n☀️ After that, bfk is your next food."
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-24 20:56",
+      "utc": "2026-11-24T12:56:51.871Z",
+      "text": "Tuesday night meds\n\n💊 Take tonight's as you get ready for bed."
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-24 20:56",
+      "utc": "2026-11-24T12:56:52.697Z",
+      "text": "Cardio U at 6 this morning is counted 💪\n\n🚶 Anything else since? A walk or the ankle routine counts.\n📝 Sets and reps too, if you kept them."
     }
   ]
 }
