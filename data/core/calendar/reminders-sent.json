@@ -1166,13 +1166,6 @@
     },
     {
       "id": "food-dinner-1853",
-      "at": "2026-11-19 18:54",
-      "utc": "2026-11-19T10:54:38.954Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-19 18:53"
-    },
-    {
-      "id": "food-dinner-1853",
       "at": "2026-11-19 18:55",
       "utc": "2026-11-19T10:55:20.585Z",
       "text": "Dinner's around 7, HIIT at 8:40\nGood protein from the fillet and egg at lunch 🍳\n\n🍽️ ██████████ 98% · ~1,175 of 1,200 kcal eaten\n🔥 HIIT tonight adds about 200 kcal of room, once it's done\n~ some of today is estimated\n\nProtein's been on the light side, so a small bowl of tofu or a plain Greek yogurt about an hour before HIIT would sit well. Send it over once you've eaten."
@@ -1705,6 +1698,13 @@
       "at": "2026-11-24 16:55",
       "utc": "2026-11-24T08:55:00.887Z",
       "text": "Snack time before home\n\n🥚 A bit of protein, like an egg or yogurt\n🍎 And a piece of fruit\n\nDinner is on the light side today, so this helps carry you there."
+    },
+    {
+      "id": "food-dinner-1853",
+      "at": "2026-11-24 18:55",
+      "utc": "2026-11-24T10:55:07.712Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-24 18:53"
     }
   ]
 }
