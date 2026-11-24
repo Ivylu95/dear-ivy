@@ -22,10 +22,12 @@
       "url": "https://claude.ai/code/session_01RkebH73Sqeq5M4dzwA3cXe",
       "title": "Calories and nutrition",
       "title_from": "app",
-      "for": "calories and nutrition: what she eats, drinks and takes",
+      "for": "calories, nutrition and fitness: what she eats, drinks and takes, plus her workouts, training plan, sets and reps, and ankle routine",
       "kind": "everyday",
       "state": "open",
-      "modules": ["fitness"]
+      "modules": [
+        "fitness"
+      ]
     },
     {
       "url": "https://claude.ai/code/session_01RkebH5j9jBduAsrSVieBGm",
@@ -33,11 +35,18 @@
       "title_from": "app",
       "for": "workouts and exercises: her training plan, sets and reps, and her ankle routine",
       "kind": "everyday",
-      "state": "open",
-      "modules": ["fitness"]
+      "state": "closed",
+      "modules": [
+        "fitness"
+      ],
+      "closed": "2026-11-24",
+      "note": "She archived it (told 2026-11-24); workouts now go to Calories and nutrition."
     }
   ],
   "offers": {
-    "fitness": { "date": "2026-11-06", "answer": "this chat" }
+    "fitness": {
+      "date": "2026-11-06",
+      "answer": "this chat"
+    }
   }
 }
