@@ -146,10 +146,10 @@
       "lastUtc": "2026-11-23T12:56:41.755Z"
     },
     "workout-ask-cal": {
-      "sent": 13,
+      "sent": 14,
       "first": "2026-11-11 20:57",
-      "last": "2026-11-23 20:56",
-      "lastUtc": "2026-11-23T12:56:42.958Z"
+      "last": "2026-11-24 08:22",
+      "lastUtc": "2026-11-24T00:22:35.371Z"
     },
     "week-cal-now-nov11": {
       "sent": 1,
@@ -1218,12 +1218,6 @@
       "text": "Meds after HIIT\n\n💊 Once you've cooled down, take tonight's before sleep."
     },
     {
-      "id": "workout-ask-cal",
-      "at": "2026-11-19 20:55",
-      "utc": "2026-11-19T12:55:44.760Z",
-      "text": "Cardio HIIT at 8:40 tonight is counted 💪\n\n🏃 Anything else today? A walk or the ankle routine counts too. Sets and reps if you have them."
-    },
-    {
       "id": "week-cal-in-out-2",
       "at": "2026-11-19 23:54",
       "utc": "2026-11-19T15:54:38.995Z",
@@ -1692,6 +1686,12 @@
       "at": "2026-11-24 07:55",
       "utc": "2026-11-23T23:55:03.876Z",
       "text": "Tuesday bfk, the whole day's planned\nPlanned it all last night, nice 🙌\n\n🔥 Eaten ▱▱▱▱▱▱▱▱▱▱ 0% · 1,200 kcal room\n📋 Planned ~1,565, about 365 over\n~ some of today is estimated\n\nYour HM matcha is 150 to start. A black coffee instead of the SB one, and the banana pie saved for another day, brings the plan to about 1,190."
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-24 08:22",
+      "utc": "2026-11-24T00:22:35.371Z",
+      "text": "Workout check 🏋️\n\n🚶 Anything else today?\n• walk\n• ankle routine\n\n📝 Sets + reps, if kept"
     }
   ]
 }
