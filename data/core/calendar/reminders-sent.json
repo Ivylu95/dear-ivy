@@ -1126,13 +1126,6 @@
       "text": "Your week so far, Mon to Wed\nThree days logged in a row 📝\n\n📅 Mon: in 2,130 · out 0 · balance 2,130 (930 over)\n📅 Tue: in 2,235 · out 200 · balance 2,035 (835 over)\n📅 Wed: in 2,125 · out 0 · balance 2,125 (925 over)\n\n~ some of this week is estimated"
     },
     {
-      "id": "workout-catchup-cal",
-      "at": "2026-11-19 08:55",
-      "utc": "2026-11-19T00:55:07.905Z",
-      "held": true,
-      "why": "yesterday's workout is on her calendar; logged in a chat, not by a run (A-121)"
-    },
-    {
       "id": "food-lunch-1253",
       "at": "2026-11-19 12:54",
       "utc": "2026-11-19T04:54:31.708Z",
@@ -1692,6 +1685,13 @@
       "at": "2026-11-24 08:22",
       "utc": "2026-11-24T00:22:35.371Z",
       "text": "Workout check 🏋️\n\n🚶 Anything else today?\n• walk\n• ankle routine\n\n📝 Sets + reps, if kept"
+    },
+    {
+      "id": "workout-catchup-cal",
+      "at": "2026-11-24 08:54",
+      "utc": "2026-11-24T00:54:17.808Z",
+      "held": true,
+      "why": "yesterday's workout already logged"
     }
   ]
 }
