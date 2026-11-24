@@ -1179,13 +1179,6 @@
     },
     {
       "id": "food-breakfast-0753",
-      "at": "2026-11-20 07:54",
-      "utc": "2026-11-19T23:54:57.980Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-20 07:53"
-    },
-    {
-      "id": "food-breakfast-0753",
       "at": "2026-11-20 07:55",
       "utc": "2026-11-19T23:55:28.072Z",
       "text": "Friday bfk, plan's already in\nLogged the whole day last night, nice 🙌\n\n🔥 Eaten ░░░░░░░░░░ 0% · 1,200 kcal room\n📋 Planned ~1,330, about 130 over\n~ some of today is estimated\n\nThe Luckin oat latte is ~280 to start. One cookie instead of two this afternoon brings the planned day to about 1,130."
@@ -1718,6 +1711,13 @@
       "at": "2026-11-24 23:55",
       "utc": "2026-11-24T15:55:26.139Z",
       "text": "Your week, Monday to today\nTwo days in, and every meal logged\n\n🍽️ Mon: in ~2,080 · out 180 · ~700 over\n🍽️ Tue: in ~1,960 · out none logged · ~760 over\n⚖️ So far: in ~4,040 · out 180\n\n~ some of this is estimated, and part of today is still as planned"
+    },
+    {
+      "id": "food-breakfast-0753",
+      "at": "2026-11-25 07:54",
+      "utc": "2026-11-24T23:54:25.536Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-25 07:53"
     }
   ]
 }
