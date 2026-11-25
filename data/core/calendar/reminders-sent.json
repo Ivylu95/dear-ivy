@@ -128,10 +128,10 @@
       "lastUtc": "2026-11-11T05:10:39.496Z"
     },
     "food-dinner-1853": {
-      "sent": 14,
+      "sent": 15,
       "first": "2026-11-11 18:55",
-      "last": "2026-11-24 18:55",
-      "lastUtc": "2026-11-24T10:55:47.915Z"
+      "last": "2026-11-25 18:56",
+      "lastUtc": "2026-11-25T10:56:07.303Z"
     },
     "poster-start": {
       "sent": 1,
@@ -1178,12 +1178,6 @@
       "text": "Your week so far, Mon to Thu\nSecond HIIT of the week done 💪\n\n📅 Mon: in 2,130 · out 0 · balance 2,130 (930 over)\n📅 Tue: in 2,235 · out 200 · balance 2,035 (835 over)\n📅 Wed: in 2,925 · out 0 · balance 2,925 (1,725 over)\n📅 Thu: in 1,635 · out 200 · balance 1,435 (235 over)\n\nWed now has last night's supper in it.\n~ some of this week is estimated"
     },
     {
-      "id": "food-dinner-1853",
-      "at": "2026-11-20 18:54",
-      "utc": "2026-11-20T10:54:54.051Z",
-      "text": "Dinner's around 7, onigiri on the plan\nNice protein from the chicken and salmon at lunch 🍗\n\n🍽️ ████████░░ 84% · ~1,005 of 1,200 kcal logged as eaten\n☕ Latte and soy chips still to confirm, ~480\n🍙 Onigiri ~230\n\nIf the latte and chips went in, the day is already near 1,500, so the onigiri on its own is plenty tonight. Send it over once you've eaten.\n\n~ some of today is estimated"
-    },
-    {
       "id": "antidepressant-2053",
       "at": "2026-11-20 20:56",
       "utc": "2026-11-20T12:56:01.784Z",
@@ -1731,6 +1725,12 @@
       "utc": "2026-11-25T10:55:16.871Z",
       "claimed": "cc-routine",
       "due": "2026-11-25 18:53"
+    },
+    {
+      "id": "food-dinner-1853",
+      "at": "2026-11-25 18:56",
+      "utc": "2026-11-25T10:56:07.303Z",
+      "text": "Dinner time, about 60 kcal of room left\nGood protein from the chicken at lunch 🍗\n\n🍽️ █████████░ 95% · ~1,140 of 1,200 kcal eaten\n🍘 Seaweed cracker counted as one, tell me if it was more\n\nOnly a little room tonight, so keep it light: a bowl of clear soup with greens and a few tofu cubes sits gently inside it. Log it here when you've eaten.\n\n~ some of today is estimated"
     }
   ]
 }
