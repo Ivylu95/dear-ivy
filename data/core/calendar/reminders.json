@@ -185,6 +185,34 @@
       "text": "Pay your IRS tax: last day",
       "at": "2026-11-29 10:53",
       "set": "2026-11-25 09:00"
+    },
+    {
+      "id": "lunchbox-1653",
+      "emoji": "🍱",
+      "text": "Bring your lunchbox home",
+      "at": "2026-11-26 16:53",
+      "set": "2026-11-26 07:58"
+    },
+    {
+      "id": "lunchbox-1700",
+      "emoji": "🍱",
+      "text": "Bring your lunchbox home",
+      "at": "2026-11-26 17:00",
+      "set": "2026-11-26 07:58"
+    },
+    {
+      "id": "lunchbox-1730",
+      "emoji": "🍱",
+      "text": "Bring your lunchbox home",
+      "at": "2026-11-26 17:30",
+      "set": "2026-11-26 07:58"
+    },
+    {
+      "id": "lunchbox-1740",
+      "emoji": "🍱",
+      "text": "Bring your lunchbox home: last call, before you leave",
+      "at": "2026-11-26 17:40",
+      "set": "2026-11-26 07:58"
     }
   ]
 }
