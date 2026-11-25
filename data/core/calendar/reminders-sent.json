@@ -1179,13 +1179,6 @@
     },
     {
       "id": "food-lunch-1253",
-      "at": "2026-11-20 12:54",
-      "utc": "2026-11-20T04:54:58.261Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-20 12:53"
-    },
-    {
-      "id": "food-lunch-1253",
       "at": "2026-11-20 12:55",
       "utc": "2026-11-20T04:55:24.788Z",
       "text": "Lunch time, sandwich on the plan\nHam, egg and cheese, a good protein base 🥪\n\n🔥 Eaten ░░░░░░░░░░ 0% · 1,200 kcal room\n📋 Planned ~1,450, about 250 over\n🏃‍♀️ No workout logged today\n\nIf you'd like the day nearer 1,200, the soy chips this afternoon are the easiest 200 to leave. Log lunch once it's in 🙂\n\n~ some of today is estimated"
@@ -1718,6 +1711,13 @@
       "utc": "2026-11-25T00:55:41.448Z",
       "held": true,
       "why": "yesterday's workout on her calendar; logged"
+    },
+    {
+      "id": "food-lunch-1253",
+      "at": "2026-11-25 12:54",
+      "utc": "2026-11-25T04:54:27.480Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-25 12:53"
     }
   ]
 }
