@@ -26,10 +26,10 @@
       "lastUtc": "2026-11-10T12:56:41.247Z"
     },
     "no-snacks-after-10": {
-      "sent": 35,
+      "sent": 36,
       "first": "2026-11-07 20:56",
-      "last": "2026-11-24 22:54",
-      "lastUtc": "2026-11-24T14:54:41.583Z"
+      "last": "2026-11-25 21:55",
+      "lastUtc": "2026-11-25T13:55:17.751Z"
     },
     "nutrition-updates-2": {
       "sent": 1,
@@ -140,16 +140,16 @@
       "lastUtc": "2026-11-11T11:55:52.005Z"
     },
     "antidepressant-2053": {
-      "sent": 14,
-      "first": "2026-11-11 20:57",
-      "last": "2026-11-24 20:56",
-      "lastUtc": "2026-11-24T12:56:51.871Z"
-    },
-    "workout-ask-cal": {
       "sent": 15,
       "first": "2026-11-11 20:57",
-      "last": "2026-11-24 20:56",
-      "lastUtc": "2026-11-24T12:56:52.697Z"
+      "last": "2026-11-25 21:55",
+      "lastUtc": "2026-11-25T13:55:18.763Z"
+    },
+    "workout-ask-cal": {
+      "sent": 16,
+      "first": "2026-11-11 20:57",
+      "last": "2026-11-25 21:55",
+      "lastUtc": "2026-11-25T13:55:19.594Z"
     },
     "week-cal-now-nov11": {
       "sent": 1,
@@ -1178,12 +1178,6 @@
       "text": "Your week so far, Mon to Thu\nSecond HIIT of the week done 💪\n\n📅 Mon: in 2,130 · out 0 · balance 2,130 (930 over)\n📅 Tue: in 2,235 · out 200 · balance 2,035 (835 over)\n📅 Wed: in 2,925 · out 0 · balance 2,925 (1,725 over)\n📅 Thu: in 1,635 · out 200 · balance 1,435 (235 over)\n\nWed now has last night's supper in it.\n~ some of this week is estimated"
     },
     {
-      "id": "antidepressant-2053",
-      "at": "2026-11-20 20:56",
-      "utc": "2026-11-20T12:56:46.176Z",
-      "text": "Tonight's meds\n\n💊 Have them as you wind down for bed."
-    },
-    {
       "id": "week-cal-in-out-2",
       "at": "2026-11-20 23:54",
       "utc": "2026-11-20T15:54:21.812Z",
@@ -1261,12 +1255,6 @@
       "at": "2026-11-21 20:55",
       "utc": "2026-11-21T12:55:34.587Z",
       "text": "Bedtime meds\n\n💊 Take tonight's before you sleep."
-    },
-    {
-      "id": "workout-ask-cal",
-      "at": "2026-11-21 20:55",
-      "utc": "2026-11-21T12:55:35.734Z",
-      "text": "CrewFit this morning is in 💪\n\n🏃 Did you fit in anything else, like a walk or your ankle routine?\n📝 Sets and reps if you've got them."
     },
     {
       "id": "week-cal-in-out-2",
@@ -1378,12 +1366,6 @@
       "at": "2026-11-22 21:55",
       "utc": "2026-11-22T13:55:01.941Z",
       "text": "Your workouts, 16 to 22 Nov\nFour sessions in, lovely steady week 🙌\n\n📅 Mon: nothing logged\n🔥 Tue: HIIT at 8pm, 1 hour (logged before it started)\n📅 Wed: nothing logged\n🔥 Thu: HIIT, 1 hour\n📅 Fri: nothing logged\n🔥 Sat: morning HIIT, 1 hour\n🧘 Sun: Reformer Pilates, from your calendar"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-22 22:55",
-      "utc": "2026-11-22T14:55:35.247Z",
-      "text": "Kitchen's shut for the night\nDinner's done and covered\n\n🌙 Nothing more to eat from here.\n☀️ Bfk tomorrow is your next bite."
     },
     {
       "id": "week-cal-in-out-2",
@@ -1731,6 +1713,24 @@
       "utc": "2026-11-25T13:54:55.976Z",
       "claimed": "cc-routine",
       "due": "2026-11-25 20:53"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-25 21:55",
+      "utc": "2026-11-25T13:55:17.751Z",
+      "text": "Last few minutes for food tonight\nA filling lunch carried the day\n\n🌙 Want a small bite? Keep it light, before 10.\n☀️ Then rest up till bfk."
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-25 21:55",
+      "utc": "2026-11-25T13:55:18.763Z",
+      "text": "Wednesday wind-down\n\n💊 Tonight's meds, before you turn in."
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-25 21:55",
+      "utc": "2026-11-25T13:55:19.594Z",
+      "text": "Midweek movement check\nNo class on the calendar today\n\n🏋️ Did you do any workout or exercises?\n🚶 A walk or the ankle routine counts too.\n📝 Sets and reps, if you noted them."
     }
   ]
 }
