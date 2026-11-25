@@ -26,10 +26,10 @@
       "lastUtc": "2026-11-18T03:55:33.591Z"
     },
     "morning-update-3": {
-      "sent": 1,
+      "sent": 2,
       "first": "2026-11-24 09:56",
-      "last": "2026-11-24 09:56",
-      "lastUtc": "2026-11-24T01:56:08.542Z"
+      "last": "2026-11-25 08:55",
+      "lastUtc": "2026-11-25T00:55:51.210Z"
     }
   },
   "sent": [
@@ -173,6 +173,12 @@
       "at": "2026-11-24 09:56",
       "utc": "2026-11-24T01:56:08.542Z",
       "text": "Good morning, Tuesday 24 Nov ☀️\nCardio U done at 6 💪\n\n📅 Today\nNothing else on\n🎂 Tomorrow: a friend's birthday\n\n🗓️ Coming up\n🎶 Fri 27: concert\n🧘 Sun 29, 9am: Reformer Pilates\n\n⏰ Reminders today\n🍽️ Lunch 12:53, dinner 6:53pm\n🍎 Today 4:30pm: pre-home snack\n🌙 Tonight 8 and 10: snacks close\n🏋️ Tonight 8:53: workout, bedtime one\n⚖️ 11pm: week in and out\n\nChange any? 👇\n\nSleep well, and legs okay after Cardio U?"
+    },
+    {
+      "id": "morning-update-3",
+      "at": "2026-11-25 08:55",
+      "utc": "2026-11-25T00:55:51.210Z",
+      "text": "Good morning, Wed 25 Nov 🌤️\n\n📅 Today\n🎂 A friend's birthday\n🧘 No workout booked\n\n🗓️ Coming up\n🎶 Fri: concert, two days away\n🍽️ Sat evening: dinner, three days away\n\n⏰ Reminders today\n🍱 Food nudges 12:53 and 6:53pm\n🍎 4:30pm: protein and fruit, then home\n🌙 8pm and 10pm: snack cut-off\n🏋️ 8:53pm: today's training, bedtime one\n⚖️ 11pm: your week so far\n\nWant changes? Tap below 👇\n\nHow did you sleep, and is your body rested?"
     }
   ]
 }
