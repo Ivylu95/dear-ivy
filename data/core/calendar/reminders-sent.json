@@ -1180,20 +1180,6 @@
     {
       "id": "antidepressant-2053",
       "at": "2026-11-20 20:56",
-      "utc": "2026-11-20T12:56:01.784Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-20 20:53"
-    },
-    {
-      "id": "workout-ask-cal",
-      "at": "2026-11-20 20:56",
-      "utc": "2026-11-20T12:56:01.852Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-20 20:53"
-    },
-    {
-      "id": "antidepressant-2053",
-      "at": "2026-11-20 20:56",
       "utc": "2026-11-20T12:56:46.176Z",
       "text": "Tonight's meds\n\n💊 Have them as you wind down for bed."
     },
@@ -1392,13 +1378,6 @@
       "at": "2026-11-22 21:55",
       "utc": "2026-11-22T13:55:01.941Z",
       "text": "Your workouts, 16 to 22 Nov\nFour sessions in, lovely steady week 🙌\n\n📅 Mon: nothing logged\n🔥 Tue: HIIT at 8pm, 1 hour (logged before it started)\n📅 Wed: nothing logged\n🔥 Thu: HIIT, 1 hour\n📅 Fri: nothing logged\n🔥 Sat: morning HIIT, 1 hour\n🧘 Sun: Reformer Pilates, from your calendar"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-22 22:55",
-      "utc": "2026-11-22T14:55:10.398Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-22 22:00"
     },
     {
       "id": "no-snacks-after-10",
@@ -1731,6 +1710,27 @@
       "at": "2026-11-25 18:56",
       "utc": "2026-11-25T10:56:07.303Z",
       "text": "Dinner time, about 60 kcal of room left\nGood protein from the chicken at lunch 🍗\n\n🍽️ █████████░ 95% · ~1,140 of 1,200 kcal eaten\n🍘 Seaweed cracker counted as one, tell me if it was more\n\nOnly a little room tonight, so keep it light: a bowl of clear soup with greens and a few tofu cubes sits gently inside it. Log it here when you've eaten.\n\n~ some of today is estimated"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-25 21:54",
+      "utc": "2026-11-25T13:54:55.849Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-25 20:00"
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-25 21:54",
+      "utc": "2026-11-25T13:54:55.914Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-25 20:53"
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-25 21:54",
+      "utc": "2026-11-25T13:54:55.976Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-25 20:53"
     }
   ]
 }
