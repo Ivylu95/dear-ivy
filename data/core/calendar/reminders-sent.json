@@ -344,10 +344,10 @@
       "lastUtc": "2026-11-19T08:54:36.820Z"
     },
     "snack-before-home": {
-      "sent": 2,
+      "sent": 3,
       "first": "2026-11-23 16:54",
-      "last": "2026-11-24 16:55",
-      "lastUtc": "2026-11-24T08:55:00.887Z"
+      "last": "2026-11-25 16:55",
+      "lastUtc": "2026-11-25T08:55:16.161Z"
     },
     "week-cal-in-out-3": {
       "sent": 2,
@@ -1718,6 +1718,12 @@
       "at": "2026-11-25 12:54",
       "utc": "2026-11-25T04:54:58.575Z",
       "text": "Salmon and eggs for lunch\nA strong protein pick 🐟\n\n🔥 ▰▰▰▱▱▱▱▱▱▱ 31% of 1,200 kcal\n~830 kcal room before lunch\n🏃‍♀️ No workout logged today\n\nThe salmon and two eggs come to about 390, with nearly 40 g protein. Some broccoli, cucumber or a few cherry tomatoes alongside would bring the fibre today is short on, and still leave about 440 for dinner. Log it once it's eaten 🙂\n\n~ some of today is estimated"
+    },
+    {
+      "id": "snack-before-home",
+      "at": "2026-11-25 16:55",
+      "utc": "2026-11-25T08:55:16.161Z",
+      "text": "Snack before you head home\nA filling lunch today 💪\n\n🥛 Some protein, like Greek yogurt or a boiled egg\n🍊 A piece of fruit on the side\n💧 And a glass of water, since none is logged yet\n\nSomething light keeps you steady till dinner."
     }
   ]
 }
