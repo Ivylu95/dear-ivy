@@ -1178,13 +1178,6 @@
       "text": "Your week so far, Mon to Thu\nSecond HIIT of the week done 💪\n\n📅 Mon: in 2,130 · out 0 · balance 2,130 (930 over)\n📅 Tue: in 2,235 · out 200 · balance 2,035 (835 over)\n📅 Wed: in 2,925 · out 0 · balance 2,925 (1,725 over)\n📅 Thu: in 1,635 · out 200 · balance 1,435 (235 over)\n\nWed now has last night's supper in it.\n~ some of this week is estimated"
     },
     {
-      "id": "workout-catchup-cal",
-      "at": "2026-11-20 08:54",
-      "utc": "2026-11-20T00:54:10.202Z",
-      "held": true,
-      "why": "yesterday's workout already logged"
-    },
-    {
       "id": "food-lunch-1253",
       "at": "2026-11-20 12:54",
       "utc": "2026-11-20T04:54:58.261Z",
@@ -1718,6 +1711,13 @@
       "at": "2026-11-25 07:54",
       "utc": "2026-11-24T23:54:58.102Z",
       "text": "Wednesday bfk, halfway through the week\n\n🔥 Eaten ▱▱▱▱▱▱▱▱▱▱ 0% · 1,200 kcal room\n\nYour oatmeal with an HM matcha latte is about 290, warm and filling, with lots of room left for the day."
+    },
+    {
+      "id": "workout-catchup-cal",
+      "at": "2026-11-25 08:55",
+      "utc": "2026-11-25T00:55:41.448Z",
+      "held": true,
+      "why": "yesterday's workout on her calendar; logged"
     }
   ]
 }
