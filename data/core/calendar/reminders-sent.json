@@ -1440,13 +1440,6 @@
       "text": "Dinner's in, the whole day is logged\nThanks for getting every bite down today ✍️\n\n🍽️ ██████████ 150% · ~1,800 of 1,200 kcal eaten\n🔥 180 burned at your workout\n⚖️ Balance ~1,620, about 420 over the 1,200\n~ some of today is estimated\n\nDinner's already done, so nothing more is needed tonight. If you get peckish later, warm tea or a few cucumber slices are close to zero."
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-23 20:56",
-      "utc": "2026-11-23T12:56:15.142Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-23 20:00"
-    },
-    {
       "id": "antidepressant-2053",
       "at": "2026-11-23 20:56",
       "utc": "2026-11-23T12:56:15.230Z",
@@ -1731,6 +1724,13 @@
       "at": "2026-11-25 21:55",
       "utc": "2026-11-25T13:55:19.594Z",
       "text": "Midweek movement check\nNo class on the calendar today\n\n🏋️ Did you do any workout or exercises?\n🚶 A walk or the ankle routine counts too.\n📝 Sets and reps, if you noted them."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-25 22:54",
+      "utc": "2026-11-25T14:54:22.949Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-25 22:00"
     }
   ]
 }
