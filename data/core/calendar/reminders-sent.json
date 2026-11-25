@@ -1180,13 +1180,6 @@
     {
       "id": "food-dinner-1853",
       "at": "2026-11-20 18:54",
-      "utc": "2026-11-20T10:54:34.236Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-20 18:53"
-    },
-    {
-      "id": "food-dinner-1853",
-      "at": "2026-11-20 18:54",
       "utc": "2026-11-20T10:54:54.051Z",
       "text": "Dinner's around 7, onigiri on the plan\nNice protein from the chicken and salmon at lunch 🍗\n\n🍽️ ████████░░ 84% · ~1,005 of 1,200 kcal logged as eaten\n☕ Latte and soy chips still to confirm, ~480\n🍙 Onigiri ~230\n\nIf the latte and chips went in, the day is already near 1,500, so the onigiri on its own is plenty tonight. Send it over once you've eaten.\n\n~ some of today is estimated"
     },
@@ -1731,6 +1724,13 @@
       "at": "2026-11-25 16:55",
       "utc": "2026-11-25T08:55:16.161Z",
       "text": "Snack before you head home\nA filling lunch today 💪\n\n🥛 Some protein, like Greek yogurt or a boiled egg\n🍊 A piece of fruit on the side\n💧 And a glass of water, since none is logged yet\n\nSomething light keeps you steady till dinner."
+    },
+    {
+      "id": "food-dinner-1853",
+      "at": "2026-11-25 18:55",
+      "utc": "2026-11-25T10:55:16.871Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-25 18:53"
     }
   ]
 }
