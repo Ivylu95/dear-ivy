@@ -350,10 +350,10 @@
       "lastUtc": "2026-11-25T08:55:16.161Z"
     },
     "week-cal-in-out-3": {
-      "sent": 2,
+      "sent": 3,
       "first": "2026-11-23 23:55",
-      "last": "2026-11-24 23:55",
-      "lastUtc": "2026-11-24T15:55:26.139Z"
+      "last": "2026-11-25 23:55",
+      "lastUtc": "2026-11-25T15:55:15.319Z"
     }
   },
   "sent": [
@@ -1731,6 +1731,12 @@
       "at": "2026-11-25 22:54",
       "utc": "2026-11-25T14:54:40.703Z",
       "text": "Food's done for today\nBfk and lunch both logged, good going\n\n🌙 Nothing more to eat tonight.\n💧 Thirsty? Water's always fine.\n☀️ Bfk is the next stop."
+    },
+    {
+      "id": "week-cal-in-out-3",
+      "at": "2026-11-25 23:55",
+      "utc": "2026-11-25T15:55:15.319Z",
+      "text": "Your week, Monday to Wednesday\nToday's still under your 1,200 so far 👏\n\n🍽️ Mon: in ~2,080 · out 180 · ~700 over\n🍽️ Tue: in ~1,850 · out none logged · ~650 over (tofu and miso taken out)\n🍽️ Wed: in ~1,140 · out none logged · ~60 under\n⚖️ Week so far: in ~5,070 · out 180\n\n~ some of this is estimated"
     }
   ]
 }
