@@ -31,7 +31,7 @@ Thinking hard about the guy she's dating. Calm, practical, wants a plan.
 
 ## Next session opens with
 
-Check-in morning-update-3 (2026-11-24 09:56): Sleep well, and legs okay after Cardio U?
+Check-in morning-update-3 (2026-11-25 08:56): How did you sleep, and is your body rested?
 Check-in afternoon (2026-11-18 16:56): How about two glasses before 6, then tell me?
 Check-in morning-update-2 (2026-11-23 08:58): How did you sleep, and how does your body feel after Pilates?
 Check-in midday (2026-11-10 12:55): How many glasses have you got in since you woke up?
