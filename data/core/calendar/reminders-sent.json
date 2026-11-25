@@ -116,10 +116,10 @@
       "lastUtc": "2026-11-11T00:39:27.353Z"
     },
     "food-lunch-1253": {
-      "sent": 14,
+      "sent": 15,
       "first": "2026-11-11 12:59",
-      "last": "2026-11-24 12:55",
-      "lastUtc": "2026-11-24T04:55:08.885Z"
+      "last": "2026-11-25 12:54",
+      "lastUtc": "2026-11-25T04:54:58.575Z"
     },
     "log-now-nov11": {
       "sent": 1,
@@ -1178,12 +1178,6 @@
       "text": "Your week so far, Mon to Thu\nSecond HIIT of the week done 💪\n\n📅 Mon: in 2,130 · out 0 · balance 2,130 (930 over)\n📅 Tue: in 2,235 · out 200 · balance 2,035 (835 over)\n📅 Wed: in 2,925 · out 0 · balance 2,925 (1,725 over)\n📅 Thu: in 1,635 · out 200 · balance 1,435 (235 over)\n\nWed now has last night's supper in it.\n~ some of this week is estimated"
     },
     {
-      "id": "food-lunch-1253",
-      "at": "2026-11-20 12:55",
-      "utc": "2026-11-20T04:55:24.788Z",
-      "text": "Lunch time, sandwich on the plan\nHam, egg and cheese, a good protein base 🥪\n\n🔥 Eaten ░░░░░░░░░░ 0% · 1,200 kcal room\n📋 Planned ~1,450, about 250 over\n🏃‍♀️ No workout logged today\n\nIf you'd like the day nearer 1,200, the soy chips this afternoon are the easiest 200 to leave. Log lunch once it's in 🙂\n\n~ some of today is estimated"
-    },
-    {
       "id": "food-dinner-1853",
       "at": "2026-11-20 18:54",
       "utc": "2026-11-20T10:54:34.236Z",
@@ -1718,6 +1712,12 @@
       "utc": "2026-11-25T04:54:27.480Z",
       "claimed": "cc-routine",
       "due": "2026-11-25 12:53"
+    },
+    {
+      "id": "food-lunch-1253",
+      "at": "2026-11-25 12:54",
+      "utc": "2026-11-25T04:54:58.575Z",
+      "text": "Salmon and eggs for lunch\nA strong protein pick 🐟\n\n🔥 ▰▰▰▱▱▱▱▱▱▱ 31% of 1,200 kcal\n~830 kcal room before lunch\n🏃‍♀️ No workout logged today\n\nThe salmon and two eggs come to about 390, with nearly 40 g protein. Some broccoli, cucumber or a few cherry tomatoes alongside would bring the fibre today is short on, and still leave about 440 for dinner. Log it once it's eaten 🙂\n\n~ some of today is estimated"
     }
   ]
 }
