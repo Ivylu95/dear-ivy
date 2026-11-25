@@ -164,10 +164,10 @@
       "lastUtc": "2026-11-12T15:55:07.681Z"
     },
     "food-breakfast-0753": {
-      "sent": 14,
+      "sent": 15,
       "first": "2026-11-12 08:00",
-      "last": "2026-11-25 07:54",
-      "lastUtc": "2026-11-24T23:54:58.102Z"
+      "last": "2026-11-26 07:54",
+      "lastUtc": "2026-11-25T23:54:34.801Z"
     },
     "cancel-classpass": {
       "sent": 1,
@@ -1198,12 +1198,6 @@
       "due": "2026-11-21 07:53"
     },
     {
-      "id": "food-breakfast-0753",
-      "at": "2026-11-21 07:54",
-      "utc": "2026-11-20T23:54:42.749Z",
-      "text": "Saturday bfk, Pilates at 9\n\n🔥 Eaten ░░░░░░░░░░ 0% · 1,200 kcal room\n\nA banana with a spoon of peanut butter is about 190, light enough before Reformer and something to keep you going after."
-    },
-    {
       "id": "workout-catchup-cal",
       "at": "2026-11-21 08:54",
       "utc": "2026-11-21T00:54:05.451Z",
@@ -1744,6 +1738,12 @@
       "at": "2026-11-25 23:55",
       "utc": "2026-11-25T15:55:15.319Z",
       "text": "Your week, Monday to Wednesday\nToday's still under your 1,200 so far 👏\n\n🍽️ Mon: in ~2,080 · out 180 · ~700 over\n🍽️ Tue: in ~1,850 · out none logged · ~650 over (tofu and miso taken out)\n🍽️ Wed: in ~1,140 · out none logged · ~60 under\n⚖️ Week so far: in ~5,070 · out 180\n\n~ some of this is estimated"
+    },
+    {
+      "id": "food-breakfast-0753",
+      "at": "2026-11-26 07:54",
+      "utc": "2026-11-25T23:54:34.801Z",
+      "text": "Thursday bfk, nearly the weekend\n\n🔥 Eaten ▱▱▱▱▱▱▱▱▱▱ 0% · 1,200 kcal room\n\nTwo boiled eggs with a banana is about 245, some protein and a bit of sweetness, with plenty of room left for lunch."
     }
   ]
 }
