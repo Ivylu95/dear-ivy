@@ -29,6 +29,7 @@ _Appointments, deadlines, trips, birthdays. Soonest first. Remove once past
 | 2026-11-19 17:00 | Submit MC and medical invoice, by 5 pm | Told 2026-11-18 |
 | 2026-11-19 13:30 | Collect her doughnut | Told 2026-11-17 |
 | 2026-11-25 | Madeline's birthday (yearly in her calendar) | From her Google Calendar (told 2026-11-06) |
+| 2026-11-29 | Pay IRS tax, latest by Sunday; she is paid on Sat 28 Nov | Told 2026-11-25 |
 | 2026-11-27 | MLK concert | From her Google Calendar (told 2026-11-06) |
 | 2026-11-30 | MLK school closure; training at HF | From her Google Calendar |
 | 2026-11-30 – 2026-12-04 | MLK staff retreat | From her Google Calendar |

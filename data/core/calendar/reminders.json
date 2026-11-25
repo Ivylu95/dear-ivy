@@ -157,6 +157,34 @@
       "text": "Snack time: protein and fruit before you head home",
       "cron": "30 16 * * 1-5",
       "set": "2026-11-21 12:40"
+    },
+    {
+      "id": "irs-thu",
+      "emoji": "🧾",
+      "text": "Pay your IRS tax: use your break",
+      "at": "2026-11-26 13:53",
+      "set": "2026-11-25 09:00"
+    },
+    {
+      "id": "irs-fri",
+      "emoji": "🧾",
+      "text": "Pay your IRS tax: use your break",
+      "at": "2026-11-27 13:53",
+      "set": "2026-11-25 09:00"
+    },
+    {
+      "id": "irs-sat",
+      "emoji": "💰",
+      "text": "Payday: pay your IRS tax today",
+      "at": "2026-11-28 10:53",
+      "set": "2026-11-25 09:00"
+    },
+    {
+      "id": "irs-sun",
+      "emoji": "🧾",
+      "text": "Pay your IRS tax: last day",
+      "at": "2026-11-29 10:53",
+      "set": "2026-11-25 09:00"
     }
   ]
 }
