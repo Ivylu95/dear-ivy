@@ -35,3 +35,4 @@ Check-in morning-update-2 (2026-11-20 08:58): How did you sleep, and how are you
 Check-in morning-update-2 (2026-11-21 09:55): How did you sleep, and how's your body holding up through CrewFit?
 Check-in morning-update-2 (2026-11-22 08:56): How did you sleep, and how's your body after yesterday's HIIT, going into Pilates?
 Check-in morning-update-3 (2026-11-24 09:56): Sleep well, and legs okay after Cardio U?
+Check-in morning-update-3 (2026-11-25 08:56): How did you sleep, and is your body rested?
