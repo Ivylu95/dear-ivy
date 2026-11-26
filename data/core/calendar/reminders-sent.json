@@ -354,6 +354,12 @@
       "first": "2026-11-23 23:55",
       "last": "2026-11-25 23:55",
       "lastUtc": "2026-11-25T15:55:15.319Z"
+    },
+    "irs-thu": {
+      "sent": 1,
+      "first": "2026-11-26 13:55",
+      "last": "2026-11-26 13:55",
+      "lastUtc": "2026-11-26T05:55:01.470Z"
     }
   },
   "sent": [
@@ -1751,6 +1757,12 @@
       "utc": "2026-11-26T05:54:39.733Z",
       "claimed": "cc-routine",
       "due": "2026-11-26 13:53"
+    },
+    {
+      "id": "irs-thu",
+      "at": "2026-11-26 13:55",
+      "utc": "2026-11-26T05:55:01.470Z",
+      "text": "Pay your IRS tax on your break today\n\n📅 Last day is Sun 29 Nov\n💵 Pay comes in Sat, if you'd rather wait for it"
     }
   ]
 }
