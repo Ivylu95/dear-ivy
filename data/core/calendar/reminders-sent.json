@@ -116,10 +116,10 @@
       "lastUtc": "2026-11-11T00:39:27.353Z"
     },
     "food-lunch-1253": {
-      "sent": 15,
+      "sent": 16,
       "first": "2026-11-11 12:59",
-      "last": "2026-11-25 12:54",
-      "lastUtc": "2026-11-25T04:54:58.575Z"
+      "last": "2026-11-26 12:55",
+      "lastUtc": "2026-11-26T04:55:14.041Z"
     },
     "log-now-nov11": {
       "sent": 1,
@@ -1198,12 +1198,6 @@
       "due": "2026-11-21 12:53"
     },
     {
-      "id": "food-lunch-1253",
-      "at": "2026-11-21 12:55",
-      "utc": "2026-11-21T04:55:35.148Z",
-      "text": "Lunch is up next\nLatte and a cookie to start the day ☕\n\n🔥 ▰▰▰▱▱▱▱▱▱▱ 28% of 1,200 kcal\n~870 kcal room left\n🏃‍♀️ No workout logged today\n\nBreakfast came late, so lunch has plenty of room. Eggs, chicken or fish with veg and some rice would add the protein the day hasn't had yet."
-    },
-    {
       "id": "food-dinner-1853",
       "at": "2026-11-21 18:55",
       "utc": "2026-11-21T10:55:14.512Z",
@@ -1744,6 +1738,12 @@
       "utc": "2026-11-26T00:54:18.502Z",
       "held": true,
       "why": "yesterday's workout already logged"
+    },
+    {
+      "id": "food-lunch-1253",
+      "at": "2026-11-26 12:55",
+      "utc": "2026-11-26T04:55:14.041Z",
+      "text": "Lunch time, HIIT day\nA light, easy start with your matcha ☕\n\n🔥 ▰▰▱▱▱▱▱▱▱▱ 18% of 1,200 kcal\n~985 kcal room, ~535 once the planned cookie is in\n🏃‍♀️ HIIT still to come, kept on its own line\n\nProtein has been light so far, about 7 g. Chicken, fish or eggs with a big pile of veg comes to about 400 and brings it up, with room left for the cookie later. Pop lunch in the log once it's eaten 🙂\n\n~ some of today is estimated"
     }
   ]
 }
