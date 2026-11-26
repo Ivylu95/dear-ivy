@@ -1502,13 +1502,6 @@
       "text": "Dinner's in, the whole day is down\nNice swap to tofu and miso tonight 🥢\n\n🍽️ ██████████ 164% · ~1,963 of 1,200 kcal\n🍫 Protein bar still to confirm, 230\n~ some of today is estimated\n\nNothing more is needed tonight. If the protein bar didn't happen, just tell me and I'll take it off."
     },
     {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-24 20:56",
-      "utc": "2026-11-24T12:56:02.878Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-24 20:00"
-    },
-    {
       "id": "antidepressant-2053",
       "at": "2026-11-24 20:56",
       "utc": "2026-11-24T12:56:02.935Z",
@@ -1831,6 +1824,13 @@
       "at": "2026-11-26 20:56",
       "utc": "2026-11-26T12:56:29.539Z",
       "text": "Early HIIT is done and counted 💪\n\n🚶 Did you move any more today, like a walk or your ankle routine?\n📝 Send sets and reps if you kept them."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-26 22:54",
+      "utc": "2026-11-26T14:54:20.516Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-26 22:00"
     }
   ]
 }
