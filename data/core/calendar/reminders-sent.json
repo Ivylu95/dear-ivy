@@ -1763,6 +1763,20 @@
       "at": "2026-11-26 13:55",
       "utc": "2026-11-26T05:55:01.470Z",
       "text": "Pay your IRS tax on your break today\n\n📅 Last day is Sun 29 Nov\n💵 Pay comes in Sat, if you'd rather wait for it"
+    },
+    {
+      "id": "snack-before-home",
+      "at": "2026-11-26 16:55",
+      "utc": "2026-11-26T08:55:20.703Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-26 16:30"
+    },
+    {
+      "id": "lunchbox-1653",
+      "at": "2026-11-26 16:55",
+      "utc": "2026-11-26T08:55:20.763Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-26 16:53"
     }
   ]
 }
