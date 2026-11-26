@@ -7,3 +7,4 @@ for what it holds.
 | File | What it holds |
 |---|---|
 | `data/therapy/adhd/screener.md` | WHO 6-question screener (ASRS v1.1 Part A), given 2026-11-06, and her answers |
+| `data/therapy/adhd/assessment_options.md` | Assessment providers she has looked at, prices and what each involves |

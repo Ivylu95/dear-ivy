@@ -65,3 +65,4 @@ _Anything marked `[inferred]` is my reading, not her words._
 | 2026-11-18 | health | `health` | Asked how to stop eating at night: starts after work around 6 pm and goes on until she sleeps | → data/core/journal/2026-11-18.md |
 | 2026-11-21 | health | `weight` | Said she thinks she is about 53 kg, wants to go down to 45 kg, and asked to be reminded to eat half portions; conflicts with the 45 kg she gave on 2026-11-16 | → data/core/journal/2026-11-21.md |
 | 2026-11-21 | health | `weight` | Weighed herself: 53 kg (her figure). This replaces the 45 kg of 2026-11-16 | → data/fitness/training.md |
+| 2026-11-26 | question | `adhd` | Looking at a private adult ADHD assessment ($2616); asked what happens in each session | → data/therapy/adhd/assessment_options.md |
