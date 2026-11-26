@@ -350,10 +350,10 @@
       "lastUtc": "2026-11-26T08:55:57.383Z"
     },
     "week-cal-in-out-3": {
-      "sent": 3,
+      "sent": 4,
       "first": "2026-11-23 23:55",
-      "last": "2026-11-25 23:55",
-      "lastUtc": "2026-11-25T15:55:15.319Z"
+      "last": "2026-11-26 23:55",
+      "lastUtc": "2026-11-26T15:55:55.733Z"
     },
     "irs-thu": {
       "sent": 1,
@@ -1838,6 +1838,12 @@
       "utc": "2026-11-26T15:55:20.802Z",
       "claimed": "cc-routine",
       "due": "2026-11-26 23:00"
+    },
+    {
+      "id": "week-cal-in-out-3",
+      "at": "2026-11-26 23:55",
+      "utc": "2026-11-26T15:55:55.733Z",
+      "text": "Your week, Monday to Thursday\nToday's sitting close to your 1,200 👏\n\n🍽️ Mon: in ~2,080 · out 180 · ~700 over\n🍽️ Tue: in ~1,850 · out none logged · ~650 over\n🍽️ Wed: in ~2,230 · out 150 · ~880 over (dinner now added)\n🍽️ Thu: in ~1,290 · out 200 if the HIIT went ahead · ~110 under\n⚖️ Week so far: in ~7,450 · out 530\n\n~ some of this is estimated, and today's HIIT is still as planned"
     }
   ]
 }
