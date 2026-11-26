@@ -1191,13 +1191,6 @@
       "text": "Your week so far, Mon to Fri\nFive days logged in a row 📝\n\n📅 Mon: in 2,130 · out 0 · balance 2,130 (930 over)\n📅 Tue: in 2,235 · out 200 · balance 2,035 (835 over)\n📅 Wed: in 2,925 · out 0 · balance 2,925 (1,725 over)\n📅 Thu: in 1,635 · out 200 · balance 1,435 (235 over)\n📅 Fri so far: in 1,715 · out 0 · balance 1,715 (515 over)\n\nFri counts the soy chips and onigiri you planned.\n~ some of this week is estimated"
     },
     {
-      "id": "workout-catchup-cal",
-      "at": "2026-11-21 08:54",
-      "utc": "2026-11-21T00:54:05.451Z",
-      "held": true,
-      "why": "yesterday's workout is on her calendar"
-    },
-    {
       "id": "food-lunch-1253",
       "at": "2026-11-21 12:54",
       "utc": "2026-11-21T04:54:51.752Z",
@@ -1744,6 +1737,13 @@
       "at": "2026-11-26 07:54",
       "utc": "2026-11-25T23:54:34.801Z",
       "text": "Thursday bfk, nearly the weekend\n\n🔥 Eaten ▱▱▱▱▱▱▱▱▱▱ 0% · 1,200 kcal room\n\nTwo boiled eggs with a banana is about 245, some protein and a bit of sweetness, with plenty of room left for lunch."
+    },
+    {
+      "id": "workout-catchup-cal",
+      "at": "2026-11-26 08:54",
+      "utc": "2026-11-26T00:54:18.502Z",
+      "held": true,
+      "why": "yesterday's workout already logged"
     }
   ]
 }
