@@ -344,10 +344,10 @@
       "lastUtc": "2026-11-19T08:54:36.820Z"
     },
     "snack-before-home": {
-      "sent": 3,
+      "sent": 4,
       "first": "2026-11-23 16:54",
-      "last": "2026-11-25 16:55",
-      "lastUtc": "2026-11-25T08:55:16.161Z"
+      "last": "2026-11-26 16:55",
+      "lastUtc": "2026-11-26T08:55:57.383Z"
     },
     "week-cal-in-out-3": {
       "sent": 3,
@@ -360,6 +360,12 @@
       "first": "2026-11-26 13:55",
       "last": "2026-11-26 13:55",
       "lastUtc": "2026-11-26T05:55:01.470Z"
+    },
+    "lunchbox-1653": {
+      "sent": 1,
+      "first": "2026-11-26 16:55",
+      "last": "2026-11-26 16:55",
+      "lastUtc": "2026-11-26T08:55:58.356Z"
     }
   },
   "sent": [
@@ -1763,6 +1769,18 @@
       "at": "2026-11-26 13:55",
       "utc": "2026-11-26T05:55:01.470Z",
       "text": "Pay your IRS tax on your break today\n\n📅 Last day is Sun 29 Nov\n💵 Pay comes in Sat, if you'd rather wait for it"
+    },
+    {
+      "id": "snack-before-home",
+      "at": "2026-11-26 16:55",
+      "utc": "2026-11-26T08:55:57.383Z",
+      "text": "Snack before the trip home\nLunch is in and filling 🙌\n\n🥛 Something with protein, like Greek yogurt or a boiled egg\n🍐 A piece of fruit alongside\n💧 And some water, none logged yet today\n\nProtein's the one running a bit behind today, so a little now helps."
+    },
+    {
+      "id": "lunchbox-1653",
+      "at": "2026-11-26 16:55",
+      "utc": "2026-11-26T08:55:58.356Z",
+      "text": "Don't forget your lunchbox on the way out today."
     }
   ]
 }
