@@ -1223,13 +1223,6 @@
     {
       "id": "food-dinner-1853",
       "at": "2026-11-21 18:55",
-      "utc": "2026-11-21T10:55:14.512Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-21 18:53"
-    },
-    {
-      "id": "food-dinner-1853",
-      "at": "2026-11-21 18:55",
       "utc": "2026-11-21T10:55:48.072Z",
       "text": "Dinner time, around 7\nEasy start with the latte and cookie 🍪\n\n🍽️ ███░░░░░░░ 28% · 330 of 1,200 kcal eaten\n🔥 About 870 kcal of room left\n🥩 No protein logged yet today\n\nPlenty of room for a proper plate tonight: some chicken or fish with rice and greens would bring the protein up nicely. Send it over once you've eaten."
     },
@@ -1831,6 +1824,13 @@
       "at": "2026-11-26 17:40",
       "utc": "2026-11-26T09:40:45.251Z",
       "text": "Last call 🍱\nLunchbox, now!"
+    },
+    {
+      "id": "food-dinner-1853",
+      "at": "2026-11-26 18:55",
+      "utc": "2026-11-26T10:55:03.301Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-26 18:53"
     }
   ]
 }
