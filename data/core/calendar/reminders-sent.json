@@ -1192,13 +1192,6 @@
     },
     {
       "id": "food-lunch-1253",
-      "at": "2026-11-21 12:54",
-      "utc": "2026-11-21T04:54:51.752Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-21 12:53"
-    },
-    {
-      "id": "food-lunch-1253",
       "at": "2026-11-21 12:55",
       "utc": "2026-11-21T04:55:35.148Z",
       "text": "Lunch is up next\nLatte and a cookie to start the day ☕\n\n🔥 ▰▰▰▱▱▱▱▱▱▱ 28% of 1,200 kcal\n~870 kcal room left\n🏃‍♀️ No workout logged today\n\nBreakfast came late, so lunch has plenty of room. Eggs, chicken or fish with veg and some rice would add the protein the day hasn't had yet."
@@ -1744,6 +1737,13 @@
       "utc": "2026-11-26T00:54:18.502Z",
       "held": true,
       "why": "yesterday's workout already logged"
+    },
+    {
+      "id": "food-lunch-1253",
+      "at": "2026-11-26 12:54",
+      "utc": "2026-11-26T04:54:41.300Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-26 12:53"
     }
   ]
 }
