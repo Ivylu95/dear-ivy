@@ -1222,20 +1222,6 @@
     },
     {
       "id": "antidepressant-2053",
-      "at": "2026-11-21 20:54",
-      "utc": "2026-11-21T12:54:58.488Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-21 20:53"
-    },
-    {
-      "id": "workout-ask-cal",
-      "at": "2026-11-21 20:54",
-      "utc": "2026-11-21T12:54:58.589Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-21 20:53"
-    },
-    {
-      "id": "antidepressant-2053",
       "at": "2026-11-21 20:55",
       "utc": "2026-11-21T12:55:34.587Z",
       "text": "Bedtime meds\n\n💊 Take tonight's before you sleep."
@@ -1448,13 +1434,6 @@
       "at": "2026-11-23 20:56",
       "utc": "2026-11-23T12:56:42.958Z",
       "text": "Today's hour of cardio and strength is in 💪\n\n🚶 Did you add anything else, like a walk or the ankle routine?\n📝 Sets and reps too, if you kept them."
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-23 22:54",
-      "utc": "2026-11-23T14:54:49.721Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-23 22:00"
     },
     {
       "id": "no-snacks-after-10",
@@ -1831,6 +1810,27 @@
       "at": "2026-11-26 18:56",
       "utc": "2026-11-26T10:56:17.134Z",
       "text": "Dinner time, the day is nearly full\nLunch and the cookie are both logged ✍️\n\n🍽️ ██████████ 108% · ~1,290 of 1,200 kcal eaten\n🏃 If the HIIT went ahead, ~200 comes off, leaving ~110 of room\n~ some of today is estimated\n\nA light plate fits tonight: a few slices of chicken breast with a big pile of steamed greens. Tell me if the HIIT happened, and log dinner once you've eaten."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-26 20:55",
+      "utc": "2026-11-26T12:55:46.253Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-26 20:00"
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-26 20:55",
+      "utc": "2026-11-26T12:55:46.332Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-26 20:53"
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-26 20:55",
+      "utc": "2026-11-26T12:55:46.409Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-26 20:53"
     }
   ]
 }
