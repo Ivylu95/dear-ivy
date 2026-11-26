@@ -1831,6 +1831,13 @@
       "at": "2026-11-26 22:55",
       "utc": "2026-11-26T14:55:02.783Z",
       "text": "Kitchen's closed for tonight\nLunch and bfk both in the log, well kept\n\n🌙 No more food from here.\n💧 Water's still at 0 today, so a glass before bed is a good idea.\n☀️ Next food is bfk tomorrow."
+    },
+    {
+      "id": "week-cal-in-out-3",
+      "at": "2026-11-26 23:55",
+      "utc": "2026-11-26T15:55:20.802Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-26 23:00"
     }
   ]
 }
