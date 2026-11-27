@@ -1,14 +1,7 @@
 {
   "_what": "A copy of her Google Calendar, the next fortnight, refreshed by the heartbeat or a session through the connector (A-093). Read-only: nothing writes to her calendar from here.",
-  "synced_at": "2026-11-26T00:54:47.598Z",
+  "synced_at": "2026-11-27T00:55:57.284Z",
   "events": [
-    {
-      "start": "2026-11-26T06:00:00+08:00",
-      "end": "2026-11-26T06:55:00+08:00",
-      "all_day": false,
-      "title": "Cardio HIIT",
-      "calendar": "ivyyypotatopls@gmail.com"
-    },
     {
       "start": "2026-11-27",
       "end": "2026-11-28",
@@ -77,6 +70,13 @@
       "end": "2026-12-06T14:00:00+08:00",
       "all_day": false,
       "title": "Pick Del from Airport (1:15pm)",
+      "calendar": "ivyyypotatopls@gmail.com"
+    },
+    {
+      "start": "2026-12-10T17:00:00+08:00",
+      "end": "2026-12-10T18:00:00+08:00",
+      "all_day": false,
+      "title": "Facial @YS with Jess. Ask for free eye masks.",
       "calendar": "ivyyypotatopls@gmail.com"
     }
   ]
