@@ -1346,20 +1346,6 @@
     {
       "id": "antidepressant-2053",
       "at": "2026-11-23 20:56",
-      "utc": "2026-11-23T12:56:15.230Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-23 20:53"
-    },
-    {
-      "id": "workout-ask-cal",
-      "at": "2026-11-23 20:56",
-      "utc": "2026-11-23T12:56:15.318Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-23 20:53"
-    },
-    {
-      "id": "antidepressant-2053",
-      "at": "2026-11-23 20:56",
       "utc": "2026-11-23T12:56:41.755Z",
       "text": "Before you sleep\n\n💊 Tonight's meds, once you start winding down."
     },
@@ -1550,13 +1536,6 @@
       "at": "2026-11-25 18:56",
       "utc": "2026-11-25T10:56:07.303Z",
       "text": "Dinner time, about 60 kcal of room left\nGood protein from the chicken at lunch 🍗\n\n🍽️ █████████░ 95% · ~1,140 of 1,200 kcal eaten\n🍘 Seaweed cracker counted as one, tell me if it was more\n\nOnly a little room tonight, so keep it light: a bowl of clear soup with greens and a few tofu cubes sits gently inside it. Log it here when you've eaten.\n\n~ some of today is estimated"
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-25 21:54",
-      "utc": "2026-11-25T13:54:55.849Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-25 20:00"
     },
     {
       "id": "antidepressant-2053",
@@ -1874,6 +1853,27 @@
       "id": "workout-ask-cal",
       "at": "2026-11-27 20:54",
       "utc": "2026-11-27T12:54:43.023Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-27 20:53"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-27 21:54",
+      "utc": "2026-11-27T13:54:46.952Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-27 20:00"
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-27 21:54",
+      "utc": "2026-11-27T13:54:47.017Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-27 20:53"
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-27 21:54",
+      "utc": "2026-11-27T13:54:47.078Z",
       "claimed": "cc-routine",
       "due": "2026-11-27 20:53"
     }
