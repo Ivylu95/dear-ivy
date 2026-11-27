@@ -1424,20 +1424,6 @@
     {
       "id": "antidepressant-2053",
       "at": "2026-11-24 20:56",
-      "utc": "2026-11-24T12:56:02.935Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-24 20:53"
-    },
-    {
-      "id": "workout-ask-cal",
-      "at": "2026-11-24 20:56",
-      "utc": "2026-11-24T12:56:02.989Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-24 20:53"
-    },
-    {
-      "id": "antidepressant-2053",
-      "at": "2026-11-24 20:56",
       "utc": "2026-11-24T12:56:51.871Z",
       "text": "Tuesday night meds\n\n💊 Take tonight's as you get ready for bed."
     },
@@ -1550,13 +1536,6 @@
       "at": "2026-11-25 21:55",
       "utc": "2026-11-25T13:55:19.594Z",
       "text": "Midweek movement check\nNo class on the calendar today\n\n🏋️ Did you do any workout or exercises?\n🚶 A walk or the ankle routine counts too.\n📝 Sets and reps, if you noted them."
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-25 22:54",
-      "utc": "2026-11-25T14:54:22.949Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-25 22:00"
     },
     {
       "id": "no-snacks-after-10",
@@ -1856,6 +1835,27 @@
       "id": "workout-ask-cal",
       "at": "2026-11-27 21:54",
       "utc": "2026-11-27T13:54:47.078Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-27 20:53"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-27 22:54",
+      "utc": "2026-11-27T14:54:55.960Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-27 22:00"
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-27 22:54",
+      "utc": "2026-11-27T14:54:56.025Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-27 20:53"
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-27 22:54",
+      "utc": "2026-11-27T14:54:56.094Z",
       "claimed": "cc-routine",
       "due": "2026-11-27 20:53"
     },
