@@ -350,10 +350,10 @@
       "lastUtc": "2026-11-27T08:55:05.836Z"
     },
     "week-cal-in-out-3": {
-      "sent": 4,
+      "sent": 5,
       "first": "2026-11-23 23:55",
-      "last": "2026-11-26 23:55",
-      "lastUtc": "2026-11-26T15:55:55.733Z"
+      "last": "2026-11-27 23:55",
+      "lastUtc": "2026-11-27T15:55:29.548Z"
     },
     "irs-thu": {
       "sent": 1,
@@ -1876,6 +1876,12 @@
       "at": "2026-11-27 22:55",
       "utc": "2026-11-27T14:55:43.384Z",
       "text": "Concert day movement check\nNo workout on the calendar today\n\n🏋️ Did you do any exercises today?\n🚶 A walk or the ankle routine counts.\n📝 Sets and reps too, if you kept them."
+    },
+    {
+      "id": "week-cal-in-out-3",
+      "at": "2026-11-27 23:55",
+      "utc": "2026-11-27T15:55:29.548Z",
+      "text": "Your week, Monday to Friday\nThursday's HIIT is in, so that day sits under 💪\n\n🍽️ Mon: in ~2,080 · out 180 · ~700 over\n🍽️ Tue: in ~1,850 · out none logged · ~650 over\n🍽️ Wed: in ~2,230 · out 150 · ~880 over\n🍽️ Thu: in ~1,290 · out 200 · ~110 under\n🍽️ Fri: no food logged today\n⚖️ Monday to now: in ~7,450 · out 530\n\n~ some of this is estimated"
     }
   ]
 }
