@@ -344,10 +344,10 @@
       "lastUtc": "2026-11-19T08:54:36.820Z"
     },
     "snack-before-home": {
-      "sent": 4,
+      "sent": 5,
       "first": "2026-11-23 16:54",
-      "last": "2026-11-26 16:55",
-      "lastUtc": "2026-11-26T08:55:57.383Z"
+      "last": "2026-11-27 16:55",
+      "lastUtc": "2026-11-27T08:55:05.836Z"
     },
     "week-cal-in-out-3": {
       "sent": 4,
@@ -1870,6 +1870,12 @@
       "utc": "2026-11-27T08:54:35.573Z",
       "claimed": "cc-routine",
       "due": "2026-11-27 16:30"
+    },
+    {
+      "id": "snack-before-home",
+      "at": "2026-11-27 16:55",
+      "utc": "2026-11-27T08:55:05.836Z",
+      "text": "Quick snack before home\n\n🧀 Something with protein, a cheese stick or some yogurt\n🍇 A handful of fruit too\n\nA small bite now makes the evening easier."
     }
   ]
 }
