@@ -1234,13 +1234,6 @@
       "text": "Your week so far, Mon to Sat\nSix days logged, plus a morning HIIT 💪\n\n📅 Mon: in 2,130 · out 0 · balance 2,130 (930 over)\n📅 Tue: in 2,235 · out 200 · balance 2,035 (835 over)\n📅 Wed: in 2,925 · out 0 · balance 2,925 (1,725 over)\n📅 Thu: in 1,635 · out 200 · balance 1,435 (235 over)\n📅 Fri: in 2,115 · out 0 · balance 2,115 (915 over)\n📅 Sat so far: in 2,650 · out 200 · balance 2,450 (1,250 over)\n\nFri is now the whole day as you told it.\n~ some of this week is estimated"
     },
     {
-      "id": "workout-catchup-cal",
-      "at": "2026-11-22 08:54",
-      "utc": "2026-11-22T00:54:34.174Z",
-      "held": true,
-      "why": "yesterday's workout already logged"
-    },
-    {
       "id": "food-lunch-1253",
       "at": "2026-11-22 12:54",
       "utc": "2026-11-22T04:54:49.001Z",
@@ -1844,6 +1837,13 @@
       "at": "2026-11-27 07:55",
       "utc": "2026-11-26T23:55:32.710Z",
       "text": "Friday bfk, the week's last stretch\nMade it to Friday 🙌\n\n🔥 Eaten ▱▱▱▱▱▱▱▱▱▱ 0% · 1,200 kcal room\n\nYour HM matcha latte with a boiled egg and two Brazil nuts is about 285, a steady start with some protein, and the whole day still open."
+    },
+    {
+      "id": "workout-catchup-cal",
+      "at": "2026-11-27 08:54",
+      "utc": "2026-11-27T00:54:15.613Z",
+      "held": true,
+      "why": "workout on calendar, logged"
     }
   ]
 }
