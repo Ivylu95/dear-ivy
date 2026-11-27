@@ -1235,13 +1235,6 @@
     },
     {
       "id": "food-lunch-1253",
-      "at": "2026-11-22 12:54",
-      "utc": "2026-11-22T04:54:49.001Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-22 12:53"
-    },
-    {
-      "id": "food-lunch-1253",
       "at": "2026-11-22 12:55",
       "utc": "2026-11-22T04:55:24.498Z",
       "text": "Lunch time\nA sweet, cosy start to Sunday ☕\n\n🔥 ▰▰▰▰▰▰▱▱▱▱ 56% of 1,200 kcal\n~530 kcal room\n🏃‍♀️ eaten ~670 · no exercise figure\n\nFor lunch, grilled chicken or fish with a big pile of veg and a small scoop of rice comes to about 400 to 450, and brings the protein breakfast was light on. Pop it in the log after.\n\n~ some of today is estimated"
@@ -1844,6 +1837,13 @@
       "utc": "2026-11-27T00:54:15.613Z",
       "held": true,
       "why": "workout on calendar, logged"
+    },
+    {
+      "id": "food-lunch-1253",
+      "at": "2026-11-27 12:55",
+      "utc": "2026-11-27T04:55:00.712Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-27 12:53"
     }
   ]
 }
