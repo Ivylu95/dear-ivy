@@ -164,10 +164,10 @@
       "lastUtc": "2026-11-12T15:55:07.681Z"
     },
     "food-breakfast-0753": {
-      "sent": 16,
+      "sent": 17,
       "first": "2026-11-12 08:00",
-      "last": "2026-11-27 07:55",
-      "lastUtc": "2026-11-26T23:55:32.710Z"
+      "last": "2026-11-28 07:55",
+      "lastUtc": "2026-11-27T23:55:24.085Z"
     },
     "cancel-classpass": {
       "sent": 1,
@@ -1286,12 +1286,6 @@
       "due": "2026-11-23 07:53"
     },
     {
-      "id": "food-breakfast-0753",
-      "at": "2026-11-23 07:54",
-      "utc": "2026-11-22T23:54:55.008Z",
-      "text": "Monday bfk, new week\n\n🔥 Eaten ▱▱▱▱▱▱▱▱▱▱ 0% · 1,200 kcal room\n\nYour HM matcha latte with two boiled eggs is about 290, a good bit of protein to carry you through the morning."
-    },
-    {
       "id": "workout-catchup-cal",
       "at": "2026-11-23 08:54",
       "utc": "2026-11-23T00:54:49.820Z",
@@ -1889,6 +1883,12 @@
       "at": "2026-11-27 23:55",
       "utc": "2026-11-27T15:55:29.548Z",
       "text": "Your week, Monday to Friday\nThursday's HIIT is in, so that day sits under 💪\n\n🍽️ Mon: in ~2,080 · out 180 · ~700 over\n🍽️ Tue: in ~1,850 · out none logged · ~650 over\n🍽️ Wed: in ~2,230 · out 150 · ~880 over\n🍽️ Thu: in ~1,290 · out 200 · ~110 under\n🍽️ Fri: no food logged today\n⚖️ Monday to now: in ~7,450 · out 530\n\n~ some of this is estimated"
+    },
+    {
+      "id": "food-breakfast-0753",
+      "at": "2026-11-28 07:55",
+      "utc": "2026-11-27T23:55:24.085Z",
+      "text": "Saturday bfk, slow weekend start\nNothing logged yet today\n\n🔥 Eaten ▱▱▱▱▱▱▱▱▱▱ 0% · 1,200 kcal room\n\nAn HM matcha latte with a banana is about 255, light and easy, and leaves most of the day open for whatever the weekend brings."
     }
   ]
 }
