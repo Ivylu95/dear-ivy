@@ -26,10 +26,10 @@
       "lastUtc": "2026-11-18T03:55:33.591Z"
     },
     "morning-update-3": {
-      "sent": 3,
+      "sent": 4,
       "first": "2026-11-24 09:56",
-      "last": "2026-11-26 08:55",
-      "lastUtc": "2026-11-26T00:55:50.293Z"
+      "last": "2026-11-27 08:56",
+      "lastUtc": "2026-11-27T00:56:47.531Z"
     }
   },
   "sent": [
@@ -185,6 +185,12 @@
       "at": "2026-11-26 08:55",
       "utc": "2026-11-26T00:55:50.293Z",
       "text": "Good morning, Thu 26 Nov 🌞\nHIIT done at 6, nice 💪\n\n📅 Today\nNothing else on\n\n🗓️ Coming up\n🎶 Tomorrow: concert, all day\n\n⏰ Reminders today\n🍽️ Meal and snack pings, as usual\n🧾 1:53pm: pay tax, on break\n🥡 4:53 to 5:40: lunchbox home\n🏋️ 8:53pm: training, bedtime one\n⚖️ 11pm: week in and out\n\nAny tweaks? Just reply in the chat.\n\nSleep okay, and how's the body after HIIT?"
+    },
+    {
+      "id": "morning-update-3",
+      "at": "2026-11-27 08:56",
+      "utc": "2026-11-27T00:56:47.531Z",
+      "text": "Good morning, Fri 27 Nov 🎶\nConcert day today ✨\n\n📅 Today\n🎶 Concert, all day\n\n🗓️ Coming up\n🍽️ Tomorrow 6pm: dinner\n🏫 Mon: retreat week begins\n\n⏰ Reminders today\n🍽️ Lunch and dinner pings\n🧾 IRS payment nudge, early afternoon\n🍎 Snack 4:30, then home\n🌙 Snacks close 8, shut 10\n🏋️ Evening: today's workout check\n📊 Late: calorie tally, Mon to Fri\n\nTweak anything? Link below.\n\nSlept okay before the big day, body feeling good?"
     }
   ]
 }

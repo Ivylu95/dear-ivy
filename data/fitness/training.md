@@ -57,6 +57,7 @@ her words, blank when not said._
 - 2026-11-13 (Fri, told 9:06 am) · Light training at BFT, mostly stretching; length not given. Her words: *"light training at bft, probably burned only 80-100c bc it's more of stretching?"*
 - 2026-11-14 (Sat, told 2026-11-15) · HIIT strength workout, 1 hour; 200 kcal burned, her figure. Her words: *"worked out 200 calories out"*, then *"Did a hiit strength work out for an [hour] yesterday"* (voice-typed "out" for "hour")
 - 2026-11-26 (Thu, planned, told 8:03 am) · HIIT today, 1 hour (her usual length); 200 kcal, her cardio figure. Her words: *"Today will be hiit"*. To be confirmed once it has happened.
+- 2026-11-26 (Thu) · Confirmed from her Google Calendar, logged 2026-11-27 by the morning reminder, which then sent nothing: Cardio HIIT, 6:00 to 6:55 am. She has not said how it went
 - 2026-11-25 (Wed, told 2026-11-26) · Upper body strength at BFT, 1 hour; 150 kcal burned, her figure for strength. Her words: *"Upper body bft yesterday"*
 - 2026-11-23 (Mon, told 6:38 pm) · Mixed cardio and strength workout, 1 hour (her usual length); 180 kcal burned, her figure. Her words: *"log my workout for today. It's a mixed cardio and strength workout, so maybe like 180 calories"*
 - 2026-11-21 (Sat, told at night) · HIIT in the morning, 1 hour (her usual length); 200 kcal burned, her cardio figure. Her words: *"Did hiit in the morning"*
