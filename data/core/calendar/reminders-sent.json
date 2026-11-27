@@ -1876,6 +1876,13 @@
       "at": "2026-11-27 22:55",
       "utc": "2026-11-27T14:55:43.384Z",
       "text": "Concert day movement check\nNo workout on the calendar today\n\n🏋️ Did you do any exercises today?\n🚶 A walk or the ankle routine counts.\n📝 Sets and reps too, if you kept them."
+    },
+    {
+      "id": "week-cal-in-out-3",
+      "at": "2026-11-27 23:54",
+      "utc": "2026-11-27T15:54:54.354Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-27 23:00"
     }
   ]
 }
