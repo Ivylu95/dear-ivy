@@ -1255,20 +1255,6 @@
     {
       "id": "antidepressant-2053",
       "at": "2026-11-22 20:55",
-      "utc": "2026-11-22T12:55:07.162Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-22 20:53"
-    },
-    {
-      "id": "workout-ask-cal",
-      "at": "2026-11-22 20:55",
-      "utc": "2026-11-22T12:55:07.243Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-22 20:53"
-    },
-    {
-      "id": "antidepressant-2053",
-      "at": "2026-11-22 20:55",
       "utc": "2026-11-22T12:55:40.075Z",
       "text": "Sunday wind-down\n\n💊 Have tonight's meds before you sleep."
     },
@@ -1486,13 +1472,6 @@
       "at": "2026-11-24 20:56",
       "utc": "2026-11-24T12:56:52.697Z",
       "text": "Cardio U at 6 this morning is counted 💪\n\n🚶 Anything else since? A walk or the ankle routine counts.\n📝 Sets and reps too, if you kept them."
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-24 22:54",
-      "utc": "2026-11-24T14:54:15.161Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-24 22:00"
     },
     {
       "id": "no-snacks-after-10",
@@ -1876,6 +1855,27 @@
       "at": "2026-11-27 18:55",
       "utc": "2026-11-27T10:55:05.468Z",
       "text": "Dinner time, nothing logged yet today\n\n🔥 Your 1,200 kcal budget is all still open\n🍽️ Anything from earlier counts, just send it over\n\nA bowl of tofu and veg soup with a small scoop of rice is an easy, warm plate tonight, with good protein. Log it here once you've eaten."
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-27 20:54",
+      "utc": "2026-11-27T12:54:42.902Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-27 20:00"
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-27 20:54",
+      "utc": "2026-11-27T12:54:42.960Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-27 20:53"
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-27 20:54",
+      "utc": "2026-11-27T12:54:43.023Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-27 20:53"
     }
   ]
 }
