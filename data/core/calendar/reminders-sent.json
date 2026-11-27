@@ -26,10 +26,10 @@
       "lastUtc": "2026-11-10T12:56:41.247Z"
     },
     "no-snacks-after-10": {
-      "sent": 39,
+      "sent": 40,
       "first": "2026-11-07 20:56",
-      "last": "2026-11-26 22:55",
-      "lastUtc": "2026-11-26T14:55:02.783Z"
+      "last": "2026-11-27 22:55",
+      "lastUtc": "2026-11-27T14:55:41.407Z"
     },
     "nutrition-updates-2": {
       "sent": 1,
@@ -140,16 +140,16 @@
       "lastUtc": "2026-11-11T11:55:52.005Z"
     },
     "antidepressant-2053": {
-      "sent": 16,
-      "first": "2026-11-11 20:57",
-      "last": "2026-11-26 20:56",
-      "lastUtc": "2026-11-26T12:56:28.531Z"
-    },
-    "workout-ask-cal": {
       "sent": 17,
       "first": "2026-11-11 20:57",
-      "last": "2026-11-26 20:56",
-      "lastUtc": "2026-11-26T12:56:29.539Z"
+      "last": "2026-11-27 22:55",
+      "lastUtc": "2026-11-27T14:55:42.434Z"
+    },
+    "workout-ask-cal": {
+      "sent": 18,
+      "first": "2026-11-11 20:57",
+      "last": "2026-11-27 22:55",
+      "lastUtc": "2026-11-27T14:55:43.384Z"
     },
     "week-cal-now-nov11": {
       "sent": 1,
@@ -1253,12 +1253,6 @@
       "text": "Sunday feedback, all set to forward\nSame list as last week, nothing new added\n\n🏋️ Show my workouts with my calories\n😊 One emoji on each point Luna sends\n📱 Luna in short points, with space between\n⏰ Luna right on the time I choose\n🍽️ Food nudges even when nothing is logged\n💬 Keep a setup question open if I switch topic\n⏰ Reminders go at the exact time set\n🗓️ Suggest reminders from my calendar\n🔔 Show my reminders whenever one changes\n📊 Keep the 3-column table for ideas and reminders\n📊 Recommendations as a small phone-sized table\n⏰ Messages on time, never an hour late\n📨 When I say send it now, send it now\n💾 Saves work the first time\n🌙 Only my own jobs run in the background\n📱 Phone-friendly: lists over wide tables\n🙈 Keep tech talk out of my chats\n🔒 Only my own notes ever get changed\n💬 Every bit of feedback goes to my Any Feedback chat"
     },
     {
-      "id": "antidepressant-2053",
-      "at": "2026-11-22 20:55",
-      "utc": "2026-11-22T12:55:40.075Z",
-      "text": "Sunday wind-down\n\n💊 Have tonight's meds before you sleep."
-    },
-    {
       "id": "workout-week-cal",
       "at": "2026-11-22 21:54",
       "utc": "2026-11-22T13:54:28.786Z",
@@ -1350,12 +1344,6 @@
       "text": "Before you sleep\n\n💊 Tonight's meds, once you start winding down."
     },
     {
-      "id": "workout-ask-cal",
-      "at": "2026-11-23 20:56",
-      "utc": "2026-11-23T12:56:42.958Z",
-      "text": "Today's hour of cardio and strength is in 💪\n\n🚶 Did you add anything else, like a walk or the ankle routine?\n📝 Sets and reps too, if you kept them."
-    },
-    {
       "id": "week-cal-in-out-3",
       "at": "2026-11-23 23:55",
       "utc": "2026-11-23T15:55:01.941Z",
@@ -1444,12 +1432,6 @@
       "at": "2026-11-24 20:56",
       "utc": "2026-11-24T12:56:52.697Z",
       "text": "Cardio U at 6 this morning is counted 💪\n\n🚶 Anything else since? A walk or the ankle routine counts.\n📝 Sets and reps too, if you kept them."
-    },
-    {
-      "id": "no-snacks-after-10",
-      "at": "2026-11-24 22:54",
-      "utc": "2026-11-24T14:54:41.583Z",
-      "text": "That's food wrapped up for today\nTofu and miso kept dinner nice and light\n\n🌙 Kitchen's closed from here.\n☀️ Your HM matcha at bfk is the next thing to look forward to."
     },
     {
       "id": "week-cal-in-out-3",
@@ -1876,6 +1858,24 @@
       "utc": "2026-11-27T14:54:56.094Z",
       "claimed": "cc-routine",
       "due": "2026-11-27 20:53"
+    },
+    {
+      "id": "no-snacks-after-10",
+      "at": "2026-11-27 22:55",
+      "utc": "2026-11-27T14:55:41.407Z",
+      "text": "Kitchen's shut for the night\nBig concert day done 🎶\n\n🌙 No more food from here.\n💧 Thirsty? Water is fine.\n☀️ Bfk is the next thing to look forward to."
+    },
+    {
+      "id": "antidepressant-2053",
+      "at": "2026-11-27 22:55",
+      "utc": "2026-11-27T14:55:42.434Z",
+      "text": "Friday night meds\n\n💊 Take tonight's before you head to sleep."
+    },
+    {
+      "id": "workout-ask-cal",
+      "at": "2026-11-27 22:55",
+      "utc": "2026-11-27T14:55:43.384Z",
+      "text": "Concert day movement check\nNo workout on the calendar today\n\n🏋️ Did you do any exercises today?\n🚶 A walk or the ankle routine counts.\n📝 Sets and reps too, if you kept them."
     }
   ]
 }
