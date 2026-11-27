@@ -1279,13 +1279,6 @@
       "text": "Your week, Mon to Sun\nSeven days logged and three HIITs 💪\n\n📅 Mon: in 2,130 · out 0 · balance 2,130 (930 over)\n📅 Tue: in 2,235 · out 200 · balance 2,035 (835 over)\n📅 Wed: in 2,925 · out 0 · balance 2,925 (1,725 over)\n📅 Thu: in 1,635 · out 200 · balance 1,435 (235 over)\n📅 Fri: in 2,115 · out 0 · balance 2,115 (915 over)\n📅 Sat: in 2,650 · out 200 · balance 2,450 (1,250 over)\n📅 Sun so far: in 2,260 · out 0 · balance 2,260 (1,060 over)\n\n🔥 This week: in 15,950 · out 600\n\nNovember, week by week:\n🗓️ 9 to 15 Nov: in 11,365 · out 825 (Mon 9 part-logged, Tue 10 not logged)\n🗓️ 16 to 22 Nov: in 15,950 · out 600\n\n2026, month by month:\n🗓️ Nov: in 27,315 · out 1,425 (your logs start 9 Nov)\n\n~ some of this week is estimated"
     },
     {
-      "id": "food-breakfast-0753",
-      "at": "2026-11-23 07:54",
-      "utc": "2026-11-22T23:54:28.630Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-23 07:53"
-    },
-    {
       "id": "workout-catchup-cal",
       "at": "2026-11-23 08:54",
       "utc": "2026-11-23T00:54:49.820Z",
@@ -1883,6 +1876,13 @@
       "at": "2026-11-27 23:55",
       "utc": "2026-11-27T15:55:29.548Z",
       "text": "Your week, Monday to Friday\nThursday's HIIT is in, so that day sits under 💪\n\n🍽️ Mon: in ~2,080 · out 180 · ~700 over\n🍽️ Tue: in ~1,850 · out none logged · ~650 over\n🍽️ Wed: in ~2,230 · out 150 · ~880 over\n🍽️ Thu: in ~1,290 · out 200 · ~110 under\n🍽️ Fri: no food logged today\n⚖️ Monday to now: in ~7,450 · out 530\n\n~ some of this is estimated"
+    },
+    {
+      "id": "food-breakfast-0753",
+      "at": "2026-11-28 07:54",
+      "utc": "2026-11-27T23:54:58.078Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-28 07:53"
     },
     {
       "id": "food-breakfast-0753",
