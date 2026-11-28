@@ -116,10 +116,10 @@
       "lastUtc": "2026-11-11T00:39:27.353Z"
     },
     "food-lunch-1253": {
-      "sent": 17,
+      "sent": 18,
       "first": "2026-11-11 12:59",
-      "last": "2026-11-27 12:55",
-      "lastUtc": "2026-11-27T04:55:19.886Z"
+      "last": "2026-11-28 12:55",
+      "lastUtc": "2026-11-28T04:55:40.041Z"
     },
     "log-now-nov11": {
       "sent": 1,
@@ -1305,12 +1305,6 @@
       "due": "2026-11-23 12:53"
     },
     {
-      "id": "food-lunch-1253",
-      "at": "2026-11-23 12:54",
-      "utc": "2026-11-23T04:54:54.563Z",
-      "text": "Your egg and ham lunch is up\nTwo lattes to get the morning going ☕\n\n🔥 ▰▰▰▱▱▱▱▱▱▱ 32% of 1,200 kcal\n~820 kcal room\n🏃‍♀️ eaten ~380 · no exercise figure\n\nThe eggs and ham you planned come to about 270, with good protein. A handful of greens or some tomato on the side adds fibre and still leaves about 550 for later.\n\n~ some of today is estimated"
-    },
-    {
       "id": "snack-before-home",
       "at": "2026-11-23 16:54",
       "utc": "2026-11-23T08:54:35.283Z",
@@ -1927,6 +1921,12 @@
       "at": "2026-11-28 10:55",
       "utc": "2026-11-28T02:55:01.578Z",
       "text": "Payday today – a good day to clear the tax\nNice one getting paid 🙌\n\n💰 Pay the IRS today\n📅 Last day is tomorrow, Sunday"
+    },
+    {
+      "id": "food-lunch-1253",
+      "at": "2026-11-28 12:55",
+      "utc": "2026-11-28T04:55:40.041Z",
+      "text": "Lunch next, after a late bfk\nBread, cheese and half a cookie in 🍞\n\n🔥 ▰▰▰▰▱▱▱▱▱▱ 37% of 1,200 kcal\n~755 kcal room\n🥩 Protein light so far, about 12 g\n🏃‍♀️ No workout logged today\n\nWhenever lunch comes, tofu, fish or chicken with a big heap of greens is about 400 and lifts the protein, with plenty left for dinner. Add it to your log when you're done 🙂\n\n~ some of today is estimated"
     }
   ]
 }
