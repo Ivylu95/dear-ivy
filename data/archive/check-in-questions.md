@@ -37,3 +37,4 @@ Check-in morning-update-2 (2026-11-22 08:56): How did you sleep, and how's your 
 Check-in morning-update-3 (2026-11-24 09:56): Sleep well, and legs okay after Cardio U?
 Check-in morning-update-3 (2026-11-25 08:56): How did you sleep, and is your body rested?
 Check-in morning-update-3, asked 2026-11-26 08:58: Sleep okay, and how's the body after HIIT?
+Check-in morning-update-3 (2026-11-27 09:05): Slept okay before the big day, body feeling good?
