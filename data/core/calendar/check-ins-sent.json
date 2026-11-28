@@ -26,10 +26,10 @@
       "lastUtc": "2026-11-18T03:55:33.591Z"
     },
     "morning-update-3": {
-      "sent": 4,
+      "sent": 5,
       "first": "2026-11-24 09:56",
-      "last": "2026-11-27 08:56",
-      "lastUtc": "2026-11-27T00:56:47.531Z"
+      "last": "2026-11-28 08:56",
+      "lastUtc": "2026-11-28T00:56:15.255Z"
     }
   },
   "sent": [
@@ -191,6 +191,12 @@
       "at": "2026-11-27 08:56",
       "utc": "2026-11-27T00:56:47.531Z",
       "text": "Good morning, Fri 27 Nov 🎶\nConcert day today ✨\n\n📅 Today\n🎶 Concert, all day\n\n🗓️ Coming up\n🍽️ Tomorrow 6pm: dinner\n🏫 Mon: retreat week begins\n\n⏰ Reminders today\n🍽️ Lunch and dinner pings\n🧾 IRS payment nudge, early afternoon\n🍎 Snack 4:30, then home\n🌙 Snacks close 8, shut 10\n🏋️ Evening: today's workout check\n📊 Late: calorie tally, Mon to Fri\n\nTweak anything? Link below.\n\nSlept okay before the big day, body feeling good?"
+    },
+    {
+      "id": "morning-update-3",
+      "at": "2026-11-28 08:56",
+      "utc": "2026-11-28T00:56:15.255Z",
+      "text": "Good morning, Sat 28 Nov 💸\nPayday today ✨\n\n📅 Today\n🧾 Pay IRS tax, last day tomorrow\n🍽️ Dinner out at 6pm\n\n🗓️ Coming up\n🧘 Tomorrow 9am: Pilates, Reformer class\n📌 Tomorrow 10:30am, straight after: appointment\n\n⏰ Reminders today\n🧾 10:53am: tax payment ping\n🍱 Meal pings 12:53 and 6:53\n🍪 Snack cut-off pings, 8 and 10\n🌙 8:53pm: workout check, night one\n📊 11pm: Mon to Sat tally\n\nWant edits? Use the link.\n\nBig day yesterday, so how did you sleep?"
     }
   ]
 }
