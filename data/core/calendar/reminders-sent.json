@@ -1300,13 +1300,6 @@
     {
       "id": "food-lunch-1253",
       "at": "2026-11-23 12:54",
-      "utc": "2026-11-23T04:54:32.976Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-23 12:53"
-    },
-    {
-      "id": "food-lunch-1253",
-      "at": "2026-11-23 12:54",
       "utc": "2026-11-23T04:54:54.563Z",
       "text": "Your egg and ham lunch is up\nTwo lattes to get the morning going ☕\n\n🔥 ▰▰▰▱▱▱▱▱▱▱ 32% of 1,200 kcal\n~820 kcal room\n🏃‍♀️ eaten ~380 · no exercise figure\n\nThe eggs and ham you planned come to about 270, with good protein. A handful of greens or some tomato on the side adds fibre and still leaves about 550 for later.\n\n~ some of today is estimated"
     },
@@ -1927,6 +1920,13 @@
       "at": "2026-11-28 10:55",
       "utc": "2026-11-28T02:55:01.578Z",
       "text": "Payday today – a good day to clear the tax\nNice one getting paid 🙌\n\n💰 Pay the IRS today\n📅 Last day is tomorrow, Sunday"
+    },
+    {
+      "id": "food-lunch-1253",
+      "at": "2026-11-28 12:54",
+      "utc": "2026-11-28T04:54:53.619Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-28 12:53"
     }
   ]
 }
