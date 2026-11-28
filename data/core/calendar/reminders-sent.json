@@ -1454,13 +1454,6 @@
     {
       "id": "food-lunch-1253",
       "at": "2026-11-25 12:54",
-      "utc": "2026-11-25T04:54:27.480Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-25 12:53"
-    },
-    {
-      "id": "food-lunch-1253",
-      "at": "2026-11-25 12:54",
       "utc": "2026-11-25T04:54:58.575Z",
       "text": "Salmon and eggs for lunch\nA strong protein pick 🐟\n\n🔥 ▰▰▰▱▱▱▱▱▱▱ 31% of 1,200 kcal\n~830 kcal room before lunch\n🏃‍♀️ No workout logged today\n\nThe salmon and two eggs come to about 390, with nearly 40 g protein. Some broccoli, cucumber or a few cherry tomatoes alongside would bring the fibre today is short on, and still leave about 440 for dinner. Log it once it's eaten 🙂\n\n~ some of today is estimated"
     },
@@ -1925,6 +1918,13 @@
       "id": "food-lunch-1253",
       "at": "2026-11-28 13:54",
       "utc": "2026-11-28T05:54:57.922Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-28 12:53"
+    },
+    {
+      "id": "food-lunch-1253",
+      "at": "2026-11-28 14:54",
+      "utc": "2026-11-28T06:54:56.792Z",
       "claimed": "cc-routine",
       "due": "2026-11-28 12:53"
     }
