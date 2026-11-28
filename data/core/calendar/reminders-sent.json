@@ -128,10 +128,10 @@
       "lastUtc": "2026-11-11T05:10:39.496Z"
     },
     "food-dinner-1853": {
-      "sent": 17,
+      "sent": 18,
       "first": "2026-11-11 18:55",
-      "last": "2026-11-27 18:55",
-      "lastUtc": "2026-11-27T10:55:05.468Z"
+      "last": "2026-11-28 18:55",
+      "lastUtc": "2026-11-28T10:55:01.555Z"
     },
     "poster-start": {
       "sent": 1,
@@ -1318,12 +1318,6 @@
       "due": "2026-11-23 18:53"
     },
     {
-      "id": "food-dinner-1853",
-      "at": "2026-11-23 18:54",
-      "utc": "2026-11-23T10:54:41.742Z",
-      "text": "Dinner's in, the whole day is logged\nThanks for getting every bite down today ✍️\n\n🍽️ ██████████ 150% · ~1,800 of 1,200 kcal eaten\n🔥 180 burned at your workout\n⚖️ Balance ~1,620, about 420 over the 1,200\n~ some of today is estimated\n\nDinner's already done, so nothing more is needed tonight. If you get peckish later, warm tea or a few cucumber slices are close to zero."
-    },
-    {
       "id": "antidepressant-2053",
       "at": "2026-11-23 20:56",
       "utc": "2026-11-23T12:56:41.755Z",
@@ -1927,6 +1921,12 @@
       "at": "2026-11-28 14:55",
       "utc": "2026-11-28T06:55:31.099Z",
       "text": "Lunch is in, nice and logged\nBread, cookie and pear tea all down 🍐\n\n🔥 ▰▰▰▰▰▰▱▱▱▱ 60% of 1,200 kcal\n~480 kcal room left\n🥩 Protein low so far, about 15 g\n🏃‍♀️ No workout logged today\n\nFor dinner, eggs, chicken or fish with veg is about 350 and lifts the protein. That still leaves a little room for a snack 🙂\n\n~ some of today is estimated"
+    },
+    {
+      "id": "food-dinner-1853",
+      "at": "2026-11-28 18:55",
+      "utc": "2026-11-28T10:55:01.555Z",
+      "text": "Dinner time, about 480 kcal of room\nBreakfast and lunch are both logged ✍️\n\n🍽️ ▰▰▰▰▰▰▱▱▱▱ 60% · ~720 of 1,200 kcal, 480 room\n🏃 No workout logged today\n~ some of today is estimated\n\nSteamed fish or a chicken breast with a big plate of greens and a small scoop of rice fits nicely in tonight's room. Log it here once you've eaten."
     }
   ]
 }
