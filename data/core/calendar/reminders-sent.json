@@ -1313,13 +1313,6 @@
     {
       "id": "food-dinner-1853",
       "at": "2026-11-23 18:54",
-      "utc": "2026-11-23T10:54:24.947Z",
-      "claimed": "cc-routine",
-      "due": "2026-11-23 18:53"
-    },
-    {
-      "id": "food-dinner-1853",
-      "at": "2026-11-23 18:54",
       "utc": "2026-11-23T10:54:41.742Z",
       "text": "Dinner's in, the whole day is logged\nThanks for getting every bite down today ✍️\n\n🍽️ ██████████ 150% · ~1,800 of 1,200 kcal eaten\n🔥 180 burned at your workout\n⚖️ Balance ~1,620, about 420 over the 1,200\n~ some of today is estimated\n\nDinner's already done, so nothing more is needed tonight. If you get peckish later, warm tea or a few cucumber slices are close to zero."
     },
@@ -1927,6 +1920,13 @@
       "at": "2026-11-28 14:55",
       "utc": "2026-11-28T06:55:31.099Z",
       "text": "Lunch is in, nice and logged\nBread, cookie and pear tea all down 🍐\n\n🔥 ▰▰▰▰▰▰▱▱▱▱ 60% of 1,200 kcal\n~480 kcal room left\n🥩 Protein low so far, about 15 g\n🏃‍♀️ No workout logged today\n\nFor dinner, eggs, chicken or fish with veg is about 350 and lifts the protein. That still leaves a little room for a snack 🙂\n\n~ some of today is estimated"
+    },
+    {
+      "id": "food-dinner-1853",
+      "at": "2026-11-28 18:54",
+      "utc": "2026-11-28T10:54:39.208Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-28 18:53"
     }
   ]
 }
