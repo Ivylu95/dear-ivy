@@ -396,6 +396,12 @@
       "first": "2026-11-28 08:54",
       "last": "2026-11-28 08:54",
       "lastUtc": "2026-11-28T00:54:59.201Z"
+    },
+    "irs-sat": {
+      "sent": 1,
+      "first": "2026-11-28 10:55",
+      "last": "2026-11-28 10:55",
+      "lastUtc": "2026-11-28T02:55:01.578Z"
     }
   },
   "sent": [
@@ -1915,6 +1921,12 @@
       "utc": "2026-11-28T02:54:40.751Z",
       "claimed": "cc-routine",
       "due": "2026-11-28 10:53"
+    },
+    {
+      "id": "irs-sat",
+      "at": "2026-11-28 10:55",
+      "utc": "2026-11-28T02:55:01.578Z",
+      "text": "Payday today – a good day to clear the tax\nNice one getting paid 🙌\n\n💰 Pay the IRS today\n📅 Last day is tomorrow, Sunday"
     }
   ]
 }
