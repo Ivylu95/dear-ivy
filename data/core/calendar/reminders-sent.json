@@ -1908,6 +1908,13 @@
       "at": "2026-11-28 08:54",
       "utc": "2026-11-28T00:54:59.201Z",
       "text": "Quick one about Friday\n\nNothing's in your WO log for yesterday yet. Did you fit in a workout, or was it a rest day?"
+    },
+    {
+      "id": "irs-sat",
+      "at": "2026-11-28 10:54",
+      "utc": "2026-11-28T02:54:40.751Z",
+      "claimed": "cc-routine",
+      "due": "2026-11-28 10:53"
     }
   ]
 }
